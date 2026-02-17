@@ -61,7 +61,15 @@ export const FACILITIES: Facility[] = [
       "https://i.imgur.com/4xQhHKX.jpeg",
       "https://i.imgur.com/gv99hGV.jpeg"
     ],
-    galleryDescriptionKey: 'campusGalleryDesc'
+    galleryDescriptionKey: 'campusGalleryDesc',
+    secondaryGallery: {
+      titleKey: 'campus2.0',
+      images: [
+        "https://i.imgur.com/ji2ZgHb.png",
+        "https://i.imgur.com/7uFsaKo.png",
+        "https://i.imgur.com/ixERjFE.png"
+      ]
+    }
   },
   {
     id: 'housing',

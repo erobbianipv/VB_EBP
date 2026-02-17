@@ -58,6 +58,7 @@ const TRANSLATIONS = {
     eliteHousing: "Alloggi d'Elite",
     eliteHousingDesc: "Alloggi di lusso per studenti-atleti",
     housingGalleryDesc: "Il dormitorio di nuova costruzione dispone di 14 camere ben arredate (sia singole che doppie), una spaziosa sala da pranzo in grado di ospitare 18 persone, un confortevole soggiorno, una lavanderia dedicata e due splendidi giardini privati. L'alloggio si trova a soli 5 minuti a piedi dal centro di allenamento e dalle principali scuole.",
+    'campus2.0': "Campus 2.0",
     // Opportunities
     elitePrograms: "Programmi d'Elite",
     eliteOpportunities: "Opportunità d'Elite",
@@ -170,6 +171,7 @@ const TRANSLATIONS = {
     eliteHousing: "Elite Housing",
     eliteHousingDesc: "Luxury student-athlete living",
     housingGalleryDesc: "The newly constructed dormitory boasts 14 well-appointed rooms (both single and double occupancy), a spacious dining room capable of seating 18 guests, a comfortable living area, a dedicated laundry room, and two beautifully landscaped private gardens. The housing is located just a short 5-minute walk from the training center and major schools.",
+    'campus2.0': "Campus 2.0",
     // Opportunities
     elitePrograms: "Elite Programs",
     eliteOpportunities: "Elite Opportunities",
@@ -276,6 +278,7 @@ const TRANSLATIONS = {
     eliteHousing: "Viviendas de Élite",
     eliteHousingDesc: "Alojamiento de lujo para estudiantes-atletas",
     housingGalleryDesc: "La residencia de nueva construcción cuenta con 14 habitaciones bien equipadas (tanto individuales como dobles), un espacioso comedor con capacidad para 18 personas, una cómoda sala de estar, una lavandería dedicada y dos hermosos jardines privados. El alojamiento se encuentra a solo 5 minutos a pie del centro de entrenamiento y de las principales escuelas.",
+    'campus2.0': "Campus 2.0",
     // Opportunities
     elitePrograms: "Programas de Élite",
     eliteOpportunities: "Oportunidades de Élite",
@@ -382,6 +385,7 @@ const TRANSLATIONS = {
     eliteHousing: "Logement d'Élite",
     eliteHousingDesc: "Logement de luxe pour étudiants-athlètes",
     housingGalleryDesc: "Le dortoir nouvellement construit dispose de 14 chambres bien aménagées (simples et doubles), d'une salle à manger spacieuse pouvant accueillir 18 personnes, d'un salon confortable, d'une buanderie dédiée et de deux magnifiques jardins privés. Le logement est situé à seulement 5 minutes à pied du centre d'entraînement et des principales écoles.",
+    'campus2.0': "Campus 2.0",
     // Opportunities
     elitePrograms: "Programmes d'Élite",
     eliteOpportunities: "Opportunités d'Élite",
@@ -696,6 +700,28 @@ const App: React.FC = () => {
                         </div>
                     ))}
                 </div>
+
+                {facility.secondaryGallery && (
+                  <div className="mt-24">
+                    <div className="text-center mb-16">
+                      <h2 className="font-oswald text-4xl md:text-6xl font-bold uppercase mb-4 inline-block relative">
+                          {t(facility.secondaryGallery.titleKey as any)}
+                          <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-24 h-2 bg-red-varese"></div>
+                      </h2>
+                    </div>
+                    <div className={`grid grid-cols-1 lg:grid-cols-3 gap-6`}>
+                        {facility.secondaryGallery.images.map((src, index) => (
+                            <div key={index} className="relative w-full aspect-video group overflow-hidden rounded-lg shadow-2xl bg-zinc-900">
+                                <img
+                                    src={src}
+                                    alt={`${t(facility.secondaryGallery.titleKey as any)} image ${index + 1}`}
+                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                />
+                            </div>
+                        ))}
+                    </div>
+                  </div>
+                )}
             </div>
         </section>
       </main>

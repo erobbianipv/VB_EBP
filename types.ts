@@ -21,6 +21,10 @@ export interface Facility {
   coverImage: string;
   galleryImages: string[];
   galleryDescriptionKey?: string;
+  secondaryGallery?: {
+    titleKey: string;
+    images: string[];
+  };
 }
 
 export interface Program {
