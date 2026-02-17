@@ -5,6 +5,8 @@ import { Program, Facility } from './types';
 import { Trophy, MapPin, Users, Home, GraduationCap, Calendar, ArrowRight, Menu, X, Instagram, Facebook, CheckCircle2, Send, Mail, Linkedin, Star, ChevronDown, ZoomIn, ChevronLeft, ChevronRight } from 'lucide-react';
 
 type Language = 'it' | 'en' | 'es' | 'fr';
+type View = 'home' | 'programs' | 'palmares' | 'arena' | 'campus' | 'housing';
+
 
 const TRANSLATIONS = {
   it: {
@@ -77,7 +79,7 @@ const TRANSLATIONS = {
     lastNamePlaceholder: "Il tuo cognome",
     organization: "Club / Academy / Federazione *",
     organizationPlaceholder: "Organizzazione attuale",
-    email: "Indirizzo Email *",
+    email: "Indrezzo Email *",
     emailPlaceholder: "tua@email.com",
     messageInfo: "Messaggio e Richiesta Informazioni *",
     messageInfoPlaceholder: "Raccontaci del tuo interesse...",
@@ -447,7 +449,7 @@ const TRANSLATIONS = {
 };
 
 const App: React.FC = () => {
-  const [view, setView] = useState<'home' | 'programs' | 'palmares'>('home');
+  const [view, setView] = useState<View>('home');
   const [lang, setLang] = useState<Language>('en');
   const [scrolled, setScrolled] = useState(false);
   const [selectedProgram, setSelectedProgram] = useState<Program | null>(null);
@@ -456,8 +458,6 @@ const App: React.FC = () => {
   const [submissionStatus, setSubmissionStatus] = useState<'idle' | 'submitted'>('idle');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
-  const [selectedGalleryFacility, setSelectedGalleryFacility] = useState<Facility | null>(null);
-  const [scrollToFacilities, setScrollToFacilities] = useState(false);
   const [scrollToOpportunities, setScrollToOpportunities] = useState(false);
 
   const [formState, setFormState] = useState({
@@ -471,16 +471,6 @@ const App: React.FC = () => {
   
   const t = (key: keyof typeof TRANSLATIONS['en']) => TRANSLATIONS[lang][key] || TRANSLATIONS['en'][key];
 
-  const openGallery = (facility: Facility) => {
-    if (facility.galleryImages.length > 0) {
-        setSelectedGalleryFacility(facility);
-    }
-  };
-
-  const closeGallery = () => {
-      setSelectedGalleryFacility(null);
-  };
-
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
@@ -488,19 +478,18 @@ const App: React.FC = () => {
   }, []);
 
   useEffect(() => { 
-    if (view === 'home' && !scrollToFacilities && !scrollToOpportunities) {
+    if (view === 'home' && !scrollToOpportunities) {
+      window.scrollTo(0, 0);
+    } else if (view !== 'home') {
       window.scrollTo(0, 0);
     }
-  }, [view, scrollToFacilities, scrollToOpportunities]);
+  }, [view, scrollToOpportunities]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         if (selectedProgram) {
           handleCloseProgramModalAndScroll();
-        } else if (selectedGalleryFacility) {
-          closeGallery();
-          setScrollToFacilities(true);
         } else {
           handleCloseModal();
         }
@@ -508,14 +497,7 @@ const App: React.FC = () => {
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [selectedProgram, selectedGalleryFacility, isJoinModalOpen]);
-
-  useEffect(() => {
-    if (scrollToFacilities) {
-      document.getElementById('facilities')?.scrollIntoView({ behavior: 'auto' });
-      setScrollToFacilities(false);
-    }
-  }, [scrollToFacilities]);
+  }, [selectedProgram, isJoinModalOpen]);
 
   useEffect(() => {
     if (scrollToOpportunities) {
@@ -530,7 +512,6 @@ const App: React.FC = () => {
     setIsApplying(false);
     setSubmissionStatus('idle');
     setFormState({ firstName: '', lastName: '', organization: '', email: '', program: '', message: '' });
-    closeGallery();
   };
 
   const handleCloseProgramModalAndScroll = () => {
@@ -672,54 +653,61 @@ const App: React.FC = () => {
       ))}
     </div>
   );
-
-  const GalleryModal = () => {
-    if (!selectedGalleryFacility) return null;
-
-    const images = selectedGalleryFacility.galleryImages;
-    const descriptionKey = selectedGalleryFacility.galleryDescriptionKey;
-
+  
+  const FacilityPage = ({ facility }: { facility: Facility }) => {
+    const images = facility.galleryImages;
     const gridClass = images.length === 4 
       ? 'grid-cols-1 md:grid-cols-2' 
       : 'grid-cols-1 lg:grid-cols-3';
 
-    const handleCloseAndScroll = () => {
-        closeGallery();
-        setScrollToFacilities(true);
-    };
-    
     return (
-      <div className="fixed inset-0 z-[110] flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm animate-in fade-in duration-300">
-        <div className="absolute inset-0" onClick={handleCloseAndScroll} aria-hidden="true"></div>
-        <button onClick={handleCloseAndScroll} aria-label="Close gallery" className="absolute top-6 right-6 z-50 bg-black/50 hover:bg-red-varese text-white p-3 rounded-full transition-colors">
-          <X size={24} />
-        </button>
-        
-        <div className="relative w-full h-full max-w-7xl mx-auto flex flex-col items-center justify-center p-4 sm:p-8 animate-in zoom-in-95 duration-300">
-          <div className={`grid ${gridClass} gap-4 w-full`}>
-            {images.map((src, index) => (
-              <div key={index} className="relative w-full aspect-[4/3] group overflow-hidden rounded-lg shadow-2xl bg-zinc-900">
-                <img
-                  src={src}
-                  alt={`Gallery image ${index + 1}`}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-            ))}
-          </div>
-          {descriptionKey && (
-            <div className="mt-8 p-8 bg-zinc-900/80 border border-white/10 rounded-lg max-w-5xl w-full">
-              <p className="text-gray-100 text-center text-lg font-light leading-relaxed">{t(descriptionKey as any)}</p>
+      <main className="pt-20 bg-black animate-in fade-in duration-500">
+        <section className="relative h-[50vh] min-h-[300px] flex items-center justify-center overflow-hidden">
+            <div className="absolute inset-0 z-0">
+                <img src={facility.coverImage} className="w-full h-full object-cover opacity-50" alt={t(facility.titleKey as any)} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
             </div>
-          )}
-        </div>
-      </div>
+            <div className="relative z-10 text-center px-4">
+                <h1 className="font-oswald text-5xl md:text-8xl font-bold uppercase leading-none tracking-tighter mb-4">
+                    {t(facility.titleKey as any)}
+                </h1>
+                <p className="text-lg md:text-xl text-gray-300 font-light max-w-2xl mx-auto uppercase tracking-widest">
+                    {t(facility.descriptionKey as any)}
+                </p>
+            </div>
+        </section>
+        
+        <section className="py-24">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                {facility.galleryDescriptionKey && (
+                    <div className="mb-16 p-8 bg-zinc-900 border border-white/10 rounded-lg max-w-5xl mx-auto">
+                        <p className="text-gray-300 text-center text-lg font-light leading-relaxed">{t(facility.galleryDescriptionKey as any)}</p>
+                    </div>
+                )}
+                
+                <div className={`grid ${gridClass} gap-6`}>
+                    {images.map((src, index) => (
+                        <div key={index} className="relative w-full aspect-[4/3] group overflow-hidden rounded-lg shadow-2xl bg-zinc-900">
+                            <img
+                                src={src}
+                                alt={`Gallery image ${index + 1}`}
+                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            />
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+      </main>
     );
   };
 
+
+  const isFacilityView = ['arena', 'campus', 'housing'].includes(view);
+
   return (
-    <div className={`min-h-screen flex flex-col bg-[#0a0a0a] ${(selectedProgram || isJoinModalOpen || selectedGalleryFacility || isMenuOpen) ? 'overflow-hidden h-screen' : ''}`}>
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled || view === 'programs' || view === 'palmares' || isMenuOpen ? 'bg-black/90 backdrop-blur-md py-3 border-b border-white/10' : 'bg-transparent py-6'}`}>
+    <div className={`min-h-screen flex flex-col bg-[#0a0a0a] ${(selectedProgram || isJoinModalOpen || isMenuOpen) ? 'overflow-hidden h-screen' : ''}`}>
+      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled || view !== 'home' || isMenuOpen ? 'bg-black/90 backdrop-blur-md py-3 border-b border-white/10' : 'bg-transparent py-6'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => setView('home')}>
             <img src={CLUB_LOGO} alt="Varese Logo" className="h-10 w-auto" />
@@ -728,12 +716,7 @@ const App: React.FC = () => {
             </span>
           </div>
           <div className="flex items-center space-x-4">
-            {view === 'programs' && (
-              <button onClick={() => setView('home')} className="hidden md:block text-xs font-bold uppercase tracking-widest hover:text-red-varese transition-colors">
-                {t('backToHome')}
-              </button>
-            )}
-             {view === 'palmares' && (
+            {(view === 'programs' || view === 'palmares' || isFacilityView) && (
               <button onClick={() => setView('home')} className="hidden md:block text-xs font-bold uppercase tracking-widest hover:text-red-varese transition-colors">
                 {t('backToHome')}
               </button>
@@ -940,8 +923,8 @@ const App: React.FC = () => {
                  {FACILITIES.map((facility) => (
                   <div
                     key={facility.id}
-                    className={`relative h-[450px] group overflow-hidden rounded-xl shadow-2xl ${facility.galleryImages.length > 0 ? 'cursor-pointer' : ''}`}
-                    onClick={() => openGallery(facility)}
+                    className={`relative h-[450px] group overflow-hidden rounded-xl shadow-2xl cursor-pointer`}
+                    onClick={() => setView(facility.id as View)}
                   >
                     <img src={facility.coverImage} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" alt={t(facility.titleKey as keyof typeof TRANSLATIONS['en'])} />
                     
@@ -951,13 +934,11 @@ const App: React.FC = () => {
                       {facility.noteKey && <p className="text-[10px] text-red-varese font-bold uppercase tracking-widest mt-2">{t(facility.noteKey as keyof typeof TRANSLATIONS['en'])}</p>}
                     </div>
 
-                    {facility.galleryImages.length > 0 && (
-                      <div className="absolute inset-0 bg-black/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <span className="text-white font-oswald text-xl font-bold uppercase tracking-widest">
-                            {t('findOutMore')}
-                        </span>
-                      </div>
-                    )}
+                    <div className="absolute inset-0 bg-black/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <span className="text-white font-oswald text-xl font-bold uppercase tracking-widest">
+                          {t('findOutMore')}
+                      </span>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -1050,7 +1031,9 @@ const App: React.FC = () => {
         </section>
       )}
 
-      {selectedGalleryFacility && <GalleryModal />}
+      {isFacilityView && (
+          <FacilityPage facility={FACILITIES.find(f => f.id === view)!} />
+      )}
 
       {selectedProgram && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-10 overflow-hidden">
@@ -1141,7 +1124,7 @@ const App: React.FC = () => {
         </div>
       )}
       
-      {(view === 'home' || view === 'programs') && (
+      {view !== 'palmares' && !isFacilityView && (
         <>
             <section className="py-32 bg-red-varese relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10 flex items-center justify-center pointer-events-none"><h2 className="text-[30rem] font-oswald font-black uppercase tracking-tighter">VARESE</h2></div>
@@ -1149,7 +1132,7 @@ const App: React.FC = () => {
                 <h2 className="font-oswald text-5xl md:text-8xl font-bold uppercase mb-8 leading-[0.9]" dangerouslySetInnerHTML={{ __html: t('ctaTitle').replace('Basketball Future', '<br/>Basketball Future') }}></h2>
                 <p className="text-xl md:text-2xl font-light mb-12 max-w-2xl mx-auto text-white/90 uppercase tracking-widest">{t('ctaSubtitle')}</p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                    <button className="bg-white text-red-varese px-16 py-6 font-bold uppercase tracking-[0.3em] hover:bg-black hover:text-white transition-all rounded-sm text-lg shadow-2xl">{t('buyNow')}</button>
+                    <button onClick={() => navigateToHomeSection('opportunities')} className="bg-white text-red-varese px-16 py-6 font-bold uppercase tracking-[0.3em] hover:bg-black hover:text-white transition-all rounded-sm text-lg shadow-2xl">{t('buyNow')}</button>
                     <button onClick={() => setIsJoinModalOpen(true)} className="border border-white text-white px-16 py-6 font-bold uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all rounded-sm text-lg">{t('applyNow')}</button>
                 </div>
                 </div>
