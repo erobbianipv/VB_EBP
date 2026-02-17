@@ -1147,4 +1147,52 @@ const App: React.FC = () => {
                 <div className="absolute inset-0 opacity-10 flex items-center justify-center pointer-events-none"><h2 className="text-[30rem] font-oswald font-black uppercase tracking-tighter">VARESE</h2></div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
                 <h2 className="font-oswald text-5xl md:text-8xl font-bold uppercase mb-8 leading-[0.9]" dangerouslySetInnerHTML={{ __html: t('ctaTitle').replace('Basketball Future', '<br/>Basketball Future') }}></h2>
-                <p className="text-xl md:text-2xl font-light mb-12 max-w-2xl mx-auto text-white/90 uppercase tracking-widest">{
+                <p className="text-xl md:text-2xl font-light mb-12 max-w-2xl mx-auto text-white/90 uppercase tracking-widest">{t('ctaSubtitle')}</p>
+                <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                    <button className="bg-white text-red-varese px-16 py-6 font-bold uppercase tracking-[0.3em] hover:bg-black hover:text-white transition-all rounded-sm text-lg shadow-2xl">{t('buyNow')}</button>
+                    <button onClick={() => setIsJoinModalOpen(true)} className="border border-white text-white px-16 py-6 font-bold uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all rounded-sm text-lg">{t('applyNow')}</button>
+                </div>
+                </div>
+            </section>
+
+            <footer className="bg-black py-20 border-t border-white/5">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="grid md:grid-cols-4 gap-16 mb-16">
+                    <div className="col-span-1 md:col-span-2">
+                    <img src={CLUB_LOGO} alt="Varese" className="h-20 mb-8" /><h4 className="font-oswald text-3xl font-bold uppercase mb-4 tracking-tighter">Pallacanestro Varese <span className="text-red-varese">EBP</span></h4>
+                    <p className="text-gray-500 max-w-sm mb-8 leading-relaxed">{t('footerSlogan')}</p>
+                    <div className="flex gap-6 items-center"><a href="https://www.linkedin.com/company/pallacanestro-varese-spa/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-varese transition-colors"><Linkedin size={24} /></a><a href="https://www.instagram.com/pallvarese?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-varese transition-colors"><Instagram size={24} /></a><a href="https://www.facebook.com/pallvarese/?locale=it_IT" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-varese transition-colors"><Facebook size={24} /></a><a href="https://x.com/PallVarese" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-varese transition-colors"><X size={24} /></a><a href="https://www.tiktok.com/@pallvarese?_r=1&_t=ZN-93rFmsKhFL8" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-varese transition-colors"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .57.04.84.11V9.5a6.33 6.33 0 0 0-1.01-.08 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.27A8.25 8.25 0 0 0 22 11.45V8.04a4.8 4.8 0 0 1-2.41-1.35z"/></svg></a></div>
+                    </div>
+                    <div>
+                    <ul className="space-y-4 text-gray-500 text-sm md:mt-16">
+                        <li><button onClick={() => navigateToHomeSection('who-we-are')} className="hover:text-white transition-colors uppercase tracking-widest">{t('footerLegacy')}</button></li>
+                        <li><button onClick={() => navigateToHomeSection('where-we-are')} className="hover:text-white transition-colors uppercase tracking-widest">{t('footerRegion')}</button></li>
+                        <li><button onClick={() => navigateToHomeSection('leadership')} className="hover:text-white transition-colors uppercase tracking-widest">{t('footerLeadership')}</button></li>
+                        <li><button onClick={() => navigateToHomeSection('facilities')} className="hover:text-white transition-colors uppercase tracking-widest">{t('footerFacilities')}</button></li>
+                        <li><button onClick={() => setView('programs')} className="hover:text-white transition-colors uppercase tracking-widest">{t('footerPrograms')}</button></li>
+                    </ul>
+                    </div>
+                    <div>
+                        <div className="flex items-start gap-3 text-sm text-gray-500">
+                            <MapPin size={20} className="text-red-varese mt-0.5 flex-shrink-0" />
+                            <a href="https://maps.app.goo.gl/WUqdjaf9duktWCNU8" target="_blank" rel="noopener noreferrer" className="hover:text-red-varese transition-colors" dangerouslySetInnerHTML={{ __html: t('footerAddress').replace('\n', '<br/>') }}></a>
+                        </div>
+                        <div className="mt-8">
+                            <h5 className="font-bold uppercase mb-4 tracking-[0.2em] text-xs text-white">{t('contactUs')}</h5>
+                            <div className="text-sm text-gray-500">
+                                <p>Email: <a href="mailto:f.bellotto@pallacanestrovarese.it" className="hover:text-red-varese transition-colors">f.bellotto@pallacanestrovarese.it</a></p>
+                                <p className="text-[10px] uppercase tracking-widest mt-1 text-gray-400">{t('footerCOO')}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="pt-10 border-t border-white/5 text-center text-gray-600 text-[10px] uppercase tracking-[0.1em]"><p>&copy; {new Date().getFullYear()} Pallacanestro Varese. Developed for Elite Basketball Program.</p></div>
+                </div>
+            </footer>
+        </>
+      )}
+    </div>
+  );
+};
+
+export default App;
