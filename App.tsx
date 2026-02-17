@@ -1,8 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
-import { CLUB_LOGO, ACHIEVEMENTS, STAFF, PROGRAMS } from './constants';
-import { Program } from './types';
-import { Trophy, MapPin, Users, Home, GraduationCap, Calendar, ArrowRight, Menu, X, Instagram, Facebook, CheckCircle2, Send, Mail, Linkedin, Star, ChevronDown } from 'lucide-react';
+import { CLUB_LOGO, ACHIEVEMENTS, STAFF, PROGRAMS, FACILITIES } from './constants';
+import { Program, Facility } from './types';
+import { Trophy, MapPin, Users, Home, GraduationCap, Calendar, ArrowRight, Menu, X, Instagram, Facebook, CheckCircle2, Send, Mail, Linkedin, Star, ChevronDown, ZoomIn, ChevronLeft, ChevronRight } from 'lucide-react';
 
 type Language = 'it' | 'en' | 'es' | 'fr';
 
@@ -10,7 +10,7 @@ const TRANSLATIONS = {
   it: {
     // Nav & General
     backToHome: "Torna alla Home",
-    joinEBP: "Unisciti all'EBP",
+    joinEBP: "Richiedi Info",
     // Hero
     heroTitle: "Elite Basketball Program",
     heroSubtitle: "Un Pilastro dell'Eccellenza Europea",
@@ -48,11 +48,14 @@ const TRANSLATIONS = {
     facilitiesDesc: "Infrastrutture professionali per allenamenti ad alte prestazioni",
     arena: "L'Arena",
     arenaDesc: "5.352 posti con ospitalità premium",
+    arenaGalleryDesc: "La nostra arena offre la location perfetta per amichevoli e tornei estivi. Con una capacità di 5.352 posti, l'arena offre un'atmosfera dinamica sia per i giocatori che per gli spettatori. I nostri servizi completi includono spazi di ospitalità premium, punti ristoro, strutture dedicate ai giocatori e supporto per media ed eventi.",
     campus: "Campus",
     campusDesc: "Centro di allenamento professionale",
     campusNote: "Progetto di ristrutturazione da 3M € a partire da quest'estate",
+    campusGalleryDesc: "Il nostro centro di allenamento, noto come \"CAMPUS\", funge da centro di allenamento ufficiale sia per le giovanili che per la squadra di Serie A dopo la sua ristrutturazione la scorsa estate. Attualmente la struttura dispone di 2 campi al coperto, 3 campi all'aperto, 7 spogliatoi, uffici, un bar, un ristorante e attività commerciali correlate.",
     eliteHousing: "Alloggi d'Elite",
     eliteHousingDesc: "Alloggi di lusso per studenti-atleti",
+    housingGalleryDesc: "Il dormitorio di nuova costruzione dispone di 14 camere ben arredate (sia singole che doppie), una spaziosa sala da pranzo in grado di ospitare 18 persone, un confortevole soggiorno, una lavanderia dedicata e due splendidi giardini privati. L'alloggio si trova a soli 5 minuti a piedi dal centro di allenamento e dalle principali scuole.",
     // Opportunities
     elitePrograms: "Programmi d'Elite",
     eliteOpportunities: "Opportunità d'Elite",
@@ -65,8 +68,9 @@ const TRANSLATIONS = {
     requestMoreInfo: "Richiedi Maggiori Informazioni",
     downloadBrochure: "Scarica la Brochure",
     backToDetails: "Torna ai Dettagli",
-    applicationForm: "Modulo di Candidatura",
-    formDescription: "Inserisci i tuoi dati qui sotto per candidarti al",
+    findOutMore: "Scopri di più",
+    informationForm: "Modulo di Richiesta Informazioni",
+    informationFormDescription: "Compila il modulo sottostante per richiedere informazioni per il",
     firstName: "Nome *",
     firstNamePlaceholder: "Il tuo nome",
     lastName: "Cognome *",
@@ -78,8 +82,9 @@ const TRANSLATIONS = {
     messageInfo: "Messaggio e Richiesta Informazioni *",
     messageInfoPlaceholder: "Raccontaci del tuo interesse...",
     requestInfo: "Richiedi Info",
-    programSelect: "Seleziona un Programma *",
+    topicSelect: "Argomento *",
     selectOption: "Seleziona un'opzione",
+    generalInformation: "Informazioni Generali",
     buyNow: "Acquista Ora",
     // Global Join Modal
     joinProgram: "Unisciti al Programma",
@@ -123,7 +128,7 @@ const TRANSLATIONS = {
   },
   en: {
     backToHome: "Back to Home",
-    joinEBP: "Join EBP",
+    joinEBP: "Request Info",
     heroTitle: "Elite Basketball Program",
     heroSubtitle: "A Cornerstone of European Excellence",
     explorePrograms: "Explore Programs",
@@ -155,11 +160,15 @@ const TRANSLATIONS = {
     facilitiesDesc: "Professional infrastructure for high-performance training",
     arena: "The Arena",
     arenaDesc: "5,352 seat capacity with premium hospitality",
+    arenaGalleryDesc: "Our arena provides the perfect venue for friendly games and summer tournaments. With a seating capacity of 5,352, the arena offers a dynamic atmosphere for players and spectators alike. Our comprehensive amenities include premium hospitality spaces, convenient concessions, dedicated player facilities and Media and event support.",
     campus: "Campus",
     campusDesc: "Professional training center",
     campusNote: "3M € renovation project starting this summer",
+    campusGalleryDesc: "Our training facility, known as the \"CAMPUS\", serves as the official training center for both the youth and the Serie A teams following its renovation last summer. Currently the facility features 2 indoor courts, 3 outdoor courts, 7 locker rooms, offices, a bar, a restaurant, and related commercial activities.",
     eliteHousing: "Elite Housing",
     eliteHousingDesc: "Luxury student-athlete living",
+    housingGalleryDesc: "The newly constructed dormitory boasts 14 well-appointed rooms (both single and double occupancy), a spacious dining room capable of seating 18 guests, a comfortable living area, a dedicated laundry room, and two beautifully landscaped private gardens. The housing is located just a short 5-minute walk from the training center and major schools.",
+    // Opportunities
     elitePrograms: "Elite Programs",
     eliteOpportunities: "Elite Opportunities",
     opportunitiesDesc: "A complete ecosystem for the next generation of basketball excellence",
@@ -169,8 +178,9 @@ const TRANSLATIONS = {
     requestMoreInfo: "Request More Info",
     downloadBrochure: "Download Brochure",
     backToDetails: "Back to Details",
-    applicationForm: "Application Form",
-    formDescription: "Please provide your details below to apply for the",
+    findOutMore: "Find out more",
+    informationForm: "Information Request Form",
+    informationFormDescription: "Please complete the form below to request information for the",
     firstName: "First Name *",
     firstNamePlaceholder: "Your Name",
     lastName: "Last Name *",
@@ -182,8 +192,9 @@ const TRANSLATIONS = {
     messageInfo: "Message & Info Request *",
     messageInfoPlaceholder: "Tell us about your interest...",
     requestInfo: "Request Info",
-    programSelect: "Select Program *",
+    topicSelect: "Topic *",
     selectOption: "Select an option",
+    generalInformation: "General Information",
     buyNow: "Buy Now",
     joinProgram: "Join the Program",
     joinDescription: "Submit your application to enter the Varese elite opportunities",
@@ -223,19 +234,19 @@ const TRANSLATIONS = {
   },
   es: {
     backToHome: "Volver al Inicio",
-    joinEBP: "Únete a EBP",
+    joinEBP: "Solicitar Información",
     heroTitle: "Programa de Baloncesto de Élite",
     heroSubtitle: "Un Pilar de la Excelencia Europea",
     explorePrograms: "Explorar Programas",
     ourLegacy: "Nuestro Legado",
     whoWeAre: "Quiénes Somos",
     whoWeAreP1: "Pallacanestro Varese es un pilar del baloncesto europeo con 10 Campeonatos de Italia y 5 títulos de Euroliga. Nuestros logros históricos hablan por sí mismos, incluyendo 10 finales consecutivas de Euroliga.",
-    whoWeAreP2: "Ubicados en el corazón de Varese, Italia, estamos rodeados de líderes de la industria e innovación. El baloncesto no es solo un deporte aquí; es una tradición profundamente arraigada en la cultura de nuestra ciudad.",
+    whoWeAreP2: "Ubicados en el corazón de Varese, Italia, estamos rodeados de líderes de la industria e innovación. El baloncesto no es solo un deporte aquí; es una tradición profundamente arraigada en la cultura de nostra ciudad.",
     whoWeAreQuote: '"Seguimos centrados en el futuro, comprometidos con nuestro legado y siendo un orgullo para Varese."',
     ourPalmares: "Nuestro Palmarés",
     campionatoItaliano: "CAMPEONATO ITALIANO",
     coppaItalia: "COPA DE ITALIA",
-    supercoppa: "SUPERCOPA DE ITALIA",
+    supercoppa: "SUPERCOPPA DE ITALIA",
     coppaCampioni: "EUROLIGA",
     coppaCoppe: "RECOPA DE EUROPA",
     coppaIntercontinentale: "COPA INTERCONTINENTAL",
@@ -255,11 +266,15 @@ const TRANSLATIONS = {
     facilitiesDesc: "Infraestructura profesional para entrenamiento de alto rendimiento",
     arena: "El Arena",
     arenaDesc: "Capacidad para 5.352 espectadores con hospitalidad premium",
+    arenaGalleryDesc: "Nuestro pabellón es el lugar perfecto para partidos amistosos y torneos de verano. Con una capacidad de 5.352 asientos, el pabellón ofrece un ambiente dinámico tanto para jugadores como para espectadores. Nuestras completas instalaciones incluyen espacios de hospitalidad premium, cómodos puntos de venta, instalaciones dedicadas para los jugadores y soporte para medios y eventos.",
     campus: "Campus",
     campusDesc: "Centro de entrenamiento profesional",
     campusNote: "Proyecto de renovación de 3M € a partir de este verano",
+    campusGalleryDesc: "Nuestra instalación de entrenamiento, conocida como el \"CAMPUS\", sirve como centro de entrenamiento oficial tanto para los equipos juveniles como para el de Serie A tras su renovación el verano pasado. Actualmente, la instalación cuenta con 2 canchas cubiertas, 3 canchas al aire libre, 7 vestuarios, oficinas, un bar, un restaurante y actividades comerciales relacionadas.",
     eliteHousing: "Viviendas de Élite",
     eliteHousingDesc: "Alojamiento de lujo para estudiantes-atletas",
+    housingGalleryDesc: "La residencia de nueva construcción cuenta con 14 habitaciones bien equipadas (tanto individuales como dobles), un espacioso comedor con capacidad para 18 personas, una cómoda sala de estar, una lavandería dedicada y dos hermosos jardines privados. El alojamiento se encuentra a solo 5 minutos a pie del centro de entrenamiento y de las principales escuelas.",
+    // Opportunities
     elitePrograms: "Programas de Élite",
     eliteOpportunities: "Oportunidades de Élite",
     opportunitiesDesc: "Un ecosistema completo para la próxima generación de excelencia en el baloncesto",
@@ -269,8 +284,9 @@ const TRANSLATIONS = {
     requestMoreInfo: "Solicitar Más Información",
     downloadBrochure: "Descargar Folleto",
     backToDetails: "Volver a Detalles",
-    applicationForm: "Formulario de Solicitud",
-    formDescription: "Por favor, proporciona tus datos para solicitar el",
+    findOutMore: "Descubre más",
+    informationForm: "Formulario de Solicitud de Información",
+    informationFormDescription: "Por favor, completa el siguiente formulario para solicitar información sobre el",
     firstName: "Nombre *",
     firstNamePlaceholder: "Tu Nombre",
     lastName: "Apellido *",
@@ -282,8 +298,9 @@ const TRANSLATIONS = {
     messageInfo: "Mensaje y Solicitud de Información *",
     messageInfoPlaceholder: "Cuéntanos sobre tu interés...",
     requestInfo: "Solicitar Información",
-    programSelect: "Seleccionar Programa *",
+    topicSelect: "Tema *",
     selectOption: "Seleccionar una opción",
+    generalInformation: "Información General",
     buyNow: "Comprar Ahora",
     joinProgram: "Únete al Programa",
     joinDescription: "Envía tu solicitud para acceder a las oportunidades de élite de Varese",
@@ -323,7 +340,7 @@ const TRANSLATIONS = {
   },
   fr: {
     backToHome: "Retour à l'Accueil",
-    joinEBP: "Rejoindre l'EBP",
+    joinEBP: "Demander des Infos",
     heroTitle: "Programme de Basket d'Élite",
     heroSubtitle: "Un Pilier de l'Excellence Européenne",
     explorePrograms: "Explorer les Programmes",
@@ -355,11 +372,15 @@ const TRANSLATIONS = {
     facilitiesDesc: "Infrastructure professionnelle pour un entraînement de haute performance",
     arena: "L'Arène",
     arenaDesc: "Capacité de 5 352 places avec hospitalité premium",
+    arenaGalleryDesc: "Notre arène est le lieu idéal pour les matchs amicaux et les tournois d'été. Avec une capacité de 5 352 places, l'arène offre une atmosphère dynamique pour les joueurs et les spectateurs. Nos équipements complets comprennent des espaces d'accueil premium, des points de restauration pratiques, des installations dédiées aux joueurs et un soutien pour les médias et les événements.",
     campus: "Campus",
     campusDesc: "Centre d'entraînement professionnel",
     campusNote: "Projet de rénovation de 3M € débutant cet été",
+    campusGalleryDesc: "Notre centre d'entraînement, connu sous le nom de \"CAMPUS\", sert de centre d'entraînement officiel pour les équipes de jeunes et de Serie A suite à sa rénovation l'été dernier. Actuellement, l'installation comprend 2 terrains intérieurs, 3 terrains extérieurs, 7 vestiaires, des bureaux, un bar, un restaurant et des activités commerciales connexes.",
     eliteHousing: "Logement d'Élite",
     eliteHousingDesc: "Logement de luxe pour étudiants-athlètes",
+    housingGalleryDesc: "Le dortoir nouvellement construit dispose de 14 chambres bien aménagées (simples et doubles), d'une salle à manger spacieuse pouvant accueillir 18 personnes, d'un salon confortable, d'une buanderie dédiée et de deux magnifiques jardins privés. Le logement est situé à seulement 5 minutes à pied du centre d'entraînement et des principales écoles.",
+    // Opportunities
     elitePrograms: "Programmes d'Élite",
     eliteOpportunities: "Opportunités d'Élite",
     opportunitiesDesc: "Un écosystème complet pour la prochaine génération d'excellence du basket-ball",
@@ -369,8 +390,9 @@ const TRANSLATIONS = {
     requestMoreInfo: "Demander Plus d'Infos",
     downloadBrochure: "Télécharger la Brochure",
     backToDetails: "Retour aux Détails",
-    applicationForm: "Formulaire de Candidature",
-    formDescription: "Veuillez fournir vos coordonnées ci-dessous pour postuler au",
+    findOutMore: "En savoir plus",
+    informationForm: "Formulaire de Demande d'Informations",
+    informationFormDescription: "Veuillez remplir le formulaire ci-dessous pour demander des informations sur le",
     firstName: "Prénom *",
     firstNamePlaceholder: "Votre Prénom",
     lastName: "Nom *",
@@ -382,8 +404,9 @@ const TRANSLATIONS = {
     messageInfo: "Message et Demande d'Infos *",
     messageInfoPlaceholder: "Parlez-nous de votre intérêt...",
     requestInfo: "Demander des Infos",
-    programSelect: "Sélectionner un Programme *",
+    topicSelect: "Sujet *",
     selectOption: "Sélectionner une option",
+    generalInformation: "Informations Générales",
     buyNow: "Acheter Maintenant",
     joinProgram: "Rejoindre le Programme",
     joinDescription: "Soumettez votre candidature pour accéder aux opportunités d'élite de Varèse",
@@ -424,15 +447,19 @@ const TRANSLATIONS = {
 };
 
 const App: React.FC = () => {
-  const [view, setView] = useState<'home' | 'programs'>('home');
-  const [lang, setLang] = useState<Language>('it');
+  const [view, setView] = useState<'home' | 'programs' | 'palmares'>('home');
+  const [lang, setLang] = useState<Language>('en');
   const [scrolled, setScrolled] = useState(false);
   const [selectedProgram, setSelectedProgram] = useState<Program | null>(null);
   const [isJoinModalOpen, setIsJoinModalOpen] = useState(false);
   const [isApplying, setIsApplying] = useState(false);
   const [submissionStatus, setSubmissionStatus] = useState<'idle' | 'submitted'>('idle');
-  const [isPalmaresModalOpen, setIsPalmaresModalOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   
+  const [selectedGalleryFacility, setSelectedGalleryFacility] = useState<Facility | null>(null);
+  const [scrollToFacilities, setScrollToFacilities] = useState(false);
+  const [scrollToOpportunities, setScrollToOpportunities] = useState(false);
+
   const [formState, setFormState] = useState({
     firstName: '',
     lastName: '',
@@ -444,31 +471,72 @@ const App: React.FC = () => {
   
   const t = (key: keyof typeof TRANSLATIONS['en']) => TRANSLATIONS[lang][key] || TRANSLATIONS['en'][key];
 
+  const openGallery = (facility: Facility) => {
+    if (facility.galleryImages.length > 0) {
+        setSelectedGalleryFacility(facility);
+    }
+  };
+
+  const closeGallery = () => {
+      setSelectedGalleryFacility(null);
+  };
+
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => { window.scrollTo(0, 0); }, [view]);
+  useEffect(() => { 
+    if (view === 'home' && !scrollToFacilities && !scrollToOpportunities) {
+      window.scrollTo(0, 0);
+    }
+  }, [view, scrollToFacilities, scrollToOpportunities]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
-        handleCloseModal();
+        if (selectedProgram) {
+          handleCloseProgramModalAndScroll();
+        } else if (selectedGalleryFacility) {
+          closeGallery();
+          setScrollToFacilities(true);
+        } else {
+          handleCloseModal();
+        }
       }
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
+  }, [selectedProgram, selectedGalleryFacility, isJoinModalOpen]);
+
+  useEffect(() => {
+    if (scrollToFacilities) {
+      document.getElementById('facilities')?.scrollIntoView({ behavior: 'auto' });
+      setScrollToFacilities(false);
+    }
+  }, [scrollToFacilities]);
+
+  useEffect(() => {
+    if (scrollToOpportunities) {
+      document.getElementById('opportunities')?.scrollIntoView({ behavior: 'auto' });
+      setScrollToOpportunities(false);
+    }
+  }, [scrollToOpportunities]);
 
   const handleCloseModal = () => {
     setSelectedProgram(null);
     setIsJoinModalOpen(false);
     setIsApplying(false);
     setSubmissionStatus('idle');
-    setIsPalmaresModalOpen(false);
     setFormState({ firstName: '', lastName: '', organization: '', email: '', program: '', message: '' });
+    closeGallery();
+  };
+
+  const handleCloseProgramModalAndScroll = () => {
+    setSelectedProgram(null);
+    setIsApplying(false);
+    setScrollToOpportunities(true);
   };
 
   const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -498,11 +566,6 @@ const App: React.FC = () => {
     e.preventDefault();
     if (!isFormValid()) return;
 
-    // This function creates a 'mailto:' link.
-    // When triggered, it opens the user's default email client
-    // with the recipient, subject, and form data pre-filled.
-    // This is the most secure method without a backend server, as browsers
-    // prevent sites from sending emails silently for user protection.
     const subject = encodeURIComponent(`New EBP Application - ${formState.program}`);
     const body = encodeURIComponent(
       `Elite Basketball Program Application\n\n` +
@@ -531,8 +594,8 @@ const App: React.FC = () => {
   const LangSwitcher = () => (
     <div className="flex items-center gap-1 bg-black/20 backdrop-blur-md p-1 rounded-full border border-white/10">
       {[
-        { code: 'it' as Language, label: 'IT' },
         { code: 'en' as Language, label: 'EN' },
+        { code: 'it' as Language, label: 'IT' },
         { code: 'es' as Language, label: 'ES' },
         { code: 'fr' as Language, label: 'FR' },
       ].map((l) => (
@@ -591,21 +654,72 @@ const App: React.FC = () => {
                 </div>
               ))}
             </div>
-            <button 
-              onClick={() => { setSelectedProgram(prog); setIsApplying(false); }}
-              className="w-full bg-white text-black hover:bg-red-varese hover:text-white py-4 font-bold uppercase tracking-widest transition-all text-sm rounded-sm mt-auto"
-            >
-              {t('moreInfo')}
-            </button>
+             <div className="mt-auto pt-4 flex flex-col-reverse sm:flex-row gap-4">
+                <button
+                    onClick={() => { setSelectedProgram(prog); setIsApplying(false); }}
+                    className="w-full sm:flex-1 border border-white/20 text-white py-3 font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-all text-xs rounded-sm"
+                >
+                    {t('moreInfo')}
+                </button>
+                <button
+                    className="w-full sm:flex-[2] bg-red-varese text-white py-4 font-bold uppercase tracking-wider hover:bg-red-700 transition-all text-sm rounded-sm"
+                >
+                    {t('buyNow')}
+                </button>
+            </div>
           </div>
         </div>
       ))}
     </div>
   );
 
+  const GalleryModal = () => {
+    if (!selectedGalleryFacility) return null;
+
+    const images = selectedGalleryFacility.galleryImages;
+    const descriptionKey = selectedGalleryFacility.galleryDescriptionKey;
+
+    const gridClass = images.length === 4 
+      ? 'grid-cols-1 md:grid-cols-2' 
+      : 'grid-cols-1 lg:grid-cols-3';
+
+    const handleCloseAndScroll = () => {
+        closeGallery();
+        setScrollToFacilities(true);
+    };
+    
+    return (
+      <div className="fixed inset-0 z-[110] flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm animate-in fade-in duration-300">
+        <div className="absolute inset-0" onClick={handleCloseAndScroll} aria-hidden="true"></div>
+        <button onClick={handleCloseAndScroll} aria-label="Close gallery" className="absolute top-6 right-6 z-50 bg-black/50 hover:bg-red-varese text-white p-3 rounded-full transition-colors">
+          <X size={24} />
+        </button>
+        
+        <div className="relative w-full h-full max-w-7xl mx-auto flex flex-col items-center justify-center p-4 sm:p-8 animate-in zoom-in-95 duration-300">
+          <div className={`grid ${gridClass} gap-4 w-full`}>
+            {images.map((src, index) => (
+              <div key={index} className="relative w-full aspect-[4/3] group overflow-hidden rounded-lg shadow-2xl bg-zinc-900">
+                <img
+                  src={src}
+                  alt={`Gallery image ${index + 1}`}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            ))}
+          </div>
+          {descriptionKey && (
+            <div className="mt-8 p-8 bg-zinc-900/80 border border-white/10 rounded-lg max-w-5xl w-full">
+              <p className="text-gray-100 text-center text-lg font-light leading-relaxed">{t(descriptionKey as any)}</p>
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  };
+
   return (
-    <div className={`min-h-screen flex flex-col bg-[#0a0a0a] ${(selectedProgram || isJoinModalOpen || isPalmaresModalOpen) ? 'overflow-hidden' : ''}`}>
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled || view === 'programs' ? 'bg-black/90 backdrop-blur-md py-3 border-b border-white/10' : 'bg-transparent py-6'}`}>
+    <div className={`min-h-screen flex flex-col bg-[#0a0a0a] ${(selectedProgram || isJoinModalOpen || selectedGalleryFacility || isMenuOpen) ? 'overflow-hidden h-screen' : ''}`}>
+      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled || view === 'programs' || view === 'palmares' || isMenuOpen ? 'bg-black/90 backdrop-blur-md py-3 border-b border-white/10' : 'bg-transparent py-6'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => setView('home')}>
             <img src={CLUB_LOGO} alt="Varese Logo" className="h-10 w-auto" />
@@ -613,24 +727,48 @@ const App: React.FC = () => {
               Pallacanestro <span className="text-red-varese">Varese</span>
             </span>
           </div>
-          <div className="flex items-center space-x-8">
+          <div className="flex items-center space-x-4">
             {view === 'programs' && (
               <button onClick={() => setView('home')} className="hidden md:block text-xs font-bold uppercase tracking-widest hover:text-red-varese transition-colors">
                 {t('backToHome')}
               </button>
             )}
-            <button 
-              onClick={() => setIsJoinModalOpen(true)}
-              className="bg-red-varese hover:bg-red-700 text-white px-6 py-2 rounded-sm text-sm font-bold uppercase transition-all shadow-lg shadow-red-600/20 hidden md:block"
-            >
-              {t('joinEBP')}
-            </button>
+             {view === 'palmares' && (
+              <button onClick={() => setView('home')} className="hidden md:block text-xs font-bold uppercase tracking-widest hover:text-red-varese transition-colors">
+                {t('backToHome')}
+              </button>
+            )}
+            <div className="hidden md:flex items-center space-x-4">
+                <button onClick={() => navigateToHomeSection('opportunities')} className="bg-red-varese hover:bg-red-700 text-white px-6 py-2 rounded-sm text-sm font-bold uppercase transition-all shadow-lg shadow-red-600/20">
+                    {t('buyNow')}
+                </button>
+                <button onClick={() => setIsJoinModalOpen(true)} className="border border-white/50 text-white hover:bg-white hover:text-black px-6 py-2 rounded-sm text-sm font-bold uppercase transition-all">
+                    {t('joinEBP')}
+                </button>
+            </div>
             <LangSwitcher />
+             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden p-2 z-50">
+                {isMenuOpen ? <X/> : <Menu/>}
+            </button>
           </div>
         </div>
       </nav>
 
-      {view === 'home' ? (
+        {isMenuOpen && (
+            <div className="md:hidden fixed inset-0 z-40 bg-black/95 pt-24 px-8 flex flex-col items-center space-y-6 animate-in fade-in duration-300">
+                <button onClick={() => { navigateToHomeSection('opportunities'); setIsMenuOpen(false); }} className="w-full bg-red-varese hover:bg-red-700 text-white px-10 py-4 font-bold uppercase tracking-widest transition-all rounded-md">
+                {t('buyNow')}
+                </button>
+                <button onClick={() => { setIsJoinModalOpen(true); setIsMenuOpen(false); }} className="w-full border border-white hover:bg-white hover:text-black text-white px-10 py-4 font-bold uppercase tracking-widest transition-all rounded-md">
+                {t('joinEBP')}
+                </button>
+                <div className="w-full border-t border-white/10 my-4"></div>
+                <button onClick={() => { setView('programs'); setIsMenuOpen(false); }} className="text-xl font-oswald uppercase text-white/80 hover:text-white">{t('explorePrograms')}</button>
+                <button onClick={() => { navigateToHomeSection('who-we-are'); setIsMenuOpen(false); }} className="text-xl font-oswald uppercase text-white/80 hover:text-white">{t('ourLegacy')}</button>
+            </div>
+        )}
+
+      {view === 'home' && (
         <>
           <section className="relative h-screen flex items-center justify-center overflow-hidden">
             <div className="absolute inset-0 z-0">
@@ -646,12 +784,12 @@ const App: React.FC = () => {
                 {t('heroSubtitle')}
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <button onClick={() => setView('programs')} className="w-full sm:w-auto bg-red-varese hover:bg-red-700 text-white px-10 py-4 font-bold uppercase tracking-widest transition-all flex items-center justify-center group shadow-xl shadow-red-600/20">
-                  {t('explorePrograms')} <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
-                </button>
-                <button onClick={() => navigateToHomeSection('who-we-are')} className="w-full sm:w-auto border border-white hover:bg-white hover:text-black text-white px-10 py-4 font-bold uppercase tracking-widest transition-all">
-                  {t('ourLegacy')}
-                </button>
+                  <button onClick={() => setView('programs')} className="w-full sm:w-auto bg-red-varese hover:bg-red-700 text-white px-10 py-4 font-bold uppercase tracking-widest transition-all shadow-xl shadow-red-600/20 flex items-center justify-center group">
+                      {t('explorePrograms')} <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+                  </button>
+                  <button onClick={() => navigateToHomeSection('who-we-are')} className="w-full sm:w-auto border border-white hover:bg-white hover:text-black text-white px-10 py-4 font-bold uppercase tracking-widest transition-all">
+                      {t('ourLegacy')}
+                  </button>
               </div>
             </div>
           </section>
@@ -667,34 +805,41 @@ const App: React.FC = () => {
                 <p>{t('whoWeAreP2')}</p>
                 <p className="text-white font-semibold italic text-2xl pt-4">{t('whoWeAreQuote')}</p>
                 <div className="pt-8">
-                  <button onClick={() => setIsPalmaresModalOpen(true)} className="border border-white hover:bg-white hover:text-black text-white px-10 py-4 font-bold uppercase tracking-widest transition-all">
+                  <button onClick={() => setView('palmares')} className="border border-white hover:bg-white hover:text-black text-white px-10 py-4 font-bold uppercase tracking-widest transition-all">
                     {t('ourPalmares')}
                   </button>
                 </div>
               </div>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8 max-w-6xl mx-auto mt-20">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8 max-w-4xl mx-auto mt-20">
                 {ACHIEVEMENTS.map((item, idx) => {
                   let titleKey: keyof typeof TRANSLATIONS['en'];
-                  if(item.title.includes("CAMPIONATO")) titleKey = 'campionatoItaliano';
-                  else if(item.title.includes("COPPA ITALIA")) titleKey = 'coppaItalia';
-                  else if(item.title.includes("SUPERCOPPA")) titleKey = 'supercoppa';
-                  else if(item.title.includes("CAMPIONI")) titleKey = 'coppaCampioni';
-                  else if(item.title.includes("COPPE")) titleKey = 'coppaCoppe';
-                  else titleKey = 'coppaIntercontinentale';
+                  if (item.title.includes("CAMPIONATO")) {
+                    titleKey = 'campionatoItaliano';
+                  } else if (item.title.includes("SUPERCOPPA")) {
+                    titleKey = 'supercoppa';
+                  } else if (item.title.includes("COPPA ITALIA")) {
+                    titleKey = 'coppaItalia';
+                  } else if (item.title.includes("CAMPIONI")) {
+                    titleKey = 'coppaCampioni';
+                  } else if (item.title.includes("DELLE COPPE")) {
+                    titleKey = 'coppaCoppe';
+                  } else {
+                    titleKey = 'coppaIntercontinentale';
+                  }
                   return (
                   <div key={idx} className="relative flex flex-col items-center group">
                     <div className="bg-black w-full aspect-[2/3] relative flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.5)] transition-transform duration-500 hover:-translate-y-2" style={{ clipPath: 'polygon(0% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%)' }}>
                       <div className="bg-[#E30613] absolute inset-[2px] flex flex-col items-center justify-center p-4 text-center" style={{ clipPath: 'polygon(0% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%)' }}>
+                        {item.title === "CAMPIONATO ITALIANO" && (
+                            <div className="absolute top-0 left-0 right-0 h-2 flex z-20">
+                                <div className="w-1/3 bg-[#009246]"></div>
+                                <div className="w-1/3 bg-[#FFFFFF]"></div>
+                                <div className="w-1/3 bg-[#ce2b37]"></div>
+                            </div>
+                        )}
                         <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent opacity-20 pointer-events-none"></div>
                         <div className="relative z-10 flex flex-col items-center justify-between h-full w-full py-4">
                           <div className="flex flex-col items-center">
-                            {item.title === "CAMPIONATO ITALIANO" && (
-                              <div className="flex h-1.5 w-10 mb-2 rounded-sm overflow-hidden shadow-sm">
-                                <div className="bg-[#009246] flex-1"></div>
-                                <div className="bg-[#FFFFFF] flex-1"></div>
-                                <div className="bg-[#ce2b37] flex-1"></div>
-                              </div>
-                            )}
                             <div className="text-6xl md:text-7xl font-oswald font-black text-white drop-shadow-md mb-1">{item.count}</div>
                           </div>
                           <h3 className="font-oswald text-xs md:text-sm font-bold uppercase tracking-tight leading-tight text-white/90">{t(titleKey)}</h3>
@@ -759,7 +904,7 @@ const App: React.FC = () => {
               <p className="text-gray-400 tracking-widest uppercase text-sm">{t('expertise')}</p>
             </div>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="grid md:grid-cols-3 gap-12">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
                 {STAFF.map((member) => (
                   <div key={member.name} className="group cursor-pointer">
                     <div className="relative overflow-hidden aspect-[3/4] mb-8 rounded-lg border border-white/5 shadow-2xl">
@@ -791,29 +936,30 @@ const App: React.FC = () => {
                 <h2 className="font-oswald text-4xl md:text-6xl font-bold uppercase mb-4">{t('eliteFacilities')}</h2>
                 <p className="text-gray-400">{t('facilitiesDesc')}</p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="relative h-[450px] group overflow-hidden rounded-xl shadow-2xl">
-                  <img src="https://i.imgur.com/PVVnsrw.png" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" alt="Arena" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent flex flex-col justify-end p-8">
-                    <h4 className="font-oswald text-3xl font-bold uppercase">{t('arena')}</h4>
-                    <p className="text-sm text-gray-300">{t('arenaDesc')}</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                 {FACILITIES.map((facility) => (
+                  <div
+                    key={facility.id}
+                    className={`relative h-[450px] group overflow-hidden rounded-xl shadow-2xl ${facility.galleryImages.length > 0 ? 'cursor-pointer' : ''}`}
+                    onClick={() => openGallery(facility)}
+                  >
+                    <img src={facility.coverImage} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" alt={t(facility.titleKey as keyof typeof TRANSLATIONS['en'])} />
+                    
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent flex flex-col justify-end p-8 pointer-events-none">
+                      <h4 className="font-oswald text-3xl font-bold uppercase">{t(facility.titleKey as keyof typeof TRANSLATIONS['en'])}</h4>
+                      <p className="text-sm text-gray-300">{t(facility.descriptionKey as keyof typeof TRANSLATIONS['en'])}</p>
+                      {facility.noteKey && <p className="text-[10px] text-red-varese font-bold uppercase tracking-widest mt-2">{t(facility.noteKey as keyof typeof TRANSLATIONS['en'])}</p>}
+                    </div>
+
+                    {facility.galleryImages.length > 0 && (
+                      <div className="absolute inset-0 bg-black/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span className="text-white font-oswald text-xl font-bold uppercase tracking-widest">
+                            {t('findOutMore')}
+                        </span>
+                      </div>
+                    )}
                   </div>
-                </div>
-                <div className="relative h-[450px] group overflow-hidden rounded-xl shadow-2xl">
-                  <img src="https://i.imgur.com/7oppVoG.jpeg" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" alt="Campus" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent flex flex-col justify-end p-8">
-                    <h4 className="font-oswald text-3xl font-bold uppercase">{t('campus')}</h4>
-                    <p className="text-sm text-gray-300">{t('campusDesc')}</p>
-                    <p className="text-[10px] text-red-varese font-bold uppercase tracking-widest mt-2">{t('campusNote')}</p>
-                  </div>
-                </div>
-                <div className="relative h-[450px] group overflow-hidden rounded-xl shadow-2xl">
-                  <img src="https://i.imgur.com/LfpEJsZ.jpeg" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" alt="Elite Housing" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent flex flex-col justify-end p-8">
-                    <h4 className="font-oswald text-3xl font-bold uppercase">{t('eliteHousing')}</h4>
-                    <p className="text-sm text-gray-300">{t('eliteHousingDesc')}</p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </section>
@@ -829,7 +975,9 @@ const App: React.FC = () => {
             </div>
           </section>
         </>
-      ) : (
+      )}
+      
+      {view === 'programs' && (
         <section className="pt-32 pb-24 min-h-screen bg-black animate-in fade-in duration-500">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-16">
@@ -842,11 +990,73 @@ const App: React.FC = () => {
         </section>
       )}
 
+      {view === 'palmares' && (
+        <section className="relative w-full h-screen overflow-hidden bg-zinc-900 animate-in fade-in duration-500">
+            <img 
+                src="https://i.imgur.com/8kq5iZS.jpeg" 
+                alt="Pallacanestro Varese Trophies" 
+                className="absolute inset-0 w-full h-full object-cover" 
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/60"></div>
+            
+            <button 
+                onClick={() => setView('home')} 
+                className="absolute top-24 left-4 sm:left-8 z-20 flex items-center gap-2 bg-black/50 hover:bg-red-varese text-white px-4 py-2 rounded-full transition-colors text-xs font-bold uppercase tracking-widest"
+            >
+                <ArrowRight className="rotate-180" size={16} />
+                {t('backToHome')}
+            </button>
+            
+            <div className="relative z-10 w-full h-full overflow-y-auto p-8 sm:p-12 md:p-16 flex flex-col justify-end">
+                <div className="w-full max-w-6xl mx-auto text-white animate-in slide-in-from-bottom-16 duration-700">
+                    <img src={CLUB_LOGO} alt="Logo" className="h-16 md:h-20 mb-4" />
+                    <h2 className="font-oswald text-5xl md:text-7xl font-bold uppercase tracking-tighter mb-10">{t('palmaresTitle')}</h2>
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-8 text-lg">
+                        <div>
+                            <h3 className="font-oswald text-xl uppercase text-red-varese border-b-2 border-red-varese/50 pb-2 mb-4">{t('nationalCompetitions')}</h3>
+                            <ul className="space-y-3">
+                                <li className="flex items-center gap-3"><Trophy size={18} className="text-red-varese/80 flex-shrink-0" /> <div><strong>10</strong> &times; {t('scudetto')}</div></li>
+                                <li className="flex items-center gap-3"><Trophy size={18} className="text-red-varese/80 flex-shrink-0" /> <div><strong>4</strong> &times; {t('italianCup')}</div></li>
+                                <li className="flex items-center gap-3"><Trophy size={18} className="text-red-varese/80 flex-shrink-0" /> <div><strong>1</strong> &times; {t('italianSupercup')}</div></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 className="font-oswald text-xl uppercase text-red-varese border-b-2 border-red-varese/50 pb-2 mb-4">{t('internationalCompetitions')}</h3>
+                            <ul className="space-y-3">
+                                <li className="flex items-center gap-3"><Trophy size={18} className="text-red-varese/80 flex-shrink-0" /> <div><strong>5</strong> &times; {t('euroleague')}</div></li>
+                                <li className="flex items-center gap-3"><Trophy size={18} className="text-red-varese/80 flex-shrink-0" /> <div><strong>2</strong> &times; {t('cupWinnersCup')}</div></li>
+                                <li className="flex items-center gap-3"><Trophy size={18} className="text-red-varese/80 flex-shrink-0" /> <div><strong>3</strong> &times; {t('intercontinentalCup')}</div></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 className="font-oswald text-xl uppercase text-red-varese border-b-2 border-red-varese/50 pb-2 mb-4">{t('youthCompetitions')}</h3>
+                            <ul className="space-y-3">
+                                <li className="flex items-center gap-3"><Trophy size={18} className="text-red-varese/80 flex-shrink-0" /> <div><strong>3</strong> &times; {t('junioresChampionship')}</div></li>
+                                <li className="flex items-center gap-3"><Trophy size={18} className="text-red-varese/80 flex-shrink-0" /> <div><strong>1</strong> &times; {t('u19Championship')}</div></li>
+                                <li className="flex items-center gap-3"><Trophy size={18} className="text-red-varese/80 flex-shrink-0" /> <div><strong>2</strong> &times; {t('u17Championship')}</div></li>
+                                <li className="flex items-center gap-3"><Trophy size={18} className="text-red-varese/80 flex-shrink-0" /> <div><strong>1</strong> &times; {t('u15Championship')}</div></li>
+                                <li className="flex items-center gap-3"><Trophy size={18} className="text-red-varese/80 flex-shrink-0" /> <div><strong>1</strong> &times; {t('joinTheGame')}</div></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 className="font-oswald text-xl uppercase text-red-varese border-b-2 border-red-varese/50 pb-2 mb-4">{t('otherCompetitions')}</h3>
+                            <ul className="space-y-3">
+                                <li className="flex items-center gap-3"><Trophy size={18} className="text-red-varese/80 flex-shrink-0" /> <div><strong>1</strong> &times; {t('lombardyCup')}</div></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+      )}
+
+      {selectedGalleryFacility && <GalleryModal />}
+
       {selectedProgram && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-10 overflow-hidden">
-          <div className="absolute inset-0 bg-black/90 backdrop-blur-xl transition-opacity animate-in fade-in duration-300" onClick={handleCloseModal}></div>
+          <div className="absolute inset-0 bg-black/90 backdrop-blur-xl transition-opacity animate-in fade-in duration-300" onClick={handleCloseProgramModalAndScroll}></div>
           <div className="relative bg-zinc-900 w-full max-w-7xl max-h-screen md:max-h-[95vh] overflow-y-auto rounded-none md:rounded-3xl shadow-[0_0_100px_rgba(227,6,19,0.3)] border-0 md:border md:border-white/10 flex flex-col md:flex-row animate-in zoom-in-95 duration-300 ease-out">
-            <button onClick={handleCloseModal} className="absolute top-4 right-4 md:top-6 md:right-6 z-50 bg-black/50 hover:bg-red-varese text-white p-2 md:p-3 rounded-full transition-colors backdrop-blur-md"><X size={24} /></button>
+            <button onClick={handleCloseProgramModalAndScroll} className="absolute top-4 right-4 md:top-6 md:right-6 z-50 bg-black/50 hover:bg-red-varese text-white p-2 md:p-3 rounded-full transition-colors backdrop-blur-md"><X size={24} /></button>
             <div className="md:w-[40%] relative h-48 md:h-auto overflow-hidden">
               <img src={selectedProgram.image} className="absolute inset-0 w-full h-full object-cover opacity-60 md:opacity-100" alt={selectedProgram.title} />
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/40 to-transparent md:bg-gradient-to-r"></div>
@@ -863,7 +1073,14 @@ const App: React.FC = () => {
               {!isApplying ? (
                 <>
                   <div className="mb-6 p-3 border-l-2 border-red-varese bg-white/5 rounded-r-lg"><p className="text-white font-bold uppercase tracking-[0.05em] text-xs">Target: {selectedProgram.target}</p></div>
-                  <div className="text-gray-300 text-sm md:text-base leading-relaxed mb-6"><p className="mb-4">{selectedProgram.description}</p></div>
+                  <div className="text-gray-300 text-sm md:text-base leading-relaxed mb-6">
+                    <p className="mb-4">{selectedProgram.description}</p>
+                    {selectedProgram.details && (
+                      <div className="mt-4 pt-4 border-t border-white/10">
+                        <p className="whitespace-pre-wrap text-gray-400 text-sm">{selectedProgram.details}</p>
+                      </div>
+                    )}
+                  </div>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-8">
                     {selectedProgram.highlights.map((h, i) => (<div key={i} className="flex items-center gap-2 p-2 bg-white/5 rounded border border-white/10"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /><span className="text-[9px] font-bold uppercase tracking-wider text-white truncate">{h}</span></div>))}
                   </div>
@@ -881,7 +1098,7 @@ const App: React.FC = () => {
                 ) : (
                 <div className="flex-grow flex flex-col h-full animate-in slide-in-from-right-8 duration-500">
                   <div className="flex items-center gap-2 mb-8 cursor-pointer group w-fit" onClick={() => setIsApplying(false)}><ArrowRight className="rotate-180 text-red-varese group-hover:-translate-x-1 transition-transform" size={16} /><span className="text-[10px] font-bold uppercase tracking-widest text-gray-400 group-hover:text-white">{t('backToDetails')}</span></div>
-                  <div className="mb-6"><h3 className="text-white font-oswald text-xl md:text-2xl uppercase mb-2">{t('applicationForm')}</h3><p className="text-gray-400 text-xs">{t('formDescription')} <span className="text-red-varese font-bold">{selectedProgram.title}</span>.</p></div>
+                  <div className="mb-6"><h3 className="text-white font-oswald text-xl md:text-2xl uppercase mb-2">{t('informationForm')}</h3><p className="text-gray-400 text-xs">{t('informationFormDescription')} <span className="text-red-varese font-bold">{selectedProgram.title}</span>.</p></div>
                   <form onSubmit={handleJoinSubmit} className="space-y-4 md:space-y-6 flex-grow flex flex-col">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-1.5"><label className="text-[10px] font-bold uppercase tracking-widest text-red-varese">{t('firstName')}</label><input required type="text" name="firstName" value={formState.firstName} onChange={handleFormChange} placeholder={t('firstNamePlaceholder')} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-varese transition-colors" /></div>
@@ -915,7 +1132,7 @@ const App: React.FC = () => {
                 </div>
                 <div className="space-y-1.5"><label className="text-[10px] font-bold uppercase tracking-widest text-red-varese">{t('email')}</label><input required type="email" name="email" value={formState.email} onChange={handleFormChange} placeholder={t('emailPlaceholder')} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-varese transition-colors" /></div>
                 <div className="space-y-1.5"><label className="text-[10px] font-bold uppercase tracking-widest text-red-varese">{t('organization')}</label><input required type="text" name="organization" value={formState.organization} onChange={handleFormChange} placeholder={t('organizationPlaceholder')} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-varese transition-colors" /></div>
-                <div className="space-y-1.5 relative"><label className="text-[10px] font-bold uppercase tracking-widest text-red-varese">{t('programSelect')}</label><div className="relative"><select required name="program" value={formState.program} onChange={handleFormChange} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white appearance-none focus:outline-none focus:border-red-varese transition-colors cursor-pointer"><option value="" disabled className="bg-zinc-900">{t('selectOption')}</option>{PROGRAMS.map(p => <option key={p.id} value={p.title} className="bg-zinc-900">{p.title}</option>)}</select><ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none" size={18} /></div></div>
+                <div className="space-y-1.5 relative"><label className="text-[10px] font-bold uppercase tracking-widest text-red-varese">{t('topicSelect')}</label><div className="relative"><select required name="program" value={formState.program} onChange={handleFormChange} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white appearance-none focus:outline-none focus:border-red-varese transition-colors cursor-pointer"><option value="" disabled className="bg-zinc-900">{t('selectOption')}</option><option value="General Information" className="bg-zinc-900">{t('generalInformation')}</option>{PROGRAMS.map(p => <option key={p.id} value={p.title} className="bg-zinc-900">{p.title}</option>)}</select><ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none" size={18} /></div></div>
                 <div className="space-y-1.5"><label className="text-[10px] font-bold uppercase tracking-widest text-red-varese">{t('messageInfo')}</label><textarea required name="message" value={formState.message} onChange={handleFormChange} rows={4} placeholder={t('messageInfoPlaceholder')} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-varese transition-colors resize-none" /></div>
                 <button type="submit" disabled={!isFormValid()} className={`w-full py-4 font-bold uppercase tracking-[0.2em] rounded-lg transition-all flex items-center justify-center gap-3 ${isFormValid() ? 'bg-red-varese hover:bg-red-700 text-white shadow-xl shadow-red-600/20' : 'bg-white/10 text-gray-500 cursor-not-allowed'}`}>{t('requestMoreInfo')} <Send size={18} /></button>
               </form>
@@ -924,96 +1141,10 @@ const App: React.FC = () => {
         </div>
       )}
       
-      {isPalmaresModalOpen && (
-        <div className="fixed inset-0 z-[100] bg-zinc-900 overflow-y-auto animate-in fade-in duration-300">
-          <div className="relative min-h-screen w-full max-w-7xl mx-auto flex flex-col items-center justify-center p-8 md:p-12">
-            <button onClick={handleCloseModal} className="absolute top-6 right-6 z-50 bg-black/50 hover:bg-red-varese text-white p-3 rounded-full transition-colors"><X size={24} /></button>
-            
-            <div className="text-center mb-10">
-              <img src={CLUB_LOGO} alt="Logo" className="h-16 mx-auto mb-6" />
-              <h2 className="font-oswald text-4xl md:text-6xl font-bold uppercase tracking-tighter">{t('palmaresTitle')}</h2>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-x-16 gap-y-10 text-white w-full max-w-5xl">
-              <div>
-                <h3 className="font-oswald text-2xl uppercase text-red-varese border-b-2 border-red-varese/50 pb-2 mb-4">{t('nationalCompetitions')}</h3>
-                <ul className="space-y-3 text-lg">
-                  <li className="flex items-center gap-4"><Trophy size={20} className="text-red-varese" /> <div><strong>10</strong> &times; {t('scudetto')}</div></li>
-                  <li className="flex items-center gap-4"><Trophy size={20} className="text-red-varese" /> <div><strong>4</strong> &times; {t('italianCup')}</div></li>
-                  <li className="flex items-center gap-4"><Trophy size={20} className="text-red-varese" /> <div><strong>1</strong> &times; {t('italianSupercup')}</div></li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="font-oswald text-2xl uppercase text-red-varese border-b-2 border-red-varese/50 pb-2 mb-4">{t('internationalCompetitions')}</h3>
-                <ul className="space-y-3 text-lg">
-                  <li className="flex items-center gap-4"><Trophy size={20} className="text-red-varese" /> <div><strong>5</strong> &times; {t('euroleague')}</div></li>
-                  <li className="flex items-center gap-4"><Trophy size={20} className="text-red-varese" /> <div><strong>2</strong> &times; {t('cupWinnersCup')}</div></li>
-                  <li className="flex items-center gap-4"><Trophy size={20} className="text-red-varese" /> <div><strong>3</strong> &times; {t('intercontinentalCup')}</div></li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="font-oswald text-2xl uppercase text-red-varese border-b-2 border-red-varese/50 pb-2 mb-4">{t('youthCompetitions')}</h3>
-                <ul className="space-y-3 text-lg">
-                  <li className="flex items-center gap-4"><Trophy size={20} className="text-red-varese" /> <div><strong>3</strong> &times; {t('junioresChampionship')}</div></li>
-                  <li className="flex items-center gap-4"><Trophy size={20} className="text-red-varese" /> <div><strong>1</strong> &times; {t('u19Championship')}</div></li>
-                  <li className="flex items-center gap-4"><Trophy size={20} className="text-red-varese" /> <div><strong>2</strong> &times; {t('u17Championship')}</div></li>
-                   <li className="flex items-center gap-4"><Trophy size={20} className="text-red-varese" /> <div><strong>1</strong> &times; {t('u15Championship')}</div></li>
-                  <li className="flex items-center gap-4"><Trophy size={20} className="text-red-varese" /> <div><strong>1</strong> &times; {t('joinTheGame')}</div></li>
-                </ul>
-              </div>
-               <div>
-                <h3 className="font-oswald text-2xl uppercase text-red-varese border-b-2 border-red-varese/50 pb-2 mb-4">{t('otherCompetitions')}</h3>
-                <ul className="space-y-3 text-lg">
-                  <li className="flex items-center gap-4"><Trophy size={20} className="text-red-varese" /> <div><strong>1</strong> &times; {t('lombardyCup')}</div></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
-      <section className="py-32 bg-red-varese relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 flex items-center justify-center pointer-events-none"><h2 className="text-[30rem] font-oswald font-black uppercase tracking-tighter">VARESE</h2></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="font-oswald text-5xl md:text-8xl font-bold uppercase mb-8 leading-[0.9]" dangerouslySetInnerHTML={{ __html: t('ctaTitle').replace('Basketball Future', '<br/>Basketball Future') }}></h2>
-          <p className="text-xl md:text-2xl font-light mb-12 max-w-2xl mx-auto text-white/90 uppercase tracking-widest">{t('ctaSubtitle')}</p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="bg-white text-red-varese px-16 py-6 font-bold uppercase tracking-[0.3em] hover:bg-black hover:text-white transition-all rounded-sm text-lg shadow-2xl">{t('buyNow')}</button>
-            <button onClick={() => setIsJoinModalOpen(true)} className="border border-white text-white px-16 py-6 font-bold uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all rounded-sm text-lg">{t('applyNow')}</button>
-          </div>
-        </div>
-      </section>
-
-      <footer className="bg-black py-20 border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-16 mb-16">
-            <div className="col-span-1 md:col-span-2">
-              <img src={CLUB_LOGO} alt="Varese" className="h-20 mb-8" /><h4 className="font-oswald text-3xl font-bold uppercase mb-4 tracking-tighter">Pallacanestro Varese <span className="text-red-varese">EBP</span></h4>
-              <p className="text-gray-500 max-w-sm mb-8 leading-relaxed">{t('footerSlogan')}</p>
-              <div className="flex gap-6 items-center"><a href="https://www.linkedin.com/company/pallacanestro-varese-spa/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-varese transition-colors"><Linkedin size={24} /></a><a href="https://www.instagram.com/pallvarese?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-varese transition-colors"><Instagram size={24} /></a><a href="https://www.facebook.com/pallvarese/?locale=it_IT" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-varese transition-colors"><Facebook size={24} /></a><a href="https://x.com/PallVarese" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-varese transition-colors"><X size={24} /></a><a href="https://www.tiktok.com/@pallvarese?_r=1&_t=ZN-93rFmsKhFL8" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-varese transition-colors"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .57.04.84.11V9.5a6.33 6.33 0 0 0-1.01-.08 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.27A8.25 8.25 0 0 0 22 11.45V8.04a4.8 4.8 0 0 1-2.41-1.35z"/></svg></a></div>
-            </div>
-            <div>
-              <ul className="space-y-4 text-gray-500 text-sm md:mt-16">
-                <li><button onClick={() => navigateToHomeSection('who-we-are')} className="hover:text-white transition-colors uppercase tracking-widest">{t('footerLegacy')}</button></li>
-                <li><button onClick={() => navigateToHomeSection('where-we-are')} className="hover:text-white transition-colors uppercase tracking-widest">{t('footerRegion')}</button></li>
-                <li><button onClick={() => navigateToHomeSection('leadership')} className="hover:text-white transition-colors uppercase tracking-widest">{t('footerLeadership')}</button></li>
-                <li><button onClick={() => navigateToHomeSection('facilities')} className="hover:text-white transition-colors uppercase tracking-widest">{t('footerFacilities')}</button></li>
-                <li><button onClick={() => setView('programs')} className="hover:text-white transition-colors uppercase tracking-widest">{t('footerPrograms')}</button></li>
-              </ul>
-            </div>
-            <div>
-              <h5 className="font-bold uppercase mb-8 tracking-[0.2em] text-xs text-white">{t('contactUs')}</h5>
-              <ul className="space-y-6 text-gray-500 text-sm">
-                <li className="flex items-start gap-3"><MapPin size={20} className="text-red-varese mt-0.5" /><a href="https://maps.app.goo.gl/WUqdjaf9duktWCNU8" target="_blank" rel="noopener noreferrer" className="hover:text-red-varese transition-colors" dangerouslySetInnerHTML={{ __html: t('footerAddress').replace('\n', '<br/>') }}></a></li>
-                <li><p>Email: <a href="mailto:f.bellotto@pallacanestrovarese.it" className="hover:text-red-varese transition-colors">f.bellotto@pallacanestrovarese.it</a></p><p className="text-[10px] uppercase tracking-widest mt-1 text-gray-400">{t('footerCOO')}</p></li>
-              </ul>
-            </div>
-          </div>
-          <div className="pt-10 border-t border-white/5 text-center text-gray-600 text-[10px] uppercase tracking-[0.1em]"><p>&copy; {new Date().getFullYear()} Pallacanestro Varese. Developed for Elite Basketball Program.</p></div>
-        </div>
-      </footer>
-    </div>
-  );
-};
-
-export default App;
+      {(view === 'home' || view === 'programs') && (
+        <>
+            <section className="py-32 bg-red-varese relative overflow-hidden">
+                <div className="absolute inset-0 opacity-10 flex items-center justify-center pointer-events-none"><h2 className="text-[30rem] font-oswald font-black uppercase tracking-tighter">VARESE</h2></div>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <h2 className="font-oswald text-5xl md:text-8xl font-bold uppercase mb-8 leading-[0.9]" dangerouslySetInnerHTML={{ __html: t('ctaTitle').replace('Basketball Future', '<br/>Basketball Future') }}></h2>
+                <p className="text-xl md:text-2xl font-light mb-12 max-w-2xl mx-auto text-white/90 uppercase tracking-widest">{

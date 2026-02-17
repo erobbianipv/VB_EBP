@@ -14,9 +14,13 @@ export interface StaffMember {
 }
 
 export interface Facility {
-  title: string;
-  description: string;
-  images: string[];
+  id: string;
+  titleKey: string;
+  descriptionKey: string;
+  noteKey?: string;
+  coverImage: string;
+  galleryImages: string[];
+  galleryDescriptionKey?: string;
 }
 
 export interface Program {
@@ -27,4 +31,5 @@ export interface Program {
   description: string;
   highlights: string[];
   image: string;
+  details: string;
 }
