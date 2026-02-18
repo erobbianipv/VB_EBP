@@ -23,6 +23,7 @@ export interface Facility {
   galleryDescriptionKey?: string;
   secondaryGallery?: {
     titleKey: string;
+    descriptionKey?: string;
     images: string[];
   };
 }
@@ -36,4 +37,5 @@ export interface Program {
   highlights: string[];
   image: string;
   details: string;
+  successStoryLink?: string;
 }

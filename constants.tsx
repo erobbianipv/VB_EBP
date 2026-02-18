@@ -64,10 +64,11 @@ export const FACILITIES: Facility[] = [
     galleryDescriptionKey: 'campusGalleryDesc',
     secondaryGallery: {
       titleKey: 'campus2.0',
+      descriptionKey: 'campus2_0_desc',
       images: [
         "https://i.imgur.com/ji2ZgHb.png",
         "https://i.imgur.com/7uFsaKo.png",
-        "https://i.imgur.com/ixERjFE.png"
+        "https://i.imgur.com/7VQQLfO.png"
       ]
     }
   },
@@ -163,6 +164,7 @@ FOOD (Breakfast, lunch and dinner)
 TRAINING FACILITY EXCLUSIVITY (3h/day use of one full-size, professional basketball court, one weight and recovery room, and one locker room)
 TRANSPORTATION from/to Airport
 
-The offer can be customized and tailored based on team’s requests and additional services can be provided.`
+The offer can be customized and tailored based on team’s requests and additional services can be provided.`,
+    successStoryLink: "https://www.instagram.com/reel/C87rC5aI2Xz/"
   }
 ];

@@ -59,6 +59,7 @@ const TRANSLATIONS = {
     eliteHousingDesc: "Alloggi di lusso per studenti-atleti",
     housingGalleryDesc: "Il dormitorio di nuova costruzione dispone di 14 camere ben arredate (sia singole che doppie), una spaziosa sala da pranzo in grado di ospitare 18 persone, un confortevole soggiorno, una lavanderia dedicata e due splendidi giardini privati. L'alloggio si trova a soli 5 minuti a piedi dal centro di allenamento e dalle principali scuole.",
     'campus2.0': "Campus 2.0",
+    'campus2_0_desc': "Il nostro campus sportivo sta subendo una trasformazione da 3 milioni di euro per integrare spazi amministrativi e di coworking ad alta tecnologia. Questo investimento fornirà uffici moderni ed ergonomici progettati per ottimizzare la gestione sportiva e favorire la collaborazione professionale. Unendo l'eccellenza atletica con spazi di lavoro di alta qualità, il campus rinnovato diventerà un centro di primo livello per squadre e staff.",
     // Opportunities
     elitePrograms: "Programmi d'Elite",
     eliteOpportunities: "Opportunità d'Elite",
@@ -89,6 +90,7 @@ const TRANSLATIONS = {
     selectOption: "Seleziona un'opzione",
     generalInformation: "Informazioni Generali",
     buyNow: "Acquista Ora",
+    successStory: "Storia di Successo",
     // Global Join Modal
     joinProgram: "Unisciti al Programma",
     joinDescription: "Invia la tua candidatura per accedere alle opportunità d'elite di Varese",
@@ -172,6 +174,7 @@ const TRANSLATIONS = {
     eliteHousingDesc: "Luxury student-athlete living",
     housingGalleryDesc: "The newly constructed dormitory boasts 14 well-appointed rooms (both single and double occupancy), a spacious dining room capable of seating 18 guests, a comfortable living area, a dedicated laundry room, and two beautifully landscaped private gardens. The housing is located just a short 5-minute walk from the training center and major schools.",
     'campus2.0': "Campus 2.0",
+    'campus2_0_desc': "Our sports campus is undergoing a transformative €3 million renovation to integrate high-tech administrative and coworking spaces. This investment will deliver modern, ergonomic offices designed to streamline sports management and foster professional collaboration. By blending athletic excellence with premium workspace, the upgraded campus will serve as a premier hub for both teams and staff.",
     // Opportunities
     elitePrograms: "Elite Programs",
     eliteOpportunities: "Elite Opportunities",
@@ -200,6 +203,7 @@ const TRANSLATIONS = {
     selectOption: "Select an option",
     generalInformation: "General Information",
     buyNow: "Buy Now",
+    successStory: "Success Story",
     joinProgram: "Join the Program",
     joinDescription: "Submit your application to enter the Varese elite opportunities",
     ctaTitle: "Transform Your Basketball Future",
@@ -279,6 +283,7 @@ const TRANSLATIONS = {
     eliteHousingDesc: "Alojamiento de lujo para estudiantes-atletas",
     housingGalleryDesc: "La residencia de nueva construcción cuenta con 14 habitaciones bien equipadas (tanto individuales como dobles), un espacioso comedor con capacidad para 18 personas, una cómoda sala de estar, una lavandería dedicada y dos hermosos jardines privados. El alojamiento se encuentra a solo 5 minutos a pie del centro de entrenamiento y de las principales escuelas.",
     'campus2.0': "Campus 2.0",
+    'campus2_0_desc': "Nuestro campus deportivo está siendo sometido a una renovación transformadora de 3 millones de euros para integrar espacios administrativos y de coworking de alta tecnología. Esta inversión proporcionará oficinas modernas y ergonómicas diseñadas para optimizar la gestión deportiva y fomentar la colaboración profesional. Al combinar la excelencia atlética con un espacio de trabajo de primera calidad, el campus mejorado servirá como un centro de primer nivel tanto para los equipos como para el personal.",
     // Opportunities
     elitePrograms: "Programas de Élite",
     eliteOpportunities: "Oportunidades de Élite",
@@ -307,6 +312,7 @@ const TRANSLATIONS = {
     selectOption: "Seleccionar una opción",
     generalInformation: "Información General",
     buyNow: "Comprar Ahora",
+    successStory: "Historia de Éxito",
     joinProgram: "Únete al Programa",
     joinDescription: "Envía tu solicitud para acceder a las oportunidades de élite de Varese",
     ctaTitle: "Transforma Tu Futuro en el Baloncesto",
@@ -386,6 +392,7 @@ const TRANSLATIONS = {
     eliteHousingDesc: "Logement de luxe pour étudiants-athlètes",
     housingGalleryDesc: "Le dortoir nouvellement construit dispose de 14 chambres bien aménagées (simples et doubles), d'une salle à manger spacieuse pouvant accueillir 18 personnes, d'un salon confortable, d'une buanderie dédiée et de deux magnifiques jardins privés. Le logement est situé à seulement 5 minutes à pied du centre d'entraînement et des principales écoles.",
     'campus2.0': "Campus 2.0",
+    'campus2_0_desc': "Notre campus sportif fait l'objet d'une rénovation de 3 millions d'euros visant à intégrer des espaces administratifs et de coworking de haute technologie. Cet investissement permettra de créer des bureaux modernes et ergonomiques conçus pour rationaliser la gestion sportive et favoriser la collaboration professionnelle. En alliant l'excellence athlétique à des espaces de travail haut de gamme, le campus modernisé deviendra un pôle de premier plan pour les équipes et le personnel.",
     // Opportunities
     elitePrograms: "Programmes d'Élite",
     eliteOpportunities: "Opportunités d'Élite",
@@ -414,6 +421,7 @@ const TRANSLATIONS = {
     selectOption: "Sélectionner une option",
     generalInformation: "Informations Générales",
     buyNow: "Acheter Maintenant",
+    successStory: "Histoire à Succès",
     joinProgram: "Rejoindre le Programme",
     joinDescription: "Soumettez votre candidature pour accéder aux opportunités d'élite de Varèse",
     ctaTitle: "Transformez Votre Avenir dans le Basket",
@@ -708,6 +716,9 @@ const App: React.FC = () => {
                           {t(facility.secondaryGallery.titleKey as any)}
                           <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-24 h-2 bg-red-varese"></div>
                       </h2>
+                       {facility.secondaryGallery.descriptionKey && (
+                         <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed">{t(facility.secondaryGallery.descriptionKey as any)}</p>
+                       )}
                     </div>
                     <div className={`grid grid-cols-1 lg:grid-cols-3 gap-6`}>
                         {facility.secondaryGallery.images.map((src, index) => (
@@ -1098,6 +1109,11 @@ const App: React.FC = () => {
                     <div className="flex gap-4">
                       <button onClick={handleApplyNowInModal} className="flex-1 border border-white/20 text-white py-3 font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-all text-xs rounded-lg">{t('requestMoreInfo')}</button>
                       <a href="https://drive.google.com/file/d/1PQ7iSTdj0XC4TCMzENjinLr8Udv38-oW/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="flex-1 border border-white/20 text-white py-3 font-bold uppercase tracking-wider hover:bg-white/10 transition-all text-xs rounded-lg text-center flex items-center justify-center">{t('downloadBrochure')}</a>
+                      {selectedProgram.successStoryLink && (
+                        <a href={selectedProgram.successStoryLink} target="_blank" rel="noopener noreferrer" className="flex-1 border border-white/20 text-white py-3 font-bold uppercase tracking-wider hover:bg-white/10 transition-all text-xs rounded-lg text-center flex items-center justify-center gap-2">
+                            <Star size={14}/> {t('successStory')}
+                        </a>
+                      )}
                     </div>
                   </div>
                 </>
