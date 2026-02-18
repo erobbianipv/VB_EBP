@@ -1,11 +1,13 @@
 
-import React, { useState, useEffect } from 'react';
+// Fix: Corrected import for React and its hooks.
+import React from 'react';
+import { useState, useEffect } from 'react';
 import { CLUB_LOGO, ACHIEVEMENTS, STAFF, PROGRAMS, FACILITIES } from './constants';
 import { Program, Facility } from './types';
-import { Trophy, MapPin, Users, Home, GraduationCap, Calendar, ArrowRight, Menu, X, Instagram, Facebook, CheckCircle2, Send, Mail, Linkedin, Star, ChevronDown, ZoomIn, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Trophy, MapPin, Users, Home, GraduationCap, Calendar, ArrowRight, Menu, X, Instagram, Facebook, CheckCircle2, Send, Mail, Linkedin, Star, ChevronDown, ZoomIn, ChevronLeft, ChevronRight, ChevronUp } from 'lucide-react';
 
 type Language = 'it' | 'en' | 'es' | 'fr';
-type View = 'home' | 'programs' | 'palmares' | 'arena' | 'campus' | 'housing';
+type View = 'home' | 'programs' | 'palmares' | 'arena' | 'campus' | 'housing' | 'detailedPrograms' | 'programDetail';
 
 
 const TRANSLATIONS = {
@@ -13,6 +15,7 @@ const TRANSLATIONS = {
     // Nav & General
     backToHome: "Torna alla Home",
     joinEBP: "Richiedi Info",
+    exploreInDetail: "Esplora i Programmi in Dettaglio",
     // Hero
     heroTitle: "Elite Basketball Program",
     heroSubtitle: "Un Pilastro dell'Eccellenza Europea",
@@ -64,6 +67,9 @@ const TRANSLATIONS = {
     elitePrograms: "Programmi d'Elite",
     eliteOpportunities: "Opportunità d'Elite",
     opportunitiesDesc: "Un ecosistema completo per la prossima generazione di eccellenza nel basket",
+    ourProgramsInDetail: "I Nostri Programmi in Dettaglio",
+    ourProgramsInDetailDesc: "Un'analisi approfondita della struttura, degli obiettivi e dei vantaggi di ogni programma d'elite che offriamo.",
+    detailedProgram: "Programma Dettagliato",
     // Programs View
     programsTraining: "Programmi & Allenamento",
     programsDesc: "Scopri i nostri percorsi specializzati per giocatori e allenatori all'interno dell'ecosistema Pallacanestro Varese.",
@@ -134,6 +140,7 @@ const TRANSLATIONS = {
   en: {
     backToHome: "Back to Home",
     joinEBP: "Request Info",
+    exploreInDetail: "Explore Detailed Programs",
     heroTitle: "Elite Basketball Program",
     heroSubtitle: "A Cornerstone of European Excellence",
     explorePrograms: "Explore Programs",
@@ -179,6 +186,9 @@ const TRANSLATIONS = {
     elitePrograms: "Elite Programs",
     eliteOpportunities: "Elite Opportunities",
     opportunitiesDesc: "A complete ecosystem for the next generation of basketball excellence",
+    ourProgramsInDetail: "Our Programs in Detail",
+    ourProgramsInDetailDesc: "A deep dive into the structure, objectives, and benefits of each elite program we offer.",
+    detailedProgram: "Detailed Program",
     programsTraining: "Programs & Training",
     programsDesc: "Discover our specialized paths for players and coaches within the Pallacanestro Varese ecosystem.",
     moreInfo: "More Info",
@@ -243,6 +253,7 @@ const TRANSLATIONS = {
   es: {
     backToHome: "Volver al Inicio",
     joinEBP: "Solicitar Información",
+    exploreInDetail: "Explorar Programas Detallados",
     heroTitle: "Programa de Baloncesto de Élite",
     heroSubtitle: "Un Pilar de la Excelencia Europea",
     explorePrograms: "Explorar Programas",
@@ -288,6 +299,9 @@ const TRANSLATIONS = {
     elitePrograms: "Programas de Élite",
     eliteOpportunities: "Oportunidades de Élite",
     opportunitiesDesc: "Un ecosistema completo para la próxima generación de excelencia en el baloncesto",
+    ourProgramsInDetail: "Nuestros Programas en Detalle",
+    ourProgramsInDetailDesc: "Un análisis profundo de la estructura, los objetivos y los beneficios de cada programa de élite que ofrecemos.",
+    detailedProgram: "Programa Detallado",
     programsTraining: "Programas y Entrenamiento",
     programsDesc: "Descubre nuestros caminos especializados para jugadores y entrenadores dentro del ecosistema de Pallacanestro Varese.",
     moreInfo: "Más Información",
@@ -352,6 +366,7 @@ const TRANSLATIONS = {
   fr: {
     backToHome: "Retour à l'Accueil",
     joinEBP: "Demander des Infos",
+    exploreInDetail: "Explorer les Programmes Détaillés",
     heroTitle: "Programme de Basket d'Élite",
     heroSubtitle: "Un Pilier de l'Excellence Européenne",
     explorePrograms: "Explorer les Programmes",
@@ -397,6 +412,9 @@ const TRANSLATIONS = {
     elitePrograms: "Programmes d'Élite",
     eliteOpportunities: "Opportunités d'Élite",
     opportunitiesDesc: "Un écosystème complet pour la prochaine génération d'excellence du basket-ball",
+    ourProgramsInDetail: "Nos Programmes en Détail",
+    ourProgramsInDetailDesc: "Une immersion dans la structure, les objectifs et les avantages de chaque programme d'élite que nous proposons.",
+    detailedProgram: "Programme Détaillé",
     programsTraining: "Programmes et Entraînement",
     programsDesc: "Découvrez nos parcours spécialisés pour joueurs et entraîneurs au sein de l'écosystème de Pallacanestro Varese.",
     moreInfo: "Plus d'Infos",
@@ -460,6 +478,81 @@ const TRANSLATIONS = {
   }
 };
 
+const FormattedText = ({ text }: { text: string }) => {
+  if (!text) return null;
+
+  const titles = [
+    "A Vision for the Future: The Basketball Academy",
+    "A Comprehensive Two-Way Approach",
+    "The Perfect Environment for Young Athletes",
+    "Ambitious Growth & Proven Strategy",
+    "Our Professional Commitment",
+    "The Elite Full-Time Training Program",
+    "Target Audience & Future Opportunities",
+    "A Holistic 360° Offer",
+    "World-Class Training & Sports Science",
+    "Data-Driven Personalization",
+    "Premium Living & Academic Success",
+    "Elevate Your Game: The Elite Summer Camp",
+    "The Summer Camp Offer: All-Inclusive Excellence",
+    "The Full Time Training Program: A Year-Round Path to Pro",
+    "World-Class Sports Science & Personalization",
+    "Academic Excellence & Living Standards",
+    "Learn from the Best: Our Elite Team",
+    "Master the Bench: Coaches Internship Program",
+    "Elite Professional Integration",
+    "Advanced Scouting and Analytics",
+    "A Comprehensive \"All-Inclusive\" Package",
+    "The Ultimate Resume Builder",
+    "The Ultimate Offseason Training Residency",
+    "Pro-Level Facilities & Performance Nutrition",
+    "Elite Housing & Seamless Logistics",
+    "Strategic Location & Italian Culture"
+  ];
+
+  const blocks = text.split('\n\n').filter(block => block.trim() !== '');
+
+  return (
+    <div className="text-gray-400 text-sm leading-relaxed">
+      {blocks.map((block, index) => {
+        const lines = block.split('\n');
+        const firstLine = lines[0].trim();
+        
+        if (titles.includes(firstLine)) {
+          // This block starts with a main title
+          return (
+            <div key={index} className={index > 0 ? 'mt-4' : ''}>
+              <h4 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-2 text-base">{firstLine}</h4>
+              <div className="space-y-2">
+                {lines.slice(1).map((line, lineIndex) => <p key={lineIndex}>{line}</p>)}
+              </div>
+            </div>
+          );
+        } else {
+            // This is a block without a main title, could be a paragraph or a list
+             return (
+                <div key={index} className={`space-y-2 ${index > 0 ? 'mt-4' : ''}`}>
+                  {lines.map((line, lineIndex) => {
+                      const colonIndex = line.indexOf(':');
+                      if (colonIndex > 0 && colonIndex < line.length - 1) { // Ensure ':' is not the first or last character
+                          const title = line.substring(0, colonIndex + 1);
+                          const content = line.substring(colonIndex + 1);
+                          return (
+                              <p key={lineIndex}>
+                                  <strong className="text-gray-200">{title}</strong>{content}
+                              </p>
+                          );
+                      }
+                      return <p key={lineIndex}>{line}</p>
+                  })}
+                </div>
+             )
+        }
+      })}
+    </div>
+  );
+};
+
 const App: React.FC = () => {
   const [view, setView] = useState<View>('home');
   const [lang, setLang] = useState<Language>('en');
@@ -471,6 +564,7 @@ const App: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   const [scrollToOpportunities, setScrollToOpportunities] = useState(false);
+  const [sectionToScrollTo, setSectionToScrollTo] = useState<string | null>(null);
 
   const [formState, setFormState] = useState({
     firstName: '',
@@ -490,26 +584,42 @@ const App: React.FC = () => {
   }, []);
 
   useEffect(() => { 
+    if (sectionToScrollTo) return;
+
     if (view === 'home' && !scrollToOpportunities) {
       window.scrollTo(0, 0);
     } else if (view !== 'home') {
       window.scrollTo(0, 0);
     }
-  }, [view, scrollToOpportunities]);
+  }, [view, scrollToOpportunities, sectionToScrollTo]);
+
+  useEffect(() => {
+    if (view === 'home' && sectionToScrollTo) {
+      const element = document.getElementById(sectionToScrollTo);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+          setSectionToScrollTo(null);
+        }, 100);
+      } else {
+        setSectionToScrollTo(null);
+      }
+    }
+  }, [view, sectionToScrollTo]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
-        if (selectedProgram) {
-          handleCloseProgramModalAndScroll();
-        } else {
-          handleCloseModal();
+        if (isApplying) {
+            handleCloseFormModal();
+        } else if (isJoinModalOpen) {
+            handleCloseModal();
         }
       }
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [selectedProgram, isJoinModalOpen]);
+  }, [isApplying, isJoinModalOpen]);
 
   useEffect(() => {
     if (scrollToOpportunities) {
@@ -525,11 +635,10 @@ const App: React.FC = () => {
     setSubmissionStatus('idle');
     setFormState({ firstName: '', lastName: '', organization: '', email: '', program: '', message: '' });
   };
-
-  const handleCloseProgramModalAndScroll = () => {
-    setSelectedProgram(null);
+  
+  const handleCloseFormModal = () => {
     setIsApplying(false);
-    setScrollToOpportunities(true);
+    setSubmissionStatus('idle');
   };
 
   const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -546,13 +655,6 @@ const App: React.FC = () => {
       formState.program !== '' &&
       formState.message.trim() !== ''
     );
-  };
-
-  const handleApplyNowInModal = () => {
-    if (selectedProgram) {
-      setFormState(prev => ({ ...prev, program: selectedProgram.title }));
-    }
-    setIsApplying(true);
   };
 
   const handleJoinSubmit = (e: React.FormEvent) => {
@@ -575,10 +677,8 @@ const App: React.FC = () => {
 
   const navigateToHomeSection = (id: string) => {
     if (view !== 'home') {
+      setSectionToScrollTo(id);
       setView('home');
-      setTimeout(() => {
-        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
     } else {
       document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
     }
@@ -626,10 +726,13 @@ const App: React.FC = () => {
     </div>
   );
 
-  const ProgramsGrid = () => (
+    const ProgramsGrid = () => (
     <div className="flex flex-wrap justify-center gap-10">
       {PROGRAMS.map((prog) => (
-        <div key={prog.id} className="card-glass rounded-2xl overflow-hidden flex flex-col group hover:border-red-varese transition-all duration-300 shadow-xl w-full md:w-[calc(50%-20px)] lg:w-[calc(33.333%-27px)]">
+        <div 
+          key={prog.id} 
+          className={`relative card-glass rounded-2xl overflow-hidden flex flex-col group transition-all duration-300 shadow-xl w-full md:w-[calc(50%-20px)] lg:w-[calc(33.333%-27px)] ${prog.id === 'full-time' ? 'border-red-varese shadow-2xl shadow-red-600/30' : 'hover:border-red-varese'}`}
+        >
           <div className="h-64 overflow-hidden relative">
             <img src={prog.image} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" alt={prog.title} />
             <div className="absolute top-4 left-4 bg-red-varese text-white px-3 py-1 text-[10px] font-bold tracking-widest uppercase rounded">
@@ -649,7 +752,7 @@ const App: React.FC = () => {
             </div>
              <div className="mt-auto pt-4 flex flex-col-reverse sm:flex-row gap-4">
                 <button
-                    onClick={() => { setSelectedProgram(prog); setIsApplying(false); }}
+                    onClick={() => { setSelectedProgram(prog); setView('programDetail'); }}
                     className="w-full sm:flex-1 border border-white/20 text-white py-3 font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-all text-xs rounded-sm"
                 >
                     {t('moreInfo')}
@@ -739,11 +842,149 @@ const App: React.FC = () => {
     );
   };
 
+  const DetailedProgramsPage = () => {
+    const [openProgramId, setOpenProgramId] = useState<string | null>(null);
+
+    const toggleProgram = (id: string) => {
+      setOpenProgramId(openProgramId === id ? null : id);
+    };
+
+    return (
+      <main className="fixed inset-0 z-[60] bg-black overflow-y-auto p-4 sm:p-8 animate-in fade-in duration-500">
+        <div className="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none z-0">
+            <h2 className="text-[25rem] font-oswald font-black uppercase tracking-tighter text-white/5 select-none">VARESE</h2>
+        </div>
+        <div className="max-w-4xl mx-auto relative pt-20 pb-20 z-10">
+          <button
+            onClick={() => setView('home')}
+            className="absolute top-8 left-0 z-20 flex items-center gap-2 bg-black/50 hover:bg-red-varese text-white px-4 py-2 rounded-full transition-colors text-xs font-bold uppercase tracking-widest"
+          >
+            <ArrowRight className="rotate-180" size={16} />
+            {t('backToHome')}
+          </button>
+          
+          <div className="text-center mb-12">
+            <p className="text-red-varese font-bold uppercase tracking-[0.3em] text-xs mb-4">{t('elitePrograms')}</p>
+            <div className="inline-block relative">
+                <h1 className="font-oswald text-4xl md:text-6xl font-bold uppercase mb-4">{t('ourProgramsInDetail')}</h1>
+                <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-24 h-1 bg-red-varese"></div>
+            </div>
+            <p className="text-gray-400 max-w-3xl mx-auto mt-8">{t('ourProgramsInDetailDesc')}</p>
+          </div>
+          
+          <div className="space-y-4">
+            {PROGRAMS.map(program => (
+              <div key={program.id} className="bg-zinc-900/50 border border-white/10 rounded-lg overflow-hidden transition-all duration-300">
+                <button
+                  onClick={() => toggleProgram(program.id)}
+                  className="w-full flex justify-between items-center p-4 md:p-6 text-left hover:bg-white/5 transition-colors"
+                  aria-expanded={openProgramId === program.id}
+                  aria-controls={`program-details-${program.id}`}
+                >
+                  <h2 className={`font-oswald text-xl md:text-2xl uppercase transition-colors ${openProgramId === program.id ? 'text-red-varese' : ''}`}>{program.title}</h2>
+                  {openProgramId === program.id ? <ChevronUp className="text-red-varese" /> : <ChevronDown />}
+                </button>
+                {openProgramId === program.id && (
+                  <div 
+                    id={`program-details-${program.id}`}
+                    className="px-4 md:px-6 pb-6 animate-in fade-in duration-500"
+                  >
+                    <div className="border-t border-white/10 pt-4">
+                      <div className="grid md:grid-cols-2 gap-x-8 gap-y-4 mb-6">
+                        <div>
+                          <p className="text-red-varese text-xs font-bold uppercase tracking-widest mb-1">Target</p>
+                          <p className="text-gray-300">{program.target}</p>
+                        </div>
+                        <div>
+                          <p className="text-red-varese text-xs font-bold uppercase tracking-widest mb-1">Timing</p>
+                          <p className="text-gray-300">{program.timing}</p>
+                        </div>
+                      </div>
+                      <img src={program.image} alt={program.title} className="w-full aspect-video object-cover rounded-lg my-6" />
+                      <div className="mb-6"><FormattedText text={program.details} /></div>
+                      <h4 className="text-white font-oswald uppercase tracking-wider mb-3">Key Highlights</h4>
+                      <div className="grid sm:grid-cols-2 gap-x-6 gap-y-2">
+                        {program.highlights.map((h, i) => (
+                          <div key={i} className="flex items-center gap-3">
+                            <CheckCircle2 size={16} className="text-red-varese flex-shrink-0" />
+                            <span className="text-gray-300 text-sm">{h}</span>
+                          </div>
+                        ))}
+                      </div>
+                       <div className="mt-8 pt-6 border-t border-white/10">
+                          <button
+                              className="w-full bg-red-varese text-white py-4 font-bold uppercase tracking-wider hover:bg-red-700 transition-all text-sm rounded-sm"
+                          >
+                              {t('buyNow')}
+                          </button>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </main>
+    );
+  };
+
+    const ProgramDetailPage = ({ program, t, onBack, onRequestInfo, onBuyNow }: { program: Program, t: (key: any) => string, onBack: () => void, onRequestInfo: (p: Program) => void, onBuyNow: () => void }) => (
+    <main className="pt-24 pb-12 bg-black animate-in fade-in duration-500 min-h-screen">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <button onClick={onBack} className="flex items-center gap-2 text-sm text-gray-400 hover:text-white mb-8 group">
+          <ArrowRight className="rotate-180 group-hover:-translate-x-1 transition-transform" size={16} />
+          {t('programsTraining')}
+        </button>
+  
+        <div className="bg-zinc-900/50 border border-white/10 rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-2xl shadow-red-600/10">
+          <div className="md:w-[45%] relative min-h-[300px] md:min-h-0">
+            <img src={program.image} className="absolute inset-0 w-full h-full object-cover" alt={program.title} />
+            <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent md:bg-gradient-to-r md:from-zinc-900/50"></div>
+          </div>
+          <div className="md:w-[55%] p-8 md:p-12 flex flex-col">
+             <div className="flex justify-between items-start mb-4">
+                <div>
+                  <p className="text-red-varese font-bold uppercase tracking-[0.2em] text-[10px] mb-1">{t('detailedProgram')}</p>
+                  <h2 className="font-oswald text-3xl md:text-5xl font-bold uppercase leading-tight tracking-tighter">{program.title}</h2>
+                </div>
+                <span className="hidden md:inline-block bg-red-varese text-white px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded">{program.timing}</span>
+              </div>
+              <div className="mb-6 p-3 border-l-2 border-red-varese bg-white/5 rounded-r-lg"><p className="text-white font-bold uppercase tracking-[0.05em] text-xs">Target: {program.target}</p></div>
+              <div className="text-gray-300 text-sm md:text-base leading-relaxed mb-6 flex-grow">
+                <p className="mb-4">{program.description}</p>
+                {program.details && (
+                  <div className="mt-4 pt-4 border-t border-white/10">
+                    <FormattedText text={program.details} />
+                  </div>
+                )}
+              </div>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-8">
+                {program.highlights.map((h, i) => (<div key={i} className="flex items-center gap-2 p-2 bg-white/5 rounded border border-white/10"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /><span className="text-[9px] font-bold uppercase tracking-wider text-white truncate">{h}</span></div>))}
+              </div>
+              <div className="flex flex-col gap-4 mt-auto">
+                <button onClick={onBuyNow} className="w-full bg-red-varese text-white py-4 md:py-5 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg shadow-xl shadow-red-600/30">{t('buyNow')}</button>
+                <div className="flex gap-4">
+                  <button onClick={() => onRequestInfo(program)} className="flex-1 border border-white/20 text-white py-3 font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-all text-xs rounded-lg">{t('requestMoreInfo')}</button>
+                  <a href="https://drive.google.com/file/d/1PQ7iSTdj0XC4TCMzENjinLr8Udv38-oW/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="flex-1 border border-white/20 text-white py-3 font-bold uppercase tracking-wider hover:bg-white/10 transition-all text-xs rounded-lg text-center flex items-center justify-center">{t('downloadBrochure')}</a>
+                  {program.successStoryLink && (
+                    <a href={program.successStoryLink} target="_blank" rel="noopener noreferrer" className="flex-1 border border-white/20 text-white py-3 font-bold uppercase tracking-wider hover:bg-white/10 transition-all text-xs rounded-lg text-center flex items-center justify-center gap-2">
+                        <Star size={14}/> {t('successStory')}
+                    </a>
+                  )}
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  );
+
 
   const isFacilityView = ['arena', 'campus', 'housing'].includes(view);
 
   return (
-    <div className={`min-h-screen flex flex-col bg-[#0a0a0a] ${(selectedProgram || isJoinModalOpen || isMenuOpen) ? 'overflow-hidden h-screen' : ''}`}>
+    <div className={`min-h-screen flex flex-col bg-[#0a0a0a] ${(isApplying || isJoinModalOpen || isMenuOpen || view === 'detailedPrograms') ? 'overflow-hidden h-screen' : ''}`}>
       <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled || view !== 'home' || isMenuOpen ? 'bg-black/90 backdrop-blur-md py-3 border-b border-white/10' : 'bg-transparent py-6'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => setView('home')}>
@@ -753,7 +994,7 @@ const App: React.FC = () => {
             </span>
           </div>
           <div className="flex items-center space-x-4">
-            {(view === 'programs' || view === 'palmares' || isFacilityView) && (
+            {(view === 'programs' || view === 'palmares' || isFacilityView || view === 'detailedPrograms' || view === 'programDetail') && (
               <button onClick={() => setView('home')} className="hidden md:block text-xs font-bold uppercase tracking-widest hover:text-red-varese transition-colors">
                 {t('backToHome')}
               </button>
@@ -820,11 +1061,13 @@ const App: React.FC = () => {
                 {t('whoWeAre')}
                 <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-24 h-2 bg-red-varese"></div>
               </h2>
-              <div className="space-y-6 text-gray-400 text-xl leading-relaxed mb-16 max-w-4xl mx-auto">
+              <div className="space-y-10 text-gray-400 text-xl leading-relaxed mb-16 max-w-4xl mx-auto text-left">
                 <p>{t('whoWeAreP1')}</p>
                 <p>{t('whoWeAreP2')}</p>
-                <p className="text-white font-semibold italic text-2xl pt-4">{t('whoWeAreQuote')}</p>
-                <div className="pt-8">
+                
+                <p className="text-white font-semibold italic text-2xl pt-4 text-center">{t('whoWeAreQuote')}</p>
+                
+                <div className="pt-8 text-center">
                   <button onClick={() => setView('palmares')} className="border border-white hover:bg-white hover:text-black text-white px-10 py-4 font-bold uppercase tracking-widest transition-all">
                     {t('ourPalmares')}
                   </button>
@@ -1067,58 +1310,39 @@ const App: React.FC = () => {
             </div>
         </section>
       )}
-
+      
       {isFacilityView && (
           <FacilityPage facility={FACILITIES.find(f => f.id === view)!} />
       )}
 
-      {selectedProgram && (
+      {view === 'detailedPrograms' && <DetailedProgramsPage />}
+
+      {view === 'programDetail' && selectedProgram && (
+        <ProgramDetailPage 
+          program={selectedProgram}
+          t={t}
+          onBack={() => setView('programs')}
+          onRequestInfo={(prog) => {
+            setSelectedProgram(prog);
+            setIsApplying(true);
+          }}
+          onBuyNow={() => {
+            // Placeholder for buy now functionality
+          }}
+        />
+      )}
+
+      {selectedProgram && isApplying && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-10 overflow-hidden">
-          <div className="absolute inset-0 bg-black/90 backdrop-blur-xl transition-opacity animate-in fade-in duration-300" onClick={handleCloseProgramModalAndScroll}></div>
+          <div className="absolute inset-0 bg-black/90 backdrop-blur-xl transition-opacity animate-in fade-in duration-300" onClick={handleCloseFormModal}></div>
           <div className="relative bg-zinc-900 w-full max-w-7xl max-h-screen md:max-h-[95vh] overflow-y-auto rounded-none md:rounded-3xl shadow-[0_0_100px_rgba(227,6,19,0.3)] border-0 md:border md:border-white/10 flex flex-col md:flex-row animate-in zoom-in-95 duration-300 ease-out">
-            <button onClick={handleCloseProgramModalAndScroll} className="absolute top-4 right-4 md:top-6 md:right-6 z-50 bg-black/50 hover:bg-red-varese text-white p-2 md:p-3 rounded-full transition-colors backdrop-blur-md"><X size={24} /></button>
+            <button onClick={handleCloseFormModal} className="absolute top-4 right-4 md:top-6 md:right-6 z-50 bg-black/50 hover:bg-red-varese text-white p-2 md:p-3 rounded-full transition-colors backdrop-blur-md"><X size={24} /></button>
             <div className="md:w-[40%] relative h-48 md:h-auto overflow-hidden">
               <img src={selectedProgram.image} className="absolute inset-0 w-full h-full object-cover opacity-60 md:opacity-100" alt={selectedProgram.title} />
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/40 to-transparent md:bg-gradient-to-r"></div>
-              <div className="absolute bottom-4 left-4 md:hidden"><span className="bg-red-varese text-white px-2 py-0.5 text-[10px] font-bold uppercase tracking-widest rounded">{selectedProgram.timing}</span></div>
             </div>
             <div className="md:w-[60%] p-6 md:p-12 flex flex-col overflow-y-visible">
-              <div className="flex justify-between items-start mb-4">
-                <div>
-                  <p className="text-red-varese font-bold uppercase tracking-[0.2em] text-[10px] mb-1">Elite Program Detail</p>
-                  <h2 className="font-oswald text-3xl md:text-5xl font-bold uppercase leading-tight tracking-tighter">{selectedProgram.title}</h2>
-                </div>
-                {!isApplying && (<span className="hidden md:inline-block bg-red-varese text-white px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded">{selectedProgram.timing}</span>)}
-              </div>
-              {!isApplying ? (
-                <>
-                  <div className="mb-6 p-3 border-l-2 border-red-varese bg-white/5 rounded-r-lg"><p className="text-white font-bold uppercase tracking-[0.05em] text-xs">Target: {selectedProgram.target}</p></div>
-                  <div className="text-gray-300 text-sm md:text-base leading-relaxed mb-6">
-                    <p className="mb-4">{selectedProgram.description}</p>
-                    {selectedProgram.details && (
-                      <div className="mt-4 pt-4 border-t border-white/10">
-                        <p className="whitespace-pre-wrap text-gray-400 text-sm">{selectedProgram.details}</p>
-                      </div>
-                    )}
-                  </div>
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-8">
-                    {selectedProgram.highlights.map((h, i) => (<div key={i} className="flex items-center gap-2 p-2 bg-white/5 rounded border border-white/10"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /><span className="text-[9px] font-bold uppercase tracking-wider text-white truncate">{h}</span></div>))}
-                  </div>
-                  <div className="flex flex-col gap-4 mt-auto">
-                    <button className="w-full bg-red-varese text-white py-4 md:py-5 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg shadow-xl shadow-red-600/30">{t('buyNow')}</button>
-                    <div className="flex gap-4">
-                      <button onClick={handleApplyNowInModal} className="flex-1 border border-white/20 text-white py-3 font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-all text-xs rounded-lg">{t('requestMoreInfo')}</button>
-                      <a href="https://drive.google.com/file/d/1PQ7iSTdj0XC4TCMzENjinLr8Udv38-oW/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="flex-1 border border-white/20 text-white py-3 font-bold uppercase tracking-wider hover:bg-white/10 transition-all text-xs rounded-lg text-center flex items-center justify-center">{t('downloadBrochure')}</a>
-                      {selectedProgram.successStoryLink && (
-                        <a href={selectedProgram.successStoryLink} target="_blank" rel="noopener noreferrer" className="flex-1 border border-white/20 text-white py-3 font-bold uppercase tracking-wider hover:bg-white/10 transition-all text-xs rounded-lg text-center flex items-center justify-center gap-2">
-                            <Star size={14}/> {t('successStory')}
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                </>
-              ) : (
-                submissionStatus === 'submitted' ? (
+                {submissionStatus === 'submitted' ? (
                   <SubmissionSuccessMessage />
                 ) : (
                 <div className="flex-grow flex flex-col h-full animate-in slide-in-from-right-8 duration-500">
@@ -1135,7 +1359,7 @@ const App: React.FC = () => {
                     <div className="pt-4 mt-auto"><button type="submit" disabled={!isFormValid()} className={`w-full py-4 font-bold uppercase tracking-[0.2em] rounded-lg transition-all flex items-center justify-center gap-3 ${isFormValid() ? 'bg-red-varese hover:bg-red-700 text-white shadow-xl shadow-red-600/20' : 'bg-white/10 text-gray-500 cursor-not-allowed'}`}>{t('requestInfo')} <Send size={18} /></button></div>
                   </form>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </div>
@@ -1166,7 +1390,7 @@ const App: React.FC = () => {
         </div>
       )}
       
-      {view !== 'palmares' && !isFacilityView && (
+      {view !== 'palmares' && !isFacilityView && view !== 'detailedPrograms' && view !== 'programDetail' && (
         <>
             <section className="py-32 bg-red-varese relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10 flex items-center justify-center pointer-events-none"><h2 className="text-[30rem] font-oswald font-black uppercase tracking-tighter">VARESE</h2></div>
