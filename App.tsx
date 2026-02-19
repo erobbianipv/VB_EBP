@@ -13,6 +13,7 @@ type View = 'home' | 'programs' | 'palmares' | 'arena' | 'campus' | 'housing' | 
 const TRANSLATIONS = {
   it: {
     // Nav & General
+    back: "Indietro",
     backToHome: "Torna alla Home",
     joinEBP: "Richiedi Info",
     exploreInDetail: "Esplora i Programmi in Dettaglio",
@@ -138,6 +139,7 @@ const TRANSLATIONS = {
     joinTheGame: "Join The Game",
   },
   en: {
+    back: "Back",
     backToHome: "Back to Home",
     joinEBP: "Request Info",
     exploreInDetail: "Explore Detailed Programs",
@@ -251,6 +253,7 @@ const TRANSLATIONS = {
     joinTheGame: "Join The Game",
   },
   es: {
+    back: "Volver",
     backToHome: "Volver al Inicio",
     joinEBP: "Solicitar Información",
     exploreInDetail: "Explorar Programas Detallados",
@@ -364,6 +367,7 @@ const TRANSLATIONS = {
     joinTheGame: "Join The Game",
   },
   fr: {
+    back: "Retour",
     backToHome: "Retour à l'Accueil",
     joinEBP: "Demander des Infos",
     exploreInDetail: "Explorer les Programmes Détaillés",
@@ -597,10 +601,8 @@ const App: React.FC = () => {
     if (view === 'home' && sectionToScrollTo) {
       const element = document.getElementById(sectionToScrollTo);
       if (element) {
-        setTimeout(() => {
-          element.scrollIntoView({ behavior: 'smooth' });
-          setSectionToScrollTo(null);
-        }, 100);
+        element.scrollIntoView({ behavior: 'auto' });
+        setSectionToScrollTo(null);
       } else {
         setSectionToScrollTo(null);
       }
@@ -769,14 +771,22 @@ const App: React.FC = () => {
     </div>
   );
   
-  const FacilityPage = ({ facility }: { facility: Facility }) => {
+  const FacilityPage = ({ facility, onBack, t }: { facility: Facility; onBack: () => void; t: (key: any) => string; }) => {
     const images = facility.galleryImages;
     const gridClass = images.length === 4 
       ? 'grid-cols-1 md:grid-cols-2' 
       : 'grid-cols-1 lg:grid-cols-3';
 
     return (
-      <main className="pt-20 bg-black animate-in fade-in duration-500">
+      <main className="pt-20 bg-black animate-in fade-in duration-500 relative">
+         <button 
+            onClick={onBack} 
+            className="absolute top-24 left-4 sm:left-8 z-20 flex items-center justify-center bg-black/50 hover:bg-red-varese text-white w-12 h-12 rounded-full transition-colors"
+            aria-label={t('back')}
+        >
+            <ArrowRight className="rotate-180" size={20} />
+        </button>
+
         <section className="relative h-[50vh] min-h-[300px] flex items-center justify-center overflow-hidden">
             <div className="absolute inset-0 z-0">
                 <img src={facility.coverImage} className="w-full h-full object-cover opacity-50" alt={t(facility.titleKey as any)} />
@@ -932,9 +942,12 @@ const App: React.FC = () => {
     const ProgramDetailPage = ({ program, t, onBack, onRequestInfo, onBuyNow }: { program: Program, t: (key: any) => string, onBack: () => void, onRequestInfo: (p: Program) => void, onBuyNow: () => void }) => (
     <main className="pt-24 pb-12 bg-black animate-in fade-in duration-500 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <button onClick={onBack} className="flex items-center gap-2 text-sm text-gray-400 hover:text-white mb-8 group">
-          <ArrowRight className="rotate-180 group-hover:-translate-x-1 transition-transform" size={16} />
-          {t('programsTraining')}
+        <button 
+            onClick={onBack} 
+            className="flex items-center justify-center bg-black/50 hover:bg-red-varese text-white w-12 h-12 rounded-full transition-colors mb-8"
+            aria-label={t('back')}
+        >
+            <ArrowRight className="rotate-180" size={20} />
         </button>
   
         <div className="bg-zinc-900/50 border border-white/10 rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-2xl shadow-red-600/10">
@@ -1261,11 +1274,11 @@ const App: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/60"></div>
             
             <button 
-                onClick={() => setView('home')} 
-                className="absolute top-24 left-4 sm:left-8 z-20 flex items-center gap-2 bg-black/50 hover:bg-red-varese text-white px-4 py-2 rounded-full transition-colors text-xs font-bold uppercase tracking-widest"
+                onClick={() => navigateToHomeSection('who-we-are')} 
+                className="absolute top-24 left-4 sm:left-8 z-20 flex items-center justify-center bg-black/50 hover:bg-red-varese text-white w-12 h-12 rounded-full transition-colors"
+                aria-label={t('back')}
             >
-                <ArrowRight className="rotate-180" size={16} />
-                {t('backToHome')}
+                <ArrowRight className="rotate-180" size={20} />
             </button>
             
             <div className="relative z-10 w-full h-full overflow-y-auto p-8 sm:p-12 md:p-16 flex flex-col justify-end">
@@ -1312,7 +1325,11 @@ const App: React.FC = () => {
       )}
       
       {isFacilityView && (
-          <FacilityPage facility={FACILITIES.find(f => f.id === view)!} />
+          <FacilityPage 
+            facility={FACILITIES.find(f => f.id === view)!} 
+            onBack={() => navigateToHomeSection('facilities')}
+            t={t}
+          />
       )}
 
       {view === 'detailedPrograms' && <DetailedProgramsPage />}
@@ -1321,7 +1338,7 @@ const App: React.FC = () => {
         <ProgramDetailPage 
           program={selectedProgram}
           t={t}
-          onBack={() => setView('programs')}
+          onBack={() => navigateToHomeSection('opportunities')}
           onRequestInfo={(prog) => {
             setSelectedProgram(prog);
             setIsApplying(true);
