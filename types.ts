@@ -36,6 +36,7 @@ export interface Program {
   description: string;
   highlights: string[];
   image: string;
+  detailImage?: string;
   details: string;
   successStoryLink?: string;
 }

@@ -910,7 +910,7 @@ const App: React.FC = () => {
                           <p className="text-gray-300">{program.timing}</p>
                         </div>
                       </div>
-                      <img src={program.image} alt={program.title} className="w-full aspect-video object-cover rounded-lg my-6" />
+                      <img src={program.detailImage || program.image} alt={program.title} className="w-full aspect-video object-cover rounded-lg my-6" />
                       <div className="mb-6"><FormattedText text={program.details} /></div>
                       <h4 className="text-white font-oswald uppercase tracking-wider mb-3">Key Highlights</h4>
                       <div className="grid sm:grid-cols-2 gap-x-6 gap-y-2">
@@ -952,7 +952,7 @@ const App: React.FC = () => {
   
         <div className="bg-zinc-900/50 border border-white/10 rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-2xl shadow-red-600/10">
           <div className="md:w-[45%] relative min-h-[300px] md:min-h-0">
-            <img src={program.image} className="absolute inset-0 w-full h-full object-cover" alt={program.title} />
+            <img src={program.detailImage || program.image} className="absolute inset-0 w-full h-full object-cover" alt={program.title} />
             <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent md:bg-gradient-to-r md:from-zinc-900/50"></div>
           </div>
           <div className="md:w-[55%] p-8 md:p-12 flex flex-col">
@@ -1355,7 +1355,7 @@ const App: React.FC = () => {
           <div className="relative bg-zinc-900 w-full max-w-7xl max-h-screen md:max-h-[95vh] overflow-y-auto rounded-none md:rounded-3xl shadow-[0_0_100px_rgba(227,6,19,0.3)] border-0 md:border md:border-white/10 flex flex-col md:flex-row animate-in zoom-in-95 duration-300 ease-out">
             <button onClick={handleCloseFormModal} className="absolute top-4 right-4 md:top-6 md:right-6 z-50 bg-black/50 hover:bg-red-varese text-white p-2 md:p-3 rounded-full transition-colors backdrop-blur-md"><X size={24} /></button>
             <div className="md:w-[40%] relative h-48 md:h-auto overflow-hidden">
-              <img src={selectedProgram.image} className="absolute inset-0 w-full h-full object-cover opacity-60 md:opacity-100" alt={selectedProgram.title} />
+              <img src={selectedProgram.detailImage || selectedProgram.image} className="absolute inset-0 w-full h-full object-cover opacity-60 md:opacity-100" alt={selectedProgram.title} />
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/40 to-transparent md:bg-gradient-to-r"></div>
             </div>
             <div className="md:w-[60%] p-6 md:p-12 flex flex-col overflow-y-visible">
