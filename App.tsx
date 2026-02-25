@@ -733,7 +733,7 @@ const App: React.FC = () => {
       {PROGRAMS.map((prog) => (
         <div 
           key={prog.id} 
-          className={`relative card-glass rounded-2xl overflow-hidden flex flex-col group transition-all duration-300 shadow-xl w-full md:w-[calc(50%-20px)] lg:w-[calc(33.333%-27px)] ${prog.id === 'full-time' ? 'border-red-varese shadow-2xl shadow-red-600/30' : 'hover:border-red-varese'}`}
+          className={`relative card-glass rounded-2xl overflow-hidden flex flex-col group transition-all duration-300 shadow-xl w-full md:w-[calc(50%-20px)] lg:w-[calc(33.333%-27px)] ${prog.id === 'full-time' ? 'border-red-varese' : 'hover:border-red-varese'}`}
         >
           <div className="h-64 overflow-hidden relative">
             <img src={prog.image} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" alt={prog.title} />
