@@ -15,7 +15,7 @@ const TRANSLATIONS = {
     // Nav & General
     back: "Indietro",
     backToHome: "Torna alla Home",
-
+    joinEBP: "Richiedi Info",
     exploreInDetail: "Esplora i Programmi in Dettaglio",
     // Hero
     heroTitle: "Elite Basketball Program",
@@ -97,7 +97,6 @@ const TRANSLATIONS = {
     selectOption: "Seleziona un'opzione",
     generalInformation: "Informazioni Generali",
     buyNow: "Acquista Ora",
-    subscribe: "Iscriviti",
     successStory: "Storia di Successo",
     // Global Join Modal
     joinProgram: "Unisciti al Programma",
@@ -216,7 +215,6 @@ const TRANSLATIONS = {
     selectOption: "Select an option",
     generalInformation: "General Information",
     buyNow: "Buy Now",
-    subscribe: "Enroll Now",
     successStory: "Success Story",
     joinProgram: "Join the Program",
     joinDescription: "Submit your application to enter the Varese elite opportunities",
@@ -331,7 +329,6 @@ const TRANSLATIONS = {
     selectOption: "Seleccionar una opción",
     generalInformation: "Información General",
     buyNow: "Comprar Ahora",
-    subscribe: "Inscríbete Ahora",
     successStory: "Historia de Éxito",
     joinProgram: "Únete al Programa",
     joinDescription: "Envía tu solicitud para acceder a las oportunidades de élite de Varese",
@@ -446,7 +443,6 @@ const TRANSLATIONS = {
     selectOption: "Sélectionner une option",
     generalInformation: "Informations Générales",
     buyNow: "Acheter Maintenant",
-    subscribe: "S'inscrire Maintenant",
     successStory: "Histoire à Succès",
     joinProgram: "Rejoindre le Programme",
     joinDescription: "Soumettez votre candidature pour accéder aux opportunités d'élite de Varèse",
@@ -761,29 +757,13 @@ const App: React.FC = () => {
                     onClick={() => { setSelectedProgram(prog); setView('programDetail'); }}
                     className="w-full sm:flex-1 border border-white/20 text-white py-3 font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-all text-xs rounded-sm"
                 >
-                    {t('findOutMore')}
+                    {t('moreInfo')}
                 </button>
-                {prog.buyNowLink ? (
-                    <a
-                        href={prog.buyNowLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full sm:flex-[2] bg-red-varese text-white py-4 font-bold uppercase tracking-wider hover:bg-red-700 transition-all text-sm rounded-sm flex justify-center items-center"
-                    >
-                        {prog.id === 'academy' ? t('subscribe') : t('buyNow')}
-                    </a>
-                ) : (
-                    <button
-                        onClick={() => {
-                            setSelectedProgram(prog);
-                            setIsApplying(true);
-                        }}
-                        className="w-full sm:flex-[2] bg-red-varese text-white py-4 font-bold uppercase tracking-wider hover:bg-red-700 transition-all text-sm rounded-sm"
-                    >
-                        {t('requestInfo')}
-                    </button>
-                )}
-
+                <button
+                    className="w-full sm:flex-[2] bg-red-varese text-white py-4 font-bold uppercase tracking-wider hover:bg-red-700 transition-all text-sm rounded-sm"
+                >
+                    {t('buyNow')}
+                </button>
             </div>
           </div>
         </div>
@@ -972,7 +952,7 @@ const App: React.FC = () => {
   
         <div className="bg-zinc-900/50 border border-white/10 rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-2xl shadow-red-600/10">
           <div className="md:w-[45%] relative min-h-[300px] md:min-h-0">
-            <img src={program.detailsImage || program.image} className="absolute inset-0 w-full h-full object-cover" alt={program.title} />
+            <img src={program.image} className="absolute inset-0 w-full h-full object-cover" alt={program.title} />
             <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent md:bg-gradient-to-r md:from-zinc-900/50"></div>
           </div>
           <div className="md:w-[55%] p-8 md:p-12 flex flex-col">
@@ -1301,7 +1281,7 @@ const App: React.FC = () => {
                 <ArrowRight className="rotate-180" size={20} />
             </button>
             
-            <div className="relative z-10 w-full h-full overflow-y-auto p-8 sm:p-12 md:p-16 flex flex-col justify-start pt-24">
+            <div className="relative z-10 w-full h-full overflow-y-auto p-8 sm:p-12 md:p-16 flex flex-col justify-end">
                 <div className="w-full max-w-6xl mx-auto text-white animate-in slide-in-from-bottom-16 duration-700">
                     <img src={CLUB_LOGO} alt="Logo" className="h-16 md:h-20 mb-4" />
                     <h2 className="font-oswald text-5xl md:text-7xl font-bold uppercase tracking-tighter mb-10">{t('palmaresTitle')}</h2>
@@ -1375,7 +1355,7 @@ const App: React.FC = () => {
           <div className="relative bg-zinc-900 w-full max-w-7xl max-h-screen md:max-h-[95vh] overflow-y-auto rounded-none md:rounded-3xl shadow-[0_0_100px_rgba(227,6,19,0.3)] border-0 md:border md:border-white/10 flex flex-col md:flex-row animate-in zoom-in-95 duration-300 ease-out">
             <button onClick={handleCloseFormModal} className="absolute top-4 right-4 md:top-6 md:right-6 z-50 bg-black/50 hover:bg-red-varese text-white p-2 md:p-3 rounded-full transition-colors backdrop-blur-md"><X size={24} /></button>
             <div className="md:w-[40%] relative h-48 md:h-auto overflow-hidden">
-              <img src={selectedProgram.detailsImage || selectedProgram.image} className="absolute inset-0 w-full h-full object-cover opacity-60 md:opacity-100" alt={selectedProgram.title} />
+              <img src={selectedProgram.image} className="absolute inset-0 w-full h-full object-cover opacity-60 md:opacity-100" alt={selectedProgram.title} />
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/40 to-transparent md:bg-gradient-to-r"></div>
             </div>
             <div className="md:w-[60%] p-6 md:p-12 flex flex-col overflow-y-visible">

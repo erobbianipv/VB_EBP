@@ -95,8 +95,6 @@ export const PROGRAMS: Program[] = [
     description: "A commitment to fostering growth through a two-way approach: Grassroots and Elite Player Development.",
     highlights: ["Expert Coaching", "High-quality facilities", "Community engagement"],
     image: "https://i.imgur.com/uTz60Cd.jpeg",
-    detailsImage: "https://i.imgur.com/ujsDMJQ.jpeg",
-    buyNowLink: "https://www.pallacanestrovarese.it/minibasket/",
     details: `A Vision for the Future: The Basketball Academy
 Pallacanestro Varese is proud to announce the establishment of its Basketball Academy, a project born from a deep commitment to fostering the growth of basketball both locally and nationally. This isn’t just a sports program; it’s a collaborative effort to build a legacy of excellence, teamwork, and passion for the game.
 
@@ -132,7 +130,6 @@ To ensure the success of our athletes and partners, we focus on a rigorous devel
     description: "A comprehensive package designed for year-round development in Varese with professional integration.",
     highlights: ["Italian Player Status potential", "Tailored training programs", "Competitive environment"],
     image: "https://i.imgur.com/LaQoOFy.jpeg",
-    detailsImage: "https://i.imgur.com/yq3ajPK.jpeg",
     details: `The Elite Full-Time Training Program
 Experience an unparalleled, year-round basketball journey in Varese. This program is a meticulously designed package offering a tailored environment and high-level services to elevate dedicated players to the next level. Running from the end of August to the end of June, it provides a consistent, professional atmosphere for growth.
 
@@ -176,8 +173,6 @@ Educational Flexibility: We offer access to Public Schools, Private Internationa
     description: "Immersive 'Train Like a Pro' experience for aspiring basketball players.",
     highlights: ["Serie A techniques", "Elite Competition", "Performance Analytics"],
     image: "https://i.imgur.com/ngjbsbC.jpeg",
-    detailsImage: "https://i.imgur.com/yRRqxGj.jpeg",
-    buyNowLink: "https://www.pallacanestrovarese.it/prodotto/elite-summer-camp/",
     details: `Elevate Your Game: The Elite Summer Camp
 Join Pallacanestro Varese for an immersive, all-inclusive one-week experience designed for aspiring basketball players who want to push their limits. This intensive program offers a rare taste of the dedication required to succeed in elite basketball, focusing on high-level fundamentals, performance, and sports science.
 
@@ -244,7 +239,6 @@ Davide Zonca: Trainer/Physio with 8 years of experience in Serie A.`
     description: "A professional path for aspiring coaches to learn the Varese methodology directly from our Serie A staff.",
     highlights: ["Methodology Study", "Practice Observation", "Staff Integration"],
     image: "https://i.imgur.com/RQQuoWs.jpeg",
-    detailsImage: "https://i.imgur.com/EEZBh5W.jpeg",
     details: `Master the Bench: Coaches Internship Program
 Step into the world of elite European basketball with an unparalleled opportunity to join the professional coaching staff at Pallacanestro Varese. This program is specifically designed for ambitious international coaches who are eager to gain firsthand experience in a high-stakes, professional environment. Operating during the LBA season from August to June, the program requires a minimum commitment of one month.
 
@@ -288,7 +282,6 @@ The goal of this internship is to transform your coaching acumen. By completing 
     description: "Short-term high-intensity training cycles designed for international clubs and academies during the off-season.",
     highlights: ["Intensity Training", "Elite Competition", "Skill Development"],
     image: "https://i.imgur.com/K09B4ge.png",
-    detailsImage: "https://i.imgur.com/ZIeVlLQ.jpeg",
     details: `The Ultimate Offseason Training Residency
 Pallacanestro Varese invites your team to experience the Summer Elite Program, a premium residency designed for Youth National Teams (U14 to U18), Junior Programs, and professional Senior clubs. This program is more than just a training camp; it is a high-performance ecosystem where athletes can immerse themselves in the game. Our all-inclusive, minimum 7-day formula is designed to eliminate every distraction, allowing coaching staff and players to focus entirely on skill development and team chemistry. Every aspect of the program is fully modular and can be tailored to meet your team’s specific technical requirements and scheduling needs.
 
