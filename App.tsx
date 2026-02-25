@@ -602,12 +602,17 @@ const App: React.FC = () => {
       const element = document.getElementById(sectionToScrollTo);
       if (element) {
         element.scrollIntoView({ behavior: 'auto' });
-        setSectionToScrollTo(null);
       } else {
         setSectionToScrollTo(null);
       }
     }
   }, [view, sectionToScrollTo]);
+
+  useEffect(() => {
+    if (view !== 'home') {
+      setSectionToScrollTo(null);
+    }
+  }, [view]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
