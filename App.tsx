@@ -80,6 +80,13 @@ const TRANSLATIONS = {
     downloadBrochure: "Scarica la Brochure",
     backToDetails: "Torna ai Dettagli",
     findOutMore: "Scopri di più",
+    sending: "Invio in corso...",
+    submissionSuccessTitle: "Richiesta Inviata!",
+    submissionSuccessMessage: "Grazie per il tuo interesse! Ti risponderemo il prima possibile.",
+    submissionErrorTitle: "Errore di Invio",
+    submissionErrorMessage: "Si è verificato un errore durante l'invio della richiesta. Riprova più tardi.",
+    tryAgain: "Riprova",
+    close: "Chiudi",
     informationForm: "Modulo di Richiesta Informazioni",
     informationFormDescription: "Compila il modulo sottostante per richiedere informazioni per il",
     firstName: "Nome *",
@@ -198,6 +205,13 @@ const TRANSLATIONS = {
     downloadBrochure: "Download Brochure",
     backToDetails: "Back to Details",
     findOutMore: "Find out more",
+    sending: "Sending...",
+    submissionSuccessTitle: "Request Sent!",
+    submissionSuccessMessage: "Thank you for your interest! We will get back to you as soon as possible.",
+    submissionErrorTitle: "Submission Error",
+    submissionErrorMessage: "An error occurred while submitting your request. Please try again later.",
+    tryAgain: "Try Again",
+    close: "Close",
     informationForm: "Information Request Form",
     informationFormDescription: "Please complete the form below to request information for the",
     firstName: "First Name *",
@@ -312,6 +326,13 @@ const TRANSLATIONS = {
     downloadBrochure: "Descargar Folleto",
     backToDetails: "Volver a Detalles",
     findOutMore: "Descubre más",
+    sending: "Enviando...",
+    submissionSuccessTitle: "¡Solicitud Enviada!",
+    submissionSuccessMessage: "¡Gracias por tu interés! Te responderemos lo antes posible.",
+    submissionErrorTitle: "Error de Envío",
+    submissionErrorMessage: "Ocurrió un error al enviar tu solicitud. Por favor, inténtalo de nuevo más tarde.",
+    tryAgain: "Intentar de Nuevo",
+    close: "Cerrar",
     informationForm: "Formulario de Solicitud de Información",
     informationFormDescription: "Por favor, completa el siguiente formulario para solicitar información sobre el",
     firstName: "Nombre *",
@@ -426,6 +447,13 @@ const TRANSLATIONS = {
     downloadBrochure: "Télécharger la Brochure",
     backToDetails: "Retour aux Détails",
     findOutMore: "En savoir plus",
+    sending: "Envoi en cours...",
+    submissionSuccessTitle: "Demande Envoyée !",
+    submissionSuccessMessage: "Merci de votre intérêt ! Nous vous répondrons dans les plus brefs délais.",
+    submissionErrorTitle: "Erreur d'Envoi",
+    submissionErrorMessage: "Une erreur s'est produite lors de l'envoi de votre demande. Veuillez réessayer plus tard.",
+    tryAgain: "Réessayer",
+    close: "Fermer",
     informationForm: "Formulaire de Demande d'Informations",
     informationFormDescription: "Veuillez remplir le formulaire ci-dessous pour demander des informations sur le",
     firstName: "Prénom *",
@@ -641,6 +669,7 @@ const App: React.FC = () => {
     setIsApplying(false);
     setSubmissionStatus('idle');
     setFormState({ firstName: '', lastName: '', organization: '', email: '', program: '', message: '' });
+    setView('home');
   };
   
   const handleCloseFormModal = () => {
@@ -659,6 +688,7 @@ const App: React.FC = () => {
       formState.lastName.trim() !== '' &&
       formState.organization.trim() !== '' &&
       formState.email.trim() !== '' &&
+      /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(formState.email) &&
       formState.program !== '' &&
       formState.message.trim() !== ''
     );
@@ -715,23 +745,65 @@ const App: React.FC = () => {
     </div>
   );
   
-  const SubmissionSuccessMessage = () => (
-    <div className="flex flex-col items-center justify-center text-center h-full p-8 animate-in fade-in duration-500">
-      <div className="bg-green-500/10 border border-green-500/20 text-green-400 p-4 rounded-full mb-6">
-        <CheckCircle2 size={48} />
+  const SubmissionSuccessMessage = () => {
+    let content;
+    switch (submissionStatus) {
+      case 'submitting':
+        content = (
+          <div className="text-center flex flex-col items-center justify-center h-full">
+            <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-red-varese"></div>
+            <p className="text-white font-bold uppercase tracking-widest mt-6">{t('sending')}</p>
+          </div>
+        );
+        break;
+      case 'submitted':
+        content = (
+          <div className="flex flex-col items-center justify-center text-center h-full p-8 animate-in fade-in duration-500">
+            <div className="bg-green-500/10 border border-green-500/20 text-green-400 p-4 rounded-full mb-6">
+              <CheckCircle2 size={48} />
+            </div>
+            <h3 className="font-oswald text-2xl uppercase text-white mb-3">{t('submissionSuccessTitle')}</h3>
+            <p className="text-gray-400 text-sm mb-8 max-w-sm">
+              {t('submissionSuccessMessage')}
+            </p>
+            <button
+              onClick={handleCloseModal}
+              className="bg-red-varese text-white py-3 px-8 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg"
+            >
+              {t('close')}
+            </button>
+          </div>
+        );
+        break;
+      case 'error':
+        content = (
+          <div className="flex flex-col items-center justify-center text-center h-full p-8 animate-in fade-in duration-500">
+            <div className="bg-red-500/10 border border-red-500/20 text-red-400 p-4 rounded-full mb-6">
+              <XCircle size={48} />
+            </div>
+            <h3 className="font-oswald text-2xl uppercase text-white mb-3">{t('submissionErrorTitle')}</h3>
+            <p className="text-gray-400 text-sm mb-8 max-w-sm">
+              {t('submissionErrorMessage')}
+            </p>
+            <button
+              onClick={() => setSubmissionStatus('idle')}
+              className="bg-red-varese text-white py-3 px-8 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg"
+            >
+              {t('tryAgain')}
+            </button>
+          </div>
+        );
+        break;
+      default:
+        content = null;
+    }
+
+    return (
+      <div className="flex items-center justify-center min-h-[400px]">
+        {content}
       </div>
-      <h3 className="font-oswald text-2xl uppercase text-white mb-3">{t('submissionSuccessTitle')}</h3>
-      <p className="text-gray-400 text-sm mb-8 max-w-sm">
-        {t('submissionSuccessMessage')}
-      </p>
-      <button
-        onClick={handleCloseModal}
-        className="bg-red-varese text-white py-3 px-8 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg"
-      >
-        {t('close')}
-      </button>
-    </div>
-  );
+    );
+  };
 
     const ProgramsGrid = () => (
     <div className="flex flex-wrap justify-center gap-10">
@@ -1346,6 +1418,7 @@ const App: React.FC = () => {
           onBack={() => navigateToHomeSection('opportunities')}
           onRequestInfo={(prog) => {
             setSelectedProgram(prog);
+            setFormState(prevState => ({ ...prevState, program: prog.title }));
             setIsApplying(true);
           }}
           onBuyNow={() => {
