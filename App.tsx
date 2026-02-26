@@ -836,11 +836,14 @@ const App: React.FC = () => {
                 >
                     {t('moreInfo')}
                 </button>
-                <button
-                    className="w-full sm:flex-[2] bg-red-varese text-white py-4 font-bold uppercase tracking-wider hover:bg-red-700 transition-all text-sm rounded-sm"
+                <a
+                  href="https://store.pallacanestrovarese.it/collections/elite-programs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:flex-[2] bg-red-varese text-white py-4 font-bold uppercase tracking-wider hover:bg-red-700 transition-all text-sm rounded-sm text-center"
                 >
                     {t('buyNow')}
-                </button>
+                </a>
             </div>
           </div>
         </div>
@@ -1053,7 +1056,14 @@ const App: React.FC = () => {
                 {program.highlights.map((h, i) => (<div key={i} className="flex items-center gap-2 p-2 bg-white/5 rounded border border-white/10"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /><span className="text-[9px] font-bold uppercase tracking-wider text-white truncate">{h}</span></div>))}
               </div>
               <div className="flex flex-col gap-4 mt-auto">
-                <button onClick={onBuyNow} className="w-full bg-red-varese text-white py-4 md:py-5 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg shadow-xl shadow-red-600/30">{t('buyNow')}</button>
+                <a
+                  href="https://store.pallacanestrovarese.it/collections/elite-programs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-red-varese text-white py-4 md:py-5 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg shadow-xl shadow-red-600/30 text-center"
+                >
+                    {t('buyNow')}
+                </a>
                 <div className="flex gap-4">
                   <button onClick={() => onRequestInfo(program)} className="flex-1 border border-white/20 text-white py-3 font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-all text-xs rounded-lg">{t('requestMoreInfo')}</button>
                   <a href="https://drive.google.com/file/d/1PQ7iSTdj0XC4TCMzENjinLr8Udv38-oW/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="flex-1 border border-white/20 text-white py-3 font-bold uppercase tracking-wider hover:bg-white/10 transition-all text-xs rounded-lg text-center flex items-center justify-center">{t('downloadBrochure')}</a>
@@ -1090,9 +1100,9 @@ const App: React.FC = () => {
               </button>
             )}
             <div className="hidden md:flex items-center space-x-4">
-                <button onClick={() => navigateToHomeSection('opportunities')} className="bg-red-varese hover:bg-red-700 text-white px-6 py-2 rounded-sm text-sm font-bold uppercase transition-all shadow-lg shadow-red-600/20">
+                <a href="https://store.pallacanestrovarese.it/collections/elite-programs" target="_blank" rel="noopener noreferrer" className="bg-red-varese hover:bg-red-700 text-white px-6 py-2 rounded-sm text-sm font-bold uppercase transition-all shadow-lg shadow-red-600/20">
                     {t('buyNow')}
-                </button>
+                </a>
                 <button onClick={() => setIsJoinModalOpen(true)} className="border border-white/50 text-white hover:bg-white hover:text-black px-6 py-2 rounded-sm text-sm font-bold uppercase transition-all">
                     {t('joinEBP')}
                 </button>
@@ -1107,9 +1117,9 @@ const App: React.FC = () => {
 
         {isMenuOpen && (
             <div className="md:hidden fixed inset-0 z-40 bg-black/95 pt-24 px-8 flex flex-col items-center space-y-6 animate-in fade-in duration-300">
-                <button onClick={() => { navigateToHomeSection('opportunities'); setIsMenuOpen(false); }} className="w-full bg-red-varese hover:bg-red-700 text-white px-10 py-4 font-bold uppercase tracking-widest transition-all rounded-md">
+                <a href="https://store.pallacanestrovarese.it/collections/elite-programs" target="_blank" rel="noopener noreferrer" className="w-full bg-red-varese hover:bg-red-700 text-white px-10 py-4 font-bold uppercase tracking-widest transition-all rounded-md">
                 {t('buyNow')}
-                </button>
+                </a>
                 <button onClick={() => { setIsJoinModalOpen(true); setIsMenuOpen(false); }} className="w-full border border-white hover:bg-white hover:text-black text-white px-10 py-4 font-bold uppercase tracking-widest transition-all rounded-md">
                 {t('joinEBP')}
                 </button>
@@ -1493,7 +1503,7 @@ const App: React.FC = () => {
                 <h2 className="font-oswald text-5xl md:text-8xl font-bold uppercase mb-8 leading-[0.9]" dangerouslySetInnerHTML={{ __html: t('ctaTitle').replace('Basketball Future', '<br/>Basketball Future') }}></h2>
                 <p className="text-xl md:text-2xl font-light mb-12 max-w-2xl mx-auto text-white/90 uppercase tracking-widest">{t('ctaSubtitle')}</p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                    <button onClick={() => navigateToHomeSection('opportunities')} className="bg-white text-red-varese px-16 py-6 font-bold uppercase tracking-[0.3em] hover:bg-black hover:text-white transition-all rounded-sm text-lg shadow-2xl">{t('buyNow')}</button>
+                    <a href="https://store.pallacanestrovarese.it/collections/elite-programs" target="_blank" rel="noopener noreferrer" className="bg-white text-red-varese px-16 py-6 font-bold uppercase tracking-[0.3em] hover:bg-black hover:text-white transition-all rounded-sm text-lg shadow-2xl">{t('buyNow')}</a>
                     <button onClick={() => setIsJoinModalOpen(true)} className="border border-white text-white px-16 py-6 font-bold uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all rounded-sm text-lg">{t('applyNow')}</button>
                 </div>
                 </div>
