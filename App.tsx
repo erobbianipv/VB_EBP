@@ -836,14 +836,25 @@ const App: React.FC = () => {
                 >
                     {t('moreInfo')}
                 </button>
-                <a
-                  href="https://store.pallacanestrovarese.it/collections/elite-programs"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:flex-[2] bg-red-varese text-white py-4 font-bold uppercase tracking-wider hover:bg-red-700 transition-all text-sm rounded-sm text-center"
-                >
+                {prog.id === 'basketball-academy' ? (
+                  <a
+                    href="https://store.pallacanestrovarese.it/products/basketball-academy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:flex-[2] bg-red-varese text-white py-4 font-bold uppercase tracking-wider hover:bg-red-700 transition-all text-sm rounded-sm text-center"
+                  >
                     {t('buyNow')}
-                </a>
+                  </a>
+                ) : (
+                  <a
+                    href="https://store.pallacanestrovarese.it/collections/elite-programs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:flex-[2] bg-red-varese text-white py-4 font-bold uppercase tracking-wider hover:bg-red-700 transition-all text-sm rounded-sm text-center"
+                  >
+                    {t('buyNow')}
+                  </a>
+                )}
             </div>
           </div>
         </div>
@@ -1056,14 +1067,25 @@ const App: React.FC = () => {
                 {program.highlights.map((h, i) => (<div key={i} className="flex items-center gap-2 p-2 bg-white/5 rounded border border-white/10"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /><span className="text-[9px] font-bold uppercase tracking-wider text-white truncate">{h}</span></div>))}
               </div>
               <div className="flex flex-col gap-4 mt-auto">
-                <a
-                  href="https://store.pallacanestrovarese.it/collections/elite-programs"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full bg-red-varese text-white py-4 md:py-5 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg shadow-xl shadow-red-600/30 text-center"
-                >
+                {program.id === 'basketball-academy' ? (
+                  <a
+                    href="https://store.pallacanestrovarese.it/products/basketball-academy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-red-varese text-white py-4 md:py-5 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg shadow-xl shadow-red-600/30 text-center"
+                  >
                     {t('buyNow')}
-                </a>
+                  </a>
+                ) : (
+                  <a
+                    href="https://store.pallacanestrovarese.it/collections/elite-programs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-red-varese text-white py-4 md:py-5 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg shadow-xl shadow-red-600/30 text-center"
+                  >
+                    {t('buyNow')}
+                  </a>
+                )}
                 <div className="flex gap-4">
                   <button onClick={() => onRequestInfo(program)} className="flex-1 border border-white/20 text-white py-3 font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-all text-xs rounded-lg">{t('requestMoreInfo')}</button>
                   <a href="https://drive.google.com/file/d/1PQ7iSTdj0XC4TCMzENjinLr8Udv38-oW/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="flex-1 border border-white/20 text-white py-3 font-bold uppercase tracking-wider hover:bg-white/10 transition-all text-xs rounded-lg text-center flex items-center justify-center">{t('downloadBrochure')}</a>

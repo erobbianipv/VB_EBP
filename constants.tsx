@@ -125,7 +125,7 @@ To ensure the success of our athletes and partners, we focus on a rigorous devel
   },
   {
     id: "full-time",
-    title: "FULL TIME TRAINING",
+    title: "FULL TIME TRAINING PROGRAM",
     target: "Ages 13-17 (Ideally < 15 for Italian Status)",
     timing: "End of August to End of June",
     description: "A comprehensive package designed for year-round development in Varese with professional integration.",
@@ -236,7 +236,7 @@ Davide Zonca: Trainer/Physio with 8 years of experience in Serie A.`
   },
   {
     id: "internship",
-    title: "COACHES INTERNSHIP",
+    title: "COACHES INTERNSHIP PROGRAM",
     target: "Aspiring Coaches",
     timing: "Flexible Duration",
     description: "A professional path for aspiring coaches to learn the Varese methodology directly from our Serie A staff.",
@@ -280,7 +280,7 @@ The goal of this internship is to transform your coaching acumen. By completing 
   },
   {
     id: "summer-prog",
-    title: "SUMMER PROGRAM",
+    title: "SUMMER ELITE PROGRAM",
     target: "International Clubs and Academies",
     timing: "July",
     description: "Short-term high-intensity training cycles designed for international clubs and academies during the off-season.",
