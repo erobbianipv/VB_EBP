@@ -115,24 +115,18 @@ Our programs operate on a year-round basis at our premier Varese campus, conveni
     title: "FULL TIME TRAINING PROGRAM",
     target: "Ages 13-17 (Ideally < 15 for Italian Status)",
     timing: "End of August to End of June",
-    description: "A comprehensive package designed for year-round development in Varese with professional integration.",
+    description: "Experience an unparalleled, year-round basketball journey in Varese. This program is a meticulously designed package offering a tailored environment and high-level services to elevate dedicated players to the next level. Running from the end of August to the end of June, it provides a consistent, professional atmosphere for growth.",
     highlights: ["Italian Player Status potential", "Tailored training programs", "Competitive environment"],
     image: "https://i.imgur.com/LaQoOFy.jpeg",
     detailImage: "https://i.imgur.com/KIuuWg2.jpeg",
-    details: `The Elite Full-Time Training Program
-Experience an unparalleled, year-round basketball journey in Varese. This program is a meticulously designed package offering a tailored environment and high-level services to elevate dedicated players to the next level. Running from the end of August to the end of June, it provides a consistent, professional atmosphere for growth.
+    details: `target audience
+This elite professional pathway has been meticulously engineered for ambitious young athletes who are fully committed to establishing a high-level career within the European basketball ecosystem. The program is strategically tailored to meet the developmental needs of student-athletes aged between 13 and 17, providing them with the competitive framework necessary to excel in the professional circuit.
 
-Target Audience & Future Opportunities
-This elite path is specifically designed for young athletes looking to build a career in European basketball:
-Target Age: Ideally suited for kids between 13 and 17.
-Italian Player Status: We prioritize athletes no older than 15 upon entry to facilitate the acquisition of Italian Player Status.
-Long-term Growth: By committing to four years within our system, players can acquire Italian status while maintaining their eligibility for their respective National Teams.
+Future Opportunities
+We prioritize athletes no older than 15 upon entry to facilitate the acquisition of Italian Player Status. By committing to four years within our system, players can acquire Italian status while maintaining their eligibility for their respective National Teams.
 
-A Holistic 360° Offer
-We believe that peak performance requires a balance between sports, living conditions, and personal development. Our comprehensive offer includes:
-Professional Basketball: Daily training and competition.
-Premium Room and Board: High-standard, newly constructed living facilities.
-Education: A variety of school paths to ensure academic success alongside sports.
+when and where
+Our premium facilities—including the Foresteria Elite Housing and the via Pirandello Campus—are strategically located within a 5-minute walk of each other. This integrated layout optimizes daily transitions for the duration of the program, which runs from late August through late June, allowing athletes to focus entirely on their rigorous training schedule.
 
 World-Class Training & Sports Science
 Our methodology is backed by research and proven success, focusing on the continuous improvement of every individual. The training program covers:
@@ -159,49 +153,23 @@ Educational Flexibility: We offer access to Public Schools, Private Internationa
     title: "ELITE SUMMER CAMP",
     target: "Ages 15-19",
     timing: "One week (6 days, 5 nights)",
-    description: "Immersive 'Train Like a Pro' experience for aspiring basketball players.",
+    description: "Join Pallacanestro Varese for an immersive, all-inclusive one-week experience designed for aspiring basketball players who want to push their limits. This intensive program offers a rare taste of the dedication required to succeed in elite basketball, focusing on high-level fundamentals, performance, and sports science.",
     highlights: ["Serie A techniques", "Elite Competition", "Performance Analytics"],
     image: "https://i.imgur.com/ngjbsbC.jpeg",
     detailImage: "https://i.imgur.com/bUSyHZP.jpeg",
-    details: `Elevate Your Game: The Elite Summer Camp
-Join Pallacanestro Varese for an immersive, all-inclusive one-week experience designed for aspiring basketball players who want to push their limits. This intensive program offers a rare taste of the dedication required to succeed in elite basketball, focusing on high-level fundamentals, performance, and sports science.
+    details: `target audience
+This premier summer experience is exclusively designed for ambitious young athletes aged 15 to 19 who are committed to elite performance. The program offers a sophisticated training environment tailored to high-potential players looking to refine their skills and elevate their game to a professional level.
 
-Target Audience: Young athletes between the ages of 15 and 19.
+when and where
+Our premium facilities—including the Foresteria Elite Housing and the via Pirandello Campus—are strategically located within a 5-minute walk of each other. This integrated layout optimizes daily transitions for the duration of the program, which runs from late August through late June, allowing athletes to focus entirely on their rigorous training schedule.
 
-Timing: A 6-day, 5-night experience during the summer (dates to be confirmed).
-
-The Pro Experience: Train using the same techniques employed by Serie A athletes under the guidance of our elite coaching staff.
-
-The Summer Camp Offer: All-Inclusive Excellence
-We provide a comprehensive environment so players can focus entirely on their development:
-
-Elite Training: Individualized 1-on-1 sessions, team practices, scrimmages, and strength training.
-
-Analytics: Personal performance feedback throughout the week based on advanced data.
-
-Premium Housing: Newly renovated (2024) single rooms with shared common spaces, located just a 5-minute walk from the training facility.
-
-Nutrition: Three meals a day freshly made by Italian Chefs, featuring menus driven by sports nutrition.
-
-Official Gear: Every player receives authentic practice jerseys and equipment, identical to those provided to our Serie A team, plus additional merchandise from our team store.
-
-The Full Time Training Program: A Year-Round Path to Pro
-For those seeking a long-term professional pathway, our Full Time Training Program provides an unparalleled experience in Varese from late August to the end of June.
-
-Strategic Integration: Players are placed in the most suitable team for their skill level, allowing them to showcase talent in a highly competitive environment.
-
-Italian Player Status: We offer a unique opportunity to acquire Italian player status after four years of commitment to our system, while still maintaining eligibility for your home National Team.
-
-Target Audience: Ideally for kids aged 13 to 17, with a recommendation to join by age 15 to secure future eligibility.
-
-World-Class Sports Science & Personalization
-Our program is backed by a dedicated Research & Analytics Department that monitors every practice session. We use cutting-edge technology to ensure peak performance:
-
-Advanced Tools: We utilize Catapult, Pushband, and Inertial sensors alongside Big Data to analyze every move.
-
-Holistic Development: Training covers on-court fundamentals (shooting, playmaking, finishing), strength & conditioning, injury prevention, and Basketball Leadership (mental conditioning).
-
-Data-Driven Feedback: Players receive weekly performance reports and engage in periodic analysis sessions with staff to gain valuable insights into their progress.
+Sample Daily Routine
+07:00 – 08:00 | Breakfast Service
+09:00 – 12:00 | Technical Training Session
+12:30 – 13:30 | Lunch Break
+13:30 – 14:30 | Rest & Recovery
+15:00 – 18:00 | Afternoon Technical Drill & Scrimmage
+19:30 – 20:30 | Dinner Service
 
 Academic Excellence & Living Standards
 Education is a pillar of our program. We offer various paths to ensure athletes never have to choose between their studies and their sport:

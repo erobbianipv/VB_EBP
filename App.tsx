@@ -504,9 +504,12 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
   const titles = [
     "A Comprehensive Two-Way Approach",
     "Target audience",
+    "target audience",
     "When and where",
+    "when and where",
     "The Elite Full-Time Training Program",
     "Target Audience & Future Opportunities",
+    "Future Opportunities",
     "A Holistic 360° Offer",
     "World-Class Training & Sports Science",
     "Data-Driven Personalization",
@@ -514,6 +517,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
     "Elevate Your Game: The Elite Summer Camp",
     "The Summer Camp Offer: All-Inclusive Excellence",
     "The Full Time Training Program: A Year-Round Path to Pro",
+    "Sample Daily Routine",
     "World-Class Sports Science & Personalization",
     "Academic Excellence & Living Standards",
     "Learn from the Best: Our Elite Team",
@@ -556,7 +560,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
         <div key={pIdx} className="space-y-2">
           {paragraphLines.map((line, lIdx) => {
             const colonIndex = line.indexOf(':');
-            if (colonIndex > 0 && colonIndex < line.length - 1) {
+            if (colonIndex > 0 && colonIndex < line.length - 1 && line[colonIndex + 1] === ' ') {
               const title = line.substring(0, colonIndex + 1);
               const content = line.substring(colonIndex + 1);
               return (
@@ -577,9 +581,24 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
   const whenWhereSection = sections[2];
   const otherSections = sections.slice(3);
 
-  const getImage1 = () => programId === 'academy' ? "https://i.imgur.com/pXDyBdM.jpeg" : `https://picsum.photos/seed/${programId}-1/800/600`;
-  const getImage2 = () => programId === 'academy' ? "https://i.imgur.com/JTzHWi8.jpeg" : `https://picsum.photos/seed/${programId}-2/800/600`;
-  const getImage3 = () => programId === 'academy' ? "https://i.imgur.com/nEVjk4X.png" : `https://picsum.photos/seed/${programId}-3/800/600`;
+  const getImage1 = () => {
+    if (programId === 'academy') return "https://i.imgur.com/pXDyBdM.jpeg";
+    if (programId === 'full-time') return "https://i.imgur.com/lZrpsVW.jpeg";
+    if (programId === 'summer-camp') return "https://i.imgur.com/PU1FIpF.png";
+    return `https://picsum.photos/seed/${programId}-1/800/600`;
+  };
+  const getImage2 = () => {
+    if (programId === 'academy') return "https://i.imgur.com/JTzHWi8.jpeg";
+    if (programId === 'full-time') return "https://i.imgur.com/uRj4KZi.jpeg";
+    if (programId === 'summer-camp') return "https://i.imgur.com/V5peTOC.png";
+    return `https://picsum.photos/seed/${programId}-2/800/600`;
+  };
+  const getImage3 = () => {
+    if (programId === 'academy') return "https://i.imgur.com/nEVjk4X.png";
+    if (programId === 'full-time') return "https://i.imgur.com/8MA9g3s.png";
+    if (programId === 'summer-camp') return "https://i.imgur.com/f3NtI5T.png";
+    return `https://picsum.photos/seed/${programId}-3/800/600`;
+  };
 
   return (
     <div className={`${className} text-sm leading-relaxed`}>
@@ -1185,11 +1204,29 @@ const App: React.FC = () => {
                       >
                         {t('buyNow')} <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
                       </a>
-                    ) : (
+                    ) : program.id === 'full-time' ? (
                       <a
-                        href="https://store.pallacanestrovarese.it/collections/elite-programs"
+                        href="https://store.pallacanestrovarese.it/products/basketball-academy-copia?variant=52624907436298"
                         target="_blank"
                         rel="noopener noreferrer"
+                        className="w-full bg-red-varese text-white py-4 md:py-5 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg shadow-xl shadow-red-600/20 text-center flex items-center justify-center group"
+                      >
+                        {t('buyNow')} <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
+                      </a>
+                    ) : program.id === 'summer-camp' ? (
+                      <a
+                        href="https://store.pallacanestrovarese.it/products/elite-summer-camp?variant=52625081630986"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full bg-red-varese text-white py-4 md:py-5 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg shadow-xl shadow-red-600/20 text-center flex items-center justify-center group"
+                      >
+                        {t('buyNow')} <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
+                      </a>
+                    ) : (
+                      <a
+                        href="#"
+                        target="_self"
+                        rel=""
                         className="w-full bg-red-varese text-white py-4 md:py-5 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg shadow-xl shadow-red-600/20 text-center flex items-center justify-center group"
                       >
                         {t('buyNow')} <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
@@ -1228,9 +1265,9 @@ const App: React.FC = () => {
                 
                 <div className="mt-16 flex flex-col sm:flex-row gap-4 justify-center items-center max-w-2xl mx-auto">
                   <a
-                    href={program.id === 'academy' ? "https://store.pallacanestrovarese.it/products/basketball-academy" : "#"}
-                    target={program.id === 'academy' ? "_blank" : "_self"}
-                    rel={program.id === 'academy' ? "noopener noreferrer" : ""}
+                    href={program.id === 'academy' ? "https://store.pallacanestrovarese.it/products/basketball-academy" : program.id === 'full-time' ? "https://store.pallacanestrovarese.it/products/basketball-academy-copia?variant=52624907436298" : program.id === 'summer-camp' ? "https://store.pallacanestrovarese.it/products/elite-summer-camp?variant=52625081630986" : "#"}
+                    target={program.id === 'academy' || program.id === 'full-time' || program.id === 'summer-camp' ? "_blank" : "_self"}
+                    rel={program.id === 'academy' || program.id === 'full-time' || program.id === 'summer-camp' ? "noopener noreferrer" : ""}
                     className="w-full sm:w-auto flex-1 bg-red-varese text-white py-4 md:py-5 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg shadow-xl shadow-red-600/20 text-center flex items-center justify-center group"
                   >
                     {t('buyNow')} <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
