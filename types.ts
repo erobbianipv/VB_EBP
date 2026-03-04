@@ -34,6 +34,7 @@ export interface Program {
   target: string;
   timing: string;
   description: string;
+  overview?: string;
   highlights: string[];
   image: string;
   detailImage?: string;

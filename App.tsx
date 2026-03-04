@@ -4,7 +4,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { CLUB_LOGO, ACHIEVEMENTS, STAFF, PROGRAMS, FACILITIES } from './constants';
 import { Program, Facility } from './types';
-import { Trophy, MapPin, Users, Home, GraduationCap, Calendar, ArrowRight, Menu, X, Instagram, Facebook, CheckCircle2, Send, Mail, Linkedin, Star, ChevronDown, ZoomIn, ChevronLeft, ChevronRight, ChevronUp } from 'lucide-react';
+import { Trophy, MapPin, Users, Home, GraduationCap, Calendar, ArrowRight, Menu, X, Instagram, Facebook, CheckCircle2, Send, Mail, Linkedin, Star, ChevronDown, ZoomIn, ChevronLeft, ChevronRight, ChevronUp, XCircle } from 'lucide-react';
 
 type Language = 'it' | 'en' | 'es' | 'fr';
 type View = 'home' | 'programs' | 'palmares' | 'arena' | 'campus' | 'housing' | 'detailedPrograms' | 'programDetail';
@@ -81,12 +81,9 @@ const TRANSLATIONS = {
     backToDetails: "Torna ai Dettagli",
     findOutMore: "Scopri di più",
     sending: "Invio in corso...",
-    submissionSuccessTitle: "Richiesta Inviata!",
-    submissionSuccessMessage: "Grazie per il tuo interesse! Ti risponderemo il prima possibile.",
     submissionErrorTitle: "Errore di Invio",
     submissionErrorMessage: "Si è verificato un errore durante l'invio della richiesta. Riprova più tardi.",
     tryAgain: "Riprova",
-    close: "Chiudi",
     informationForm: "Modulo di Richiesta Informazioni",
     informationFormDescription: "Compila il modulo sottostante per richiedere informazioni per il",
     firstName: "Nome *",
@@ -206,12 +203,9 @@ const TRANSLATIONS = {
     backToDetails: "Back to Details",
     findOutMore: "Find out more",
     sending: "Sending...",
-    submissionSuccessTitle: "Request Sent!",
-    submissionSuccessMessage: "Thank you for your interest! We will get back to you as soon as possible.",
     submissionErrorTitle: "Submission Error",
     submissionErrorMessage: "An error occurred while submitting your request. Please try again later.",
     tryAgain: "Try Again",
-    close: "Close",
     informationForm: "Information Request Form",
     informationFormDescription: "Please complete the form below to request information for the",
     firstName: "First Name *",
@@ -327,12 +321,9 @@ const TRANSLATIONS = {
     backToDetails: "Volver a Detalles",
     findOutMore: "Descubre más",
     sending: "Enviando...",
-    submissionSuccessTitle: "¡Solicitud Enviada!",
-    submissionSuccessMessage: "¡Gracias por tu interés! Te responderemos lo antes posible.",
     submissionErrorTitle: "Error de Envío",
     submissionErrorMessage: "Ocurrió un error al enviar tu solicitud. Por favor, inténtalo de nuevo más tarde.",
     tryAgain: "Intentar de Nuevo",
-    close: "Cerrar",
     informationForm: "Formulario de Solicitud de Información",
     informationFormDescription: "Por favor, completa el siguiente formulario para solicitar información sobre el",
     firstName: "Nombre *",
@@ -448,12 +439,9 @@ const TRANSLATIONS = {
     backToDetails: "Retour aux Détails",
     findOutMore: "En savoir plus",
     sending: "Envoi en cours...",
-    submissionSuccessTitle: "Demande Envoyée !",
-    submissionSuccessMessage: "Merci de votre intérêt ! Nous vous répondrons dans les plus brefs délais.",
     submissionErrorTitle: "Erreur d'Envoi",
     submissionErrorMessage: "Une erreur s'est produite lors de l'envoi de votre demande. Veuillez réessayer plus tard.",
     tryAgain: "Réessayer",
-    close: "Fermer",
     informationForm: "Formulaire de Demande d'Informations",
     informationFormDescription: "Veuillez remplir le formulaire ci-dessous pour demander des informations sur le",
     firstName: "Prénom *",
@@ -510,15 +498,13 @@ const TRANSLATIONS = {
   }
 };
 
-const FormattedText = ({ text }: { text: string }) => {
+const FormattedText = ({ text, className = "text-gray-400", programId }: { text: string, className?: string, programId?: string }) => {
   if (!text) return null;
 
   const titles = [
-    "A Vision for the Future: The Basketball Academy",
     "A Comprehensive Two-Way Approach",
-    "The Perfect Environment for Young Athletes",
-    "Ambitious Growth & Proven Strategy",
-    "Our Professional Commitment",
+    "Target audience",
+    "When and where",
     "The Elite Full-Time Training Program",
     "Target Audience & Future Opportunities",
     "A Holistic 360° Offer",
@@ -544,49 +530,109 @@ const FormattedText = ({ text }: { text: string }) => {
 
   const blocks = text.split('\n\n').filter(block => block.trim() !== '');
 
+  const sections: { title: string | null, paragraphs: string[][] }[] = [];
+  let currentSection: { title: string | null, paragraphs: string[][] } = { title: null, paragraphs: [] };
+
+  blocks.forEach(block => {
+    const lines = block.split('\n');
+    const firstLine = lines[0].trim();
+    
+    if (titles.includes(firstLine)) {
+      if (currentSection.title !== null || currentSection.paragraphs.length > 0) {
+        sections.push(currentSection);
+      }
+      currentSection = { title: firstLine, paragraphs: [lines.slice(1)] };
+    } else {
+      currentSection.paragraphs.push(lines);
+    }
+  });
+  if (currentSection.title !== null || currentSection.paragraphs.length > 0) {
+    sections.push(currentSection);
+  }
+
+  const renderSectionContent = (section: { title: string | null, paragraphs: string[][] }) => (
+    <div className="space-y-4">
+      {section.paragraphs.map((paragraphLines, pIdx) => (
+        <div key={pIdx} className="space-y-2">
+          {paragraphLines.map((line, lIdx) => {
+            const colonIndex = line.indexOf(':');
+            if (colonIndex > 0 && colonIndex < line.length - 1) {
+              const title = line.substring(0, colonIndex + 1);
+              const content = line.substring(colonIndex + 1);
+              return (
+                <p key={lIdx}>
+                  <strong className="text-red-varese font-bold">{title}</strong>{content}
+                </p>
+              );
+            }
+            return <p key={lIdx}>{line}</p>;
+          })}
+        </div>
+      ))}
+    </div>
+  );
+
+  const mainSection = sections[0];
+  const targetSection = sections[1];
+  const whenWhereSection = sections[2];
+  const otherSections = sections.slice(3);
+
+  const getImage1 = () => programId === 'academy' ? "https://i.imgur.com/pXDyBdM.jpeg" : `https://picsum.photos/seed/${programId}-1/800/600`;
+  const getImage2 = () => programId === 'academy' ? "https://i.imgur.com/JTzHWi8.jpeg" : `https://picsum.photos/seed/${programId}-2/800/600`;
+  const getImage3 = () => programId === 'academy' ? "https://i.imgur.com/nEVjk4X.png" : `https://picsum.photos/seed/${programId}-3/800/600`;
+
   return (
-    <div className="text-gray-400 text-sm leading-relaxed">
-      {blocks.map((block, index) => {
-        const lines = block.split('\n');
-        const firstLine = lines[0].trim();
-        
-        if (titles.includes(firstLine)) {
-          // This block starts with a main title
-          return (
-            <div key={index} className={index > 0 ? 'mt-4' : ''}>
-              <h4 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-2 text-base">{firstLine}</h4>
-              <div className="space-y-2">
-                {lines.slice(1).map((line, lineIndex) => <p key={lineIndex}>{line}</p>)}
-              </div>
+    <div className={`${className} text-sm leading-relaxed`}>
+      <div className="flex flex-col gap-12">
+        {mainSection && (
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+            <div className="flex-1 lg:flex-[1.5] space-y-4">
+              <h4 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg border-b border-zinc-200 pb-2">
+                {mainSection.title}
+              </h4>
+              {renderSectionContent(mainSection)}
             </div>
-          );
-        } else {
-            // This is a block without a main title, could be a paragraph or a list
-             return (
-                <div key={index} className={`space-y-2 ${index > 0 ? 'mt-4' : ''}`}>
-                  {lines.map((line, lineIndex) => {
-                      const colonIndex = line.indexOf(':');
-                      if (colonIndex > 0 && colonIndex < line.length - 1) { // Ensure ':' is not the first or last character
-                          const title = line.substring(0, colonIndex + 1);
-                          const content = line.substring(colonIndex + 1);
-                          return (
-                              <p key={lineIndex}>
-                                  <strong className="text-gray-200">{title}</strong>{content}
-                              </p>
-                          );
-                      }
-                      return <p key={lineIndex}>{line}</p>
-                  })}
-                </div>
-             )
-        }
-      })}
+            <div className="flex-1 w-full">
+              <img src={getImage1()} alt={mainSection.title || "Section 1"} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />
+            </div>
+          </div>
+        )}
+        
+        {targetSection && (
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+            <div className="flex-1 lg:flex-[1.5] w-full order-2 lg:order-1">
+              <img src={getImage2()} alt={targetSection.title || "Section 2"} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />
+            </div>
+            <div className="flex-1 space-y-4 order-1 lg:order-2">
+              <h4 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg border-b border-zinc-200 pb-2">
+                {targetSection.title}
+              </h4>
+              {renderSectionContent(targetSection)}
+            </div>
+          </div>
+        )}
+
+        {whenWhereSection && (
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+            <div className="flex-1 lg:flex-[1.5] space-y-4">
+              <h4 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg border-b border-zinc-200 pb-2">
+                {whenWhereSection.title}
+              </h4>
+              {renderSectionContent(whenWhereSection)}
+            </div>
+            <div className="flex-1 w-full">
+              <img src={getImage3()} alt={whenWhereSection.title || "Section 3"} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
 
 const App: React.FC = () => {
   const [view, setView] = useState<View>('home');
+  const [previousView, setPreviousView] = useState<View | null>(null);
   const [lang, setLang] = useState<Language>('en');
   const [scrolled, setScrolled] = useState(false);
   const [selectedProgram, setSelectedProgram] = useState<Program | null>(null);
@@ -595,7 +641,9 @@ const App: React.FC = () => {
   const [submissionStatus, setSubmissionStatus] = useState<'idle' | 'submitted'>('idle');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
-  const [scrollToOpportunities, setScrollToOpportunities] = useState(false);
+  const isFacilityView = ['arena', 'campus', 'housing'].includes(view);
+  const isSubpage = ['programDetail', 'detailedPrograms', 'arena', 'campus', 'housing', 'palmares'].includes(view);
+
   const [sectionToScrollTo, setSectionToScrollTo] = useState<string | null>(null);
 
   const [formState, setFormState] = useState({
@@ -615,32 +663,42 @@ const App: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => { 
-    if (sectionToScrollTo) return;
-
-    if (view === 'home' && !scrollToOpportunities) {
-      window.scrollTo(0, 0);
-    } else if (view !== 'home') {
-      window.scrollTo(0, 0);
-    }
-  }, [view, scrollToOpportunities, sectionToScrollTo]);
-
+  // Consolidate scroll logic to handle both "scroll to top" and "scroll to section"
   useEffect(() => {
     if (view === 'home' && sectionToScrollTo) {
-      const element = document.getElementById(sectionToScrollTo);
-      if (element) {
-        element.scrollIntoView({ behavior: 'auto' });
-      } else {
-        setSectionToScrollTo(null);
-      }
-    }
-  }, [view, sectionToScrollTo]);
+      const scroll = () => {
+        const element = document.getElementById(sectionToScrollTo);
+        if (element) {
+          const yOffset = -100; 
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset + yOffset;
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'auto'
+          });
+          setSectionToScrollTo(null);
+          return true;
+        }
+        return false;
+      };
 
-  useEffect(() => {
-    if (view !== 'home') {
-      setSectionToScrollTo(null);
+      if (scroll()) return;
+
+      const timer = setInterval(() => {
+        if (scroll()) clearInterval(timer);
+      }, 50);
+
+      const timeout = setTimeout(() => clearInterval(timer), 2000);
+
+      return () => {
+        clearInterval(timer);
+        clearTimeout(timeout);
+      };
+    } else if (!isSubpage && view !== 'home' && view !== 'programs') {
+      window.scrollTo(0, 0);
     }
-  }, [view]);
+  }, [view, sectionToScrollTo, isSubpage]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -655,13 +713,6 @@ const App: React.FC = () => {
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isApplying, isJoinModalOpen]);
-
-  useEffect(() => {
-    if (scrollToOpportunities) {
-      document.getElementById('opportunities')?.scrollIntoView({ behavior: 'auto' });
-      setScrollToOpportunities(false);
-    }
-  }, [scrollToOpportunities]);
 
   const handleCloseModal = () => {
     setSelectedProgram(null);
@@ -717,8 +768,27 @@ const App: React.FC = () => {
       setSectionToScrollTo(id);
       setView('home');
     } else {
-      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+      const element = document.getElementById(id);
+      if (element) {
+        const yOffset = -100;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset + yOffset;
+        window.scrollTo({ top: offsetPosition, behavior: 'auto' });
+      }
     }
+  };
+
+  const handleBack = () => {
+    if (previousView === 'home') {
+      let section = 'home';
+      if (view === 'programDetail' || view === 'detailedPrograms') section = 'opportunities';
+      else if (['arena', 'campus', 'housing'].includes(view)) section = 'facilities';
+      else if (view === 'palmares') section = 'who-we-are';
+      navigateToHomeSection(section);
+    } else {
+      setView(previousView || 'home');
+    }
+    setPreviousView(null);
   };
 
   const LangSwitcher = () => (
@@ -831,7 +901,11 @@ const App: React.FC = () => {
             </div>
              <div className="mt-auto pt-4 flex flex-col-reverse sm:flex-row gap-4">
                 <button
-                    onClick={() => { setSelectedProgram(prog); setView('programDetail'); }}
+                    onClick={() => { 
+                      setPreviousView(view);
+                      setSelectedProgram(prog); 
+                      setView('programDetail'); 
+                    }}
                     className="w-full sm:flex-1 border border-white/20 text-white py-3 font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-all text-xs rounded-sm"
                 >
                     {t('moreInfo')}
@@ -869,7 +943,7 @@ const App: React.FC = () => {
       : 'grid-cols-1 lg:grid-cols-3';
 
     return (
-      <main className="pt-20 bg-black animate-in fade-in duration-500 relative">
+      <main className="fixed inset-0 z-[60] bg-black overflow-y-auto pt-20 animate-in fade-in duration-500">
          <button 
             onClick={onBack} 
             className="absolute top-24 left-4 sm:left-8 z-20 flex items-center justify-center bg-black/50 hover:bg-red-varese text-white w-12 h-12 rounded-full transition-colors"
@@ -957,7 +1031,7 @@ const App: React.FC = () => {
         </div>
         <div className="max-w-4xl mx-auto relative pt-20 pb-20 z-10">
           <button
-            onClick={() => setView('home')}
+            onClick={handleBack}
             className="absolute top-8 left-0 z-20 flex items-center gap-2 bg-black/50 hover:bg-red-varese text-white px-4 py-2 rounded-full transition-colors text-xs font-bold uppercase tracking-widest"
           >
             <ArrowRight className="rotate-180" size={16} />
@@ -1030,83 +1104,154 @@ const App: React.FC = () => {
     );
   };
 
-    const ProgramDetailPage = ({ program, t, onBack, onRequestInfo, onBuyNow }: { program: Program, t: (key: any) => string, onBack: () => void, onRequestInfo: (p: Program) => void, onBuyNow: () => void }) => (
-    <main className="pt-24 pb-12 bg-black animate-in fade-in duration-500 min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <button 
-            onClick={onBack} 
-            className="flex items-center justify-center bg-black/50 hover:bg-red-varese text-white w-12 h-12 rounded-full transition-colors mb-8"
-            aria-label={t('back')}
-        >
-            <ArrowRight className="rotate-180" size={20} />
-        </button>
-  
-        <div className="bg-zinc-900/50 border border-white/10 rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-2xl shadow-red-600/10">
-          <div className="md:w-[45%] relative min-h-[300px] md:min-h-0">
-            <img src={program.detailImage || program.image} className="absolute inset-0 w-full h-full object-cover" alt={program.title} />
-            <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent md:bg-gradient-to-r md:from-zinc-900/50"></div>
-          </div>
-          <div className="md:w-[55%] p-8 md:p-12 flex flex-col">
-             <div className="flex justify-between items-start mb-4">
-                <div>
-                  <p className="text-red-varese font-bold uppercase tracking-[0.2em] text-[10px] mb-1">{t('detailedProgram')}</p>
-                  <h2 className="font-oswald text-3xl md:text-5xl font-bold uppercase leading-tight tracking-tighter">{program.title}</h2>
+    const ProgramDetailPage = ({ program, t, onBack, onRequestInfo, onBuyNow }: { program: Program, t: (key: any) => string, onBack: () => void, onRequestInfo: (p: Program) => void, onBuyNow: () => void }) => {
+      return (
+        <main className="fixed inset-0 z-[60] bg-white overflow-y-auto pb-24 animate-in fade-in duration-700">
+          {/* Full Screen Hero Section */}
+          <section className="relative h-[60vh] md:h-[75vh] w-full overflow-hidden">
+            <img 
+              src={program.detailImage || program.image} 
+              className="absolute inset-0 w-full h-full object-cover" 
+              alt={program.title} 
+            />
+            {/* Gradient fading to white instead of black */}
+            <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent"></div>
+            
+            <div className="absolute top-24 left-4 sm:left-8 z-20">
+              <button 
+                  onClick={onBack} 
+                  className="flex items-center justify-center bg-white/80 hover:bg-red-varese text-black hover:text-white w-12 h-12 rounded-full transition-all hover:scale-110 shadow-lg backdrop-blur-sm"
+                  aria-label={t('back')}
+              >
+                  <ArrowRight className="rotate-180" size={20} />
+              </button>
+            </div>
+
+            <div className="absolute bottom-0 left-0 w-full p-6 md:p-16">
+              <div className="max-w-7xl mx-auto text-center">
+                <p className="text-red-varese font-bold uppercase tracking-[0.4em] text-[10px] md:text-xs mb-4 animate-in slide-in-from-bottom-4 duration-700">{t('detailedProgram')}</p>
+                <h1 className="font-oswald text-4xl md:text-8xl font-bold uppercase leading-[0.85] tracking-tighter text-black mb-6 animate-in slide-in-from-bottom-8 duration-700 delay-100">
+                  {program.title}
+                </h1>
+                <div className="flex flex-wrap gap-4 items-center justify-center animate-in slide-in-from-bottom-4 duration-700 delay-200">
+                  <span className="bg-red-varese text-white px-4 py-1.5 text-[10px] md:text-xs font-bold uppercase tracking-widest rounded-sm">{program.timing}</span>
+                  <div className="h-4 w-px bg-zinc-300 hidden md:block"></div>
+                  <span className="text-black uppercase tracking-[0.15em] text-[10px] md:text-xs font-bold">{program.target}</span>
                 </div>
-                <span className="hidden md:inline-block bg-red-varese text-white px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded">{program.timing}</span>
               </div>
-              <div className="mb-6 p-3 border-l-2 border-red-varese bg-white/5 rounded-r-lg"><p className="text-white font-bold uppercase tracking-[0.05em] text-xs">Target: {program.target}</p></div>
-              <div className="text-gray-300 text-sm md:text-base leading-relaxed mb-6 flex-grow">
-                <p className="mb-4">{program.description}</p>
-                {program.details && (
-                  <div className="mt-4 pt-4 border-t border-white/10">
-                    <FormattedText text={program.details} />
+            </div>
+          </section>
+    
+          {/* Content Section */}
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-10">
+            <div className="grid lg:grid-cols-3 gap-12">
+              {/* Main Content */}
+              <div className="lg:col-span-2 h-full">
+                <div className="bg-white border border-zinc-200 p-8 md:p-12 rounded-2xl shadow-xl shadow-zinc-200/50 h-full">
+                  <h2 className="font-oswald text-2xl md:text-4xl font-bold uppercase mb-8 text-red-varese flex items-center gap-4">
+                    <div className="w-12 h-1 bg-red-varese"></div>
+                    Overview
+                  </h2>
+                  <div className="text-black text-base md:text-lg leading-relaxed space-y-6 font-light">
+                    {(program.overview || program.description).split('\n').map((paragraph, idx) => (
+                      <p key={idx}>{paragraph}</p>
+                    ))}
                   </div>
-                )}
-              </div>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-8">
-                {program.highlights.map((h, i) => (<div key={i} className="flex items-center gap-2 p-2 bg-white/5 rounded border border-white/10"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /><span className="text-[9px] font-bold uppercase tracking-wider text-white truncate">{h}</span></div>))}
-              </div>
-              <div className="flex flex-col gap-4 mt-auto">
-                {program.id === 'basketball-academy' ? (
-                  <a
-                    href="https://store.pallacanestrovarese.it/products/basketball-academy"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full bg-red-varese text-white py-4 md:py-5 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg shadow-xl shadow-red-600/30 text-center"
-                  >
-                    {t('buyNow')}
-                  </a>
-                ) : (
-                  <a
-                    href="https://store.pallacanestrovarese.it/collections/elite-programs"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full bg-red-varese text-white py-4 md:py-5 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg shadow-xl shadow-red-600/30 text-center"
-                  >
-                    {t('buyNow')}
-                  </a>
-                )}
-                <div className="flex gap-4">
-                  <button onClick={() => onRequestInfo(program)} className="flex-1 border border-white/20 text-white py-3 font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-all text-xs rounded-lg">{t('requestMoreInfo')}</button>
-                  <a href="https://drive.google.com/file/d/1PQ7iSTdj0XC4TCMzENjinLr8Udv38-oW/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="flex-1 border border-white/20 text-white py-3 font-bold uppercase tracking-wider hover:bg-white/10 transition-all text-xs rounded-lg text-center flex items-center justify-center">{t('downloadBrochure')}</a>
-                  {program.successStoryLink && (
-                    <a href={program.successStoryLink} target="_blank" rel="noopener noreferrer" className="flex-1 border border-white/20 text-white py-3 font-bold uppercase tracking-wider hover:bg-white/10 transition-all text-xs rounded-lg text-center flex items-center justify-center gap-2">
-                        <Star size={14}/> {t('successStory')}
-                    </a>
-                  )}
                 </div>
               </div>
+
+              {/* Sidebar / Actions */}
+              <div className="h-full">
+                <div className="bg-zinc-50 border border-zinc-200 p-8 rounded-2xl shadow-xl shadow-zinc-200/30 h-full flex flex-col">
+                  <h3 className="font-oswald text-xl md:text-2xl font-bold uppercase mb-8 text-red-varese tracking-tight">Key Highlights</h3>
+                  <div className="space-y-5 mb-10">
+                    {program.highlights.map((h, i) => (
+                      <div key={i} className="flex items-start gap-4 group">
+                        <div className="mt-1 bg-red-varese/10 p-1 rounded-full group-hover:bg-red-varese/20 transition-colors">
+                          <CheckCircle2 size={16} className="text-red-varese flex-shrink-0" />
+                        </div>
+                        <span className="text-black text-sm font-medium leading-tight">{h}</span>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <div className="mt-auto flex flex-col gap-4 fixed bottom-0 left-0 right-0 p-4 bg-white/90 backdrop-blur-md border-t border-zinc-200 z-50 md:relative md:p-0 md:bg-transparent md:border-t-0 md:z-auto">
+                    {program.id === 'academy' ? (
+                      <a
+                        href="https://store.pallacanestrovarese.it/products/basketball-academy"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full bg-red-varese text-white py-4 md:py-5 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg shadow-xl shadow-red-600/20 text-center flex items-center justify-center group"
+                      >
+                        {t('buyNow')} <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
+                      </a>
+                    ) : (
+                      <a
+                        href="https://store.pallacanestrovarese.it/collections/elite-programs"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full bg-red-varese text-white py-4 md:py-5 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg shadow-xl shadow-red-600/20 text-center flex items-center justify-center group"
+                      >
+                        {t('buyNow')} <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
+                      </a>
+                    )}
+                    
+                    <div className="flex gap-2 md:flex-col md:gap-4">
+                      <button 
+                        onClick={() => onRequestInfo(program)} 
+                        className="flex-1 border border-zinc-300 text-black py-3 md:py-4 font-bold uppercase tracking-wider hover:bg-zinc-900 hover:text-white transition-all text-xs rounded-lg"
+                      >
+                        {t('requestMoreInfo')}
+                      </button>
+
+                      <a href="https://drive.google.com/file/d/1PQ7iSTdj0XC4TCMzENjinLr8Udv38-oW/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="flex-1 border border-zinc-200 text-black py-3 font-bold uppercase tracking-widest hover:text-zinc-900 hover:border-zinc-400 transition-all text-[9px] md:text-xs rounded-lg text-center flex items-center justify-center">
+                        {t('downloadBrochure')}
+                      </a>
+                    </div>
+                    
+                    {program.successStoryLink && (
+                      <a href={program.successStoryLink} target="_blank" rel="noopener noreferrer" className="hidden md:flex border border-zinc-200 text-black py-3 font-bold uppercase tracking-widest hover:text-zinc-900 hover:border-zinc-400 transition-all text-[9px] rounded-lg text-center items-center justify-center gap-1.5 mt-2">
+                          <Star size={12}/> {t('successStory')}
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </main>
-  );
 
+          {/* Full Width Details Section */}
+          {program.details && (
+            <div className="w-full bg-zinc-50 border-y border-zinc-200 mt-16 py-16">
+              <div className="w-full px-4 sm:px-8 lg:px-12">
+                <FormattedText text={program.details} className="text-black" programId={program.id} />
+                
+                <div className="mt-16 flex flex-col sm:flex-row gap-4 justify-center items-center max-w-2xl mx-auto">
+                  <a
+                    href={program.id === 'academy' ? "https://store.pallacanestrovarese.it/products/basketball-academy" : "#"}
+                    target={program.id === 'academy' ? "_blank" : "_self"}
+                    rel={program.id === 'academy' ? "noopener noreferrer" : ""}
+                    className="w-full sm:w-auto flex-1 bg-red-varese text-white py-4 md:py-5 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg shadow-xl shadow-red-600/20 text-center flex items-center justify-center group"
+                  >
+                    {t('buyNow')} <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
+                  </a>
+                  <button 
+                    onClick={() => onRequestInfo(program)} 
+                    className="w-full sm:w-auto flex-1 border border-zinc-300 text-black py-4 md:py-5 font-bold uppercase tracking-wider hover:bg-zinc-900 hover:text-white transition-all text-sm rounded-lg"
+                  >
+                    {t('requestMoreInfo')}
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+        </main>
+      );
+    };
 
-  const isFacilityView = ['arena', 'campus', 'housing'].includes(view);
 
   return (
-    <div className={`min-h-screen flex flex-col bg-[#0a0a0a] ${(isApplying || isJoinModalOpen || isMenuOpen || view === 'detailedPrograms') ? 'overflow-hidden h-screen' : ''}`}>
+    <div className={`min-h-screen flex flex-col bg-[#0a0a0a] ${(isApplying || isJoinModalOpen || isMenuOpen) ? 'overflow-hidden h-screen' : ''}`}>
       <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled || view !== 'home' || isMenuOpen ? 'bg-black/90 backdrop-blur-md py-3 border-b border-white/10' : 'bg-transparent py-6'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => setView('home')}>
@@ -1117,7 +1262,7 @@ const App: React.FC = () => {
           </div>
           <div className="flex items-center space-x-4">
             {(view === 'programs' || view === 'palmares' || isFacilityView || view === 'detailedPrograms' || view === 'programDetail') && (
-              <button onClick={() => setView('home')} className="hidden md:block text-xs font-bold uppercase tracking-widest hover:text-red-varese transition-colors">
+              <button onClick={handleBack} className="hidden md:block text-xs font-bold uppercase tracking-widest hover:text-red-varese transition-colors">
                 {t('backToHome')}
               </button>
             )}
@@ -1190,7 +1335,10 @@ const App: React.FC = () => {
                 <p className="text-white font-semibold italic text-2xl pt-4 text-center">{t('whoWeAreQuote')}</p>
                 
                 <div className="pt-8 text-center">
-                  <button onClick={() => setView('palmares')} className="border border-white hover:bg-white hover:text-black text-white px-10 py-4 font-bold uppercase tracking-widest transition-all">
+                  <button onClick={() => {
+                    setPreviousView(view);
+                    setView('palmares');
+                  }} className="border border-white hover:bg-white hover:text-black text-white px-10 py-4 font-bold uppercase tracking-widest transition-all">
                     {t('ourPalmares')}
                   </button>
                 </div>
@@ -1326,7 +1474,10 @@ const App: React.FC = () => {
                   <div
                     key={facility.id}
                     className={`relative h-[450px] group overflow-hidden rounded-xl shadow-2xl cursor-pointer`}
-                    onClick={() => setView(facility.id as View)}
+                    onClick={() => {
+                      setPreviousView(view);
+                      setView(facility.id as View);
+                    }}
                   >
                     <img src={facility.coverImage} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" alt={t(facility.titleKey as keyof typeof TRANSLATIONS['en'])} />
                     
@@ -1374,7 +1525,7 @@ const App: React.FC = () => {
       )}
 
       {view === 'palmares' && (
-        <section className="relative w-full h-screen overflow-hidden bg-zinc-900 animate-in fade-in duration-500">
+        <section className="fixed inset-0 z-[60] overflow-hidden bg-zinc-900 animate-in fade-in duration-500">
             <img 
                 src="https://i.imgur.com/8kq5iZS.jpeg" 
                 alt="Pallacanestro Varese Trophies" 
@@ -1383,7 +1534,7 @@ const App: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/60"></div>
             
             <button 
-                onClick={() => navigateToHomeSection('who-we-are')} 
+                onClick={handleBack} 
                 className="absolute top-24 left-4 sm:left-8 z-20 flex items-center justify-center bg-black/50 hover:bg-red-varese text-white w-12 h-12 rounded-full transition-colors"
                 aria-label={t('back')}
             >
@@ -1436,7 +1587,7 @@ const App: React.FC = () => {
       {isFacilityView && (
           <FacilityPage 
             facility={FACILITIES.find(f => f.id === view)!} 
-            onBack={() => navigateToHomeSection('facilities')}
+            onBack={handleBack}
             t={t}
           />
       )}
@@ -1447,7 +1598,7 @@ const App: React.FC = () => {
         <ProgramDetailPage 
           program={selectedProgram}
           t={t}
-          onBack={() => navigateToHomeSection('opportunities')}
+          onBack={handleBack}
           onRequestInfo={(prog) => {
             setSelectedProgram(prog);
             setFormState(prevState => ({ ...prevState, program: prog.title }));

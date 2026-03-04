@@ -93,35 +93,22 @@ export const PROGRAMS: Program[] = [
     target: "Dedicated to kids between 5 and 19",
     timing: "Year around",
     description: "A commitment to fostering growth through a two-way approach: Grassroots and Elite Player Development.",
+    overview: "Pallacanestro Varese is proud to announce the establishment of its Basketball Academy, a project born from a deep commitment to fostering the growth of basketball both locally and nationally. This isn’t just a sports program; it’s a collaborative effort to build a legacy of excellence, teamwork, and passion for the game.",
     highlights: ["Expert Coaching", "High-quality facilities", "Community engagement"],
     image: "https://i.imgur.com/uTz60Cd.jpeg",
-    detailImage: "https://i.imgur.com/XHAw3Qn.jpeg",
-    details: `A Vision for the Future: The Basketball Academy
-Pallacanestro Varese is proud to announce the establishment of its Basketball Academy, a project born from a deep commitment to fostering the growth of basketball both locally and nationally. This isn’t just a sports program; it’s a collaborative effort to build a legacy of excellence, teamwork, and passion for the game.
-
-A Comprehensive Two-Way Approach
+    detailImage: "https://i.imgur.com/ONYoMaE.jpeg",
+    details: `A Comprehensive Two-Way Approach
 Our Academy is built on two fundamental pillars designed to serve every aspect of the sport:
 
 Grassroots Excellence: We believe in basketball as a powerful tool for the community. Our program promotes an active, positive spirit, helping young athletes develop social skills and a healthy lifestyle.
 
 Elite Player Development: For those dreaming of the big leagues, we provide the ultimate pathway. By offering expert coaching, professional training programs, and access to high-quality facilities, we cultivate the basketball stars of tomorrow.
 
-The Perfect Environment for Young Athletes
-We are dedicated to kids between the ages of 5 and 19, providing a structured environment that grows with them. Our program operates year-round, ensuring that development never stops and that every student has the consistent support they need to reach their full potential.
+Target audience
+Our Academy’s programs are strategically designed to cater to a broad demographic of youth athletes, specifically targeting individuals between the ages of 5 and 19. To ensure optimal developmental alignment and adherence to our safety and coaching standards, enrollment is exclusively open to participants born no later than the year 2020.
 
-Ambitious Growth & Proven Strategy
-We are on a fast track to becoming the preeminent academy in the region. Over a three-year period, we are scaling our operations significantly to provide more opportunities than ever before:
-
-Facilities: Expanding from 1 to 4 professional basketball courts.
-
-Community: Growing from 100 to 500 young athletes.
-
-Expertise: Increasing our staff from 8 to 40 dedicated coaches.
-
-Competition: Scaling from 6 to 30 organized teams.
-
-Our Professional Commitment
-To ensure the success of our athletes and partners, we focus on a rigorous development framework. Our roadmap includes professional consulting and follow-up, a robust business plan, strategic naming opportunities, and a constant search for synergy between sport and community.`
+When and where
+Our programs operate on a year-round basis at our premier Varese campus, conveniently located in Via Pirandello. This full-calendar schedule ensures consistent athletic development within a professional environment.`
   },
   {
     id: "full-time",
@@ -131,7 +118,7 @@ To ensure the success of our athletes and partners, we focus on a rigorous devel
     description: "A comprehensive package designed for year-round development in Varese with professional integration.",
     highlights: ["Italian Player Status potential", "Tailored training programs", "Competitive environment"],
     image: "https://i.imgur.com/LaQoOFy.jpeg",
-    detailImage: "https://i.imgur.com/5HSDvUF.jpeg",
+    detailImage: "https://i.imgur.com/KIuuWg2.jpeg",
     details: `The Elite Full-Time Training Program
 Experience an unparalleled, year-round basketball journey in Varese. This program is a meticulously designed package offering a tailored environment and high-level services to elevate dedicated players to the next level. Running from the end of August to the end of June, it provides a consistent, professional atmosphere for growth.
 
@@ -175,7 +162,7 @@ Educational Flexibility: We offer access to Public Schools, Private Internationa
     description: "Immersive 'Train Like a Pro' experience for aspiring basketball players.",
     highlights: ["Serie A techniques", "Elite Competition", "Performance Analytics"],
     image: "https://i.imgur.com/ngjbsbC.jpeg",
-    detailImage: "https://i.imgur.com/1GpB0Cl.jpeg",
+    detailImage: "https://i.imgur.com/bUSyHZP.jpeg",
     details: `Elevate Your Game: The Elite Summer Camp
 Join Pallacanestro Varese for an immersive, all-inclusive one-week experience designed for aspiring basketball players who want to push their limits. This intensive program offers a rare taste of the dedication required to succeed in elite basketball, focusing on high-level fundamentals, performance, and sports science.
 
@@ -242,7 +229,7 @@ Davide Zonca: Trainer/Physio with 8 years of experience in Serie A.`
     description: "A professional path for aspiring coaches to learn the Varese methodology directly from our Serie A staff.",
     highlights: ["Methodology Study", "Practice Observation", "Staff Integration"],
     image: "https://i.imgur.com/RQQuoWs.jpeg",
-    detailImage: "https://i.imgur.com/WTBbv9k.jpeg",
+    detailImage: "https://i.imgur.com/eRNwmeQ.jpeg",
     details: `Master the Bench: Coaches Internship Program
 Step into the world of elite European basketball with an unparalleled opportunity to join the professional coaching staff at Pallacanestro Varese. This program is specifically designed for ambitious international coaches who are eager to gain firsthand experience in a high-stakes, professional environment. Operating during the LBA season from August to June, the program requires a minimum commitment of one month.
 
