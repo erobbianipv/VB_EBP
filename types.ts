@@ -1,4 +1,6 @@
 
+export type Language = 'it' | 'en' | 'es' | 'fr';
+
 export interface Achievement {
   title: string;
   count: number;

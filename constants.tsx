@@ -194,11 +194,11 @@ Davide Zonca: Trainer/Physio with 8 years of experience in Serie A.`
     title: "COACHES INTERNSHIP PROGRAM",
     target: "Aspiring Coaches",
     timing: "Flexible Duration",
-    description: "A professional path for aspiring coaches to learn the Varese methodology directly from our Serie A staff.",
+    description: "Step into the world of elite European basketball with an unparalleled opportunity to join the professional coaching staff at Pallacanestro Varese. This program is specifically designed for ambitious international coaches who are eager to gain firsthand experience in a high-stakes, professional environment. Operating during the LBA season from August to June, the program requires a minimum commitment of one month.",
     highlights: ["Methodology Study", "Practice Observation", "Staff Integration"],
     image: "https://i.imgur.com/RQQuoWs.jpeg",
     detailImage: "https://i.imgur.com/eRNwmeQ.jpeg",
-    details: `Master the Bench: Coaches Internship Program
+    details: `target audience
 Step into the world of elite European basketball with an unparalleled opportunity to join the professional coaching staff at Pallacanestro Varese. This program is specifically designed for ambitious international coaches who are eager to gain firsthand experience in a high-stakes, professional environment. Operating during the LBA season from August to June, the program requires a minimum commitment of one month.
 
 Elite Professional Integration
@@ -212,14 +212,8 @@ Strategic Development: Attend coaches' meetings to understand the tactical and s
 
 Youth Development: Contribute to the future of the sport by assisting the coaching staff of our youth teams.
 
-Advanced Scouting and Analytics
-Refine your technical skills with access to modern coaching tools and methodologies. The program provides specific training in:
-
-Player Scouting: Learn how to identify and evaluate talent effectively.
-
-Video Analysis: Master the use of Hudl for performance breakdown and video analysis.
-
-Coaching Clinics: Participate in specialized clinics designed to expand your technical and tactical knowledge.
+when and where
+The program will be hosted across our premier facilities, specifically the Foresteria Elite Housing and our Campus in via Pirandello. These two flagship locations are strategically situated just a 5-minute walk from one another, ensuring seamless transitions between residency and training. This integrated logistical setup allows athletes to maximize their time and focus entirely on their professional development.
 
 A Comprehensive "All-Inclusive" Package
 We take care of the logistics so you can focus entirely on your professional growth. Our all-inclusive offer for interns includes:
@@ -238,18 +232,18 @@ The goal of this internship is to transform your coaching acumen. By completing 
     title: "SUMMER ELITE PROGRAM",
     target: "International Clubs and Academies",
     timing: "July",
-    description: "Short-term high-intensity training cycles designed for international clubs and academies during the off-season.",
+    description: "Short-term high-intensity training cycles designed for international clubs and academies during the off-season. Pallacanestro Varese invites your team to experience the Summer Elite Program, a premium residency designed for Youth National Teams (U14 to U18), Junior Programs, and professional Senior clubs. This program is more than just a training camp; it is a high-performance ecosystem where athletes can immerse themselves in the game.",
     highlights: ["Intensity Training", "Elite Competition", "Skill Development"],
     image: "https://i.imgur.com/K09B4ge.png",
     detailImage: "https://i.imgur.com/C9Jvhwq.jpeg",
-    details: `The Ultimate Offseason Training Residency
-Pallacanestro Varese invites your team to experience the Summer Elite Program, a premium residency designed for Youth National Teams (U14 to U18), Junior Programs, and professional Senior clubs. This program is more than just a training camp; it is a high-performance ecosystem where athletes can immerse themselves in the game. Our all-inclusive, minimum 7-day formula is designed to eliminate every distraction, allowing coaching staff and players to focus entirely on skill development and team chemistry. Every aspect of the program is fully modular and can be tailored to meet your team’s specific technical requirements and scheduling needs.
+    details: `pro-level program
+Our all-inclusive, minimum 7-day formula is designed to eliminate every distraction, allowing coaching staff and players to focus entirely on skill development and team chemistry. Every aspect of the program is fully modular and can be tailored to meet your team’s specific technical requirements and scheduling needs.
 
-Pro-Level Facilities & Performance Nutrition
-Success on the court starts with the right environment. We provide exclusive daily access (from 9:00 AM to 12:00 PM) to a professional-grade basketball court, ensuring your sessions are private and uninterrupted. Your athletes will also benefit from a dedicated weight and recovery room, as well as specialized physical therapy areas to manage peak physical condition. To fuel this elite training, we provide a personalized catering service with a strict focus on sports nutrition. Each meal is meticulously crafted and delivered directly to the team, featuring a fresh salad bar, lean protein options like chicken or beef, and healthy side dishes specifically designed for high-performance recovery.
+target audience
+Our facilities and programs are specifically designed to host Youth National Teams (U14 to U18) and Junior Programs looking for an elite training environment. We also cater to Medium Level Senior teams seeking the perfect balance of professional logistics and high-quality preparation. Whether developing young talent or refining senior strategies, our camp provides the tailored support necessary for every competitive level.
 
-Elite Housing & Seamless Logistics
-Comfort is essential for mental and physical rejuvenation. Your team will be hosted in newly constructed, 400 sqm elite accommodations that offer the perfect balance of privacy and community. Located just a five-minute walk from the training facility and the arena, the housing includes spacious dining areas, relaxation zones, and two 300 sqm private gardens. To ensure a seamless experience, we handle all transportation logistics. Upon arrival, two spacious 9-seat vans will be waiting to transport your group from the airport directly to your door, with the same dedicated service provided for your departure to guarantee a stress-free conclusion to your camp.
+when and where
+Experience elite 400 sqm accommodations with private gardens, located just five minutes from the arena. The camp requires a minimum stay of 1 week (7 days, 6 nights), tailored to your team’s specific needs and availability. To ensure total relaxation, we manage all logistics: two 9-seat vans provide seamless airport transfers for both arrival and departure. This setup offers the perfect balance of privacy and community for a stress-free, professional training experience.
 
 Strategic Location & Italian Culture
 Varese’s strategic position offers a unique opportunity to combine elite basketball with world-class travel experiences. When the team is off the court, you can take advantage of our tailored tourist packages designed to showcase the beauty of Northern Italy. Within a short 40-minute drive, your team can explore the vibrant streets of Milan, the breathtaking shores of Lake Como and Lake Maggiore, or the scenic landscapes of Lugano, Switzerland. These excursions are perfect for team-building and creating lasting memories, making your training residency in Varese a truly unforgettable international experience.`,
