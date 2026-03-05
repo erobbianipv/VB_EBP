@@ -567,6 +567,64 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
       {section.paragraphs.map((paragraphLines, pIdx) => (
         <div key={pIdx} className="space-y-2">
           {paragraphLines.map((line, lIdx) => {
+            if (line.includes("Our programs operate on a year-round basis at our premier Varese campus")) {
+              return (
+                <div key={lIdx} className="space-y-4">
+                  <p>{line}</p>
+                  <a 
+                    href="https://www.google.com/maps/place/Campus+Varese/@45.8386915,8.8002913,647m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47867f004a963285:0x68ef706dc0f95da5!8m2!3d45.8386915!4d8.8028662!16s%2Fg%2F11zj10k1df?entry=ttu&g_ep=EgoyMDI2MDMwMi4wIKXMDSoASAFQAw%3D%3D" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="block w-full rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow relative group mt-4"
+                  >
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors z-10 flex items-center justify-center">
+                      <div className="bg-white text-red-varese px-4 py-2 rounded-full font-bold opacity-0 group-hover:opacity-100 transition-opacity shadow-lg transform translate-y-2 group-hover:translate-y-0">
+                        Open in Google Maps
+                      </div>
+                    </div>
+                    <iframe 
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.568461763133!2d8.80029127664188!3d45.83869147107873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47867f004a963285%3A0x68ef706dc0f95da5!2sCampus%20Varese!5e0!3m2!1sen!2sit!4v1709614800000!5m2!1sen!2sit" 
+                      width="100%" 
+                      height="250" 
+                      style={{ border: 0, pointerEvents: 'none' }} 
+                      allowFullScreen={false} 
+                      loading="lazy" 
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="Campus Varese Map"
+                    ></iframe>
+                  </a>
+                </div>
+              );
+            }
+            if (line.includes("Our premium facilities—including the Foresteria Elite Housing and the via Pirandello Campus—are strategically located within a 5-minute walk of each other.") || line.includes("The program will be hosted across our premier facilities, specifically the Foresteria Elite Housing and our Campus in via Pirandello.") || line.includes("Experience elite 400 sqm accommodations with private gardens, located just five minutes from the arena. The camp requires a minimum stay of 1 week (7 days, 6 nights), tailored to your team’s specific needs and availability. To ensure total relaxation, we manage all logistics: two 9-seat vans provide seamless airport transfers for both arrival and departure. This setup offers the perfect balance of privacy and community for a stress-free, professional training experience.")) {
+              return (
+                <div key={lIdx} className="space-y-4">
+                  <p>{line}</p>
+                  <a 
+                    href="https://www.google.com/maps/dir/Seconda+Strada+Varese+-+Abbigliamento,+scarpe+e+accessori+moda,+Via+Giovanni+Borghi,+12,+21100+Varese+VA/Campus+Varese,+Via+Luigi+Pirandello,+31,+21100+Varese+VA/@45.8363216,8.7962555,1293m/data=!3m2!1e3!4b1!4m14!4m13!1m5!1m1!1s0x47867fad6f946d8b:0x84ecbc071b6f2b60!2m2!1d8.7981638!2d45.8337092!1m5!1m1!1s0x47867f004a963285:0x68ef706dc0f95da5!2m2!1d8.8028662!2d45.8386915!3e2?entry=ttu&g_ep=EgoyMDI2MDMwMi4wIKXMDSoASAFQAw%3D%3D" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="block w-full rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow relative group mt-4"
+                  >
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors z-10 flex items-center justify-center">
+                      <div className="bg-white text-red-varese px-4 py-2 rounded-full font-bold opacity-0 group-hover:opacity-100 transition-opacity shadow-lg transform translate-y-2 group-hover:translate-y-0">
+                        Open in Google Maps
+                      </div>
+                    </div>
+                    <iframe 
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.568461763133!2d8.80029127664188!3d45.83869147107873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47867f004a963285%3A0x68ef706dc0f95da5!2sCampus%20Varese!5e0!3m2!1sen!2sit!4v1709614800000!5m2!1sen!2sit" 
+                      width="100%" 
+                      height="250" 
+                      style={{ border: 0, pointerEvents: 'none' }} 
+                      allowFullScreen={false} 
+                      loading="lazy" 
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="Campus Varese Map"
+                    ></iframe>
+                  </a>
+                </div>
+              );
+            }
             if (line.includes("click here")) {
               const parts = line.split("click here");
               return (
@@ -628,7 +686,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
     <div className={`${className} text-sm leading-relaxed`}>
       <div className="flex flex-col gap-12">
         {mainSection && (
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             <div className="flex-1 lg:flex-[1.5] space-y-4">
               <h4 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg border-b border-zinc-200 pb-2">
                 {mainSection.title}
@@ -642,7 +700,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
         )}
         
         {targetSection && (
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             <div className="flex-1 lg:flex-[1.5] w-full order-2 lg:order-1">
               <img src={getImage2()} alt={targetSection.title || "Section 2"} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />
             </div>
@@ -656,7 +714,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
         )}
 
         {whenWhereSection && (
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             <div className="flex-1 lg:flex-[1.5] space-y-4">
               <h4 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg border-b border-zinc-200 pb-2">
                 {whenWhereSection.title}
@@ -672,7 +730,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
         {otherSections.length > 0 && (
           <div className="flex flex-col gap-12 mt-8">
             {otherSections.map((section, idx) => (
-              <div key={idx} className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+              <div key={idx} className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
                 <div className="flex-1 w-full space-y-4">
                   <h4 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg border-b border-zinc-200 pb-2">
                     {section.title}
@@ -948,8 +1006,7 @@ const App: React.FC = () => {
           </div>
           <div className="p-8 flex-grow flex flex-col">
             <h3 className="font-oswald text-2xl font-bold uppercase mb-2 group-hover:text-red-varese transition-colors">{prog.title}</h3>
-            <p className="text-red-varese text-[10px] font-bold uppercase tracking-widest mb-4">{prog.target}</p>
-            <p className="text-gray-400 text-sm mb-6 flex-grow leading-relaxed">{prog.description}</p>
+            <p className="text-red-varese text-[10px] font-bold uppercase tracking-widest mb-4 flex-grow">{prog.target}</p>
             <div className="space-y-3 mb-8">
               {prog.highlights.map((h, i) => (
                 <div key={i} className="flex items-center gap-3 text-[11px] font-semibold text-gray-300 uppercase tracking-wider">
@@ -1166,7 +1223,7 @@ const App: React.FC = () => {
       return (
         <main className="fixed inset-0 z-[60] bg-white overflow-y-auto pb-24 animate-in fade-in duration-700">
           {/* Full Screen Hero Section */}
-          <section className="relative h-[60vh] md:h-[75vh] w-full overflow-hidden">
+          <section className="relative h-[50vh] md:h-[65vh] w-full overflow-hidden">
             <img 
               src={program.detailImage || program.image} 
               className="absolute inset-0 w-full h-full object-cover" 
@@ -1196,6 +1253,26 @@ const App: React.FC = () => {
                   <div className="h-4 w-px bg-zinc-300 hidden md:block"></div>
                   <span className="text-black uppercase tracking-[0.15em] text-[10px] md:text-xs font-bold">{program.target}</span>
                 </div>
+                
+                <div className="flex flex-wrap justify-center gap-4 md:gap-8 mt-8 animate-in slide-in-from-bottom-4 duration-700 delay-300">
+                  <div className="bg-white/80 backdrop-blur-sm border border-zinc-200 px-6 py-4 md:px-8 md:py-6 rounded-xl shadow-md min-w-[150px] md:min-w-[200px]">
+                    <span className="text-red-varese text-xs md:text-sm font-bold uppercase tracking-wider block mb-1">Target Audience</span>
+                    <span className="text-black text-sm md:text-base font-medium">{program.target}</span>
+                  </div>
+                  <div className="bg-white/80 backdrop-blur-sm border border-zinc-200 px-6 py-4 md:px-8 md:py-6 rounded-xl shadow-md min-w-[150px] md:min-w-[200px]">
+                    <span className="text-red-varese text-xs md:text-sm font-bold uppercase tracking-wider block mb-1">When</span>
+                    <span className="text-black text-sm md:text-base font-medium">{program.timing}</span>
+                  </div>
+                  <div className="bg-white/80 backdrop-blur-sm border border-zinc-200 px-6 py-4 md:px-8 md:py-6 rounded-xl shadow-md min-w-[150px] md:min-w-[200px]">
+                    <span className="text-red-varese text-xs md:text-sm font-bold uppercase tracking-wider block mb-1">Where</span>
+                    <span className="text-black text-sm md:text-base font-medium">
+                      {program.id === 'academy' ? 'Campus, via Pirandello' : 'Foresteria and Campus'}
+                    </span>
+                  </div>
+                  <div className="bg-white/80 backdrop-blur-sm border border-zinc-200 px-6 py-4 md:px-8 md:py-6 rounded-xl shadow-md min-w-[150px] md:min-w-[200px]">
+                    <span className="text-red-varese text-xs md:text-sm font-bold uppercase tracking-wider block mb-1">Subscription Deadline</span>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -1205,12 +1282,12 @@ const App: React.FC = () => {
             <div className="grid lg:grid-cols-3 gap-12">
               {/* Main Content */}
               <div className="lg:col-span-2 h-full">
-                <div className="bg-white border border-zinc-200 p-8 md:p-12 rounded-2xl shadow-xl shadow-zinc-200/50 h-full">
-                  <h2 className="font-oswald text-2xl md:text-4xl font-bold uppercase mb-8 text-red-varese flex items-center gap-4">
-                    <div className="w-12 h-1 bg-red-varese"></div>
+                <div className="bg-white border border-zinc-200 p-8 md:p-12 rounded-2xl shadow-xl shadow-zinc-200/50 h-full flex flex-col items-center justify-center text-center">
+                  <h2 className="font-oswald text-2xl md:text-4xl font-bold uppercase mb-8 text-red-varese flex flex-col items-center gap-4">
                     Overview
+                    <div className="w-12 h-1 bg-red-varese"></div>
                   </h2>
-                  <div className="text-black text-base md:text-lg leading-relaxed space-y-6 font-light">
+                  <div className="text-black text-base md:text-lg leading-relaxed space-y-6 font-light max-w-2xl">
                     {(program.overview || program.description).split('\n').map((paragraph, idx) => (
                       <p key={idx}>{paragraph}</p>
                     ))}

@@ -105,7 +105,8 @@ Grassroots Excellence: We believe in basketball as a powerful tool for the commu
 Elite Player Development: For those dreaming of the big leagues, we provide the ultimate pathway. By offering expert coaching, professional training programs, and access to high-quality facilities, we cultivate the basketball stars of tomorrow.
 
 Target audience
-Our Academy’s programs are strategically designed to cater to a broad demographic of youth athletes, specifically targeting individuals between the ages of 5 and 19. To ensure optimal developmental alignment and adherence to our safety and coaching standards, enrollment is exclusively open to participants born no later than the year 2020.
+Our Academy’s comprehensive training programs are strategically engineered to serve a diverse demographic of aspiring youth athletes. We focus our curriculum on a specific developmental window, targeting individuals who fall between the ages of 5 and 19. This range allows us to provide a structured pathway from foundational motor skills to advanced competitive tactics.
+To maintain our rigorous safety protocols and ensure that coaching standards are perfectly aligned with each player's physical and cognitive maturity, we enforce a strict eligibility cutoff. Consequently, enrollment for the upcoming season is exclusively available to participants born no later than the year 2020. This policy ensures that every athlete receives the specialized attention and age-appropriate instruction necessary for long-term athletic success.
 
 When and where
 Our programs operate on a year-round basis at our premier Varese campus, conveniently located in Via Pirandello. This full-calendar schedule ensures consistent athletic development within a professional environment.
@@ -123,10 +124,13 @@ Please contact us or click here for detailed pricing information tailored to you
     image: "https://i.imgur.com/LaQoOFy.jpeg",
     detailImage: "https://i.imgur.com/KIuuWg2.jpeg",
     details: `target audience
-This elite professional pathway has been meticulously engineered for ambitious young athletes who are fully committed to establishing a high-level career within the European basketball ecosystem. The program is strategically tailored to meet the developmental needs of student-athletes aged between 13 and 17, providing them with the competitive framework necessary to excel in the professional circuit.
+This elite professional pathway has been meticulously engineered for highly ambitious young athletes who demonstrate a profound commitment to establishing a long-term, high-level career within the competitive European basketball ecosystem. We recognize that the journey to the professional ranks requires more than just talent; it demands a structured, high-performance environment that bridges the gap between youth potential and professional execution.
+The program is strategically tailored to address the unique physiological and technical developmental needs of student-athletes aged strictly between 13 and 17. By focusing on this critical age bracket, we are able to provide a specialized competitive framework that is essential for excelling in the modern professional circuit. Our curriculum ensures that every participant is equipped with the tactical intelligence and physical readiness required to navigate the complexities of European basketball at its highest levels.
 
 Future Opportunities
-We prioritize athletes no older than 15 upon entry to facilitate the acquisition of Italian Player Status. By committing to four years within our system, players can acquire Italian status while maintaining their eligibility for their respective National Teams.
+Our recruitment strategy places a high priority on athletes who are no older than 15 years of age at the time of their initial entry into the program. This specific age threshold is a deliberate choice, designed to facilitate the complex legal and athletic process of acquiring Italian Player Status. By starting at this developmental stage, we ensure there is sufficient time to meet the residency and registration requirements mandated by national sports regulations.
+
+By committing to a comprehensive four-year tenure within our integrated system, players are afforded a unique dual-advantage. They can successfully complete the necessary steps to earn their Italian status—providing them with greater flexibility in European professional leagues—while simultaneously maintaining their full eligibility to represent their respective National Teams on the international stage. This structure allows our athletes to broaden their professional horizons without sacrificing their patriotic aspirations.
 
 when and where
 Our premium facilities—including the Foresteria Elite Housing and the via Pirandello Campus—are strategically located within a 5-minute walk of each other. This integrated layout optimizes daily transitions for the duration of the program, which runs from late August through late June, allowing athletes to focus entirely on their rigorous training schedule.
@@ -139,12 +143,13 @@ Please contact us or click here for detailed pricing information tailored to you
     title: "ELITE SUMMER CAMP",
     target: "Ages 15-19",
     timing: "One week (6 days, 5 nights)",
-    description: "Join Pallacanestro Varese for an immersive, all-inclusive one-week experience designed for aspiring basketball players who want to push their limits. This intensive program offers a rare taste of the dedication required to succeed in elite basketball, focusing on high-level fundamentals, performance, and sports science.",
+    description: "We invite you to join Pallacanestro Varese for a transformative, all-inclusive one-week experience specifically engineered for aspiring basketball players who possess the drive to push their physical and mental limits. This is not merely a training camp; it is a deep dive into a professional culture, offering participants a rare and authentic taste of the relentless dedication and discipline required to achieve success at the highest tiers of elite basketball.",
     highlights: ["Serie A techniques", "Elite Competition", "Performance Analytics"],
     image: "https://i.imgur.com/ngjbsbC.jpeg",
     detailImage: "https://i.imgur.com/bUSyHZP.jpeg",
     details: `target audience
-This premier summer experience is exclusively designed for ambitious young athletes aged 15 to 19 who are committed to elite performance. The program offers a sophisticated training environment tailored to high-potential players looking to refine their skills and elevate their game to a professional level.
+This premier summer experience has been exclusively designed and curated for a select group of ambitious young athletes, specifically those aged 15 to 19, who demonstrate an unwavering commitment to achieving elite-level performance. We understand that the off-season is a critical window for growth, and this program serves as the definitive platform for players who are serious about their athletic trajectory and long-term development.
+To facilitate this growth, the program offers a sophisticated and high-intensity training environment that is meticulously tailored to meet the needs of high-potential players. Our primary objective is to provide these athletes with the advanced technical tools and tactical insights necessary to refine their individual skill sets. By immersing participants in a professional-grade atmosphere, we empower them to elevate their game to a standard that meets the rigorous demands of the modern professional circuit.
 
 when and where
 Our premium facilities—including the Foresteria Elite Housing and the via Pirandello Campus—are strategically located within a 5-minute walk of each other. This integrated layout optimizes daily transitions for the duration of the program, which runs from late August through late June, allowing athletes to focus entirely on their rigorous training schedule.
@@ -165,12 +170,14 @@ Please contact us or click here for detailed pricing information tailored to you
     title: "COACHES INTERNSHIP PROGRAM",
     target: "Aspiring Coaches",
     timing: "Flexible Duration",
-    description: "Step into the world of elite European basketball with an unparalleled opportunity to join the professional coaching staff at Pallacanestro Varese. This program is specifically designed for ambitious international coaches who are eager to gain firsthand experience in a high-stakes, professional environment. Operating during the LBA season from August to June, the program requires a minimum commitment of one month.",
+    description: "We invite you to step into the prestigious world of elite European basketball with an unparalleled opportunity to integrate directly with the professional coaching staff at Pallacanestro Varese. This immersive program has been specifically designed for ambitious international coaches who are not merely looking for a seminar, but are eager to gain firsthand, high-level experience within a high-stakes, professional environment. By working alongside our technical team, participants will witness the daily operations, tactical planning, and player management strategies that define top-tier European competition.",
     highlights: ["Methodology Study", "Practice Observation", "Staff Integration"],
     image: "https://i.imgur.com/RQQuoWs.jpeg",
     detailImage: "https://i.imgur.com/eRNwmeQ.jpeg",
     details: `target audience
-Step into the world of elite European basketball with an unparalleled opportunity to join the professional coaching staff at Pallacanestro Varese. This program is specifically designed for ambitious international coaches who are eager to gain firsthand experience in a high-stakes, professional environment. Operating during the LBA season from August to June, the program requires a minimum commitment of one month.
+We invite you to step into the prestigious world of elite European basketball with an unparalleled opportunity to integrate directly with the professional coaching staff at Pallacanestro Varese. This immersive program has been specifically designed for ambitious international coaches who are not merely looking for a seminar, but are eager to gain firsthand, high-level experience within a high-stakes, professional environment. By working alongside our technical team, participants will witness the daily operations, tactical planning, and player management strategies that define top-tier European competition.
+
+The program is structured to align with the official LBA (Lega Basket Serie A) season, operating in full capacity from the initial pre-season preparations in August through the final competitive stages in June. To ensure that every visiting coach has ample time to absorb the complexities of our system and build meaningful professional relationships, the program requires a minimum commitment of at least one month. This duration allows for a comprehensive understanding of our coaching philosophy, from scouting and video analysis to the execution of elite-level game plans.
 
 Elite Professional Integration
 This is more than just a course; it is an immersion into the daily operations of a Serie A basketball team. As an intern, you will:
@@ -199,10 +206,14 @@ Please contact us or click here for detailed pricing information tailored to you
     image: "https://i.imgur.com/K09B4ge.png",
     detailImage: "https://i.imgur.com/C9Jvhwq.jpeg",
     details: `pro-level program
-Our all-inclusive, minimum 7-day formula is designed to eliminate every distraction, allowing coaching staff and players to focus entirely on skill development and team chemistry. Every aspect of the program is fully modular and can be tailored to meet your team’s specific technical requirements and scheduling needs.
+Our all-inclusive, minimum seven-day formula has been strategically developed to provide an elite, high-performance environment that effectively eliminates every possible outside distraction. By providing a seamless, fully managed logistical experience, we allow both the coaching staff and the players to dedicate their entire focus to intensive skill development and the critical process of building team chemistry. We believe that by removing the administrative and logistical burdens of travel, the group can achieve a level of synergy and growth that is simply not possible in a standard training setting.
+
+To ensure that every group achieves its unique goals, every single aspect of this program is fully modular and highly flexible. We understand that no two teams have the same objectives; therefore, the curriculum can be precisely tailored to meet your team’s specific technical requirements and individual scheduling needs. Whether you require advanced tactical walkthroughs, intensive physical conditioning, or specific film study sessions, our framework is designed to adapt to your vision, providing a bespoke professional experience from start to finish.
 
 target audience
-Our facilities and programs are specifically designed to host Youth National Teams (U14 to U18) and Junior Programs looking for an elite training environment. We also cater to Medium Level Senior teams seeking the perfect balance of professional logistics and high-quality preparation. Whether developing young talent or refining senior strategies, our camp provides the tailored support necessary for every competitive level.
+Our state-of-the-art facilities and specialized training programs have been specifically engineered to host Youth National Teams, ranging from the U14 to the U18 categories, as well as prestigious Junior Programs in search of an elite performance environment. We understand the unique demands of high-level youth development, and our infrastructure is designed to provide the rigorous standards required by national federations to prepare their next generation of talent for international competition.
+
+In addition to our youth-focused initiatives, we also cater extensively to Medium Level Senior teams who are seeking the perfect strategic balance between professional-grade logistics and high-quality athletic preparation. Whether your objective is the long-term development of emerging young prospects or the meticulous refining of senior-level strategies ahead of a new season, our camp provides the comprehensive, tailored support necessary for success. We take pride in offering a versatile platform where every team, regardless of their specific competitive level, can find the professional tools and dedicated environment they need to excel.
 
 when and where
 Experience elite 400 sqm accommodations with private gardens, located just five minutes from the arena. The camp requires a minimum stay of 1 week (7 days, 6 nights), tailored to your team’s specific needs and availability. To ensure total relaxation, we manage all logistics: two 9-seat vans provide seamless airport transfers for both arrival and departure. This setup offers the perfect balance of privacy and community for a stress-free, professional training experience.
