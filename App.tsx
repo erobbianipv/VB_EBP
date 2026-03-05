@@ -527,7 +527,8 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
     "A Comprehensive \"All-Inclusive\" Package",
     "The Ultimate Resume Builder",
     "pro-level program",
-    "Strategic Location & Italian Culture"
+    "Strategic Location & Italian Culture",
+    "pricing"
   ];
 
   const blocks = text.split('\n\n').filter(block => block.trim() !== '');
@@ -552,11 +553,30 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
     sections.push(currentSection);
   }
 
+  const getStoreLink = () => {
+    if (programId === 'academy') return "https://store.pallacanestrovarese.it/products/basketball-academy";
+    if (programId === 'full-time') return "https://store.pallacanestrovarese.it/products/basketball-academy-copia?variant=52624907436298";
+    if (programId === 'summer-camp') return "https://store.pallacanestrovarese.it/products/elite-summer-camp?variant=52625081630986";
+    if (programId === 'internship') return "https://store.pallacanestrovarese.it/products/coaches-internship-program?variant=52625121313034";
+    if (programId === 'summer-prog') return "https://store.pallacanestrovarese.it/products/summer-elite-program?variant=52625241800970";
+    return "#";
+  };
+
   const renderSectionContent = (section: { title: string | null, paragraphs: string[][] }) => (
     <div className="space-y-4">
       {section.paragraphs.map((paragraphLines, pIdx) => (
         <div key={pIdx} className="space-y-2">
           {paragraphLines.map((line, lIdx) => {
+            if (line.includes("click here")) {
+              const parts = line.split("click here");
+              return (
+                <p key={lIdx}>
+                  {parts[0]}
+                  <a href={getStoreLink()} target="_blank" rel="noopener noreferrer" className="text-red-varese underline font-bold hover:text-red-700">click here</a>
+                  {parts[1]}
+                </p>
+              );
+            }
             const colonIndex = line.indexOf(':');
             if (colonIndex > 0 && colonIndex < line.length - 1 && line[colonIndex + 1] === ' ' && colonIndex < 40) {
               const title = line.substring(0, colonIndex + 1);
@@ -646,6 +666,21 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
             <div className="flex-1 w-full">
               <img src={getImage3()} alt={whenWhereSection.title || "Section 3"} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />
             </div>
+          </div>
+        )}
+
+        {otherSections.length > 0 && (
+          <div className="flex flex-col gap-12 mt-8">
+            {otherSections.map((section, idx) => (
+              <div key={idx} className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+                <div className="flex-1 w-full space-y-4">
+                  <h4 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg border-b border-zinc-200 pb-2">
+                    {section.title}
+                  </h4>
+                  {renderSectionContent(section)}
+                </div>
+              </div>
+            ))}
           </div>
         )}
       </div>

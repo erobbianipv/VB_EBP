@@ -108,7 +108,10 @@ Target audience
 Our Academy’s programs are strategically designed to cater to a broad demographic of youth athletes, specifically targeting individuals between the ages of 5 and 19. To ensure optimal developmental alignment and adherence to our safety and coaching standards, enrollment is exclusively open to participants born no later than the year 2020.
 
 When and where
-Our programs operate on a year-round basis at our premier Varese campus, conveniently located in Via Pirandello. This full-calendar schedule ensures consistent athletic development within a professional environment.`
+Our programs operate on a year-round basis at our premier Varese campus, conveniently located in Via Pirandello. This full-calendar schedule ensures consistent athletic development within a professional environment.
+
+pricing
+Please contact us or click here for detailed pricing information tailored to your specific needs.`
   },
   {
     id: "full-time",
@@ -128,25 +131,8 @@ We prioritize athletes no older than 15 upon entry to facilitate the acquisition
 when and where
 Our premium facilities—including the Foresteria Elite Housing and the via Pirandello Campus—are strategically located within a 5-minute walk of each other. This integrated layout optimizes daily transitions for the duration of the program, which runs from late August through late June, allowing athletes to focus entirely on their rigorous training schedule.
 
-World-Class Training & Sports Science
-Our methodology is backed by research and proven success, focusing on the continuous improvement of every individual. The training program covers:
-On-Court Fundamentals: Shooting, playmaking, dribbling, and finishing.
-Physical Excellence: Strength development, power, speed, agility, and stamina.
-Injury Management: Specialized treatment, recovery, and rehabilitation protocols.
-Cutting-Edge Technology: We utilize Sports Science tools (Catapult, Pushband, Inertial) and Big Data analytics to monitor performance.
-Leadership: Mental conditioning and leadership skills to prepare players for the pressure of professional sports.
-
-Data-Driven Personalization
-Through our Research & Analytics Department, we track every practice session to generate detailed reports. We use this data for:
-Teaching: Periodic analysis sessions where players engage with their own data.
-Personalization: Tailored practice plans designed by coaching staff based on individual insights.
-Feedback: Weekly performance evaluations shared with leadership to ensure constant progress.
-
-Premium Living & Academic Success
-We provide a "home away from home" located just a 5-minute walk from our training center and major schools:
-The Dormitory: Features 14 well-appointed rooms, a spacious dining room for 20 guests, a living area, and private gardens.
-Dedicated Staff: A professional chef prepares daily meals, and weekly cleaning services are provided.
-Educational Flexibility: We offer access to Public Schools, Private International Schools (European School, Liceo Vico), and Online Partnerships (EDMENTUM, TPT International) to guarantee the perfect balance between study and sport.`
+pricing
+Please contact us or click here for detailed pricing information tailored to your specific needs.`
   },
   {
     id: "summer-camp",
@@ -171,23 +157,8 @@ Sample Daily Routine
 15:00 – 18:00 | Afternoon Technical Drill & Scrimmage
 19:30 – 20:30 | Dinner Service
 
-Academic Excellence & Living Standards
-Education is a pillar of our program. We offer various paths to ensure athletes never have to choose between their studies and their sport:
-
-Flexible Schooling: Options include local public schools, private international schools (European School, Liceo Vico), and certified online partnerships (EDMENTUM, TPT International).
-
-Luxury Dormitory: Our newly constructed housing features 14 well-appointed rooms, a spacious dining area for 20 guests, a dedicated laundry room, and two private gardens.
-
-Professional Care: A dedicated chef and weekly cleaning services are provided to ensure a high-standard living environment.
-
-Learn from the Best: Our Elite Team
-Your development is guided by professionals with extensive experience at the highest levels of international basketball:
-
-Matteo Jemoli: Assistant Coach, Pallacanestro Varese.
-
-Marcelo Lopez: Strength & Conditioning Coach, former S&C Coach for the Argentina National Team.
-
-Davide Zonca: Trainer/Physio with 8 years of experience in Serie A.`
+pricing
+Please contact us or click here for detailed pricing information tailored to your specific needs.`
   },
   {
     id: "internship",
@@ -215,17 +186,8 @@ Youth Development: Contribute to the future of the sport by assisting the coachi
 when and where
 The program will be hosted across our premier facilities, specifically the Foresteria Elite Housing and our Campus in via Pirandello. These two flagship locations are strategically situated just a 5-minute walk from one another, ensuring seamless transitions between residency and training. This integrated logistical setup allows athletes to maximize their time and focus entirely on their professional development.
 
-A Comprehensive "All-Inclusive" Package
-We take care of the logistics so you can focus entirely on your professional growth. Our all-inclusive offer for interns includes:
-
-Premium Housing: A private, single room in our newly renovated (2024) dormitory, located just a 5-minute walk from the training facilities.
-
-Elite Nutrition: Daily meals (lunch and dinner) freshly prepared by Italian chefs, featuring sports nutrition-driven menus.
-
-Networking: An exceptional opportunity to expand your professional network within the international basketball community.
-
-The Ultimate Resume Builder
-The goal of this internship is to transform your coaching acumen. By completing this program, you will acquire practical skills from an esteemed coaching staff and enhance your resume with a prestigious experience that will set you apart from other candidates in the global basketball market.`
+pricing
+Please contact us or click here for detailed pricing information tailored to your specific needs.`
   },
   {
     id: "summer-prog",
@@ -245,8 +207,8 @@ Our facilities and programs are specifically designed to host Youth National Tea
 when and where
 Experience elite 400 sqm accommodations with private gardens, located just five minutes from the arena. The camp requires a minimum stay of 1 week (7 days, 6 nights), tailored to your team’s specific needs and availability. To ensure total relaxation, we manage all logistics: two 9-seat vans provide seamless airport transfers for both arrival and departure. This setup offers the perfect balance of privacy and community for a stress-free, professional training experience.
 
-Strategic Location & Italian Culture
-Varese’s strategic position offers a unique opportunity to combine elite basketball with world-class travel experiences. When the team is off the court, you can take advantage of our tailored tourist packages designed to showcase the beauty of Northern Italy. Within a short 40-minute drive, your team can explore the vibrant streets of Milan, the breathtaking shores of Lake Como and Lake Maggiore, or the scenic landscapes of Lugano, Switzerland. These excursions are perfect for team-building and creating lasting memories, making your training residency in Varese a truly unforgettable international experience.`,
+pricing
+Please contact us or click here for detailed pricing information tailored to your specific needs.`,
     successStoryLink: "https://www.instagram.com/reel/C87rC5aI2Xz/"
   }
 ];
