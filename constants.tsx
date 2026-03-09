@@ -193,10 +193,10 @@ Please contact us or click here for detailed pricing information tailored to you
   },
   {
     id: "summer-prog",
-    title: "SUMMER ELITE PROGRAM",
+    title: "SUMMER PROGRAM",
     target: "International Clubs and Academies",
     timing: "July",
-    description: "Short-term high-intensity training cycles designed for international clubs and academies during the off-season. Pallacanestro Varese invites your team to experience the Summer Elite Program, a premium residency designed for Youth National Teams (U14 to U18), Junior Programs, and professional Senior clubs. This program is more than just a training camp; it is a high-performance ecosystem where athletes can immerse themselves in the game.",
+    description: "Short-term high-intensity training cycles designed for international clubs and academies during the off-season. Pallacanestro Varese invites your team to experience the Summer Program, a premium residency designed for Youth National Teams (U14 to U18), Junior Programs, and professional Senior clubs. This program is more than just a training camp; it is a high-performance ecosystem where athletes can immerse themselves in the game.",
     highlights: ["Intensity Training", "Elite Competition", "Skill Development"],
     image: "https://i.imgur.com/K09B4ge.png",
     detailImage: "https://i.imgur.com/C9Jvhwq.jpeg",

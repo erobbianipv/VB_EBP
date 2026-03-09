@@ -141,6 +141,18 @@ const TRANSLATIONS = {
     u17Championship: "Campionato italiano Under-17",
     u15Championship: "Campionato italiano Under-15",
     joinTheGame: "Join The Game",
+    // FAQ
+    faqTitle: "Domande Frequenti",
+    faq1Question: "Cos'è l'Elite Basketball Program?",
+    faq1Answer: "L'Elite Basketball Program (EBP) è un ecosistema completo progettato dalla Pallacanestro Varese per formare la prossima generazione di talenti del basket, offrendo allenamenti di alto livello, infrastrutture professionali e percorsi accademici.",
+    faq2Question: "Dove si trova il Campus?",
+    faq2Answer: "Il Campus si trova in Via Pirandello a Varese, a 10 minuti a piedi dalla Foresteria e a soli 5 minuti dall'Itelyum Arena, casa della Pallacanestro Varese. Tutte le nostre strutture sono perfettamente interconnesse tra loro.",
+    faq3Question: "Come posso iscrivermi a un programma?",
+    faq3Answer: "Puoi iscriverti a qualsiasi nostro programma cliccando su 'Acquista ora' in questo sito o visitando il seguente link: https://store.pallacanestrovarese.it/collections/elite-programs",
+    faq4Question: "Come posso raggiungere Varese?",
+    faq4Answer: "Il Campus si trova in Via Pirandello a Varese, a 10 minuti a piedi dalla Foresteria e a soli 5 minuti dall'Itelyum Arena, casa della Pallacanestro Varese. Raggiungerci è estremamente comodo poiché tutte le nostre strutture sono perfettamente interconnesse e ben servite dai mezzi pubblici. Se arrivi in aereo, Milano Malpensa (MXP) è l'hub più vicino, situato a soli 30 minuti e collegato direttamente a Varese tramite la linea ferroviaria S50. Per chi viaggia in treno da Milano, frequenti servizi diretti partono dalle stazioni di Milano Centrale, Porta Garibaldi e Cadorna, con tempi di percorrenza medi di 50-60 minuti. Che tu arrivi dall'aeroporto o dal centro città, l'ultimo tratto verso il Campus è rapido e semplice.",
+    faq5Question: "Come posso richiedere maggiori informazioni?",
+    faq5Answer: "Puoi richiedere informazioni compilando il modulo presente in ogni sezione del sito cliccando su 'Richiedi Info' o contattandoci direttamente via email all'indirizzo f.bellotto@pallacanestrovarese.it.",
   },
   en: {
     back: "Back",
@@ -259,6 +271,18 @@ const TRANSLATIONS = {
     u17Championship: "Italian U-17 Championship",
     u15Championship: "Italian U-15 Championship",
     joinTheGame: "Join The Game",
+    // FAQ
+    faqTitle: "Frequently Asked Questions",
+    faq1Question: "What is the Elite Basketball Program?",
+    faq1Answer: "The Elite Basketball Program (EBP) is a comprehensive ecosystem designed by Pallacanestro Varese to train the next generation of basketball talent, offering high-level training, professional infrastructure, and academic paths.",
+    faq2Question: "Where is the Campus located?",
+    faq2Answer: "The Campus is situated on Via Pirandello in Varese, within a 10-minute walk of the Foresteria and just 5 minutes from the Itelyum Arena, home of Pallacanestro Varese. All our facilities are seamlessly interconnected.",
+    faq3Question: "how can I apply for a program?",
+    faq3Answer: "You can apply for any of our program by clicking \"buy now\" in this website or by visiting the following link: https://store.pallacanestrovarese.it/collections/elite-programs",
+    faq4Question: "how do i get to varese?",
+    faq4Answer: "The Campus is situated on Via Pirandello in Varese, a 10-minute walk from the guesthouse and just 5 minutes from the Itelyum Arena, home of Pallacanestro Varese. Reaching us is highly convenient as all our facilities are seamlessly interconnected and well-served by public transport. If you are arriving by air, Milan Malpensa (MXP) is the closest hub, located only 30 minutes away and connected directly to Varese via the S50 train line. For those traveling by rail from Milan, frequent direct services depart from Milano Centrale, Porta Garibaldi, and Cadorna stations, with travel times averaging 50–60 minutes. Whether you are arriving from the airport or the city center, the final stretch to the Campus is quick and straightforward.",
+    faq5Question: "How can I request more information?",
+    faq5Answer: "You can request information by filling out the form in any section of the site by clicking 'Request Info' or by contacting us directly via email at f.bellotto@pallacanestrovarese.it.",
   },
   es: {
     back: "Volver",
@@ -1184,6 +1208,83 @@ const App: React.FC = () => {
     );
   };
 
+  const FAQSection = () => {
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+    const faqs = [
+      { q: t('faq1Question'), a: t('faq1Answer') },
+      { q: t('faq2Question'), a: t('faq2Answer') },
+      { q: t('faq3Question'), a: t('faq3Answer') },
+      { q: t('faq4Question'), a: t('faq4Answer') },
+      { q: t('faq5Question'), a: t('faq5Answer') },
+    ];
+
+    const renderAnswer = (text: string) => {
+      const urlRegex = /(https?:\/\/[^\s]+)/g;
+      const parts = text.split(urlRegex);
+      return parts.map((part, i) => {
+        if (part.match(urlRegex)) {
+          return (
+            <a 
+              key={i} 
+              href={part} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-red-varese hover:underline break-all"
+            >
+              {part}
+            </a>
+          );
+        }
+        return part;
+      });
+    };
+
+    return (
+      <section id="faq" className="py-24 bg-zinc-950 scroll-mt-24 relative overflow-hidden">
+        {/* Modern Decors */}
+        <div className="absolute top-0 left-0 w-64 h-64 bg-red-varese/5 rounded-full -ml-32 -mt-32 blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-red-varese/5 rounded-full -mr-48 -mb-48 blur-3xl"></div>
+        
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <p className="text-red-varese font-bold uppercase tracking-[0.3em] text-xs mb-4">FAQ</p>
+            <h2 className="font-oswald text-4xl md:text-6xl font-bold uppercase mb-4">{t('faqTitle')}</h2>
+            <div className="w-20 h-1.5 bg-red-varese mx-auto rounded-full"></div>
+          </div>
+
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <div 
+                key={index} 
+                className="bg-zinc-900/50 border border-white/10 rounded-xl overflow-hidden transition-all duration-300 hover:border-red-varese/30"
+              >
+                <button
+                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                  className="w-full flex justify-between items-center p-6 text-left group"
+                >
+                  <span className={`font-oswald text-lg md:text-xl uppercase transition-colors ${openIndex === index ? 'text-red-varese' : 'text-white group-hover:text-red-varese/80'}`}>
+                    {faq.q}
+                  </span>
+                  <div className={`transition-transform duration-300 ${openIndex === index ? 'rotate-180 text-red-varese' : 'text-gray-500'}`}>
+                    <ChevronDown size={24} />
+                  </div>
+                </button>
+                <div 
+                  className={`transition-all duration-500 ease-in-out ${openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
+                >
+                  <div className="px-6 pb-6 text-gray-400 leading-relaxed border-t border-white/5 pt-4">
+                    {renderAnswer(faq.a)}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  };
+
     const ProgramsGrid = () => (
     <div className="flex flex-wrap justify-center gap-3 md:gap-10">
       {PROGRAMS.map((prog) => (
@@ -1207,17 +1308,32 @@ const App: React.FC = () => {
                 </div>
               ))}
             </div>
-             <div className="mt-auto pt-2 md:pt-4 flex flex-col gap-2 sm:flex-row sm:gap-4">
+             <div className="mt-auto pt-2 md:pt-4 flex flex-col gap-2 sm:flex-row sm:gap-2">
                 <button 
                   onClick={() => {
                     setSelectedProgram(prog);
                     setPreviousView(view);
                     setView('programDetail');
                   }}
-                  className="flex-1 bg-white text-black hover:bg-red-varese hover:text-white py-2 md:py-3 rounded font-bold uppercase tracking-widest text-[8px] md:text-xs transition-all"
+                  className="flex-1 bg-white/10 text-white hover:bg-white hover:text-black py-2 md:py-3 rounded font-bold uppercase tracking-widest text-[8px] md:text-xs transition-all"
                 >
                   {t('findOutMore')}
                 </button>
+                <a
+                  href={
+                    prog.id === 'academy' ? "https://store.pallacanestrovarese.it/products/basketball-academy" :
+                    prog.id === 'full-time' ? "https://store.pallacanestrovarese.it/products/basketball-academy-copia?variant=52624907436298" :
+                    prog.id === 'summer-camp' ? "https://store.pallacanestrovarese.it/products/elite-summer-camp?variant=52625081630986" :
+                    prog.id === 'internship' ? "https://store.pallacanestrovarese.it/products/coaches-internship-program?variant=52625121313034" :
+                    prog.id === 'summer-prog' ? "https://store.pallacanestrovarese.it/products/summer-elite-program?variant=52625241800970" :
+                    "https://store.pallacanestrovarese.it/collections/elite-programs"
+                  }
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 bg-red-varese text-white hover:bg-red-700 py-2 md:py-3 rounded font-bold uppercase tracking-widest text-[8px] md:text-xs transition-all text-center"
+                >
+                  {t('buyNow')}
+                </a>
              </div>
           </div>
         </div>
@@ -1345,15 +1461,19 @@ const App: React.FC = () => {
                   aria-expanded={openProgramId === program.id}
                   aria-controls={`program-details-${program.id}`}
                 >
-                  <h2 className={`font-oswald text-xl md:text-2xl uppercase transition-colors ${openProgramId === program.id ? 'text-red-varese' : ''}`}>{program.title}</h2>
-                  {openProgramId === program.id ? <ChevronUp className="text-red-varese" /> : <ChevronDown />}
+                  <h2 className={`font-oswald text-2xl md:text-3xl font-bold uppercase tracking-tight transition-all duration-300 ${openProgramId === program.id ? 'text-red-varese scale-105 origin-left' : 'text-white hover:text-red-varese/80'}`}>{program.title}</h2>
+                  {openProgramId === program.id ? <ChevronUp className="text-red-varese scale-125 transition-transform" /> : <ChevronDown className="hover:text-red-varese transition-colors" />}
                 </button>
                 {openProgramId === program.id && (
                   <div 
                     id={`program-details-${program.id}`}
-                    className="px-4 md:px-6 pb-6 animate-in fade-in duration-500"
+                    className="px-4 md:px-6 pb-6 animate-in fade-in duration-500 relative overflow-hidden"
                   >
-                    <div className="border-t border-white/10 pt-4">
+                    {/* Modern Decors */}
+                    <div className="absolute top-1/2 right-0 w-32 h-32 bg-red-varese/5 rounded-full -mr-16 -translate-y-1/2 pointer-events-none"></div>
+                    <div className="absolute bottom-4 left-4 text-[40px] font-black text-red-varese/5 select-none pointer-events-none">EBP</div>
+                    
+                    <div className="border-t border-white/10 pt-4 relative z-10">
                       <div className="grid grid-cols-2 md:grid-cols-2 gap-x-4 md:gap-x-8 gap-y-2 md:gap-y-4 mb-4 md:mb-6">
                         <div>
                           <p className="text-red-varese text-[10px] md:text-xs font-bold uppercase tracking-widest mb-0.5 md:mb-1">Target</p>
@@ -1366,7 +1486,7 @@ const App: React.FC = () => {
                       </div>
                       <img src={program.detailImage || program.image} alt={program.title} className="w-full aspect-video object-cover rounded-lg my-6" />
                       <div className="mb-6"><FormattedText text={program.details} /></div>
-                      <h4 className="text-white font-oswald uppercase tracking-wider mb-3">Key Highlights</h4>
+                      <h4 className="text-white font-oswald text-lg md:text-xl font-bold uppercase tracking-widest mb-4 border-b border-red-varese/30 pb-2 inline-block">Key Highlights</h4>
                       <div className="grid grid-cols-2 sm:grid-cols-2 gap-x-3 md:gap-x-6 gap-y-1.5 md:gap-y-2">
                         {program.highlights.map((h, i) => (
                           <div key={i} className="flex items-center gap-2 md:gap-3">
@@ -1428,24 +1548,24 @@ const App: React.FC = () => {
     
           {/* Info Boxes Section */}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 md:-mt-16 relative z-20 mb-8 md:mb-12">
-            <div className="grid grid-cols-2 md:flex md:flex-wrap justify-center gap-3 md:gap-8 animate-in slide-in-from-bottom-4 duration-700 delay-300">
-              <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-3 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
-                <span className="text-red-varese text-[8px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">Target Audience</span>
-                <span className="text-black text-[10px] md:text-base font-medium leading-tight block">{program.target}</span>
+            <div className="grid grid-cols-4 justify-center gap-2 md:gap-8 animate-in slide-in-from-bottom-4 duration-700 delay-300">
+              <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-1 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
+                <span className="text-red-varese text-[7px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">Target Audience</span>
+                <span className="text-black text-[8px] md:text-base font-medium leading-tight block">{program.target}</span>
               </div>
-              <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-3 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
-                <span className="text-red-varese text-[8px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">When</span>
-                <span className="text-black text-[10px] md:text-base font-medium leading-tight block">{program.timing}</span>
+              <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-1 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
+                <span className="text-red-varese text-[7px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">When</span>
+                <span className="text-black text-[8px] md:text-base font-medium leading-tight block">{program.timing}</span>
               </div>
-              <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-3 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
-                <span className="text-red-varese text-[8px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">Where</span>
-                <span className="text-black text-[10px] md:text-base font-medium leading-tight block">
+              <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-1 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
+                <span className="text-red-varese text-[7px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">Where</span>
+                <span className="text-black text-[8px] md:text-base font-medium leading-tight block">
                   {program.id === 'academy' ? 'Campus, Varese' : 'Foresteria & Campus'}
                 </span>
               </div>
-              <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-3 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
-                <span className="text-red-varese text-[8px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">Deadline</span>
-                <span className="text-black text-[10px] md:text-base font-medium leading-tight block">Open</span>
+              <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-1 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
+                <span className="text-red-varese text-[7px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">Subscription Deadline</span>
+                <span className="text-black text-[8px] md:text-base font-medium leading-tight block"></span>
               </div>
             </div>
           </div>
@@ -1455,12 +1575,30 @@ const App: React.FC = () => {
             <div className="grid lg:grid-cols-3 gap-12">
               {/* Main Content */}
               <div className="lg:col-span-2 h-full">
-                <div className="bg-white border border-zinc-200 p-8 md:p-12 rounded-2xl shadow-xl shadow-zinc-200/50 h-full flex flex-col items-center justify-center text-center">
-                  <h2 className="font-oswald text-2xl md:text-4xl font-bold uppercase mb-8 text-red-varese flex flex-col items-center gap-4">
+                <div className="bg-white border border-zinc-200 p-8 md:p-12 rounded-2xl shadow-xl shadow-zinc-200/50 h-full flex flex-col items-center justify-center text-center relative overflow-hidden group">
+                  {/* Modern Decors */}
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-red-varese/5 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-110 duration-700"></div>
+                  <div className="absolute bottom-0 left-0 w-24 h-24 border-2 border-red-varese/10 rounded-full -ml-12 -mb-12 transition-transform group-hover:scale-125 duration-700"></div>
+                  <div className="absolute top-1/2 left-4 w-1 h-12 bg-red-varese/20 rounded-full -translate-y-1/2"></div>
+                  <div className="absolute top-1/2 right-4 w-1 h-12 bg-red-varese/20 rounded-full -translate-y-1/2"></div>
+                  <div className="absolute top-4 left-4 text-[40px] font-black text-red-varese/5 select-none pointer-events-none">EBP</div>
+                  <div className="absolute bottom-4 right-4 text-[40px] font-black text-red-varese/5 select-none pointer-events-none rotate-180">EBP</div>
+                  <div className="absolute top-8 left-8 opacity-5">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0H40V40H0V0Z" fill="url(#paint0_grid)" />
+                      <defs>
+                        <pattern id="paint0_grid" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+                          <path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" strokeWidth="0.5"/>
+                        </pattern>
+                      </defs>
+                    </svg>
+                  </div>
+
+                  <h2 className="font-oswald text-3xl md:text-5xl font-black uppercase mb-8 text-red-varese flex flex-col items-center gap-4 relative z-10 tracking-tighter">
                     Overview
-                    <div className="w-12 h-1 bg-red-varese"></div>
+                    <div className="w-20 h-1.5 bg-red-varese rounded-full"></div>
                   </h2>
-                  <div className="text-black text-base md:text-lg leading-relaxed space-y-6 font-light max-w-2xl">
+                  <div className="text-black text-base md:text-lg leading-relaxed space-y-6 font-light max-w-2xl relative z-10">
                     {(program.overview || program.description).split('\n').map((paragraph, idx) => (
                       <p key={idx}>{paragraph}</p>
                     ))}
@@ -1471,7 +1609,7 @@ const App: React.FC = () => {
               {/* Sidebar / Actions */}
               <div className="h-full">
                 <div className="bg-zinc-50 border border-zinc-200 p-8 rounded-2xl shadow-xl shadow-zinc-200/30 h-full flex flex-col">
-                  <h3 className="font-oswald text-xl md:text-2xl font-bold uppercase mb-8 text-red-varese tracking-tight">Key Highlights</h3>
+                  <h3 className="font-oswald text-2xl md:text-3xl font-black uppercase mb-8 text-red-varese tracking-tighter border-l-4 border-red-varese pl-4">Key Highlights</h3>
                   <div className="space-y-5 mb-10">
                     {program.highlights.map((h, i) => (
                       <div key={i} className="flex items-start gap-4 group">
@@ -1874,6 +2012,8 @@ const App: React.FC = () => {
               <ProgramsGrid />
             </div>
           </section>
+
+          <FAQSection />
         </>
       )}
       
@@ -2063,6 +2203,7 @@ const App: React.FC = () => {
                         <li><button onClick={() => navigateToHomeSection('leadership')} className="hover:text-white transition-colors uppercase tracking-widest">{t('footerLeadership')}</button></li>
                         <li><button onClick={() => navigateToHomeSection('facilities')} className="hover:text-white transition-colors uppercase tracking-widest">{t('footerFacilities')}</button></li>
                         <li><button onClick={() => setView('programs')} className="hover:text-white transition-colors uppercase tracking-widest">{t('footerPrograms')}</button></li>
+                        <li><button onClick={() => navigateToHomeSection('faq')} className="hover:text-white transition-colors uppercase tracking-widest">FAQ</button></li>
                     </ul>
                     </div>
                     <div>
