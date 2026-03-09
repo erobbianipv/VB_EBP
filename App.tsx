@@ -4,7 +4,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { CLUB_LOGO, ACHIEVEMENTS, STAFF, PROGRAMS, FACILITIES } from './constants';
 import { Program, Facility } from './types';
-import { Trophy, MapPin, Users, Home, GraduationCap, Calendar, ArrowRight, Menu, X, Instagram, Facebook, CheckCircle2, Send, Mail, Linkedin, Star, ChevronDown, ZoomIn, ChevronLeft, ChevronRight, ChevronUp, XCircle } from 'lucide-react';
+import { Trophy, MapPin, Users, Home, GraduationCap, Calendar, ArrowRight, Menu, X, Instagram, Facebook, CheckCircle2, Send, Mail, Linkedin, Star, ChevronDown, ZoomIn, ChevronLeft, ChevronRight, ChevronUp, XCircle, Target, Activity, Brain, BarChart, HeartPulse, Dumbbell } from 'lucide-react';
 
 type Language = 'it' | 'en' | 'es' | 'fr';
 type View = 'home' | 'programs' | 'palmares' | 'arena' | 'campus' | 'housing' | 'detailedPrograms' | 'programDetail';
@@ -590,27 +590,70 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
   const renderSectionContent = (section: { title: string | null, paragraphs: string[][] }) => {
     if (section.title === 'the training program') {
       return (
-        <div className="flex flex-col md:flex-row gap-6 items-stretch">
-          <div className="flex-[2] grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="bg-white border border-zinc-200 p-4 rounded-xl shadow-md text-center flex flex-col items-center justify-center min-h-[120px] gap-2">
-              <span className="text-red-varese font-bold uppercase tracking-wider text-xs">Individualized 1-on-1 training</span>
-              <p className="text-zinc-600 text-xs leading-relaxed">Tailored coaching sessions focused on refining your specific skills and addressing personal areas for improvement.</p>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 py-8 w-full">
+          {/* Left Column */}
+          <div className="flex flex-col gap-6 w-full md:w-1/3 order-2 md:order-1">
+            <div className="bg-white border border-zinc-200 p-5 rounded-xl shadow-md flex flex-col items-center md:items-end text-center md:text-right gap-2 hover:border-red-varese/50 transition-colors">
+              <div className="bg-red-varese/10 p-3 rounded-full text-red-varese mb-1">
+                <Target size={24} />
+              </div>
+              <h4 className="text-zinc-900 font-bold uppercase tracking-wider text-sm">Fundamentals</h4>
+              <p className="text-zinc-500 text-xs font-medium leading-relaxed tracking-wide">SHOOTING / PLAYMAKING / DRIBBLING / FINISHING</p>
             </div>
-            <div className="bg-white border border-zinc-200 p-4 rounded-xl shadow-md text-center flex flex-col items-center justify-center min-h-[120px] gap-2">
-              <span className="text-red-varese font-bold uppercase tracking-wider text-xs">Team practices and scrimmages</span>
-              <p className="text-zinc-600 text-xs leading-relaxed">High-intensity group drills and competitive 5v5 games to develop tactical awareness and team chemistry.</p>
+            
+            <div className="bg-white border border-zinc-200 p-5 rounded-xl shadow-md flex flex-col items-center md:items-end text-center md:text-right gap-2 hover:border-red-varese/50 transition-colors">
+              <div className="bg-red-varese/10 p-3 rounded-full text-red-varese mb-1">
+                <Activity size={24} />
+              </div>
+              <h4 className="text-zinc-900 font-bold uppercase tracking-wider text-sm">Sports Science</h4>
+              <p className="text-zinc-500 text-xs font-medium leading-relaxed tracking-wide">CATAPULT / PUSHBAND / INERTIAL</p>
             </div>
-            <div className="bg-white border border-zinc-200 p-4 rounded-xl shadow-md text-center flex flex-col items-center justify-center min-h-[120px] gap-2">
-              <span className="text-red-varese font-bold uppercase tracking-wider text-xs">Strength and performance training</span>
-              <p className="text-zinc-600 text-xs leading-relaxed">Comprehensive physical conditioning designed to enhance power, agility, and overall athletic endurance.</p>
-            </div>
-            <div className="bg-white border border-zinc-200 p-4 rounded-xl shadow-md text-center flex flex-col items-center justify-center min-h-[120px] gap-2">
-              <span className="text-red-varese font-bold uppercase tracking-wider text-xs">Personal performance analytics feedback throughout the week</span>
-              <p className="text-zinc-600 text-xs leading-relaxed">Data-driven insights and video analysis to track your progress and optimize your on-court decision making.</p>
+
+            <div className="bg-white border border-zinc-200 p-5 rounded-xl shadow-md flex flex-col items-center md:items-end text-center md:text-right gap-2 hover:border-red-varese/50 transition-colors">
+              <div className="bg-red-varese/10 p-3 rounded-full text-red-varese mb-1">
+                <Brain size={24} />
+              </div>
+              <h4 className="text-zinc-900 font-bold uppercase tracking-wider text-sm">Basketball Leadership</h4>
+              <p className="text-zinc-500 text-xs font-medium leading-relaxed tracking-wide">LEADERSHIP SKILLS / MENTAL CONDITIONING</p>
             </div>
           </div>
-          <div className="flex-1 flex items-center justify-center">
-            <img src="https://i.imgur.com/lbarQsF.jpeg" alt="The Training Program" className="w-full h-full max-h-[250px] md:max-h-none rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />
+
+          {/* Center Image */}
+          <div className="w-full md:w-1/3 flex justify-center order-1 md:order-2 relative">
+            <div className="absolute inset-0 bg-red-varese/5 rounded-full blur-3xl -z-10 transform scale-150"></div>
+            <img 
+              src="https://i.imgur.com/RlAHFhI.png" 
+              alt="Basketball Player Silhouette" 
+              className="max-h-[400px] md:max-h-[500px] object-contain mix-blend-multiply" 
+              referrerPolicy="no-referrer"
+            />
+          </div>
+
+          {/* Right Column */}
+          <div className="flex flex-col gap-6 w-full md:w-1/3 order-3 md:order-3">
+            <div className="bg-white border border-zinc-200 p-5 rounded-xl shadow-md flex flex-col items-center md:items-start text-center md:text-left gap-2 hover:border-red-varese/50 transition-colors">
+              <div className="bg-red-varese/10 p-3 rounded-full text-red-varese mb-1">
+                <BarChart size={24} />
+              </div>
+              <h4 className="text-zinc-900 font-bold uppercase tracking-wider text-sm">Basketball Analysis</h4>
+              <p className="text-zinc-500 text-xs font-medium leading-relaxed tracking-wide">ADVANCED PERFORMANCE ANALYSIS / ADVANCED BOXSCORE / BIG DATA</p>
+            </div>
+
+            <div className="bg-white border border-zinc-200 p-5 rounded-xl shadow-md flex flex-col items-center md:items-start text-center md:text-left gap-2 hover:border-red-varese/50 transition-colors">
+              <div className="bg-red-varese/10 p-3 rounded-full text-red-varese mb-1">
+                <HeartPulse size={24} />
+              </div>
+              <h4 className="text-zinc-900 font-bold uppercase tracking-wider text-sm">Treatment/Recovery</h4>
+              <p className="text-zinc-500 text-xs font-medium leading-relaxed tracking-wide">INJURY PREVENTION / WORKLOAD MANAGEMENT / REHABILITATION</p>
+            </div>
+
+            <div className="bg-white border border-zinc-200 p-5 rounded-xl shadow-md flex flex-col items-center md:items-start text-center md:text-left gap-2 hover:border-red-varese/50 transition-colors">
+              <div className="bg-red-varese/10 p-3 rounded-full text-red-varese mb-1">
+                <Dumbbell size={24} />
+              </div>
+              <h4 className="text-zinc-900 font-bold uppercase tracking-wider text-sm">Strength & Conditioning</h4>
+              <p className="text-zinc-500 text-xs font-medium leading-relaxed tracking-wide">STRENGTH DEV / POWER / SPEED / AGILITY / STAMINA</p>
+            </div>
           </div>
         </div>
       );
@@ -1391,6 +1434,90 @@ const App: React.FC = () => {
                         </div>
                     ))}
                 </div>
+
+                {facility.id === 'arena' && (
+                  <div className="mt-12">
+                    <a 
+                      href="https://www.google.com/maps/place/Itelyum+Arena/@45.8359581,8.8001318,16z/data=!3m2!4b1!5s0x47867fb22c52188d:0x5848e1d0e0a51b2!4m6!3m5!1s0x47867fb22c0b8a7f:0xf4bebc3a4e59794f!8m2!3d45.8359581!4d8.8027067!16zL20vMGRya3Y3?entry=ttu&g_ep=EgoyMDI2MDMwNC4xIKXMDSoASAFQAw%3D%3D" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="block w-full rounded-xl overflow-hidden shadow-2xl hover:shadow-[0_0_30px_rgba(227,6,19,0.3)] transition-shadow relative group border border-white/10"
+                    >
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors z-10 flex items-center justify-center">
+                        <div className="bg-white text-red-varese px-6 py-3 rounded-full font-bold opacity-0 group-hover:opacity-100 transition-all shadow-xl transform translate-y-4 group-hover:translate-y-0 flex items-center gap-2">
+                          <MapPin size={18} />
+                          Open in Google Maps
+                        </div>
+                      </div>
+                      <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2784.502941320349!2d8.8001318!3d45.8359581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47867fb22c0b8a7f%3A0xf4bebc3a4e59794f!2sItelyum%20Arena!5e0!3m2!1sen!2sit!4v1709614800000!5m2!1sen!2sit" 
+                        width="100%" 
+                        height="400" 
+                        style={{ border: 0, pointerEvents: 'none' }} 
+                        allowFullScreen={false} 
+                        loading="lazy" 
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title="Itelyum Arena Map"
+                      ></iframe>
+                    </a>
+                  </div>
+                )}
+
+                {facility.id === 'campus' && (
+                  <div className="mt-12">
+                    <a 
+                      href="https://www.google.com/maps/place/Campus+Varese/@45.8386915,8.8002913,647m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47867f004a963285:0x68ef706dc0f95da5!8m2!3d45.8386915!4d8.8028662!16s%2Fg%2F11zj10k1dfentry=ttu&g_ep=EgoyMDI2MDMwNC4xIKXMDSoASAFQAw%3D%3D" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="block w-full rounded-xl overflow-hidden shadow-2xl hover:shadow-[0_0_30px_rgba(227,6,19,0.3)] transition-shadow relative group border border-white/10"
+                    >
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors z-10 flex items-center justify-center">
+                        <div className="bg-white text-red-varese px-6 py-3 rounded-full font-bold opacity-0 group-hover:opacity-100 transition-all shadow-xl transform translate-y-4 group-hover:translate-y-0 flex items-center gap-2">
+                          <MapPin size={18} />
+                          Open in Google Maps
+                        </div>
+                      </div>
+                      <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.568461763133!2d8.80029127664188!3d45.83869147107873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47867f004a963285%3A0x68ef706dc0f95da5!2sCampus%20Varese!5e0!3m2!1sen!2sit!4v1709614800000!5m2!1sen!2sit" 
+                        width="100%" 
+                        height="400" 
+                        style={{ border: 0, pointerEvents: 'none' }} 
+                        allowFullScreen={false} 
+                        loading="lazy" 
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title="Campus Varese Map"
+                      ></iframe>
+                    </a>
+                  </div>
+                )}
+
+                {facility.id === 'housing' && (
+                  <div className="mt-12">
+                    <a 
+                      href="https://www.google.com/maps/place/Seconda+Strada+Varese+-+Abbigliamento,+scarpe+e+accessori+moda/@45.8337006,8.7955912,647m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47867fad6f946d8b:0x84ecbc071b6f2b60!8m2!3d45.8337006!4d8.7981661!16s%2Fg%2F11c60jhr_w?entry=ttu&g_ep=EgoyMDI2MDMwNC4xIKXMDSoASAFQAw%3D%3D" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="block w-full rounded-xl overflow-hidden shadow-2xl hover:shadow-[0_0_30px_rgba(227,6,19,0.3)] transition-shadow relative group border border-white/10"
+                    >
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors z-10 flex items-center justify-center">
+                        <div className="bg-white text-red-varese px-6 py-3 rounded-full font-bold opacity-0 group-hover:opacity-100 transition-all shadow-xl transform translate-y-4 group-hover:translate-y-0 flex items-center gap-2">
+                          <MapPin size={18} />
+                          Open in Google Maps
+                        </div>
+                      </div>
+                      <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2784.819712038753!2d8.7955912!3d45.8337006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47867fad6f946d8b%3A0x84ecbc071b6f2b60!2sSeconda%20Strada%20Varese%20-%20Abbigliamento%2C%20scarpe%20e%20accessori%20moda!5e0!3m2!1sen!2sit!4v1709614800000!5m2!1sen!2sit" 
+                        width="100%" 
+                        height="400" 
+                        style={{ border: 0, pointerEvents: 'none' }} 
+                        allowFullScreen={false} 
+                        loading="lazy" 
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title="Elite Housing Map"
+                      ></iframe>
+                    </a>
+                  </div>
+                )}
 
                 {facility.secondaryGallery && (
                   <div className="mt-24">
