@@ -528,7 +528,8 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
     "The Ultimate Resume Builder",
     "pro-level program",
     "Strategic Location & Italian Culture",
-    "pricing"
+    "pricing",
+    "the training program"
   ];
 
   const blocks = text.split('\n\n').filter(block => block.trim() !== '');
@@ -562,10 +563,105 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
     return "#";
   };
 
-  const renderSectionContent = (section: { title: string | null, paragraphs: string[][] }) => (
-    <div className="space-y-4">
-      {section.paragraphs.map((paragraphLines, pIdx) => (
-        <div key={pIdx} className="space-y-2">
+  const renderSectionContent = (section: { title: string | null, paragraphs: string[][] }) => {
+    if (section.title === 'the training program') {
+      return (
+        <div className="flex flex-col md:flex-row gap-6 items-stretch">
+          <div className="flex-[2] grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="bg-white border border-zinc-200 p-4 rounded-xl shadow-md text-center flex flex-col items-center justify-center min-h-[120px] gap-2">
+              <span className="text-red-varese font-bold uppercase tracking-wider text-xs">Individualized 1-on-1 training</span>
+              <p className="text-zinc-600 text-xs leading-relaxed">Tailored coaching sessions focused on refining your specific skills and addressing personal areas for improvement.</p>
+            </div>
+            <div className="bg-white border border-zinc-200 p-4 rounded-xl shadow-md text-center flex flex-col items-center justify-center min-h-[120px] gap-2">
+              <span className="text-red-varese font-bold uppercase tracking-wider text-xs">Team practices and scrimmages</span>
+              <p className="text-zinc-600 text-xs leading-relaxed">High-intensity group drills and competitive 5v5 games to develop tactical awareness and team chemistry.</p>
+            </div>
+            <div className="bg-white border border-zinc-200 p-4 rounded-xl shadow-md text-center flex flex-col items-center justify-center min-h-[120px] gap-2">
+              <span className="text-red-varese font-bold uppercase tracking-wider text-xs">Strength and performance training</span>
+              <p className="text-zinc-600 text-xs leading-relaxed">Comprehensive physical conditioning designed to enhance power, agility, and overall athletic endurance.</p>
+            </div>
+            <div className="bg-white border border-zinc-200 p-4 rounded-xl shadow-md text-center flex flex-col items-center justify-center min-h-[120px] gap-2">
+              <span className="text-red-varese font-bold uppercase tracking-wider text-xs">Personal performance analytics feedback throughout the week</span>
+              <p className="text-zinc-600 text-xs leading-relaxed">Data-driven insights and video analysis to track your progress and optimize your on-court decision making.</p>
+            </div>
+          </div>
+          <div className="flex-1 flex items-center justify-center">
+            <img src="https://i.imgur.com/lbarQsF.jpeg" alt="The Training Program" className="w-full h-full max-h-[250px] md:max-h-none rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />
+          </div>
+        </div>
+      );
+    }
+
+    if (section.title === 'A Comprehensive Two-Way Approach') {
+      return (
+        <div className="flex flex-col items-center w-full pt-2 pb-6">
+          <div className="hidden md:block w-0.5 h-8 bg-red-varese/30 -mt-4 mb-0 z-0"></div>
+          <div className="relative w-full">
+            <div className="hidden md:block absolute top-0 left-[25%] right-[25%] h-0.5 bg-red-varese/30"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8 pt-0 md:pt-8">
+              <div className="relative flex flex-col items-center">
+                <div className="hidden md:block absolute top-0 -mt-8 left-1/2 -translate-x-1/2 w-0.5 h-8 bg-red-varese/30"></div>
+                <div className="bg-white border-2 border-red-varese/20 p-5 rounded-2xl shadow-lg w-full hover:border-red-varese/50 transition-all hover:shadow-xl group">
+                  <div className="flex items-center gap-2 mb-3 justify-center">
+                    <div className="w-2 h-2 rounded-full bg-red-varese"></div>
+                    <h5 className="text-red-varese font-oswald font-bold uppercase tracking-wider text-center">Grassroots Excellence</h5>
+                  </div>
+                  <p className="text-zinc-600 text-xs leading-relaxed text-center">
+                    We believe in basketball as a powerful tool for the community. Our program promotes an active, positive spirit, helping young athletes develop social skills and a healthy lifestyle.
+                  </p>
+                </div>
+              </div>
+              <div className="relative flex flex-col items-center">
+                <div className="hidden md:block absolute top-0 -mt-8 left-1/2 -translate-x-1/2 w-0.5 h-8 bg-red-varese/30"></div>
+                <div className="bg-white border-2 border-red-varese/20 p-5 rounded-2xl shadow-lg w-full hover:border-red-varese/50 transition-all hover:shadow-xl group">
+                  <div className="flex items-center gap-2 mb-3 justify-center">
+                    <div className="w-2 h-2 rounded-full bg-red-varese"></div>
+                    <h5 className="text-red-varese font-oswald font-bold uppercase tracking-wider text-center">Elite Player Development</h5>
+                  </div>
+                  <p className="text-zinc-600 text-xs leading-relaxed text-center">
+                    For those dreaming of the big leagues, we provide the ultimate pathway. By offering expert coaching, professional training programs, and access to high-quality facilities, we cultivate the basketball stars of tomorrow.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="mt-8 text-center bg-zinc-50 p-3 rounded-lg border border-zinc-100 w-full">
+             <p className="text-zinc-500 text-[10px] uppercase tracking-widest font-bold">Two Pillars • One Vision</p>
+          </div>
+        </div>
+      );
+    }
+
+    if (section.title === 'Elite Professional Integration') {
+      return (
+        <div className="space-y-6">
+          <p className="text-zinc-600">This is more than just a course; it is an immersion into the daily operations of a Serie A basketball team. As an intern, you will:</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="bg-white border border-zinc-200 p-4 rounded-xl shadow-md flex flex-col gap-2">
+              <span className="text-red-varese font-bold uppercase tracking-wider text-xs">Shadow the Pros</span>
+              <p className="text-zinc-600 text-xs leading-relaxed">Gain invaluable insights by observing and learning from our experienced coaching professionals during practices and games.</p>
+            </div>
+            <div className="bg-white border border-zinc-200 p-4 rounded-xl shadow-md flex flex-col gap-2">
+              <span className="text-red-varese font-bold uppercase tracking-wider text-xs">Active Court Participation</span>
+              <p className="text-zinc-600 text-xs leading-relaxed">Take a hands-on role by running drills with Serie A players and assisting with professional practices.</p>
+            </div>
+            <div className="bg-white border border-zinc-200 p-4 rounded-xl shadow-md flex flex-col gap-2">
+              <span className="text-red-varese font-bold uppercase tracking-wider text-xs">Strategic Development</span>
+              <p className="text-zinc-600 text-xs leading-relaxed">Attend coaches' meetings to understand the tactical and strategic decision-making processes at the highest level.</p>
+            </div>
+            <div className="bg-white border border-zinc-200 p-4 rounded-xl shadow-md flex flex-col gap-2">
+              <span className="text-red-varese font-bold uppercase tracking-wider text-xs">Youth Development</span>
+              <p className="text-zinc-600 text-xs leading-relaxed">Contribute to the future of the sport by assisting the coaching staff of our youth teams.</p>
+            </div>
+          </div>
+        </div>
+      );
+    }
+    
+    return (
+      <div className="space-y-4">
+        {section.paragraphs.map((paragraphLines, pIdx) => (
+          <div key={pIdx} className="space-y-2">
           {paragraphLines.map((line, lIdx) => {
             if (line.includes("Our programs operate on a year-round basis at our premier Varese campus")) {
               return (
@@ -625,6 +721,57 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
                 </div>
               );
             }
+            if (line.includes("TABLES_PLACEHOLDER")) {
+              return (
+                <div key={lIdx} className="mt-4 flex flex-col xl:flex-row gap-4 w-full">
+                  <div className="flex-1 bg-white p-4 rounded-xl shadow-sm border border-zinc-200">
+                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-1 text-lg text-center">Residential Camp</h5>
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-[10px] sm:text-xs text-left">
+                        <thead className="text-[10px] sm:text-xs text-zinc-500 uppercase bg-zinc-50">
+                          <tr>
+                            <th className="px-2 py-1.5 rounded-tl-lg">Time</th>
+                            <th className="px-2 py-1.5 rounded-tr-lg">Activity</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">07:30</td><td className="px-2 py-1.5">Wake Up & Breakfast</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">09:00</td><td className="px-2 py-1.5">Morning Practice</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">11:30</td><td className="px-2 py-1.5">Strength & Cond.</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">13:00</td><td className="px-2 py-1.5">Lunch & Rest</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">15:30</td><td className="px-2 py-1.5">Afternoon practice</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">18:00</td><td className="px-2 py-1.5">Free Time / Recovery</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">19:30</td><td className="px-2 py-1.5">Dinner</td></tr>
+                          <tr><td className="px-2 py-1.5 font-medium">21:30</td><td className="px-2 py-1.5">Lights Out</td></tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div className="flex-1 bg-white p-4 rounded-xl shadow-sm border border-zinc-200">
+                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-1 text-lg text-center">Day Camp</h5>
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-[10px] sm:text-xs text-left">
+                        <thead className="text-[10px] sm:text-xs text-zinc-500 uppercase bg-zinc-50">
+                          <tr>
+                            <th className="px-2 py-1.5 rounded-tl-lg">Time</th>
+                            <th className="px-2 py-1.5 rounded-tr-lg">Activity</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">08:30</td><td className="px-2 py-1.5">Arrival & Check-in</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">09:00</td><td className="px-2 py-1.5">Morning Practice</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">11:30</td><td className="px-2 py-1.5">Strength & Cond.</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">13:00</td><td className="px-2 py-1.5">Lunch & Rest</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">15:30</td><td className="px-2 py-1.5">Afternoon practice</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">18:00</td><td className="px-2 py-1.5">Free Time / Recovery</td></tr>
+                          <tr><td className="px-2 py-1.5 font-medium">18:30</td><td className="px-2 py-1.5">Pick-up</td></tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              );
+            }
             if (line.includes("click here")) {
               const parts = line.split("click here");
               return (
@@ -651,11 +798,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
       ))}
     </div>
   );
-
-  const mainSection = sections[0];
-  const targetSection = sections[1];
-  const whenWhereSection = sections[2];
-  const otherSections = sections.slice(3);
+  };
 
   const getImage1 = () => {
     if (programId === 'academy') return "https://i.imgur.com/pXDyBdM.jpeg";
@@ -685,62 +828,112 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
   return (
     <div className={`${className} text-sm leading-relaxed`}>
       <div className="flex flex-col gap-12">
-        {mainSection && (
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
-            <div className="flex-1 lg:flex-[1.5] space-y-4">
-              <h4 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg border-b border-zinc-200 pb-2">
-                {mainSection.title}
-              </h4>
-              {renderSectionContent(mainSection)}
-            </div>
-            <div className="flex-1 w-full">
-              <img src={getImage1()} alt={mainSection.title || "Section 1"} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />
-            </div>
-          </div>
-        )}
-        
-        {targetSection && (
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
-            <div className="flex-1 lg:flex-[1.5] w-full order-2 lg:order-1">
-              <img src={getImage2()} alt={targetSection.title || "Section 2"} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />
-            </div>
-            <div className="flex-1 space-y-4 order-1 lg:order-2">
-              <h4 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg border-b border-zinc-200 pb-2">
-                {targetSection.title}
-              </h4>
-              {renderSectionContent(targetSection)}
-            </div>
-          </div>
-        )}
+        {sections.map((section, idx) => {
+          let imageUrl = null;
+          let imagePosition = 'right';
+          
+          if (idx === 0) {
+            imageUrl = getImage1();
+            imagePosition = 'right';
+          } else if (idx === 1) {
+            imageUrl = getImage2();
+            imagePosition = 'left';
+          } else if (section.title === 'Sample Daily Routine') {
+            imageUrl = getImage3();
+            imagePosition = 'right';
+          } else if (idx === 2 && section.title !== 'the training program') {
+            imageUrl = getImage3();
+            imagePosition = 'right';
+          }
 
-        {whenWhereSection && (
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
-            <div className="flex-1 lg:flex-[1.5] space-y-4">
-              <h4 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg border-b border-zinc-200 pb-2">
-                {whenWhereSection.title}
-              </h4>
-              {renderSectionContent(whenWhereSection)}
-            </div>
-            <div className="flex-1 w-full">
-              <img src={getImage3()} alt={whenWhereSection.title || "Section 3"} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />
-            </div>
-          </div>
-        )}
-
-        {otherSections.length > 0 && (
-          <div className="flex flex-col gap-12 mt-8">
-            {otherSections.map((section, idx) => (
-              <div key={idx} className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
-                <div className="flex-1 w-full space-y-4">
-                  <h4 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg border-b border-zinc-200 pb-2">
+          return (
+            <div key={idx} className="flex flex-col">
+              <div className={`flex flex-col lg:flex-row gap-8 lg:gap-12 items-center ${idx > 0 ? 'mt-8' : ''}`}>
+                {imageUrl && imagePosition === 'left' && (
+                  <div className="flex-1 lg:flex-[1.5] w-full order-2 lg:order-1">
+                    <img src={imageUrl} alt={section.title || `Section ${idx + 1}`} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />
+                  </div>
+                )}
+                
+                <div className={`flex-1 ${imageUrl ? 'lg:flex-[1.5]' : 'w-full'} space-y-4 ${imageUrl && imagePosition === 'left' ? 'order-1 lg:order-2' : ''}`}>
+                  <h4 className={`font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg border-b border-zinc-200 pb-2 ${section.title === 'A Comprehensive Two-Way Approach' ? 'text-center' : ''}`}>
                     {section.title}
                   </h4>
                   {renderSectionContent(section)}
                 </div>
+
+                {imageUrl && imagePosition === 'right' && (
+                  <div className="flex-1 w-full">
+                    <img src={imageUrl} alt={section.title || `Section ${idx + 1}`} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />
+                  </div>
+                )}
               </div>
-            ))}
-          </div>
-        )}
+              
+              {programId === 'summer-camp' && section.title === 'Sample Daily Routine' && (
+                <div className="mt-12 flex flex-col md:flex-row gap-8 w-full">
+                  <div className="flex-1 bg-white p-6 rounded-xl shadow-md border border-zinc-200">
+                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-2 text-xl text-center">Residential Camp</h5>
+                    <p className="text-center text-zinc-600 font-semibold mb-4 border-b border-zinc-200 pb-2 text-xl">€990</p>
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-sm text-left">
+                        <thead className="text-xs text-zinc-500 uppercase bg-zinc-50">
+                          <tr>
+                            <th className="px-4 py-3 rounded-t-lg">Included</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr className="border-b border-zinc-100"><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> private single room</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> shared common spaces</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> 3 meals a day</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> sports nutrition-driven menus</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> individualized 1-on-1 training</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> team practice</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> strength and performance training</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> personale performance analytics</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> elite coaching staff</td></tr>
+                          <tr><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> official camp gear</td></tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div className="mt-6 flex justify-center">
+                      <a href="https://store.pallacanestrovarese.it/products/elite-summer-camp" target="_blank" rel="noopener noreferrer" className="bg-red-varese hover:bg-red-700 text-white font-oswald uppercase tracking-wider py-3 px-8 rounded-full transition-colors font-bold shadow-md">
+                        Apply Now
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex-1 bg-white p-6 rounded-xl shadow-md border border-zinc-200">
+                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-2 text-xl text-center">Day Camp</h5>
+                    <p className="text-center text-zinc-600 font-semibold mb-4 border-b border-zinc-200 pb-2 text-xl">€690</p>
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-sm text-left">
+                        <thead className="text-xs text-zinc-500 uppercase bg-zinc-50">
+                          <tr>
+                            <th className="px-4 py-3 rounded-t-lg">Included</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr className="border-b border-zinc-100"><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> lunch</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> sports nutrition-driven menus</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> individualized 1-on-1 training</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> team practice</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> strength and performance training</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> personal performance analytics</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> elite coaching staff</td></tr>
+                          <tr><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> official camp gear</td></tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div className="mt-6 flex justify-center">
+                      <a href="https://store.pallacanestrovarese.it/products/elite-summer-camp" target="_blank" rel="noopener noreferrer" className="bg-red-varese hover:bg-red-700 text-white font-oswald uppercase tracking-wider py-3 px-8 rounded-full transition-colors font-bold shadow-md">
+                        Apply Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
@@ -992,59 +1185,40 @@ const App: React.FC = () => {
   };
 
     const ProgramsGrid = () => (
-    <div className="flex flex-wrap justify-center gap-10">
+    <div className="flex flex-wrap justify-center gap-3 md:gap-10">
       {PROGRAMS.map((prog) => (
         <div 
           key={prog.id} 
-          className={`relative card-glass rounded-2xl overflow-hidden flex flex-col group transition-all duration-300 shadow-xl w-full md:w-[calc(50%-20px)] lg:w-[calc(33.333%-27px)] ${prog.id === 'full-time' ? 'border-red-varese' : 'hover:border-red-varese'}`}
+          className={`relative card-glass rounded-xl md:rounded-2xl overflow-hidden flex flex-col group transition-all duration-300 shadow-xl w-[calc(50%-6px)] md:w-[calc(50%-20px)] lg:w-[calc(33.333%-27px)] ${prog.id === 'full-time' ? 'border-red-varese' : 'hover:border-red-varese'}`}
         >
-          <div className="h-64 overflow-hidden relative">
+          <div className="h-32 sm:h-48 md:h-64 overflow-hidden relative">
             <img src={prog.image} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" alt={prog.title} />
-            <div className="absolute top-4 left-4 bg-red-varese text-white px-3 py-1 text-[10px] font-bold tracking-widest uppercase rounded">
+            <div className="absolute top-2 left-2 md:top-4 md:left-4 bg-red-varese text-white px-2 py-0.5 md:px-3 md:py-1 text-[8px] md:text-[10px] font-bold tracking-widest uppercase rounded">
               {prog.timing}
             </div>
           </div>
-          <div className="p-8 flex-grow flex flex-col">
-            <h3 className="font-oswald text-2xl font-bold uppercase mb-2 group-hover:text-red-varese transition-colors">{prog.title}</h3>
-            <p className="text-red-varese text-[10px] font-bold uppercase tracking-widest mb-4 flex-grow">{prog.target}</p>
-            <div className="space-y-3 mb-8">
+          <div className="p-3 sm:p-5 md:p-8 flex-grow flex flex-col">
+            <h3 className="font-oswald text-xs sm:text-lg md:text-2xl font-bold uppercase mb-1 md:mb-2 group-hover:text-red-varese transition-colors line-clamp-1">{prog.title}</h3>
+            <p className="text-red-varese text-[7px] sm:text-[10px] font-bold uppercase tracking-widest mb-2 md:mb-4 flex-grow line-clamp-1">{prog.target}</p>
+            <div className="space-y-1 md:space-y-3 mb-4 md:mb-8 hidden sm:block">
               {prog.highlights.map((h, i) => (
-                <div key={i} className="flex items-center gap-3 text-[11px] font-semibold text-gray-300 uppercase tracking-wider">
-                  <CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> {h}
+                <div key={i} className="flex items-center gap-2 md:gap-3 text-[9px] md:text-[11px] font-semibold text-gray-300 uppercase tracking-wider">
+                  <CheckCircle2 size={12} className="text-red-varese flex-shrink-0" /> {h}
                 </div>
               ))}
             </div>
-             <div className="mt-auto pt-4 flex flex-col-reverse sm:flex-row gap-4">
-                <button
-                    onClick={() => { 
-                      setPreviousView(view);
-                      setSelectedProgram(prog); 
-                      setView('programDetail'); 
-                    }}
-                    className="w-full sm:flex-1 border border-white/20 text-white py-3 font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-all text-xs rounded-sm"
+             <div className="mt-auto pt-2 md:pt-4 flex flex-col gap-2 sm:flex-row sm:gap-4">
+                <button 
+                  onClick={() => {
+                    setSelectedProgram(prog);
+                    setPreviousView(view);
+                    setView('programDetail');
+                  }}
+                  className="flex-1 bg-white text-black hover:bg-red-varese hover:text-white py-2 md:py-3 rounded font-bold uppercase tracking-widest text-[8px] md:text-xs transition-all"
                 >
-                    {t('moreInfo')}
+                  {t('findOutMore')}
                 </button>
-                {prog.id === 'basketball-academy' ? (
-                  <a
-                    href="https://store.pallacanestrovarese.it/products/basketball-academy"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full sm:flex-[2] bg-red-varese text-white py-4 font-bold uppercase tracking-wider hover:bg-red-700 transition-all text-sm rounded-sm text-center"
-                  >
-                    {t('buyNow')}
-                  </a>
-                ) : (
-                  <a
-                    href="https://store.pallacanestrovarese.it/collections/elite-programs"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full sm:flex-[2] bg-red-varese text-white py-4 font-bold uppercase tracking-wider hover:bg-red-700 transition-all text-sm rounded-sm text-center"
-                  >
-                    {t('buyNow')}
-                  </a>
-                )}
-            </div>
+             </div>
           </div>
         </div>
       ))}
@@ -1054,39 +1228,39 @@ const App: React.FC = () => {
   const FacilityPage = ({ facility, onBack, t }: { facility: Facility; onBack: () => void; t: (key: any) => string; }) => {
     const images = facility.galleryImages;
     const gridClass = images.length === 4 
-      ? 'grid-cols-1 md:grid-cols-2' 
-      : 'grid-cols-1 lg:grid-cols-3';
+      ? 'grid-cols-2 md:grid-cols-2' 
+      : 'grid-cols-2 lg:grid-cols-3';
 
     return (
-      <main className="fixed inset-0 z-[60] bg-black overflow-y-auto pt-20 animate-in fade-in duration-500">
+      <main className="fixed inset-0 z-[60] bg-black overflow-y-auto pt-12 md:pt-20 animate-in fade-in duration-500">
          <button 
             onClick={onBack} 
-            className="absolute top-24 left-4 sm:left-8 z-20 flex items-center justify-center bg-black/50 hover:bg-red-varese text-white w-12 h-12 rounded-full transition-colors"
+            className="absolute top-16 md:top-24 left-4 sm:left-8 z-20 flex items-center justify-center bg-black/50 hover:bg-red-varese text-white w-10 h-10 md:w-12 md:h-12 rounded-full transition-colors"
             aria-label={t('back')}
         >
-            <ArrowRight className="rotate-180" size={20} />
+            <ArrowRight className="rotate-180" size={16} md:size={20} />
         </button>
 
-        <section className="relative h-[50vh] min-h-[300px] flex items-center justify-center overflow-hidden">
+        <section className="relative h-[30vh] md:h-[50vh] min-h-[200px] md:min-h-[300px] flex items-center justify-center overflow-hidden">
             <div className="absolute inset-0 z-0">
                 <img src={facility.coverImage} className="w-full h-full object-cover opacity-50" alt={t(facility.titleKey as any)} />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
             </div>
             <div className="relative z-10 text-center px-4">
-                <h1 className="font-oswald text-5xl md:text-8xl font-bold uppercase leading-none tracking-tighter mb-4">
+                <h1 className="font-oswald text-3xl md:text-8xl font-bold uppercase leading-none tracking-tighter mb-2 md:mb-4">
                     {t(facility.titleKey as any)}
                 </h1>
-                <p className="text-lg md:text-xl text-gray-300 font-light max-w-2xl mx-auto uppercase tracking-widest">
+                <p className="text-xs md:text-xl text-gray-300 font-light max-w-2xl mx-auto uppercase tracking-widest leading-tight">
                     {t(facility.descriptionKey as any)}
                 </p>
             </div>
         </section>
         
-        <section className="py-24">
+        <section className="py-12 md:py-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {facility.galleryDescriptionKey && (
-                    <div className="mb-16 p-8 bg-zinc-900 border border-white/10 rounded-lg max-w-5xl mx-auto">
-                        <p className="text-gray-300 text-center text-lg font-light leading-relaxed">{t(facility.galleryDescriptionKey as any)}</p>
+                    <div className="mb-8 md:mb-16 p-4 md:p-8 bg-zinc-900 border border-white/10 rounded-lg max-w-5xl mx-auto">
+                        <p className="text-gray-300 text-center text-sm md:text-lg font-light leading-relaxed">{t(facility.galleryDescriptionKey as any)}</p>
                     </div>
                 )}
                 
@@ -1180,24 +1354,24 @@ const App: React.FC = () => {
                     className="px-4 md:px-6 pb-6 animate-in fade-in duration-500"
                   >
                     <div className="border-t border-white/10 pt-4">
-                      <div className="grid md:grid-cols-2 gap-x-8 gap-y-4 mb-6">
+                      <div className="grid grid-cols-2 md:grid-cols-2 gap-x-4 md:gap-x-8 gap-y-2 md:gap-y-4 mb-4 md:mb-6">
                         <div>
-                          <p className="text-red-varese text-xs font-bold uppercase tracking-widest mb-1">Target</p>
-                          <p className="text-gray-300">{program.target}</p>
+                          <p className="text-red-varese text-[10px] md:text-xs font-bold uppercase tracking-widest mb-0.5 md:mb-1">Target</p>
+                          <p className="text-gray-300 text-[10px] md:text-base leading-tight">{program.target}</p>
                         </div>
                         <div>
-                          <p className="text-red-varese text-xs font-bold uppercase tracking-widest mb-1">Timing</p>
-                          <p className="text-gray-300">{program.timing}</p>
+                          <p className="text-red-varese text-[10px] md:text-xs font-bold uppercase tracking-widest mb-0.5 md:mb-1">Timing</p>
+                          <p className="text-gray-300 text-[10px] md:text-base leading-tight">{program.timing}</p>
                         </div>
                       </div>
                       <img src={program.detailImage || program.image} alt={program.title} className="w-full aspect-video object-cover rounded-lg my-6" />
                       <div className="mb-6"><FormattedText text={program.details} /></div>
                       <h4 className="text-white font-oswald uppercase tracking-wider mb-3">Key Highlights</h4>
-                      <div className="grid sm:grid-cols-2 gap-x-6 gap-y-2">
+                      <div className="grid grid-cols-2 sm:grid-cols-2 gap-x-3 md:gap-x-6 gap-y-1.5 md:gap-y-2">
                         {program.highlights.map((h, i) => (
-                          <div key={i} className="flex items-center gap-3">
-                            <CheckCircle2 size={16} className="text-red-varese flex-shrink-0" />
-                            <span className="text-gray-300 text-sm">{h}</span>
+                          <div key={i} className="flex items-center gap-2 md:gap-3">
+                            <CheckCircle2 size={12} md:size={16} className="text-red-varese flex-shrink-0" />
+                            <span className="text-gray-300 text-[10px] md:text-sm leading-tight">{h}</span>
                           </div>
                         ))}
                       </div>
@@ -1248,37 +1422,36 @@ const App: React.FC = () => {
                 <h1 className="font-oswald text-4xl md:text-8xl font-bold uppercase leading-[0.85] tracking-tighter text-black mb-6 animate-in slide-in-from-bottom-8 duration-700 delay-100">
                   {program.title}
                 </h1>
-                <div className="flex flex-wrap gap-4 items-center justify-center animate-in slide-in-from-bottom-4 duration-700 delay-200">
-                  <span className="bg-red-varese text-white px-4 py-1.5 text-[10px] md:text-xs font-bold uppercase tracking-widest rounded-sm">{program.timing}</span>
-                  <div className="h-4 w-px bg-zinc-300 hidden md:block"></div>
-                  <span className="text-black uppercase tracking-[0.15em] text-[10px] md:text-xs font-bold">{program.target}</span>
-                </div>
-                
-                <div className="flex flex-wrap justify-center gap-4 md:gap-8 mt-8 animate-in slide-in-from-bottom-4 duration-700 delay-300">
-                  <div className="bg-white/80 backdrop-blur-sm border border-zinc-200 px-6 py-4 md:px-8 md:py-6 rounded-xl shadow-md min-w-[150px] md:min-w-[200px]">
-                    <span className="text-red-varese text-xs md:text-sm font-bold uppercase tracking-wider block mb-1">Target Audience</span>
-                    <span className="text-black text-sm md:text-base font-medium">{program.target}</span>
-                  </div>
-                  <div className="bg-white/80 backdrop-blur-sm border border-zinc-200 px-6 py-4 md:px-8 md:py-6 rounded-xl shadow-md min-w-[150px] md:min-w-[200px]">
-                    <span className="text-red-varese text-xs md:text-sm font-bold uppercase tracking-wider block mb-1">When</span>
-                    <span className="text-black text-sm md:text-base font-medium">{program.timing}</span>
-                  </div>
-                  <div className="bg-white/80 backdrop-blur-sm border border-zinc-200 px-6 py-4 md:px-8 md:py-6 rounded-xl shadow-md min-w-[150px] md:min-w-[200px]">
-                    <span className="text-red-varese text-xs md:text-sm font-bold uppercase tracking-wider block mb-1">Where</span>
-                    <span className="text-black text-sm md:text-base font-medium">
-                      {program.id === 'academy' ? 'Campus, via Pirandello' : 'Foresteria and Campus'}
-                    </span>
-                  </div>
-                  <div className="bg-white/80 backdrop-blur-sm border border-zinc-200 px-6 py-4 md:px-8 md:py-6 rounded-xl shadow-md min-w-[150px] md:min-w-[200px]">
-                    <span className="text-red-varese text-xs md:text-sm font-bold uppercase tracking-wider block mb-1">Subscription Deadline</span>
-                  </div>
-                </div>
               </div>
             </div>
           </section>
     
+          {/* Info Boxes Section */}
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 md:-mt-16 relative z-20 mb-8 md:mb-12">
+            <div className="grid grid-cols-2 md:flex md:flex-wrap justify-center gap-3 md:gap-8 animate-in slide-in-from-bottom-4 duration-700 delay-300">
+              <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-3 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
+                <span className="text-red-varese text-[8px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">Target Audience</span>
+                <span className="text-black text-[10px] md:text-base font-medium leading-tight block">{program.target}</span>
+              </div>
+              <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-3 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
+                <span className="text-red-varese text-[8px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">When</span>
+                <span className="text-black text-[10px] md:text-base font-medium leading-tight block">{program.timing}</span>
+              </div>
+              <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-3 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
+                <span className="text-red-varese text-[8px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">Where</span>
+                <span className="text-black text-[10px] md:text-base font-medium leading-tight block">
+                  {program.id === 'academy' ? 'Campus, Varese' : 'Foresteria & Campus'}
+                </span>
+              </div>
+              <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-3 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
+                <span className="text-red-varese text-[8px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">Deadline</span>
+                <span className="text-black text-[10px] md:text-base font-medium leading-tight block">Open</span>
+              </div>
+            </div>
+          </div>
+
           {/* Content Section */}
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="grid lg:grid-cols-3 gap-12">
               {/* Main Content */}
               <div className="lg:col-span-2 h-full">
@@ -1397,7 +1570,7 @@ const App: React.FC = () => {
               <div className="w-full px-4 sm:px-8 lg:px-12">
                 <FormattedText text={program.details} className="text-black" programId={program.id} />
                 
-                <div className="mt-16 flex flex-col sm:flex-row gap-4 justify-center items-center max-w-2xl mx-auto">
+                <div className="mt-16 flex flex-col sm:flex-row gap-4 justify-center items-center max-w-4xl mx-auto">
                   <a
                     href={program.id === 'academy' ? "https://store.pallacanestrovarese.it/products/basketball-academy" : program.id === 'full-time' ? "https://store.pallacanestrovarese.it/products/basketball-academy-copia?variant=52624907436298" : program.id === 'summer-camp' ? "https://store.pallacanestrovarese.it/products/elite-summer-camp?variant=52625081630986" : program.id === 'internship' ? "https://store.pallacanestrovarese.it/products/coaches-internship-program?variant=52625121313034" : program.id === 'summer-prog' ? "https://store.pallacanestrovarese.it/products/summer-elite-program?variant=52625241800970" : "#"}
                     target={program.id === 'academy' || program.id === 'full-time' || program.id === 'summer-camp' || program.id === 'internship' || program.id === 'summer-prog' ? "_blank" : "_self"}
@@ -1412,10 +1585,30 @@ const App: React.FC = () => {
                   >
                     {t('requestMoreInfo')}
                   </button>
+                  <a 
+                    href="https://drive.google.com/file/d/1PQ7iSTdj0XC4TCMzENjinLr8Udv38-oW/view?usp=drive_link" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="w-full sm:w-auto flex-1 border border-zinc-300 text-black py-4 md:py-5 font-bold uppercase tracking-wider hover:bg-zinc-900 hover:text-white transition-all text-sm rounded-lg text-center flex items-center justify-center"
+                  >
+                    {t('downloadBrochure')}
+                  </a>
                 </div>
               </div>
             </div>
           )}
+
+          <section className="py-32 bg-red-varese relative overflow-hidden">
+              <div className="absolute inset-0 opacity-10 flex items-center justify-center pointer-events-none"><h2 className="text-[30rem] font-oswald font-black uppercase tracking-tighter">VARESE</h2></div>
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+              <h2 className="font-oswald text-5xl md:text-8xl font-bold uppercase mb-8 leading-[0.9]" dangerouslySetInnerHTML={{ __html: t('ctaTitle').replace('Basketball Future', '<br/>Basketball Future') }}></h2>
+              <p className="text-xl md:text-2xl font-light mb-12 max-w-2xl mx-auto text-white/90 uppercase tracking-widest">{t('ctaSubtitle')}</p>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                  <a href="https://store.pallacanestrovarese.it/collections/elite-programs" target="_blank" rel="noopener noreferrer" className="bg-white text-red-varese px-16 py-6 font-bold uppercase tracking-[0.3em] hover:bg-black hover:text-white transition-all rounded-sm text-lg shadow-2xl">{t('buyNow')}</a>
+                  <button onClick={() => setIsJoinModalOpen(true)} className="border border-white text-white px-16 py-6 font-bold uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all rounded-sm text-lg">{t('applyNow')}</button>
+              </div>
+              </div>
+          </section>
         </main>
       );
     };
@@ -1475,46 +1668,48 @@ const App: React.FC = () => {
               <div className="absolute inset-0 gradient-overlay"></div>
             </div>
             <div className="relative z-10 text-center px-4 max-w-4xl">
-              <img src={CLUB_LOGO} alt="Logo" className="mx-auto h-32 md:h-48 mb-8 animate-pulse" />
-              <h1 className="font-oswald text-5xl md:text-8xl font-bold uppercase leading-none tracking-tighter mb-4">
+              <img src={CLUB_LOGO} alt="Logo" className="mx-auto h-24 md:h-48 mb-4 md:mb-8 animate-pulse" />
+              <h1 className="font-oswald text-4xl md:text-8xl font-bold uppercase leading-none tracking-tighter mb-2 md:mb-4">
                 {t('heroTitle')}
               </h1>
-              <p className="text-lg md:text-2xl text-gray-300 font-light mb-10 max-w-2xl mx-auto uppercase tracking-widest">
+              <p className="text-sm md:text-2xl text-gray-300 font-light mb-6 md:mb-10 max-w-2xl mx-auto uppercase tracking-widest">
                 {t('heroSubtitle')}
               </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                  <button onClick={() => setView('programs')} className="w-full sm:w-auto bg-red-varese hover:bg-red-700 text-white px-10 py-4 font-bold uppercase tracking-widest transition-all shadow-xl shadow-red-600/20 flex items-center justify-center group">
-                      {t('explorePrograms')} <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+              <div className="flex flex-row items-center justify-center gap-3 md:gap-4">
+                  <button onClick={() => setView('programs')} className="flex-1 sm:flex-none bg-red-varese hover:bg-red-700 text-white px-4 md:px-10 py-3 md:py-4 font-bold uppercase tracking-widest transition-all shadow-xl shadow-red-600/20 flex items-center justify-center group text-[10px] md:text-base">
+                      {t('explorePrograms')} <ArrowRight className="ml-1 md:ml-2 group-hover:translate-x-1 transition-transform" size={14} />
                   </button>
-                  <button onClick={() => navigateToHomeSection('who-we-are')} className="w-full sm:w-auto border border-white hover:bg-white hover:text-black text-white px-10 py-4 font-bold uppercase tracking-widest transition-all">
+                  <button onClick={() => navigateToHomeSection('who-we-are')} className="flex-1 sm:flex-none border border-white hover:bg-white hover:text-black text-white px-4 md:px-10 py-3 md:py-4 font-bold uppercase tracking-widest transition-all text-[10px] md:text-base">
                       {t('ourLegacy')}
                   </button>
               </div>
             </div>
           </section>
 
-          <section id="who-we-are" className="py-24 bg-black scroll-mt-24 overflow-hidden">
+          <section id="who-we-are" className="py-12 md:py-24 bg-black scroll-mt-24 overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-              <h2 className="font-oswald text-4xl md:text-7xl font-bold uppercase mb-12 inline-block relative">
+              <h2 className="font-oswald text-3xl md:text-7xl font-bold uppercase mb-8 md:mb-12 inline-block relative">
                 {t('whoWeAre')}
-                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-24 h-2 bg-red-varese"></div>
+                <div className="absolute -bottom-2 md:-bottom-4 left-1/2 -translate-x-1/2 w-16 md:w-24 h-1 md:h-2 bg-red-varese"></div>
               </h2>
-              <div className="space-y-10 text-gray-400 text-xl leading-relaxed mb-16 max-w-4xl mx-auto text-left">
-                <p>{t('whoWeAreP1')}</p>
-                <p>{t('whoWeAreP2')}</p>
+              <div className="space-y-6 md:space-y-10 text-gray-400 text-sm md:text-xl leading-relaxed mb-8 md:mb-16 max-w-4xl mx-auto text-left">
+                <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
+                  <p>{t('whoWeAreP1')}</p>
+                  <p>{t('whoWeAreP2')}</p>
+                </div>
                 
-                <p className="text-white font-semibold italic text-2xl pt-4 text-center">{t('whoWeAreQuote')}</p>
+                <p className="text-white font-semibold italic text-lg md:text-2xl pt-2 md:pt-4 text-center">{t('whoWeAreQuote')}</p>
                 
-                <div className="pt-8 text-center">
+                <div className="pt-4 md:pt-8 text-center">
                   <button onClick={() => {
                     setPreviousView(view);
                     setView('palmares');
-                  }} className="border border-white hover:bg-white hover:text-black text-white px-10 py-4 font-bold uppercase tracking-widest transition-all">
+                  }} className="border border-white hover:bg-white hover:text-black text-white px-6 md:px-10 py-3 md:py-4 font-bold uppercase tracking-widest transition-all text-xs md:text-base">
                     {t('ourPalmares')}
                   </button>
                 </div>
               </div>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8 max-w-4xl mx-auto mt-20">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-8 max-w-4xl mx-auto mt-12 md:mt-20">
                 {ACHIEVEMENTS.map((item, idx) => {
                   let titleKey: keyof typeof TRANSLATIONS['en'];
                   if (item.title.includes("CAMPIONATO")) {
@@ -1557,44 +1752,44 @@ const App: React.FC = () => {
             </div>
           </section>
 
-          <section id="where-we-are" className="py-24 bg-zinc-900 relative scroll-mt-24">
+          <section id="where-we-are" className="py-12 md:py-24 bg-zinc-900 relative scroll-mt-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
-                 <div className="order-2 lg:order-1 flex flex-col gap-6">
+              <div className="grid grid-cols-2 lg:grid-cols-2 gap-6 md:gap-12 items-center">
+                 <div className="order-2 lg:order-1 flex flex-col gap-3 md:gap-6">
                    <div className="relative group">
                      <div className="absolute -inset-1 bg-gradient-to-r from-red-varese to-transparent rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-                     <img src="https://i.imgur.com/u1qdF6w.jpeg" className="relative rounded-xl shadow-2xl w-full h-auto object-cover aspect-video" alt="The Garden City" />
+                     <img src="https://i.imgur.com/u1qdF6w.jpeg" className="relative rounded-lg md:rounded-xl shadow-2xl w-full h-auto object-cover aspect-video" alt="The Garden City" />
                    </div>
-                   <a href="https://maps.app.goo.gl/WUqdjaf9duktWCNU8" target="_blank" rel="noopener noreferrer" className="relative group block overflow-hidden rounded-xl border border-white/10 shadow-xl transition-all hover:border-red-varese/50">
+                   <a href="https://maps.app.goo.gl/WUqdjaf9duktWCNU8" target="_blank" rel="noopener noreferrer" className="relative group block overflow-hidden rounded-lg md:rounded-xl border border-white/10 shadow-xl transition-all hover:border-red-varese/50">
                      <div className="absolute inset-0 bg-red-varese/5 opacity-0 group-hover:opacity-100 transition-opacity z-10 pointer-events-none"></div>
-                     <div className="h-[250px] w-full">
+                     <div className="h-[120px] md:h-[250px] w-full">
                         <iframe title="Varese Location" width="100%" height="100%" frameBorder="0" scrolling="no" src="https://maps.google.com/maps?width=100%25&amp;height=250&amp;hl=en&amp;q=Piazzale%20Antonio%20Gramsci,%20Varese+(Itely-Aitena-Arena)&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" className="pointer-events-none"></iframe>
                      </div>
-                     <div className="absolute bottom-4 right-4 z-20 bg-black/80 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 flex items-center gap-2">
-                        <MapPin size={14} className="text-red-varese" />
-                        <span className="text-[10px] font-bold uppercase tracking-widest">{t('findUs')}</span>
+                     <div className="absolute bottom-2 right-2 md:bottom-4 md:right-4 z-20 bg-black/80 backdrop-blur-md px-2 py-1 md:px-4 md:py-2 rounded-full border border-white/10 flex items-center gap-1 md:gap-2">
+                        <MapPin size={10} className="text-red-varese" />
+                        <span className="text-[7px] md:text-[10px] font-bold uppercase tracking-widest">{t('findUs')}</span>
                      </div>
                    </a>
                  </div>
                  <div className="order-1 lg:order-2">
-                   <p className="text-red-varese font-bold uppercase tracking-[0.3em] text-xs mb-4">{t('whereWeAre')}</p>
-                   <h2 className="font-oswald text-4xl md:text-6xl font-bold uppercase mb-8">{t('gardenCity')}</h2>
-                  <div className="space-y-6 text-gray-300">
-                    <div className="flex items-start gap-4">
-                      <MapPin className="text-red-varese mt-1 flex-shrink-0" size={24} />
+                   <p className="text-red-varese font-bold uppercase tracking-[0.3em] text-[8px] md:text-xs mb-2 md:mb-4">{t('whereWeAre')}</p>
+                   <h2 className="font-oswald text-xl md:text-6xl font-bold uppercase mb-4 md:mb-8 leading-tight">{t('gardenCity')}</h2>
+                  <div className="space-y-3 md:space-y-6 text-gray-300">
+                    <div className="flex items-start gap-2 md:gap-4">
+                      <MapPin className="text-red-varese mt-0.5 md:mt-1 flex-shrink-0" size={16} md:size={24} />
                       <div>
-                        <p className="font-bold text-white uppercase tracking-wider mb-1 text-sm">{t('strategicLocation')}</p>
-                        <p className="text-gray-400">{t('strategicLocationDesc')}</p>
+                        <p className="font-bold text-white uppercase tracking-wider mb-0.5 md:mb-1 text-[10px] md:text-sm">{t('strategicLocation')}</p>
+                        <p className="text-gray-400 text-[10px] md:text-base leading-tight">{t('strategicLocationDesc')}</p>
                       </div>
                     </div>
-                    <div className="flex items-start gap-4">
-                      <Calendar className="text-red-varese mt-1 flex-shrink-0" size={24} />
+                    <div className="flex items-start gap-2 md:gap-4">
+                      <Calendar className="text-red-varese mt-0.5 md:mt-1 flex-shrink-0" size={16} md:size={24} />
                       <div>
-                        <p className="font-bold text-white uppercase tracking-wider mb-1 text-sm">{t('eliteRegion')}</p>
-                        <p className="text-gray-400">{t('eliteRegionDesc')}</p>
+                        <p className="font-bold text-white uppercase tracking-wider mb-0.5 md:mb-1 text-[10px] md:text-sm">{t('eliteRegion')}</p>
+                        <p className="text-gray-400 text-[10px] md:text-base leading-tight">{t('eliteRegionDesc')}</p>
                       </div>
                     </div>
-                    <p className="pl-10 text-gray-400 italic text-sm leading-relaxed border-l border-red-varese/30">{t('locationP')}</p>
+                    <p className="pl-3 md:pl-10 text-gray-400 italic text-[10px] md:text-sm leading-relaxed border-l border-red-varese/30">{t('locationP')}</p>
                   </div>
                  </div>
               </div>
@@ -1608,21 +1803,21 @@ const App: React.FC = () => {
               <p className="text-gray-400 tracking-widest uppercase text-sm">{t('expertise')}</p>
             </div>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-12">
                 {STAFF.map((member) => (
                   <div key={member.name} className="group cursor-pointer">
-                    <div className="relative overflow-hidden aspect-[3/4] mb-8 rounded-lg border border-white/5 shadow-2xl">
+                    <div className="relative overflow-hidden aspect-[3/4] mb-4 md:mb-8 rounded-lg border border-white/5 shadow-2xl">
                       <img src={member.image} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" alt={member.name} />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
-                      <div className="absolute bottom-6 left-6 right-6">
-                        <p className="text-red-varese font-bold uppercase text-[12px] tracking-[0.2em] mb-1">{member.role}</p>
-                        <h3 className="font-oswald text-3xl font-bold uppercase">{member.name}</h3>
+                      <div className="absolute bottom-3 left-3 right-3 md:bottom-6 md:left-6 md:right-6">
+                        <p className="text-red-varese font-bold uppercase text-[8px] md:text-[12px] tracking-[0.2em] mb-0.5 md:mb-1">{member.role}</p>
+                        <h3 className="font-oswald text-lg md:text-3xl font-bold uppercase leading-tight">{member.name}</h3>
                       </div>
                     </div>
-                    <ul className="space-y-4 text-gray-300 text-base md:text-lg tracking-wide">
+                    <ul className="space-y-1.5 md:space-y-4 text-gray-300 text-[10px] md:text-lg tracking-wide">
                       {member.bio.map((point, i) => (
-                        <li key={i} className="flex items-start gap-3">
-                          <div className="w-2 h-2 bg-red-varese rounded-full mt-2 flex-shrink-0"></div>
+                        <li key={i} className="flex items-start gap-1.5 md:gap-3">
+                          <div className="w-1 md:w-2 h-1 md:h-2 bg-red-varese rounded-full mt-1.5 md:mt-2 flex-shrink-0"></div>
                           <span className="leading-tight">{point}</span>
                         </li>
                       ))}
@@ -1640,11 +1835,11 @@ const App: React.FC = () => {
                 <h2 className="font-oswald text-4xl md:text-6xl font-bold uppercase mb-4">{t('eliteFacilities')}</h2>
                 <p className="text-gray-400">{t('facilitiesDesc')}</p>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
                  {FACILITIES.map((facility) => (
                   <div
                     key={facility.id}
-                    className={`relative h-[450px] group overflow-hidden rounded-xl shadow-2xl cursor-pointer`}
+                    className={`relative h-[200px] sm:h-[350px] md:h-[450px] group overflow-hidden rounded-xl shadow-2xl cursor-pointer`}
                     onClick={() => {
                       setPreviousView(view);
                       setView(facility.id as View);
@@ -1652,14 +1847,14 @@ const App: React.FC = () => {
                   >
                     <img src={facility.coverImage} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" alt={t(facility.titleKey as keyof typeof TRANSLATIONS['en'])} />
                     
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent flex flex-col justify-end p-8 pointer-events-none">
-                      <h4 className="font-oswald text-3xl font-bold uppercase">{t(facility.titleKey as keyof typeof TRANSLATIONS['en'])}</h4>
-                      <p className="text-sm text-gray-300">{t(facility.descriptionKey as keyof typeof TRANSLATIONS['en'])}</p>
-                      {facility.noteKey && <p className="text-[10px] text-red-varese font-bold uppercase tracking-widest mt-2">{t(facility.noteKey as keyof typeof TRANSLATIONS['en'])}</p>}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent flex flex-col justify-end p-3 md:p-8 pointer-events-none">
+                      <h4 className="font-oswald text-lg md:text-3xl font-bold uppercase leading-tight">{t(facility.titleKey as keyof typeof TRANSLATIONS['en'])}</h4>
+                      <p className="text-[10px] md:text-sm text-gray-300 line-clamp-1 md:line-clamp-none">{t(facility.descriptionKey as keyof typeof TRANSLATIONS['en'])}</p>
+                      {facility.noteKey && <p className="text-[8px] md:text-[10px] text-red-varese font-bold uppercase tracking-widest mt-1 md:mt-2">{t(facility.noteKey as keyof typeof TRANSLATIONS['en'])}</p>}
                     </div>
 
                     <div className="absolute inset-0 bg-black/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <span className="text-white font-oswald text-xl font-bold uppercase tracking-widest">
+                      <span className="text-white font-oswald text-xs md:text-xl font-bold uppercase tracking-widest">
                           {t('findOutMore')}
                       </span>
                     </div>
@@ -1716,37 +1911,37 @@ const App: React.FC = () => {
                 <div className="w-full max-w-6xl mx-auto text-white animate-in slide-in-from-bottom-16 duration-700">
                     <img src={CLUB_LOGO} alt="Logo" className="h-16 md:h-20 mb-4" />
                     <h2 className="font-oswald text-5xl md:text-7xl font-bold uppercase tracking-tighter mb-10">{t('palmaresTitle')}</h2>
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-8 text-lg">
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-6 md:gap-x-8 md:gap-y-8 text-xs md:text-lg">
                         <div>
-                            <h3 className="font-oswald text-xl uppercase text-red-varese border-b-2 border-red-varese/50 pb-2 mb-4">{t('nationalCompetitions')}</h3>
-                            <ul className="space-y-3">
-                                <li className="flex items-center gap-3"><Trophy size={18} className="text-red-varese/80 flex-shrink-0" /> <div><strong>10</strong> &times; {t('scudetto')}</div></li>
-                                <li className="flex items-center gap-3"><Trophy size={18} className="text-red-varese/80 flex-shrink-0" /> <div><strong>4</strong> &times; {t('italianCup')}</div></li>
-                                <li className="flex items-center gap-3"><Trophy size={18} className="text-red-varese/80 flex-shrink-0" /> <div><strong>1</strong> &times; {t('italianSupercup')}</div></li>
+                            <h3 className="font-oswald text-sm md:text-xl uppercase text-red-varese border-b-2 border-red-varese/50 pb-1 md:pb-2 mb-3 md:mb-4">{t('nationalCompetitions')}</h3>
+                            <ul className="space-y-2 md:space-y-3">
+                                <li className="flex items-center gap-2 md:gap-3"><Trophy size={14} className="text-red-varese/80 flex-shrink-0" /> <div className="leading-tight"><strong>10</strong> &times; {t('scudetto')}</div></li>
+                                <li className="flex items-center gap-2 md:gap-3"><Trophy size={14} className="text-red-varese/80 flex-shrink-0" /> <div className="leading-tight"><strong>4</strong> &times; {t('italianCup')}</div></li>
+                                <li className="flex items-center gap-2 md:gap-3"><Trophy size={14} className="text-red-varese/80 flex-shrink-0" /> <div className="leading-tight"><strong>1</strong> &times; {t('italianSupercup')}</div></li>
                             </ul>
                         </div>
                         <div>
-                            <h3 className="font-oswald text-xl uppercase text-red-varese border-b-2 border-red-varese/50 pb-2 mb-4">{t('internationalCompetitions')}</h3>
-                            <ul className="space-y-3">
-                                <li className="flex items-center gap-3"><Trophy size={18} className="text-red-varese/80 flex-shrink-0" /> <div><strong>5</strong> &times; {t('euroleague')}</div></li>
-                                <li className="flex items-center gap-3"><Trophy size={18} className="text-red-varese/80 flex-shrink-0" /> <div><strong>2</strong> &times; {t('cupWinnersCup')}</div></li>
-                                <li className="flex items-center gap-3"><Trophy size={18} className="text-red-varese/80 flex-shrink-0" /> <div><strong>3</strong> &times; {t('intercontinentalCup')}</div></li>
+                            <h3 className="font-oswald text-sm md:text-xl uppercase text-red-varese border-b-2 border-red-varese/50 pb-1 md:pb-2 mb-3 md:mb-4">{t('internationalCompetitions')}</h3>
+                            <ul className="space-y-2 md:space-y-3">
+                                <li className="flex items-center gap-2 md:gap-3"><Trophy size={14} className="text-red-varese/80 flex-shrink-0" /> <div className="leading-tight"><strong>5</strong> &times; {t('euroleague')}</div></li>
+                                <li className="flex items-center gap-2 md:gap-3"><Trophy size={14} className="text-red-varese/80 flex-shrink-0" /> <div className="leading-tight"><strong>2</strong> &times; {t('cupWinnersCup')}</div></li>
+                                <li className="flex items-center gap-2 md:gap-3"><Trophy size={14} className="text-red-varese/80 flex-shrink-0" /> <div className="leading-tight"><strong>3</strong> &times; {t('intercontinentalCup')}</div></li>
                             </ul>
                         </div>
                         <div>
-                            <h3 className="font-oswald text-xl uppercase text-red-varese border-b-2 border-red-varese/50 pb-2 mb-4">{t('youthCompetitions')}</h3>
-                            <ul className="space-y-3">
-                                <li className="flex items-center gap-3"><Trophy size={18} className="text-red-varese/80 flex-shrink-0" /> <div><strong>3</strong> &times; {t('junioresChampionship')}</div></li>
-                                <li className="flex items-center gap-3"><Trophy size={18} className="text-red-varese/80 flex-shrink-0" /> <div><strong>1</strong> &times; {t('u19Championship')}</div></li>
-                                <li className="flex items-center gap-3"><Trophy size={18} className="text-red-varese/80 flex-shrink-0" /> <div><strong>2</strong> &times; {t('u17Championship')}</div></li>
-                                <li className="flex items-center gap-3"><Trophy size={18} className="text-red-varese/80 flex-shrink-0" /> <div><strong>1</strong> &times; {t('u15Championship')}</div></li>
-                                <li className="flex items-center gap-3"><Trophy size={18} className="text-red-varese/80 flex-shrink-0" /> <div><strong>1</strong> &times; {t('joinTheGame')}</div></li>
+                            <h3 className="font-oswald text-sm md:text-xl uppercase text-red-varese border-b-2 border-red-varese/50 pb-1 md:pb-2 mb-3 md:mb-4">{t('youthCompetitions')}</h3>
+                            <ul className="space-y-2 md:space-y-3">
+                                <li className="flex items-center gap-2 md:gap-3"><Trophy size={14} className="text-red-varese/80 flex-shrink-0" /> <div className="leading-tight"><strong>3</strong> &times; {t('junioresChampionship')}</div></li>
+                                <li className="flex items-center gap-2 md:gap-3"><Trophy size={14} className="text-red-varese/80 flex-shrink-0" /> <div className="leading-tight"><strong>1</strong> &times; {t('u19Championship')}</div></li>
+                                <li className="flex items-center gap-2 md:gap-3"><Trophy size={14} className="text-red-varese/80 flex-shrink-0" /> <div className="leading-tight"><strong>2</strong> &times; {t('u17Championship')}</div></li>
+                                <li className="flex items-center gap-2 md:gap-3"><Trophy size={14} className="text-red-varese/80 flex-shrink-0" /> <div className="leading-tight"><strong>1</strong> &times; {t('u15Championship')}</div></li>
+                                <li className="flex items-center gap-2 md:gap-3"><Trophy size={14} className="text-red-varese/80 flex-shrink-0" /> <div className="leading-tight"><strong>1</strong> &times; {t('joinTheGame')}</div></li>
                             </ul>
                         </div>
                         <div>
-                            <h3 className="font-oswald text-xl uppercase text-red-varese border-b-2 border-red-varese/50 pb-2 mb-4">{t('otherCompetitions')}</h3>
-                            <ul className="space-y-3">
-                                <li className="flex items-center gap-3"><Trophy size={18} className="text-red-varese/80 flex-shrink-0" /> <div><strong>1</strong> &times; {t('lombardyCup')}</div></li>
+                            <h3 className="font-oswald text-sm md:text-xl uppercase text-red-varese border-b-2 border-red-varese/50 pb-1 md:pb-2 mb-3 md:mb-4">{t('otherCompetitions')}</h3>
+                            <ul className="space-y-2 md:space-y-3">
+                                <li className="flex items-center gap-2 md:gap-3"><Trophy size={14} className="text-red-varese/80 flex-shrink-0" /> <div className="leading-tight"><strong>1</strong> &times; {t('lombardyCup')}</div></li>
                             </ul>
                         </div>
                     </div>
@@ -1855,14 +2050,14 @@ const App: React.FC = () => {
 
             <footer className="bg-black py-20 border-t border-white/5">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid md:grid-cols-4 gap-16 mb-16">
-                    <div className="col-span-1 md:col-span-2">
-                    <img src={CLUB_LOGO} alt="Varese" className="h-20 mb-8" /><h4 className="font-oswald text-3xl font-bold uppercase mb-4 tracking-tighter">Pallacanestro Varese <span className="text-red-varese">EBP</span></h4>
-                    <p className="text-gray-500 max-w-sm mb-8 leading-relaxed">{t('footerSlogan')}</p>
-                    <div className="flex gap-6 items-center"><a href="https://www.linkedin.com/company/pallacanestro-varese-spa/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-varese transition-colors"><Linkedin size={24} /></a><a href="https://www.instagram.com/pallvarese?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-varese transition-colors"><Instagram size={24} /></a><a href="https://www.facebook.com/pallvarese/?locale=it_IT" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-varese transition-colors"><Facebook size={24} /></a><a href="https://x.com/PallVarese" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-varese transition-colors"><X size={24} /></a><a href="https://www.tiktok.com/@pallvarese?_r=1&_t=ZN-93rFmsKhFL8" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-varese transition-colors"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .57.04.84.11V9.5a6.33 6.33 0 0 0-1.01-.08 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.27A8.25 8.25 0 0 0 22 11.45V8.04a4.8 4.8 0 0 1-2.41-1.35z"/></svg></a></div>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-16 mb-16">
+                    <div className="col-span-2 md:col-span-2">
+                    <img src={CLUB_LOGO} alt="Varese" className="h-12 md:h-20 mb-4 md:mb-8" /><h4 className="font-oswald text-xl md:text-3xl font-bold uppercase mb-2 md:mb-4 tracking-tighter">Pallacanestro Varese <span className="text-red-varese">EBP</span></h4>
+                    <p className="text-gray-500 max-w-sm mb-4 md:mb-8 leading-relaxed text-xs md:text-base">{t('footerSlogan')}</p>
+                    <div className="flex gap-4 md:gap-6 items-center"><a href="https://www.linkedin.com/company/pallacanestro-varese-spa/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-varese transition-colors"><Linkedin size={20} md:size={24} /></a><a href="https://www.instagram.com/pallvarese?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-varese transition-colors"><Instagram size={20} md:size={24} /></a><a href="https://www.facebook.com/pallvarese/?locale=it_IT" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-varese transition-colors"><Facebook size={20} md:size={24} /></a><a href="https://x.com/PallVarese" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-varese transition-colors"><X size={20} md:size={24} /></a><a href="https://www.tiktok.com/@pallvarese?_r=1&_t=ZN-93rFmsKhFL8" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-varese transition-colors"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .57.04.84.11V9.5a6.33 6.33 0 0 0-1.01-.08 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.27A8.25 8.25 0 0 0 22 11.45V8.04a4.8 4.8 0 0 1-2.41-1.35z"/></svg></a></div>
                     </div>
                     <div>
-                    <ul className="space-y-4 text-gray-500 text-sm md:mt-16">
+                    <ul className="space-y-2 md:space-y-4 text-gray-500 text-[10px] md:text-sm md:mt-16">
                         <li><button onClick={() => navigateToHomeSection('who-we-are')} className="hover:text-white transition-colors uppercase tracking-widest">{t('footerLegacy')}</button></li>
                         <li><button onClick={() => navigateToHomeSection('where-we-are')} className="hover:text-white transition-colors uppercase tracking-widest">{t('footerRegion')}</button></li>
                         <li><button onClick={() => navigateToHomeSection('leadership')} className="hover:text-white transition-colors uppercase tracking-widest">{t('footerLeadership')}</button></li>
@@ -1871,15 +2066,15 @@ const App: React.FC = () => {
                     </ul>
                     </div>
                     <div>
-                        <div className="flex items-start gap-3 text-sm text-gray-500">
-                            <MapPin size={20} className="text-red-varese mt-0.5 flex-shrink-0" />
+                        <div className="flex items-start gap-2 md:gap-3 text-[10px] md:text-sm text-gray-500">
+                            <MapPin size={16} md:size={20} className="text-red-varese mt-0.5 flex-shrink-0" />
                             <a href="https://maps.app.goo.gl/WUqdjaf9duktWCNU8" target="_blank" rel="noopener noreferrer" className="hover:text-red-varese transition-colors" dangerouslySetInnerHTML={{ __html: t('footerAddress').replace('\n', '<br/>') }}></a>
                         </div>
-                        <div className="mt-8">
-                            <h5 className="font-bold uppercase mb-4 tracking-[0.2em] text-xs text-white">{t('contactUs')}</h5>
-                            <div className="text-sm text-gray-500">
+                        <div className="mt-4 md:mt-8">
+                            <h5 className="font-bold uppercase mb-2 md:mb-4 tracking-[0.2em] text-[10px] md:text-xs text-white">{t('contactUs')}</h5>
+                            <div className="text-[10px] md:text-sm text-gray-500">
                                 <p>Email: <a href="mailto:f.bellotto@pallacanestrovarese.it" className="hover:text-red-varese transition-colors">f.bellotto@pallacanestrovarese.it</a></p>
-                                <p className="text-[10px] uppercase tracking-widest mt-1 text-gray-400">{t('footerCOO')}</p>
+                                <p className="text-[8px] md:text-[10px] uppercase tracking-widest mt-0.5 md:mt-1 text-gray-400">{t('footerCOO')}</p>
                             </div>
                         </div>
                     </div>

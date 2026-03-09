@@ -141,29 +141,24 @@ Please contact us or click here for detailed pricing information tailored to you
   {
     id: "summer-camp",
     title: "ELITE SUMMER CAMP",
-    target: "Ages 15-19",
+    target: "Born between 2007 and 2011",
     timing: "One week (6 days, 5 nights)",
     description: "We invite you to join Pallacanestro Varese for a transformative, all-inclusive one-week experience specifically engineered for aspiring basketball players who possess the drive to push their physical and mental limits. This is not merely a training camp; it is a deep dive into a professional culture, offering participants a rare and authentic taste of the relentless dedication and discipline required to achieve success at the highest tiers of elite basketball.",
     highlights: ["Serie A techniques", "Elite Competition", "Performance Analytics"],
     image: "https://i.imgur.com/ngjbsbC.jpeg",
     detailImage: "https://i.imgur.com/bUSyHZP.jpeg",
     details: `target audience
-This premier summer experience has been exclusively designed and curated for a select group of ambitious young athletes, specifically those aged 15 to 19, who demonstrate an unwavering commitment to achieving elite-level performance. We understand that the off-season is a critical window for growth, and this program serves as the definitive platform for players who are serious about their athletic trajectory and long-term development.
+This premier summer experience has been exclusively designed and curated for a select group of ambitious young athletes, specifically those born between 2007 and 2011, who demonstrate an unwavering commitment to achieving elite-level performance. We understand that the off-season is a critical window for growth, and this program serves as the definitive platform for players who are serious about their athletic trajectory and long-term development.
 To facilitate this growth, the program offers a sophisticated and high-intensity training environment that is meticulously tailored to meet the needs of high-potential players. Our primary objective is to provide these athletes with the advanced technical tools and tactical insights necessary to refine their individual skill sets. By immersing participants in a professional-grade atmosphere, we empower them to elevate their game to a standard that meets the rigorous demands of the modern professional circuit.
 
 when and where
 Our premium facilities—including the Foresteria Elite Housing and the via Pirandello Campus—are strategically located within a 5-minute walk of each other. This integrated layout optimizes daily transitions for the duration of the program, which runs from late August through late June, allowing athletes to focus entirely on their rigorous training schedule.
 
-Sample Daily Routine
-07:00 – 08:00 | Breakfast Service
-09:00 – 12:00 | Technical Training Session
-12:30 – 13:30 | Lunch Break
-13:30 – 14:30 | Rest & Recovery
-15:00 – 18:00 | Afternoon Technical Drill & Scrimmage
-19:30 – 20:30 | Dinner Service
+the training program
+Placeholder
 
-pricing
-Please contact us or click here for detailed pricing information tailored to your specific needs.`
+Sample Daily Routine
+TABLES_PLACEHOLDER`
   },
   {
     id: "internship",
