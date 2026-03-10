@@ -1060,7 +1060,8 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
     <div className={`${className} text-sm leading-relaxed`}>
       <div className="flex flex-col gap-12">
         {sections.map((section, idx) => {
-          let imageUrl = null;
+          let imageUrl: string | null = null;
+          let imageUrls: string[] | null = null;
           let imagePosition = 'right';
           
           if (idx === 0) {
@@ -1076,6 +1077,9 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
             imageUrl = getImage3();
             imagePosition = 'right';
           } else if (idx === 3 && programId === 'full-time') {
+            imageUrls = ["https://i.imgur.com/S30AYTl.png", "https://i.imgur.com/AtzE0c6.png"];
+            imagePosition = 'right';
+          } else if (idx === 4 && programId === 'full-time') {
             imageUrl = getImage3();
             imagePosition = 'right';
           } else if (section.title === 'Our special guest and CEO') {
@@ -1089,22 +1093,24 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
           return (
             <div key={idx} className="flex flex-col">
               <div className={`flex flex-col lg:flex-row gap-8 lg:gap-12 items-center ${idx > 0 ? 'mt-8' : ''}`}>
-                {imageUrl && imagePosition === 'left' && (
+                {(imageUrl || imageUrls) && imagePosition === 'left' && (
                   <div className={`flex-1 ${section.title === 'Our special guest and CEO' ? 'lg:flex-[1] max-w-lg mx-auto' : 'lg:flex-[1.5]'} w-full order-2 lg:order-1`}>
-                    <img src={imageUrl} alt={section.title || `Section ${idx + 1}`} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />
+                    {imageUrl && <img src={imageUrl} alt={section.title || `Section ${idx + 1}`} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />}
+                    {imageUrls && <div className="flex flex-col gap-4">{imageUrls.map((url, i) => <img key={i} src={url} alt={`${section.title || `Section ${idx + 1}`} ${i + 1}`} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />)}</div>}
                   </div>
                 )}
                 
-                <div className={`flex-1 ${imageUrl ? (section.title === 'Our special guest and CEO' ? 'lg:flex-[1.8]' : 'lg:flex-[1.5]') : 'w-full'} space-y-4 ${imageUrl && imagePosition === 'left' ? 'order-1 lg:order-2' : ''}`}>
+                <div className={`flex-1 ${(imageUrl || imageUrls) ? (section.title === 'Our special guest and CEO' ? 'lg:flex-[1.8]' : 'lg:flex-[1.5]') : 'w-full'} space-y-4 ${(imageUrl || imageUrls) && imagePosition === 'left' ? 'order-1 lg:order-2' : ''}`}>
                   <h4 className={`font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg border-b border-zinc-200 pb-2 ${section.title === 'A Comprehensive Two-Way Approach' ? 'text-center' : ''}`}>
                     {section.title}
                   </h4>
                   {renderSectionContent(section)}
                 </div>
 
-                {imageUrl && imagePosition === 'right' && (
+                {(imageUrl || imageUrls) && imagePosition === 'right' && (
                   <div className="flex-1 w-full">
-                    <img src={imageUrl} alt={section.title || `Section ${idx + 1}`} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />
+                    {imageUrl && <img src={imageUrl} alt={section.title || `Section ${idx + 1}`} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />}
+                    {imageUrls && <div className="flex flex-col gap-4">{imageUrls.map((url, i) => <img key={i} src={url} alt={`${section.title || `Section ${idx + 1}`} ${i + 1}`} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />)}</div>}
                   </div>
                 )}
               </div>
