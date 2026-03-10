@@ -278,7 +278,7 @@ const TRANSLATIONS = {
     faq2Question: "Where is the Campus located?",
     faq2Answer: "The Campus is situated on Via Pirandello in Varese, within a 10-minute walk of the Foresteria and just 5 minutes from the Itelyum Arena, home of Pallacanestro Varese. All our facilities are seamlessly interconnected.",
     faq3Question: "how can I apply for a program?",
-    faq3Answer: "You can apply for any of our program by clicking \"buy now\" in this website or by visiting the following link: https://store.pallacanestrovarese.it/collections/elite-programs",
+    faq3Answer: "You can apply for any of our program by clicking 'buy now' in this website or by visiting the following link: https://store.pallacanestrovarese.it/collections/elite-programs",
     faq4Question: "how do i get to varese?",
     faq4Answer: "The Campus is situated on Via Pirandello in Varese, a 10-minute walk from the guesthouse and just 5 minutes from the Itelyum Arena, home of Pallacanestro Varese. Reaching us is highly convenient as all our facilities are seamlessly interconnected and well-served by public transport. If you are arriving by air, Milan Malpensa (MXP) is the closest hub, located only 30 minutes away and connected directly to Varese via the S50 train line. For those traveling by rail from Milan, frequent direct services depart from Milano Centrale, Porta Garibaldi, and Cadorna stations, with travel times averaging 50–60 minutes. Whether you are arriving from the airport or the city center, the final stretch to the Campus is quick and straightforward.",
     faq5Question: "How can I request more information?",
@@ -553,7 +553,40 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
     "pro-level program",
     "Strategic Location & Italian Culture",
     "pricing",
-    "the training program"
+    "the training program",
+    "Un Approccio Completo a Due Vie",
+    "Pubblico di riferimento",
+    "pubblico di riferimento",
+    "Quando e dove",
+    "quando e dove",
+    "Opportunità Future",
+    "Esempio di Routine Giornaliera",
+    "Integrazione Professionale d'Elite",
+    "programma di livello pro",
+    "prezzi",
+    "il programma di allenamento",
+    "Un Enfoque Completo de Dos Vías",
+    "Público objetivo",
+    "público objetivo",
+    "Cuándo y dónde",
+    "cuándo y dónde",
+    "Oportunidades Futuras",
+    "Ejemplo de Rutina Diaria",
+    "Integración Profesional de Élite",
+    "programa de nivel pro",
+    "precios",
+    "el programa de entrenamiento",
+    "Une Approche Complète à Deux Voies",
+    "Public cible",
+    "public cible",
+    "Quand et où",
+    "quand et où",
+    "Opportunités Futures",
+    "Exemple de Routine Quotidienne",
+    "Intégration Professionnelle d'Élite",
+    "programme de niveau pro",
+    "prix",
+    "le programme d'entraînement"
   ];
 
   const blocks = text.split('\n\n').filter(block => block.trim() !== '');
@@ -590,28 +623,28 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
   const renderSectionContent = (section: { title: string | null, paragraphs: string[][] }) => {
     if (section.title === 'the training program') {
       return (
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8 py-8 w-full">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 py-4 w-full">
           {/* Left Column */}
-          <div className="flex flex-col gap-6 w-full md:w-1/3 order-2 md:order-1">
-            <div className="bg-white border border-zinc-200 p-5 rounded-xl shadow-md flex flex-col items-center md:items-end text-center md:text-right gap-2 hover:border-red-varese/50 transition-colors">
-              <div className="bg-red-varese/10 p-3 rounded-full text-red-varese mb-1">
-                <Target size={24} />
+          <div className="flex flex-col gap-3 w-full md:w-1/3 order-2 md:order-1">
+            <div className="bg-white border border-zinc-200 p-3 rounded-xl shadow-md flex flex-col items-center md:items-end text-center md:text-right gap-1.5 hover:border-red-varese/50 transition-colors">
+              <div className="bg-red-varese/10 p-2 rounded-full text-red-varese mb-1">
+                <Target size={20} />
               </div>
               <h4 className="text-zinc-900 font-bold uppercase tracking-wider text-sm">Fundamentals</h4>
               <p className="text-zinc-500 text-xs font-medium leading-relaxed tracking-wide">SHOOTING / PLAYMAKING / DRIBBLING / FINISHING</p>
             </div>
             
-            <div className="bg-white border border-zinc-200 p-5 rounded-xl shadow-md flex flex-col items-center md:items-end text-center md:text-right gap-2 hover:border-red-varese/50 transition-colors">
-              <div className="bg-red-varese/10 p-3 rounded-full text-red-varese mb-1">
-                <Activity size={24} />
+            <div className="bg-white border border-zinc-200 p-3 rounded-xl shadow-md flex flex-col items-center md:items-end text-center md:text-right gap-1.5 hover:border-red-varese/50 transition-colors">
+              <div className="bg-red-varese/10 p-2 rounded-full text-red-varese mb-1">
+                <Activity size={20} />
               </div>
               <h4 className="text-zinc-900 font-bold uppercase tracking-wider text-sm">Sports Science</h4>
               <p className="text-zinc-500 text-xs font-medium leading-relaxed tracking-wide">CATAPULT / PUSHBAND / INERTIAL</p>
             </div>
 
-            <div className="bg-white border border-zinc-200 p-5 rounded-xl shadow-md flex flex-col items-center md:items-end text-center md:text-right gap-2 hover:border-red-varese/50 transition-colors">
-              <div className="bg-red-varese/10 p-3 rounded-full text-red-varese mb-1">
-                <Brain size={24} />
+            <div className="bg-white border border-zinc-200 p-3 rounded-xl shadow-md flex flex-col items-center md:items-end text-center md:text-right gap-1.5 hover:border-red-varese/50 transition-colors">
+              <div className="bg-red-varese/10 p-2 rounded-full text-red-varese mb-1">
+                <Brain size={20} />
               </div>
               <h4 className="text-zinc-900 font-bold uppercase tracking-wider text-sm">Basketball Leadership</h4>
               <p className="text-zinc-500 text-xs font-medium leading-relaxed tracking-wide">LEADERSHIP SKILLS / MENTAL CONDITIONING</p>
@@ -624,32 +657,32 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
             <img 
               src="https://i.imgur.com/RlAHFhI.png" 
               alt="Basketball Player Silhouette" 
-              className="max-h-[400px] md:max-h-[500px] object-contain mix-blend-multiply" 
+              className="max-h-[300px] md:max-h-[400px] object-contain mix-blend-multiply" 
               referrerPolicy="no-referrer"
             />
           </div>
 
           {/* Right Column */}
-          <div className="flex flex-col gap-6 w-full md:w-1/3 order-3 md:order-3">
-            <div className="bg-white border border-zinc-200 p-5 rounded-xl shadow-md flex flex-col items-center md:items-start text-center md:text-left gap-2 hover:border-red-varese/50 transition-colors">
-              <div className="bg-red-varese/10 p-3 rounded-full text-red-varese mb-1">
-                <BarChart size={24} />
+          <div className="flex flex-col gap-3 w-full md:w-1/3 order-3 md:order-3">
+            <div className="bg-white border border-zinc-200 p-3 rounded-xl shadow-md flex flex-col items-center md:items-start text-center md:text-left gap-1.5 hover:border-red-varese/50 transition-colors">
+              <div className="bg-red-varese/10 p-2 rounded-full text-red-varese mb-1">
+                <BarChart size={20} />
               </div>
               <h4 className="text-zinc-900 font-bold uppercase tracking-wider text-sm">Basketball Analysis</h4>
               <p className="text-zinc-500 text-xs font-medium leading-relaxed tracking-wide">ADVANCED PERFORMANCE ANALYSIS / ADVANCED BOXSCORE / BIG DATA</p>
             </div>
 
-            <div className="bg-white border border-zinc-200 p-5 rounded-xl shadow-md flex flex-col items-center md:items-start text-center md:text-left gap-2 hover:border-red-varese/50 transition-colors">
-              <div className="bg-red-varese/10 p-3 rounded-full text-red-varese mb-1">
-                <HeartPulse size={24} />
+            <div className="bg-white border border-zinc-200 p-3 rounded-xl shadow-md flex flex-col items-center md:items-start text-center md:text-left gap-1.5 hover:border-red-varese/50 transition-colors">
+              <div className="bg-red-varese/10 p-2 rounded-full text-red-varese mb-1">
+                <HeartPulse size={20} />
               </div>
               <h4 className="text-zinc-900 font-bold uppercase tracking-wider text-sm">Treatment/Recovery</h4>
               <p className="text-zinc-500 text-xs font-medium leading-relaxed tracking-wide">INJURY PREVENTION / WORKLOAD MANAGEMENT / REHABILITATION</p>
             </div>
 
-            <div className="bg-white border border-zinc-200 p-5 rounded-xl shadow-md flex flex-col items-center md:items-start text-center md:text-left gap-2 hover:border-red-varese/50 transition-colors">
-              <div className="bg-red-varese/10 p-3 rounded-full text-red-varese mb-1">
-                <Dumbbell size={24} />
+            <div className="bg-white border border-zinc-200 p-3 rounded-xl shadow-md flex flex-col items-center md:items-start text-center md:text-left gap-1.5 hover:border-red-varese/50 transition-colors">
+              <div className="bg-red-varese/10 p-2 rounded-full text-red-varese mb-1">
+                <Dumbbell size={20} />
               </div>
               <h4 className="text-zinc-900 font-bold uppercase tracking-wider text-sm">Strength & Conditioning</h4>
               <p className="text-zinc-500 text-xs font-medium leading-relaxed tracking-wide">STRENGTH DEV / POWER / SPEED / AGILITY / STAMINA</p>
@@ -938,60 +971,60 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
               
               {programId === 'summer-camp' && section.title === 'Sample Daily Routine' && (
                 <div className="mt-12 flex flex-col md:flex-row gap-8 w-full">
-                  <div className="flex-1 bg-white p-6 rounded-xl shadow-md border border-zinc-200">
-                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-2 text-xl text-center">Residential Camp</h5>
-                    <p className="text-center text-zinc-600 font-semibold mb-4 border-b border-zinc-200 pb-2 text-xl">€990</p>
+                  <div className="flex-1 bg-white p-4 rounded-xl shadow-md border border-zinc-200">
+                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-2 text-lg text-center">Residential Camp</h5>
+                    <p className="text-center text-zinc-600 font-semibold mb-3 border-b border-zinc-200 pb-2 text-lg">€990</p>
                     <div className="overflow-x-auto">
-                      <table className="w-full text-sm text-left">
-                        <thead className="text-xs text-zinc-500 uppercase bg-zinc-50">
+                      <table className="w-full text-xs text-left">
+                        <thead className="text-[10px] text-zinc-500 uppercase bg-zinc-50">
                           <tr>
-                            <th className="px-4 py-3 rounded-t-lg">Included</th>
+                            <th className="px-3 py-2 rounded-t-lg">Included</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <tr className="border-b border-zinc-100"><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> private single room</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> shared common spaces</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> 3 meals a day</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> sports nutrition-driven menus</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> individualized 1-on-1 training</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> team practice</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> strength and performance training</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> personale performance analytics</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> elite coaching staff</td></tr>
-                          <tr><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> official camp gear</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> private single room</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> shared common spaces</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> 3 meals a day</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> sports nutrition-driven menus</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> individualized 1-on-1 training</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> team practice</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> strength and performance training</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> personale performance analytics</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> elite coaching staff</td></tr>
+                          <tr><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> official camp gear</td></tr>
                         </tbody>
                       </table>
                     </div>
-                    <div className="mt-6 flex justify-center">
-                      <a href="https://store.pallacanestrovarese.it/products/elite-summer-camp" target="_blank" rel="noopener noreferrer" className="bg-red-varese hover:bg-red-700 text-white font-oswald uppercase tracking-wider py-3 px-8 rounded-full transition-colors font-bold shadow-md">
+                    <div className="mt-4 flex justify-center">
+                      <a href="https://store.pallacanestrovarese.it/products/elite-summer-camp" target="_blank" rel="noopener noreferrer" className="bg-red-varese hover:bg-red-700 text-white font-oswald uppercase tracking-wider py-2.5 px-6 text-sm rounded-full transition-colors font-bold shadow-md">
                         Apply Now
                       </a>
                     </div>
                   </div>
-                  <div className="flex-1 bg-white p-6 rounded-xl shadow-md border border-zinc-200">
-                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-2 text-xl text-center">Day Camp</h5>
-                    <p className="text-center text-zinc-600 font-semibold mb-4 border-b border-zinc-200 pb-2 text-xl">€690</p>
+                  <div className="flex-1 bg-white p-4 rounded-xl shadow-md border border-zinc-200">
+                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-2 text-lg text-center">Day Camp</h5>
+                    <p className="text-center text-zinc-600 font-semibold mb-3 border-b border-zinc-200 pb-2 text-lg">€690</p>
                     <div className="overflow-x-auto">
-                      <table className="w-full text-sm text-left">
-                        <thead className="text-xs text-zinc-500 uppercase bg-zinc-50">
+                      <table className="w-full text-xs text-left">
+                        <thead className="text-[10px] text-zinc-500 uppercase bg-zinc-50">
                           <tr>
-                            <th className="px-4 py-3 rounded-t-lg">Included</th>
+                            <th className="px-3 py-2 rounded-t-lg">Included</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <tr className="border-b border-zinc-100"><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> lunch</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> sports nutrition-driven menus</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> individualized 1-on-1 training</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> team practice</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> strength and performance training</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> personal performance analytics</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> elite coaching staff</td></tr>
-                          <tr><td className="px-4 py-3 font-medium flex items-center gap-2"><CheckCircle2 size={16} className="text-red-varese flex-shrink-0" /> official camp gear</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> lunch</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> sports nutrition-driven menus</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> individualized 1-on-1 training</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> team practice</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> strength and performance training</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> personal performance analytics</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> elite coaching staff</td></tr>
+                          <tr><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> official camp gear</td></tr>
                         </tbody>
                       </table>
                     </div>
-                    <div className="mt-6 flex justify-center">
-                      <a href="https://store.pallacanestrovarese.it/products/elite-summer-camp" target="_blank" rel="noopener noreferrer" className="bg-red-varese hover:bg-red-700 text-white font-oswald uppercase tracking-wider py-3 px-8 rounded-full transition-colors font-bold shadow-md">
+                    <div className="mt-4 flex justify-center">
+                      <a href="https://store.pallacanestrovarese.it/products/elite-summer-camp" target="_blank" rel="noopener noreferrer" className="bg-red-varese hover:bg-red-700 text-white font-oswald uppercase tracking-wider py-2.5 px-6 text-sm rounded-full transition-colors font-bold shadow-md">
                         Apply Now
                       </a>
                     </div>
