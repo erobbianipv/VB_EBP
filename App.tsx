@@ -3,6 +3,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { CLUB_LOGO, ACHIEVEMENTS, STAFF, PROGRAMS, FACILITIES } from './constants';
+import { translateProgram, translateStaff } from './translations';
 import { Program, Facility } from './types';
 import { Trophy, MapPin, Users, Home, GraduationCap, Calendar, ArrowRight, Menu, X, Instagram, Facebook, CheckCircle2, Send, Mail, Linkedin, Star, ChevronDown, ZoomIn, ChevronLeft, ChevronRight, ChevronUp, XCircle, Target, Activity, Brain, BarChart, HeartPulse, Dumbbell } from 'lucide-react';
 
@@ -554,6 +555,8 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
     "Strategic Location & Italian Culture",
     "pricing",
     "the training program",
+    "Our special guest and CEO",
+    "Unique events & meetings",
     "Un Approccio Completo a Due Vie",
     "Pubblico di riferimento",
     "pubblico di riferimento",
@@ -872,6 +875,13 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
                 </div>
               );
             }
+            if (line.startsWith("SUBTITLE:")) {
+              return (
+                <h4 key={lIdx} className="font-oswald text-red-varese font-bold uppercase tracking-wider mt-12 mb-2 text-lg border-b border-zinc-200 pb-2">
+                  {line.replace("SUBTITLE:", "")}
+                </h4>
+              );
+            }
             if (line.includes("click here")) {
               const parts = line.split("click here");
               return (
@@ -940,9 +950,15 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
             imagePosition = 'left';
           } else if (section.title === 'Sample Daily Routine') {
             imageUrl = getImage3();
-            imagePosition = 'right';
+            imagePosition = 'left';
           } else if (idx === 2 && section.title !== 'the training program') {
             imageUrl = getImage3();
+            imagePosition = 'right';
+          } else if (section.title === 'Our special guest and CEO') {
+            imageUrl = "https://i.imgur.com/H0gXCIE.png";
+            imagePosition = 'left';
+          } else if (section.title === 'Unique events & meetings') {
+            imageUrl = "https://i.imgur.com/MafMwTk.png";
             imagePosition = 'right';
           }
 
@@ -950,12 +966,12 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
             <div key={idx} className="flex flex-col">
               <div className={`flex flex-col lg:flex-row gap-8 lg:gap-12 items-center ${idx > 0 ? 'mt-8' : ''}`}>
                 {imageUrl && imagePosition === 'left' && (
-                  <div className="flex-1 lg:flex-[1.5] w-full order-2 lg:order-1">
+                  <div className={`flex-1 ${section.title === 'Our special guest and CEO' ? 'lg:flex-[1] max-w-lg mx-auto' : 'lg:flex-[1.5]'} w-full order-2 lg:order-1`}>
                     <img src={imageUrl} alt={section.title || `Section ${idx + 1}`} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />
                   </div>
                 )}
                 
-                <div className={`flex-1 ${imageUrl ? 'lg:flex-[1.5]' : 'w-full'} space-y-4 ${imageUrl && imagePosition === 'left' ? 'order-1 lg:order-2' : ''}`}>
+                <div className={`flex-1 ${imageUrl ? (section.title === 'Our special guest and CEO' ? 'lg:flex-[1.8]' : 'lg:flex-[1.5]') : 'w-full'} space-y-4 ${imageUrl && imagePosition === 'left' ? 'order-1 lg:order-2' : ''}`}>
                   <h4 className={`font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg border-b border-zinc-200 pb-2 ${section.title === 'A Comprehensive Two-Way Approach' ? 'text-center' : ''}`}>
                     {section.title}
                   </h4>
@@ -1363,22 +1379,24 @@ const App: React.FC = () => {
 
     const ProgramsGrid = () => (
     <div className="flex flex-wrap justify-center gap-3 md:gap-10">
-      {PROGRAMS.map((prog) => (
+      {PROGRAMS.map((prog) => {
+        const translatedProg = translateProgram(prog, lang);
+        return (
         <div 
-          key={prog.id} 
-          className={`relative card-glass rounded-xl md:rounded-2xl overflow-hidden flex flex-col group transition-all duration-300 shadow-xl w-[calc(50%-6px)] md:w-[calc(50%-20px)] lg:w-[calc(33.333%-27px)] ${prog.id === 'full-time' ? 'border-red-varese' : 'hover:border-red-varese'}`}
+          key={translatedProg.id} 
+          className={`relative card-glass rounded-xl md:rounded-2xl overflow-hidden flex flex-col group transition-all duration-300 shadow-xl w-[calc(50%-6px)] md:w-[calc(50%-20px)] lg:w-[calc(33.333%-27px)] ${translatedProg.id === 'full-time' ? 'border-red-varese' : 'hover:border-red-varese'}`}
         >
           <div className="h-32 sm:h-48 md:h-64 overflow-hidden relative">
-            <img src={prog.image} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" alt={prog.title} />
+            <img src={translatedProg.image} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" alt={translatedProg.title} />
             <div className="absolute top-2 left-2 md:top-4 md:left-4 bg-red-varese text-white px-2 py-0.5 md:px-3 md:py-1 text-[8px] md:text-[10px] font-bold tracking-widest uppercase rounded">
-              {prog.timing}
+              {translatedProg.timing}
             </div>
           </div>
           <div className="p-3 sm:p-5 md:p-8 flex-grow flex flex-col">
-            <h3 className="font-oswald text-xs sm:text-lg md:text-2xl font-bold uppercase mb-1 md:mb-2 group-hover:text-red-varese transition-colors line-clamp-1">{prog.title}</h3>
-            <p className="text-red-varese text-[7px] sm:text-[10px] font-bold uppercase tracking-widest mb-2 md:mb-4 flex-grow line-clamp-1">{prog.target}</p>
+            <h3 className="font-oswald text-xs sm:text-lg md:text-2xl font-bold uppercase mb-1 md:mb-2 group-hover:text-red-varese transition-colors line-clamp-1">{translatedProg.title}</h3>
+            <p className="text-red-varese text-[7px] sm:text-[10px] font-bold uppercase tracking-widest mb-2 md:mb-4 flex-grow line-clamp-1">{translatedProg.target}</p>
             <div className="space-y-1 md:space-y-3 mb-4 md:mb-8 hidden sm:block">
-              {prog.highlights.map((h, i) => (
+              {translatedProg.highlights.map((h, i) => (
                 <div key={i} className="flex items-center gap-2 md:gap-3 text-[9px] md:text-[11px] font-semibold text-gray-300 uppercase tracking-wider">
                   <CheckCircle2 size={12} className="text-red-varese flex-shrink-0" /> {h}
                 </div>
@@ -1387,7 +1405,7 @@ const App: React.FC = () => {
              <div className="mt-auto pt-2 md:pt-4 flex flex-col gap-2 sm:flex-row sm:gap-2">
                 <button 
                   onClick={() => {
-                    setSelectedProgram(prog);
+                    setSelectedProgram(translatedProg);
                     setPreviousView(view);
                     setView('programDetail');
                   }}
@@ -1397,11 +1415,11 @@ const App: React.FC = () => {
                 </button>
                 <a
                   href={
-                    prog.id === 'academy' ? "https://store.pallacanestrovarese.it/products/basketball-academy" :
-                    prog.id === 'full-time' ? "https://store.pallacanestrovarese.it/products/basketball-academy-copia?variant=52624907436298" :
-                    prog.id === 'summer-camp' ? "https://store.pallacanestrovarese.it/products/elite-summer-camp?variant=52625081630986" :
-                    prog.id === 'internship' ? "https://store.pallacanestrovarese.it/products/coaches-internship-program?variant=52625121313034" :
-                    prog.id === 'summer-prog' ? "https://store.pallacanestrovarese.it/products/summer-elite-program?variant=52625241800970" :
+                    translatedProg.id === 'academy' ? "https://store.pallacanestrovarese.it/products/basketball-academy" :
+                    translatedProg.id === 'full-time' ? "https://store.pallacanestrovarese.it/products/basketball-academy-copia?variant=52624907436298" :
+                    translatedProg.id === 'summer-camp' ? "https://store.pallacanestrovarese.it/products/elite-summer-camp?variant=52625081630986" :
+                    translatedProg.id === 'internship' ? "https://store.pallacanestrovarese.it/products/coaches-internship-program?variant=52625121313034" :
+                    translatedProg.id === 'summer-prog' ? "https://store.pallacanestrovarese.it/products/summer-elite-program?variant=52625241800970" :
                     "https://store.pallacanestrovarese.it/collections/elite-programs"
                   }
                   target="_blank"
@@ -1413,7 +1431,7 @@ const App: React.FC = () => {
              </div>
           </div>
         </div>
-      ))}
+      )})}
     </div>
   );
   
@@ -1613,20 +1631,22 @@ const App: React.FC = () => {
           </div>
           
           <div className="space-y-4">
-            {PROGRAMS.map(program => (
-              <div key={program.id} className="bg-zinc-900/50 border border-white/10 rounded-lg overflow-hidden transition-all duration-300">
+            {PROGRAMS.map(program => {
+              const translatedProg = translateProgram(program, lang);
+              return (
+              <div key={translatedProg.id} className="bg-zinc-900/50 border border-white/10 rounded-lg overflow-hidden transition-all duration-300">
                 <button
-                  onClick={() => toggleProgram(program.id)}
+                  onClick={() => toggleProgram(translatedProg.id)}
                   className="w-full flex justify-between items-center p-4 md:p-6 text-left hover:bg-white/5 transition-colors"
-                  aria-expanded={openProgramId === program.id}
-                  aria-controls={`program-details-${program.id}`}
+                  aria-expanded={openProgramId === translatedProg.id}
+                  aria-controls={`program-details-${translatedProg.id}`}
                 >
-                  <h2 className={`font-oswald text-2xl md:text-3xl font-bold uppercase tracking-tight transition-all duration-300 ${openProgramId === program.id ? 'text-red-varese scale-105 origin-left' : 'text-white hover:text-red-varese/80'}`}>{program.title}</h2>
-                  {openProgramId === program.id ? <ChevronUp className="text-red-varese scale-125 transition-transform" /> : <ChevronDown className="hover:text-red-varese transition-colors" />}
+                  <h2 className={`font-oswald text-2xl md:text-3xl font-bold uppercase tracking-tight transition-all duration-300 ${openProgramId === translatedProg.id ? 'text-red-varese scale-105 origin-left' : 'text-white hover:text-red-varese/80'}`}>{translatedProg.title}</h2>
+                  {openProgramId === translatedProg.id ? <ChevronUp className="text-red-varese scale-125 transition-transform" /> : <ChevronDown className="hover:text-red-varese transition-colors" />}
                 </button>
-                {openProgramId === program.id && (
+                {openProgramId === translatedProg.id && (
                   <div 
-                    id={`program-details-${program.id}`}
+                    id={`program-details-${translatedProg.id}`}
                     className="px-4 md:px-6 pb-6 animate-in fade-in duration-500 relative overflow-hidden"
                   >
                     {/* Modern Decors */}
@@ -1637,18 +1657,18 @@ const App: React.FC = () => {
                       <div className="grid grid-cols-2 md:grid-cols-2 gap-x-4 md:gap-x-8 gap-y-2 md:gap-y-4 mb-4 md:mb-6">
                         <div>
                           <p className="text-red-varese text-[10px] md:text-xs font-bold uppercase tracking-widest mb-0.5 md:mb-1">Target</p>
-                          <p className="text-gray-300 text-[10px] md:text-base leading-tight">{program.target}</p>
+                          <p className="text-gray-300 text-[10px] md:text-base leading-tight">{translatedProg.target}</p>
                         </div>
                         <div>
                           <p className="text-red-varese text-[10px] md:text-xs font-bold uppercase tracking-widest mb-0.5 md:mb-1">Timing</p>
-                          <p className="text-gray-300 text-[10px] md:text-base leading-tight">{program.timing}</p>
+                          <p className="text-gray-300 text-[10px] md:text-base leading-tight">{translatedProg.timing}</p>
                         </div>
                       </div>
-                      <img src={program.detailImage || program.image} alt={program.title} className="w-full aspect-video object-cover rounded-lg my-6" />
-                      <div className="mb-6"><FormattedText text={program.details} /></div>
+                      <img src={translatedProg.detailImage || translatedProg.image} alt={translatedProg.title} className="w-full aspect-video object-cover rounded-lg my-6" />
+                      <div className="mb-6"><FormattedText text={translatedProg.details} programId={translatedProg.id} /></div>
                       <h4 className="text-white font-oswald text-lg md:text-xl font-bold uppercase tracking-widest mb-4 border-b border-red-varese/30 pb-2 inline-block">Key Highlights</h4>
                       <div className="grid grid-cols-2 sm:grid-cols-2 gap-x-3 md:gap-x-6 gap-y-1.5 md:gap-y-2">
-                        {program.highlights.map((h, i) => (
+                        {translatedProg.highlights.map((h, i) => (
                           <div key={i} className="flex items-center gap-2 md:gap-3">
                             <CheckCircle2 size={12} md:size={16} className="text-red-varese flex-shrink-0" />
                             <span className="text-gray-300 text-[10px] md:text-sm leading-tight">{h}</span>
@@ -1666,7 +1686,7 @@ const App: React.FC = () => {
                   </div>
                 )}
               </div>
-            ))}
+            )})}
           </div>
         </div>
       </main>
@@ -1708,7 +1728,14 @@ const App: React.FC = () => {
     
           {/* Info Boxes Section */}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 md:-mt-16 relative z-20 mb-8 md:mb-12">
-            <div className="grid grid-cols-4 justify-center gap-2 md:gap-8 animate-in slide-in-from-bottom-4 duration-700 delay-300">
+            {program.id === 'summer-camp' && (
+              <div className="flex justify-center mb-6 md:mb-8 animate-in slide-in-from-bottom-4 duration-700 delay-200">
+                <div className="bg-red-varese text-white font-bold uppercase tracking-widest text-sm md:text-lg px-8 py-3 rounded-full shadow-xl shadow-red-600/30 border-2 border-white">
+                  Limited spots available
+                </div>
+              </div>
+            )}
+            <div className="grid grid-cols-5 justify-center gap-2 md:gap-8 animate-in slide-in-from-bottom-4 duration-700 delay-300">
               <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-1 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
                 <span className="text-red-varese text-[7px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">Target Audience</span>
                 <span className="text-black text-[8px] md:text-base font-medium leading-tight block">{program.target}</span>
@@ -1725,7 +1752,18 @@ const App: React.FC = () => {
               </div>
               <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-1 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
                 <span className="text-red-varese text-[7px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">Subscription Deadline</span>
-                <span className="text-black text-[8px] md:text-base font-medium leading-tight block"></span>
+                <span className="text-black text-[8px] md:text-base font-medium leading-tight block">{program.deadline || '-'}</span>
+              </div>
+              <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-1 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
+                <span className="text-red-varese text-[7px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">Pricing</span>
+                <span className="text-black text-[8px] md:text-base font-medium leading-tight block">
+                  {program.id === 'summer-camp' ? '€990 or €690' : 
+                   program.id === 'academy' ? '€490 or €650/year' :
+                   program.id === 'full-time' ? '€15.000/year' :
+                   program.id === 'internship' ? '€1.500/month' :
+                   program.id === 'summer-prog' ? 'TBD together' :
+                   t('contactUs')}
+                </span>
               </div>
             </div>
           </div>
@@ -2102,18 +2140,20 @@ const App: React.FC = () => {
             </div>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-12">
-                {STAFF.map((member) => (
-                  <div key={member.name} className="group cursor-pointer">
+                {STAFF.map((member) => {
+                  const translatedMember = translateStaff(member, lang);
+                  return (
+                  <div key={translatedMember.name} className="group cursor-pointer">
                     <div className="relative overflow-hidden aspect-[3/4] mb-4 md:mb-8 rounded-lg border border-white/5 shadow-2xl">
-                      <img src={member.image} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" alt={member.name} />
+                      <img src={translatedMember.image} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" alt={translatedMember.name} />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
                       <div className="absolute bottom-3 left-3 right-3 md:bottom-6 md:left-6 md:right-6">
-                        <p className="text-red-varese font-bold uppercase text-[8px] md:text-[12px] tracking-[0.2em] mb-0.5 md:mb-1">{member.role}</p>
-                        <h3 className="font-oswald text-lg md:text-3xl font-bold uppercase leading-tight">{member.name}</h3>
+                        <p className="text-red-varese font-bold uppercase text-[8px] md:text-[12px] tracking-[0.2em] mb-0.5 md:mb-1">{translatedMember.role}</p>
+                        <h3 className="font-oswald text-lg md:text-3xl font-bold uppercase leading-tight">{translatedMember.name}</h3>
                       </div>
                     </div>
                     <ul className="space-y-1.5 md:space-y-4 text-gray-300 text-[10px] md:text-lg tracking-wide">
-                      {member.bio.map((point, i) => (
+                      {translatedMember.bio.map((point, i) => (
                         <li key={i} className="flex items-start gap-1.5 md:gap-3">
                           <div className="w-1 md:w-2 h-1 md:h-2 bg-red-varese rounded-full mt-1.5 md:mt-2 flex-shrink-0"></div>
                           <span className="leading-tight">{point}</span>
@@ -2121,7 +2161,7 @@ const App: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-                ))}
+                )})}
               </div>
             </div>
           </section>
@@ -2325,7 +2365,7 @@ const App: React.FC = () => {
                 </div>
                 <div className="space-y-1.5"><label className="text-[10px] font-bold uppercase tracking-widest text-red-varese">{t('email')}</label><input required type="email" name="email" value={formState.email} onChange={handleFormChange} placeholder={t('emailPlaceholder')} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-varese transition-colors" /></div>
                 <div className="space-y-1.5"><label className="text-[10px] font-bold uppercase tracking-widest text-red-varese">{t('organization')}</label><input required type="text" name="organization" value={formState.organization} onChange={handleFormChange} placeholder={t('organizationPlaceholder')} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-varese transition-colors" /></div>
-                <div className="space-y-1.5 relative"><label className="text-[10px] font-bold uppercase tracking-widest text-red-varese">{t('topicSelect')}</label><div className="relative"><select required name="program" value={formState.program} onChange={handleFormChange} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white appearance-none focus:outline-none focus:border-red-varese transition-colors cursor-pointer"><option value="" disabled className="bg-zinc-900">{t('selectOption')}</option><option value="General Information" className="bg-zinc-900">{t('generalInformation')}</option>{PROGRAMS.map(p => <option key={p.id} value={p.title} className="bg-zinc-900">{p.title}</option>)}</select><ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none" size={18} /></div></div>
+                <div className="space-y-1.5 relative"><label className="text-[10px] font-bold uppercase tracking-widest text-red-varese">{t('topicSelect')}</label><div className="relative"><select required name="program" value={formState.program} onChange={handleFormChange} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white appearance-none focus:outline-none focus:border-red-varese transition-colors cursor-pointer"><option value="" disabled className="bg-zinc-900">{t('selectOption')}</option><option value="General Information" className="bg-zinc-900">{t('generalInformation')}</option>{PROGRAMS.map(p => { const translatedProg = translateProgram(p, lang); return <option key={translatedProg.id} value={translatedProg.title} className="bg-zinc-900">{translatedProg.title}</option>})}</select><ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none" size={18} /></div></div>
                 <div className="space-y-1.5"><label className="text-[10px] font-bold uppercase tracking-widest text-red-varese">{t('messageInfo')}</label><textarea required name="message" value={formState.message} onChange={handleFormChange} rows={4} placeholder={t('messageInfoPlaceholder')} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-varese transition-colors resize-none" /></div>
                 <button type="submit" disabled={!isFormValid()} className={`w-full py-4 font-bold uppercase tracking-[0.2em] rounded-lg transition-all flex items-center justify-center gap-3 ${isFormValid() ? 'bg-red-varese hover:bg-red-700 text-white shadow-xl shadow-red-600/20' : 'bg-white/10 text-gray-500 cursor-not-allowed'}`}>{t('requestMoreInfo')} <Send size={18} /></button>
               </form>

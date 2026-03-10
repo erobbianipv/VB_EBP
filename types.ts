@@ -35,6 +35,7 @@ export interface Program {
   title: string;
   target: string;
   timing: string;
+  deadline?: string;
   description: string;
   overview?: string;
   highlights: string[];
