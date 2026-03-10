@@ -97,6 +97,7 @@ export const PROGRAMS: Program[] = [
     highlights: ["Expert Coaching", "High-quality facilities", "Community engagement"],
     image: "https://i.imgur.com/uTz60Cd.jpeg",
     detailImage: "https://i.imgur.com/ONYoMaE.jpeg",
+    category: 'other',
     details: `A Comprehensive Two-Way Approach
 Our Academy is built on two fundamental pillars designed to serve every aspect of the sport:
 
@@ -109,10 +110,7 @@ Our Academy’s comprehensive training programs are strategically engineered to 
 To maintain our rigorous safety protocols and ensure that coaching standards are perfectly aligned with each player's physical and cognitive maturity, we enforce a strict eligibility cutoff. Consequently, enrollment for the upcoming season is exclusively available to participants born no later than the year 2020. This policy ensures that every athlete receives the specialized attention and age-appropriate instruction necessary for long-term athletic success.
 
 When and where
-Our programs operate on a year-round basis at our premier Varese campus, conveniently located in Via Pirandello. This full-calendar schedule ensures consistent athletic development within a professional environment.
-
-pricing
-Please contact us or click here for detailed pricing information tailored to your specific needs.`
+Our programs operate on a year-round basis at our premier Varese campus, conveniently located in Via Pirandello. This full-calendar schedule ensures consistent athletic development within a professional environment.`
   },
   {
     id: "full-time",
@@ -123,6 +121,7 @@ Please contact us or click here for detailed pricing information tailored to you
     highlights: ["Italian Player Status potential", "Tailored training programs", "Competitive environment"],
     image: "https://i.imgur.com/LaQoOFy.jpeg",
     detailImage: "https://i.imgur.com/KIuuWg2.jpeg",
+    category: 'top',
     details: `target audience
 This elite professional pathway has been meticulously engineered for highly ambitious young athletes who demonstrate a profound commitment to establishing a long-term, high-level career within the competitive European basketball ecosystem. We recognize that the journey to the professional ranks requires more than just talent; it demands a structured, high-performance environment that bridges the gap between youth potential and professional execution.
 The program is strategically tailored to address the unique physiological and technical developmental needs of student-athletes aged strictly between 13 and 17. By focusing on this critical age bracket, we are able to provide a specialized competitive framework that is essential for excelling in the modern professional circuit. Our curriculum ensures that every participant is equipped with the tactical intelligence and physical readiness required to navigate the complexities of European basketball at its highest levels.
@@ -131,6 +130,13 @@ Future Opportunities
 Our recruitment strategy places a high priority on athletes who are no older than 15 years of age at the time of their initial entry into the program. This specific age threshold is a deliberate choice, designed to facilitate the complex legal and athletic process of acquiring Italian Player Status. By starting at this developmental stage, we ensure there is sufficient time to meet the residency and registration requirements mandated by national sports regulations.
 
 By committing to a comprehensive four-year tenure within our integrated system, players are afforded a unique dual-advantage. They can successfully complete the necessary steps to earn their Italian status—providing them with greater flexibility in European professional leagues—while simultaneously maintaining their full eligibility to represent their respective National Teams on the international stage. This structure allows our athletes to broaden their professional horizons without sacrificing their patriotic aspirations.
+
+our offers
+OFFERS_TABLES_PLACEHOLDER
+
+the elite player package
+This package ensures a personalized, high-intensity environment where every minute on the court is optimized for elite-level growth. The elite player package is only available for the Premium Program
+ELITE_PACKAGE_PLACEHOLDER
 
 when and where
 Our premium facilities—including the Foresteria Elite Housing and the via Pirandello Campus—are strategically located within a 5-minute walk of each other. This integrated layout optimizes daily transitions for the duration of the program, which runs from late August through late June, allowing athletes to focus entirely on their rigorous training schedule.
@@ -148,6 +154,7 @@ Please contact us or click here for detailed pricing information tailored to you
     highlights: ["Serie A techniques", "Elite Competition", "Performance Analytics"],
     image: "https://i.imgur.com/ngjbsbC.jpeg",
     detailImage: "https://i.imgur.com/VWTefpE.jpeg",
+    category: 'top',
     details: `target audience
 This premier summer experience has been exclusively designed and curated for a select group of ambitious young athletes, specifically those born between 2007 and 2012, who demonstrate an unwavering commitment to achieving elite-level performance. We understand that the off-season is a critical window for growth, and this program serves as the definitive platform for players who are serious about their athletic trajectory and long-term development.
 To facilitate this growth, the program offers a sophisticated and high-intensity training environment that is meticulously tailored to meet the needs of high-potential players. Our primary objective is to provide these athletes with the advanced technical tools and tactical insights necessary to refine their individual skill sets. By immersing participants in a professional-grade atmosphere, we empower them to elevate their game to a standard that meets the rigorous demands of the modern professional circuit.
@@ -183,6 +190,7 @@ TABLES_PLACEHOLDER`
     highlights: ["Methodology Study", "Practice Observation", "Staff Integration"],
     image: "https://i.imgur.com/RQQuoWs.jpeg",
     detailImage: "https://i.imgur.com/eRNwmeQ.jpeg",
+    category: 'other',
     details: `target audience
 We invite you to step into the prestigious world of elite European basketball with an unparalleled opportunity to integrate directly with the professional coaching staff at Pallacanestro Varese. This immersive program has been specifically designed for ambitious international coaches who are not merely looking for a seminar, but are eager to gain firsthand, high-level experience within a high-stakes, professional environment. By working alongside our technical team, participants will witness the daily operations, tactical planning, and player management strategies that define top-tier European competition.
 
@@ -214,6 +222,7 @@ Please contact us or click here for detailed pricing information tailored to you
     highlights: ["Intensity Training", "Elite Competition", "Skill Development"],
     image: "https://i.imgur.com/K09B4ge.png",
     detailImage: "https://i.imgur.com/C9Jvhwq.jpeg",
+    category: 'other',
     details: `pro-level program
 Our all-inclusive, minimum seven-day formula has been strategically developed to provide an elite, high-performance environment that effectively eliminates every possible outside distraction. By providing a seamless, fully managed logistical experience, we allow both the coaching staff and the players to dedicate their entire focus to intensive skill development and the critical process of building team chemistry. We believe that by removing the administrative and logistical burdens of travel, the group can achieve a level of synergy and growth that is simply not possible in a standard training setting.
 
@@ -230,5 +239,27 @@ Experience elite 400 sqm accommodations with private gardens, located just five 
 pricing
 Please contact us or click here for detailed pricing information tailored to your specific needs.`,
     successStoryLink: "https://www.instagram.com/reel/C87rC5aI2Xz/"
+  },
+  {
+    id: "player-package",
+    title: "ELITE PLAYER PACKAGE",
+    target: "2007 to 2012",
+    timing: "Year-Round",
+    description: "Unlock your full potential through our exclusive 1-on-1 Individual Sessions, a data-driven program designed for the modern elite athlete. This is not just coaching; it is a high-tech athletic audit where every movement is measured and every drill is purposeful. Utilizing advanced anthropometric assessments and cutting-edge performance analytics, we create a digital blueprint of your physical and technical profile. Our specialists track your biomechanics and efficiency in real-time, translating complex data into a customized development plan. By merging elite Serie A methodologies with personalized 1-on-1 mentorship, we provide the ultimate environment to refine your skills, optimize your physical frame, and achieve professional-grade mastery.",
+    highlights: ["Customized trainings sessions", "Elite staff", "Insights & analytics"],
+    image: "https://i.imgur.com/B58BpNm.jpeg",
+    detailImage: "https://i.imgur.com/kRADld5.jpeg",
+    category: 'other',
+    details: `target audience
+This exclusive package is designed for ambitious young athletes born between 2007 and 2012 who are determined to reach the next level of their basketball career. Whether you are looking to refine your technical skills, improve your physical conditioning, or gain a deeper understanding of the game through analytics, this program provides the professional tools and environment necessary for elite-level growth.
+
+what we offer
+Every player is unique, and so is our approach. Each participant receives a personalized training plan tailored to their specific strengths, weaknesses, and long-term goals. Our elite coaching staff works closely with each athlete to ensure that every session is optimized for maximum development, focusing on advanced technical drills and tactical decision-making. Train under the guidance of our professional coaching staff, the same experts who drive our Serie A team. In addition to on-court training, players will benefit from advanced performance analytics, gaining valuable insights into their game through data-driven feedback. This holistic approach ensures that athletes not only improve physically but also develop the high-level basketball IQ required for professional success.
+
+our facilities
+The Elite Player Package is available year-round at our premier facilities in Varese. We offer flexible scheduling to accommodate the needs of international players, with options for short-term intensive cycles or long-term developmental programs. Our integrated campus and elite housing provide the perfect environment for focused, professional training.
+
+pricing
+€1.000/10 sessions`
   }
 ];

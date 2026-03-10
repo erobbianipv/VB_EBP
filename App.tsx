@@ -67,7 +67,8 @@ const TRANSLATIONS = {
     'campus2_0_desc': "Il nostro campus sportivo sta subendo una trasformazione da 3 milioni di euro per integrare spazi amministrativi e di coworking ad alta tecnologia. Questo investimento fornirà uffici moderni ed ergonomici progettati per ottimizzare la gestione sportiva e favorire la collaborazione professionale. Unendo l'eccellenza atletica con spazi di lavoro di alta qualità, il campus rinnovato diventerà un centro di primo livello per squadre e staff.",
     // Opportunities
     elitePrograms: "Programmi d'Elite",
-    eliteOpportunities: "Opportunità d'Elite",
+    ourTopPrograms: "I Nostri Migliori Programmi",
+    eliteOpportunities: "Altre Opportunità d'Elite",
     opportunitiesDesc: "Un ecosistema completo per la prossima generazione di eccellenza nel basket",
     ourProgramsInDetail: "I Nostri Programmi in Dettaglio",
     ourProgramsInDetailDesc: "Un'analisi approfondita della struttura, degli obiettivi e dei vantaggi di ogni programma d'elite che offriamo.",
@@ -203,7 +204,8 @@ const TRANSLATIONS = {
     'campus2_0_desc': "Our sports campus is undergoing a transformative €3 million renovation to integrate high-tech administrative and coworking spaces. This investment will deliver modern, ergonomic offices designed to streamline sports management and foster professional collaboration. By blending athletic excellence with premium workspace, the upgraded campus will serve as a premier hub for both teams and staff.",
     // Opportunities
     elitePrograms: "Elite Programs",
-    eliteOpportunities: "Elite Opportunities",
+    ourTopPrograms: "Our Top Programs",
+    eliteOpportunities: "Other Elite Opportunities",
     opportunitiesDesc: "A complete ecosystem for the next generation of basketball excellence",
     ourProgramsInDetail: "Our Programs in Detail",
     ourProgramsInDetailDesc: "A deep dive into the structure, objectives, and benefits of each elite program we offer.",
@@ -333,7 +335,8 @@ const TRANSLATIONS = {
     'campus2_0_desc': "Nuestro campus deportivo está siendo sometido a una renovación transformadora de 3 millones de euros para integrar espacios administrativos y de coworking de alta tecnología. Esta inversión proporcionará oficinas modernas y ergonómicas diseñadas para optimizar la gestión deportiva y fomentar la colaboración profesional. Al combinar la excelencia atlética con un espacio de trabajo de primera calidad, el campus mejorado servirá como un centro de primer nivel tanto para los equipos como para el personal.",
     // Opportunities
     elitePrograms: "Programas de Élite",
-    eliteOpportunities: "Oportunidades de Élite",
+    ourTopPrograms: "Nuestros Mejores Programas",
+    eliteOpportunities: "Otras Oportunidades de Élite",
     opportunitiesDesc: "Un ecosistema completo para la próxima generación de excelencia en el baloncesto",
     ourProgramsInDetail: "Nuestros Programas en Detalle",
     ourProgramsInDetailDesc: "Un análisis profundo de la estructura, los objetivos y los beneficios de cada programa de élite que ofrecemos.",
@@ -451,7 +454,8 @@ const TRANSLATIONS = {
     'campus2_0_desc': "Notre campus sportif fait l'objet d'une rénovation de 3 millions d'euros visant à intégrer des espaces administratifs et de coworking de haute technologie. Cet investissement permettra de créer des bureaux modernes et ergonomiques conçus pour rationaliser la gestion sportive et favoriser la collaboration professionnelle. En alliant l'excellence athlétique à des espaces de travail haut de gamme, le campus modernisé deviendra un pôle de premier plan pour les équipes et le personnel.",
     // Opportunities
     elitePrograms: "Programmes d'Élite",
-    eliteOpportunities: "Opportunités d'Élite",
+    ourTopPrograms: "Nos Meilleurs Programmes",
+    eliteOpportunities: "Autres Opportunités d'Élite",
     opportunitiesDesc: "Un écosystème complet pour la prochaine génération d'excellence du basket-ball",
     ourProgramsInDetail: "Nos Programmes en Détail",
     ourProgramsInDetailDesc: "Une immersion dans la structure, les objectifs et les avantages de chaque programme d'élite que nous proposons.",
@@ -523,7 +527,7 @@ const TRANSLATIONS = {
   }
 };
 
-const FormattedText = ({ text, className = "text-gray-400", programId }: { text: string, className?: string, programId?: string }) => {
+const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'en' }: { text: string, className?: string, programId?: string, lang?: Language }) => {
   if (!text) return null;
 
   const titles = [
@@ -535,6 +539,8 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
     "The Elite Full-Time Training Program",
     "Target Audience & Future Opportunities",
     "Future Opportunities",
+    "the elite player package",
+    "our offers",
     "A Holistic 360° Offer",
     "World-Class Training & Sports Science",
     "Data-Driven Personalization",
@@ -563,6 +569,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
     "Quando e dove",
     "quando e dove",
     "Opportunità Future",
+    "le nostre offerte",
     "Esempio di Routine Giornaliera",
     "Integrazione Professionale d'Elite",
     "programma di livello pro",
@@ -574,6 +581,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
     "Cuándo y dónde",
     "cuándo y dónde",
     "Oportunidades Futuras",
+    "nuestras ofertas",
     "Ejemplo de Rutina Diaria",
     "Integración Profesional de Élite",
     "programa de nivel pro",
@@ -585,6 +593,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
     "Quand et où",
     "quand et où",
     "Opportunités Futures",
+    "nos offres",
     "Exemple de Routine Quotidienne",
     "Intégration Professionnelle d'Élite",
     "programme de niveau pro",
@@ -824,6 +833,115 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
                 </div>
               );
             }
+            if (line.includes("OFFERS_TABLES_PLACEHOLDER")) {
+              return (
+                <div key={lIdx} className="mt-4 flex flex-col md:flex-row gap-6 w-full">
+                  {/* Standard Program Table */}
+                  <div className="flex-1 bg-white p-6 rounded-2xl shadow-lg border border-zinc-200 hover:border-red-varese/30 transition-all">
+                    <div className="text-center mb-6">
+                      <h5 className="font-oswald text-zinc-900 font-bold uppercase tracking-wider text-xl">Standard Program</h5>
+                      <div className="text-red-varese font-black text-2xl mt-1">€15.000/year</div>
+                    </div>
+                    <div className="space-y-3">
+                      {[
+                        "Public school",
+                        "Full time training",
+                        "Athletes will be assigned to groups of their level",
+                        "Full board",
+                        "Private room in our elite housing"
+                      ].map((item, i) => (
+                        <div key={i} className="flex items-center gap-3 text-sm text-zinc-600 font-medium">
+                          <CheckCircle2 size={16} className="text-red-varese flex-shrink-0" />
+                          {item}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Premium Program Table */}
+                  <div className="flex-1 bg-zinc-900 p-6 rounded-2xl shadow-xl border border-red-varese/30 relative overflow-hidden group">
+                    <div className="absolute top-0 right-0 w-24 h-24 bg-red-varese/10 rounded-full -mr-12 -mt-12"></div>
+                    <div className="text-center mb-6 relative z-10">
+                      <h5 className="font-oswald text-white font-bold uppercase tracking-wider text-xl">Premium Program</h5>
+                      <div className="text-red-varese font-black text-2xl mt-1">€30.000/year</div>
+                    </div>
+                    <div className="space-y-3 relative z-10">
+                      {[
+                        "Public school",
+                        "Full time training",
+                        "Athletes will be assigned to groups of their level",
+                        "Full board",
+                        "Private room in our elite housing"
+                      ].map((item, i) => (
+                        <div key={i} className="flex items-center gap-3 text-sm text-zinc-300 font-medium">
+                          <CheckCircle2 size={16} className="text-red-varese flex-shrink-0" />
+                          {item}
+                        </div>
+                      ))}
+                      
+                      <div className="pt-4 mt-4 border-t border-white/10">
+                        <div className="text-red-varese font-black uppercase tracking-widest text-xs mb-3">Elite Player Package</div>
+                        <div className="grid grid-cols-1 gap-2">
+                          {[
+                            "Analytics",
+                            "Advanced stats & insights",
+                            "Video analysis",
+                            "Extra training"
+                          ].map((item, i) => (
+                            <div key={i} className="flex items-center gap-3 text-sm text-white font-bold">
+                              <div className="w-1.5 h-1.5 rounded-full bg-red-varese"></div>
+                              {item}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            }
+            if (line.includes("ELITE_PACKAGE_PLACEHOLDER")) {
+              const packageItems = [
+                {
+                  title: "Analytics",
+                  desc: lang === 'it' ? "Monitoraggio costante delle prestazioni tramite sensori e dati biometrici per ottimizzare ogni sessione di allenamento e prevenire infortuni." : 
+                        lang === 'es' ? "Monitoreo constante del rendimiento a través de sensores y datos biométricos para optimizar cada sesión de entrenamiento y prevenir lesiones." :
+                        lang === 'fr' ? "Suivi constant des performances via des capteurs et des données biométriques pour optimiser chaque séance d'entraînement et prévenir les blessures." :
+                        "Constant performance monitoring through sensors and biometric data to optimize every training session and prevent potential injuries."
+                },
+                {
+                  title: "Advanced stats & insights",
+                  desc: lang === 'it' ? "Analisi approfondita delle statistiche di gioco per identificare punti di forza e aree di miglioramento tattico individuale e di squadra." :
+                        lang === 'es' ? "Análisis profundo de las estadísticas de juego para identificar fortalezas y áreas de mejora táctica individual y de equipo." :
+                        lang === 'fr' ? "Analyse approfondie des statistiques de jeu pour identifier les forces et les domaines d'amélioration tactique individuelle et collective." :
+                        "In-depth analysis of game statistics to identify strengths and areas for individual and team tactical improvement during the season."
+                },
+                {
+                  title: "Video analysis",
+                  desc: lang === 'it' ? "Sessioni dedicate di video review per correggere la tecnica di tiro, i movimenti difensivi e la comprensione del gioco in tempo reale." :
+                        lang === 'es' ? "Sesiones dedicadas de revisión de video para corregir la técnica de tiro, los movimientos defensivos y la comprensión del juego." :
+                        lang === 'fr' ? "Sessions dédiées de revue vidéo pour corriger la technique de tir, les mouvements défensifs et la compréhension du jeu." :
+                        "Dedicated video review sessions to correct shooting technique, defensive movements, and overall game understanding in real-time scenarios."
+                },
+                {
+                  title: "Extra training",
+                  desc: lang === 'it' ? "Allenamenti supplementari personalizzati focalizzati sullo sviluppo delle abilità specifiche richieste per raggiungere il livello professionistico europeo." :
+                        lang === 'es' ? "Entrenamientos suplementarios personalizados enfocados en el desarrollo de las habilidades específicas requeridas para alcanzar el nivel profesional europeo." :
+                        lang === 'fr' ? "Entraînements supplémentaires personnalisés axés sur le développement des compétences spécifiques requises pour atteindre le niveau professionnel européen." :
+                        "Personalized supplemental workouts focused on developing the specific skills required to reach the elite European professional basketball level."
+                }
+              ];
+              return (
+                <div key={lIdx} className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                  {packageItems.map((item, i) => (
+                    <div key={i} className="bg-white border border-zinc-200 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                      <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-2 text-lg">{item.title}</h5>
+                      <p className="text-zinc-600 text-sm leading-relaxed">{item.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              );
+            }
             if (line.includes("TABLES_PLACEHOLDER")) {
               return (
                 <div key={lIdx} className="mt-4 flex flex-col xl:flex-row gap-4 w-full">
@@ -916,6 +1034,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
     if (programId === 'summer-camp') return "https://i.imgur.com/PU1FIpF.png";
     if (programId === 'internship') return "https://i.imgur.com/OzLgJN6.jpeg";
     if (programId === 'summer-prog') return "https://i.imgur.com/fFsfxKt.jpeg";
+    if (programId === 'player-package') return "https://i.imgur.com/kRADld5.jpeg";
     return `https://picsum.photos/seed/${programId}-1/800/600`;
   };
   const getImage2 = () => {
@@ -924,6 +1043,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
     if (programId === 'summer-camp') return "https://i.imgur.com/V5peTOC.png";
     if (programId === 'internship') return "https://i.imgur.com/ZbuFjIf.jpeg";
     if (programId === 'summer-prog') return "https://i.imgur.com/1y909x4.jpeg";
+    if (programId === 'player-package') return "https://i.imgur.com/kRADld5.jpeg";
     return `https://picsum.photos/seed/${programId}-2/800/600`;
   };
   const getImage3 = () => {
@@ -932,6 +1052,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
     if (programId === 'summer-camp') return "https://i.imgur.com/f3NtI5T.png";
     if (programId === 'internship') return "https://i.imgur.com/aJPDUxI.png";
     if (programId === 'summer-prog') return "https://i.imgur.com/Wm6SxMP.png";
+    if (programId === 'player-package') return "https://i.imgur.com/kRADld5.jpeg";
     return `https://picsum.photos/seed/${programId}-3/800/600`;
   };
 
@@ -951,7 +1072,10 @@ const FormattedText = ({ text, className = "text-gray-400", programId }: { text:
           } else if (section.title === 'Sample Daily Routine') {
             imageUrl = getImage3();
             imagePosition = 'left';
-          } else if (idx === 2 && section.title !== 'the training program') {
+          } else if (idx === 2 && section.title !== 'the training program' && programId !== 'full-time') {
+            imageUrl = getImage3();
+            imagePosition = 'right';
+          } else if (idx === 3 && programId === 'full-time') {
             imageUrl = getImage3();
             imagePosition = 'right';
           } else if (section.title === 'Our special guest and CEO') {
@@ -1377,25 +1501,26 @@ const App: React.FC = () => {
     );
   };
 
-    const ProgramsGrid = () => (
+    const ProgramsGrid = ({ category }: { category?: 'top' | 'other' }) => (
     <div className="flex flex-wrap justify-center gap-3 md:gap-10">
-      {PROGRAMS.map((prog) => {
+      {PROGRAMS.filter(p => !category || p.category === category).map((prog) => {
         const translatedProg = translateProgram(prog, lang);
+        const isOther = category === 'other';
         return (
         <div 
           key={translatedProg.id} 
-          className={`relative card-glass rounded-xl md:rounded-2xl overflow-hidden flex flex-col group transition-all duration-300 shadow-xl w-[calc(50%-6px)] md:w-[calc(50%-20px)] lg:w-[calc(33.333%-27px)] ${translatedProg.id === 'full-time' ? 'border-red-varese' : 'hover:border-red-varese'}`}
+          className={`relative card-glass rounded-xl md:rounded-2xl overflow-hidden flex flex-col group transition-all duration-300 shadow-xl w-[calc(50%-6px)] md:w-[calc(50%-20px)] ${isOther ? 'lg:w-[calc(25%-30px)]' : 'lg:w-[calc(33.333%-27px)]'} ${translatedProg.id === 'full-time' ? 'border-red-varese' : 'hover:border-red-varese'}`}
         >
-          <div className="h-32 sm:h-48 md:h-64 overflow-hidden relative">
+          <div className={`overflow-hidden relative ${isOther ? 'h-24 sm:h-32 md:h-40 lg:h-44' : 'h-32 sm:h-48 md:h-64'}`}>
             <img src={translatedProg.image} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" alt={translatedProg.title} />
             <div className="absolute top-2 left-2 md:top-4 md:left-4 bg-red-varese text-white px-2 py-0.5 md:px-3 md:py-1 text-[8px] md:text-[10px] font-bold tracking-widest uppercase rounded">
               {translatedProg.timing}
             </div>
           </div>
-          <div className="p-3 sm:p-5 md:p-8 flex-grow flex flex-col">
-            <h3 className="font-oswald text-xs sm:text-lg md:text-2xl font-bold uppercase mb-1 md:mb-2 group-hover:text-red-varese transition-colors line-clamp-1">{translatedProg.title}</h3>
-            <p className="text-red-varese text-[7px] sm:text-[10px] font-bold uppercase tracking-widest mb-2 md:mb-4 flex-grow line-clamp-1">{translatedProg.target}</p>
-            <div className="space-y-1 md:space-y-3 mb-4 md:mb-8 hidden sm:block">
+          <div className={`flex-grow flex flex-col ${isOther ? 'p-2 sm:p-3 md:p-4' : 'p-3 sm:p-5 md:p-8'}`}>
+            <h3 className={`font-oswald font-bold uppercase mb-1 md:mb-2 group-hover:text-red-varese transition-colors line-clamp-1 ${isOther ? 'text-[10px] sm:text-sm md:text-lg' : 'text-xs sm:text-lg md:text-2xl'}`}>{translatedProg.title}</h3>
+            <p className={`text-red-varese font-bold uppercase tracking-widest mb-2 md:mb-4 flex-grow line-clamp-1 ${isOther ? 'text-[6px] sm:text-[8px] md:text-[9px]' : 'text-[7px] sm:text-[10px]'}`}>{translatedProg.target}</p>
+            <div className={`space-y-1 md:space-y-3 mb-4 md:mb-8 hidden sm:block ${isOther ? 'hidden' : ''}`}>
               {translatedProg.highlights.map((h, i) => (
                 <div key={i} className="flex items-center gap-2 md:gap-3 text-[9px] md:text-[11px] font-semibold text-gray-300 uppercase tracking-wider">
                   <CheckCircle2 size={12} className="text-red-varese flex-shrink-0" /> {h}
@@ -1665,7 +1790,7 @@ const App: React.FC = () => {
                         </div>
                       </div>
                       <img src={translatedProg.detailImage || translatedProg.image} alt={translatedProg.title} className="w-full aspect-video object-cover rounded-lg my-6" />
-                      <div className="mb-6"><FormattedText text={translatedProg.details} programId={translatedProg.id} /></div>
+                      <div className="mb-6"><FormattedText text={translatedProg.details} programId={translatedProg.id} lang={lang} /></div>
                       <h4 className="text-white font-oswald text-lg md:text-xl font-bold uppercase tracking-widest mb-4 border-b border-red-varese/30 pb-2 inline-block">Key Highlights</h4>
                       <div className="grid grid-cols-2 sm:grid-cols-2 gap-x-3 md:gap-x-6 gap-y-1.5 md:gap-y-2">
                         {translatedProg.highlights.map((h, i) => (
@@ -1735,7 +1860,7 @@ const App: React.FC = () => {
                 </div>
               </div>
             )}
-            <div className="grid grid-cols-5 justify-center gap-2 md:gap-8 animate-in slide-in-from-bottom-4 duration-700 delay-300">
+            <div className={`grid ${program.id === 'academy' || program.id === 'player-package' ? 'grid-cols-4' : 'grid-cols-5'} justify-center gap-2 md:gap-8 animate-in slide-in-from-bottom-4 duration-700 delay-300`}>
               <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-1 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
                 <span className="text-red-varese text-[7px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">Target Audience</span>
                 <span className="text-black text-[8px] md:text-base font-medium leading-tight block">{program.target}</span>
@@ -1747,24 +1872,28 @@ const App: React.FC = () => {
               <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-1 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
                 <span className="text-red-varese text-[7px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">Where</span>
                 <span className="text-black text-[8px] md:text-base font-medium leading-tight block">
-                  {program.id === 'academy' ? 'Campus, Varese' : 'Foresteria & Campus'}
+                  {program.id === 'academy' || program.id === 'player-package' ? 'Campus, Varese' : 'Foresteria & Campus'}
                 </span>
               </div>
-              <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-1 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
-                <span className="text-red-varese text-[7px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">Subscription Deadline</span>
-                <span className="text-black text-[8px] md:text-base font-medium leading-tight block">{program.deadline || '-'}</span>
-              </div>
-              <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-1 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
-                <span className="text-red-varese text-[7px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">Pricing</span>
-                <span className="text-black text-[8px] md:text-base font-medium leading-tight block">
-                  {program.id === 'summer-camp' ? '€990 or €690' : 
-                   program.id === 'academy' ? '€490 or €650/year' :
-                   program.id === 'full-time' ? '€15.000/year' :
-                   program.id === 'internship' ? '€1.500/month' :
-                   program.id === 'summer-prog' ? 'TBD together' :
-                   t('contactUs')}
-                </span>
-              </div>
+              {program.id !== 'player-package' && (
+                <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-1 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
+                  <span className="text-red-varese text-[7px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">Subscription Deadline</span>
+                  <span className="text-black text-[8px] md:text-base font-medium leading-tight block">{program.deadline || '-'}</span>
+                </div>
+              )}
+              {program.id !== 'academy' && (
+                <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-1 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
+                  <span className="text-red-varese text-[7px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">Pricing</span>
+                  <span className="text-black text-[8px] md:text-base font-medium leading-tight block">
+                    {program.id === 'summer-camp' ? '€990 or €690' : 
+                     program.id === 'player-package' ? '€1.000/10 sessions' :
+                     program.id === 'full-time' ? '€15.000/year or €30.000/year' :
+                     program.id === 'internship' ? '€1.500/month' :
+                     program.id === 'summer-prog' ? 'TBD together' :
+                     t('contactUs')}
+                  </span>
+                </div>
+              )}
             </div>
           </div>
 
@@ -1904,7 +2033,7 @@ const App: React.FC = () => {
           {program.details && (
             <div className="w-full bg-zinc-50 border-y border-zinc-200 mt-16 py-16">
               <div className="w-full px-4 sm:px-8 lg:px-12">
-                <FormattedText text={program.details} className="text-black" programId={program.id} />
+                <FormattedText text={program.details} className="text-black" programId={program.id} lang={lang} />
                 
                 <div className="mt-16 flex flex-col sm:flex-row gap-4 justify-center items-center max-w-4xl mx-auto">
                   <a
@@ -2206,10 +2335,15 @@ const App: React.FC = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-16">
                 <p className="text-red-varese font-bold uppercase tracking-[0.3em] text-xs mb-4">{t('elitePrograms')}</p>
-                <h2 className="font-oswald text-4xl md:text-6xl font-bold uppercase mb-4">{t('eliteOpportunities')}</h2>
+                <h2 className="font-oswald text-4xl md:text-6xl font-bold uppercase mb-4">{t('ourTopPrograms')}</h2>
                 <p className="text-gray-400 tracking-widest uppercase text-sm">{t('opportunitiesDesc')}</p>
               </div>
-              <ProgramsGrid />
+              <ProgramsGrid category="top" />
+              
+              <div className="text-center mt-24 mb-16">
+                <h2 className="font-oswald text-4xl md:text-6xl font-bold uppercase mb-4">{t('eliteOpportunities')}</h2>
+              </div>
+              <ProgramsGrid category="other" />
             </div>
           </section>
 
@@ -2222,10 +2356,15 @@ const App: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-16">
               <p className="text-red-varese font-bold uppercase tracking-[0.3em] text-xs mb-4">{t('programsTraining')}</p>
-              <h1 className="font-oswald text-5xl md:text-7xl font-bold uppercase mb-4">{t('eliteOpportunities')}</h1>
+              <h1 className="font-oswald text-5xl md:text-7xl font-bold uppercase mb-4">{t('ourTopPrograms')}</h1>
               <p className="text-gray-400 max-w-2xl text-lg uppercase tracking-wider font-light">{t('programsDesc')}</p>
             </div>
-            <ProgramsGrid />
+            <ProgramsGrid category="top" />
+            
+            <div className="mt-24 mb-16">
+              <h2 className="font-oswald text-5xl md:text-7xl font-bold uppercase mb-4">{t('eliteOpportunities')}</h2>
+            </div>
+            <ProgramsGrid category="other" />
           </div>
         </section>
       )}

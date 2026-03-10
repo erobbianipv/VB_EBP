@@ -91,6 +91,13 @@ La nostra strategia di reclutamento attribuisce un'alta priorità agli atleti ch
 
 Impegnandosi in un mandato completo di quattro anni all'interno del nostro sistema integrato, ai giocatori viene offerto un duplice vantaggio unico. Possono completare con successo i passaggi necessari per ottenere il loro status italiano, offrendo loro una maggiore flessibilità nei campionati professionistici europei, pur mantenendo contemporaneamente la loro piena idoneità a rappresentare le rispettive squadre nazionali sul palcoscenico internazionale. Questa struttura consente ai nostri atleti di ampliare i propri orizzonti professionali senza sacrificare le proprie aspirazioni patriottiche.
 
+le nostre offerte
+OFFERS_TABLES_PLACEHOLDER
+
+the elite player package
+Questo pacchetto garantisce un ambiente personalizzato e ad alta intensità dove ogni minuto in campo è ottimizzato per una crescita di livello d'élite. L'elite player package è disponibile solo per il Programma Premium.
+ELITE_PACKAGE_PLACEHOLDER
+
 Quando e dove
 Le nostre strutture premium, tra cui la Foresteria Elite Housing e il Campus di via Pirandello, sono strategicamente posizionate a 5 minuti a piedi l'una dall'altra. Questo layout integrato ottimizza le transizioni quotidiane per la durata del programma, che va da fine agosto a fine giugno, consentendo agli atleti di concentrarsi interamente sul loro rigoroso programma di allenamento.
 
@@ -112,6 +119,13 @@ Nuestra estrategia de reclutamiento otorga una alta prioridad a los atletas que 
 
 Al comprometerse con un mandato completo de cuatro años dentro de nuestro sistema integrado, a los jugadores se les ofrece una doble ventaja única. Pueden completar con éxito los pasos necesarios para obtener su estatus italiano, brindándoles una mayor flexibilidad en las ligas profesionales europeas, al tiempo que mantienen su plena elegibilidad para representar a sus respectivos equipos nacionales en el escenario internacional. Esta estructura permite a nuestros atletas ampliar sus horizontes profesionales sin sacrificar sus aspiraciones patrióticas.
 
+nuestras ofertas
+OFFERS_TABLES_PLACEHOLDER
+
+the elite player package
+Este paquete garantiza un entorno personalizado y de alta intensidad donde cada minuto en la cancha se optimiza para el crecimiento de nivel élite. El elite player package solo está disponible para el Programa Premium.
+ELITE_PACKAGE_PLACEHOLDER
+
 Cuándo y dónde
 Nuestras instalaciones premium, que incluyen la Foresteria Elite Housing y el Campus de via Pirandello, están ubicadas estratégicamente a 5 minutos a pie una de la otra. Este diseño integrado optimiza las transiciones diarias durante la duración del programa, que se extiende desde finales de agosto hasta finales de junio, lo que permite a los atletas concentrarse por completo en su riguroso programa de entrenamiento.
 
@@ -132,6 +146,13 @@ Opportunités Futures
 Notre stratégie de recrutement accorde une priorité absolue aux athlètes qui n'ont pas plus de 15 ans au moment de leur entrée initiale dans le programme. Ce seuil d'âge spécifique est un choix délibéré, conçu pour faciliter le processus juridique et sportif complexe d'acquisition du Statut de Joueur Italien. En commençant à ce stade de développement, nous nous assurons qu'il y a suffisamment de temps pour répondre aux exigences de résidence et d'inscription imposées par les réglementations sportives nationales.
 
 En s'engageant pour un mandat complet de quatre ans au sein de notre système intégré, les joueurs bénéficient d'un double avantage unique. Ils peuvent franchir avec succès les étapes nécessaires pour obtenir leur statut italien — leur offrant une plus grande flexibilité dans les ligues professionnelles européennes — tout en conservant simultanément leur pleine éligibilité pour représenter leurs équipes nationales respectives sur la scène internationale. Cette structure permet à nos athlètes d'élargir leurs horizons professionnels sans sacrifier leurs aspirations patriotiques.
+
+nos offres
+OFFERS_TABLES_PLACEHOLDER
+
+the elite player package
+Ce forfait garantit un environnement personnalisé et de haute intensité où chaque minute sur le terrain est optimisée pour une croissance de niveau élite. L'elite player package est uniquement disponible pour le Programme Premium.
+ELITE_PACKAGE_PLACEHOLDER
 
 Quand et où
 Nos installations haut de gamme, notamment la Foresteria Elite Housing et le Campus de via Pirandello, sont stratégiquement situées à 5 minutes à pied l'une de l'autre. Cet aménagement intégré optimise les transitions quotidiennes pendant la durée du programme, qui s'étend de fin août à fin juin, permettant aux athlètes de se concentrer entièrement sur leur programme d'entraînement rigoureux.

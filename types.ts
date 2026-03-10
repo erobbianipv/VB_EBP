@@ -41,6 +41,7 @@ export interface Program {
   highlights: string[];
   image: string;
   detailImage?: string;
+  category?: 'top' | 'other';
   details: string;
   successStoryLink?: string;
 }
