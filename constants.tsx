@@ -241,6 +241,9 @@ To ensure that every group achieves its unique goals, every single aspect of thi
 target audience
 SUMMER_TARGET_BOXES_PLACEHOLDER
 
+our offer
+SUMMER_OFFER_PLACEHOLDER
+
 We take pride in offering a versatile platform where every team, regardless of their specific competitive level, can find the professional tools and dedicated environment they need to excel.
 
 when and where

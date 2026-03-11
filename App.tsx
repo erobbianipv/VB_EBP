@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import { CLUB_LOGO, ACHIEVEMENTS, STAFF, PROGRAMS, FACILITIES } from './constants';
 import { translateProgram, translateStaff } from './translations';
 import { Program, Facility } from './types';
-import { Trophy, MapPin, Users, Home, GraduationCap, Calendar, ArrowRight, Menu, X, Instagram, Facebook, CheckCircle2, Send, Mail, Linkedin, Star, ChevronDown, ZoomIn, ChevronLeft, ChevronRight, ChevronUp, XCircle, Target, Activity, Brain, BarChart, HeartPulse, Dumbbell } from 'lucide-react';
+import { Trophy, MapPin, Users, Home, GraduationCap, Calendar, ArrowRight, Menu, X, Instagram, Facebook, CheckCircle2, Send, Mail, Linkedin, Star, ChevronDown, ZoomIn, ChevronLeft, ChevronRight, ChevronUp, XCircle, Target, Activity, Brain, BarChart, HeartPulse, Dumbbell, Plus } from 'lucide-react';
 
 type Language = 'it' | 'en' | 'es' | 'fr';
 type View = 'home' | 'programs' | 'palmares' | 'arena' | 'campus' | 'housing' | 'detailedPrograms' | 'programDetail';
@@ -956,28 +956,135 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
             }
             if (line.includes("SUMMER_TARGET_BOXES_PLACEHOLDER")) {
               return (
-                <div key={lIdx} className="mt-4 flex flex-col md:flex-row gap-4 w-full">
-                  <div className="flex-1 bg-white p-6 rounded-xl shadow-sm border border-zinc-200 flex flex-col items-center text-center">
-                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-2 text-lg">Youth National Teams</h5>
-                    <p className="text-zinc-600 text-sm leading-relaxed">
+                <div key={lIdx} className="mt-6 flex flex-col md:flex-row gap-6 w-full">
+                  <div className="flex-1 bg-white p-10 rounded-xl shadow-sm border border-zinc-200 flex flex-col items-center justify-center text-center min-h-[200px]">
+                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-xl">Youth National Teams</h5>
+                    <p className="text-zinc-600 text-base leading-relaxed">
                       {lang === 'it' ? "che vanno dalle categorie U14 a U18" :
                        lang === 'es' ? "que van desde las categorías U14 hasta U18" :
                        lang === 'fr' ? "allant des catégories U14 à U18" :
                        "ranging from the U14 to the U18 categories"}
                     </p>
                   </div>
-                  <div className="flex-1 bg-white p-6 rounded-xl shadow-sm border border-zinc-200 flex flex-col items-center text-center">
-                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-2 text-lg">Junior Programs</h5>
-                    <p className="text-zinc-600 text-sm leading-relaxed">
+                  <div className="flex-1 bg-white p-10 rounded-xl shadow-sm border border-zinc-200 flex flex-col items-center justify-center text-center min-h-[200px]">
+                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-xl">Junior Programs</h5>
+                    <p className="text-zinc-600 text-base leading-relaxed">
                       {lang === 'it' ? "alla ricerca di un ambiente di prestazioni d'élite" :
                        lang === 'es' ? "en busca de un entorno de rendimiento de élite" :
                        lang === 'fr' ? "à la recherche d'un environnement de performance d'élite" :
                        "in search of an elite performance environment"}
                     </p>
                   </div>
-                  <div className="flex-1 bg-white p-6 rounded-xl shadow-sm border border-zinc-200 flex flex-col items-center text-center">
-                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-2 text-lg">Medium Level Senior teams</h5>
-                    <p className="text-zinc-600 text-sm leading-relaxed">
+                  <div className="flex-1 bg-white p-10 rounded-xl shadow-sm border border-zinc-200 flex flex-col items-center justify-center text-center min-h-[200px]">
+                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-xl">Medium Level Senior teams</h5>
+                    <p className="text-zinc-600 text-base leading-relaxed">
+                      {lang === 'it' ? "che cercano una preparazione atletica di alta qualità" :
+                       lang === 'es' ? "que buscan una preparazione atletica di alta qualità" :
+                       lang === 'fr' ? "qui recherchent une preparazione athlétique de haute qualità" :
+                       "who are seeking high-quality athletic preparation"}
+                    </p>
+                  </div>
+                </div>
+              );
+            }
+            /* end of duplicate */
+            if (line.includes("SUMMER_OFFER_PLACEHOLDER")) {
+              const includeItems = [
+                lang === 'it' ? "trasporto da/per l'aeroporto" :
+                lang === 'es' ? "transporte desde/hacia el aeropuerto" :
+                lang === 'fr' ? "transport depuis/vers l'aéroport" :
+                "transportation from/to the airport",
+                lang === 'it' ? "pensione completa" :
+                lang === 'es' ? "pensión completa" :
+                lang === 'fr' ? "pension complète" :
+                "full board",
+                lang === 'it' ? "alloggi d'élite" :
+                lang === 'es' ? "alojamiento de élite" :
+                lang === 'fr' ? "hébergement d'élite" :
+                "elite housing",
+                lang === 'it' ? "strutture di allenamento d'élite" :
+                lang === 'es' ? "instalaciones de entrenamiento de élite" :
+                lang === 'fr' ? "installations d'entraînement d'élite" :
+                "elite training facilities"
+              ];
+              const addItems = [
+                lang === 'it' ? "staff tecnico" :
+                lang === 'es' ? "cuerpo técnico" :
+                lang === 'fr' ? "personnel d'entraîneurs" :
+                "coaching staff",
+                lang === 'it' ? "fisioterapisti" :
+                lang === 'es' ? "fisioterapeutas" :
+                lang === 'fr' ? "physiothérapeutes" :
+                "physiotherapists",
+                lang === 'it' ? "allenamento all'arena" :
+                lang === 'es' ? "entrenamiento en la arena" :
+                lang === 'fr' ? "entraînement à l'arène" :
+                "practice at the arena",
+                lang === 'it' ? "opzioni turistiche" :
+                lang === 'es' ? "opciones turísticas" :
+                lang === 'fr' ? "options touristiques" :
+                "tourist options"
+              ];
+
+              return (
+                <div key={lIdx} className="mt-6 flex flex-col md:flex-row gap-6 w-full">
+                  <div className="flex-1 bg-white p-6 rounded-xl shadow-sm border border-zinc-200">
+                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg text-center">
+                      {lang === 'it' ? "Il programma include" :
+                       lang === 'es' ? "El programa incluye" :
+                       lang === 'fr' ? "Le programme comprend" :
+                       "The program includes"}
+                    </h5>
+                    <div className="space-y-3">
+                      {includeItems.map((item, i) => (
+                        <div key={i} className="flex items-center gap-3 text-sm text-zinc-600 font-medium">
+                          <CheckCircle2 size={16} className="text-red-varese flex-shrink-0" />
+                          {item}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="flex-1 bg-white p-6 rounded-xl shadow-sm border border-zinc-200">
+                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg text-center">
+                      {lang === 'it' ? "Hai la possibilità di aggiungere:" :
+                       lang === 'es' ? "Tienes la oportunidad de añadir:" :
+                       lang === 'fr' ? "Vous avez la possibilité d'ajouter :" :
+                       "You have the chance to add:"}
+                    </h5>
+                    <div className="space-y-3">
+                      {addItems.map((item, i) => (
+                        <div key={i} className="flex items-center gap-3 text-sm text-zinc-600 font-medium">
+                          <Plus size={16} className="text-red-varese flex-shrink-0" />
+                          {item}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              );
+            }
+            if (false) { /* removed */ }
+                  <div className="flex-1 bg-white p-10 rounded-xl shadow-sm border border-zinc-200 flex flex-col items-center justify-center text-center min-h-[200px]">
+                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-xl">Youth National Teams</h5>
+                    <p className="text-zinc-600 text-base leading-relaxed">
+                      {lang === 'it' ? "che vanno dalle categorie U14 a U18" :
+                       lang === 'es' ? "que van desde las categorías U14 hasta U18" :
+                       lang === 'fr' ? "allant des catégories U14 à U18" :
+                       "ranging from the U14 to the U18 categories"}
+                    </p>
+                  </div>
+                  <div className="flex-1 bg-white p-10 rounded-xl shadow-sm border border-zinc-200 flex flex-col items-center justify-center text-center min-h-[200px]">
+                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-xl">Junior Programs</h5>
+                    <p className="text-zinc-600 text-base leading-relaxed">
+                      {lang === 'it' ? "alla ricerca di un ambiente di prestazioni d'élite" :
+                       lang === 'es' ? "en busca de un entorno de rendimiento de élite" :
+                       lang === 'fr' ? "à la recherche d'un environnement de performance d'élite" :
+                       "in search of an elite performance environment"}
+                    </p>
+                  </div>
+                  <div className="flex-1 bg-white p-10 rounded-xl shadow-sm border border-zinc-200 flex flex-col items-center justify-center text-center min-h-[200px]">
+                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-xl">Medium Level Senior teams</h5>
+                    <p className="text-zinc-600 text-base leading-relaxed">
                       {lang === 'it' ? "che cercano una preparazione atletica di alta qualità" :
                        lang === 'es' ? "que buscan una preparación atlética de alta calidad" :
                        lang === 'fr' ? "qui recherchent une préparation athlétique de haute qualité" :
@@ -1251,7 +1358,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
             <div key={idx} className="flex flex-col">
               <div className={`flex flex-col lg:flex-row gap-8 lg:gap-12 items-center ${idx > 0 ? 'mt-8' : ''}`}>
                 {(imageUrl || imageUrls) && imagePosition === 'left' && (
-                  <div className={`flex-1 ${section.title === 'Our special guest and CEO' ? 'lg:flex-[1] max-w-lg mx-auto' : (idx === 1 && programId === 'academy' ? 'lg:flex-none lg:w-1/3 max-w-[350px] mx-auto' : 'lg:flex-[1.5]')} w-full order-2 lg:order-1`}>
+                  <div className={`flex-1 ${section.title === 'Our special guest and CEO' ? 'lg:flex-[1] max-w-lg mx-auto' : (idx === 1 && (programId === 'academy' || programId === 'summer-prog') ? 'lg:flex-none lg:w-1/3 max-w-[350px] mx-auto' : 'lg:flex-[1.5]')} w-full order-2 lg:order-1`}>
                     {imageUrl && <img src={imageUrl} alt={section.title || `Section ${idx + 1}`} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />}
                     {imageUrls && <div className="flex flex-col gap-4">{imageUrls.map((url, i) => <img key={i} src={url} alt={`${section.title || `Section ${idx + 1}`} ${i + 1}`} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />)}</div>}
                   </div>

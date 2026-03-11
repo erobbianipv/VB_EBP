@@ -351,6 +351,9 @@ Per garantire che ogni gruppo raggiunga i propri obiettivi unici, ogni singolo a
 Pubblico di riferimento
 SUMMER_TARGET_BOXES_PLACEHOLDER
 
+la nostra offerta
+SUMMER_OFFER_PLACEHOLDER
+
 Siamo orgogliosi di offrire una piattaforma versatile in cui ogni squadra, indipendentemente dal proprio livello competitivo specifico, può trovare gli strumenti professionali e l'ambiente dedicato di cui ha bisogno per eccellere.
 
 Quando e dove
@@ -373,6 +376,9 @@ Para garantizar que cada grupo logre sus objetivos únicos, cada aspecto de este
 Público objetivo
 SUMMER_TARGET_BOXES_PLACEHOLDER
 
+nuestra oferta
+SUMMER_OFFER_PLACEHOLDER
+
 Nos enorgullecemos de ofrecer una plataforma versátil donde cada equipo, independientemente de su nivel competitivo específico, puede encontrar las herramientas profesionales y el entorno dedicado que necesitan para sobresalir.
 
 Cuándo y dónde
@@ -394,6 +400,9 @@ Pour s'assurer que chaque groupe atteint ses objectifs uniques, chaque aspect de
 
 Public cible
 SUMMER_TARGET_BOXES_PLACEHOLDER
+
+notre offre
+SUMMER_OFFER_PLACEHOLDER
 
 Nous sommes fiers d'offrir une plate-forme polyvalente où chaque équipe, quel que soit son niveau de compétition spécifique, peut trouver les outils professionnels et l'environnement dédié dont elle a besoin pour exceller.
 
