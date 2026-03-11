@@ -105,12 +105,18 @@ Grassroots Excellence: We believe in basketball as a powerful tool for the commu
 
 Elite Player Development: For those dreaming of the big leagues, we provide the ultimate pathway. By offering expert coaching, professional training programs, and access to high-quality facilities, we cultivate the basketball stars of tomorrow.
 
-Target audience
-Our Academy’s comprehensive training programs are strategically engineered to serve a diverse demographic of aspiring youth athletes. We focus our curriculum on a specific developmental window, targeting individuals who fall between the ages of 5 and 19. This range allows us to provide a structured pathway from foundational motor skills to advanced competitive tactics.
-To maintain our rigorous safety protocols and ensure that coaching standards are perfectly aligned with each player's physical and cognitive maturity, we enforce a strict eligibility cutoff. Consequently, enrollment for the upcoming season is exclusively available to participants born no later than the year 2020. This policy ensures that every athlete receives the specialized attention and age-appropriate instruction necessary for long-term athletic success.
+our vision
+Pallacanestro Varese is proud to export its legendary basketball heritage through our Global Academy Expansion Program. We bridge the gap between historic European tradition and international talent by establishing official satellite academies in direct collaboration with National Federations, elite clubs, and sports organizations worldwide. This is not a franchise; it is a strategic technical alignment designed to transplant our proven Serie A methodology into your local basketball ecosystem.
 
-When and where
-Our programs operate on a year-round basis at our premier Varese campus, conveniently located in Via Pirandello. This full-calendar schedule ensures consistent athletic development within a professional environment.`
+the program
+Pallacanestro Varese Academy exports our club’s prestigious heritage and technical excellence to elevate youth basketball worldwide. By partnering with local clubs and national federations, we provide exclusive access to our elite know-how, high-level coaching standards, and strategic organizational expertise. This initiative is designed to foster professional growth through a shared vision, leveraging the power of our brand to drive athletic and operational success on a global scale.
+THE_PILLARS_PLACEHOLDER
+
+target audience
+ACADEMY_TABLES_PLACEHOLDER
+
+contact us
+For more information and to apply for the Basketball Academy program please contact us at f.bellotto@pallacanestrovarese.it`
   },
   {
     id: "full-time",
@@ -133,6 +139,7 @@ By committing to a comprehensive four-year tenure within our integrated system, 
 
 our offers
 OFFERS_TABLES_PLACEHOLDER
+Neither program includes flights, Visa, paper work, transportation from/to the airport, local transportation
 
 the elite player package
 This package ensures a personalized, high-intensity environment where every minute on the court is optimized for elite-level growth. The elite player package is only available for the Premium Program
@@ -207,6 +214,9 @@ Strategic Development: Attend coaches' meetings to understand the tactical and s
 
 Youth Development: Contribute to the future of the sport by assisting the coaching staff of our youth teams.
 
+the program
+INTERNSHIP_TABLE_PLACEHOLDER
+
 when and where
 The program will be hosted across our premier facilities, specifically the Foresteria Elite Housing and our Campus in via Pirandello. These two flagship locations are strategically situated just a 5-minute walk from one another, ensuring seamless transitions between residency and training. This integrated logistical setup allows athletes to maximize their time and focus entirely on their professional development.
 
@@ -229,9 +239,9 @@ Our all-inclusive, minimum seven-day formula has been strategically developed to
 To ensure that every group achieves its unique goals, every single aspect of this program is fully modular and highly flexible. We understand that no two teams have the same objectives; therefore, the curriculum can be precisely tailored to meet your team’s specific technical requirements and individual scheduling needs. Whether you require advanced tactical walkthroughs, intensive physical conditioning, or specific film study sessions, our framework is designed to adapt to your vision, providing a bespoke professional experience from start to finish.
 
 target audience
-Our state-of-the-art facilities and specialized training programs have been specifically engineered to host Youth National Teams, ranging from the U14 to the U18 categories, as well as prestigious Junior Programs in search of an elite performance environment. We understand the unique demands of high-level youth development, and our infrastructure is designed to provide the rigorous standards required by national federations to prepare their next generation of talent for international competition.
+SUMMER_TARGET_BOXES_PLACEHOLDER
 
-In addition to our youth-focused initiatives, we also cater extensively to Medium Level Senior teams who are seeking the perfect strategic balance between professional-grade logistics and high-quality athletic preparation. Whether your objective is the long-term development of emerging young prospects or the meticulous refining of senior-level strategies ahead of a new season, our camp provides the comprehensive, tailored support necessary for success. We take pride in offering a versatile platform where every team, regardless of their specific competitive level, can find the professional tools and dedicated environment they need to excel.
+We take pride in offering a versatile platform where every team, regardless of their specific competitive level, can find the professional tools and dedicated environment they need to excel.
 
 when and where
 Experience elite 400 sqm accommodations with private gardens, located just five minutes from the arena. The camp requires a minimum stay of 1 week (7 days, 6 nights), tailored to your team’s specific needs and availability. To ensure total relaxation, we manage all logistics: two 9-seat vans provide seamless airport transfers for both arrival and departure. This setup offers the perfect balance of privacy and community for a stress-free, professional training experience.

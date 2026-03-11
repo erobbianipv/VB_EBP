@@ -531,6 +531,18 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
   if (!text) return null;
 
   const titles = [
+    "our vision",
+    "the program",
+    "la nostra visione",
+    "il programma",
+    "nuestra visión",
+    "el programa",
+    "notre vision",
+    "le programme",
+    "contact us",
+    "contattaci",
+    "contáctanos",
+    "contactez-nous",
     "A Comprehensive Two-Way Approach",
     "Target audience",
     "target audience",
@@ -900,6 +912,105 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                 </div>
               );
             }
+            if (line.includes("THE_PILLARS_PLACEHOLDER")) {
+              const academyBoxes = [
+                {
+                  title: lang === 'it' ? "Il nostro know-how" :
+                         lang === 'es' ? "Nuestro know-how" :
+                         lang === 'fr' ? "Notre savoir-faire" :
+                         "Our know-how"
+                },
+                {
+                  title: lang === 'it' ? "Metodi di allenamento d'élite" :
+                         lang === 'es' ? "Métodos de entrenamiento de élite" :
+                         lang === 'fr' ? "Méthodes d'entraînement d'élite" :
+                         "Elite training methods"
+                },
+                {
+                  title: lang === 'it' ? "Collaborazione con club, federazioni nazionali o accademie locali" :
+                         lang === 'es' ? "Colaboración con clubes, federaciones nacionales o academias locales" :
+                         lang === 'fr' ? "Collaboration avec des clubs, des fédérations nationales ou des académies locales" :
+                         "Collaboration with clubs, national federations or local academies"
+                },
+                {
+                  title: lang === 'it' ? "Il nostro marchio" :
+                         lang === 'es' ? "Nuestra marca" :
+                         lang === 'fr' ? "Notre marque" :
+                         "Our brand"
+                }
+              ];
+              return (
+                <div key={lIdx} className="mt-8">
+                  <h4 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-xl text-center">
+                    {lang === 'it' ? "I Pilastri" : lang === 'es' ? "Los Pilares" : lang === 'fr' ? "Les Piliers" : "The Pillars"}
+                  </h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {academyBoxes.map((item, i) => (
+                      <div key={i} className="bg-white border border-zinc-200 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex items-center justify-center text-center min-h-[100px]">
+                        <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider text-lg">{item.title}</h5>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            }
+            if (line.includes("SUMMER_TARGET_BOXES_PLACEHOLDER")) {
+              return (
+                <div key={lIdx} className="mt-4 flex flex-col md:flex-row gap-4 w-full">
+                  <div className="flex-1 bg-white p-6 rounded-xl shadow-sm border border-zinc-200 flex flex-col items-center text-center">
+                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-2 text-lg">Youth National Teams</h5>
+                    <p className="text-zinc-600 text-sm leading-relaxed">
+                      {lang === 'it' ? "che vanno dalle categorie U14 a U18" :
+                       lang === 'es' ? "que van desde las categorías U14 hasta U18" :
+                       lang === 'fr' ? "allant des catégories U14 à U18" :
+                       "ranging from the U14 to the U18 categories"}
+                    </p>
+                  </div>
+                  <div className="flex-1 bg-white p-6 rounded-xl shadow-sm border border-zinc-200 flex flex-col items-center text-center">
+                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-2 text-lg">Junior Programs</h5>
+                    <p className="text-zinc-600 text-sm leading-relaxed">
+                      {lang === 'it' ? "alla ricerca di un ambiente di prestazioni d'élite" :
+                       lang === 'es' ? "en busca de un entorno de rendimiento de élite" :
+                       lang === 'fr' ? "à la recherche d'un environnement de performance d'élite" :
+                       "in search of an elite performance environment"}
+                    </p>
+                  </div>
+                  <div className="flex-1 bg-white p-6 rounded-xl shadow-sm border border-zinc-200 flex flex-col items-center text-center">
+                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-2 text-lg">Medium Level Senior teams</h5>
+                    <p className="text-zinc-600 text-sm leading-relaxed">
+                      {lang === 'it' ? "che cercano una preparazione atletica di alta qualità" :
+                       lang === 'es' ? "que buscan una preparación atlética de alta calidad" :
+                       lang === 'fr' ? "qui recherchent une préparation athlétique de haute qualité" :
+                       "who are seeking high-quality athletic preparation"}
+                    </p>
+                  </div>
+                </div>
+              );
+            }
+            if (line.includes("ACADEMY_TABLES_PLACEHOLDER")) {
+              return (
+                <div key={lIdx} className="mt-4 flex flex-col xl:flex-row gap-4 w-full">
+                  <div className="flex-1 bg-white p-6 rounded-xl shadow-sm border border-zinc-200">
+                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg text-center">the next generation</h5>
+                    <p className="text-zinc-600 text-sm leading-relaxed">
+                      {lang === 'it' ? "Questo percorso è progettato per giovani atleti e famiglie che cercano un'introduzione premium al basket. Il nostro obiettivo è la \"Next Generation\" di giocatori che vogliono costruire una solida base tecnica e motoria. Ci rivolgiamo ai genitori che danno priorità agli standard di allenamento professionali e a un ambiente sportivo sano e di alto valore dove i bambini possono innamorarsi del gioco imparando il \"Varese Way\" dal nostro staff certificato." :
+                       lang === 'es' ? "Esta pista está diseñada para jóvenes atletas y familias que buscan una introducción premium al baloncesto. Nuestro objetivo es la \"Next Generation\" de jugadores que desean construir una base técnica y de habilidades motoras sólida como una roca. Apelamos a los padres que priorizan los estándares de entrenamiento profesional y un entorno deportivo saludable y de alto valor donde los niños pueden enamorarse del juego mientras aprenden el \"Varese Way\" de nuestro personal certificado." :
+                       lang === 'fr' ? "Ce parcours est conçu pour les jeunes athlètes et les familles à la recherche d'une introduction premium au basketball. Notre cible est la \"Next Generation\" de joueurs qui souhaitent construire une base technique et motrice solide. Nous nous adressons aux parents qui privilégient des normes d'entraînement professionnelles et un environnement sportif sain et de grande valeur où les enfants peuvent tomber amoureux du jeu tout en apprenant le \"Varese Way\" de notre personnel certifié." :
+                       "This track is designed for young athletes and families seeking a premium introduction to basketball. Our target is the \"Next Generation\" of players who want to build a rock-solid technical and motor-skill foundation. We appeal to parents who prioritize professional coaching standards and a healthy, high-value sports environment where children can fall in love with the game while learning the \"Varese Way\" from our certified staff."}
+                    </p>
+                  </div>
+                  <div className="flex-1 bg-white p-6 rounded-xl shadow-sm border border-zinc-200">
+                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg text-center">high-potential prospects</h5>
+                    <p className="text-zinc-600 text-sm leading-relaxed">
+                      {lang === 'it' ? "Questo percorso si rivolge a prospetti ad alto potenziale che stanno già gareggiando ad alto livello e mirano a una carriera professionale. Il nostro pubblico qui include atleti, agenzie e federazioni alla ricerca della \"Pro Experience\" definitiva. Questi giocatori cercano l'audit tecnico completo: dal tutoraggio dello staff di Serie A e sessioni esclusive con Luis Scola fino all'analisi dei dati avanzata e alle strategie di gestione della carriera. Questo è per l'atleta pronto a colmare il divario tra l'eccellenza giovanile e i circuiti professionali senior." :
+                       lang === 'es' ? "Esta pista está dirigida a prospectos de alto potencial que ya compiten a un alto nivel y aspiran a una carrera profesional. Nuestra audiencia aquí incluye atletas, agencias y federaciones que buscan la \"Pro Experience\" definitiva. Estos jugadores buscan la auditoría técnica completa: desde la tutoría del personal de la Serie A y sesiones exclusivas con Luis Scola hasta el análisis de datos avanzado y las estrategias de gestión de carrera. Esto es para el atleta listo para cerrar la brecha entre la excelencia juvenil y los circuitos profesionales senior." :
+                       lang === 'fr' ? "Ce parcours cible les espoirs à fort potentiel qui évoluent déjà à un haut niveau et visent une carrière professionnelle. Notre public ici comprend des athlètes, des agences et des fédérations à la recherche de l'ultime \"Pro Experience\". Ces joueurs recherchent l'audit technique complet : du mentorat par le personnel de Serie A et des sessions exclusives avec Luis Scola à l'analyse de données avancée et aux stratégies de gestion de carrière. C'est pour l'athlète prêt à combler le fossé entre l'excellence des jeunes et les circuits professionnels seniors." :
+                       "This track targets high-potential prospects who are already competing at a high level and aiming for a professional career. Our audience here includes athletes, agencies, and federations looking for the ultimate \"Pro Experience.\" These players seek the full technical audit: from Serie A staff mentorship and exclusive sessions with Luis Scola to advanced Data Analytics and career management strategies. This is for the athlete ready to bridge the gap between youth excellence and the senior professional circuits."}
+                    </p>
+                  </div>
+                </div>
+              );
+            }
             if (line.includes("ELITE_PACKAGE_PLACEHOLDER")) {
               const packageItems = [
                 {
@@ -939,6 +1050,42 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                       <p className="text-zinc-600 text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   ))}
+                </div>
+              );
+            }
+            if (line.includes("INTERNSHIP_TABLE_PLACEHOLDER")) {
+              return (
+                <div key={lIdx} className="mt-4 flex flex-col gap-4 w-full">
+                  <div className="bg-white p-6 rounded-xl shadow-sm border border-zinc-200">
+                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg text-center">the program includes</h5>
+                    <div className="flex flex-col gap-6">
+                      <div className="flex flex-col">
+                        <h6 className="font-bold text-zinc-800 mb-2 border-b border-zinc-100 pb-1">Accommodation</h6>
+                        <ul className="list-disc pl-5 text-zinc-600 text-sm space-y-1">
+                          <li>Housing: Single room occupancy in our dorm</li>
+                          <li>Food: Lunch & Dinner</li>
+                        </ul>
+                      </div>
+                      <div className="flex flex-col">
+                        <h6 className="font-bold text-zinc-800 mb-2 border-b border-zinc-100 pb-1">Coaching</h6>
+                        <ul className="list-disc pl-5 text-zinc-600 text-sm space-y-1">
+                          <li>Serie A Practice attendance</li>
+                          <li>Coaches meetings</li>
+                          <li>Run drills with Serie A Players</li>
+                          <li>Players scouting</li>
+                          <li>Serie A games attendance</li>
+                          <li>Youth teams assistant coach</li>
+                          <li>Hudl video analysis</li>
+                        </ul>
+                      </div>
+                      <div className="flex flex-col">
+                        <h6 className="font-bold text-zinc-800 mb-2 border-b border-zinc-100 pb-1">Resume opportunity</h6>
+                        <ul className="list-disc pl-5 text-zinc-600 text-sm space-y-1">
+                          {/* Empty as per request, or we can just leave the subtitle */}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               );
             }
@@ -1000,6 +1147,16 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                 </h4>
               );
             }
+            if (line.includes("f.bellotto@pallacanestrovarese.it")) {
+              const parts = line.split("f.bellotto@pallacanestrovarese.it");
+              return (
+                <p key={lIdx}>
+                  {parts[0]}
+                  <a href="mailto:f.bellotto@pallacanestrovarese.it?subject=Basketball%20Academy%20program%20-%20info%20request" className="text-red-varese underline font-bold hover:text-red-700">f.bellotto@pallacanestrovarese.it</a>
+                  {parts[1]}
+                </p>
+              );
+            }
             if (line.includes("click here")) {
               const parts = line.split("click here");
               return (
@@ -1038,7 +1195,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
     return `https://picsum.photos/seed/${programId}-1/800/600`;
   };
   const getImage2 = () => {
-    if (programId === 'academy') return "https://i.imgur.com/JTzHWi8.jpeg";
+    if (programId === 'academy') return "https://i.imgur.com/80WI5TR.png";
     if (programId === 'full-time') return "https://i.imgur.com/uRj4KZi.jpeg";
     if (programId === 'summer-camp') return "https://i.imgur.com/V5peTOC.png";
     if (programId === 'internship') return "https://i.imgur.com/ZbuFjIf.jpeg";
@@ -1047,7 +1204,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
     return `https://picsum.photos/seed/${programId}-2/800/600`;
   };
   const getImage3 = () => {
-    if (programId === 'academy') return "https://i.imgur.com/nEVjk4X.png";
+    if (programId === 'academy') return "https://i.imgur.com/QgRPCiU.jpeg";
     if (programId === 'full-time') return "https://i.imgur.com/8MA9g3s.png";
     if (programId === 'summer-camp') return "https://i.imgur.com/f3NtI5T.png";
     if (programId === 'internship') return "https://i.imgur.com/aJPDUxI.png";
@@ -1094,13 +1251,13 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
             <div key={idx} className="flex flex-col">
               <div className={`flex flex-col lg:flex-row gap-8 lg:gap-12 items-center ${idx > 0 ? 'mt-8' : ''}`}>
                 {(imageUrl || imageUrls) && imagePosition === 'left' && (
-                  <div className={`flex-1 ${section.title === 'Our special guest and CEO' ? 'lg:flex-[1] max-w-lg mx-auto' : 'lg:flex-[1.5]'} w-full order-2 lg:order-1`}>
+                  <div className={`flex-1 ${section.title === 'Our special guest and CEO' ? 'lg:flex-[1] max-w-lg mx-auto' : (idx === 1 && programId === 'academy' ? 'lg:flex-none lg:w-1/3 max-w-[350px] mx-auto' : 'lg:flex-[1.5]')} w-full order-2 lg:order-1`}>
                     {imageUrl && <img src={imageUrl} alt={section.title || `Section ${idx + 1}`} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />}
                     {imageUrls && <div className="flex flex-col gap-4">{imageUrls.map((url, i) => <img key={i} src={url} alt={`${section.title || `Section ${idx + 1}`} ${i + 1}`} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />)}</div>}
                   </div>
                 )}
                 
-                <div className={`flex-1 ${(imageUrl || imageUrls) ? (section.title === 'Our special guest and CEO' ? 'lg:flex-[1.8]' : 'lg:flex-[1.5]') : 'w-full'} space-y-4 ${(imageUrl || imageUrls) && imagePosition === 'left' ? 'order-1 lg:order-2' : ''}`}>
+                <div className={`flex-1 ${(imageUrl || imageUrls) ? (section.title === 'Our special guest and CEO' ? 'lg:flex-[1.8]' : (idx === 1 && programId === 'academy' ? 'lg:flex-[2]' : 'lg:flex-[1.5]')) : 'w-full'} space-y-4 ${(imageUrl || imageUrls) && imagePosition === 'left' ? 'order-1 lg:order-2' : ''}`}>
                   <h4 className={`font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg border-b border-zinc-200 pb-2 ${section.title === 'A Comprehensive Two-Way Approach' ? 'text-center' : ''}`}>
                     {section.title}
                   </h4>
@@ -1108,7 +1265,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                 </div>
 
                 {(imageUrl || imageUrls) && imagePosition === 'right' && (
-                  <div className="flex-1 w-full">
+                  <div className="flex-1 lg:flex-[1.5] w-full">
                     {imageUrl && <img src={imageUrl} alt={section.title || `Section ${idx + 1}`} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />}
                     {imageUrls && <div className="flex flex-col gap-4">{imageUrls.map((url, i) => <img key={i} src={url} alt={`${section.title || `Section ${idx + 1}`} ${i + 1}`} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />)}</div>}
                   </div>
@@ -1878,7 +2035,7 @@ const App: React.FC = () => {
               <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-1 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
                 <span className="text-red-varese text-[7px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">Where</span>
                 <span className="text-black text-[8px] md:text-base font-medium leading-tight block">
-                  {program.id === 'academy' || program.id === 'player-package' ? 'Campus, Varese' : 'Foresteria & Campus'}
+                  {program.id === 'academy' ? 'TBD together' : program.id === 'player-package' ? 'Campus, Varese' : 'Foresteria & Campus'}
                 </span>
               </div>
               {program.id !== 'player-package' && (

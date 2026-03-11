@@ -16,12 +16,18 @@ Eccellenza di Base: Crediamo nel basket come potente strumento per la comunità.
 
 Sviluppo di Giocatori d'Elite: Per coloro che sognano i campionati maggiori, forniamo il percorso definitivo. Offrendo allenatori esperti, programmi di allenamento professionali e accesso a strutture di alta qualità, coltiviamo le stelle del basket di domani.
 
-Pubblico di riferimento
-I programmi di allenamento completi della nostra Accademia sono strategicamente progettati per servire un gruppo eterogeneo di aspiranti giovani atleti. Concentriamo il nostro curriculum su una specifica finestra di sviluppo, mirando a individui tra i 5 e i 19 anni. Questo intervallo ci consente di fornire un percorso strutturato dalle abilità motorie fondamentali alle tattiche competitive avanzate.
-Per mantenere i nostri rigorosi protocolli di sicurezza e garantire che gli standard di allenamento siano perfettamente allineati con la maturità fisica e cognitiva di ciascun giocatore, applichiamo un rigido limite di idoneità. Di conseguenza, l'iscrizione per la prossima stagione è disponibile esclusivamente per i partecipanti nati non oltre l'anno 2020. Questa politica garantisce che ogni atleta riceva l'attenzione specializzata e l'istruzione adeguata all'età necessarie per il successo atletico a lungo termine.
+la nostra visione
+La Pallacanestro Varese è orgogliosa di esportare la sua leggendaria eredità cestistica attraverso il nostro Global Academy Expansion Program. Colmiamo il divario tra la storica tradizione europea e il talento internazionale stabilendo accademie satellite ufficiali in collaborazione diretta con Federazioni Nazionali, club d'élite e organizzazioni sportive in tutto il mondo. Questo non è un franchising; è un allineamento tecnico strategico progettato per trapiantare la nostra collaudata metodologia di Serie A nel tuo ecosistema cestistico locale.
 
-Quando e dove
-I nostri programmi operano tutto l'anno presso il nostro campus principale di Varese, situato in Via Pirandello. Questo programma garantisce uno sviluppo atletico costante in un ambiente professionale.
+il programma
+Pallacanestro Varese Academy esporta il prestigioso patrimonio e l'eccellenza tecnica del nostro club per elevare il basket giovanile in tutto il mondo. Collaborando con club locali e federazioni nazionali, forniamo accesso esclusivo al nostro know-how d'élite, a standard di allenamento di alto livello e a un'esperienza organizzativa strategica. Questa iniziativa è progettata per favorire la crescita professionale attraverso una visione condivisa, sfruttando il potere del nostro marchio per guidare il successo atletico e operativo su scala globale.
+THE_PILLARS_PLACEHOLDER
+
+pubblico di riferimento
+ACADEMY_TABLES_PLACEHOLDER
+
+contattaci
+Per maggiori informazioni e per candidarsi al programma Basketball Academy contattaci all'indirizzo f.bellotto@pallacanestrovarese.it
 
 prezzi
 Contattaci o clicca qui per informazioni dettagliate sui prezzi in base alle tue esigenze specifiche.`
@@ -40,12 +46,18 @@ Excelencia de Base: Creemos en el baloncesto como una herramienta poderosa para 
 
 Desarrollo de Jugadores de Élite: Para aquellos que sueñan con las grandes ligas, proporcionamos el camino definitivo. Al ofrecer entrenadores expertos, programas de entrenamiento profesional y acceso a instalaciones de alta calidad, cultivamos a las estrellas del baloncesto del mañana.
 
-Público objetivo
-Los programas de entrenamiento integrales de nuestra Academia están diseñados estratégicamente para servir a un grupo demográfico diverso de aspirantes a jóvenes atletas. Centramos nuestro plan de estudios en una ventana de desarrollo específica, dirigida a personas de entre 5 y 19 años. Este rango nos permite proporcionar un camino estructurado desde las habilidades motoras fundamentales hasta las tácticas competitivas avanzadas.
-Para mantener nuestros rigurosos protocolos de seguridad y garantizar que los estándares de entrenamiento estén perfectamente alineados con la madurez física y cognitiva de cada jugador, aplicamos un estricto límite de elegibilidad. En consecuencia, la inscripción para la próxima temporada está disponible exclusivamente para los participantes nacidos a más tardar en el año 2020. Esta política garantiza que cada atleta reciba la atención especializada y la instrucción adecuada a su edad necesarias para el éxito deportivo a largo plazo.
+nuestra visión
+Pallacanestro Varese se enorgullece de exportar su legendario legado de baloncesto a través de nuestro Global Academy Expansion Program. Cerramos la brecha entre la histórica tradición europea y el talento internacional mediante el establecimiento de academias satélite oficiales en colaboración directa con Federaciones Nacionales, clubes de élite y organizaciones deportivas de todo el mundo. Esto no es una franquicia; es una alineación técnica estratégica diseñada para trasplantar nuestra probada metodología de la Serie A a su ecosistema de baloncesto local.
 
-Cuándo y dónde
-Nuestros programas operan durante todo el año en nuestro campus principal de Varese, convenientemente ubicado en Via Pirandello. Este calendario completo garantiza un desarrollo deportivo constante dentro de un entorno profesional.
+el programa
+Pallacanestro Varese Academy exporta el prestigioso patrimonio y la excelencia técnica de nuestro club para elevar el baloncesto juvenil en todo el mundo. Al asociarnos con clubes locales y federaciones nacionales, brindamos acceso exclusivo a nuestro know-how de élite, estándares de entrenamiento de alto nivel y experiencia organizativa estratégica. Esta iniciativa está diseñada para fomentar el crecimiento profesional a través de una visión compartida, aprovechando el poder de nuestra marca para impulsar el éxito atlético y operativo a escala global.
+THE_PILLARS_PLACEHOLDER
+
+público objetivo
+ACADEMY_TABLES_PLACEHOLDER
+
+contáctanos
+Para obtener más información y postularse para el programa Basketball Academy, contáctenos en f.bellotto@pallacanestrovarese.it
 
 precios
 Contáctanos o haz clic aquí para obtener información detallada sobre los precios adaptada a tus necesidades específicas.`
@@ -64,12 +76,18 @@ Excellence de Base : Nous croyons au basketball comme un outil puissant pour la 
 
 Développement de Joueurs d'Élite : Pour ceux qui rêvent des grandes ligues, nous offrons la voie ultime. En proposant des entraîneurs experts, des programmes d'entraînement professionnels et un accès à des installations de haute qualité, nous cultivons les stars du basketball de demain.
 
-Public cible
-Les programmes d'entraînement complets de notre Académie sont stratégiquement conçus pour servir un groupe démographique diversifié de jeunes athlètes en herbe. Nous concentrons notre programme d'études sur une fenêtre de développement spécifique, ciblant les individus âgés de 5 à 19 ans. Cette tranche d'âge nous permet de fournir un parcours structuré allant des habiletés motrices fondamentales aux tactiques compétitives avancées.
-Pour maintenir nos protocoles de sécurité rigoureux et garantir que les normes d'entraînement sont parfaitement alignées sur la maturité physique et cognitive de chaque joueur, nous appliquons une limite d'éligibilité stricte. Par conséquent, l'inscription pour la saison à venir est exclusivement réservée aux participants nés au plus tard en 2020. Cette politique garantit que chaque athlète reçoit l'attention spécialisée et l'enseignement adapté à son âge nécessaires à sa réussite sportive à long terme.
+notre vision
+Pallacanestro Varese est fier d'exporter son héritage légendaire du basketball à travers notre Global Academy Expansion Program. Nous comblons le fossé entre la tradition européenne historique et les talents internationaux en créant des académies satellites officielles en collaboration directe avec les fédérations nationales, les clubs d'élite et les organisations sportives du monde entier. Il ne s'agit pas d'une franchise ; c'est un alignement technique stratégique conçu pour transplanter notre méthodologie éprouvée de Serie A dans votre écosystème de basketball local.
 
-Quand et où
-Nos programmes fonctionnent toute l'année sur notre campus principal de Varèse, idéalement situé Via Pirandello. Ce calendrier complet garantit un développement athlétique constant dans un environnement professionnel.
+le programme
+Pallacanestro Varese Academy exporte l'héritage prestigieux et l'excellence technique de notre club pour élever le basketball des jeunes dans le monde entier. En nous associant à des clubs locaux et à des fédérations nationales, nous offrons un accès exclusif à notre savoir-faire d'élite, à des normes d'entraînement de haut niveau et à une expertise organisationnelle stratégique. Cette initiative est conçue pour favoriser la croissance professionnelle grâce à une vision partagée, en tirant parti de la puissance de notre marque pour stimuler le succès athlétique et opérationnel à l'échelle mondiale.
+THE_PILLARS_PLACEHOLDER
+
+public cible
+ACADEMY_TABLES_PLACEHOLDER
+
+contactez-nous
+Pour plus d'informations et pour postuler au programme Basketball Academy, veuillez nous contacter à f.bellotto@pallacanestrovarese.it
 
 prix
 Contactez-nous ou cliquez ici pour obtenir des informations détaillées sur les prix adaptées à vos besoins spécifiques.`
@@ -93,6 +111,7 @@ Impegnandosi in un mandato completo di quattro anni all'interno del nostro siste
 
 le nostre offerte
 OFFERS_TABLES_PLACEHOLDER
+Nessun programma include voli, visti, pratiche burocratiche, trasporto da/per l'aeroporto, trasporto locale
 
 the elite player package
 Questo pacchetto garantisce un ambiente personalizzato e ad alta intensità dove ogni minuto in campo è ottimizzato per una crescita di livello d'élite. L'elite player package è disponibile solo per il Programma Premium.
@@ -121,6 +140,7 @@ Al comprometerse con un mandato completo de cuatro años dentro de nuestro siste
 
 nuestras ofertas
 OFFERS_TABLES_PLACEHOLDER
+Ningún programa incluye vuelos, visado, trámites, transporte desde/hacia el aeropuerto, transporte local
 
 the elite player package
 Este paquete garantiza un entorno personalizado y de alta intensidad donde cada minuto en la cancha se optimiza para el crecimiento de nivel élite. El elite player package solo está disponible para el Programa Premium.
@@ -149,6 +169,7 @@ En s'engageant pour un mandat complet de quatre ans au sein de notre système in
 
 nos offres
 OFFERS_TABLES_PLACEHOLDER
+Aucun programme n'inclut les vols, les visas, les formalités administratives, le transport depuis/vers l'aéroport, le transport local
 
 the elite player package
 Ce forfait garantit un environnement personnalisé et de haute intensité où chaque minute sur le terrain est optimisée pour une croissance de niveau élite. L'elite player package est uniquement disponible pour le Programme Premium.
@@ -243,6 +264,9 @@ Sviluppo Strategico: Partecipa alle riunioni degli allenatori per comprendere i 
 
 Sviluppo Giovanile: Contribuisci al futuro dello sport assistendo lo staff tecnico delle nostre squadre giovanili.
 
+il programma
+INTERNSHIP_TABLE_PLACEHOLDER
+
 Quando e dove
 Il programma sarà ospitato presso le nostre strutture di prim'ordine, in particolare la Foresteria Elite Housing e il nostro Campus in via Pirandello. Queste due sedi di punta sono strategicamente situate a soli 5 minuti a piedi l'una dall'altra, garantendo transizioni senza interruzioni tra residenza e allenamento. Questa configurazione logistica integrata consente agli atleti di massimizzare il loro tempo e concentrarsi interamente sul loro sviluppo professionale.
 
@@ -270,6 +294,9 @@ Participación Activa en la Cancha: Asume un papel práctico dirigiendo ejercici
 Desarrollo Estratégico: Asiste a las reuniones de entrenadores para comprender los procesos de toma de decisiones tácticas y estratégicas al más alto nivel.
 
 Desarrollo Juvenil: Contribuye al futuro del deporte ayudando al cuerpo técnico de nuestros equipos juveniles.
+
+el programa
+INTERNSHIP_TABLE_PLACEHOLDER
 
 Cuándo y dónde
 El programa se llevará a cabo en nuestras instalaciones de primer nivel, específicamente la Foresteria Elite Housing y nuestro Campus en via Pirandello. Estas dos ubicaciones emblemáticas están estratégicamente situadas a solo 5 minutos a pie una de la otra, lo que garantiza transiciones fluidas entre la residencia y el entrenamiento. Esta configuración logística integrada permite a los atletas maximizar su tiempo y concentrarse por completo en su desarrollo profesional.
@@ -299,6 +326,9 @@ Développement Stratégique : Assistez aux réunions des entraîneurs pour compr
 
 Développement des Jeunes : Contribuez à l'avenir du sport en assistant le personnel d'entraîneurs de nos équipes de jeunes.
 
+le programme
+INTERNSHIP_TABLE_PLACEHOLDER
+
 Quand et où
 Le programme sera hébergé dans nos installations de premier ordre, à savoir la Foresteria Elite Housing et notre Campus de via Pirandello. Ces deux sites phares sont stratégiquement situés à seulement 5 minutes à pied l'un de l'autre, assurant des transitions fluides entre la résidence et l'entraînement. Cette configuration logistique intégrée permet aux athlètes de maximiser leur temps et de se concentrer entièrement sur leur développement professionnel.
 
@@ -319,9 +349,9 @@ La nostra formula all-inclusive di minimo sette giorni è stata strategicamente 
 Per garantire che ogni gruppo raggiunga i propri obiettivi unici, ogni singolo aspetto di questo programma è completamente modulare e altamente flessibile. Comprendiamo che non esistono due squadre con gli stessi obiettivi; pertanto, il curriculum può essere personalizzato con precisione per soddisfare i requisiti tecnici specifici della tua squadra e le esigenze di programmazione individuali. Che tu abbia bisogno di procedure tattiche avanzate, condizionamento fisico intensivo o sessioni specifiche di studio video, il nostro quadro è progettato per adattarsi alla tua visione, fornendo un'esperienza professionale su misura dall'inizio alla fine.
 
 Pubblico di riferimento
-Le nostre strutture all'avanguardia e i programmi di allenamento specializzati sono stati specificamente progettati per ospitare le Squadre Nazionali Giovanili, che vanno dalle categorie U14 a U18, nonché prestigiosi Programmi Junior alla ricerca di un ambiente di prestazioni d'élite. Comprendiamo le esigenze uniche dello sviluppo giovanile di alto livello e la nostra infrastruttura è progettata per fornire i rigorosi standard richiesti dalle federazioni nazionali per preparare la loro prossima generazione di talenti per le competizioni internazionali.
+SUMMER_TARGET_BOXES_PLACEHOLDER
 
-Oltre alle nostre iniziative incentrate sui giovani, ci rivolgiamo ampiamente anche a squadre Senior di Livello Medio che cercano il perfetto equilibrio strategico tra logistica di livello professionale e preparazione atletica di alta qualità. Che il tuo obiettivo sia lo sviluppo a lungo termine di giovani prospetti emergenti o la meticolosa rifinitura delle strategie di livello senior in vista di una nuova stagione, il nostro campo fornisce il supporto completo e su misura necessario per il successo. Siamo orgogliosi di offrire una piattaforma versatile in cui ogni squadra, indipendentemente dal proprio livello competitivo specifico, può trovare gli strumenti professionali e l'ambiente dedicato di cui ha bisogno per eccellere.
+Siamo orgogliosi di offrire una piattaforma versatile in cui ogni squadra, indipendentemente dal proprio livello competitivo specifico, può trovare gli strumenti professionali e l'ambiente dedicato di cui ha bisogno per eccellere.
 
 Quando e dove
 Sperimenta alloggi d'élite di 400 mq con giardini privati, situati a soli cinque minuti dall'arena. Il campo richiede un soggiorno minimo di 1 settimana (7 giorni, 6 notti), su misura per le esigenze specifiche e la disponibilità della tua squadra. Per garantire un relax totale, gestiamo tutta la logistica: due furgoni da 9 posti forniscono trasferimenti aeroportuali senza interruzioni sia per l'arrivo che per la partenza. Questa configurazione offre il perfetto equilibrio tra privacy e comunità per un'esperienza di allenamento professionale e senza stress.
@@ -341,9 +371,9 @@ Nuestra fórmula todo incluido de un mínimo de siete días ha sido desarrollada
 Para garantizar que cada grupo logre sus objetivos únicos, cada aspecto de este programa es completamente modular y altamente flexible. Entendemos que no hay dos equipos que tengan los mismos objetivos; por lo tanto, el plan de estudios se puede adaptar con precisión para satisfacer los requisitos técnicos específicos de tu equipo y las necesidades de programación individuales. Ya sea que necesites recorridos tácticos avanzados, acondicionamiento físico intensivo o sesiones específicas de estudio de video, nuestro marco está diseñado para adaptarse a tu visión, brindando una experiencia profesional a medida de principio a fin.
 
 Público objetivo
-Nuestras instalaciones de última generación y programas de entrenamiento especializados han sido diseñados específicamente para albergar a Selecciones Nacionales Juveniles, que van desde las categorías U14 hasta U18, así como prestigiosos Programas Junior en busca de un entorno de rendimiento de élite. Entendemos las demandas únicas del desarrollo juvenil de alto nivel, y nuestra infraestructura está diseñada para proporcionar los rigurosos estándares requeridos por las federaciones nacionales para preparar a su próxima generación de talentos para la competencia internacional.
+SUMMER_TARGET_BOXES_PLACEHOLDER
 
-Además de nuestras iniciativas centradas en los jóvenes, también atendemos ampliamente a equipos Senior de Nivel Medio que buscan el equilibrio estratégico perfecto entre la logística de nivel profesional y la preparación atlética de alta calidad. Ya sea que tu objetivo sea el desarrollo a largo plazo de jóvenes prospectos emergentes o el refinamiento meticuloso de las estrategias de nivel senior antes de una nueva temporada, nuestro campamento brinda el apoyo integral y personalizado necesario para el éxito. Nos enorgullecemos de ofrecer una plataforma versátil donde cada equipo, independientemente de su nivel competitivo específico, puede encontrar las herramientas profesionales y el entorno dedicado que necesitan para sobresalir.
+Nos enorgullecemos de ofrecer una plataforma versátil donde cada equipo, independientemente de su nivel competitivo específico, puede encontrar las herramientas profesionales y el entorno dedicado que necesitan para sobresalir.
 
 Cuándo y dónde
 Experimenta alojamientos de élite de 400 metros cuadrados con jardines privados, ubicados a solo cinco minutos de la arena. El campamento requiere una estadía mínima de 1 semana (7 días, 6 noches), adaptada a las necesidades específicas y la disponibilidad de tu equipo. Para garantizar una relajación total, gestionamos toda la logística: dos furgonetas de 9 plazas proporcionan traslados al aeropuerto sin problemas tanto para la llegada como para la salida. Esta configuración ofrece el equilibrio perfecto entre privacidad y comunidad para una experiencia de entrenamiento profesional y sin estrés.
@@ -363,9 +393,9 @@ Notre formule tout compris d'un minimum de sept jours a été stratégiquement d
 Pour s'assurer que chaque groupe atteint ses objectifs uniques, chaque aspect de ce programme est entièrement modulaire et très flexible. Nous comprenons qu'il n'y a pas deux équipes qui ont les mêmes objectifs ; par conséquent, le programme peut être précisément adapté pour répondre aux exigences techniques spécifiques de votre équipe et à ses besoins de planification individuels. Que vous ayez besoin de parcours tactiques avancés, d'un conditionnement physique intensif ou de séances d'étude vidéo spécifiques, notre cadre est conçu pour s'adapter à votre vision, offrant une expérience professionnelle sur mesure du début à la fin.
 
 Public cible
-Nos installations de pointe et nos programmes d'entraînement spécialisés ont été spécialement conçus pour accueillir les Équipes Nationales de Jeunes, allant des catégories U14 à U18, ainsi que de prestigieux Programmes Junior à la recherche d'un environnement de performance d'élite. Nous comprenons les exigences uniques du développement des jeunes de haut niveau, et notre infrastructure est conçue pour fournir les normes rigoureuses exigées par les fédérations nationales pour préparer leur prochaine génération de talents à la compétition internationale.
+SUMMER_TARGET_BOXES_PLACEHOLDER
 
-En plus de nos initiatives axées sur les jeunes, nous répondons également largement aux équipes Senior de Niveau Moyen qui recherchent l'équilibre stratégique parfait entre une logistique de niveau professionnel et une préparation athlétique de haute qualité. Que votre objectif soit le développement à long terme de jeunes espoirs émergents ou l'affinement méticuleux des stratégies de niveau senior avant une nouvelle saison, notre camp fournit le soutien complet et sur mesure nécessaire au succès. Nous sommes fiers d'offrir une plate-forme polyvalente où chaque équipe, quel que soit son niveau de compétition spécifique, peut trouver les outils professionnels et l'environnement dédié dont elle a besoin pour exceller.
+Nous sommes fiers d'offrir une plate-forme polyvalente où chaque équipe, quel que soit son niveau de compétition spécifique, peut trouver les outils professionnels et l'environnement dédié dont elle a besoin pour exceller.
 
 Quand et où
 Découvrez des hébergements d'élite de 400 m² avec jardins privés, situés à seulement cinq minutes de l'arène. Le camp nécessite un séjour minimum d'une semaine (7 jours, 6 nuits), adapté aux besoins spécifiques et à la disponibilité de votre équipe. Pour assurer une détente totale, nous gérons toute la logistique : deux fourgonnettes de 9 places assurent des transferts aéroport fluides à l'arrivée et au départ. Cette configuration offre l'équilibre parfait entre intimité et communauté pour une expérience d'entraînement professionnelle et sans stress.
