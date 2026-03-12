@@ -1,0 +1,27 @@
+11:type View = 'home' | 'programs' | 'palmares' | 'arena' | 'campus' | 'housing' | 'detailedPrograms' | 'programDetail';
+77:    programsTraining: "Programmi & Allenamento",
+78:    programsDesc: "Scopri i nostri percorsi specializzati per giocatori e allenatori all'interno dell'ecosistema Pallacanestro Varese.",
+153:    faq3Answer: "Puoi iscriverti a qualsiasi nostro programma cliccando su 'Acquista ora' in questo sito o visitando il seguente link: https://store.pallacanestrovarese.it/collections/elite-programs",
+213:    programsTraining: "Programs & Training",
+214:    programsDesc: "Discover our specialized paths for players and coaches within the Pallacanestro Varese ecosystem.",
+284:    faq3Answer: "You can apply for any of our program by clicking 'buy now' in this website or by visiting the following link: https://store.pallacanestrovarese.it/collections/elite-programs",
+344:    programsTraining: "Programas y Entrenamiento",
+345:    programsDesc: "Descubre nuestros caminos especializados para jugadores y entrenadores dentro del ecosistema de Pallacanestro Varese.",
+463:    programsTraining: "Programmes et Entraînement",
+464:    programsDesc: "Découvrez nos parcours spécialisés pour joueurs et entraîneurs au sein de l'écosystème de Pallacanestro Varese.",
+749:                    For those dreaming of the big leagues, we provide the ultimate pathway. By offering expert coaching, professional training programs, and access to high-quality facilities, we cultivate the basketball stars of tomorrow.
+793:            if (line.includes("Our programs operate on a year-round basis at our premier Varese campus")) {
+1391:    } else if (!isSubpage && view !== 'home' && view !== 'programs') {
+1694:                    "https://store.pallacanestrovarese.it/collections/elite-programs"
+2222:                  <a href="https://store.pallacanestrovarese.it/collections/elite-programs" target="_blank" rel="noopener noreferrer" className="bg-white text-red-varese px-16 py-6 font-bold uppercase tracking-[0.3em] hover:bg-black hover:text-white transition-all rounded-sm text-lg shadow-2xl">{t('buyNow')}</a>
+2243:            {(view === 'programs' || view === 'palmares' || isFacilityView || view === 'detailedPrograms' || view === 'programDetail') && (
+2249:                <a href="https://store.pallacanestrovarese.it/collections/elite-programs" target="_blank" rel="noopener noreferrer" className="bg-red-varese hover:bg-red-700 text-white px-6 py-2 rounded-sm text-sm font-bold uppercase transition-all shadow-lg shadow-red-600/20">
+2266:                <a href="https://store.pallacanestrovarese.it/collections/elite-programs" target="_blank" rel="noopener noreferrer" className="w-full bg-red-varese hover:bg-red-700 text-white px-10 py-4 font-bold uppercase tracking-widest transition-all rounded-md">
+2273:                <button onClick={() => { setView('programs'); setIsMenuOpen(false); }} className="text-xl font-oswald uppercase text-white/80 hover:text-white">{t('explorePrograms')}</button>
+2294:                  <button onClick={() => setView('programs')} className="flex-1 sm:flex-none bg-red-varese hover:bg-red-700 text-white px-4 md:px-10 py-3 md:py-4 font-bold uppercase tracking-widest transition-all shadow-xl shadow-red-600/20 flex items-center justify-center group text-[10px] md:text-base">
+2500:                  href="https://store.pallacanestrovarese.it/collections/elite-programs" 
+2525:      {view === 'programs' && (
+2529:              <p className="text-red-varese font-bold uppercase tracking-[0.3em] text-xs mb-4">{t('programsTraining')}</p>
+2531:              <p className="text-gray-400 max-w-2xl text-lg uppercase tracking-wider font-light">{t('programsDesc')}</p>
+2697:                    <a href="https://store.pallacanestrovarese.it/collections/elite-programs" target="_blank" rel="noopener noreferrer" className="bg-white text-red-varese px-16 py-6 font-bold uppercase tracking-[0.3em] hover:bg-black hover:text-white transition-all rounded-sm text-lg shadow-2xl">{t('buyNow')}</a>
+2717:                        <li><button onClick={() => setView('programs')} className="hover:text-white transition-colors uppercase tracking-widest">{t('footerPrograms')}</button></li>

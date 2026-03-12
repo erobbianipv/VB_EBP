@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import { CLUB_LOGO, ACHIEVEMENTS, STAFF, PROGRAMS, FACILITIES } from './constants';
 import { translateProgram, translateStaff } from './translations';
 import { Program, Facility } from './types';
-import { Trophy, MapPin, Users, Home, GraduationCap, Calendar, ArrowRight, Menu, X, Instagram, Facebook, CheckCircle2, Send, Mail, Linkedin, Star, ChevronDown, ZoomIn, ChevronLeft, ChevronRight, ChevronUp, XCircle, Target, Activity, Brain, BarChart, HeartPulse, Dumbbell, Plus } from 'lucide-react';
+import { Trophy, MapPin, Users, Home, GraduationCap, Calendar, ArrowRight, Menu, X, Instagram, Facebook, CheckCircle2, Send, Mail, Linkedin, Star, ChevronDown, ZoomIn, ChevronLeft, ChevronRight, ChevronUp, XCircle, Target, Activity, Brain, BarChart, HeartPulse, Dumbbell } from 'lucide-react';
 
 type Language = 'it' | 'en' | 'es' | 'fr';
 type View = 'home' | 'programs' | 'palmares' | 'arena' | 'campus' | 'housing' | 'detailedPrograms' | 'programDetail';
@@ -154,7 +154,63 @@ const TRANSLATIONS = {
     faq4Question: "Come posso raggiungere Varese?",
     faq4Answer: "Il Campus si trova in Via Pirandello a Varese, a 10 minuti a piedi dalla Foresteria e a soli 5 minuti dall'Itelyum Arena, casa della Pallacanestro Varese. Raggiungerci è estremamente comodo poiché tutte le nostre strutture sono perfettamente interconnesse e ben servite dai mezzi pubblici. Se arrivi in aereo, Milano Malpensa (MXP) è l'hub più vicino, situato a soli 30 minuti e collegato direttamente a Varese tramite la linea ferroviaria S50. Per chi viaggia in treno da Milano, frequenti servizi diretti partono dalle stazioni di Milano Centrale, Porta Garibaldi e Cadorna, con tempi di percorrenza medi di 50-60 minuti. Che tu arrivi dall'aeroporto o dal centro città, l'ultimo tratto verso il Campus è rapido e semplice.",
     faq5Question: "Come posso richiedere maggiori informazioni?",
-    faq5Answer: "Puoi richiedere informazioni compilando il modulo presente in ogni sezione del sito cliccando su 'Richiedi Info' o contattandoci direttamente via email all'indirizzo f.bellotto@pallacanestrovarese.it.",
+    faq5Answer: "Puoi richiedere informazioni compilando il modulo presente in ogni sezione del sito cliccando su 'Richiedi Info' o contattandoci direttamente via email all'indirizzo e.robbiani@pallacanestrovarese.it.",
+    // Summer Camp
+    residentialCamp: "Camp Residenziale",
+    dayCamp: "Day Camp",
+    included: "Incluso",
+    privateSingleRoom: "camera singola privata",
+    sharedCommonSpaces: "spazi comuni condivisi",
+    meals3: "3 pasti al giorno",
+    sportsNutrition: "menu basati sulla nutrizione sportiva",
+    individualizedTraining: "allenamento individuale 1 contro 1",
+    teamPractice: "allenamento di squadra",
+    strengthTraining: "allenamento di forza e performance",
+    personalAnalytics: "analisi delle performance personali",
+    eliteCoaching: "staff tecnico d'elite",
+    officialGear: "abbigliamento ufficiale del camp",
+    lunch: "pranzo",
+    applyNowBtn: "Iscriviti Ora",
+    depositNotice: "Iscrivendoti ora è richiesto un deposito di €290 per tutti i tipi di camp.<br className=\"hidden md:block\" /> I dettagli sul saldo finale seguiranno a breve.",
+    howToSubscribe: "Come iscriversi",
+    depositDesc: "Per registrarsi al Pallacanestro Varese Elite Summer Camp, è richiesto un deposito anticipato di €290 sia per il Camp Residenziale che per il Day Camp.",
+    followSteps: "Segui questi passaggi per completare la tua registrazione:",
+    visitStore: "Visita il nostro Store:",
+    clickHere: "Clicca qui",
+    accessStore: "per accedere allo store online ufficiale.",
+    submitDetails: "Invia i Dettagli:",
+    provideInfo: "Fornisci le informazioni richieste e completa il pagamento del deposito.",
+    nextSteps: "Prossimi Passaggi:",
+    onceDeposit: "Una volta elaborato il deposito, il nostro team ti contatterà per finalizzare il pagamento del saldo rimanente e per richiedere ulteriore documentazione.",
+    waitingForYou: "IL PALLACANESTRO VARESE ELITE SUMMER CAMP TI ASPETTA!",
+    // Program Tables
+    standardProgram: "Programma Standard",
+    premiumProgram: "Programma Premium",
+    publicSchool: "Scuola pubblica",
+    privateSchool: "Scuola internazionale privata",
+    fullTimeTraining: "Allenamento a tempo pieno",
+    assignedToGroups: "Gli atleti saranno assegnati a gruppi del loro livello",
+    fullBoard: "Pensione completa",
+    privateRoom: "Camera privata nel nostro alloggio d'élite",
+    elitePlayerPackage: "Pacchetto Giocatore d'Élite",
+    analytics: "Analisi",
+    advancedStats: "Statistiche avanzate e approfondimenti",
+    videoAnalysis: "Analisi video",
+    extraTraining: "Allenamento extra",
+    time: "Orario",
+    activity: "Attività",
+    wakeUpBreakfast: "Sveglia e Colazione",
+    morningPractice: "Allenamento Mattutino",
+    strengthCond: "Forza e Condizionamento",
+    lunchRest: "Pranzo e Riposo",
+    afternoonPractice: "Allenamento Pomeridiano",
+    freeTimeRecovery: "Tempo Libero / Recupero",
+    dinner: "Cena",
+    lightsOut: "Spegnimento Luci",
+    arrivalCheckIn: "Arrivo e Check-in",
+    pickUp: "Ritiro",
+    clickHere: "clicca qui",
+    openInGoogleMaps: "Apri in Google Maps"
   },
   en: {
     back: "Back",
@@ -285,7 +341,63 @@ const TRANSLATIONS = {
     faq4Question: "how do i get to varese?",
     faq4Answer: "The Campus is situated on Via Pirandello in Varese, a 10-minute walk from the guesthouse and just 5 minutes from the Itelyum Arena, home of Pallacanestro Varese. Reaching us is highly convenient as all our facilities are seamlessly interconnected and well-served by public transport. If you are arriving by air, Milan Malpensa (MXP) is the closest hub, located only 30 minutes away and connected directly to Varese via the S50 train line. For those traveling by rail from Milan, frequent direct services depart from Milano Centrale, Porta Garibaldi, and Cadorna stations, with travel times averaging 50–60 minutes. Whether you are arriving from the airport or the city center, the final stretch to the Campus is quick and straightforward.",
     faq5Question: "How can I request more information?",
-    faq5Answer: "You can request information by filling out the form in any section of the site by clicking 'Request Info' or by contacting us directly via email at f.bellotto@pallacanestrovarese.it.",
+    faq5Answer: "You can request information by filling out the form in any section of the site by clicking 'Request Info' or by contacting us directly via email at e.robbiani@pallacanestrovarese.it.",
+    // Summer Camp
+    residentialCamp: "Residential Camp",
+    dayCamp: "Day Camp",
+    included: "Included",
+    privateSingleRoom: "private single room",
+    sharedCommonSpaces: "shared common spaces",
+    meals3: "3 meals a day",
+    sportsNutrition: "sports nutrition-driven menus",
+    individualizedTraining: "individualized 1-on-1 training",
+    teamPractice: "team practice",
+    strengthTraining: "strength and performance training",
+    personalAnalytics: "personal performance analytics",
+    eliteCoaching: "elite coaching staff",
+    officialGear: "official camp gear",
+    lunch: "lunch",
+    applyNowBtn: "Apply Now",
+    depositNotice: "By applying now a €290 advance deposit is required for all camp types.<br className=\"hidden md:block\" /> Details on final balance payments will follow shortly.",
+    howToSubscribe: "How to subscribe",
+    depositDesc: "To register for the Pallacanestro Varese Elite Summer Camp, an advance deposit of €290 is required for both the Residential Camp and the Day Camp.",
+    followSteps: "Please follow these steps to complete your registration:",
+    visitStore: "Visit our Store:",
+    clickHere: "Click here",
+    accessStore: "to access the official online store.",
+    submitDetails: "Submit Details:",
+    provideInfo: "Provide the required information and complete the deposit payment.",
+    nextSteps: "Next Steps:",
+    onceDeposit: "Once the deposit is processed, our team will contact you to finalize the payment for the remaining balance and to request additional documentation.",
+    waitingForYou: "THE PALLACANESTRO VARESE ELITE SUMMER CAMP IS WAITING FOR YOU!",
+    // Program Tables
+    standardProgram: "Standard Program",
+    premiumProgram: "Premium Program",
+    publicSchool: "Public school",
+    privateSchool: "Private international school",
+    fullTimeTraining: "Full time training",
+    assignedToGroups: "Athletes will be assigned to groups of their level",
+    fullBoard: "Full board",
+    privateRoom: "Private room in our elite housing",
+    elitePlayerPackage: "Elite Player Package",
+    analytics: "Analytics",
+    advancedStats: "Advanced stats & insights",
+    videoAnalysis: "Video analysis",
+    extraTraining: "Extra training",
+    time: "Time",
+    activity: "Activity",
+    wakeUpBreakfast: "Wake Up & Breakfast",
+    morningPractice: "Morning Practice",
+    strengthCond: "Strength & Cond.",
+    lunchRest: "Lunch & Rest",
+    afternoonPractice: "Afternoon practice",
+    freeTimeRecovery: "Free Time / Recovery",
+    dinner: "Dinner",
+    lightsOut: "Lights Out",
+    arrivalCheckIn: "Arrival & Check-in",
+    pickUp: "Pick-up",
+    clickHere: "click here",
+    openInGoogleMaps: "Open in Google Maps"
   },
   es: {
     back: "Volver",
@@ -405,6 +517,62 @@ const TRANSLATIONS = {
     u17Championship: "Campeonato de Italia Sub-17",
     u15Championship: "Campeonato de Italia Sub-15",
     joinTheGame: "Join The Game",
+    // Summer Camp
+    residentialCamp: "Campamento Residencial",
+    dayCamp: "Campamento de Día",
+    included: "Incluido",
+    privateSingleRoom: "habitación individual privada",
+    sharedCommonSpaces: "espacios comunes compartidos",
+    meals3: "3 comidas al día",
+    sportsNutrition: "menús basados en nutrición deportiva",
+    individualizedTraining: "entrenamiento individual 1 a 1",
+    teamPractice: "práctica en equipo",
+    strengthTraining: "entrenamiento de fuerza y rendimiento",
+    personalAnalytics: "análisis de rendimiento personal",
+    eliteCoaching: "cuerpo técnico de élite",
+    officialGear: "equipo oficial del campamento",
+    lunch: "almuerzo",
+    applyNowBtn: "Aplica Ahora",
+    depositNotice: "Al aplicar ahora, se requiere un depósito anticipado de €290 para todos los tipos de campamento.<br className=\"hidden md:block\" /> Los detalles sobre los pagos del saldo final seguirán en breve.",
+    howToSubscribe: "Cómo suscribirse",
+    depositDesc: "Para registrarse en el Pallacanestro Varese Elite Summer Camp, se requiere un depósito anticipado de €290 tanto para el Campamento Residencial como para el Campamento de Día.",
+    followSteps: "Sigue estos pasos para completar tu registro:",
+    visitStore: "Visita nuestra Tienda:",
+    clickHere: "Haz clic aquí",
+    accessStore: "para acceder a la tienda en línea oficial.",
+    submitDetails: "Enviar Detalles:",
+    provideInfo: "Proporciona la información requerida y completa el pago del depósito.",
+    nextSteps: "Próximos Pasos:",
+    onceDeposit: "Una vez procesado el depósito, nuestro equipo se comunicará contigo para finalizar el pago del saldo restante y solicitar documentación adicional.",
+    waitingForYou: "¡EL PALLACANESTRO VARESE ELITE SUMMER CAMP TE ESTÁ ESPERANDO!",
+    // Program Tables
+    standardProgram: "Programa Estándar",
+    premiumProgram: "Programa Premium",
+    publicSchool: "Escuela pública",
+    privateSchool: "Escuela internacional privada",
+    fullTimeTraining: "Entrenamiento a tiempo completo",
+    assignedToGroups: "Los atletas serán asignados a grupos de su nivel",
+    fullBoard: "Pensión completa",
+    privateRoom: "Habitación privada en nuestro alojamiento de élite",
+    elitePlayerPackage: "Paquete de Jugador de Élite",
+    analytics: "Análisis",
+    advancedStats: "Estadísticas avanzadas e información",
+    videoAnalysis: "Análisis de video",
+    extraTraining: "Entrenamiento extra",
+    time: "Hora",
+    activity: "Actividad",
+    wakeUpBreakfast: "Despertar y Desayuno",
+    morningPractice: "Entrenamiento Matutino",
+    strengthCond: "Fuerza y Acond.",
+    lunchRest: "Almuerzo y Descanso",
+    afternoonPractice: "Entrenamiento Vespertino",
+    freeTimeRecovery: "Tiempo Libre / Recuperación",
+    dinner: "Cena",
+    lightsOut: "Apagar Luces",
+    arrivalCheckIn: "Llegada y Check-in",
+    pickUp: "Recogida",
+    clickHere: "haz clic aquí",
+    openInGoogleMaps: "Abrir en Google Maps"
   },
   fr: {
     back: "Retour",
@@ -524,11 +692,69 @@ const TRANSLATIONS = {
     u17Championship: "Championnat d'Italie U-17",
     u15Championship: "Championnat d'Italie U-15",
     joinTheGame: "Join The Game",
+    // Summer Camp
+    residentialCamp: "Camp Résidentiel",
+    dayCamp: "Camp de Jour",
+    included: "Inclus",
+    privateSingleRoom: "chambre individuelle privée",
+    sharedCommonSpaces: "espaces communs partagés",
+    meals3: "3 repas par jour",
+    sportsNutrition: "menus basés sur la nutrition sportive",
+    individualizedTraining: "entraînement individuel 1 contre 1",
+    teamPractice: "entraînement en équipe",
+    strengthTraining: "entraînement de force et de performance",
+    personalAnalytics: "analyse des performances personnelles",
+    eliteCoaching: "personnel d'entraîneurs d'élite",
+    officialGear: "équipement officiel du camp",
+    lunch: "déjeuner",
+    applyNowBtn: "Postuler Maintenant",
+    depositNotice: "En postulant maintenant, un acompte de 290 € est requis pour tous les types de camps.<br className=\"hidden md:block\" /> Les détails sur les paiements du solde final suivront sous peu.",
+    howToSubscribe: "Comment s'inscrire",
+    depositDesc: "Pour vous inscrire au Pallacanestro Varese Elite Summer Camp, un acompte de 290 € est requis pour le Camp Résidentiel et le Camp de Jour.",
+    followSteps: "Veuillez suivre ces étapes pour compléter votre inscription :",
+    visitStore: "Visitez notre Boutique :",
+    clickHere: "Cliquez ici",
+    accessStore: "pour accéder à la boutique en ligne officielle.",
+    submitDetails: "Soumettre les Détails :",
+    provideInfo: "Fournissez les informations requises et complétez le paiement de l'acompte.",
+    nextSteps: "Prochaines Étapes :",
+    onceDeposit: "Une fois l'acompte traité, notre équipe vous contactera pour finaliser le paiement du solde restant et demander des documents supplémentaires.",
+    waitingForYou: "LE PALLACANESTRO VARESE ELITE SUMMER CAMP VOUS ATTEND !",
+    // Program Tables
+    standardProgram: "Programme Standard",
+    premiumProgram: "Programme Premium",
+    publicSchool: "École publique",
+    privateSchool: "École internationale privée",
+    fullTimeTraining: "Entraînement à temps plein",
+    assignedToGroups: "Les athlètes seront affectés à des groupes de leur niveau",
+    fullBoard: "Pension complète",
+    privateRoom: "Chambre privée dans notre logement d'élite",
+    elitePlayerPackage: "Forfait Joueur d'Élite",
+    analytics: "Analytique",
+    advancedStats: "Statistiques avancées et informations",
+    videoAnalysis: "Analyse vidéo",
+    extraTraining: "Entraînement supplémentaire",
+    time: "Heure",
+    activity: "Activité",
+    wakeUpBreakfast: "Réveil et Petit-déjeuner",
+    morningPractice: "Entraînement Matinal",
+    strengthCond: "Force et Cond.",
+    lunchRest: "Déjeuner et Repos",
+    afternoonPractice: "Entraînement de l'Après-midi",
+    freeTimeRecovery: "Temps Libre / Récupération",
+    dinner: "Dîner",
+    lightsOut: "Extinction des Feux",
+    arrivalCheckIn: "Arrivée et Enregistrement",
+    pickUp: "Ramassage",
+    clickHere: "cliquez ici",
+    openInGoogleMaps: "Ouvrir dans Google Maps"
   }
 };
 
 const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'en' }: { text: string, className?: string, programId?: string, lang?: Language }) => {
   if (!text) return null;
+
+  const t = (key: keyof typeof TRANSLATIONS['en']) => TRANSLATIONS[lang][key] || TRANSLATIONS['en'][key];
 
   const titles = [
     "our vision",
@@ -610,7 +836,10 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
     "Intégration Professionnelle d'Élite",
     "programme de niveau pro",
     "prix",
-    "le programme d'entraînement"
+    "le programme d'entraînement",
+    "The Professional \"Pro-Level\" Approach",
+    "The Data-Driven & Analytical Focus",
+    "The Flexible & Personalized Choice"
   ];
 
   const blocks = text.split('\n\n').filter(block => block.trim() !== '');
@@ -799,7 +1028,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                   >
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors z-10 flex items-center justify-center">
                       <div className="bg-white text-red-varese px-4 py-2 rounded-full font-bold opacity-0 group-hover:opacity-100 transition-opacity shadow-lg transform translate-y-2 group-hover:translate-y-0">
-                        Open in Google Maps
+                        {t('openInGoogleMaps')}
                       </div>
                     </div>
                     <iframe 
@@ -828,7 +1057,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                   >
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors z-10 flex items-center justify-center">
                       <div className="bg-white text-red-varese px-4 py-2 rounded-full font-bold opacity-0 group-hover:opacity-100 transition-opacity shadow-lg transform translate-y-2 group-hover:translate-y-0">
-                        Open in Google Maps
+                        {t('openInGoogleMaps')}
                       </div>
                     </div>
                     <iframe 
@@ -851,16 +1080,16 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                   {/* Standard Program Table */}
                   <div className="flex-1 bg-white p-6 rounded-2xl shadow-lg border border-zinc-200 hover:border-red-varese/30 transition-all">
                     <div className="text-center mb-6">
-                      <h5 className="font-oswald text-zinc-900 font-bold uppercase tracking-wider text-xl">Standard Program</h5>
+                      <h5 className="font-oswald text-zinc-900 font-bold uppercase tracking-wider text-xl">{t('standardProgram')}</h5>
                       <div className="text-red-varese font-black text-2xl mt-1">€15.000/year</div>
                     </div>
                     <div className="space-y-3">
                       {[
-                        "Public school",
-                        "Full time training",
-                        "Athletes will be assigned to groups of their level",
-                        "Full board",
-                        "Private room in our elite housing"
+                        t('publicSchool'),
+                        t('fullTimeTraining'),
+                        t('assignedToGroups'),
+                        t('fullBoard'),
+                        t('privateRoom')
                       ].map((item, i) => (
                         <div key={i} className="flex items-center gap-3 text-sm text-zinc-600 font-medium">
                           <CheckCircle2 size={16} className="text-red-varese flex-shrink-0" />
@@ -874,16 +1103,16 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                   <div className="flex-1 bg-zinc-900 p-6 rounded-2xl shadow-xl border border-red-varese/30 relative overflow-hidden group">
                     <div className="absolute top-0 right-0 w-24 h-24 bg-red-varese/10 rounded-full -mr-12 -mt-12"></div>
                     <div className="text-center mb-6 relative z-10">
-                      <h5 className="font-oswald text-white font-bold uppercase tracking-wider text-xl">Premium Program</h5>
+                      <h5 className="font-oswald text-white font-bold uppercase tracking-wider text-xl">{t('premiumProgram')}</h5>
                       <div className="text-red-varese font-black text-2xl mt-1">€30.000/year</div>
                     </div>
                     <div className="space-y-3 relative z-10">
                       {[
-                        "Public school",
-                        "Full time training",
-                        "Athletes will be assigned to groups of their level",
-                        "Full board",
-                        "Private room in our elite housing"
+                        t('privateSchool'),
+                        t('fullTimeTraining'),
+                        t('assignedToGroups'),
+                        t('fullBoard'),
+                        t('privateRoom')
                       ].map((item, i) => (
                         <div key={i} className="flex items-center gap-3 text-sm text-zinc-300 font-medium">
                           <CheckCircle2 size={16} className="text-red-varese flex-shrink-0" />
@@ -892,13 +1121,13 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                       ))}
                       
                       <div className="pt-4 mt-4 border-t border-white/10">
-                        <div className="text-red-varese font-black uppercase tracking-widest text-xs mb-3">Elite Player Package</div>
+                        <div className="text-red-varese font-black uppercase tracking-widest text-xs mb-3">{t('elitePlayerPackage')}</div>
                         <div className="grid grid-cols-1 gap-2">
                           {[
-                            "Analytics",
-                            "Advanced stats & insights",
-                            "Video analysis",
-                            "Extra training"
+                            t('analytics'),
+                            t('advancedStats'),
+                            t('videoAnalysis'),
+                            t('extraTraining')
                           ].map((item, i) => (
                             <div key={i} className="flex items-center gap-3 text-sm text-white font-bold">
                               <div className="w-1.5 h-1.5 rounded-full bg-red-varese"></div>
@@ -950,146 +1179,6 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                         <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider text-lg">{item.title}</h5>
                       </div>
                     ))}
-                  </div>
-                </div>
-              );
-            }
-            if (line.includes("SUMMER_TARGET_BOXES_PLACEHOLDER")) {
-              return (
-                <div key={lIdx} className="mt-6 flex flex-col md:flex-row gap-6 w-full">
-                  <div className="flex-1 bg-white p-10 rounded-xl shadow-sm border border-zinc-200 flex flex-col items-center justify-center text-center min-h-[200px]">
-                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-xl">Youth National Teams</h5>
-                    <p className="text-zinc-600 text-base leading-relaxed">
-                      {lang === 'it' ? "che vanno dalle categorie U14 a U18" :
-                       lang === 'es' ? "que van desde las categorías U14 hasta U18" :
-                       lang === 'fr' ? "allant des catégories U14 à U18" :
-                       "ranging from the U14 to the U18 categories"}
-                    </p>
-                  </div>
-                  <div className="flex-1 bg-white p-10 rounded-xl shadow-sm border border-zinc-200 flex flex-col items-center justify-center text-center min-h-[200px]">
-                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-xl">Junior Programs</h5>
-                    <p className="text-zinc-600 text-base leading-relaxed">
-                      {lang === 'it' ? "alla ricerca di un ambiente di prestazioni d'élite" :
-                       lang === 'es' ? "en busca de un entorno de rendimiento de élite" :
-                       lang === 'fr' ? "à la recherche d'un environnement de performance d'élite" :
-                       "in search of an elite performance environment"}
-                    </p>
-                  </div>
-                  <div className="flex-1 bg-white p-10 rounded-xl shadow-sm border border-zinc-200 flex flex-col items-center justify-center text-center min-h-[200px]">
-                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-xl">Medium Level Senior teams</h5>
-                    <p className="text-zinc-600 text-base leading-relaxed">
-                      {lang === 'it' ? "che cercano una preparazione atletica di alta qualità" :
-                       lang === 'es' ? "que buscan una preparazione atletica di alta qualità" :
-                       lang === 'fr' ? "qui recherchent une preparazione athlétique de haute qualità" :
-                       "who are seeking high-quality athletic preparation"}
-                    </p>
-                  </div>
-                </div>
-              );
-            }
-            /* end of duplicate */
-            if (line.includes("SUMMER_OFFER_PLACEHOLDER")) {
-              const includeItems = [
-                lang === 'it' ? "trasporto da/per l'aeroporto" :
-                lang === 'es' ? "transporte desde/hacia el aeropuerto" :
-                lang === 'fr' ? "transport depuis/vers l'aéroport" :
-                "transportation from/to the airport",
-                lang === 'it' ? "pensione completa" :
-                lang === 'es' ? "pensión completa" :
-                lang === 'fr' ? "pension complète" :
-                "full board",
-                lang === 'it' ? "alloggi d'élite" :
-                lang === 'es' ? "alojamiento de élite" :
-                lang === 'fr' ? "hébergement d'élite" :
-                "elite housing",
-                lang === 'it' ? "strutture di allenamento d'élite" :
-                lang === 'es' ? "instalaciones de entrenamiento de élite" :
-                lang === 'fr' ? "installations d'entraînement d'élite" :
-                "elite training facilities"
-              ];
-              const addItems = [
-                lang === 'it' ? "staff tecnico" :
-                lang === 'es' ? "cuerpo técnico" :
-                lang === 'fr' ? "personnel d'entraîneurs" :
-                "coaching staff",
-                lang === 'it' ? "fisioterapisti" :
-                lang === 'es' ? "fisioterapeutas" :
-                lang === 'fr' ? "physiothérapeutes" :
-                "physiotherapists",
-                lang === 'it' ? "allenamento all'arena" :
-                lang === 'es' ? "entrenamiento en la arena" :
-                lang === 'fr' ? "entraînement à l'arène" :
-                "practice at the arena",
-                lang === 'it' ? "opzioni turistiche" :
-                lang === 'es' ? "opciones turísticas" :
-                lang === 'fr' ? "options touristiques" :
-                "tourist options"
-              ];
-
-              return (
-                <div key={lIdx} className="mt-6 flex flex-col md:flex-row gap-6 w-full">
-                  <div className="flex-1 bg-white p-6 rounded-xl shadow-sm border border-zinc-200">
-                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg text-center">
-                      {lang === 'it' ? "Il programma include" :
-                       lang === 'es' ? "El programa incluye" :
-                       lang === 'fr' ? "Le programme comprend" :
-                       "The program includes"}
-                    </h5>
-                    <div className="space-y-3">
-                      {includeItems.map((item, i) => (
-                        <div key={i} className="flex items-center gap-3 text-sm text-zinc-600 font-medium">
-                          <CheckCircle2 size={16} className="text-red-varese flex-shrink-0" />
-                          {item}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="flex-1 bg-white p-6 rounded-xl shadow-sm border border-zinc-200">
-                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg text-center">
-                      {lang === 'it' ? "Hai la possibilità di aggiungere:" :
-                       lang === 'es' ? "Tienes la oportunidad de añadir:" :
-                       lang === 'fr' ? "Vous avez la possibilité d'ajouter :" :
-                       "You have the chance to add:"}
-                    </h5>
-                    <div className="space-y-3">
-                      {addItems.map((item, i) => (
-                        <div key={i} className="flex items-center gap-3 text-sm text-zinc-600 font-medium">
-                          <Plus size={16} className="text-red-varese flex-shrink-0" />
-                          {item}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              );
-            }
-            if (false) { /* removed */ }
-                  <div className="flex-1 bg-white p-10 rounded-xl shadow-sm border border-zinc-200 flex flex-col items-center justify-center text-center min-h-[200px]">
-                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-xl">Youth National Teams</h5>
-                    <p className="text-zinc-600 text-base leading-relaxed">
-                      {lang === 'it' ? "che vanno dalle categorie U14 a U18" :
-                       lang === 'es' ? "que van desde las categorías U14 hasta U18" :
-                       lang === 'fr' ? "allant des catégories U14 à U18" :
-                       "ranging from the U14 to the U18 categories"}
-                    </p>
-                  </div>
-                  <div className="flex-1 bg-white p-10 rounded-xl shadow-sm border border-zinc-200 flex flex-col items-center justify-center text-center min-h-[200px]">
-                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-xl">Junior Programs</h5>
-                    <p className="text-zinc-600 text-base leading-relaxed">
-                      {lang === 'it' ? "alla ricerca di un ambiente di prestazioni d'élite" :
-                       lang === 'es' ? "en busca de un entorno de rendimiento de élite" :
-                       lang === 'fr' ? "à la recherche d'un environnement de performance d'élite" :
-                       "in search of an elite performance environment"}
-                    </p>
-                  </div>
-                  <div className="flex-1 bg-white p-10 rounded-xl shadow-sm border border-zinc-200 flex flex-col items-center justify-center text-center min-h-[200px]">
-                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-xl">Medium Level Senior teams</h5>
-                    <p className="text-zinc-600 text-base leading-relaxed">
-                      {lang === 'it' ? "che cercano una preparazione atletica di alta qualità" :
-                       lang === 'es' ? "que buscan una preparación atlética de alta calidad" :
-                       lang === 'fr' ? "qui recherchent une préparation athlétique de haute qualité" :
-                       "who are seeking high-quality athletic preparation"}
-                    </p>
                   </div>
                 </div>
               );
@@ -1160,86 +1249,50 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                 </div>
               );
             }
-            if (line.includes("INTERNSHIP_TABLE_PLACEHOLDER")) {
-              return (
-                <div key={lIdx} className="mt-4 flex flex-col gap-4 w-full">
-                  <div className="bg-white p-6 rounded-xl shadow-sm border border-zinc-200">
-                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg text-center">the program includes</h5>
-                    <div className="flex flex-col gap-6">
-                      <div className="flex flex-col">
-                        <h6 className="font-bold text-zinc-800 mb-2 border-b border-zinc-100 pb-1">Accommodation</h6>
-                        <ul className="list-disc pl-5 text-zinc-600 text-sm space-y-1">
-                          <li>Housing: Single room occupancy in our dorm</li>
-                          <li>Food: Lunch & Dinner</li>
-                        </ul>
-                      </div>
-                      <div className="flex flex-col">
-                        <h6 className="font-bold text-zinc-800 mb-2 border-b border-zinc-100 pb-1">Coaching</h6>
-                        <ul className="list-disc pl-5 text-zinc-600 text-sm space-y-1">
-                          <li>Serie A Practice attendance</li>
-                          <li>Coaches meetings</li>
-                          <li>Run drills with Serie A Players</li>
-                          <li>Players scouting</li>
-                          <li>Serie A games attendance</li>
-                          <li>Youth teams assistant coach</li>
-                          <li>Hudl video analysis</li>
-                        </ul>
-                      </div>
-                      <div className="flex flex-col">
-                        <h6 className="font-bold text-zinc-800 mb-2 border-b border-zinc-100 pb-1">Resume opportunity</h6>
-                        <ul className="list-disc pl-5 text-zinc-600 text-sm space-y-1">
-                          {/* Empty as per request, or we can just leave the subtitle */}
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
-            }
             if (line.includes("TABLES_PLACEHOLDER")) {
               return (
                 <div key={lIdx} className="mt-4 flex flex-col xl:flex-row gap-4 w-full">
                   <div className="flex-1 bg-white p-4 rounded-xl shadow-sm border border-zinc-200">
-                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-1 text-lg text-center">Residential Camp</h5>
+                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-1 text-lg text-center">{t('residentialCamp')}</h5>
                     <div className="overflow-x-auto">
                       <table className="w-full text-[10px] sm:text-xs text-left">
                         <thead className="text-[10px] sm:text-xs text-zinc-500 uppercase bg-zinc-50">
                           <tr>
-                            <th className="px-2 py-1.5 rounded-tl-lg">Time</th>
-                            <th className="px-2 py-1.5 rounded-tr-lg">Activity</th>
+                            <th className="px-2 py-1.5 rounded-tl-lg">{t('time')}</th>
+                            <th className="px-2 py-1.5 rounded-tr-lg">{t('activity')}</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">07:30</td><td className="px-2 py-1.5">Wake Up & Breakfast</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">09:00</td><td className="px-2 py-1.5">Morning Practice</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">11:30</td><td className="px-2 py-1.5">Strength & Cond.</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">13:00</td><td className="px-2 py-1.5">Lunch & Rest</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">15:30</td><td className="px-2 py-1.5">Afternoon practice</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">18:00</td><td className="px-2 py-1.5">Free Time / Recovery</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">19:30</td><td className="px-2 py-1.5">Dinner</td></tr>
-                          <tr><td className="px-2 py-1.5 font-medium">21:30</td><td className="px-2 py-1.5">Lights Out</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">07:30</td><td className="px-2 py-1.5">{t('wakeUpBreakfast')}</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">09:00</td><td className="px-2 py-1.5">{t('morningPractice')}</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">11:30</td><td className="px-2 py-1.5">{t('strengthCond')}</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">13:00</td><td className="px-2 py-1.5">{t('lunchRest')}</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">15:30</td><td className="px-2 py-1.5">{t('afternoonPractice')}</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">18:00</td><td className="px-2 py-1.5">{t('freeTimeRecovery')}</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">19:30</td><td className="px-2 py-1.5">{t('dinner')}</td></tr>
+                          <tr><td className="px-2 py-1.5 font-medium">21:30</td><td className="px-2 py-1.5">{t('lightsOut')}</td></tr>
                         </tbody>
                       </table>
                     </div>
                   </div>
                   <div className="flex-1 bg-white p-4 rounded-xl shadow-sm border border-zinc-200">
-                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-1 text-lg text-center">Day Camp</h5>
+                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-1 text-lg text-center">{t('dayCamp')}</h5>
                     <div className="overflow-x-auto">
                       <table className="w-full text-[10px] sm:text-xs text-left">
                         <thead className="text-[10px] sm:text-xs text-zinc-500 uppercase bg-zinc-50">
                           <tr>
-                            <th className="px-2 py-1.5 rounded-tl-lg">Time</th>
-                            <th className="px-2 py-1.5 rounded-tr-lg">Activity</th>
+                            <th className="px-2 py-1.5 rounded-tl-lg">{t('time')}</th>
+                            <th className="px-2 py-1.5 rounded-tr-lg">{t('activity')}</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">08:30</td><td className="px-2 py-1.5">Arrival & Check-in</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">09:00</td><td className="px-2 py-1.5">Morning Practice</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">11:30</td><td className="px-2 py-1.5">Strength & Cond.</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">13:00</td><td className="px-2 py-1.5">Lunch & Rest</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">15:30</td><td className="px-2 py-1.5">Afternoon practice</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">18:00</td><td className="px-2 py-1.5">Free Time / Recovery</td></tr>
-                          <tr><td className="px-2 py-1.5 font-medium">18:30</td><td className="px-2 py-1.5">Pick-up</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">08:30</td><td className="px-2 py-1.5">{t('arrivalCheckIn')}</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">09:00</td><td className="px-2 py-1.5">{t('morningPractice')}</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">11:30</td><td className="px-2 py-1.5">{t('strengthCond')}</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">13:00</td><td className="px-2 py-1.5">{t('lunchRest')}</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">15:30</td><td className="px-2 py-1.5">{t('afternoonPractice')}</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-2 py-1.5 font-medium">18:00</td><td className="px-2 py-1.5">{t('freeTimeRecovery')}</td></tr>
+                          <tr><td className="px-2 py-1.5 font-medium">18:30</td><td className="px-2 py-1.5">{t('pickUp')}</td></tr>
                         </tbody>
                       </table>
                     </div>
@@ -1254,24 +1307,37 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                 </h4>
               );
             }
-            if (line.includes("f.bellotto@pallacanestrovarese.it")) {
-              const parts = line.split("f.bellotto@pallacanestrovarese.it");
+            if (line.includes("e.robbiani@pallacanestrovarese.it")) {
+              const parts = line.split("e.robbiani@pallacanestrovarese.it");
               return (
                 <p key={lIdx}>
                   {parts[0]}
-                  <a href="mailto:f.bellotto@pallacanestrovarese.it?subject=Basketball%20Academy%20program%20-%20info%20request" className="text-red-varese underline font-bold hover:text-red-700">f.bellotto@pallacanestrovarese.it</a>
+                  <a href="mailto:e.robbiani@pallacanestrovarese.it?subject=Basketball%20Academy%20program%20-%20info%20request" className="text-red-varese underline font-bold hover:text-red-700">e.robbiani@pallacanestrovarese.it</a>
                   {parts[1]}
                 </p>
               );
             }
-            if (line.includes("click here")) {
-              const parts = line.split("click here");
+            if (line.includes(t('clickHere'))) {
+              const parts = line.split(t('clickHere'));
               return (
                 <p key={lIdx}>
                   {parts[0]}
-                  <a href={getStoreLink()} target="_blank" rel="noopener noreferrer" className="text-red-varese underline font-bold hover:text-red-700">click here</a>
+                  <a href={getStoreLink()} target="_blank" rel="noopener noreferrer" className="text-red-varese underline font-bold hover:text-red-700">{t('clickHere')}</a>
                   {parts[1]}
                 </p>
+              );
+            }
+            if (line.startsWith("BOXES:")) {
+              const boxes = line.replace("BOXES:", "").split("|").map(b => b.trim());
+              const gridCols = boxes.length === 3 ? 'grid-cols-1 sm:grid-cols-3' : 'grid-cols-2 sm:grid-cols-4';
+              return (
+                <div key={lIdx} className={`grid ${gridCols} gap-3 mt-4`}>
+                  {boxes.map((box, bIdx) => (
+                    <div key={bIdx} className="bg-zinc-50 border border-zinc-200 p-3 rounded-xl shadow-sm flex flex-col items-center justify-center text-center hover:border-red-varese/50 transition-colors">
+                      <span className="text-zinc-900 font-bold uppercase tracking-wider text-xs">{box}</span>
+                    </div>
+                  ))}
+                </div>
               );
             }
             const colonIndex = line.indexOf(':');
@@ -1298,7 +1364,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
     if (programId === 'summer-camp') return "https://i.imgur.com/PU1FIpF.png";
     if (programId === 'internship') return "https://i.imgur.com/OzLgJN6.jpeg";
     if (programId === 'summer-prog') return "https://i.imgur.com/fFsfxKt.jpeg";
-    if (programId === 'player-package') return "https://i.imgur.com/kRADld5.jpeg";
+    if (programId === 'player-package') return "https://i.imgur.com/NahA03T.jpeg";
     return `https://picsum.photos/seed/${programId}-1/800/600`;
   };
   const getImage2 = () => {
@@ -1307,7 +1373,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
     if (programId === 'summer-camp') return "https://i.imgur.com/V5peTOC.png";
     if (programId === 'internship') return "https://i.imgur.com/ZbuFjIf.jpeg";
     if (programId === 'summer-prog') return "https://i.imgur.com/1y909x4.jpeg";
-    if (programId === 'player-package') return "https://i.imgur.com/kRADld5.jpeg";
+    if (programId === 'player-package') return "https://i.imgur.com/Vc8C4E6.jpeg";
     return `https://picsum.photos/seed/${programId}-2/800/600`;
   };
   const getImage3 = () => {
@@ -1316,7 +1382,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
     if (programId === 'summer-camp') return "https://i.imgur.com/f3NtI5T.png";
     if (programId === 'internship') return "https://i.imgur.com/aJPDUxI.png";
     if (programId === 'summer-prog') return "https://i.imgur.com/Wm6SxMP.png";
-    if (programId === 'player-package') return "https://i.imgur.com/kRADld5.jpeg";
+    if (programId === 'player-package') return "https://i.imgur.com/xnFvd8X.jpeg";
     return `https://picsum.photos/seed/${programId}-3/800/600`;
   };
 
@@ -1328,16 +1394,27 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
           let imageUrls: string[] | null = null;
           let imagePosition = 'right';
           
+          const isTitleMatch = (title: string, englishTitle: string) => {
+            const translations: Record<string, string[]> = {
+              'Sample Daily Routine': ['Sample Daily Routine', 'Esempio di Routine Quotidiana', 'Ejemplo de Rutina Diaria', 'Exemple de Routine Quotidienne'],
+              'the training program': ['the training program', 'il programma di allenamento', 'el programa de entrenamiento', 'le programme d\'entraînement'],
+              'Our special guest and CEO': ['Our special guest and CEO', 'Il nostro ospite speciale e CEO', 'Nuestro invitado especial y CEO', 'Notre invité spécial et PDG'],
+              'Unique events & meetings': ['Unique events & meetings', 'Eventi unici e incontri', 'Eventos únicos y reuniones', 'Événements uniques et réunions'],
+              'A Comprehensive Two-Way Approach': ['A Comprehensive Two-Way Approach', 'Un Approccio Completo a Due Vie', 'Un Enfoque Completo de Dos Vías', 'Une Approche Complète à Deux Voies']
+            };
+            return translations[englishTitle]?.some(t => title.toLowerCase() === t.toLowerCase()) || title.toLowerCase() === englishTitle.toLowerCase();
+          };
+
           if (idx === 0) {
             imageUrl = getImage1();
             imagePosition = 'right';
           } else if (idx === 1) {
             imageUrl = getImage2();
             imagePosition = 'left';
-          } else if (section.title === 'Sample Daily Routine') {
+          } else if (isTitleMatch(section.title, 'Sample Daily Routine')) {
             imageUrl = getImage3();
             imagePosition = 'left';
-          } else if (idx === 2 && section.title !== 'the training program' && programId !== 'full-time') {
+          } else if (idx === 2 && !isTitleMatch(section.title, 'the training program') && programId !== 'full-time') {
             imageUrl = getImage3();
             imagePosition = 'right';
           } else if (idx === 3 && programId === 'full-time') {
@@ -1346,10 +1423,10 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
           } else if (idx === 4 && programId === 'full-time') {
             imageUrl = getImage3();
             imagePosition = 'right';
-          } else if (section.title === 'Our special guest and CEO') {
+          } else if (isTitleMatch(section.title, 'Our special guest and CEO')) {
             imageUrl = "https://i.imgur.com/H0gXCIE.png";
             imagePosition = 'left';
-          } else if (section.title === 'Unique events & meetings') {
+          } else if (isTitleMatch(section.title, 'Unique events & meetings')) {
             imageUrl = "https://i.imgur.com/MafMwTk.png";
             imagePosition = 'right';
           }
@@ -1358,86 +1435,119 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
             <div key={idx} className="flex flex-col">
               <div className={`flex flex-col lg:flex-row gap-8 lg:gap-12 items-center ${idx > 0 ? 'mt-8' : ''}`}>
                 {(imageUrl || imageUrls) && imagePosition === 'left' && (
-                  <div className={`flex-1 ${section.title === 'Our special guest and CEO' ? 'lg:flex-[1] max-w-lg mx-auto' : (idx === 1 && (programId === 'academy' || programId === 'summer-prog') ? 'lg:flex-none lg:w-1/3 max-w-[350px] mx-auto' : 'lg:flex-[1.5]')} w-full order-2 lg:order-1`}>
+                  <div className={`flex-1 ${isTitleMatch(section.title, 'Our special guest and CEO') ? 'lg:flex-[1] max-w-lg mx-auto' : (idx === 1 && (programId === 'academy' || programId === 'summer-prog' || programId === 'player-package') ? 'lg:flex-none lg:w-1/3 max-w-[350px] mx-auto' : 'lg:flex-[1.5]')} w-full order-2 lg:order-1`}>
                     {imageUrl && <img src={imageUrl} alt={section.title || `Section ${idx + 1}`} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />}
                     {imageUrls && <div className="flex flex-col gap-4">{imageUrls.map((url, i) => <img key={i} src={url} alt={`${section.title || `Section ${idx + 1}`} ${i + 1}`} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />)}</div>}
                   </div>
                 )}
                 
-                <div className={`flex-1 ${(imageUrl || imageUrls) ? (section.title === 'Our special guest and CEO' ? 'lg:flex-[1.8]' : (idx === 1 && programId === 'academy' ? 'lg:flex-[2]' : 'lg:flex-[1.5]')) : 'w-full'} space-y-4 ${(imageUrl || imageUrls) && imagePosition === 'left' ? 'order-1 lg:order-2' : ''}`}>
-                  <h4 className={`font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg border-b border-zinc-200 pb-2 ${section.title === 'A Comprehensive Two-Way Approach' ? 'text-center' : ''}`}>
+                <div className={`flex-1 ${(imageUrl || imageUrls) ? (isTitleMatch(section.title, 'Our special guest and CEO') ? 'lg:flex-[1.8]' : ((idx === 1 && (programId === 'academy' || programId === 'summer-prog' || programId === 'player-package')) || ((idx === 2 || idx === 0) && programId === 'player-package') ? 'lg:flex-[2]' : 'lg:flex-[1.5]')) : 'w-full'} space-y-4 ${(imageUrl || imageUrls) && imagePosition === 'left' ? 'order-1 lg:order-2' : ''}`}>
+                  <h4 className={`font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg border-b border-zinc-200 pb-2 ${isTitleMatch(section.title, 'A Comprehensive Two-Way Approach') ? 'text-center' : ''}`}>
                     {section.title}
                   </h4>
                   {renderSectionContent(section)}
                 </div>
 
                 {(imageUrl || imageUrls) && imagePosition === 'right' && (
-                  <div className="flex-1 lg:flex-[1.5] w-full">
+                  <div className={`flex-1 ${((idx === 2 || idx === 0) && programId === 'player-package') ? 'lg:flex-none lg:w-1/3 max-w-[350px] mx-auto' : 'lg:flex-[1.5]'} w-full`}>
                     {imageUrl && <img src={imageUrl} alt={section.title || `Section ${idx + 1}`} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />}
                     {imageUrls && <div className="flex flex-col gap-4">{imageUrls.map((url, i) => <img key={i} src={url} alt={`${section.title || `Section ${idx + 1}`} ${i + 1}`} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />)}</div>}
                   </div>
                 )}
               </div>
               
-              {programId === 'summer-camp' && section.title === 'Sample Daily Routine' && (
+              {programId === 'summer-camp' && isTitleMatch(section.title, 'Sample Daily Routine') && (
                 <div className="mt-12 flex flex-col md:flex-row gap-8 w-full">
                   <div className="flex-1 bg-white p-4 rounded-xl shadow-md border border-zinc-200">
-                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-2 text-lg text-center">Residential Camp</h5>
+                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-2 text-lg text-center">{t('residentialCamp')}</h5>
                     <p className="text-center text-zinc-600 font-semibold mb-3 border-b border-zinc-200 pb-2 text-lg">€990</p>
                     <div className="overflow-x-auto">
                       <table className="w-full text-xs text-left">
                         <thead className="text-[10px] text-zinc-500 uppercase bg-zinc-50">
                           <tr>
-                            <th className="px-3 py-2 rounded-t-lg">Included</th>
+                            <th className="px-3 py-2 rounded-t-lg">{t('included')}</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> private single room</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> shared common spaces</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> 3 meals a day</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> sports nutrition-driven menus</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> individualized 1-on-1 training</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> team practice</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> strength and performance training</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> personale performance analytics</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> elite coaching staff</td></tr>
-                          <tr><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> official camp gear</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('privateSingleRoom')}</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('sharedCommonSpaces')}</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('meals3')}</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('sportsNutrition')}</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('individualizedTraining')}</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('teamPractice')}</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('strengthTraining')}</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('personalAnalytics')}</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('eliteCoaching')}</td></tr>
+                          <tr><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('officialGear')}</td></tr>
                         </tbody>
                       </table>
                     </div>
                     <div className="mt-4 flex justify-center">
                       <a href="https://store.pallacanestrovarese.it/products/elite-summer-camp" target="_blank" rel="noopener noreferrer" className="bg-red-varese hover:bg-red-700 text-white font-oswald uppercase tracking-wider py-2.5 px-6 text-sm rounded-full transition-colors font-bold shadow-md">
-                        Apply Now
+                        {t('applyNowBtn')}
                       </a>
                     </div>
                   </div>
                   <div className="flex-1 bg-white p-4 rounded-xl shadow-md border border-zinc-200">
-                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-2 text-lg text-center">Day Camp</h5>
+                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-2 text-lg text-center">{t('dayCamp')}</h5>
                     <p className="text-center text-zinc-600 font-semibold mb-3 border-b border-zinc-200 pb-2 text-lg">€690</p>
                     <div className="overflow-x-auto">
                       <table className="w-full text-xs text-left">
                         <thead className="text-[10px] text-zinc-500 uppercase bg-zinc-50">
                           <tr>
-                            <th className="px-3 py-2 rounded-t-lg">Included</th>
+                            <th className="px-3 py-2 rounded-t-lg">{t('included')}</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> lunch</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> sports nutrition-driven menus</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> individualized 1-on-1 training</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> team practice</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> strength and performance training</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> personal performance analytics</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> elite coaching staff</td></tr>
-                          <tr><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> official camp gear</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('lunch')}</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('sportsNutrition')}</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('individualizedTraining')}</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('teamPractice')}</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('strengthTraining')}</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('personalAnalytics')}</td></tr>
+                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('eliteCoaching')}</td></tr>
+                          <tr><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('officialGear')}</td></tr>
                         </tbody>
                       </table>
                     </div>
                     <div className="mt-4 flex justify-center">
                       <a href="https://store.pallacanestrovarese.it/products/elite-summer-camp" target="_blank" rel="noopener noreferrer" className="bg-red-varese hover:bg-red-700 text-white font-oswald uppercase tracking-wider py-2.5 px-6 text-sm rounded-full transition-colors font-bold shadow-md">
-                        Apply Now
+                        {t('applyNowBtn')}
                       </a>
                     </div>
+                  </div>
+                </div>
+              )}
+              {programId === 'summer-camp' && isTitleMatch(section.title, 'Sample Daily Routine') && (
+                <div className="mt-6 text-center">
+                  <p className="text-red-varese font-bold text-lg md:text-xl uppercase tracking-wide bg-red-varese/10 inline-block px-6 py-3 rounded-xl border border-red-varese/20 shadow-sm" dangerouslySetInnerHTML={{ __html: t('depositNotice') }}>
+                  </p>
+                </div>
+              )}
+              {programId === 'summer-camp' && isTitleMatch(section.title, 'Sample Daily Routine') && (
+                <div className="mt-12 bg-zinc-50 p-8 md:p-12 rounded-2xl border-2 border-red-varese/20 shadow-md">
+                  <h4 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-8 text-3xl md:text-4xl text-center">{t('howToSubscribe')}</h4>
+                  <div className="text-zinc-800 space-y-6 max-w-4xl mx-auto text-lg md:text-xl">
+                    <p>
+                      {t('depositDesc')}
+                    </p>
+                    <p className="font-bold text-xl md:text-2xl text-red-varese">
+                      {t('followSteps')}
+                    </p>
+                    <ol className="list-decimal list-inside space-y-5 ml-2 md:ml-6">
+                      <li>
+                        <span className="font-bold">{t('visitStore')}</span> <a href="https://store.pallacanestrovarese.it/products/elite-summer-camp" target="_blank" rel="noopener noreferrer" className="text-red-varese underline hover:text-red-700 font-bold">{t('clickHere')}</a> {t('accessStore')}
+                      </li>
+                      <li>
+                        <span className="font-bold">{t('submitDetails')}</span> {t('provideInfo')}
+                      </li>
+                      <li>
+                        <span className="font-bold">{t('nextSteps')}</span> {t('onceDeposit')}
+                      </li>
+                    </ol>
+                    <p className="text-center font-oswald text-red-varese font-bold text-2xl md:text-3xl mt-10 pt-6 border-t-2 border-red-varese/20 uppercase tracking-wider">
+                      {t('waitingForYou')}
+                    </p>
                   </div>
                 </div>
               )}
@@ -1578,7 +1688,7 @@ const App: React.FC = () => {
       `Information Request:\n${formState.message}`
     );
 
-    window.location.href = `mailto:f.bellotto@pallacanestrovarese.it?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:e.robbiani@pallacanestrovarese.it?subject=${subject}&body=${body}`;
     setSubmissionStatus('submitted');
   };
 
@@ -1782,7 +1892,9 @@ const App: React.FC = () => {
           className={`relative card-glass rounded-xl md:rounded-2xl overflow-hidden flex flex-col group transition-all duration-300 shadow-xl w-[calc(50%-6px)] md:w-[calc(50%-20px)] ${isOther ? 'lg:w-[calc(25%-30px)]' : 'lg:w-[calc(33.333%-27px)]'} ${translatedProg.id === 'full-time' ? 'border-red-varese' : 'hover:border-red-varese'}`}
         >
           <div className={`overflow-hidden relative ${isOther ? 'h-24 sm:h-32 md:h-40 lg:h-44' : 'h-32 sm:h-48 md:h-64'}`}>
-            <img src={translatedProg.image} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" alt={translatedProg.title} />
+            {translatedProg.image && (
+              <img src={translatedProg.image} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" alt={translatedProg.title} />
+            )}
             <div className="absolute top-2 left-2 md:top-4 md:left-4 bg-red-varese text-white px-2 py-0.5 md:px-3 md:py-1 text-[8px] md:text-[10px] font-bold tracking-widest uppercase rounded">
               {translatedProg.timing}
             </div>
@@ -1892,7 +2004,7 @@ const App: React.FC = () => {
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors z-10 flex items-center justify-center">
                         <div className="bg-white text-red-varese px-6 py-3 rounded-full font-bold opacity-0 group-hover:opacity-100 transition-all shadow-xl transform translate-y-4 group-hover:translate-y-0 flex items-center gap-2">
                           <MapPin size={18} />
-                          Open in Google Maps
+                          {t('openInGoogleMaps')}
                         </div>
                       </div>
                       <iframe 
@@ -1920,7 +2032,7 @@ const App: React.FC = () => {
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors z-10 flex items-center justify-center">
                         <div className="bg-white text-red-varese px-6 py-3 rounded-full font-bold opacity-0 group-hover:opacity-100 transition-all shadow-xl transform translate-y-4 group-hover:translate-y-0 flex items-center gap-2">
                           <MapPin size={18} />
-                          Open in Google Maps
+                          {t('openInGoogleMaps')}
                         </div>
                       </div>
                       <iframe 
@@ -2059,7 +2171,9 @@ const App: React.FC = () => {
                           <p className="text-gray-300 text-[10px] md:text-base leading-tight">{translatedProg.timing}</p>
                         </div>
                       </div>
+                    {(translatedProg.detailImage || translatedProg.image) && (
                       <img src={translatedProg.detailImage || translatedProg.image} alt={translatedProg.title} className="w-full aspect-video object-cover rounded-lg my-6" />
+                    )}
                       <div className="mb-6"><FormattedText text={translatedProg.details} programId={translatedProg.id} lang={lang} /></div>
                       <h4 className="text-white font-oswald text-lg md:text-xl font-bold uppercase tracking-widest mb-4 border-b border-red-varese/30 pb-2 inline-block">Key Highlights</h4>
                       <div className="grid grid-cols-2 sm:grid-cols-2 gap-x-3 md:gap-x-6 gap-y-1.5 md:gap-y-2">
@@ -2093,11 +2207,13 @@ const App: React.FC = () => {
         <main className="fixed inset-0 z-[60] bg-white overflow-y-auto pb-24 animate-in fade-in duration-700">
           {/* Full Screen Hero Section */}
           <section className="relative h-[50vh] md:h-[65vh] w-full overflow-hidden">
-            <img 
-              src={program.detailImage || program.image} 
-              className="absolute inset-0 w-full h-full object-cover" 
-              alt={program.title} 
-            />
+            {(program.detailImage || program.image) && (
+              <img 
+                src={program.detailImage || program.image} 
+                className="absolute inset-0 w-full h-full object-cover" 
+                alt={program.title} 
+              />
+            )}
             {/* Gradient fading to white instead of black */}
             <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent"></div>
             
@@ -2614,8 +2730,29 @@ const App: React.FC = () => {
                 <h2 className="font-oswald text-4xl md:text-6xl font-bold uppercase mb-4">{t('eliteOpportunities')}</h2>
               </div>
               <ProgramsGrid category="other" />
+              
+              <div className="mt-24 text-center">
+                <a 
+                  href="https://store.pallacanestrovarese.it/collections/elite-programs" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center bg-red-varese text-white px-16 py-8 rounded-sm font-bold uppercase tracking-[0.3em] text-2xl hover:bg-white hover:text-black transition-all shadow-[0_0_40px_rgba(229,50,56,0.4)] hover:scale-105"
+                >
+                  {t('buyNow')}
+                </a>
+              </div>
             </div>
           </section>
+
+          <div className="w-full bg-red-varese h-36 md:h-40 flex items-center justify-center overflow-hidden relative shadow-[inset_0_0_40px_rgba(0,0,0,0.3)]">
+            <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/20 pointer-events-none"></div>
+            <span className="font-oswald font-black uppercase text-[28vw] md:text-[16vw] tracking-widest text-red-950/40 select-none whitespace-nowrap drop-shadow-2xl mix-blend-multiply">
+              VARESE
+            </span>
+            <span className="absolute font-oswald font-black uppercase text-[28vw] md:text-[16vw] tracking-widest text-white/10 select-none whitespace-nowrap mix-blend-overlay -translate-y-1 -translate-x-1">
+              VARESE
+            </span>
+          </div>
 
           <FAQSection />
         </>
@@ -2731,7 +2868,9 @@ const App: React.FC = () => {
           <div className="relative bg-zinc-900 w-full max-w-7xl max-h-screen md:max-h-[95vh] overflow-y-auto rounded-none md:rounded-3xl shadow-[0_0_100px_rgba(227,6,19,0.3)] border-0 md:border md:border-white/10 flex flex-col md:flex-row animate-in zoom-in-95 duration-300 ease-out">
             <button onClick={handleCloseFormModal} className="absolute top-4 right-4 md:top-6 md:right-6 z-50 bg-black/50 hover:bg-red-varese text-white p-2 md:p-3 rounded-full transition-colors backdrop-blur-md"><X size={24} /></button>
             <div className="md:w-[40%] relative h-48 md:h-auto overflow-hidden">
-              <img src={selectedProgram.detailImage || selectedProgram.image} className="absolute inset-0 w-full h-full object-cover opacity-60 md:opacity-100" alt={selectedProgram.title} />
+              {(selectedProgram.detailImage || selectedProgram.image) && (
+                <img src={selectedProgram.detailImage || selectedProgram.image} className="absolute inset-0 w-full h-full object-cover opacity-60 md:opacity-100" alt={selectedProgram.title} />
+              )}
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/40 to-transparent md:bg-gradient-to-r"></div>
             </div>
             <div className="md:w-[60%] p-6 md:p-12 flex flex-col overflow-y-visible">
@@ -2823,7 +2962,7 @@ const App: React.FC = () => {
                         <div className="mt-4 md:mt-8">
                             <h5 className="font-bold uppercase mb-2 md:mb-4 tracking-[0.2em] text-[10px] md:text-xs text-white">{t('contactUs')}</h5>
                             <div className="text-[10px] md:text-sm text-gray-500">
-                                <p>Email: <a href="mailto:f.bellotto@pallacanestrovarese.it" className="hover:text-red-varese transition-colors">f.bellotto@pallacanestrovarese.it</a></p>
+                                <p>Email: <a href="mailto:e.robbiani@pallacanestrovarese.it" className="hover:text-red-varese transition-colors">e.robbiani@pallacanestrovarese.it</a></p>
                                 <p className="text-[8px] md:text-[10px] uppercase tracking-widest mt-0.5 md:mt-1 text-gray-400">{t('footerCOO')}</p>
                             </div>
                         </div>

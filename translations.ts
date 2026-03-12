@@ -27,7 +27,7 @@ pubblico di riferimento
 ACADEMY_TABLES_PLACEHOLDER
 
 contattaci
-Per maggiori informazioni e per candidarsi al programma Basketball Academy contattaci all'indirizzo f.bellotto@pallacanestrovarese.it
+Per maggiori informazioni e per candidarsi al programma Basketball Academy contattaci all'indirizzo e.robbiani@pallacanestrovarese.it
 
 prezzi
 Contattaci o clicca qui per informazioni dettagliate sui prezzi in base alle tue esigenze specifiche.`
@@ -57,7 +57,7 @@ público objetivo
 ACADEMY_TABLES_PLACEHOLDER
 
 contáctanos
-Para obtener más información y postularse para el programa Basketball Academy, contáctenos en f.bellotto@pallacanestrovarese.it
+Para obtener más información y postularse para el programa Basketball Academy, contáctenos en e.robbiani@pallacanestrovarese.it
 
 precios
 Contáctanos o haz clic aquí para obtener información detallada sobre los precios adaptada a tus necesidades específicas.`
@@ -87,7 +87,7 @@ public cible
 ACADEMY_TABLES_PLACEHOLDER
 
 contactez-nous
-Pour plus d'informations et pour postuler au programme Basketball Academy, veuillez nous contacter à f.bellotto@pallacanestrovarese.it
+Pour plus d'informations et pour postuler au programme Basketball Academy, veuillez nous contacter à e.robbiani@pallacanestrovarese.it
 
 prix
 Contactez-nous ou cliquez ici pour obtenir des informations détaillées sur les prix adaptées à vos besoins spécifiques.`
@@ -264,9 +264,6 @@ Sviluppo Strategico: Partecipa alle riunioni degli allenatori per comprendere i 
 
 Sviluppo Giovanile: Contribuisci al futuro dello sport assistendo lo staff tecnico delle nostre squadre giovanili.
 
-il programma
-INTERNSHIP_TABLE_PLACEHOLDER
-
 Quando e dove
 Il programma sarà ospitato presso le nostre strutture di prim'ordine, in particolare la Foresteria Elite Housing e il nostro Campus in via Pirandello. Queste due sedi di punta sono strategicamente situate a soli 5 minuti a piedi l'una dall'altra, garantendo transizioni senza interruzioni tra residenza e allenamento. Questa configurazione logistica integrata consente agli atleti di massimizzare il loro tempo e concentrarsi interamente sul loro sviluppo professionale.
 
@@ -294,9 +291,6 @@ Participación Activa en la Cancha: Asume un papel práctico dirigiendo ejercici
 Desarrollo Estratégico: Asiste a las reuniones de entrenadores para comprender los procesos de toma de decisiones tácticas y estratégicas al más alto nivel.
 
 Desarrollo Juvenil: Contribuye al futuro del deporte ayudando al cuerpo técnico de nuestros equipos juveniles.
-
-el programa
-INTERNSHIP_TABLE_PLACEHOLDER
 
 Cuándo y dónde
 El programa se llevará a cabo en nuestras instalaciones de primer nivel, específicamente la Foresteria Elite Housing y nuestro Campus en via Pirandello. Estas dos ubicaciones emblemáticas están estratégicamente situadas a solo 5 minutos a pie una de la otra, lo que garantiza transiciones fluidas entre la residencia y el entrenamiento. Esta configuración logística integrada permite a los atletas maximizar su tiempo y concentrarse por completo en su desarrollo profesional.
@@ -326,9 +320,6 @@ Développement Stratégique : Assistez aux réunions des entraîneurs pour compr
 
 Développement des Jeunes : Contribuez à l'avenir du sport en assistant le personnel d'entraîneurs de nos équipes de jeunes.
 
-le programme
-INTERNSHIP_TABLE_PLACEHOLDER
-
 Quand et où
 Le programme sera hébergé dans nos installations de premier ordre, à savoir la Foresteria Elite Housing et notre Campus de via Pirandello. Ces deux sites phares sont stratégiquement situés à seulement 5 minutes à pied l'un de l'autre, assurant des transitions fluides entre la résidence et l'entraînement. Cette configuration logistique intégrée permet aux athlètes de maximiser leur temps et de se concentrer entièrement sur leur développement professionnel.
 
@@ -349,12 +340,9 @@ La nostra formula all-inclusive di minimo sette giorni è stata strategicamente 
 Per garantire che ogni gruppo raggiunga i propri obiettivi unici, ogni singolo aspetto di questo programma è completamente modulare e altamente flessibile. Comprendiamo che non esistono due squadre con gli stessi obiettivi; pertanto, il curriculum può essere personalizzato con precisione per soddisfare i requisiti tecnici specifici della tua squadra e le esigenze di programmazione individuali. Che tu abbia bisogno di procedure tattiche avanzate, condizionamento fisico intensivo o sessioni specifiche di studio video, il nostro quadro è progettato per adattarsi alla tua visione, fornendo un'esperienza professionale su misura dall'inizio alla fine.
 
 Pubblico di riferimento
-SUMMER_TARGET_BOXES_PLACEHOLDER
+Le nostre strutture all'avanguardia e i programmi di allenamento specializzati sono stati specificamente progettati per ospitare le Squadre Nazionali Giovanili, che vanno dalle categorie U14 a U18, nonché prestigiosi Programmi Junior alla ricerca di un ambiente di prestazioni d'élite. Comprendiamo le esigenze uniche dello sviluppo giovanile di alto livello e la nostra infrastruttura è progettata per fornire i rigorosi standard richiesti dalle federazioni nazionali per preparare la loro prossima generazione di talenti per le competizioni internazionali.
 
-la nostra offerta
-SUMMER_OFFER_PLACEHOLDER
-
-Siamo orgogliosi di offrire una piattaforma versatile in cui ogni squadra, indipendentemente dal proprio livello competitivo specifico, può trovare gli strumenti professionali e l'ambiente dedicato di cui ha bisogno per eccellere.
+Oltre alle nostre iniziative incentrate sui giovani, ci rivolgiamo ampiamente anche a squadre Senior di Livello Medio che cercano il perfetto equilibrio strategico tra logistica di livello professionale e preparazione atletica di alta qualità. Che il tuo obiettivo sia lo sviluppo a lungo termine di giovani prospetti emergenti o la meticolosa rifinitura delle strategie di livello senior in vista di una nuova stagione, il nostro campo fornisce il supporto completo e su misura necessario per il successo. Siamo orgogliosi di offrire una piattaforma versatile in cui ogni squadra, indipendentemente dal proprio livello competitivo specifico, può trovare gli strumenti professionali e l'ambiente dedicato di cui ha bisogno per eccellere.
 
 Quando e dove
 Sperimenta alloggi d'élite di 400 mq con giardini privati, situati a soli cinque minuti dall'arena. Il campo richiede un soggiorno minimo di 1 settimana (7 giorni, 6 notti), su misura per le esigenze specifiche e la disponibilità della tua squadra. Per garantire un relax totale, gestiamo tutta la logistica: due furgoni da 9 posti forniscono trasferimenti aeroportuali senza interruzioni sia per l'arrivo che per la partenza. Questa configurazione offre il perfetto equilibrio tra privacy e comunità per un'esperienza di allenamento professionale e senza stress.
@@ -374,12 +362,9 @@ Nuestra fórmula todo incluido de un mínimo de siete días ha sido desarrollada
 Para garantizar que cada grupo logre sus objetivos únicos, cada aspecto de este programa es completamente modular y altamente flexible. Entendemos que no hay dos equipos que tengan los mismos objetivos; por lo tanto, el plan de estudios se puede adaptar con precisión para satisfacer los requisitos técnicos específicos de tu equipo y las necesidades de programación individuales. Ya sea que necesites recorridos tácticos avanzados, acondicionamiento físico intensivo o sesiones específicas de estudio de video, nuestro marco está diseñado para adaptarse a tu visión, brindando una experiencia profesional a medida de principio a fin.
 
 Público objetivo
-SUMMER_TARGET_BOXES_PLACEHOLDER
+Nuestras instalaciones de última generación y programas de entrenamiento especializados han sido diseñados específicamente para albergar a Selecciones Nacionales Juveniles, que van desde las categorías U14 hasta U18, así como prestigiosos Programas Junior en busca de un entorno de rendimiento de élite. Entendemos las demandas únicas del desarrollo juvenil de alto nivel, y nuestra infraestructura está diseñada para proporcionar los rigurosos estándares requeridos por las federaciones nacionales para preparar a su próxima generación de talentos para la competencia internacional.
 
-nuestra oferta
-SUMMER_OFFER_PLACEHOLDER
-
-Nos enorgullecemos de ofrecer una plataforma versátil donde cada equipo, independientemente de su nivel competitivo específico, puede encontrar las herramientas profesionales y el entorno dedicado que necesitan para sobresalir.
+Además de nuestras iniciativas centradas en los jóvenes, también atendemos ampliamente a equipos Senior de Nivel Medio que buscan el equilibrio estratégico perfecto entre la logística de nivel profesional y la preparación atlética de alta calidad. Ya sea que tu objetivo sea el desarrollo a largo plazo de jóvenes prospectos emergentes o el refinamiento meticuloso de las estrategias de nivel senior antes de una nueva temporada, nuestro campamento brinda el apoyo integral y personalizado necesario para el éxito. Nos enorgullecemos de ofrecer una plataforma versátil donde cada equipo, independientemente de su nivel competitivo específico, puede encontrar las herramientas profesionales y el entorno dedicado que necesitan para sobresalir.
 
 Cuándo y dónde
 Experimenta alojamientos de élite de 400 metros cuadrados con jardines privados, ubicados a solo cinco minutos de la arena. El campamento requiere una estadía mínima de 1 semana (7 días, 6 noches), adaptada a las necesidades específicas y la disponibilidad de tu equipo. Para garantizar una relajación total, gestionamos toda la logística: dos furgonetas de 9 plazas proporcionan traslados al aeropuerto sin problemas tanto para la llegada como para la salida. Esta configuración ofrece el equilibrio perfecto entre privacidad y comunidad para una experiencia de entrenamiento profesional y sin estrés.
@@ -399,12 +384,9 @@ Notre formule tout compris d'un minimum de sept jours a été stratégiquement d
 Pour s'assurer que chaque groupe atteint ses objectifs uniques, chaque aspect de ce programme est entièrement modulaire et très flexible. Nous comprenons qu'il n'y a pas deux équipes qui ont les mêmes objectifs ; par conséquent, le programme peut être précisément adapté pour répondre aux exigences techniques spécifiques de votre équipe et à ses besoins de planification individuels. Que vous ayez besoin de parcours tactiques avancés, d'un conditionnement physique intensif ou de séances d'étude vidéo spécifiques, notre cadre est conçu pour s'adapter à votre vision, offrant une expérience professionnelle sur mesure du début à la fin.
 
 Public cible
-SUMMER_TARGET_BOXES_PLACEHOLDER
+Nos installations de pointe et nos programmes d'entraînement spécialisés ont été spécialement conçus pour accueillir les Équipes Nationales de Jeunes, allant des catégories U14 à U18, ainsi que de prestigieux Programmes Junior à la recherche d'un environnement de performance d'élite. Nous comprenons les exigences uniques du développement des jeunes de haut niveau, et notre infrastructure est conçue pour fournir les normes rigoureuses exigées par les fédérations nationales pour préparer leur prochaine génération de talents à la compétition internationale.
 
-notre offre
-SUMMER_OFFER_PLACEHOLDER
-
-Nous sommes fiers d'offrir une plate-forme polyvalente où chaque équipe, quel que soit son niveau de compétition spécifique, peut trouver les outils professionnels et l'environnement dédié dont elle a besoin pour exceller.
+En plus de nos initiatives axées sur les jeunes, nous répondons également largement aux équipes Senior de Niveau Moyen qui recherchent l'équilibre stratégique parfait entre une logistique de niveau professionnel et une préparation athlétique de haute qualité. Que votre objectif soit le développement à long terme de jeunes espoirs émergents ou l'affinement méticuleux des stratégies de niveau senior avant une nouvelle saison, notre camp fournit le soutien complet et sur mesure nécessaire au succès. Nous sommes fiers d'offrir une plate-forme polyvalente où chaque équipe, quel que soit son niveau de compétition spécifique, peut trouver les outils professionnels et l'environnement dédié dont elle a besoin pour exceller.
 
 Quand et où
 Découvrez des hébergements d'élite de 400 m² avec jardins privés, situés à seulement cinq minutes de l'arène. Le camp nécessite un séjour minimum d'une semaine (7 jours, 6 nuits), adapté aux besoins spécifiques et à la disponibilité de votre équipe. Pour assurer une détente totale, nous gérons toute la logistique : deux fourgonnettes de 9 places assurent des transferts aéroport fluides à l'arrivée et au départ. Cette configuration offre l'équilibre parfait entre intimité et communauté pour une expérience d'entraînement professionnelle et sans stress.

@@ -116,7 +116,7 @@ target audience
 ACADEMY_TABLES_PLACEHOLDER
 
 contact us
-For more information and to apply for the Basketball Academy program please contact us at f.bellotto@pallacanestrovarese.it`
+For more information and to apply for the Basketball Academy program please contact us at e.robbiani@pallacanestrovarese.it`
   },
   {
     id: "full-time",
@@ -214,9 +214,6 @@ Strategic Development: Attend coaches' meetings to understand the tactical and s
 
 Youth Development: Contribute to the future of the sport by assisting the coaching staff of our youth teams.
 
-the program
-INTERNSHIP_TABLE_PLACEHOLDER
-
 when and where
 The program will be hosted across our premier facilities, specifically the Foresteria Elite Housing and our Campus in via Pirandello. These two flagship locations are strategically situated just a 5-minute walk from one another, ensuring seamless transitions between residency and training. This integrated logistical setup allows athletes to maximize their time and focus entirely on their professional development.
 
@@ -239,12 +236,9 @@ Our all-inclusive, minimum seven-day formula has been strategically developed to
 To ensure that every group achieves its unique goals, every single aspect of this program is fully modular and highly flexible. We understand that no two teams have the same objectives; therefore, the curriculum can be precisely tailored to meet your team’s specific technical requirements and individual scheduling needs. Whether you require advanced tactical walkthroughs, intensive physical conditioning, or specific film study sessions, our framework is designed to adapt to your vision, providing a bespoke professional experience from start to finish.
 
 target audience
-SUMMER_TARGET_BOXES_PLACEHOLDER
+Our state-of-the-art facilities and specialized training programs have been specifically engineered to host Youth National Teams, ranging from the U14 to the U18 categories, as well as prestigious Junior Programs in search of an elite performance environment. We understand the unique demands of high-level youth development, and our infrastructure is designed to provide the rigorous standards required by national federations to prepare their next generation of talent for international competition.
 
-our offer
-SUMMER_OFFER_PLACEHOLDER
-
-We take pride in offering a versatile platform where every team, regardless of their specific competitive level, can find the professional tools and dedicated environment they need to excel.
+In addition to our youth-focused initiatives, we also cater extensively to Medium Level Senior teams who are seeking the perfect strategic balance between professional-grade logistics and high-quality athletic preparation. Whether your objective is the long-term development of emerging young prospects or the meticulous refining of senior-level strategies ahead of a new season, our camp provides the comprehensive, tailored support necessary for success. We take pride in offering a versatile platform where every team, regardless of their specific competitive level, can find the professional tools and dedicated environment they need to excel.
 
 when and where
 Experience elite 400 sqm accommodations with private gardens, located just five minutes from the arena. The camp requires a minimum stay of 1 week (7 days, 6 nights), tailored to your team’s specific needs and availability. To ensure total relaxation, we manage all logistics: two 9-seat vans provide seamless airport transfers for both arrival and departure. This setup offers the perfect balance of privacy and community for a stress-free, professional training experience.
@@ -258,21 +252,20 @@ Please contact us or click here for detailed pricing information tailored to you
     title: "ELITE PLAYER PACKAGE",
     target: "2007 to 2012",
     timing: "Year-Round",
-    description: "Unlock your full potential through our exclusive 1-on-1 Individual Sessions, a data-driven program designed for the modern elite athlete. This is not just coaching; it is a high-tech athletic audit where every movement is measured and every drill is purposeful. Utilizing advanced anthropometric assessments and cutting-edge performance analytics, we create a digital blueprint of your physical and technical profile. Our specialists track your biomechanics and efficiency in real-time, translating complex data into a customized development plan. By merging elite Serie A methodologies with personalized 1-on-1 mentorship, we provide the ultimate environment to refine your skills, optimize your physical frame, and achieve professional-grade mastery.",
+    description: "Are you ready to train like a Serie A pro? The Elite Player Package is now open to players born from 2007 to 2012 who are serious about their development. This premium bundle includes 10 individual elite sessions, expert coaching from top-tier staff, and comprehensive performance insights to track your journey. With flexible scheduling to fit your season, it’s never been easier to access world-class training. Secure your spot and start transforming your performance with data-backed, professional coaching today.",
     highlights: ["Customized trainings sessions", "Elite staff", "Insights & analytics"],
-    image: "https://i.imgur.com/B58BpNm.jpeg",
+    image: "https://i.imgur.com/kRADld5.jpeg",
     detailImage: "https://i.imgur.com/kRADld5.jpeg",
     category: 'other',
-    details: `target audience
-This exclusive package is designed for ambitious young athletes born between 2007 and 2012 who are determined to reach the next level of their basketball career. Whether you are looking to refine your technical skills, improve your physical conditioning, or gain a deeper understanding of the game through analytics, this program provides the professional tools and environment necessary for elite-level growth.
+    details: `The Professional "Pro-Level" Approach
+Experience the intensity of professional football with the Elite Player Package, an exclusive program designed for ambitious athletes born between 2007 and 2012. Over the course of 10 bespoke training sessions, you will work directly with Serie A coaching staff, gaining access to the same elite technical drills used at the highest level of the game. This isn't just practice; it’s a professional immersion designed to refine your skills and elevate your tactical understanding under the guidance of Italy's top football experts.
+BOXES: fundamentals|strength & conditioning|basketball analysis|individualized sessions
 
-what we offer
-Every player is unique, and so is our approach. Each participant receives a personalized training plan tailored to their specific strengths, weaknesses, and long-term goals. Our elite coaching staff works closely with each athlete to ensure that every session is optimized for maximum development, focusing on advanced technical drills and tactical decision-making. Train under the guidance of our professional coaching staff, the same experts who drive our Serie A team. In addition to on-court training, players will benefit from advanced performance analytics, gaining valuable insights into their game through data-driven feedback. This holistic approach ensures that athletes not only improve physically but also develop the high-level basketball IQ required for professional success.
+The Data-Driven & Analytical Focus
+In modern football, talent is only half the battle—data is the other. Our Elite Player Package bridges this gap by providing players (ages 12-17) with 10 high-performance sessions backed by advanced analytics and data insights. Each participant receives personalized performance feedback, allowing them to visualize their strengths and identify areas for growth through precise metrics. By combining elite coaching with scientific insights, we help you master your game with a level of clarity usually reserved for professional clubs.
+BOXES: sports science|basketball analysis|performance data & insights
 
-our facilities
-The Elite Player Package is available year-round at our premier facilities in Varese. We offer flexible scheduling to accommodate the needs of international players, with options for short-term intensive cycles or long-term developmental programs. Our integrated campus and elite housing provide the perfect environment for focused, professional training.
-
-pricing
-€1.000/10 sessions`
+The Flexible & Personalized Choice
+We understand that a rising star's schedule is demanding, which is why the Elite Player Package offers total flexibility. This 10-session program features personalized training plans tailored to your specific role and development goals, with dates and times to be determined based on your availability throughout the year. Specifically curated for the 2007-2012 age groups, this package ensures that every minute spent on the pitch is optimized for your individual progression, providing a custom-fit path to excellence.`
   }
 ];
