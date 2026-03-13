@@ -209,8 +209,68 @@ const TRANSLATIONS = {
     lightsOut: "Spegnimento Luci",
     arrivalCheckIn: "Arrivo e Check-in",
     pickUp: "Ritiro",
-    clickHere: "clicca qui",
-    openInGoogleMaps: "Apri in Google Maps"
+    openInGoogleMaps: "Apri in Google Maps",
+    grassrootsExcellence: "Eccellenza Grassroots",
+    grassrootsExcellenceDesc: "Crediamo nel basket come potente strumento per la comunità. Il nostro programma promuove uno spirito attivo e positivo, aiutando i giovani atleti a sviluppare abilità sociali e uno stile di vita sano.",
+    elitePlayerDevelopment: "Sviluppo Giocatori d'Élite",
+    elitePlayerDevelopmentDesc: "Per chi sogna le grandi leghe, offriamo il percorso definitivo. Attraverso coaching esperto, programmi di allenamento professionali e accesso a strutture di alta qualità, coltiviamo le stelle del basket di domani.",
+    twoPillarsOneVision: "Due Pilastri • Una Visione",
+    eliteProfessionalIntegrationDesc: "Questo è più di un semplice corso; è un'immersione nelle operazioni quotidiane di una squadra di basket di Serie A. Come stagista, potrai:",
+    shadowThePros: "Segui i Professionisti",
+    shadowTheProsDesc: "Ottieni approfondimenti inestimabili osservando e imparando dai nostri professionisti del coaching durante allenamenti e partite.",
+    activeCourtParticipation: "Partecipazione Attiva in Campo",
+    activeCourtParticipationDesc: "Assumi un ruolo pratico gestendo esercizi con i giocatori di Serie A e assistendo agli allenamenti professionali.",
+    strategicDevelopment: "Sviluppo Strategico",
+    strategicDevelopmentDesc: "Partecipa alle riunioni degli allenatori per comprendere i processi decisionali tattici e strategici ai massimi livelli.",
+    youthDevelopment: "Sviluppo Giovanile",
+    youthDevelopmentDesc: "Contribuisci al futuro dello sport assistendo lo staff tecnico delle nostre squadre giovanili.",
+    theNextGeneration: "The Next Generation",
+    theNextGenerationDesc: "Questo percorso è progettato per giovani atleti e famiglie che cercano un'introduzione premium al basket. Il nostro obiettivo è la \"Next Generation\" di giocatori che vogliono costruire una solida base tecnica e motoria. Ci rivolgiamo ai genitori che danno priorità agli standard di allenamento professionali e a un ambiente sportivo sano e di alto valore dove i bambini possono innamorarsi del gioco imparando il \"Varese Way\" dal nostro staff certificato.",
+    highPotentialProspects: "High-Potential Prospects",
+    highPotentialProspectsDesc: "Questo percorso si rivolge a prospetti ad alto potenziale che stanno già gareggiando ad alto livello e mirano a una carriera professionale. Il nostro pubblico qui include atleti, agenzie e federazioni alla ricerca della \"Pro Experience\" definitiva. Questi giocatori cercano l'audit tecnico completo: dal tutoraggio dello staff di Serie A e sessioni esclusive con Luis Scola fino all'analisi dei dati avanzata e alle strategie di gestione della carriera. Questo è per l'atleta pronto a colmare il divario tra l'eccellenza giovanile e i circuiti professionali senior.",
+    ourKnowHow: "Il nostro know-how",
+    eliteTrainingMethods: "Metodi di allenamento d'élite",
+    collaborationClubs: "Collaborazione con club, federazioni nazionali o accademie locali",
+    ourBrand: "Il nostro marchio",
+    thePillars: "I Pilastri",
+    fundamentals: "Fondamentali",
+    sportsScience: "Scienza dello Sport",
+    basketballLeadership: "Leadership nel Basket",
+    basketballAnalysis: "Analisi del Basket",
+    treatmentRecovery: "Trattamento/Recupero",
+    strengthConditioning: "Forza e Condizionamento",
+    fundamentalsDesc: "TIRO / PLAYMAKING / PALLEGGIO / CONCLUSIONE",
+    sportsScienceDesc: "CATAPULT / PUSHBAND / INERZIALE",
+    basketballLeadershipDesc: "CAPACITÀ DI LEADERSHIP / CONDIZIONAMENTO MENTALE",
+    basketballAnalysisDesc: "ANALISI AVANZATA DELLE PRESTAZIONI / BOXSCORE AVANZATO / BIG DATA",
+    treatmentRecoveryDesc: "PREVENZIONE INFORTUNI / GESTIONE DEL CARICO DI LAVORO / RIABILITAZIONE",
+    strengthConditioningDesc: "SVILUPPO FORZA / POTENZA / VELOCITÀ / AGILITÀ / RESISTENZA",
+    academyNextGenDesc: "Questo percorso è progettato per giovani atleti e famiglie che cercano un'introduzione premium al basket. Il nostro obiettivo è la \"Next Generation\" di giocatori che vogliono costruire una solida base tecnica e motoria. Ci rivolgiamo ai genitori che danno priorità agli standard di allenamento professionali e a un ambiente sportivo sano e di alto valore dove i bambini possono innamorarsi del gioco imparando il \"Varese Way\" dal nostro staff certificato.",
+    academyProspectsDesc: "Questo percorso si rivolge a prospetti ad alto potenziale che stanno già gareggiando ad alto livello e mirano a una carriera professionale. Il nostro pubblico qui include atleti, agenzie e federazioni alla ricerca della \"Pro Experience\" definitiva. Questi giocatori cercano l'audit tecnico completo: dal tutoraggio dello staff di Serie A e sessioni esclusive con Luis Scola fino all'analisi dei dati avanzata e alle strategie di gestione della carriera. Questo è per l'atleta pronto a colmare il divario tra l'eccellenza giovanile e i circuiti professionali senior.",
+    elitePackageAnalyticsTitle: "Analytics",
+    elitePackageAnalyticsDesc: "Monitoraggio costante delle prestazioni tramite sensori e dati biometrici per ottimizzare ogni sessione di allenamento e prevenire infortuni.",
+    elitePackageStatsTitle: "Statistiche avanzate e approfondimenti",
+    elitePackageStatsDesc: "Analisi approfondita delle statistiche di gioco per identificare punti di forza e aree di miglioramento tattico individuale e di squadra.",
+    elitePackageVideoTitle: "Analisi video",
+    elitePackageVideoDesc: "Sessioni dedicate di video review per correggere la tecnica di tiro, i movimenti difensivi e la comprensione del gioco in tempo reale.",
+    elitePackageTrainingTitle: "Allenamento extra",
+    elitePackageTrainingDesc: "Allenamenti supplementari personalizzati focalizzati sullo sviluppo delle abilità specifiche richieste per raggiungere il livello professionistico europeo.",
+    morning: "MATTINA",
+    afternoon: "POMERIGGIO",
+    evening: "SERA",
+    technicalSkills: "Abilità Tecniche e Tiro",
+    tacticalWorkshops: "Workshop Tattici",
+    scrimmages: "Partitelle e Giochi",
+    recoveryVideo: "Recupero e Analisi Video",
+    teamBuilding: "Attività di Team Building",
+    ourSpecialGuestAndCEO: "Il nostro ospite speciale e CEO",
+    uniqueEventsMeetings: "Eventi unici e incontri",
+    theTrainingStaff: "lo staff di allenamento",
+    sampleDailyRoutine: "Esempio di Routine Giornaliera",
+    proLevelProgram: "programma di livello pro",
+    theProfessionalProLevelApproach: "L'Approccio Professionale \"Pro-Level\"",
+    theDataDrivenAnalyticalFocus: "Il Focus Analitico e Basato sui Dati",
+    theFlexiblePersonalizedChoice: "La Scelta Flessibile e Personalizzata"
   },
   en: {
     back: "Back",
@@ -396,8 +456,68 @@ const TRANSLATIONS = {
     lightsOut: "Lights Out",
     arrivalCheckIn: "Arrival & Check-in",
     pickUp: "Pick-up",
-    clickHere: "click here",
-    openInGoogleMaps: "Open in Google Maps"
+    openInGoogleMaps: "Open in Google Maps",
+    grassrootsExcellence: "Grassroots Excellence",
+    grassrootsExcellenceDesc: "We believe in basketball as a powerful tool for the community. Our program promotes an active, positive spirit, helping young athletes develop social skills and a healthy lifestyle.",
+    elitePlayerDevelopment: "Elite Player Development",
+    elitePlayerDevelopmentDesc: "For those dreaming of the big leagues, we provide the ultimate pathway. By offering expert coaching, professional training programs, and access to high-quality facilities, we cultivate the basketball stars of tomorrow.",
+    twoPillarsOneVision: "Two Pillars • One Vision",
+    eliteProfessionalIntegrationDesc: "This is more than just a course; it is an immersion into the daily operations of a Serie A basketball team. As an intern, you will:",
+    shadowThePros: "Shadow the Pros",
+    shadowTheProsDesc: "Gain invaluable insights by observing and learning from our experienced coaching professionals during practices and games.",
+    activeCourtParticipation: "Active Court Participation",
+    activeCourtParticipationDesc: "Take a hands-on role by running drills with Serie A players and assisting with professional practices.",
+    strategicDevelopment: "Strategic Development",
+    strategicDevelopmentDesc: "Attend coaches' meetings to understand the tactical and strategic decision-making processes at the highest level.",
+    youthDevelopment: "Youth Development",
+    youthDevelopmentDesc: "Contribute to the future of the sport by assisting the coaching staff of our youth teams.",
+    theNextGeneration: "The Next Generation",
+    theNextGenerationDesc: "This track is designed for young athletes and families seeking a premium introduction to basketball. Our target is the \"Next Generation\" of players who want to build a rock-solid technical and motor-skill foundation. We appeal to parents who prioritize professional coaching standards and a healthy, high-value sports environment where children can fall in love with the game while learning the \"Varese Way\" from our certified staff.",
+    highPotentialProspects: "High-Potential Prospects",
+    highPotentialProspectsDesc: "This track targets high-potential prospects who are already competing at a high level and aiming for a professional career. Our audience here includes athletes, agencies, and federations looking for the ultimate \"Pro Experience.\" These players seek the full technical audit: from Serie A staff mentorship and exclusive sessions with Luis Scola to advanced Data Analytics and career management strategies. This is for the athlete ready to bridge the gap between youth excellence and the senior professional circuits.",
+    ourKnowHow: "Our know-how",
+    eliteTrainingMethods: "Elite training methods",
+    collaborationClubs: "Collaboration with clubs, national federations or local academies",
+    ourBrand: "Our brand",
+    thePillars: "The Pillars",
+    fundamentals: "Fundamentals",
+    sportsScience: "Sports Science",
+    basketballLeadership: "Basketball Leadership",
+    basketballAnalysis: "Basketball Analysis",
+    treatmentRecovery: "Treatment/Recovery",
+    strengthConditioning: "Strength & Conditioning",
+    fundamentalsDesc: "SHOOTING / PLAYMAKING / DRIBBLING / FINISHING",
+    sportsScienceDesc: "CATAPULT / PUSHBAND / INERTIAL",
+    basketballLeadershipDesc: "LEADERSHIP SKILLS / MENTAL CONDITIONING",
+    basketballAnalysisDesc: "ADVANCED PERFORMANCE ANALYSIS / ADVANCED BOXSCORE / BIG DATA",
+    treatmentRecoveryDesc: "INJURY PREVENTION / WORKLOAD MANAGEMENT / REHABILITATION",
+    strengthConditioningDesc: "STRENGTH DEV / POWER / SPEED / AGILITY / STAMINA",
+    academyNextGenDesc: "This track is designed for young athletes and families seeking a premium introduction to basketball. Our target is the \"Next Generation\" of players who want to build a rock-solid technical and motor-skill foundation. We appeal to parents who prioritize professional coaching standards and a healthy, high-value sports environment where children can fall in love with the game while learning the \"Varese Way\" from our certified staff.",
+    academyProspectsDesc: "This track targets high-potential prospects who are already competing at a high level and aiming for a professional career. Our audience here includes athletes, agencies, and federations looking for the ultimate \"Pro Experience.\" These players seek the full technical audit: from Serie A staff mentorship and exclusive sessions with Luis Scola to advanced Data Analytics and career management strategies. This is for the athlete ready to bridge the gap between youth excellence and the senior professional circuits.",
+    elitePackageAnalyticsTitle: "Analytics",
+    elitePackageAnalyticsDesc: "Constant performance monitoring through sensors and biometric data to optimize every training session and prevent potential injuries.",
+    elitePackageStatsTitle: "Advanced stats & insights",
+    elitePackageStatsDesc: "In-depth analysis of game statistics to identify strengths and areas for individual and team tactical improvement during the season.",
+    elitePackageVideoTitle: "Video analysis",
+    elitePackageVideoDesc: "Dedicated video review sessions to correct shooting technique, defensive movements, and overall game understanding in real-time scenarios.",
+    elitePackageTrainingTitle: "Extra training",
+    elitePackageTrainingDesc: "Personalized supplemental workouts focused on developing the specific skills required to reach the elite European professional basketball level.",
+    morning: "MORNING",
+    afternoon: "AFTERNOON",
+    evening: "EVENING",
+    technicalSkills: "Technical Skills & Shooting",
+    tacticalWorkshops: "Tactical Workshops",
+    scrimmages: "Scrimmages & Games",
+    recoveryVideo: "Recovery & Video Analysis",
+    teamBuilding: "Team Building Activities",
+    ourSpecialGuestAndCEO: "Our special guest and CEO",
+    uniqueEventsMeetings: "Unique events & meetings",
+    theTrainingStaff: "the training staff",
+    sampleDailyRoutine: "Sample Daily Routine",
+    proLevelProgram: "pro-level program",
+    theProfessionalProLevelApproach: "The Professional \"Pro-Level\" Approach",
+    theDataDrivenAnalyticalFocus: "The Data-Driven & Analytical Focus",
+    theFlexiblePersonalizedChoice: "The Flexible & Personalized Choice"
   },
   es: {
     back: "Volver",
@@ -571,8 +691,68 @@ const TRANSLATIONS = {
     lightsOut: "Apagar Luces",
     arrivalCheckIn: "Llegada y Check-in",
     pickUp: "Recogida",
-    clickHere: "haz clic aquí",
-    openInGoogleMaps: "Abrir en Google Maps"
+    openInGoogleMaps: "Abrir en Google Maps",
+    grassrootsExcellence: "Excelencia Grassroots",
+    grassrootsExcellenceDesc: "Creemos en el baloncesto como una herramienta poderosa para la comunidad. Nuestro programa promueve un espíritu activo y positivo, ayudando a los jóvenes atletas a desarrollar habilidades sociales y un estilo de vida saludable.",
+    elitePlayerDevelopment: "Desarrollo de Jugadores de Élite",
+    elitePlayerDevelopmentDesc: "Para quienes sueñan con las grandes ligas, ofrecemos el camino definitivo. Al ofrecer entrenamiento experto, programas de entrenamiento profesionales y acceso a instalaciones de alta calidad, cultivamos a las estrellas del baloncesto del mañana.",
+    twoPillarsOneVision: "Dos Pilares • Una Visión",
+    eliteProfessionalIntegrationDesc: "Esto es más que un simple curso; es una inmersión en las operaciones diarias de un equipo de baloncesto de la Serie A. Como pasante, podrás:",
+    shadowThePros: "Sigue a los Profesionales",
+    shadowTheProsDesc: "Obtén información invaluable observando y aprendiendo de nuestros experimentados profesionales del entrenamiento durante las prácticas y los partidos.",
+    activeCourtParticipation: "Participación Activa en la Cancha",
+    activeCourtParticipationDesc: "Asume un papel práctico dirigiendo ejercicios con jugadores de la Serie A y asistiendo en las prácticas profesionales.",
+    strategicDevelopment: "Desarrollo Estratégico",
+    strategicDevelopmentDesc: "Asiste a las reuniones de entrenadores para comprender los procesos de toma de decisiones tácticas y estratégicas al más alto nivel.",
+    youthDevelopment: "Desarrollo Juvenil",
+    youthDevelopmentDesc: "Contribuye al futuro del deporte asistiendo al personal técnico de nuestros equipos juveniles.",
+    theNextGeneration: "The Next Generation",
+    theNextGenerationDesc: "Esta pista está diseñada para jóvenes atletas y familias que buscan una introducción premium al baloncesto. Nuestro objetivo es la \"Next Generation\" de jugadores que desean construir una base técnica y de habilidades motoras sólida como una roca. Apelamos a los padres que priorizan los estándares de entrenamiento profesional y un entorno deportivo saludable y de alto valor donde los niños pueden enamorarse del juego mientras aprenden el \"Varese Way\" de nuestro personal certificado.",
+    highPotentialProspects: "High-Potential Prospects",
+    highPotentialProspectsDesc: "Esta pista está dirigida a prospectos de alto potencial que ya compiten a un alto nivel y aspiran a una carrera profesional. Nuestra audiencia aquí incluye atletas, agencias y federaciones que buscan la \"Pro Experience\" definitiva. Estos jugadores buscan la auditoría técnica completa: desde la tutoría del personal de la Serie A y sesiones exclusivas con Luis Scola hasta el análisis de datos avanzado y las estrategias de gestión de carrera. Esto es para el atleta listo para cerrar la brecha entre la excelencia juvenil y los circuitos profesionales senior.",
+    ourKnowHow: "Nuestro know-how",
+    eliteTrainingMethods: "Métodos de entrenamiento de élite",
+    collaborationClubs: "Colaboración con clubes, federaciones nacionales o academias locales",
+    ourBrand: "Nuestra marca",
+    thePillars: "Los Pilares",
+    fundamentals: "Fundamentos",
+    sportsScience: "Ciencia del Deporte",
+    basketballLeadership: "Liderazgo en el Baloncesto",
+    basketballAnalysis: "Análisis del Baloncesto",
+    treatmentRecovery: "Tratamiento/Recuperación",
+    strengthConditioning: "Fuerza y Acondicionamiento",
+    fundamentalsDesc: "TIRO / PLAYMAKING / DRIBLE / FINALIZACIÓN",
+    sportsScienceDesc: "CATAPULT / PUSHBAND / INERCIAL",
+    basketballLeadershipDesc: "HABILIDADES DE LIDERAZGO / ACONDICIONAMIENTO MENTAL",
+    basketballAnalysisDesc: "ANÁLISIS DE RENDIMIENTO AVANZADO / BOXSCORE AVANZADO / BIG DATA",
+    treatmentRecoveryDesc: "PREVENCIÓN DE LESIONES / GESTIÓN DE LA CARGA DE TRABAJO / REHABILITACIÓN",
+    strengthConditioningDesc: "DESARROLLO DE FUERZA / POTENCIA / VELOCIDAD / AGILIDAD / RESISTENCIA",
+    academyNextGenDesc: "Esta pista está diseñada para jóvenes atletas y familias que buscan una introducción premium al baloncesto. Nuestro objetivo es la \"Next Generation\" de jugadores que desean construir una base técnica y de habilidades motoras sólida como una roca. Apelamos a los padres que priorizan los estándares de entrenamiento profesional y un entorno deportivo saludable y de alto valor donde los niños pueden enamorarse del juego mientras aprenden el \"Varese Way\" de nuestro personal certificado.",
+    academyProspectsDesc: "Esta pista está dirigida a prospectos de alto potencial que ya compiten a un alto nivel y aspiran a una carrera profesional. Nuestra audiencia aquí incluye atletas, agencias y federaciones que buscan la \"Pro Experience\" definitiva. Estos jugadores buscan la auditoría técnica completa: desde la tutoría del personal de la Serie A y sesiones exclusivas con Luis Scola hasta el análisis de datos avanzado y las estrategias de gestión de carrera. Esto es para el atleta listo para cerrar la brecha entre la excelencia juvenil y los circuitos profesionales senior.",
+    elitePackageAnalyticsTitle: "Analytics",
+    elitePackageAnalyticsDesc: "Monitoreo constante del rendimiento a través de sensores y datos biométricos para optimizar cada sesión de entrenamiento y prevenir lesiones.",
+    elitePackageStatsTitle: "Estadísticas avanzadas e información",
+    elitePackageStatsDesc: "Análisis profundo de las estadísticas de juego para identificar fortalezas y áreas de mejora táctica individual y de equipo.",
+    elitePackageVideoTitle: "Análisis de video",
+    elitePackageVideoDesc: "Sesiones dedicadas de revisión de video para corregir la técnica de tiro, los movimientos defensivos y la comprensión del juego.",
+    elitePackageTrainingTitle: "Entrenamiento extra",
+    elitePackageTrainingDesc: "Entrenamientos suplementarios personalizados enfocados en el desarrollo de las habilidades específicas requeridas para alcanzar el nivel profesional europeo.",
+    morning: "MAÑANA",
+    afternoon: "TARDE",
+    evening: "NOCHE",
+    technicalSkills: "Habilidades Técnicas y Tiro",
+    tacticalWorkshops: "Talleres Tácticos",
+    scrimmages: "Partidillos y Juegos",
+    recoveryVideo: "Recuperación y Análisis de Video",
+    teamBuilding: "Actividades de Team Building",
+    ourSpecialGuestAndCEO: "Nuestro invitado especial y CEO",
+    uniqueEventsMeetings: "Eventos únicos y reuniones",
+    theTrainingStaff: "el personal de entrenamiento",
+    sampleDailyRoutine: "Ejemplo de Rutina Diaria",
+    proLevelProgram: "programa de nivel pro",
+    theProfessionalProLevelApproach: "El Enfoque Profesional \"Pro-Level\"",
+    theDataDrivenAnalyticalFocus: "El Enfoque Analítico y Basado en Datos",
+    theFlexiblePersonalizedChoice: "La Elección Flexible y Personalizada"
   },
   fr: {
     back: "Retour",
@@ -746,8 +926,68 @@ const TRANSLATIONS = {
     lightsOut: "Extinction des Feux",
     arrivalCheckIn: "Arrivée et Enregistrement",
     pickUp: "Ramassage",
-    clickHere: "cliquez ici",
-    openInGoogleMaps: "Ouvrir dans Google Maps"
+    openInGoogleMaps: "Ouvrir dans Google Maps",
+    grassrootsExcellence: "Excellence Grassroots",
+    grassrootsExcellenceDesc: "Nous croyons au basketball comme un outil puissant pour la communauté. Notre programme favorise un esprit actif et positif, aidant les jeunes athlètes à développer des compétences sociales et un mode de vie sain.",
+    elitePlayerDevelopment: "Développement des Joueurs d'Élite",
+    elitePlayerDevelopmentDesc: "Pour ceux qui rêvent des grandes ligues, nous offrons le parcours ultime. En proposant un encadrement expert, des programmes d'entraînement professionnels et l'accès à des installations de haute qualité, nous cultivons les stars du basketball de demain.",
+    twoPillarsOneVision: "Deux Piliers • Une Vision",
+    eliteProfessionalIntegrationDesc: "C'est plus qu'un simple cours ; c'est une immersion dans les opérations quotidiennes d'une équipe de basketball de Serie A. En tant que stagiaire, vous pourrez :",
+    shadowThePros: "Suivez les Pros",
+    shadowTheProsDesc: "Acquérez des connaissances inestimables en observant et en apprenant de nos professionnels de l'entraînement expérimentés lors des entraînements et des matchs.",
+    activeCourtParticipation: "Participation Active sur le Terrain",
+    activeCourtParticipationDesc: "Jouez un rôle pratique en dirigeant des exercices avec des joueurs de Serie A et en assistant aux entraînements professionnels.",
+    strategicDevelopment: "Développement Stratégique",
+    strategicDevelopmentDesc: "Assistez aux réunions des entraîneurs pour comprendre les processus de prise de décision tactiques et stratégiques au plus haut niveau.",
+    youthDevelopment: "Développement de la Jeunesse",
+    youthDevelopmentDesc: "Contribuez à l'avenir du sport en assistant le personnel technique de nos équipes de jeunes.",
+    theNextGeneration: "The Next Generation",
+    theNextGenerationDesc: "Ce parcours est conçu pour les jeunes athlètes et les familles à la recherche d'une introduction premium au basketball. Notre cible est la \"Next Generation\" de joueurs qui souhaitent construire une base technique et motrice solide. Nous nous adressons aux parents qui privilégient des normes d'entraînement professionnelles et un environnement sportif sain et de grande valeur où les enfants peuvent tomber amoureux du jeu tout en apprenant le \"Varese Way\" de notre personnel certifié.",
+    highPotentialProspects: "High-Potential Prospects",
+    highPotentialProspectsDesc: "Ce parcours cible les espoirs à fort potentiel qui évoluent déjà à un haut niveau et visent une carrière professionnelle. Notre public ici comprend des athlètes, des agences et des fédérations à la recherche de l'ultime \"Pro Experience\". Ces joueurs recherchent l'audit technique complet : du mentorat par le personnel de Serie A et des sessions exclusives avec Luis Scola à l'analyse de données avancée et aux stratégies de gestion de carrière. C'est pour l'athlète prêt à combler le fossé entre l'excellence des jeunes et les circuits professionnels seniors.",
+    ourKnowHow: "Notre savoir-faire",
+    eliteTrainingMethods: "Méthodes d'entraînement d'élite",
+    collaborationClubs: "Collaboration avec des clubs, des fédérations nationales ou des académies locales",
+    ourBrand: "Notre marque",
+    thePillars: "Les Piliers",
+    fundamentals: "Fondamentaux",
+    sportsScience: "Science du Sport",
+    basketballLeadership: "Leadership au Basket",
+    basketballAnalysis: "Analyse du Basket",
+    treatmentRecovery: "Traitement/Récupération",
+    strengthConditioning: "Force et Conditionnement",
+    fundamentalsDesc: "TIR / PLAYMAKING / DRIBBLE / FINITION",
+    sportsScienceDesc: "CATAPULT / PUSHBAND / INERTIEL",
+    basketballLeadershipDesc: "COMPÉTENCES EN LEADERSHIP / CONDITIONNEMENT MENTAL",
+    basketballAnalysisDesc: "ANALYSE DE PERFORMANCE AVANCÉE / BOXSCORE AVANCÉ / BIG DATA",
+    treatmentRecoveryDesc: "PRÉVENTION DES BLESSURES / GESTION DE LA CHARGE DE TRAVAIL / RÉHABILITATION",
+    strengthConditioningDesc: "DÉVELOPPEMENT DE LA FORCE / PUISSANCE / VITESSE / AGILITÉ / ENDURANCE",
+    academyNextGenDesc: "Ce parcours est conçu pour les jeunes athlètes et les familles à la recherche d'une introduction premium au basketball. Notre cible est la \"Next Generation\" de joueurs qui souhaitent construire une base technique et motrice solide. Nous nous adressons aux parents qui privilégient des normes d'entraînement professionnelles et un environnement sportif sain et de grande valeur où les enfants peuvent tomber amoureux du jeu tout en apprenant le \"Varese Way\" de notre personnel certifié.",
+    academyProspectsDesc: "Ce parcours cible les espoirs à fort potentiel qui évoluent déjà à un haut niveau et visent une carrière professionnelle. Notre public ici comprend des athlètes, des agences et des fédérations à la recherche de l'ultime \"Pro Experience\". Ces joueurs recherchent l'audit technique complet : du mentorat par le personnel de Serie A et des sessions exclusives avec Luis Scola à l'analyse de données avancée et aux stratégies de gestion de carrière. C'est pour l'athlète prêt à combler le fossé entre l'excellence des jeunes et les circuits professionnels seniors.",
+    elitePackageAnalyticsTitle: "Analytics",
+    elitePackageAnalyticsDesc: "Suivi constant des performances via des capteurs et des données biométriques pour optimiser chaque séance d'entraînement et prévenir les blessures.",
+    elitePackageStatsTitle: "Statistiques avancées et informations",
+    elitePackageStatsDesc: "Analyse approfondie des statistiques de jeu pour identifier les forces et les domaines d'amélioration tactique individuelle et collective.",
+    elitePackageVideoTitle: "Analyse vidéo",
+    elitePackageVideoDesc: "Sessions dédiées de revue vidéo pour corriger la technique de tir, les mouvements défensifs et la compréhension du jeu.",
+    elitePackageTrainingTitle: "Entraînement supplémentaire",
+    elitePackageTrainingDesc: "Entraînements supplémentaires personnalisés axés sur le développement des compétences spécifiques requises pour atteindre le niveau professionnel européen.",
+    morning: "MATIN",
+    afternoon: "APRÈS-MIDI",
+    evening: "SOIR",
+    technicalSkills: "Compétences Techniques et Tir",
+    tacticalWorkshops: "Ateliers Tactiques",
+    scrimmages: "Matchs d'Entraînement et Jeux",
+    recoveryVideo: "Récupération et Analyse Vidéo",
+    teamBuilding: "Activités de Team Building",
+    ourSpecialGuestAndCEO: "Notre invité spécial et PDG",
+    uniqueEventsMeetings: "Événements uniques et réunions",
+    theTrainingStaff: "le personnel d'entraînement",
+    sampleDailyRoutine: "Exemple de Routine Quotidienne",
+    proLevelProgram: "programme de niveau pro",
+    theProfessionalProLevelApproach: "L'Approche Professionnelle \"Pro-Level\"",
+    theDataDrivenAnalyticalFocus: "L'Approche Analytique et Basée sur les Données",
+    theFlexiblePersonalizedChoice: "Le Choix Flexible et Personnalisé"
   }
 };
 
@@ -778,6 +1018,9 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
     "Target Audience & Future Opportunities",
     "Future Opportunities",
     "the elite player package",
+    "il pacchetto giocatore d'élite",
+    "el paquete de jugador de élite",
+    "le forfait joueur d'élite",
     "our offers",
     "A Holistic 360° Offer",
     "World-Class Training & Sports Science",
@@ -838,9 +1081,49 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
     "prix",
     "le programme d'entraînement",
     "The Professional \"Pro-Level\" Approach",
+    "L'Approccio Professionale \"Pro-Level\"",
+    "El Enfoque Profesional \"Nivel Pro\"",
+    "L'Approche Professionnelle \"Niveau Pro\"",
     "The Data-Driven & Analytical Focus",
-    "The Flexible & Personalized Choice"
+    "Il Focus Analitico e Basato sui Dati",
+    "El Enfoque Analítico y Basado en Datos",
+    "L'Approche Analytique et Basée sur les Données",
+    "The Flexible & Personalized Choice",
+    "La Scelta Flessibile e Personalizzata",
+    "La Elección Flexible y Personalizada",
+    "Le Choix Flexible et Personnalisé",
+    "target audience",
+    "our vision",
+    "the program",
+    "contact us",
+    "la nostra visione",
+    "il programma",
+    "contattaci",
+    "nuestra visión",
+    "el programa",
+    "contáctanos",
+    "notre vision",
+    "le programme",
+    "contactez-nous"
   ];
+
+  const isTitleMatch = (title: string | null, englishTitle: string) => {
+    if (!title) return false;
+    const translations: Record<string, string[]> = {
+      'Sample Daily Routine': ['Sample Daily Routine', 'Esempio di Routine Quotidiana', 'Ejemplo de Rutina Diaria', 'Exemple de Routine Quotidienne'],
+      'the training program': ['the training program', 'the program', 'il programma di allenamento', 'il programma', 'el programma di allenamento', 'el programa de entrenamiento', 'le programme d\'entraînement', 'le programme'],
+      'Our special guest and CEO': ['Our special guest and CEO', 'Il nostro ospite speciale e CEO', 'Nuestro invitado speciale e CEO', 'Nuestro invitado especial y CEO', 'Notre invité spécial et PDG'],
+      'Unique events & meetings': ['Unique events & meetings', 'Eventi unici e incontri', 'Eventos únicos y reuniones', 'Événements uniques et réunions'],
+      'A Comprehensive Two-Way Approach': ['A Comprehensive Two-Way Approach', 'Un Approccio Completo a Due Vie', 'Un Enfoque Completo de Dos Vías', 'Une Approche Complète à Deux Voies'],
+      'Elite Professional Integration': ['Elite Professional Integration', 'Integrazione Professionale d\'Elite', 'Integración Professionale di Élite', 'Integración Profesional de Élite', 'Intégration Professionnelle d\'Élite'],
+      'pro-level program': ['pro-level program', 'programma di livello pro', 'programa de nivel pro', 'programme de niveau pro'],
+      'contact us': ['contact us', 'contattaci', 'contáctanos', 'contactez-nous'],
+      'when and where': ['when and where', 'Quando e dove', 'Cuándo y dónde', 'Quand et où', 'quando e dove', 'cuándo y dónde', 'quand et où'],
+      'pricing': ['pricing', 'prezzi', 'precios', 'prix'],
+      'the pillars': ['the pillars', 'i pilastri', 'los pilares', 'les piliers']
+    };
+    return translations[englishTitle]?.some(t => title.toLowerCase() === t.toLowerCase()) || title.toLowerCase() === englishTitle.toLowerCase();
+  };
 
   const blocks = text.split('\n\n').filter(block => block.trim() !== '');
 
@@ -874,7 +1157,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
   };
 
   const renderSectionContent = (section: { title: string | null, paragraphs: string[][] }) => {
-    if (section.title === 'the training program') {
+    if (isTitleMatch(section.title, 'the training program')) {
       return (
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 py-4 w-full">
           {/* Left Column */}
@@ -883,24 +1166,24 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
               <div className="bg-red-varese/10 p-2 rounded-full text-red-varese mb-1">
                 <Target size={20} />
               </div>
-              <h4 className="text-zinc-900 font-bold uppercase tracking-wider text-sm">Fundamentals</h4>
-              <p className="text-zinc-500 text-xs font-medium leading-relaxed tracking-wide">SHOOTING / PLAYMAKING / DRIBBLING / FINISHING</p>
+              <h4 className="text-zinc-900 font-bold uppercase tracking-wider text-sm">{t('fundamentals')}</h4>
+              <p className="text-zinc-500 text-xs font-medium leading-relaxed tracking-wide">{t('fundamentalsDesc')}</p>
             </div>
             
             <div className="bg-white border border-zinc-200 p-3 rounded-xl shadow-md flex flex-col items-center md:items-end text-center md:text-right gap-1.5 hover:border-red-varese/50 transition-colors">
               <div className="bg-red-varese/10 p-2 rounded-full text-red-varese mb-1">
                 <Activity size={20} />
               </div>
-              <h4 className="text-zinc-900 font-bold uppercase tracking-wider text-sm">Sports Science</h4>
-              <p className="text-zinc-500 text-xs font-medium leading-relaxed tracking-wide">CATAPULT / PUSHBAND / INERTIAL</p>
+              <h4 className="text-zinc-900 font-bold uppercase tracking-wider text-sm">{t('sportsScience')}</h4>
+              <p className="text-zinc-500 text-xs font-medium leading-relaxed tracking-wide">{t('sportsScienceDesc')}</p>
             </div>
 
             <div className="bg-white border border-zinc-200 p-3 rounded-xl shadow-md flex flex-col items-center md:items-end text-center md:text-right gap-1.5 hover:border-red-varese/50 transition-colors">
               <div className="bg-red-varese/10 p-2 rounded-full text-red-varese mb-1">
                 <Brain size={20} />
               </div>
-              <h4 className="text-zinc-900 font-bold uppercase tracking-wider text-sm">Basketball Leadership</h4>
-              <p className="text-zinc-500 text-xs font-medium leading-relaxed tracking-wide">LEADERSHIP SKILLS / MENTAL CONDITIONING</p>
+              <h4 className="text-zinc-900 font-bold uppercase tracking-wider text-sm">{t('basketballLeadership')}</h4>
+              <p className="text-zinc-500 text-xs font-medium leading-relaxed tracking-wide">{t('basketballLeadershipDesc')}</p>
             </div>
           </div>
 
@@ -921,31 +1204,31 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
               <div className="bg-red-varese/10 p-2 rounded-full text-red-varese mb-1">
                 <BarChart size={20} />
               </div>
-              <h4 className="text-zinc-900 font-bold uppercase tracking-wider text-sm">Basketball Analysis</h4>
-              <p className="text-zinc-500 text-xs font-medium leading-relaxed tracking-wide">ADVANCED PERFORMANCE ANALYSIS / ADVANCED BOXSCORE / BIG DATA</p>
+              <h4 className="text-zinc-900 font-bold uppercase tracking-wider text-sm">{t('basketballAnalysis')}</h4>
+              <p className="text-zinc-500 text-xs font-medium leading-relaxed tracking-wide">{t('basketballAnalysisDesc')}</p>
             </div>
 
             <div className="bg-white border border-zinc-200 p-3 rounded-xl shadow-md flex flex-col items-center md:items-start text-center md:text-left gap-1.5 hover:border-red-varese/50 transition-colors">
               <div className="bg-red-varese/10 p-2 rounded-full text-red-varese mb-1">
                 <HeartPulse size={20} />
               </div>
-              <h4 className="text-zinc-900 font-bold uppercase tracking-wider text-sm">Treatment/Recovery</h4>
-              <p className="text-zinc-500 text-xs font-medium leading-relaxed tracking-wide">INJURY PREVENTION / WORKLOAD MANAGEMENT / REHABILITATION</p>
+              <h4 className="text-zinc-900 font-bold uppercase tracking-wider text-sm">{t('treatmentRecovery')}</h4>
+              <p className="text-zinc-500 text-xs font-medium leading-relaxed tracking-wide">{t('treatmentRecoveryDesc')}</p>
             </div>
 
             <div className="bg-white border border-zinc-200 p-3 rounded-xl shadow-md flex flex-col items-center md:items-start text-center md:text-left gap-1.5 hover:border-red-varese/50 transition-colors">
               <div className="bg-red-varese/10 p-2 rounded-full text-red-varese mb-1">
                 <Dumbbell size={20} />
               </div>
-              <h4 className="text-zinc-900 font-bold uppercase tracking-wider text-sm">Strength & Conditioning</h4>
-              <p className="text-zinc-500 text-xs font-medium leading-relaxed tracking-wide">STRENGTH DEV / POWER / SPEED / AGILITY / STAMINA</p>
+              <h4 className="text-zinc-900 font-bold uppercase tracking-wider text-sm">{t('strengthConditioning')}</h4>
+              <p className="text-zinc-500 text-xs font-medium leading-relaxed tracking-wide">{t('strengthConditioningDesc')}</p>
             </div>
           </div>
         </div>
       );
     }
 
-    if (section.title === 'A Comprehensive Two-Way Approach') {
+    if (isTitleMatch(section.title || '', 'A Comprehensive Two-Way Approach')) {
       return (
         <div className="flex flex-col items-center w-full pt-2 pb-6">
           <div className="hidden md:block w-0.5 h-8 bg-red-varese/30 -mt-4 mb-0 z-0"></div>
@@ -957,10 +1240,10 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                 <div className="bg-white border-2 border-red-varese/20 p-5 rounded-2xl shadow-lg w-full hover:border-red-varese/50 transition-all hover:shadow-xl group">
                   <div className="flex items-center gap-2 mb-3 justify-center">
                     <div className="w-2 h-2 rounded-full bg-red-varese"></div>
-                    <h5 className="text-red-varese font-oswald font-bold uppercase tracking-wider text-center">Grassroots Excellence</h5>
+                    <h5 className="text-red-varese font-oswald font-bold uppercase tracking-wider text-center">{t('grassrootsExcellence')}</h5>
                   </div>
                   <p className="text-zinc-600 text-xs leading-relaxed text-center">
-                    We believe in basketball as a powerful tool for the community. Our program promotes an active, positive spirit, helping young athletes develop social skills and a healthy lifestyle.
+                    {t('grassrootsExcellenceDesc')}
                   </p>
                 </div>
               </div>
@@ -969,44 +1252,117 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                 <div className="bg-white border-2 border-red-varese/20 p-5 rounded-2xl shadow-lg w-full hover:border-red-varese/50 transition-all hover:shadow-xl group">
                   <div className="flex items-center gap-2 mb-3 justify-center">
                     <div className="w-2 h-2 rounded-full bg-red-varese"></div>
-                    <h5 className="text-red-varese font-oswald font-bold uppercase tracking-wider text-center">Elite Player Development</h5>
+                    <h5 className="text-red-varese font-oswald font-bold uppercase tracking-wider text-center">{t('elitePlayerDevelopment')}</h5>
                   </div>
                   <p className="text-zinc-600 text-xs leading-relaxed text-center">
-                    For those dreaming of the big leagues, we provide the ultimate pathway. By offering expert coaching, professional training programs, and access to high-quality facilities, we cultivate the basketball stars of tomorrow.
+                    {t('elitePlayerDevelopmentDesc')}
                   </p>
                 </div>
               </div>
             </div>
           </div>
           <div className="mt-8 text-center bg-zinc-50 p-3 rounded-lg border border-zinc-100 w-full">
-             <p className="text-zinc-500 text-[10px] uppercase tracking-widest font-bold">Two Pillars • One Vision</p>
+             <p className="text-zinc-500 text-[10px] uppercase tracking-widest font-bold">{t('twoPillarsOneVision')}</p>
           </div>
         </div>
       );
     }
 
-    if (section.title === 'Elite Professional Integration') {
+    if (isTitleMatch(section.title || '', 'Elite Professional Integration')) {
       return (
         <div className="space-y-6">
-          <p className="text-zinc-600">This is more than just a course; it is an immersion into the daily operations of a Serie A basketball team. As an intern, you will:</p>
+          <p className="text-zinc-600">{t('eliteProfessionalIntegrationDesc')}</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="bg-white border border-zinc-200 p-4 rounded-xl shadow-md flex flex-col gap-2">
-              <span className="text-red-varese font-bold uppercase tracking-wider text-xs">Shadow the Pros</span>
-              <p className="text-zinc-600 text-xs leading-relaxed">Gain invaluable insights by observing and learning from our experienced coaching professionals during practices and games.</p>
+              <span className="text-red-varese font-bold uppercase tracking-wider text-xs">{t('shadowThePros')}</span>
+              <p className="text-zinc-600 text-xs leading-relaxed">{t('shadowTheProsDesc')}</p>
             </div>
             <div className="bg-white border border-zinc-200 p-4 rounded-xl shadow-md flex flex-col gap-2">
-              <span className="text-red-varese font-bold uppercase tracking-wider text-xs">Active Court Participation</span>
-              <p className="text-zinc-600 text-xs leading-relaxed">Take a hands-on role by running drills with Serie A players and assisting with professional practices.</p>
+              <span className="text-red-varese font-bold uppercase tracking-wider text-xs">{t('activeCourtParticipation')}</span>
+              <p className="text-zinc-600 text-xs leading-relaxed">{t('activeCourtParticipationDesc')}</p>
             </div>
             <div className="bg-white border border-zinc-200 p-4 rounded-xl shadow-md flex flex-col gap-2">
-              <span className="text-red-varese font-bold uppercase tracking-wider text-xs">Strategic Development</span>
-              <p className="text-zinc-600 text-xs leading-relaxed">Attend coaches' meetings to understand the tactical and strategic decision-making processes at the highest level.</p>
+              <span className="text-red-varese font-bold uppercase tracking-wider text-xs">{t('strategicDevelopment')}</span>
+              <p className="text-zinc-600 text-xs leading-relaxed">{t('strategicDevelopmentDesc')}</p>
             </div>
             <div className="bg-white border border-zinc-200 p-4 rounded-xl shadow-md flex flex-col gap-2">
-              <span className="text-red-varese font-bold uppercase tracking-wider text-xs">Youth Development</span>
-              <p className="text-zinc-600 text-xs leading-relaxed">Contribute to the future of the sport by assisting the coaching staff of our youth teams.</p>
+              <span className="text-red-varese font-bold uppercase tracking-wider text-xs">{t('youthDevelopment')}</span>
+              <p className="text-zinc-600 text-xs leading-relaxed">{t('youthDevelopmentDesc')}</p>
             </div>
           </div>
+        </div>
+      );
+    }
+
+    if (isTitleMatch(section.title, 'when and where')) {
+      const isDirectionMap = programId !== 'academy';
+      const mapUrl = isDirectionMap 
+        ? "https://www.google.com/maps/dir/Seconda+Strada+Varese+-+Abbigliamento,+scarpe+e+accessori+moda,+Via+Giovanni+Borghi,+12,+21100+Varese+VA/Campus+Varese,+Via+Luigi+Pirandello,+31,+21100+Varese+VA/@45.8363216,8.7962555,1293m/data=!3m2!1e3!4b1!4m14!4m13!1m5!1m1!1s0x47867fad6f946d8b:0x84ecbc071b6f2b60!2m2!1d8.7981638!2d45.8337092!1m5!1m1!1s0x47867f004a963285:0x68ef706dc0f95da5!2m2!1d8.8028662!2d45.8386915!3e2?entry=ttu&g_ep=EgoyMDI2MDMwMi4wIKXMDSoASAFQAw%3D%3D"
+        : "https://www.google.com/maps/place/Campus+Varese/@45.8386915,8.8002913,647m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47867f004a963285:0x68ef706dc0f95da5!8m2!3d45.8386915!4d8.8028662!16s%2Fg%2F11zj10k1df?entry=ttu&g_ep=EgoyMDI2MDMwMi4wIKXMDSoASAFQAw%3D%3D";
+
+      return (
+        <div className="space-y-4">
+          {section.paragraphs.map((paragraphLines, pIdx) => (
+            <div key={pIdx} className="space-y-2">
+              {paragraphLines.map((line, lIdx) => <p key={lIdx}>{line}</p>)}
+            </div>
+          ))}
+          <a 
+            href={mapUrl}
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="block w-full rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow relative group mt-4"
+          >
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors z-10 flex items-center justify-center">
+              <div className="bg-white text-red-varese px-4 py-2 rounded-full font-bold opacity-0 group-hover:opacity-100 transition-opacity shadow-lg transform translate-y-2 group-hover:translate-y-0">
+                {t('openInGoogleMaps')}
+              </div>
+            </div>
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.568461763133!2d8.80029127664188!3d45.83869147107873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47867f004a963285%3A0x68ef706dc0f95da5!2sCampus%20Varese!5e0!3m2!1sen!2sit!4v1709614800000!5m2!1sen!2sit" 
+              width="100%" 
+              height="250" 
+              style={{ border: 0, pointerEvents: 'none' }} 
+              allowFullScreen={false} 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Campus Varese Map"
+            ></iframe>
+          </a>
+        </div>
+      );
+    }
+
+    if (isTitleMatch(section.title, 'pricing') || isTitleMatch(section.title, 'contact us')) {
+      return (
+        <div className="space-y-4">
+          {section.paragraphs.map((paragraphLines, pIdx) => (
+            <div key={pIdx} className="space-y-2">
+              {paragraphLines.map((line, lIdx) => {
+                if (line.includes("e.robbiani@pallacanestrovarese.it")) {
+                  const parts = line.split("e.robbiani@pallacanestrovarese.it");
+                  return (
+                    <p key={lIdx}>
+                      {parts[0]}
+                      <a href="mailto:e.robbiani@pallacanestrovarese.it?subject=Basketball%20Academy%20program%20-%20info%20request" className="text-red-varese underline font-bold hover:text-red-700">e.robbiani@pallacanestrovarese.it</a>
+                      {parts[1]}
+                    </p>
+                  );
+                }
+                if (line.includes(t('clickHere'))) {
+                  const parts = line.split(t('clickHere'));
+                  return (
+                    <p key={lIdx}>
+                      {parts[0]}
+                      <a href={getStoreLink()} target="_blank" rel="noopener noreferrer" className="text-red-varese underline font-bold hover:text-red-700">{t('clickHere')}</a>
+                      {parts[1]}
+                    </p>
+                  );
+                }
+                return <p key={lIdx}>{line}</p>;
+              })}
+            </div>
+          ))}
         </div>
       );
     }
@@ -1016,64 +1372,6 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
         {section.paragraphs.map((paragraphLines, pIdx) => (
           <div key={pIdx} className="space-y-2">
           {paragraphLines.map((line, lIdx) => {
-            if (line.includes("Our programs operate on a year-round basis at our premier Varese campus")) {
-              return (
-                <div key={lIdx} className="space-y-4">
-                  <p>{line}</p>
-                  <a 
-                    href="https://www.google.com/maps/place/Campus+Varese/@45.8386915,8.8002913,647m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47867f004a963285:0x68ef706dc0f95da5!8m2!3d45.8386915!4d8.8028662!16s%2Fg%2F11zj10k1df?entry=ttu&g_ep=EgoyMDI2MDMwMi4wIKXMDSoASAFQAw%3D%3D" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="block w-full rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow relative group mt-4"
-                  >
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors z-10 flex items-center justify-center">
-                      <div className="bg-white text-red-varese px-4 py-2 rounded-full font-bold opacity-0 group-hover:opacity-100 transition-opacity shadow-lg transform translate-y-2 group-hover:translate-y-0">
-                        {t('openInGoogleMaps')}
-                      </div>
-                    </div>
-                    <iframe 
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.568461763133!2d8.80029127664188!3d45.83869147107873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47867f004a963285%3A0x68ef706dc0f95da5!2sCampus%20Varese!5e0!3m2!1sen!2sit!4v1709614800000!5m2!1sen!2sit" 
-                      width="100%" 
-                      height="250" 
-                      style={{ border: 0, pointerEvents: 'none' }} 
-                      allowFullScreen={false} 
-                      loading="lazy" 
-                      referrerPolicy="no-referrer-when-downgrade"
-                      title="Campus Varese Map"
-                    ></iframe>
-                  </a>
-                </div>
-              );
-            }
-            if (line.includes("Our premium facilities—including the Foresteria Elite Housing and the via Pirandello Campus—are strategically located within a 5-minute walk of each other.") || line.includes("The program will be hosted across our premier facilities, specifically the Foresteria Elite Housing and our Campus in via Pirandello.") || line.includes("Experience elite 400 sqm accommodations with private gardens, located just five minutes from the arena. The camp requires a minimum stay of 1 week (7 days, 6 nights), tailored to your team’s specific needs and availability. To ensure total relaxation, we manage all logistics: two 9-seat vans provide seamless airport transfers for both arrival and departure. This setup offers the perfect balance of privacy and community for a stress-free, professional training experience.")) {
-              return (
-                <div key={lIdx} className="space-y-4">
-                  <p>{line}</p>
-                  <a 
-                    href="https://www.google.com/maps/dir/Seconda+Strada+Varese+-+Abbigliamento,+scarpe+e+accessori+moda,+Via+Giovanni+Borghi,+12,+21100+Varese+VA/Campus+Varese,+Via+Luigi+Pirandello,+31,+21100+Varese+VA/@45.8363216,8.7962555,1293m/data=!3m2!1e3!4b1!4m14!4m13!1m5!1m1!1s0x47867fad6f946d8b:0x84ecbc071b6f2b60!2m2!1d8.7981638!2d45.8337092!1m5!1m1!1s0x47867f004a963285:0x68ef706dc0f95da5!2m2!1d8.8028662!2d45.8386915!3e2?entry=ttu&g_ep=EgoyMDI2MDMwMi4wIKXMDSoASAFQAw%3D%3D" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="block w-full rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow relative group mt-4"
-                  >
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors z-10 flex items-center justify-center">
-                      <div className="bg-white text-red-varese px-4 py-2 rounded-full font-bold opacity-0 group-hover:opacity-100 transition-opacity shadow-lg transform translate-y-2 group-hover:translate-y-0">
-                        {t('openInGoogleMaps')}
-                      </div>
-                    </div>
-                    <iframe 
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.568461763133!2d8.80029127664188!3d45.83869147107873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47867f004a963285%3A0x68ef706dc0f95da5!2sCampus%20Varese!5e0!3m2!1sen!2sit!4v1709614800000!5m2!1sen!2sit" 
-                      width="100%" 
-                      height="250" 
-                      style={{ border: 0, pointerEvents: 'none' }} 
-                      allowFullScreen={false} 
-                      loading="lazy" 
-                      referrerPolicy="no-referrer-when-downgrade"
-                      title="Campus Varese Map"
-                    ></iframe>
-                  </a>
-                </div>
-              );
-            }
             if (line.includes("OFFERS_TABLES_PLACEHOLDER")) {
               return (
                 <div key={lIdx} className="mt-4 flex flex-col md:flex-row gap-6 w-full">
@@ -1143,35 +1441,15 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
             }
             if (line.includes("THE_PILLARS_PLACEHOLDER")) {
               const academyBoxes = [
-                {
-                  title: lang === 'it' ? "Il nostro know-how" :
-                         lang === 'es' ? "Nuestro know-how" :
-                         lang === 'fr' ? "Notre savoir-faire" :
-                         "Our know-how"
-                },
-                {
-                  title: lang === 'it' ? "Metodi di allenamento d'élite" :
-                         lang === 'es' ? "Métodos de entrenamiento de élite" :
-                         lang === 'fr' ? "Méthodes d'entraînement d'élite" :
-                         "Elite training methods"
-                },
-                {
-                  title: lang === 'it' ? "Collaborazione con club, federazioni nazionali o accademie locali" :
-                         lang === 'es' ? "Colaboración con clubes, federaciones nacionales o academias locales" :
-                         lang === 'fr' ? "Collaboration avec des clubs, des fédérations nationales ou des académies locales" :
-                         "Collaboration with clubs, national federations or local academies"
-                },
-                {
-                  title: lang === 'it' ? "Il nostro marchio" :
-                         lang === 'es' ? "Nuestra marca" :
-                         lang === 'fr' ? "Notre marque" :
-                         "Our brand"
-                }
+                { title: t('ourKnowHow') },
+                { title: t('eliteTrainingMethods') },
+                { title: t('collaborationClubs') },
+                { title: t('ourBrand') }
               ];
               return (
                 <div key={lIdx} className="mt-8">
                   <h4 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-xl text-center">
-                    {lang === 'it' ? "I Pilastri" : lang === 'es' ? "Los Pilares" : lang === 'fr' ? "Les Piliers" : "The Pillars"}
+                    {t('thePillars')}
                   </h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {academyBoxes.map((item, i) => (
@@ -1187,21 +1465,15 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
               return (
                 <div key={lIdx} className="mt-4 flex flex-col xl:flex-row gap-4 w-full">
                   <div className="flex-1 bg-white p-6 rounded-xl shadow-sm border border-zinc-200">
-                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg text-center">the next generation</h5>
+                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg text-center">{t('theNextGeneration')}</h5>
                     <p className="text-zinc-600 text-sm leading-relaxed">
-                      {lang === 'it' ? "Questo percorso è progettato per giovani atleti e famiglie che cercano un'introduzione premium al basket. Il nostro obiettivo è la \"Next Generation\" di giocatori che vogliono costruire una solida base tecnica e motoria. Ci rivolgiamo ai genitori che danno priorità agli standard di allenamento professionali e a un ambiente sportivo sano e di alto valore dove i bambini possono innamorarsi del gioco imparando il \"Varese Way\" dal nostro staff certificato." :
-                       lang === 'es' ? "Esta pista está diseñada para jóvenes atletas y familias que buscan una introducción premium al baloncesto. Nuestro objetivo es la \"Next Generation\" de jugadores que desean construir una base técnica y de habilidades motoras sólida como una roca. Apelamos a los padres que priorizan los estándares de entrenamiento profesional y un entorno deportivo saludable y de alto valor donde los niños pueden enamorarse del juego mientras aprenden el \"Varese Way\" de nuestro personal certificado." :
-                       lang === 'fr' ? "Ce parcours est conçu pour les jeunes athlètes et les familles à la recherche d'une introduction premium au basketball. Notre cible est la \"Next Generation\" de joueurs qui souhaitent construire une base technique et motrice solide. Nous nous adressons aux parents qui privilégient des normes d'entraînement professionnelles et un environnement sportif sain et de grande valeur où les enfants peuvent tomber amoureux du jeu tout en apprenant le \"Varese Way\" de notre personnel certifié." :
-                       "This track is designed for young athletes and families seeking a premium introduction to basketball. Our target is the \"Next Generation\" of players who want to build a rock-solid technical and motor-skill foundation. We appeal to parents who prioritize professional coaching standards and a healthy, high-value sports environment where children can fall in love with the game while learning the \"Varese Way\" from our certified staff."}
+                      {t('academyNextGenDesc')}
                     </p>
                   </div>
                   <div className="flex-1 bg-white p-6 rounded-xl shadow-sm border border-zinc-200">
-                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg text-center">high-potential prospects</h5>
+                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg text-center">{t('highPotentialProspects')}</h5>
                     <p className="text-zinc-600 text-sm leading-relaxed">
-                      {lang === 'it' ? "Questo percorso si rivolge a prospetti ad alto potenziale che stanno già gareggiando ad alto livello e mirano a una carriera professionale. Il nostro pubblico qui include atleti, agenzie e federazioni alla ricerca della \"Pro Experience\" definitiva. Questi giocatori cercano l'audit tecnico completo: dal tutoraggio dello staff di Serie A e sessioni esclusive con Luis Scola fino all'analisi dei dati avanzata e alle strategie di gestione della carriera. Questo è per l'atleta pronto a colmare il divario tra l'eccellenza giovanile e i circuiti professionali senior." :
-                       lang === 'es' ? "Esta pista está dirigida a prospectos de alto potencial que ya compiten a un alto nivel y aspiran a una carrera profesional. Nuestra audiencia aquí incluye atletas, agencias y federaciones que buscan la \"Pro Experience\" definitiva. Estos jugadores buscan la auditoría técnica completa: desde la tutoría del personal de la Serie A y sesiones exclusivas con Luis Scola hasta el análisis de datos avanzado y las estrategias de gestión de carrera. Esto es para el atleta listo para cerrar la brecha entre la excelencia juvenil y los circuitos profesionales senior." :
-                       lang === 'fr' ? "Ce parcours cible les espoirs à fort potentiel qui évoluent déjà à un haut niveau et visent une carrière professionnelle. Notre public ici comprend des athlètes, des agences et des fédérations à la recherche de l'ultime \"Pro Experience\". Ces joueurs recherchent l'audit technique complet : du mentorat par le personnel de Serie A et des sessions exclusives avec Luis Scola à l'analyse de données avancée et aux stratégies de gestion de carrière. C'est pour l'athlète prêt à combler le fossé entre l'excellence des jeunes et les circuits professionnels seniors." :
-                       "This track targets high-potential prospects who are already competing at a high level and aiming for a professional career. Our audience here includes athletes, agencies, and federations looking for the ultimate \"Pro Experience.\" These players seek the full technical audit: from Serie A staff mentorship and exclusive sessions with Luis Scola to advanced Data Analytics and career management strategies. This is for the athlete ready to bridge the gap between youth excellence and the senior professional circuits."}
+                      {t('academyProspectsDesc')}
                     </p>
                   </div>
                 </div>
@@ -1210,32 +1482,20 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
             if (line.includes("ELITE_PACKAGE_PLACEHOLDER")) {
               const packageItems = [
                 {
-                  title: "Analytics",
-                  desc: lang === 'it' ? "Monitoraggio costante delle prestazioni tramite sensori e dati biometrici per ottimizzare ogni sessione di allenamento e prevenire infortuni." : 
-                        lang === 'es' ? "Monitoreo constante del rendimiento a través de sensores y datos biométricos para optimizar cada sesión de entrenamiento y prevenir lesiones." :
-                        lang === 'fr' ? "Suivi constant des performances via des capteurs et des données biométriques pour optimiser chaque séance d'entraînement et prévenir les blessures." :
-                        "Constant performance monitoring through sensors and biometric data to optimize every training session and prevent potential injuries."
+                  title: t('elitePackageAnalyticsTitle'),
+                  desc: t('elitePackageAnalyticsDesc')
                 },
                 {
-                  title: "Advanced stats & insights",
-                  desc: lang === 'it' ? "Analisi approfondita delle statistiche di gioco per identificare punti di forza e aree di miglioramento tattico individuale e di squadra." :
-                        lang === 'es' ? "Análisis profundo de las estadísticas de juego para identificar fortalezas y áreas de mejora táctica individual y de equipo." :
-                        lang === 'fr' ? "Analyse approfondie des statistiques de jeu pour identifier les forces et les domaines d'amélioration tactique individuelle et collective." :
-                        "In-depth analysis of game statistics to identify strengths and areas for individual and team tactical improvement during the season."
+                  title: t('elitePackageStatsTitle'),
+                  desc: t('elitePackageStatsDesc')
                 },
                 {
-                  title: "Video analysis",
-                  desc: lang === 'it' ? "Sessioni dedicate di video review per correggere la tecnica di tiro, i movimenti difensivi e la comprensione del gioco in tempo reale." :
-                        lang === 'es' ? "Sesiones dedicadas de revisión de video para corregir la técnica de tiro, los movimientos defensivos y la comprensión del juego." :
-                        lang === 'fr' ? "Sessions dédiées de revue vidéo pour corriger la technique de tir, les mouvements défensifs et la compréhension du jeu." :
-                        "Dedicated video review sessions to correct shooting technique, defensive movements, and overall game understanding in real-time scenarios."
+                  title: t('elitePackageVideoTitle'),
+                  desc: t('elitePackageVideoDesc')
                 },
                 {
-                  title: "Extra training",
-                  desc: lang === 'it' ? "Allenamenti supplementari personalizzati focalizzati sullo sviluppo delle abilità specifiche richieste per raggiungere il livello professionistico europeo." :
-                        lang === 'es' ? "Entrenamientos suplementarios personalizados enfocados en el desarrollo de las habilidades específicas requeridas para alcanzar el nivel profesional europeo." :
-                        lang === 'fr' ? "Entraînements supplémentaires personnalisés axés sur le développement des compétences spécifiques requises pour atteindre le niveau professionnel européen." :
-                        "Personalized supplemental workouts focused on developing the specific skills required to reach the elite European professional basketball level."
+                  title: t('elitePackageTrainingTitle'),
+                  desc: t('elitePackageTrainingDesc')
                 }
               ];
               return (
@@ -1394,17 +1654,6 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
           let imageUrls: string[] | null = null;
           let imagePosition = 'right';
           
-          const isTitleMatch = (title: string, englishTitle: string) => {
-            const translations: Record<string, string[]> = {
-              'Sample Daily Routine': ['Sample Daily Routine', 'Esempio di Routine Quotidiana', 'Ejemplo de Rutina Diaria', 'Exemple de Routine Quotidienne'],
-              'the training program': ['the training program', 'il programma di allenamento', 'el programa de entrenamiento', 'le programme d\'entraînement'],
-              'Our special guest and CEO': ['Our special guest and CEO', 'Il nostro ospite speciale e CEO', 'Nuestro invitado especial y CEO', 'Notre invité spécial et PDG'],
-              'Unique events & meetings': ['Unique events & meetings', 'Eventi unici e incontri', 'Eventos únicos y reuniones', 'Événements uniques et réunions'],
-              'A Comprehensive Two-Way Approach': ['A Comprehensive Two-Way Approach', 'Un Approccio Completo a Due Vie', 'Un Enfoque Completo de Dos Vías', 'Une Approche Complète à Deux Voies']
-            };
-            return translations[englishTitle]?.some(t => title.toLowerCase() === t.toLowerCase()) || title.toLowerCase() === englishTitle.toLowerCase();
-          };
-
           if (idx === 0) {
             imageUrl = getImage1();
             imagePosition = 'right';
