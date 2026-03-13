@@ -1120,7 +1120,8 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
       'contact us': ['contact us', 'contattaci', 'contáctanos', 'contactez-nous'],
       'when and where': ['when and where', 'Quando e dove', 'Cuándo y dónde', 'Quand et où', 'quando e dove', 'cuándo y dónde', 'quand et où'],
       'pricing': ['pricing', 'prezzi', 'precios', 'prix'],
-      'the pillars': ['the pillars', 'i pilastri', 'los pilares', 'les piliers']
+      'the pillars': ['the pillars', 'i pilastri', 'los pilares', 'les piliers'],
+      'the elite player package': ['the elite player package', 'il pacchetto giocatore d\'élite', 'el paquete de jugador de élite', 'le forfait joueur d\'élite']
     };
     return translations[englishTitle]?.some(t => title.toLowerCase() === t.toLowerCase()) || title.toLowerCase() === englishTitle.toLowerCase();
   };
@@ -1692,7 +1693,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                 
                 <div className={`flex-1 ${(imageUrl || imageUrls) ? (isTitleMatch(section.title, 'Our special guest and CEO') ? 'lg:flex-[1.8]' : ((idx === 1 && (programId === 'academy' || programId === 'summer-prog' || programId === 'player-package')) || ((idx === 2 || idx === 0) && programId === 'player-package') ? 'lg:flex-[2]' : 'lg:flex-[1.5]')) : 'w-full'} space-y-4 ${(imageUrl || imageUrls) && imagePosition === 'left' ? 'order-1 lg:order-2' : ''}`}>
                   <h4 className={`font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg border-b border-zinc-200 pb-2 ${isTitleMatch(section.title, 'A Comprehensive Two-Way Approach') ? 'text-center' : ''}`}>
-                    {section.title}
+                    {isTitleMatch(section.title, 'the elite player package') ? t('elitePlayerPackage') : section.title}
                   </h4>
                   {renderSectionContent(section)}
                 </div>

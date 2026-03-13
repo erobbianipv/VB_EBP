@@ -394,7 +394,8 @@ Découvrez des hébergements d'élite de 400 m² avec jardins privés, situés �
 prix
 Contactez-nous ou cliquez ici pour obtenir des informations détaillées sur les prix adaptées à vos besoins spécifiques.`
     },
-    "player-package": {
+  },
+  "player-package": {
       it: {
         title: "PACCHETTO GIOCATORE D'ÉLITE",
         target: "Dal 2007 al 2012",
@@ -445,7 +446,6 @@ BOXES: science du sport|analyse du basket|données de performance et information
 
 Le Choix Flexible et Personnalisé
 Nous comprenons que l'emploi du temps d'une étoile montante est exigeant, c'est pourquoi le Forfait Joueur d'Élite offre une flexibilité totale. Ce programme de 10 sessions propose des plans d'entraînement personnalisés adaptés à votre rôle spécifique et à vos objectifs de développement, avec des dates et des heures à déterminer en fonction de votre disponibilité tout au long de l'année. Spécialement conçu pour les groupes d'âge 2007-2012, ce forfait garantit que chaque minute passée sur le terrain est optimisée pour votre progression individuelle, offrant un parcours sur mesure vers l'excellence.`
-      }
     }
   }
 };
