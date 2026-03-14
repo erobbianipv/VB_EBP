@@ -182,7 +182,7 @@ At the Pallacanestro Varese Elite Summer Camp, we believe that developing a top-
 
 Participants will dive deep into the world of Data Analytics, learning how elite teams leverage performance metrics to optimize every play and refine individual skill sets. These sessions are complemented by insightful discussions on Professional Career Management, where campers will interact directly with Serie A players and members of our First Team staff. These industry experts will share firsthand experiences on navigating the complexities of a professional career, from physical longevity to the mental discipline required at the highest European levels. This is a unique opportunity to gain the "off-court" intelligence necessary to thrive in today’s highly competitive basketball landscape.
 
-SUBTITLE:the training staff
+the training staff
 Experience the game at its highest level. The Pallacanestro Varese Elite Summer Camp is led directly by our Serie A First Team coaching staff, bringing professional-grade expertise to every session. This is a rare opportunity to train under the same tactical minds and high-performance specialists who drive our top-division roster. Participants will master the exact methodologies, intensity, and drills used in professional European basketball, ensuring an authentic elite experience designed to elevate your technical DNA.
 
 Sample Daily Routine
@@ -258,11 +258,11 @@ Please contact us or click here for detailed pricing information tailored to you
     detailImage: "https://i.imgur.com/kRADld5.jpeg",
     category: 'other',
     details: `The Professional "Pro-Level" Approach
-Experience the intensity of professional football with the Elite Player Package, an exclusive program designed for ambitious athletes born between 2007 and 2012. Over the course of 10 bespoke training sessions, you will work directly with Serie A coaching staff, gaining access to the same elite technical drills used at the highest level of the game. This isn't just practice; it’s a professional immersion designed to refine your skills and elevate your tactical understanding under the guidance of Italy's top football experts.
+Experience the intensity of professional basketball with the Elite Player Package, an exclusive program designed for ambitious athletes born between 2007 and 2012. Over the course of 10 bespoke training sessions, you will work directly with Serie A coaching staff, gaining access to the same elite technical drills used at the highest level of the game. This isn't just practice; it’s a professional immersion designed to refine your skills and elevate your tactical understanding under the guidance of Italy's top basketball experts.
 BOXES: fundamentals|strength & conditioning|basketball analysis|individualized sessions
 
 The Data-Driven & Analytical Focus
-In modern football, talent is only half the battle—data is the other. Our Elite Player Package bridges this gap by providing players (ages 12-17) with 10 high-performance sessions backed by advanced analytics and data insights. Each participant receives personalized performance feedback, allowing them to visualize their strengths and identify areas for growth through precise metrics. By combining elite coaching with scientific insights, we help you master your game with a level of clarity usually reserved for professional clubs.
+In modern basketball, talent is only half the battle—data is the other. Our Elite Player Package bridges this gap by providing players (ages 12-17) with 10 high-performance sessions backed by advanced analytics and data insights. Each participant receives personalized performance feedback, allowing them to visualize their strengths and identify areas for growth through precise metrics. By combining elite coaching with scientific insights, we help you master your game with a level of clarity usually reserved for professional clubs.
 BOXES: sports science|basketball analysis|performance data & insights
 
 The Flexible & Personalized Choice

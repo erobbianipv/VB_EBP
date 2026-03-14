@@ -121,6 +121,7 @@ const TRANSLATIONS = {
     contactUs: "Contattaci",
     footerAddress: "Piazzale Antonio Gramsci,\nVarese, Italia",
     footerCOO: "Direttore Operativo",
+    footerDevelopedBy: "Sviluppato per Elite Basketball Program.",
     // Submission Success
     submissionSuccessTitle: "Richiesta Inoltrata!",
     submissionSuccessMessage: "Abbiamo preparato un'email con i tuoi dati. Per favore, controlla la tua applicazione di posta elettronica (Outlook, Gmail, etc.) e invia il messaggio per completare la richiesta.",
@@ -156,21 +157,22 @@ const TRANSLATIONS = {
     faq5Question: "Come posso richiedere maggiori informazioni?",
     faq5Answer: "Puoi richiedere informazioni compilando il modulo presente in ogni sezione del sito cliccando su 'Richiedi Info' o contattandoci direttamente via email all'indirizzo e.robbiani@pallacanestrovarese.it.",
     // Summer Camp
+    twoDifferentOptions: "Due diverse opzioni",
     residentialCamp: "Camp Residenziale",
     dayCamp: "Day Camp",
-    included: "Incluso",
-    privateSingleRoom: "camera singola privata",
-    sharedCommonSpaces: "spazi comuni condivisi",
-    meals3: "3 pasti al giorno",
-    sportsNutrition: "menu basati sulla nutrizione sportiva",
-    individualizedTraining: "allenamento individuale 1 contro 1",
-    teamPractice: "allenamento di squadra",
-    strengthTraining: "allenamento di forza e performance",
-    personalAnalytics: "analisi delle performance personali",
-    eliteCoaching: "staff tecnico d'elite",
-    officialGear: "abbigliamento ufficiale del camp",
-    lunch: "pranzo",
-    applyNowBtn: "Iscriviti Ora",
+    included: "Servizi Inclusi:",
+    privateSingleRoom: "Camera singola privata",
+    sharedCommonSpaces: "Spazi comuni condivisi",
+    meals3: "Pensione completa (3 pasti al giorno)",
+    sportsNutrition: "Menu basati sulla nutrizione sportiva",
+    individualizedTraining: "Allenamento individuale 1-on-1",
+    teamPractice: "Allenamenti di squadra",
+    strengthTraining: "Allenamento per la forza e la performance (S&C)",
+    personalAnalytics: "Analisi dei dati della performance individuale",
+    eliteCoaching: "Staff tecnico d'élite",
+    officialGear: "Kit ufficiale del camp (abbigliamento e attrezzatura)",
+    lunch: "Pranzo",
+    applyNowBtn: "Iscriviti ora",
     depositNotice: "Iscrivendoti ora è richiesto un deposito di €290 per tutti i tipi di camp.<br className=\"hidden md:block\" /> I dettagli sul saldo finale seguiranno a breve.",
     howToSubscribe: "Come iscriversi",
     depositDesc: "Per registrarsi al Pallacanestro Varese Elite Summer Camp, è richiesto un deposito anticipato di €290 sia per il Camp Residenziale che per il Day Camp.",
@@ -183,6 +185,17 @@ const TRANSLATIONS = {
     nextSteps: "Prossimi Passaggi:",
     onceDeposit: "Una volta elaborato il deposito, il nostro team ti contatterà per finalizzare il pagamento del saldo rimanente e per richiedere ulteriore documentazione.",
     waitingForYou: "IL PALLACANESTRO VARESE ELITE SUMMER CAMP TI ASPETTA!",
+    keyHighlights: "Punti Salienti",
+    target: "Target",
+    timing: "Periodo",
+    where: "Dove",
+    subscriptionDeadline: "Scadenza Iscrizione",
+    pricing: "Prezzi",
+    limitedSpots: "Posti limitati disponibili",
+    overview: "Panoramica",
+    tbdTogether: "Da definire insieme",
+    campusVarese: "Campus, Varese",
+    foresteriaCampus: "Foresteria & Campus",
     // Program Tables
     standardProgram: "Programma Standard",
     premiumProgram: "Programma Premium",
@@ -369,6 +382,7 @@ const TRANSLATIONS = {
     contactUs: "Contact Us",
     footerAddress: "Piazzale Antonio Gramsci,\nVarese, Italy",
     footerCOO: "Chief Operating Officer",
+    footerDevelopedBy: "Developed for Elite Basketball Program.",
     submissionSuccessTitle: "Request Forwarded!",
     submissionSuccessMessage: "We've prepared an email with your details. Please check your email client (Outlook, Gmail, etc.) and send the message to complete your request.",
     close: "Close",
@@ -403,20 +417,21 @@ const TRANSLATIONS = {
     faq5Question: "How can I request more information?",
     faq5Answer: "You can request information by filling out the form in any section of the site by clicking 'Request Info' or by contacting us directly via email at e.robbiani@pallacanestrovarese.it.",
     // Summer Camp
+    twoDifferentOptions: "Two different options",
     residentialCamp: "Residential Camp",
     dayCamp: "Day Camp",
-    included: "Included",
-    privateSingleRoom: "private single room",
-    sharedCommonSpaces: "shared common spaces",
+    included: "Included:",
+    privateSingleRoom: "Private single room",
+    sharedCommonSpaces: "Shared common spaces",
     meals3: "3 meals a day",
-    sportsNutrition: "sports nutrition-driven menus",
-    individualizedTraining: "individualized 1-on-1 training",
-    teamPractice: "team practice",
-    strengthTraining: "strength and performance training",
-    personalAnalytics: "personal performance analytics",
-    eliteCoaching: "elite coaching staff",
-    officialGear: "official camp gear",
-    lunch: "lunch",
+    sportsNutrition: "Sports nutrition-driven menus",
+    individualizedTraining: "Individualized 1-on-1 training",
+    teamPractice: "Team practice",
+    strengthTraining: "Strength and performance training",
+    personalAnalytics: "Personal performance analytics",
+    eliteCoaching: "Elite coaching staff",
+    officialGear: "Official camp gear",
+    lunch: "Lunch",
     applyNowBtn: "Apply Now",
     depositNotice: "By applying now a €290 advance deposit is required for all camp types.<br className=\"hidden md:block\" /> Details on final balance payments will follow shortly.",
     howToSubscribe: "How to subscribe",
@@ -430,6 +445,17 @@ const TRANSLATIONS = {
     nextSteps: "Next Steps:",
     onceDeposit: "Once the deposit is processed, our team will contact you to finalize the payment for the remaining balance and to request additional documentation.",
     waitingForYou: "THE PALLACANESTRO VARESE ELITE SUMMER CAMP IS WAITING FOR YOU!",
+    keyHighlights: "Key Highlights",
+    target: "Target",
+    timing: "Timing",
+    where: "Where",
+    subscriptionDeadline: "Subscription Deadline",
+    pricing: "Pricing",
+    limitedSpots: "Limited spots available",
+    overview: "Overview",
+    tbdTogether: "TBD together",
+    campusVarese: "Campus, Varese",
+    foresteriaCampus: "Foresteria & Campus",
     // Program Tables
     standardProgram: "Standard Program",
     premiumProgram: "Premium Program",
@@ -530,7 +556,7 @@ const TRANSLATIONS = {
     ourLegacy: "Nuestro Legado",
     whoWeAre: "Quiénes Somos",
     whoWeAreP1: "Pallacanestro Varese es un pilar del baloncesto europeo con 10 Campeonatos de Italia y 5 títulos de Euroliga. Nuestros logros históricos hablan por sí mismos, incluyendo 10 finales consecutivas de Euroliga.",
-    whoWeAreP2: "Ubicados en el corazón de Varese, Italia, estamos rodeados de líderes de la industria e innovación. El baloncesto no es solo un deporte aquí; es una tradición profundamente arraigada en la cultura de nostra ciudad.",
+    whoWeAreP2: "Ubicados en el corazón de Varese, Italia, estamos rodeados de líderes de la industria e innovación. El baloncesto no es solo un deporte aquí; es una tradición profundamente arraigada en la cultura de nuestra ciudad.",
     whoWeAreQuote: '"Seguimos centrados en el futuro, comprometidos con nuestro legado y siendo un orgullo para Varese."',
     ourPalmares: "Nuestro Palmarés",
     campionatoItaliano: "CAMPEONATO ITALIANO",
@@ -616,6 +642,7 @@ const TRANSLATIONS = {
     contactUs: "Contáctanos",
     footerAddress: "Piazzale Antonio Gramsci,\nVarese, Italia",
     footerCOO: "Director de Operaciones",
+    footerDevelopedBy: "Desarrollado para Elite Basketball Program.",
     submissionSuccessTitle: "¡Solicitud Enviada!",
     submissionSuccessMessage: "Hemos preparado un correo electrónico con tus datos. Por favor, revisa tu cliente de correo (Outlook, Gmail, etc.) y envía el mensaje para completar la solicitud.",
     close: "Cerrar",
@@ -637,21 +664,34 @@ const TRANSLATIONS = {
     u17Championship: "Campeonato de Italia Sub-17",
     u15Championship: "Campeonato de Italia Sub-15",
     joinTheGame: "Join The Game",
+    // FAQ
+    faqTitle: "Preguntas Frecuentes",
+    faq1Question: "¿Qué es el Programa de Baloncesto de Élite?",
+    faq1Answer: "El Programa de Baloncesto de Élite (EBP) es un ecosistema integral diseñado por Pallacanestro Varese para formar a la próxima generación de talentos del baloncesto, ofreciendo entrenamiento de alto nivel, infraestructura profesional y trayectorias académicas.",
+    faq2Question: "¿Dónde se encuentra el Campus?",
+    faq2Answer: "El Campus está situado en Via Pirandello en Varese, a 10 minutos a pie de la Foresteria y a solo 5 minutos del Itelyum Arena, sede de Pallacanestro Varese. Todas nuestras instalaciones están perfectamente interconectadas.",
+    faq3Question: "¿Cómo puedo solicitar un programa?",
+    faq3Answer: "Puedes solicitar cualquiera de nuestros programas haciendo clic en 'comprar ahora' en este sitio web o visitando el siguiente enlace: https://store.pallacanestrovarese.it/collections/elite-programs",
+    faq4Question: "¿Cómo llego a Varese?",
+    faq4Answer: "El Campus está situado en Via Pirandello en Varese, a 10 minutos a pie de la casa de huéspedes y a solo 5 minutos del Itelyum Arena, sede de Pallacanestro Varese. Llegar a nosotros es muy conveniente ya que todas nuestras instalaciones están perfectamente interconectadas y bien comunicadas por transporte público. Si llega por aire, Milán Malpensa (MXP) es el centro más cercano, ubicado a solo 30 minutos y conectado directamente con Varese a través de la línea de tren S50. Para quienes viajan por ferrocarril desde Milán, salen servicios directos frecuentes desde las estaciones de Milano Centrale, Porta Garibaldi y Cadorna, con tiempos de viaje de 50 a 60 minutos de media. Ya sea que llegue desde el aeropuerto o desde el centro de la ciudad, el último tramo hasta el Campus es rápido y sencillo.",
+    faq5Question: "¿Cómo puedo solicitar más información?",
+    faq5Answer: "Puedes solicitar información completando el formulario en cualquier sección del sitio haciendo clic en 'Solicitar Información' o contactándonos directamente por correo electrónico en e.robbiani@pallacanestrovarese.it.",
     // Summer Camp
+    twoDifferentOptions: "Dos opciones diferentes",
     residentialCamp: "Campamento Residencial",
     dayCamp: "Campamento de Día",
-    included: "Incluido",
-    privateSingleRoom: "habitación individual privada",
-    sharedCommonSpaces: "espacios comunes compartidos",
+    included: "Incluido:",
+    privateSingleRoom: "Habitación individual privada",
+    sharedCommonSpaces: "Espacios comunes compartidos",
     meals3: "3 comidas al día",
-    sportsNutrition: "menús basados en nutrición deportiva",
-    individualizedTraining: "entrenamiento individual 1 a 1",
-    teamPractice: "práctica en equipo",
-    strengthTraining: "entrenamiento de fuerza y rendimiento",
-    personalAnalytics: "análisis de rendimiento personal",
-    eliteCoaching: "cuerpo técnico de élite",
-    officialGear: "equipo oficial del campamento",
-    lunch: "almuerzo",
+    sportsNutrition: "Menús basados en nutrición deportiva",
+    individualizedTraining: "Entrenamiento individual 1 a 1",
+    teamPractice: "Práctica en equipo",
+    strengthTraining: "Entrenamiento de fuerza y rendimiento",
+    personalAnalytics: "Análisis de rendimiento personal",
+    eliteCoaching: "Cuerpo técnico de élite",
+    officialGear: "Equipo oficial del campamento",
+    lunch: "Almuerzo",
     applyNowBtn: "Aplica Ahora",
     depositNotice: "Al aplicar ahora, se requiere un depósito anticipado de €290 para todos los tipos de campamento.<br className=\"hidden md:block\" /> Los detalles sobre los pagos del saldo final seguirán en breve.",
     howToSubscribe: "Cómo suscribirse",
@@ -665,6 +705,17 @@ const TRANSLATIONS = {
     nextSteps: "Próximos Pasos:",
     onceDeposit: "Una vez procesado el depósito, nuestro equipo se comunicará contigo para finalizar el pago del saldo restante y solicitar documentación adicional.",
     waitingForYou: "¡EL PALLACANESTRO VARESE ELITE SUMMER CAMP TE ESTÁ ESPERANDO!",
+    keyHighlights: "Puntos Clave",
+    target: "Público",
+    timing: "Periodo",
+    where: "Dónde",
+    subscriptionDeadline: "Fecha Límite de Inscripción",
+    pricing: "Precios",
+    limitedSpots: "Plazas limitadas disponibles",
+    overview: "Resumen",
+    tbdTogether: "A definir juntos",
+    campusVarese: "Campus, Varese",
+    foresteriaCampus: "Residencia y Campus",
     // Program Tables
     standardProgram: "Programa Estándar",
     premiumProgram: "Programa Premium",
@@ -844,13 +895,14 @@ const TRANSLATIONS = {
     applyNow: "Demander des Infos",
     footerSlogan: "Donner les moyens à la prochaine génération de basketteurs d'élite grâce à des infrastructures professionnelles et une expertise légendaire.",
     footerLegacy: "Notre Héritage",
-    footerRegion: "La Región",
+    footerRegion: "La Région",
     footerLeadership: "Direction",
     footerFacilities: "Installations",
     footerPrograms: "Programmes",
     contactUs: "Contactez-Nous",
     footerAddress: "Piazzale Antonio Gramsci,\nVarèse, Italie",
     footerCOO: "Directeur des Opérations",
+    footerDevelopedBy: "Développé pour Elite Basketball Program.",
     submissionSuccessTitle: "Demande Transmise !",
     submissionSuccessMessage: "Nous avons préparé un e-mail avec vos informations. Veuillez vérifier votre client de messagerie (Outlook, Gmail, etc.) et envoyer le message pour finaliser votre demande.",
     close: "Fermer",
@@ -872,21 +924,34 @@ const TRANSLATIONS = {
     u17Championship: "Championnat d'Italie U-17",
     u15Championship: "Championnat d'Italie U-15",
     joinTheGame: "Join The Game",
+    // FAQ
+    faqTitle: "Foire Aux Questions",
+    faq1Question: "Qu'est-ce que l'Elite Basketball Program ?",
+    faq1Answer: "L'Elite Basketball Program (EBP) est un écosystème complet conçu par Pallacanestro Varese pour former la prochaine génération de talents du basket-ball, offrant un entraînement de haut niveau, des infrastructures professionnelles et des parcours académiques.",
+    faq2Question: "Où se trouve le Campus ?",
+    faq2Answer: "Le Campus est situé Via Pirandello à Varèse, à 10 minutes à pied de la Foresteria et à seulement 5 minutes de l'Itelyum Arena, domicile de Pallacanestro Varese. Toutes nos installations sont parfaitement interconnectées.",
+    faq3Question: "Comment puis-je postuler à un programme ?",
+    faq3Answer: "Vous pouvez postuler à n'importe lequel de nos programmes en cliquant sur 'acheter maintenant' sur ce site ou en visitant le lien suivant : https://store.pallacanestrovarese.it/collections/elite-programs",
+    faq4Question: "Comment se rendre à Varèse ?",
+    faq4Answer: "Le Campus est situé Via Pirandello à Varèse, à 10 minutes à pied de la maison d'hôtes et à seulement 5 minutes de l'Itelyum Arena, domicile de Pallacanestro Varese. Nous rejoindre est très pratique car toutes nos installations sont parfaitement interconnectées et bien desservies par les transports en commun. Si vous arrivez par avion, Milan Malpensa (MXP) est le hub le plus proche, situé à seulement 30 minutes et relié directement à Varèse via la ligne de train S50. Pour ceux qui voyagent en train depuis Milan, des services directs fréquents partent des gares de Milano Centrale, Porta Garibaldi et Cadorna, avec des temps de trajet de 50 à 60 minutes en moyenne. Que vous arriviez de l'aéroport ou du centre-ville, le dernier tronçon vers le Campus est rapide et simple.",
+    faq5Question: "Comment puis-je demander plus d'informations ?",
+    faq5Answer: "Vous pouvez demander des informations en remplissant le formulaire dans n'importe quelle section du site en cliquant sur 'Demander des Infos' ou en nous contactant directement par e-mail à l'adresse e.robbiani@pallacanestrovarese.it.",
     // Summer Camp
+    twoDifferentOptions: "Deux options différentes",
     residentialCamp: "Camp Résidentiel",
     dayCamp: "Camp de Jour",
-    included: "Inclus",
-    privateSingleRoom: "chambre individuelle privée",
-    sharedCommonSpaces: "espaces communs partagés",
+    included: "Inclus :",
+    privateSingleRoom: "Chambre individuelle privée",
+    sharedCommonSpaces: "Espaces communs partagés",
     meals3: "3 repas par jour",
-    sportsNutrition: "menus basés sur la nutrition sportive",
-    individualizedTraining: "entraînement individuel 1 contre 1",
-    teamPractice: "entraînement en équipe",
-    strengthTraining: "entraînement de force et de performance",
-    personalAnalytics: "analyse des performances personnelles",
-    eliteCoaching: "personnel d'entraîneurs d'élite",
-    officialGear: "équipement officiel du camp",
-    lunch: "déjeuner",
+    sportsNutrition: "Menus basés sur la nutrition sportive",
+    individualizedTraining: "Entraînement individuel 1 contre 1",
+    teamPractice: "Entraînement en équipe",
+    strengthTraining: "Entraînement de force et de performance",
+    personalAnalytics: "Analyse des performances personnelles",
+    eliteCoaching: "Personnel d'entraîneurs d'élite",
+    officialGear: "Équipement officiel du camp",
+    lunch: "Déjeuner",
     applyNowBtn: "Postuler Maintenant",
     depositNotice: "En postulant maintenant, un acompte de 290 € est requis pour tous les types de camps.<br className=\"hidden md:block\" /> Les détails sur les paiements du solde final suivront sous peu.",
     howToSubscribe: "Comment s'inscrire",
@@ -900,6 +965,17 @@ const TRANSLATIONS = {
     nextSteps: "Prochaines Étapes :",
     onceDeposit: "Une fois l'acompte traité, notre équipe vous contactera pour finaliser le paiement du solde restant et demander des documents supplémentaires.",
     waitingForYou: "LE PALLACANESTRO VARESE ELITE SUMMER CAMP VOUS ATTEND !",
+    keyHighlights: "Points Forts",
+    target: "Cible",
+    timing: "Période",
+    where: "Où",
+    subscriptionDeadline: "Date Limite d'Inscription",
+    pricing: "Tarifs",
+    limitedSpots: "Places limitées disponibles",
+    overview: "Aperçu",
+    tbdTogether: "À définir ensemble",
+    campusVarese: "Campus, Varèse",
+    foresteriaCampus: "Rèsidence & Campus",
     // Program Tables
     standardProgram: "Programme Standard",
     premiumProgram: "Programme Premium",
@@ -1041,9 +1117,12 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
     "pro-level program",
     "Strategic Location & Italian Culture",
     "pricing",
+    "the training staff",
     "the training program",
+    "il nostro ospite speciale",
     "Our special guest and CEO",
     "Unique events & meetings",
+    "when and where",
     "Un Approccio Completo a Due Vie",
     "Pubblico di riferimento",
     "pubblico di riferimento",
@@ -1051,6 +1130,8 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
     "quando e dove",
     "Opportunità Future",
     "le nostre offerte",
+    "EVENTI UNICI E INCONTRI",
+    "LO STAFF TECNICO",
     "Esempio di Routine Giornaliera",
     "Integrazione Professionale d'Elite",
     "programma di livello pro",
@@ -1096,6 +1177,10 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
     "our vision",
     "the program",
     "contact us",
+    "How to subscribe",
+    "Come iscriversi",
+    "Cómo suscribirse",
+    "Comment s'inscrire",
     "la nostra visione",
     "il programma",
     "contattaci",
@@ -1110,10 +1195,12 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
   const isTitleMatch = (title: string | null, englishTitle: string) => {
     if (!title) return false;
     const translations: Record<string, string[]> = {
-      'Sample Daily Routine': ['Sample Daily Routine', 'Esempio di Routine Quotidiana', 'Ejemplo de Rutina Diaria', 'Exemple de Routine Quotidienne'],
+      'Sample Daily Routine': ['Sample Daily Routine', 'Esempio di Routine Quotidiana', 'Esempio di Routine Giornaliera', 'Ejemplo de Rutina Diaria', 'Exemple de Routine Quotidienne'],
       'the training program': ['the training program', 'the program', 'il programma di allenamento', 'il programma', 'el programma di allenamento', 'el programa de entrenamiento', 'le programme d\'entraînement', 'le programme'],
+      'the training staff': ['the training staff', 'lo staff tecnico', 'LO STAFF TECNICO', 'el personal de entrenamiento', 'le personnel d\'entraînement'],
+      'il nostro ospite speciale': ['il nostro ospite speciale', 'Our special guest and CEO'],
       'Our special guest and CEO': ['Our special guest and CEO', 'Il nostro ospite speciale e CEO', 'Nuestro invitado speciale e CEO', 'Nuestro invitado especial y CEO', 'Notre invité spécial et PDG'],
-      'Unique events & meetings': ['Unique events & meetings', 'Eventi unici e incontri', 'Eventos únicos y reuniones', 'Événements uniques et réunions'],
+      'Unique events & meetings': ['Unique events & meetings', 'Eventi unici e incontri', 'EVENTI UNICI E INCONTRI', 'Eventos únicos y reuniones', 'Événements uniques et réunions'],
       'A Comprehensive Two-Way Approach': ['A Comprehensive Two-Way Approach', 'Un Approccio Completo a Due Vie', 'Un Enfoque Completo de Dos Vías', 'Une Approche Complète à Deux Voies'],
       'Elite Professional Integration': ['Elite Professional Integration', 'Integrazione Professionale d\'Elite', 'Integración Professionale di Élite', 'Integración Profesional de Élite', 'Intégration Professionnelle d\'Élite'],
       'pro-level program': ['pro-level program', 'programma di livello pro', 'programa de nivel pro', 'programme de niveau pro'],
@@ -1121,7 +1208,26 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
       'when and where': ['when and where', 'Quando e dove', 'Cuándo y dónde', 'Quand et où', 'quando e dove', 'cuándo y dónde', 'quand et où'],
       'pricing': ['pricing', 'prezzi', 'precios', 'prix'],
       'the pillars': ['the pillars', 'i pilastri', 'los pilares', 'les piliers'],
-      'the elite player package': ['the elite player package', 'il pacchetto giocatore d\'élite', 'el paquete de jugador de élite', 'le forfait joueur d\'élite']
+      'the elite player package': ['the elite player package', 'il pacchetto giocatore d\'élite', 'el paquete de jugador de élite', 'le forfait joueur d\'élite'],
+      'Key Highlights': ['Key Highlights', 'Punti Salienti', 'Puntos Clave', 'Points Forts'],
+      'Overview': ['Overview', 'Panoramica', 'Resumen', 'Aperçu'],
+      'Target Audience & Future Opportunities': ['Target Audience & Future Opportunities', 'Pubblico di riferimento e Opportunità Future', 'Público objetivo y Oportunidades Futuras', 'Public cible et Opportunités Futures'],
+      'Future Opportunities': ['Future Opportunities', 'Opportunità Future', 'Oportunidades Futuras', 'Opportunités Futures'],
+      'The Elite Full-Time Training Program': ['The Elite Full-Time Training Program', 'Il Programma di Allenamento Full-Time d\'Elite', 'El Programa de Entrenamiento a Tiempo Completo de Élite', 'Le Programme d\'Entraînement à Temps Plein d\'Élite'],
+      'our offers': ['our offers', 'le nostre offerte', 'nuestras ofertas', 'nos offres'],
+      'A Holistic 360° Offer': ['A Holistic 360° Offer', 'Un\'Offerta Olistica a 360°', 'Una Oferta Holística de 360°', 'Une Offre Holistique à 360°'],
+      'World-Class Training & Sports Science': ['World-Class Training & Sports Science', 'Allenamento di Classe Mondiale e Scienza dello Sport', 'Entrenamiento de Classe Mundial y Ciencia del Deporte', 'Entraînement de Classe Mondiale et Science du Sport'],
+      'Data-Driven Personalization': ['Data-Driven Personalization', 'Personalizzazione Basata sui Dati', 'Personalización Basada en Datos', 'Personnalisation Basée sur les Données'],
+      'Premium Living & Academic Success': ['Premium Living & Academic Success', 'Vita Premium e Successo Accademico', 'Vida Premium e Successo Académico', 'Vie Premium et Succès Académique'],
+      'Elevate Your Game: The Elite Summer Camp': ['Elevate Your Game: The Elite Summer Camp', 'Eleva il tuo Gioco: L\'Elite Summer Camp', 'Eleva tu Juego: El Campamento de Verano de Élite', 'Élevez votre Jeu : L\'Elite Summer Camp'],
+      'The Summer Camp Offer: All-Inclusive Excellence': ['The Summer Camp Offer: All-Inclusive Excellence', 'L\'Offerta del Summer Camp: Eccellenza All-Inclusive', 'La Oferta del Campamento de Verano: Excelencia Todo Incluido', 'L\'Offre du Camp d\'Été : Excellence Tout Compris'],
+      'The Full Time Training Program: A Year-Round Path to Pro': ['The Full Time Training Program: A Year-Round Path to Pro', 'Il Programma di Allenamento Full Time: Un Percorso verso il Professionismo Tutto l\'Anno', 'El Programa de Entrenamiento a Tiempo Completo: Un Camino al Profesionalismo Todo el Año', 'Le Programme d\'Entraînement à Temps Plein : Un Parcours vers le Pro Toute l\'Année'],
+      'World-Class Sports Science & Personalization': ['World-Class Sports Science & Personalization', 'Scienza dello Sport di Classe Mondiale e Personalizzazione', 'Ciencia del Deporte de Clase Mundial y Personalización', 'Science du Sport de Classe Mondiale et Personnalisation'],
+      'Academic Excellence & Living Standards': ['Academic Excellence & Living Standards', 'Eccellenza Accademica e Standard di Vita', 'Excelencia Académica y Estándares de Vida', 'Excellence Académique et Standards de Vie'],
+      'target audience': ['target audience', 'pubblico di riferimento', 'público objetivo', 'public cible'],
+      'our vision': ['our vision', 'la nostra visione', 'nuestra visión', 'notre vision'],
+      'How to subscribe': ['How to subscribe', 'Come iscriversi', 'Cómo suscribirse', 'Comment s\'inscrire'],
+      'the program': ['the program', 'il programma', 'el programa', 'le programme']
     };
     return translations[englishTitle]?.some(t => title.toLowerCase() === t.toLowerCase()) || title.toLowerCase() === englishTitle.toLowerCase();
   };
@@ -1265,6 +1371,54 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
           <div className="mt-8 text-center bg-zinc-50 p-3 rounded-lg border border-zinc-100 w-full">
              <p className="text-zinc-500 text-[10px] uppercase tracking-widest font-bold">{t('twoPillarsOneVision')}</p>
           </div>
+        </div>
+      );
+    }
+
+    if (isTitleMatch(section.title || '', 'the training staff') || 
+        isTitleMatch(section.title || '', 'Our special guest and CEO') || 
+        isTitleMatch(section.title || '', 'Unique events & meetings') ||
+        isTitleMatch(section.title || '', 'How to subscribe') ||
+        isTitleMatch(section.title || '', 'il nostro ospite speciale')) {
+      
+      const allTextLines: string[] = [];
+      const allImageLines: string[] = [];
+      
+      section.paragraphs.forEach(paragraphLines => {
+        paragraphLines.forEach(line => {
+          const trimmedLine = line.trim();
+          if (trimmedLine.startsWith('[img]') && trimmedLine.endsWith('[/img]')) {
+            allImageLines.push(trimmedLine);
+          } else if (trimmedLine.length > 0) {
+            allTextLines.push(trimmedLine);
+          }
+        });
+      });
+
+      if (allImageLines.length > 0) {
+        const isSpecialGuest = isTitleMatch(section.title || '', 'il nostro ospite speciale') || isTitleMatch(section.title || '', 'Our special guest and CEO');
+        return (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div className={`space-y-4 ${isSpecialGuest ? 'md:order-2' : ''}`}>
+              {allTextLines.map((line, lIdx) => (
+                <p key={lIdx} className="text-zinc-600 leading-relaxed">{line}</p>
+              ))}
+            </div>
+            <div className={`space-y-4 ${isSpecialGuest ? 'md:order-1' : ''}`}>
+              {allImageLines.map((line, lIdx) => {
+                const src = line.slice(5, -6);
+                return <img key={lIdx} src={src} alt="Section Image" className={`${isSpecialGuest ? 'w-2/3' : 'w-full'} rounded-2xl shadow-lg`} referrerPolicy="no-referrer" />;
+              })}
+            </div>
+          </div>
+        );
+      }
+
+      return (
+        <div className="space-y-4">
+          {allTextLines.map((line, lIdx) => (
+            <p key={lIdx} className="text-zinc-600 leading-relaxed">{line}</p>
+          ))}
         </div>
       );
     }
@@ -1707,65 +1861,56 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
               </div>
               
               {programId === 'summer-camp' && isTitleMatch(section.title, 'Sample Daily Routine') && (
-                <div className="mt-12 flex flex-col md:flex-row gap-8 w-full">
-                  <div className="flex-1 bg-white p-4 rounded-xl shadow-md border border-zinc-200">
-                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-2 text-lg text-center">{t('residentialCamp')}</h5>
-                    <p className="text-center text-zinc-600 font-semibold mb-3 border-b border-zinc-200 pb-2 text-lg">€990</p>
-                    <div className="overflow-x-auto">
-                      <table className="w-full text-xs text-left">
-                        <thead className="text-[10px] text-zinc-500 uppercase bg-zinc-50">
-                          <tr>
-                            <th className="px-3 py-2 rounded-t-lg">{t('included')}</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('privateSingleRoom')}</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('sharedCommonSpaces')}</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('meals3')}</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('sportsNutrition')}</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('individualizedTraining')}</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('teamPractice')}</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('strengthTraining')}</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('personalAnalytics')}</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('eliteCoaching')}</td></tr>
-                          <tr><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('officialGear')}</td></tr>
-                        </tbody>
-                      </table>
+                <div className="mt-12">
+                  <h4 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-8 text-2xl md:text-3xl text-center border-b border-zinc-200 pb-4">{t('twoDifferentOptions')}</h4>
+                  <div className="flex flex-col md:flex-row gap-8 w-full">
+                    <div className="flex-1 bg-white p-6 rounded-xl shadow-sm border border-zinc-200 flex flex-col h-full">
+                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-2 text-xl text-center">{t('residentialCamp')}</h5>
+                    <p className="text-center text-zinc-600 font-semibold mb-4 border-b border-zinc-200 pb-3 text-lg">€990</p>
+                    <div className="flex-grow">
+                      <h6 className="font-bold text-zinc-800 mb-2">{t('included')}</h6>
+                      <ul className="list-disc pl-5 space-y-1 text-sm text-zinc-600">
+                        <li>{t('privateSingleRoom')}</li>
+                        <li>{t('sharedCommonSpaces')}</li>
+                        <li>{t('meals3')}</li>
+                        <li>{t('sportsNutrition')}</li>
+                        <li>{t('individualizedTraining')}</li>
+                        <li>{t('teamPractice')}</li>
+                        <li>{t('strengthTraining')}</li>
+                        <li>{t('personalAnalytics')}</li>
+                        <li>{t('eliteCoaching')}</li>
+                        <li>{t('officialGear')}</li>
+                      </ul>
                     </div>
-                    <div className="mt-4 flex justify-center">
+                    <div className="mt-6 pt-4 border-t border-zinc-100 flex justify-center">
                       <a href="https://store.pallacanestrovarese.it/products/elite-summer-camp" target="_blank" rel="noopener noreferrer" className="bg-red-varese hover:bg-red-700 text-white font-oswald uppercase tracking-wider py-2.5 px-6 text-sm rounded-full transition-colors font-bold shadow-md">
                         {t('applyNowBtn')}
                       </a>
                     </div>
                   </div>
-                  <div className="flex-1 bg-white p-4 rounded-xl shadow-md border border-zinc-200">
-                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-2 text-lg text-center">{t('dayCamp')}</h5>
-                    <p className="text-center text-zinc-600 font-semibold mb-3 border-b border-zinc-200 pb-2 text-lg">€690</p>
-                    <div className="overflow-x-auto">
-                      <table className="w-full text-xs text-left">
-                        <thead className="text-[10px] text-zinc-500 uppercase bg-zinc-50">
-                          <tr>
-                            <th className="px-3 py-2 rounded-t-lg">{t('included')}</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('lunch')}</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('sportsNutrition')}</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('individualizedTraining')}</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('teamPractice')}</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('strengthTraining')}</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('personalAnalytics')}</td></tr>
-                          <tr className="border-b border-zinc-100"><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('eliteCoaching')}</td></tr>
-                          <tr><td className="px-3 py-2 font-medium flex items-center gap-2"><CheckCircle2 size={14} className="text-red-varese flex-shrink-0" /> {t('officialGear')}</td></tr>
-                        </tbody>
-                      </table>
+                  <div className="flex-1 bg-white p-6 rounded-xl shadow-sm border border-zinc-200 flex flex-col h-full">
+                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-2 text-xl text-center">{t('dayCamp')}</h5>
+                    <p className="text-center text-zinc-600 font-semibold mb-4 border-b border-zinc-200 pb-3 text-lg">€690</p>
+                    <div className="flex-grow">
+                      <h6 className="font-bold text-zinc-800 mb-2">{t('included')}</h6>
+                      <ul className="list-disc pl-5 space-y-1 text-sm text-zinc-600">
+                        <li>{t('lunch')}</li>
+                        <li>{t('sportsNutrition')}</li>
+                        <li>{t('individualizedTraining')}</li>
+                        <li>{t('teamPractice')}</li>
+                        <li>{t('strengthTraining')}</li>
+                        <li>{t('personalAnalytics')}</li>
+                        <li>{t('eliteCoaching')}</li>
+                        <li>{t('officialGear')}</li>
+                      </ul>
                     </div>
-                    <div className="mt-4 flex justify-center">
+                    <div className="mt-6 pt-4 border-t border-zinc-100 flex justify-center">
                       <a href="https://store.pallacanestrovarese.it/products/elite-summer-camp" target="_blank" rel="noopener noreferrer" className="bg-red-varese hover:bg-red-700 text-white font-oswald uppercase tracking-wider py-2.5 px-6 text-sm rounded-full transition-colors font-bold shadow-md">
                         {t('applyNowBtn')}
                       </a>
                     </div>
                   </div>
+                </div>
                 </div>
               )}
               {programId === 'summer-camp' && isTitleMatch(section.title, 'Sample Daily Routine') && (
@@ -2413,11 +2558,11 @@ const App: React.FC = () => {
                     <div className="border-t border-white/10 pt-4 relative z-10">
                       <div className="grid grid-cols-2 md:grid-cols-2 gap-x-4 md:gap-x-8 gap-y-2 md:gap-y-4 mb-4 md:mb-6">
                         <div>
-                          <p className="text-red-varese text-[10px] md:text-xs font-bold uppercase tracking-widest mb-0.5 md:mb-1">Target</p>
+                          <p className="text-red-varese text-[10px] md:text-xs font-bold uppercase tracking-widest mb-0.5 md:mb-1">{t('target')}</p>
                           <p className="text-gray-300 text-[10px] md:text-base leading-tight">{translatedProg.target}</p>
                         </div>
                         <div>
-                          <p className="text-red-varese text-[10px] md:text-xs font-bold uppercase tracking-widest mb-0.5 md:mb-1">Timing</p>
+                          <p className="text-red-varese text-[10px] md:text-xs font-bold uppercase tracking-widest mb-0.5 md:mb-1">{t('timing')}</p>
                           <p className="text-gray-300 text-[10px] md:text-base leading-tight">{translatedProg.timing}</p>
                         </div>
                       </div>
@@ -2425,7 +2570,7 @@ const App: React.FC = () => {
                       <img src={translatedProg.detailImage || translatedProg.image} alt={translatedProg.title} className="w-full aspect-video object-cover rounded-lg my-6" />
                     )}
                       <div className="mb-6"><FormattedText text={translatedProg.details} programId={translatedProg.id} lang={lang} /></div>
-                      <h4 className="text-white font-oswald text-lg md:text-xl font-bold uppercase tracking-widest mb-4 border-b border-red-varese/30 pb-2 inline-block">Key Highlights</h4>
+                      <h4 className="text-white font-oswald text-lg md:text-xl font-bold uppercase tracking-widest mb-4 border-b border-red-varese/30 pb-2 inline-block">{t('keyHighlights')}</h4>
                       <div className="grid grid-cols-2 sm:grid-cols-2 gap-x-3 md:gap-x-6 gap-y-1.5 md:gap-y-2">
                         {translatedProg.highlights.map((h, i) => (
                           <div key={i} className="flex items-center gap-2 md:gap-3">
@@ -2492,40 +2637,40 @@ const App: React.FC = () => {
             {program.id === 'summer-camp' && (
               <div className="flex justify-center mb-6 md:mb-8 animate-in slide-in-from-bottom-4 duration-700 delay-200">
                 <div className="bg-red-varese text-white font-bold uppercase tracking-widest text-sm md:text-lg px-8 py-3 rounded-full shadow-xl shadow-red-600/30 border-2 border-white">
-                  Limited spots available
+                  {t('limitedSpots')}
                 </div>
               </div>
             )}
             <div className={`grid ${program.id === 'academy' || program.id === 'player-package' ? 'grid-cols-4' : 'grid-cols-5'} justify-center gap-2 md:gap-8 animate-in slide-in-from-bottom-4 duration-700 delay-300`}>
               <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-1 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
-                <span className="text-red-varese text-[7px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">Target Audience</span>
+                <span className="text-red-varese text-[7px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">{t('target')}</span>
                 <span className="text-black text-[8px] md:text-base font-medium leading-tight block">{program.target}</span>
               </div>
               <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-1 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
-                <span className="text-red-varese text-[7px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">When</span>
+                <span className="text-red-varese text-[7px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">{t('timing')}</span>
                 <span className="text-black text-[8px] md:text-base font-medium leading-tight block">{program.timing}</span>
               </div>
               <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-1 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
-                <span className="text-red-varese text-[7px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">Where</span>
+                <span className="text-red-varese text-[7px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">{t('where')}</span>
                 <span className="text-black text-[8px] md:text-base font-medium leading-tight block">
-                  {program.id === 'academy' ? 'TBD together' : program.id === 'player-package' ? 'Campus, Varese' : 'Foresteria & Campus'}
+                  {program.id === 'academy' ? t('tbdTogether') : program.id === 'player-package' ? t('campusVarese') : t('foresteriaCampus')}
                 </span>
               </div>
               {program.id !== 'player-package' && (
                 <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-1 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
-                  <span className="text-red-varese text-[7px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">Subscription Deadline</span>
+                  <span className="text-red-varese text-[7px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">{t('subscriptionDeadline')}</span>
                   <span className="text-black text-[8px] md:text-base font-medium leading-tight block">{program.deadline || '-'}</span>
                 </div>
               )}
               {program.id !== 'academy' && (
                 <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-1 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
-                  <span className="text-red-varese text-[7px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">Pricing</span>
+                  <span className="text-red-varese text-[7px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">{t('pricing')}</span>
                   <span className="text-black text-[8px] md:text-base font-medium leading-tight block">
                     {program.id === 'summer-camp' ? '€990 or €690' : 
                      program.id === 'player-package' ? '€1.000/10 sessions' :
                      program.id === 'full-time' ? '€15.000/year or €30.000/year' :
                      program.id === 'internship' ? '€1.500/month' :
-                     program.id === 'summer-prog' ? 'TBD together' :
+                     program.id === 'summer-prog' ? t('tbdTogether') :
                      t('contactUs')}
                   </span>
                 </div>
@@ -2558,7 +2703,7 @@ const App: React.FC = () => {
                   </div>
 
                   <h2 className="font-oswald text-3xl md:text-5xl font-black uppercase mb-8 text-red-varese flex flex-col items-center gap-4 relative z-10 tracking-tighter">
-                    Overview
+                    {t('overview')}
                     <div className="w-20 h-1.5 bg-red-varese rounded-full"></div>
                   </h2>
                   <div className="text-black text-base md:text-lg leading-relaxed space-y-6 font-light max-w-2xl relative z-10">
@@ -2572,7 +2717,7 @@ const App: React.FC = () => {
               {/* Sidebar / Actions */}
               <div className="h-full">
                 <div className="bg-zinc-50 border border-zinc-200 p-8 rounded-2xl shadow-xl shadow-zinc-200/30 h-full flex flex-col">
-                  <h3 className="font-oswald text-2xl md:text-3xl font-black uppercase mb-8 text-red-varese tracking-tighter border-l-4 border-red-varese pl-4">Key Highlights</h3>
+                  <h3 className="font-oswald text-2xl md:text-3xl font-black uppercase mb-8 text-red-varese tracking-tighter border-l-4 border-red-varese pl-4">{t('keyHighlights')}</h3>
                   <div className="space-y-5 mb-10">
                     {program.highlights.map((h, i) => (
                       <div key={i} className="flex items-start gap-4 group">
@@ -3218,7 +3363,7 @@ const App: React.FC = () => {
                         </div>
                     </div>
                 </div>
-                <div className="pt-10 border-t border-white/5 text-center text-gray-600 text-[10px] uppercase tracking-[0.1em]"><p>&copy; {new Date().getFullYear()} Pallacanestro Varese. Developed for Elite Basketball Program.</p></div>
+                <div className="pt-10 border-t border-white/5 text-center text-gray-600 text-[10px] uppercase tracking-[0.1em]"><p>&copy; {new Date().getFullYear()} Pallacanestro Varese. {t('footerDevelopedBy')}</p></div>
                 </div>
             </footer>
         </>

@@ -189,7 +189,7 @@ Contactez-nous ou cliquez ici pour obtenir des informations détaillées sur les
       timing: "Una settimana (6 giorni, 5 notti)",
       description: "Ti invitiamo a unirti alla Pallacanestro Varese per un'esperienza trasformativa e all-inclusive di una settimana specificamente progettata per aspiranti giocatori di basket che hanno la spinta per superare i propri limiti fisici e mentali. Questo non è semplicemente un campo di allenamento; è un'immersione profonda in una cultura professionale, offrendo ai partecipanti un assaggio raro e autentico dell'incessante dedizione e disciplina necessarie per raggiungere il successo ai massimi livelli del basket d'élite.",
       highlights: ["Tecniche di Serie A", "Competizione d'Elite", "Analisi delle Prestazioni"],
-      details: `Pubblico di riferimento
+        details: `Pubblico di riferimento
 Questa esperienza estiva di prim'ordine è stata progettata e curata esclusivamente per un gruppo selezionato di giovani atleti ambiziosi, in particolare quelli nati tra il 2007 e il 2011, che dimostrano un impegno incrollabile nel raggiungere prestazioni di livello d'élite. Comprendiamo che la bassa stagione è una finestra critica per la crescita e questo programma funge da piattaforma definitiva per i giocatori che fanno sul serio riguardo alla loro traiettoria atletica e allo sviluppo a lungo termine.
 Per facilitare questa crescita, il programma offre un ambiente di allenamento sofisticato e ad alta intensità, meticolosamente adattato per soddisfare le esigenze dei giocatori ad alto potenziale. Il nostro obiettivo principale è fornire a questi atleti gli strumenti tecnici avanzati e le intuizioni tattiche necessarie per affinare le loro abilità individuali. Immergendo i partecipanti in un'atmosfera di livello professionale, diamo loro la possibilità di elevare il loro gioco a uno standard che soddisfi le rigorose esigenze del moderno circuito professionale.
 
@@ -198,6 +198,22 @@ Le nostre strutture premium, tra cui la Foresteria Elite Housing e il Campus di 
 
 il programma di allenamento
 Placeholder
+
+il nostro ospite speciale
+L'Elite Summer Camp organizato da Pallacanestro Varese è un programma intensivo ad alte prestazioni, progettato per spingere gli aspiranti atleti oltre i propri limiti. Mentre il nostro staff tecnico di altissimo livello guiderà il lavoro quotidiano sul campo, siamo orgogliosi di impreziosire questa esperienza con la straordinaria partecipazione di Luis Scola.
+
+In un'occasione speciale durante il camp, "El General" si unirà ai nostri atleti per condividere suggerimenti e consigli per raggiungere il più alto livello nel mondo del basket e dello sport. Questo incontro esclusivo offre la rara opportunità di apprendere direttamente da un veterano NBA e Medaglia d'Oro Olimpica, con un focus sulla resilienza mentale e sulla precisione tecnica necessaria per competere ai massimi livelli mondiali.
+
+Si tratta di un momento unico di mentorship, pensato per ispirare le nuove generazioni offrendo uno sguardo ravvicinato sulla vita di un’icona del basket globale. Un’esperienza che renderà il tuo soggiorno alla Pallacanestro Varese davvero straordinario.
+[img]https://i.imgur.com/zXkjUIy.png[/img]
+
+EVENTI UNICI E INCONTRI
+All'Elite Summer Camp della Pallacanestro Varese, crediamo che lo sviluppo di un atleta di alto livello richieda un approccio a 360 gradi. Per colmare il divario tra il basket giovanile e il mondo professionale, il nostro programma prevede una serie esclusiva di seminari e incontri strategici incentrati sui pilastri del gioco moderno.
+
+I partecipanti si tufferanno nel mondo della Data Analytics, imparando come le squadre d'élite sfruttano le metriche delle prestazioni per ottimizzare ogni giocata e affinare le abilità individuali. Queste sessioni sono integrate da discussioni approfondite sulla gestione della carriera professionale, in cui i partecipanti interagiranno direttamente con i giocatori di Serie A e i membri dello staff della nostra Prima Squadra. Questi esperti del settore condivideranno esperienze dirette sulla gestione delle complessità di una carriera professionale, dalla longevità fisica alla disciplina mentale richiesta ai massimi livelli europei. Questa è un'opportunità unica per acquisire l'intelligenza "fuori dal campo" necessaria per prosperare nel panorama cestistico altamente competitivo di oggi.
+
+LO STAFF TECNICO
+Vivi il gioco ai massimi livelli. L'Elite Summer Camp della Pallacanestro Varese è guidato direttamente dal nostro staff tecnico della Prima Squadra di Serie A, portando competenze di livello professionale in ogni sessione. Questa è una rara opportunità di allenarsi sotto le stesse menti tattiche e gli specialisti delle alte prestazioni che guidano il nostro roster di massima divisione. I partecipanti padroneggeranno le metodologie esatte, l'intensità e gli esercizi utilizzati nel basket professionistico europeo, garantendo un'autentica esperienza d'élite progettata per elevare il tuo DNA tecnico.
 
 Esempio di Routine Giornaliera
 TABLES_PLACEHOLDER`
@@ -218,6 +234,19 @@ Nuestras instalaciones premium, que incluyen la Foresteria Elite Housing y el Ca
 el programa de entrenamiento
 Placeholder
 
+Nuestro invitado especial y CEO
+El Campamento de Verano de Élite de Pallacanestro Varese es un programa intensivo de alto rendimiento diseñado para llevar a los aspirantes a atletas a sus límites absolutos. Mientras nuestro cuerpo técnico de primer nivel dirige el trabajo técnico diario, nos enorgullece elevar esta experiencia con la distinguida aparición de Luis Scola.
+
+En una ocasión especial y selecta durante el campamento, "El General" se unirá a nuestros atletas para compartir la mentalidad de élite y la maestría profesional que definieron su legendaria carrera. Esta sesión exclusiva ofrece una oportunidad única de obtener información de primera mano de un veterano de la NBA y medallista de oro olímpico, centrándose en la resiliencia mental y la precisión técnica requeridas para competir al más alto nivel mundial. Es un momento único de tutoría destinado a inspirar a la próxima generación, brindando una visión de la vida de un ícono del baloncesto mundial y haciendo que su tiempo en Pallacanestro Varese sea verdaderamente extraordinario.
+
+Eventos únicos y reuniones
+En el Campamento de Verano de Élite de Pallacanestro Varese, creemos que el desarrollo de un atleta de primer nivel requiere un enfoque de 360 grados. Para cerrar la brecha entre el baloncesto juvenil y el mundo profesional, nuestro programa presenta una serie exclusiva de seminarios y reuniones estratégicas centradas en los pilares del juego moderno.
+
+Los participantes se sumergirán en el mundo de la analítica de datos, aprendiendo cómo los equipos de élite aprovechan las métricas de rendimiento para optimizar cada jugada y refinar las habilidades individuales. Estas sesiones se complementan con discusiones perspicaces sobre la gestión de la carrera profesional, donde los campistas interactuarán directamente con jugadores de la Serie A y miembros del personal de nuestro primer equipo. Estos expertos de la industria compartirán experiencias de primera mano sobre cómo navegar las complejidades de una carrera profesional, desde la longevidad física hasta la disciplina mental requerida en los niveles europeos más altos. Esta es una oportunidad única para obtener la inteligencia "fuera de la cancha" necesaria para prosperar en el panorama del baloncesto altamente competitivo de hoy.
+
+el personal de entrenamiento
+Vive el juego a su más alto nivel. El Campamento de Verano de Élite de Pallacanestro Varese está dirigido directamente por nuestro cuerpo técnico del primer equipo de la Serie A, aportando experiencia de nivel profesional a cada sesión. Esta es una oportunidad única para entrenar bajo las mismas mentes tácticas y especialistas en alto rendimiento que dirigen nuestra plantilla de la máxima división. Los participantes dominarán las metodologías exactas, la intensidad y los ejercicios utilizados en el baloncesto profesional europeo, asegurando una auténtica experiencia de élite diseñada para elevar su ADN técnico.
+
 Ejemplo de Rutina Diaria
 TABLES_PLACEHOLDER`
     },
@@ -236,6 +265,19 @@ Nos installations haut de gamme, notamment la Foresteria Elite Housing et le Cam
 
 le programme d'entraînement
 Placeholder
+
+Notre invité spécial et PDG
+L'Elite Summer Camp de Pallacanestro Varese est un programme intensif de haute performance conçu pour pousser les athlètes en herbe vers leurs limites absolues. Tandis que notre personnel d'entraîneurs de premier plan dirige le travail technique quotidien, nous sommes fiers d'élever cette expérience avec la participation exceptionnelle de Luis Scola.
+
+À une occasion spéciale lors du camp, "El General" se joindra à nos athlètes pour partager l'état d'esprit d'élite et la maîtrise professionnelle qui ont défini sa carrière légendaire. Cette session exclusive offre une occasion rare d'obtenir des informations directes d'un vétéran de la NBA et médaillé d'or olympique, en se concentrant sur la résilience mentale et la précision technique requises pour concourir au plus haut niveau mondial. C'est un moment unique de mentorat destiné à inspirer la prochaine génération, offrant un aperçu de la vie d'une icône mondiale du basketball et rendant votre séjour à Pallacanestro Varese vraiment extraordinaire.
+
+Événements uniques et réunions
+À l'Elite Summer Camp de Pallacanestro Varese, nous pensons que le développement d'un athlète de haut niveau nécessite une approche à 360 degrés. Pour combler le fossé entre le basketball des jeunes et le monde professionnel, notre programme propose une série exclusive de séminaires et de réunions stratégiques axés sur les piliers du jeu moderne.
+
+Les participants plongeront dans le monde de l'analyse de données, apprenant comment les équipes d'élite exploitent les mesures de performance pour optimiser chaque action et affiner les compétences individuelles. Ces sessions sont complétées par des discussions approfondies sur la gestion de carrière professionnelle, où les campeurs interactueront directement avec des joueurs de Serie A et des membres du personnel de notre équipe première. Ces experts du secteur partageront leurs expériences directes sur la gestion des complexités d'une carrière professionnelle, de la longévité physique à la discipline mentale requise aux plus hauts niveaux européens. C'est une occasion unique d'acquérir l'intelligence « hors terrain » nécessaire pour prospérer dans le paysage hautement compétitif du basketball d'aujourd'hui.
+
+le personnel d'entraînement
+Vivez le jeu à son plus haut niveau. L'Elite Summer Camp de Pallacanestro Varese est dirigé directement par notre personnel d'entraîneurs de l'équipe première de Serie A, apportant une expertise de niveau professionnel à chaque session. C'est une occasion rare de s'entraîner sous les mêmes esprits tactiques et spécialistes de la haute performance qui dirigent notre effectif de première division. Les participants maîtriseront les méthodologies exactas, l'intensité et les exercices utilisés dans le basketball professionnel européen, garantissant une expérience d'élite authentique conçue pour élever votre ADN technique.
 
 Exemple de Routine Quotidienne
 TABLES_PLACEHOLDER`
