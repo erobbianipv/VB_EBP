@@ -173,7 +173,7 @@ const TRANSLATIONS = {
     officialGear: "Kit ufficiale del camp (abbigliamento e attrezzatura)",
     lunch: "Pranzo",
     applyNowBtn: "Iscriviti ora",
-    depositNotice: "Iscrivendoti ora è richiesto un deposito di €290 per tutti i tipi di camp.<br className=\"hidden md:block\" /> I dettagli sul saldo finale seguiranno a breve.",
+    depositNotice: "Iscrivendoti ora è richiesto un deposito di €290 per tutti i tipi di camp.<br className=\"hidden md:block\" /> I dettagli sul saldo finale seguiranno successivamente.",
     howToSubscribe: "Come iscriversi",
     depositDesc: "Per registrarsi al Pallacanestro Varese Elite Summer Camp, è richiesto un deposito anticipato di €290 sia per il Camp Residenziale che per il Day Camp.",
     followSteps: "Segui questi passaggi per completare la tua registrazione:",
@@ -184,7 +184,7 @@ const TRANSLATIONS = {
     provideInfo: "Fornisci le informazioni richieste e completa il pagamento del deposito.",
     nextSteps: "Prossimi Passaggi:",
     onceDeposit: "Una volta elaborato il deposito, il nostro team ti contatterà per finalizzare il pagamento del saldo rimanente e per richiedere ulteriore documentazione.",
-    waitingForYou: "IL PALLACANESTRO VARESE ELITE SUMMER CAMP TI ASPETTA!",
+    waitingForYou: "L'ELITE SUMMER CAMP DI PALLACANESTRO VARESE TI ASPETTA!",
     keyHighlights: "Punti Salienti",
     target: "Target",
     timing: "Periodo",
@@ -1964,6 +1964,7 @@ const App: React.FC = () => {
   const [isApplying, setIsApplying] = useState(false);
   const [submissionStatus, setSubmissionStatus] = useState<'idle' | 'submitted'>('idle');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showSummerCampLangModal, setShowSummerCampLangModal] = useState(false);
   
   const isFacilityView = ['arena', 'campus', 'housing'].includes(view);
   const isSubpage = ['programDetail', 'detailedPrograms', 'arena', 'campus', 'housing', 'palmares'].includes(view);
@@ -2310,6 +2311,9 @@ const App: React.FC = () => {
                     setSelectedProgram(translatedProg);
                     setPreviousView(view);
                     setView('programDetail');
+                    if (translatedProg.id === 'summer-camp') {
+                      setShowSummerCampLangModal(true);
+                    }
                   }}
                   className="flex-1 bg-white/10 text-white hover:bg-white hover:text-black py-2 md:py-3 rounded font-bold uppercase tracking-widest text-[8px] md:text-xs transition-all"
                 >
@@ -2653,7 +2657,7 @@ const App: React.FC = () => {
               <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-1 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
                 <span className="text-red-varese text-[7px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">{t('where')}</span>
                 <span className="text-black text-[8px] md:text-base font-medium leading-tight block">
-                  {program.id === 'academy' ? t('tbdTogether') : program.id === 'player-package' ? t('campusVarese') : t('foresteriaCampus')}
+                  {program.id === 'academy' ? t('tbdTogether') : program.id === 'player-package' ? t('campusVarese') : (program.id === 'summer-camp' && lang === 'it') ? 'Foresteria & Campus, Varese' : t('foresteriaCampus')}
                 </span>
               </div>
               {program.id !== 'player-package' && (
@@ -2932,7 +2936,34 @@ const App: React.FC = () => {
             </div>
           </section>
 
-          <section id="who-we-are" className="py-12 md:py-24 bg-black scroll-mt-24 overflow-hidden">
+          <section id="opportunities" className="py-24 bg-black scroll-mt-24">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-16">
+                <p className="text-red-varese font-bold uppercase tracking-[0.3em] text-xs mb-4">{t('elitePrograms')}</p>
+                <h2 className="font-oswald text-4xl md:text-6xl font-bold uppercase mb-4">{t('ourTopPrograms')}</h2>
+                <p className="text-gray-400 tracking-widest uppercase text-sm">{t('opportunitiesDesc')}</p>
+              </div>
+              <ProgramsGrid category="top" />
+              
+              <div className="text-center mt-24 mb-16">
+                <h2 className="font-oswald text-4xl md:text-6xl font-bold uppercase mb-4">{t('eliteOpportunities')}</h2>
+              </div>
+              <ProgramsGrid category="other" />
+              
+              <div className="mt-24 text-center">
+                <a 
+                  href="https://store.pallacanestrovarese.it/collections/elite-programs" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center bg-red-varese text-white px-16 py-8 rounded-sm font-bold uppercase tracking-[0.3em] text-2xl hover:bg-white hover:text-black transition-all shadow-[0_0_40px_rgba(229,50,56,0.4)] hover:scale-105"
+                >
+                  {t('buyNow')}
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <section id="who-we-are" className="py-12 md:py-24 bg-zinc-900 scroll-mt-24 overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <h2 className="font-oswald text-3xl md:text-7xl font-bold uppercase mb-8 md:mb-12 inline-block relative">
                 {t('whoWeAre')}
@@ -2998,7 +3029,7 @@ const App: React.FC = () => {
             </div>
           </section>
 
-          <section id="where-we-are" className="py-12 md:py-24 bg-zinc-900 relative scroll-mt-24">
+          <section id="where-we-are" className="py-12 md:py-24 bg-black relative scroll-mt-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="grid grid-cols-2 lg:grid-cols-2 gap-6 md:gap-12 items-center">
                  <div className="order-2 lg:order-1 flex flex-col gap-3 md:gap-6">
@@ -3042,7 +3073,7 @@ const App: React.FC = () => {
             </div>
           </section>
 
-          <section id="leadership" className="py-24 bg-black scroll-mt-24">
+          <section id="leadership" className="py-24 bg-zinc-900 scroll-mt-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
               <p className="text-red-varese font-bold uppercase tracking-[0.3em] text-xs mb-4">{t('ourTeam')}</p>
               <h2 className="font-oswald text-4xl md:text-6xl font-bold uppercase mb-4">{t('ourLeadership')}</h2>
@@ -3076,7 +3107,7 @@ const App: React.FC = () => {
             </div>
           </section>
 
-          <section id="facilities" className="py-24 bg-zinc-900 overflow-hidden scroll-mt-24">
+          <section id="facilities" className="py-24 bg-black overflow-hidden scroll-mt-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-16">
                 <p className="text-red-varese font-bold uppercase tracking-[0.3em] text-xs mb-4">{t('infrastructure')}</p>
@@ -3112,32 +3143,7 @@ const App: React.FC = () => {
             </div>
           </section>
 
-          <section id="opportunities" className="py-24 bg-black scroll-mt-24">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center mb-16">
-                <p className="text-red-varese font-bold uppercase tracking-[0.3em] text-xs mb-4">{t('elitePrograms')}</p>
-                <h2 className="font-oswald text-4xl md:text-6xl font-bold uppercase mb-4">{t('ourTopPrograms')}</h2>
-                <p className="text-gray-400 tracking-widest uppercase text-sm">{t('opportunitiesDesc')}</p>
-              </div>
-              <ProgramsGrid category="top" />
-              
-              <div className="text-center mt-24 mb-16">
-                <h2 className="font-oswald text-4xl md:text-6xl font-bold uppercase mb-4">{t('eliteOpportunities')}</h2>
-              </div>
-              <ProgramsGrid category="other" />
-              
-              <div className="mt-24 text-center">
-                <a 
-                  href="https://store.pallacanestrovarese.it/collections/elite-programs" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center bg-red-varese text-white px-16 py-8 rounded-sm font-bold uppercase tracking-[0.3em] text-2xl hover:bg-white hover:text-black transition-all shadow-[0_0_40px_rgba(229,50,56,0.4)] hover:scale-105"
-                >
-                  {t('buyNow')}
-                </a>
-              </div>
-            </div>
-          </section>
+
 
           <div className="w-full bg-red-varese h-36 md:h-40 flex items-center justify-center overflow-hidden relative shadow-[inset_0_0_40px_rgba(0,0,0,0.3)]">
             <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/20 pointer-events-none"></div>
@@ -3243,7 +3249,7 @@ const App: React.FC = () => {
 
       {view === 'programDetail' && selectedProgram && (
         <ProgramDetailPage 
-          program={selectedProgram}
+          program={translateProgram(PROGRAMS.find(p => p.id === selectedProgram.id)!, lang)}
           t={t}
           onBack={handleBack}
           onRequestInfo={(prog) => {
@@ -3367,6 +3373,22 @@ const App: React.FC = () => {
                 </div>
             </footer>
         </>
+      )}
+
+      {showSummerCampLangModal && (
+        <div className="fixed inset-0 z-[200] flex items-center justify-center p-4">
+          <div className="absolute inset-0 bg-black/90 backdrop-blur-sm"></div>
+          <div className="relative bg-zinc-900 border border-white/10 rounded-2xl p-8 max-w-md w-full text-center shadow-2xl animate-in fade-in zoom-in-95 duration-300">
+            <h2 className="text-2xl md:text-3xl font-oswald font-bold uppercase text-white mb-2">Choose your language</h2>
+            <h2 className="text-xl md:text-2xl font-oswald font-bold uppercase text-red-varese mb-8">Scegli la lingua</h2>
+            <div className="grid grid-cols-2 gap-4">
+              <button onClick={() => { setLang('en'); setShowSummerCampLangModal(false); }} className="bg-white/5 hover:bg-white hover:text-black text-white py-4 rounded-xl font-bold uppercase tracking-widest transition-all border border-white/10">English</button>
+              <button onClick={() => { setLang('it'); setShowSummerCampLangModal(false); }} className="bg-white/5 hover:bg-white hover:text-black text-white py-4 rounded-xl font-bold uppercase tracking-widest transition-all border border-white/10">Italiano</button>
+              <button onClick={() => { setLang('es'); setShowSummerCampLangModal(false); }} className="bg-white/5 hover:bg-white hover:text-black text-white py-4 rounded-xl font-bold uppercase tracking-widest transition-all border border-white/10">Español</button>
+              <button onClick={() => { setLang('fr'); setShowSummerCampLangModal(false); }} className="bg-white/5 hover:bg-white hover:text-black text-white py-4 rounded-xl font-bold uppercase tracking-widest transition-all border border-white/10">Français</button>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );
