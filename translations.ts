@@ -27,10 +27,10 @@ pubblico di riferimento
 ACADEMY_TABLES_PLACEHOLDER
 
 contattaci
-Per maggiori informazioni e per candidarsi al programma Basketball Academy contattaci all'indirizzo e.robbiani@pallacanestrovarese.it
+Per maggiori informazioni e per candidarsi al programma Basketball Academy contattaci all'indirizzo f.bellotto@pallacanestrovarese.it
 
 prezzi
-Contattaci o clicca qui per informazioni dettagliate sui prezzi in base alle tue esigenze specifiche.`
+Contattaci all'indirizzo f.bellotto@pallacanestrovarese.it o clicca qui per informazioni dettagliate sui prezzi in base alle tue esigenze specifiche.`
     },
     es: {
       title: "ACADEMIA DE BALONCESTO",
@@ -57,10 +57,10 @@ público objetivo
 ACADEMY_TABLES_PLACEHOLDER
 
 contáctanos
-Para obtener más información y postularse para el programa Basketball Academy, contáctenos en e.robbiani@pallacanestrovarese.it
+Para obtener más información y postularse para el programa Basketball Academy, contáctenos en f.bellotto@pallacanestrovarese.it
 
 precios
-Contáctanos o haz clic aquí para obtener información detallada sobre los precios adaptada a tus necesidades específicas.`
+Contáctanos en f.bellotto@pallacanestrovarese.it o haz clic aquí para obtener información detallada sobre los precios adaptada a tus necesidades específicas.`
     },
     fr: {
       title: "ACADÉMIE DE BASKETBALL",
@@ -87,10 +87,10 @@ public cible
 ACADEMY_TABLES_PLACEHOLDER
 
 contactez-nous
-Pour plus d'informations et pour postuler au programme Basketball Academy, veuillez nous contacter à e.robbiani@pallacanestrovarese.it
+Pour plus d'informations et pour postuler au programme Basketball Academy, veuillez nous contacter à f.bellotto@pallacanestrovarese.it
 
 prix
-Contactez-nous ou cliquez ici pour obtenir des informations détaillées sur les prix adaptées à vos besoins spécifiques.`
+Contactez-nous à f.bellotto@pallacanestrovarese.it ou cliquez ici pour obtenir des informations détaillées sur les prix adaptées à vos besoins spécifiques.`
     }
   },
   "full-time": {
@@ -121,7 +121,7 @@ Quando e dove
 Le nostre strutture premium, tra cui la Foresteria Elite Housing e il Campus di via Pirandello, sono strategicamente posizionate a 5 minuti a piedi l'una dall'altra. Questo layout integrato ottimizza le transizioni quotidiane per la durata del programma, che va da fine agosto a fine giugno, consentendo agli atleti di concentrarsi interamente sul loro rigoroso programma di allenamento.
 
 prezzi
-Contattaci o clicca qui per informazioni dettagliate sui prezzi in base alle tue esigenze specifiche.`
+Contattaci all'indirizzo f.bellotto@pallacanestrovarese.it per informazioni dettagliate sui prezzi in base alle tue esigenze specifiche.`
     },
     es: {
       title: "PROGRAMA DE ENTRENAMIENTO A TIEMPO COMPLETO",
@@ -150,7 +150,7 @@ Cuándo y dónde
 Nuestras instalaciones premium, que incluyen la Foresteria Elite Housing y el Campus de via Pirandello, están ubicadas estratégicamente a 5 minutos a pie una de la otra. Este diseño integrado optimiza las transiciones diarias durante la duración del programa, que se extiende desde finales de agosto hasta finales de junio, lo que permite a los atletas concentrarse por completo en su riguroso programa de entrenamiento.
 
 precios
-Contáctanos o haz clic aquí para obtener información detallada sobre los precios adaptada a tus necesidades específicas.`
+Contáctanos en f.bellotto@pallacanestrovarese.it para obtener información detallada sobre los precios adaptada a tus necesidades específicas.`
     },
     fr: {
       title: "PROGRAMME D'ENTRAÎNEMENT À TEMPS PLEIN",
@@ -179,7 +179,7 @@ Quand et où
 Nos installations haut de gamme, notamment la Foresteria Elite Housing et le Campus de via Pirandello, sont stratégiquement situées à 5 minutes à pied l'une de l'autre. Cet aménagement intégré optimise les transitions quotidiennes pendant la durée du programme, qui s'étend de fin août à fin juin, permettant aux athlètes de se concentrer entièrement sur leur programme d'entraînement rigoureux.
 
 prix
-Contactez-nous ou cliquez ici pour obtenir des informations détaillées sur les prix adaptées à vos besoins spécifiques.`
+Contactez-nous à f.bellotto@pallacanestrovarese.it pour obtenir des informations détaillées sur les prix adaptées à vos besoins spécifiques.`
     }
   },
   "summer-camp": {
@@ -306,11 +306,24 @@ Sviluppo Strategico: Partecipa alle riunioni degli allenatori per comprendere i 
 
 Sviluppo Giovanile: Contribuisci al futuro dello sport assistendo lo staff tecnico delle nostre squadre giovanili.
 
+cosa è incluso?
+WHAT_IS_INCLUDED_TABLE_PLACEHOLDER
+
+la nostra elite housing
+Progettato con un'attenzione particolare sia alla comodità moderna che alla vita tranquilla, il nostro dormitorio di nuova costruzione offre un'esperienza residenziale premium. Questa struttura è più di un semplice posto dove stare; è un ambiente curato con attenzione dove studenti e professionisti possono prosperare, rilassarsi e costruire una comunità.
+La residenza dispone di 14 camere ben arredate, offrendo una varietà di layout che includono sia suite singole private che camere doppie condivise. Ogni spazio abitativo è stato realizzato con un'estetica contemporanea e mobili ergonomici per garantire un'atmosfera produttiva e riposante.
+La vita qui si estende oltre la camera da letto. I residenti hanno accesso a una suite di servizi premium progettati per favorire la connessione e il comfort:
+HOUSING_FEATURES_PLACEHOLDER
+HOUSING_EFFICIENCY_PLACEHOLDER
+[img]https://i.imgur.com/vA5u7QX.png[/img]
+[img]https://i.imgur.com/VhfguSQ.png[/img]
+[img]https://i.imgur.com/mYkilog.png[/img]
+
 Quando e dove
 Il programma sarà ospitato presso le nostre strutture di prim'ordine, in particolare la Foresteria Elite Housing e il nostro Campus in via Pirandello. Queste due sedi di punta sono strategicamente situate a soli 5 minuti a piedi l'una dall'altra, garantendo transizioni senza interruzioni tra residenza e allenamento. Questa configurazione logistica integrata consente agli atleti di massimizzare il loro tempo e concentrarsi interamente sul loro sviluppo professionale.
 
 prezzi
-Contattaci o clicca qui per informazioni dettagliate sui prezzi in base alle tue esigenze specifiche.`
+Il programma ha un costo di €1.500 al mese. Contattaci all'indirizzo f.bellotto@pallacanestrovarese.it per informazioni dettagliate sui prezzi o per qualsiasi altra informazione generale in base alle tue esigenze specifiche.`
     },
     es: {
       title: "PROGRAMA DE PRÁCTICAS PARA ENTRENADORES",
@@ -334,11 +347,24 @@ Desarrollo Estratégico: Asiste a las reuniones de entrenadores para comprender 
 
 Desarrollo Juvenil: Contribuye al futuro del deporte ayudando al cuerpo técnico de nuestros equipos juveniles.
 
+¿qué está incluido?
+WHAT_IS_INCLUDED_TABLE_PLACEHOLDER
+
+nuestro alojamiento de élite
+Diseñado con un enfoque tanto en la comodidad moderna como en la vida tranquila, nuestro dormitorio de nueva construcción ofrece una experiencia residencial premium. Esta instalación es más que un simple lugar para quedarse; es un entorno cuidadosamente seleccionado donde estudiantes y profesionales pueden prosperar, relajarse y construir una comunidad.
+La residencia cuenta con 14 habitaciones bien equipadas, que ofrecen una variedad de diseños que incluyen tanto suites individuales privadas como habitaciones dobles compartidas. Cada espacio habitable ha sido diseñado con una estética contemporánea y muebles ergonómicos para garantizar un ambiente productivo y reparador.
+La vida aquí se extiende más allá del dormitorio. Los residentes tienen acceso a un conjunto de comodidades premium diseñadas para fomentar la conexión y la comodidad:
+HOUSING_FEATURES_PLACEHOLDER
+HOUSING_EFFICIENCY_PLACEHOLDER
+[img]https://i.imgur.com/vA5u7QX.png[/img]
+[img]https://i.imgur.com/VhfguSQ.png[/img]
+[img]https://i.imgur.com/mYkilog.png[/img]
+
 Cuándo y dónde
 El programa se llevará a cabo en nuestras instalaciones de primer nivel, específicamente la Foresteria Elite Housing y nuestro Campus en via Pirandello. Estas dos ubicaciones emblemáticas están estratégicamente situadas a solo 5 minutos a pie una de la otra, lo que garantiza transiciones fluidas entre la residencia y el entrenamiento. Esta configuración logística integrada permite a los atletas maximizar su tiempo y concentrarse por completo en su desarrollo profesional.
 
 precios
-Contáctanos o haz clic aquí para obtener información detallada sobre los precios adaptada a tus necesidades específicas.`
+El programa tiene un precio de 1.500 € al mes. Contáctanos en f.bellotto@pallacanestrovarese.it para obtener información detallada sobre los precios o cualquier otra información general adaptada a tus necesidades específicas.`
     },
     fr: {
       title: "PROGRAMME DE STAGE POUR ENTRAÎNEURS",
@@ -362,11 +388,24 @@ Développement Stratégique : Assistez aux réunions des entraîneurs pour compr
 
 Développement des Jeunes : Contribuez à l'avenir du sport en assistant le personnel d'entraîneurs de nos équipes de jeunes.
 
+ce qui est inclus ?
+WHAT_IS_INCLUDED_TABLE_PLACEHOLDER
+
+notre logement d'élite
+Conçu en mettant l'accent à la fois sur le confort moderne et sur une vie paisible, notre dortoir nouvellement construit offre une expérience résidentielle de premier ordre. Cette installation est plus qu'un simple endroit où séjourner ; c'est un environnement soigneusement organisé où les étudiants et les professionnels peuvent s'épanouir, se détendre et créer une communauté.
+La résidence dispose de 14 chambres bien aménagées, offrant une variété d'aménagements comprenant à la fois des suites simples privées et des chambres doubles partagées. Chaque espace de vie a été conçu avec une esthétique contemporaine et un mobilier ergonomique pour garantir une atmosphère productive et reposante.
+La vie ici s'étend au-delà de la chambre à coucher. Les résidents ont accès à une suite d'équipements haut de gamme conçus pour favoriser la connexion et la facilité :
+HOUSING_FEATURES_PLACEHOLDER
+HOUSING_EFFICIENCY_PLACEHOLDER
+[img]https://i.imgur.com/vA5u7QX.png[/img]
+[img]https://i.imgur.com/VhfguSQ.png[/img]
+[img]https://i.imgur.com/mYkilog.png[/img]
+
 Quand et où
 Le programme sera hébergé dans nos installations de premier ordre, à savoir la Foresteria Elite Housing et notre Campus de via Pirandello. Ces deux sites phares sont stratégiquement situés à seulement 5 minutes à pied l'un de l'autre, assurant des transitions fluides entre la résidence et l'entraînement. Cette configuration logistique intégrée permet aux athlètes de maximiser leur temps et de se concentrer entièrement sur leur développement professionnel.
 
 prix
-Contactez-nous ou cliquez ici pour obtenir des informations détaillées sur les prix adaptées à vos besoins spécifiques.`
+Le programme a un prix de 1 500 € par mois. Veuillez nous contacter pour des informations détaillées sur les prix ou toute autre information générale adaptée à vos besoins spécifiques à l'adresse f.bellotto@pallacanestrovarese.it.`
     }
   },
   "summer-prog": {
@@ -386,11 +425,18 @@ Le nostre strutture all'avanguardia e i programmi di allenamento specializzati s
 
 Oltre alle nostre iniziative incentrate sui giovani, ci rivolgiamo ampiamente anche a squadre Senior di Livello Medio che cercano il perfetto equilibrio strategico tra logistica di livello professionale e preparazione atletica di alta qualità. Che il tuo obiettivo sia lo sviluppo a lungo termine di giovani prospetti emergenti o la meticolosa rifinitura delle strategie di livello senior in vista di una nuova stagione, il nostro campo fornisce il supporto completo e su misura necessario per il successo. Siamo orgogliosi di offrire una piattaforma versatile in cui ogni squadra, indipendentemente dal proprio livello competitivo specifico, può trovare gli strumenti professionali e l'ambiente dedicato di cui ha bisogno per eccellere.
 
+cosa offriamo
+WHAT_WE_OFFER_TABLE_PLACEHOLDER
+
+servizi extra
+BOXES: opzioni turistiche: In soli 40 minuti di viaggio, la tua squadra può scoprire Milano, Como, il Lago Maggiore, Lugano, la Svizzera e qualsiasi altra città della zona. | allenamento all'arena | allenamenti extra
+[img]https://i.imgur.com/MafMwTk.png[/img]
+
 Quando e dove
 Sperimenta alloggi d'élite di 400 mq con giardini privati, situati a soli cinque minuti dall'arena. Il campo richiede un soggiorno minimo di 1 settimana (7 giorni, 6 notti), su misura per le esigenze specifiche e la disponibilità della tua squadra. Per garantire un relax totale, gestiamo tutta la logistica: due furgoni da 9 posti forniscono trasferimenti aeroportuali senza interruzioni sia per l'arrivo che per la partenza. Questa configurazione offre il perfetto equilibrio tra privacy e comunità per un'esperienza di allenamento professionale e senza stress.
 
 prezzi
-Contattaci o clicca qui per informazioni dettagliate sui prezzi in base alle tue esigenze specifiche.`
+Contattaci all'indirizzo f.bellotto@pallacanestrovarese.it per informazioni più dettagliate in base alle tue esigenze specifiche.`
     },
     es: {
       title: "PROGRAMA DE VERANO",
@@ -408,11 +454,18 @@ Nuestras instalaciones de última generación y programas de entrenamiento espec
 
 Además de nuestras iniciativas centradas en los jóvenes, también atendemos ampliamente a equipos Senior de Nivel Medio que buscan el equilibrio estratégico perfecto entre la logística de nivel profesional y la preparación atlética de alta calidad. Ya sea que tu objetivo sea el desarrollo a largo plazo de jóvenes prospectos emergentes o el refinamiento meticuloso de las estrategias de nivel senior antes de una nueva temporada, nuestro campamento brinda el apoyo integral y personalizado necesario para el éxito. Nos enorgullecemos de ofrecer una plataforma versátil donde cada equipo, independientemente de su nivel competitivo específico, puede encontrar las herramientas profesionales y el entorno dedicado que necesitan para sobresalir.
 
+lo que ofrecemos
+WHAT_WE_OFFER_TABLE_PLACEHOLDER
+
+servicios extra
+BOXES: opciones turísticas: En solo 40 minutos de viaje, tu equipo puede descubrir Milán, Como, el Lago Maggiore, Lugano, Suiza y cualquier otra ciudad de la zona. | entrenamiento en la arena | entrenamientos extra
+[img]https://i.imgur.com/MafMwTk.png[/img]
+
 Cuándo y dónde
 Experimenta alojamientos de élite de 400 metros cuadrados con jardines privados, ubicados a solo cinco minutos de la arena. El campamento requiere una estadía mínima de 1 semana (7 días, 6 noches), adaptada a las necesidades específicas y la disponibilidad de tu equipo. Para garantizar una relajación total, gestionamos toda la logística: dos furgonetas de 9 plazas proporcionan traslados al aeropuerto sin problemas tanto para la llegada como para la salida. Esta configuración ofrece el equilibrio perfecto entre privacidad y comunidad para una experiencia de entrenamiento profesional y sin estrés.
 
 precios
-Contáctanos o haz clic aquí para obtener información detallada sobre los precios adaptada a tus necesidades específicas.`
+Contáctanos en f.bellotto@pallacanestrovarese.it para obtener información más detallada adaptada a tus necesidades específicas.`
     },
     fr: {
       title: "PROGRAMME D'ÉTÉ",
@@ -430,11 +483,18 @@ Nos installations de pointe et nos programmes d'entraînement spécialisés ont 
 
 En plus de nos initiatives axées sur les jeunes, nous répondons également largement aux équipes Senior de Niveau Moyen qui recherchent l'équilibre stratégique parfait entre une logistique de niveau professionnel et une préparation athlétique de haute qualité. Que votre objectif soit le développement à long terme de jeunes espoirs émergents ou l'affinement méticuleux des stratégies de niveau senior avant une nouvelle saison, notre camp fournit le soutien complet et sur mesure nécessaire au succès. Nous sommes fiers d'offrir une plate-forme polyvalente où chaque équipe, quel que soit son niveau de compétition spécifique, peut trouver les outils professionnels et l'environnement dédié dont elle a besoin pour exceller.
 
+ce que nous offrons
+WHAT_WE_OFFER_TABLE_PLACEHOLDER
+
+services supplémentaires
+BOXES: options touristiques: En seulement 40 minutes de trajet, votre équipe peut découvrir Milan, Côme, le lac Majeur, Lugano, la Suisse et toute autre ville de la région. | entraînement à l'arène | entraînements supplémentaires
+[img]https://i.imgur.com/MafMwTk.png[/img]
+
 Quand et où
 Découvrez des hébergements d'élite de 400 m² avec jardins privés, situés à seulement cinq minutes de l'arène. Le camp nécessite un séjour minimum d'une semaine (7 jours, 6 nuits), adapté aux besoins spécifiques et à la disponibilité de votre équipe. Pour assurer une détente totale, nous gérons toute la logistique : deux fourgonnettes de 9 places assurent des transferts aéroport fluides à l'arrivée et au départ. Cette configuration offre l'équilibre parfait entre intimité et communauté pour une expérience d'entraînement professionnelle et sans stress.
 
 prix
-Contactez-nous ou cliquez ici pour obtenir des informations détaillées sur les prix adaptées à vos besoins spécifiques.`
+Contactez-nous à f.bellotto@pallacanestrovarese.it pour obtenir des informations plus détaillées adaptées à vos besoins spécifiques.`
     },
   },
   "player-package": {

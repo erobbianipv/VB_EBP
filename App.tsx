@@ -155,7 +155,7 @@ const TRANSLATIONS = {
     faq4Question: "Come posso raggiungere Varese?",
     faq4Answer: "Il Campus si trova in Via Pirandello a Varese, a 10 minuti a piedi dalla Foresteria e a soli 5 minuti dall'Itelyum Arena, casa della Pallacanestro Varese. Raggiungerci è estremamente comodo poiché tutte le nostre strutture sono perfettamente interconnesse e ben servite dai mezzi pubblici. Se arrivi in aereo, Milano Malpensa (MXP) è l'hub più vicino, situato a soli 30 minuti e collegato direttamente a Varese tramite la linea ferroviaria S50. Per chi viaggia in treno da Milano, frequenti servizi diretti partono dalle stazioni di Milano Centrale, Porta Garibaldi e Cadorna, con tempi di percorrenza medi di 50-60 minuti. Che tu arrivi dall'aeroporto o dal centro città, l'ultimo tratto verso il Campus è rapido e semplice.",
     faq5Question: "Come posso richiedere maggiori informazioni?",
-    faq5Answer: "Puoi richiedere informazioni compilando il modulo presente in ogni sezione del sito cliccando su 'Richiedi Info' o contattandoci direttamente via email all'indirizzo e.robbiani@pallacanestrovarese.it.",
+    faq5Answer: "Puoi richiedere informazioni compilando il modulo presente in ogni sezione del sito cliccando su 'Richiedi Info' o contattandoci direttamente via email all'indirizzo f.bellotto@pallacanestrovarese.it.",
     // Summer Camp
     twoDifferentOptions: "Due diverse opzioni",
     residentialCamp: "Camp Residenziale",
@@ -283,7 +283,44 @@ const TRANSLATIONS = {
     proLevelProgram: "programma di livello pro",
     theProfessionalProLevelApproach: "L'Approccio Professionale \"Pro-Level\"",
     theDataDrivenAnalyticalFocus: "Il Focus Analitico e Basato sui Dati",
-    theFlexiblePersonalizedChoice: "La Scelta Flessibile e Personalizzata"
+    theFlexiblePersonalizedChoice: "La Scelta Flessibile e Personalizzata",
+    whatsIncluded: "Cosa è incluso?",
+    accomodation: "Alloggio",
+    housing: "Alloggio: Camera singola nel nostro dormitorio",
+    food: "Cibo: Pranzo e Cena",
+    coaching: "Allenamento (Coaching)",
+    serieAPractice: "Partecipazione agli allenamenti di Serie A",
+    coachesMeetings: "Riunioni degli allenatori",
+    runDrills: "Esecuzione di esercizi con i giocatori di Serie A",
+    playersScouting: "Scouting dei giocatori",
+    serieAGames: "Partecipazione alle partite di Serie A",
+    youthTeamsAssistant: "Assistente allenatore delle squadre giovanili",
+    hudlVideoAnalysis: "Analisi video con Hudl",
+    resumeOpportunity: "Opportunità per il curriculum",
+    housingFeature1Title: "Sala da pranzo luminosa e spaziosa",
+    housingFeature1Desc: "con una capienza di 18 posti a sedere, ideale per pasti condivisi e il caffè del mattino.",
+    housingFeature2Title: "Area comune arredata con stile",
+    housingFeature2Desc: "che funge da sfondo perfetto per socializzare, rilassarsi dopo una lunga giornata o per uno studio serale tranquillo.",
+    housingFeature3Title: "Lavanderia interna",
+    housingFeature3Desc: "Una struttura dedicata e completamente attrezzata per la lavanderia",
+    housingFeature4Title: "Connessione con la natura",
+    housingFeature4Desc: "Il dormitorio è incorniciato da due giardini privati magnificamente curati.",
+    housingEfficiency: "L'efficienza è al centro della nostra posizione. Situato in una zona privilegiata, l'alloggio si trova a soli 5 minuti a piedi dal centro di allenamento principale e dalle principali istituzioni accademiche. Questa vicinanza assicura che tu possa trascorrere meno tempo negli spostamenti e più tempo concentrandoti su ciò che conta davvero.",
+    housingTitle: "ALLOGGIO",
+    housingItem1: "camere ben arredate",
+    housingItem2: "ampia sala da pranzo",
+    housingItem3: "area relax",
+    housingItem4: "spazi verdi privati",
+    foodTitle: "CIBO",
+    foodItem1: "servizio di catering personalizzato",
+    foodItem2: "pasti studiati con un focus sulla nutrizione sportiva",
+    trainingFacilityTitle: "STRUTTURA DI ALLENAMENTO",
+    trainingFacilityItem1: "campo da basket",
+    trainingFacilityItem2: "aree di allenamento d'élite e fisioterapia",
+    trainingFacilityItem3: "sala pesi e recupero",
+    trainingFacilityItem4: "spogliatoio",
+    transportationTitle: "TRASPORTO",
+    transportationItem1: "servizio di prelievo e riaccompagnamento in aeroporto"
   },
   en: {
     back: "Back",
@@ -415,7 +452,7 @@ const TRANSLATIONS = {
     faq4Question: "how do i get to varese?",
     faq4Answer: "The Campus is situated on Via Pirandello in Varese, a 10-minute walk from the guesthouse and just 5 minutes from the Itelyum Arena, home of Pallacanestro Varese. Reaching us is highly convenient as all our facilities are seamlessly interconnected and well-served by public transport. If you are arriving by air, Milan Malpensa (MXP) is the closest hub, located only 30 minutes away and connected directly to Varese via the S50 train line. For those traveling by rail from Milan, frequent direct services depart from Milano Centrale, Porta Garibaldi, and Cadorna stations, with travel times averaging 50–60 minutes. Whether you are arriving from the airport or the city center, the final stretch to the Campus is quick and straightforward.",
     faq5Question: "How can I request more information?",
-    faq5Answer: "You can request information by filling out the form in any section of the site by clicking 'Request Info' or by contacting us directly via email at e.robbiani@pallacanestrovarese.it.",
+    faq5Answer: "You can request information by filling out the form in any section of the site by clicking 'Request Info' or by contacting us directly via email at f.bellotto@pallacanestrovarese.it.",
     // Summer Camp
     twoDifferentOptions: "Two different options",
     residentialCamp: "Residential Camp",
@@ -543,7 +580,44 @@ const TRANSLATIONS = {
     proLevelProgram: "pro-level program",
     theProfessionalProLevelApproach: "The Professional \"Pro-Level\" Approach",
     theDataDrivenAnalyticalFocus: "The Data-Driven & Analytical Focus",
-    theFlexiblePersonalizedChoice: "The Flexible & Personalized Choice"
+    theFlexiblePersonalizedChoice: "The Flexible & Personalized Choice",
+    whatsIncluded: "What's included?",
+    accomodation: "Accomodation",
+    housing: "Housing: Single room occupancy in our dorm",
+    food: "Food: Lunch & Dinner",
+    coaching: "Coaching",
+    serieAPractice: "Serie A Practice attendance",
+    coachesMeetings: "Coaches meetings",
+    runDrills: "Run drills with Serie A Players",
+    playersScouting: "Players scouting",
+    serieAGames: "Serie A games attendance",
+    youthTeamsAssistant: "Youth teams assistant coach",
+    hudlVideoAnalysis: "Hudl video analysis",
+    resumeOpportunity: "Resume opportunity",
+    housingFeature1Title: "Bright and spacious dining room",
+    housingFeature1Desc: "with a seating capacity for 18 guests, ideal for shared meals and morning coffee.",
+    housingFeature2Title: "Stylishly furnished common area",
+    housingFeature2Desc: "that serves as the perfect backdrop for socializing, winding down after a long day, or quiet evening study.",
+    housingFeature3Title: "In-House Laundry",
+    housingFeature3Desc: "A dedicated, fully equipped laundry facility",
+    housingFeature4Title: "Connection to nature",
+    housingFeature4Desc: "The dormitory is framed by two beautifully landscaped private gardens.",
+    housingEfficiency: "Efficiency is at the heart of our location. Situated in a prime area, the housing is just a leisurely 5-minute walk from the primary training center and major academic institutions. This proximity ensures that you can spend less time commuting and more time focusing on what truly matters.",
+    housingTitle: "HOUSING",
+    housingItem1: "well appointed rooms",
+    housingItem2: "spacious dining room",
+    housingItem3: "relaxation area",
+    housingItem4: "private green spaces",
+    foodTitle: "FOOD",
+    foodItem1: "personalized catering service",
+    foodItem2: "crafted meals with a sports nutrition focus",
+    trainingFacilityTitle: "TRAINING FACILITY",
+    trainingFacilityItem1: "basketball court",
+    trainingFacilityItem2: "elite Training and physical therapy areas",
+    trainingFacilityItem3: "weight & Recovery Room",
+    trainingFacilityItem4: "locker Room",
+    transportationTitle: "TRANSPORTATION",
+    transportationItem1: "airport pick-up and drop-off"
   },
   es: {
     back: "Volver",
@@ -675,7 +749,7 @@ const TRANSLATIONS = {
     faq4Question: "¿Cómo llego a Varese?",
     faq4Answer: "El Campus está situado en Via Pirandello en Varese, a 10 minutos a pie de la casa de huéspedes y a solo 5 minutos del Itelyum Arena, sede de Pallacanestro Varese. Llegar a nosotros es muy conveniente ya que todas nuestras instalaciones están perfectamente interconectadas y bien comunicadas por transporte público. Si llega por aire, Milán Malpensa (MXP) es el centro más cercano, ubicado a solo 30 minutos y conectado directamente con Varese a través de la línea de tren S50. Para quienes viajan por ferrocarril desde Milán, salen servicios directos frecuentes desde las estaciones de Milano Centrale, Porta Garibaldi y Cadorna, con tiempos de viaje de 50 a 60 minutos de media. Ya sea que llegue desde el aeropuerto o desde el centro de la ciudad, el último tramo hasta el Campus es rápido y sencillo.",
     faq5Question: "¿Cómo puedo solicitar más información?",
-    faq5Answer: "Puedes solicitar información completando el formulario en cualquier sección del sitio haciendo clic en 'Solicitar Información' o contactándonos directamente por correo electrónico en e.robbiani@pallacanestrovarese.it.",
+    faq5Answer: "Puedes solicitar información completando el formulario en cualquier sección del sitio haciendo clic en 'Solicitar Información' o contactándonos directamente por correo electrónico en f.bellotto@pallacanestrovarese.it.",
     // Summer Camp
     twoDifferentOptions: "Dos opciones diferentes",
     residentialCamp: "Campamento Residencial",
@@ -803,7 +877,44 @@ const TRANSLATIONS = {
     proLevelProgram: "programa de nivel pro",
     theProfessionalProLevelApproach: "El Enfoque Profesional \"Pro-Level\"",
     theDataDrivenAnalyticalFocus: "El Enfoque Analítico y Basado en Datos",
-    theFlexiblePersonalizedChoice: "La Elección Flexible y Personalizada"
+    theFlexiblePersonalizedChoice: "La Elección Flexible y Personalizada",
+    whatsIncluded: "¿Qué está incluido?",
+    accomodation: "Alojamiento",
+    housing: "Vivienda: Habitación individual en nuestro dormitorio",
+    food: "Comida: Almuerzo y Cena",
+    coaching: "Entrenamiento (Coaching)",
+    serieAPractice: "Asistencia a los entrenamientos de la Serie A",
+    coachesMeetings: "Reuniones de entrenadores",
+    runDrills: "Ejecución de ejercicios con jugadores de la Serie A",
+    playersScouting: "Scouting de jugadores",
+    serieAGames: "Asistencia a los partidos de la Serie A",
+    youthTeamsAssistant: "Entrenador asistente de los equipos juveniles",
+    hudlVideoAnalysis: "Análisis de video con Hudl",
+    resumeOpportunity: "Oportunidad para el currículum",
+    housingFeature1Title: "Comedor amplio y luminoso",
+    housingFeature1Desc: "con capacidad para 18 invitados, ideal para comidas compartidas y el café de la mañana.",
+    housingFeature2Title: "Zona común amueblada con estilo",
+    housingFeature2Desc: "que sirve como el escenario perfecto para socializar, relajarse después de un largo día o estudiar tranquilamente por la noche.",
+    housingFeature3Title: "Lavandería interna",
+    housingFeature3Desc: "Una instalación de lavandería dedicada y totalmente equipada",
+    housingFeature4Title: "Conexión con la naturaleza",
+    housingFeature4Desc: "El dormitorio está enmarcado por dos jardines privados bellamente ajardinados.",
+    housingEfficiency: "La eficiencia está en el corazón de nuestra ubicación. Situado en una zona privilegiata, el alojamiento se encuentra a solo 5 minutos a pie del centro de entrenamiento principal y de las principales instituciones académicas. Esta proximidad garantiza que puedas pasar menos tiempo viajando y más tiempo concentrándote en lo que realmente importa.",
+    housingTitle: "ALOJAMIENTO",
+    housingItem1: "habitaciones bien equipadas",
+    housingItem2: "amplio comedor",
+    housingItem3: "zona de relajación",
+    housingItem4: "espacios verdes privados",
+    foodTitle: "COMIDA",
+    foodItem1: "servicio de catering personalizado",
+    foodItem2: "comidas elaboradas con un enfoque en nutrición deportiva",
+    trainingFacilityTitle: "INSTALACIÓN DE ENTRENAMIENTO",
+    trainingFacilityItem1: "cancha de baloncesto",
+    trainingFacilityItem2: "áreas de entrenamiento de élite y fisioterapia",
+    trainingFacilityItem3: "sala de pesas y recuperación",
+    trainingFacilityItem4: "vestuario",
+    transportationTitle: "TRANSPORTE",
+    transportationItem1: "servicio de recogida y regreso al aeropuerto"
   },
   fr: {
     back: "Retour",
@@ -935,7 +1046,7 @@ const TRANSLATIONS = {
     faq4Question: "Comment se rendre à Varèse ?",
     faq4Answer: "Le Campus est situé Via Pirandello à Varèse, à 10 minutes à pied de la maison d'hôtes et à seulement 5 minutes de l'Itelyum Arena, domicile de Pallacanestro Varese. Nous rejoindre est très pratique car toutes nos installations sont parfaitement interconnectées et bien desservies par les transports en commun. Si vous arrivez par avion, Milan Malpensa (MXP) est le hub le plus proche, situé à seulement 30 minutes et relié directement à Varèse via la ligne de train S50. Pour ceux qui voyagent en train depuis Milan, des services directs fréquents partent des gares de Milano Centrale, Porta Garibaldi et Cadorna, avec des temps de trajet de 50 à 60 minutes en moyenne. Que vous arriviez de l'aéroport ou du centre-ville, le dernier tronçon vers le Campus est rapide et simple.",
     faq5Question: "Comment puis-je demander plus d'informations ?",
-    faq5Answer: "Vous pouvez demander des informations en remplissant le formulaire dans n'importe quelle section du site en cliquant sur 'Demander des Infos' ou en nous contactant directement par e-mail à l'adresse e.robbiani@pallacanestrovarese.it.",
+    faq5Answer: "Vous pouvez demander des informations en remplissant le formulaire dans n'importe quelle section du site en cliquant sur 'Demander des Infos' ou en nous contactant directement par e-mail à l'adresse f.bellotto@pallacanestrovarese.it.",
     // Summer Camp
     twoDifferentOptions: "Deux options différentes",
     residentialCamp: "Camp Résidentiel",
@@ -1063,8 +1174,98 @@ const TRANSLATIONS = {
     proLevelProgram: "programme de niveau pro",
     theProfessionalProLevelApproach: "L'Approche Professionnelle \"Pro-Level\"",
     theDataDrivenAnalyticalFocus: "L'Approche Analytique et Basée sur les Données",
-    theFlexiblePersonalizedChoice: "Le Choix Flexible et Personnalisé"
+    theFlexiblePersonalizedChoice: "Le Choix Flexible et Personnalisé",
+    whatsIncluded: "Ce qui est inclus ?",
+    accomodation: "Hébergement",
+    housing: "Logement : Chambre individuelle dans notre dortoir",
+    food: "Nourriture : Déjeuner et Dîner",
+    coaching: "Entraînement (Coaching)",
+    serieAPractice: "Présence aux entraînements de la Serie A",
+    coachesMeetings: "Réunions des entraîneurs",
+    runDrills: "Exécution d'exercices avec les joueurs de la Serie A",
+    playersScouting: "Scouting des joueurs",
+    serieAGames: "Présence aux matchs de la Serie A",
+    youthTeamsAssistant: "Entraîneur adjoint des équipes de jeunes",
+    hudlVideoAnalysis: "Analyse vidéo avec Hudl",
+    resumeOpportunity: "Opportunité pour le CV",
+    housingFeature1Title: "Salle à manger lumineuse et spacieuse",
+    housingFeature1Desc: "avec une capacité de 18 places, idéale pour les repas partagés et le café du matin.",
+    housingFeature2Title: "Espace commun meublé avec style",
+    housingFeature2Desc: "qui sert de toile de fond parfaite pour socialiser, se détendre après une longue journée ou étudier tranquillement le soir.",
+    housingFeature3Title: "Buanderie interne",
+    housingFeature3Desc: "Une installation de buanderie dédiée et entièrement équipée",
+    housingFeature4Title: "Connexion avec la nature",
+    housingFeature4Desc: "Le dortoir est encadré par deux jardins privés magnifiquement aménagés.",
+    housingEfficiency: "L'efficacité est au cœur de notre emplacement. Situé dans un quartier privilégié, le logement se trouve à seulement 5 minutes à pied du centre d'entraînement principal et des principales institutions académiques. Cette proximité garantit que vous pouvez passer moins de temps à vous déplacer et plus de temps à vous concentrer sur ce qui compte vraiment.",
+    housingTitle: "HÉBERGEMENT",
+    housingItem1: "chambres bien aménagées",
+    housingItem2: "salle à manger spacieuse",
+    housingItem3: "espace de détente",
+    housingItem4: "espaces verts privés",
+    foodTitle: "NOURRITURE",
+    foodItem1: "service de restauration personnalisé",
+    foodItem2: "repas élaborés avec un accent sur la nutrition sportive",
+    trainingFacilityTitle: "INSTALLATION D'ENTRAÎNEMENT",
+    trainingFacilityItem1: "terrain de basket",
+    trainingFacilityItem2: "zones d'entraînement d'élite et de physiothérapie",
+    trainingFacilityItem3: "salle de musculation et de récupération",
+    trainingFacilityItem4: "vestiaire",
+    transportationTitle: "TRANSPORT",
+    transportationItem1: "service de prise en charge et de retour à l'aéroport"
   }
+};
+
+const ImageCarousel = ({ images }: { images: string[] }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextImage = () => {
+    setCurrentIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const prevImage = () => {
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  if (!images || images.length === 0) return null;
+
+  return (
+    <div className="relative w-full rounded-2xl overflow-hidden shadow-lg group">
+      <img 
+        src={images[currentIndex]} 
+        alt={`Slide ${currentIndex + 1}`} 
+        className="w-full h-auto object-cover" 
+        referrerPolicy="no-referrer" 
+      />
+      {images.length > 1 && (
+        <>
+          <button 
+            onClick={prevImage}
+            className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+            aria-label="Previous image"
+          >
+            <ChevronLeft size={24} />
+          </button>
+          <button 
+            onClick={nextImage}
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+            aria-label="Next image"
+          >
+            <ChevronRight size={24} />
+          </button>
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+            {images.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentIndex(idx)}
+                className={`w-2.5 h-2.5 rounded-full transition-colors ${idx === currentIndex ? 'bg-white' : 'bg-white/50'}`}
+                aria-label={`Go to slide ${idx + 1}`}
+              />
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
 };
 
 const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'en' }: { text: string, className?: string, programId?: string, lang?: Language }) => {
@@ -1075,6 +1276,11 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
   const titles = [
     "our vision",
     "the program",
+    "what's included?",
+    "our elite housing",
+    "cosa è incluso?",
+    "¿qué está incluido?",
+    "ce qui est inclus ?",
     "la nostra visione",
     "il programma",
     "nuestra visión",
@@ -1189,7 +1395,11 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
     "contáctanos",
     "notre vision",
     "le programme",
-    "contactez-nous"
+    "contactez-nous",
+    "what we offer",
+    "cosa offriamo",
+    "lo que ofrecemos",
+    "ce que nous offrons"
   ];
 
   const isTitleMatch = (title: string | null, englishTitle: string) => {
@@ -1204,6 +1414,8 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
       'A Comprehensive Two-Way Approach': ['A Comprehensive Two-Way Approach', 'Un Approccio Completo a Due Vie', 'Un Enfoque Completo de Dos Vías', 'Une Approche Complète à Deux Voies'],
       'Elite Professional Integration': ['Elite Professional Integration', 'Integrazione Professionale d\'Elite', 'Integración Professionale di Élite', 'Integración Profesional de Élite', 'Intégration Professionnelle d\'Élite'],
       'pro-level program': ['pro-level program', 'programma di livello pro', 'programa de nivel pro', 'programme de niveau pro'],
+      "what's included?": ["what's included?", "cosa è incluso?", "¿qué está incluido?", "ce qui est inclus ?"],
+      "our elite housing": ["our elite housing", "la nostra elite housing", "nuestro alojamiento de élite", "notre logement d'élite"],
       'contact us': ['contact us', 'contattaci', 'contáctanos', 'contactez-nous'],
       'when and where': ['when and where', 'Quando e dove', 'Cuándo y dónde', 'Quand et où', 'quando e dove', 'cuándo y dónde', 'quand et où'],
       'pricing': ['pricing', 'prezzi', 'precios', 'prix'],
@@ -1227,6 +1439,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
       'target audience': ['target audience', 'pubblico di riferimento', 'público objetivo', 'public cible'],
       'our vision': ['our vision', 'la nostra visione', 'nuestra visión', 'notre vision'],
       'How to subscribe': ['How to subscribe', 'Come iscriversi', 'Cómo suscribirse', 'Comment s\'inscrire'],
+      'what we offer': ['what we offer', 'cosa offriamo', 'lo que ofrecemos', 'ce que nous offrons'],
       'the program': ['the program', 'il programma', 'el programa', 'le programme']
     };
     return translations[englishTitle]?.some(t => title.toLowerCase() === t.toLowerCase()) || title.toLowerCase() === englishTitle.toLowerCase();
@@ -1256,11 +1469,35 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
 
   const getStoreLink = () => {
     if (programId === 'academy') return "https://store.pallacanestrovarese.it/products/basketball-academy";
-    if (programId === 'full-time') return "https://store.pallacanestrovarese.it/products/basketball-academy-copia?variant=52624907436298";
+    if (programId === 'full-time') return "https://store.pallacanestrovarese.it/products/basketball-academy-copia";
     if (programId === 'summer-camp') return "https://store.pallacanestrovarese.it/products/elite-summer-camp?variant=52625081630986";
     if (programId === 'internship') return "https://store.pallacanestrovarese.it/products/coaches-internship-program?variant=52625121313034";
     if (programId === 'summer-prog') return "https://store.pallacanestrovarese.it/products/summer-elite-program?variant=52625241800970";
     return "#";
+  };
+
+  const renderLineWithLinks = (line: string, lIdx: number) => {
+    const clickHereText = t('clickHere');
+    const email1 = "e.robbiani@pallacanestrovarese.it";
+    const email2 = "f.bellotto@pallacanestrovarese.it";
+    
+    const escapeRegExp = (string: string) => string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(`(${escapeRegExp(clickHereText)}|${escapeRegExp(email1)}|${escapeRegExp(email2)})`, 'g');
+    
+    const parts = line.split(regex);
+    
+    return (
+      <p key={lIdx}>
+        {parts.map((part, idx) => {
+          if (part === clickHereText) {
+            return <a key={idx} href={getStoreLink()} target="_blank" rel="noopener noreferrer" className="text-red-varese underline font-bold hover:text-red-700">{part}</a>;
+          } else if (part === email1 || part === email2) {
+            return <a key={idx} href={`mailto:${part}?subject=Basketball%20Academy%20program%20-%20info%20request`} className="text-red-varese underline font-bold hover:text-red-700">{part}</a>;
+          }
+          return part;
+        })}
+      </p>
+    );
   };
 
   const renderSectionContent = (section: { title: string | null, paragraphs: string[][] }) => {
@@ -1379,7 +1616,8 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
         isTitleMatch(section.title || '', 'Our special guest and CEO') || 
         isTitleMatch(section.title || '', 'Unique events & meetings') ||
         isTitleMatch(section.title || '', 'How to subscribe') ||
-        isTitleMatch(section.title || '', 'il nostro ospite speciale')) {
+        isTitleMatch(section.title || '', 'il nostro ospite speciale') ||
+        isTitleMatch(section.title || '', 'our elite housing')) {
       
       const allTextLines: string[] = [];
       const allImageLines: string[] = [];
@@ -1397,18 +1635,112 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
 
       if (allImageLines.length > 0) {
         const isSpecialGuest = isTitleMatch(section.title || '', 'il nostro ospite speciale') || isTitleMatch(section.title || '', 'Our special guest and CEO');
+        const isEliteHousing = isTitleMatch(section.title || '', 'our elite housing');
+        
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
             <div className={`space-y-4 ${isSpecialGuest ? 'md:order-2' : ''}`}>
-              {allTextLines.map((line, lIdx) => (
-                <p key={lIdx} className="text-zinc-600 leading-relaxed">{line}</p>
-              ))}
+              {allTextLines.map((line, lIdx) => {
+                if (line.includes("HOUSING_FEATURES_PLACEHOLDER")) {
+                  const housingFeatures = [
+                    {
+                      title: t('housingFeature1Title'),
+                      desc: t('housingFeature1Desc')
+                    },
+                    {
+                      title: t('housingFeature2Title'),
+                      desc: t('housingFeature2Desc')
+                    },
+                    {
+                      title: t('housingFeature3Title'),
+                      desc: t('housingFeature3Desc')
+                    },
+                    {
+                      title: t('housingFeature4Title'),
+                      desc: t('housingFeature4Desc')
+                    }
+                  ];
+                  return (
+                    <div key={lIdx} className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                      {housingFeatures.map((item, i) => (
+                        <div key={i} className="bg-white border border-zinc-200 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                          <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-2 text-lg">{item.title}</h5>
+                          <p className="text-zinc-600 text-sm leading-relaxed">{item.desc}</p>
+                        </div>
+                      ))}
+                    </div>
+                  );
+                }
+                if (line.includes("HOUSING_EFFICIENCY_PLACEHOLDER")) {
+                  return (
+                    <div key={lIdx} className="bg-white border border-zinc-200 p-5 rounded-2xl shadow-sm mt-4">
+                      <p className="text-zinc-600 text-sm leading-relaxed">{t('housingEfficiency')}</p>
+                    </div>
+                  );
+                }
+                if (line.includes("WHAT_WE_OFFER_TABLE_PLACEHOLDER")) {
+                  return (
+                    <div key={lIdx} className="mt-8 mb-8 w-full">
+                      <div className="bg-white rounded-xl shadow-sm border border-zinc-200 overflow-hidden">
+                        <table className="w-full text-sm text-left">
+                          <tbody className="divide-y divide-zinc-100">
+                            <tr>
+                              <td className="px-6 py-4 font-bold text-zinc-900 w-1/3 align-top bg-zinc-50">{t('housingTitle')}:</td>
+                              <td className="px-6 py-4 text-zinc-600">
+                                <ul className="list-disc pl-5 space-y-1">
+                                  <li>{t('housingItem1')}</li>
+                                  <li>{t('housingItem2')}</li>
+                                  <li>{t('housingItem3')}</li>
+                                  <li>{t('housingItem4')}</li>
+                                </ul>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td className="px-6 py-4 font-bold text-zinc-900 w-1/3 align-top bg-zinc-50">{t('foodTitle')}:</td>
+                              <td className="px-6 py-4 text-zinc-600">
+                                <ul className="list-disc pl-5 space-y-1">
+                                  <li>{t('foodItem1')}</li>
+                                  <li>{t('foodItem2')}</li>
+                                </ul>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td className="px-6 py-4 font-bold text-zinc-900 w-1/3 align-top bg-zinc-50">{t('trainingFacilityTitle')}:</td>
+                              <td className="px-6 py-4 text-zinc-600">
+                                <ul className="list-disc pl-5 space-y-1">
+                                  <li>{t('trainingFacilityItem1')}</li>
+                                  <li>{t('trainingFacilityItem2')}</li>
+                                  <li>{t('trainingFacilityItem3')}</li>
+                                  <li>{t('trainingFacilityItem4')}</li>
+                                </ul>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td className="px-6 py-4 font-bold text-zinc-900 w-1/3 align-top bg-zinc-50">{t('transportationTitle')}:</td>
+                              <td className="px-6 py-4 text-zinc-600">
+                                <ul className="list-disc pl-5 space-y-1">
+                                  <li>{t('transportationItem1')}</li>
+                                </ul>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  );
+                }
+                return <p key={lIdx} className="text-zinc-600 leading-relaxed">{line}</p>;
+              })}
             </div>
             <div className={`space-y-4 ${isSpecialGuest ? 'md:order-1' : ''}`}>
-              {allImageLines.map((line, lIdx) => {
-                const src = line.slice(5, -6);
-                return <img key={lIdx} src={src} alt="Section Image" className={`${isSpecialGuest ? 'w-2/3' : 'w-full'} rounded-2xl shadow-lg`} referrerPolicy="no-referrer" />;
-              })}
+              {isEliteHousing ? (
+                <ImageCarousel images={allImageLines.map(line => line.slice(5, -6))} />
+              ) : (
+                allImageLines.map((line, lIdx) => {
+                  const src = line.slice(5, -6);
+                  return <img key={lIdx} src={src} alt="Section Image" className={`${isSpecialGuest ? 'w-2/3' : 'w-full'} rounded-2xl shadow-lg`} referrerPolicy="no-referrer" />;
+                })
+              )}
             </div>
           </div>
         );
@@ -1416,9 +1748,97 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
 
       return (
         <div className="space-y-4">
-          {allTextLines.map((line, lIdx) => (
-            <p key={lIdx} className="text-zinc-600 leading-relaxed">{line}</p>
-          ))}
+          {allTextLines.map((line, lIdx) => {
+            if (line.includes("HOUSING_FEATURES_PLACEHOLDER")) {
+              const housingFeatures = [
+                {
+                  title: t('housingFeature1Title'),
+                  desc: t('housingFeature1Desc')
+                },
+                {
+                  title: t('housingFeature2Title'),
+                  desc: t('housingFeature2Desc')
+                },
+                {
+                  title: t('housingFeature3Title'),
+                  desc: t('housingFeature3Desc')
+                },
+                {
+                  title: t('housingFeature4Title'),
+                  desc: t('housingFeature4Desc')
+                }
+              ];
+              return (
+                <div key={lIdx} className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                  {housingFeatures.map((item, i) => (
+                    <div key={i} className="bg-white border border-zinc-200 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                      <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-2 text-lg">{item.title}</h5>
+                      <p className="text-zinc-600 text-sm leading-relaxed">{item.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              );
+            }
+            if (line.includes("HOUSING_EFFICIENCY_PLACEHOLDER")) {
+              return (
+                <div key={lIdx} className="bg-white border border-zinc-200 p-5 rounded-2xl shadow-sm mt-4">
+                  <p className="text-zinc-600 text-sm leading-relaxed">{t('housingEfficiency')}</p>
+                </div>
+              );
+            }
+            if (line.includes("WHAT_WE_OFFER_TABLE_PLACEHOLDER")) {
+              return (
+                <div key={lIdx} className="mt-8 mb-8 w-full">
+                  <div className="bg-white rounded-xl shadow-sm border border-zinc-200 overflow-hidden">
+                    <table className="w-full text-sm text-left">
+                      <tbody className="divide-y divide-zinc-100">
+                        <tr>
+                          <td className="px-6 py-4 font-bold text-zinc-900 w-1/3 align-top bg-zinc-50">{t('housingTitle')}:</td>
+                          <td className="px-6 py-4 text-zinc-600">
+                            <ul className="list-disc pl-5 space-y-1">
+                              <li>{t('housingItem1')}</li>
+                              <li>{t('housingItem2')}</li>
+                              <li>{t('housingItem3')}</li>
+                              <li>{t('housingItem4')}</li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="px-6 py-4 font-bold text-zinc-900 w-1/3 align-top bg-zinc-50">{t('foodTitle')}:</td>
+                          <td className="px-6 py-4 text-zinc-600">
+                            <ul className="list-disc pl-5 space-y-1">
+                              <li>{t('foodItem1')}</li>
+                              <li>{t('foodItem2')}</li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="px-6 py-4 font-bold text-zinc-900 w-1/3 align-top bg-zinc-50">{t('trainingFacilityTitle')}:</td>
+                          <td className="px-6 py-4 text-zinc-600">
+                            <ul className="list-disc pl-5 space-y-1">
+                              <li>{t('trainingFacilityItem1')}</li>
+                              <li>{t('trainingFacilityItem2')}</li>
+                              <li>{t('trainingFacilityItem3')}</li>
+                              <li>{t('trainingFacilityItem4')}</li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="px-6 py-4 font-bold text-zinc-900 w-1/3 align-top bg-zinc-50">{t('transportationTitle')}:</td>
+                          <td className="px-6 py-4 text-zinc-600">
+                            <ul className="list-disc pl-5 space-y-1">
+                              <li>{t('transportationItem1')}</li>
+                            </ul>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              );
+            }
+            return <p key={lIdx} className="text-zinc-600 leading-relaxed">{line}</p>;
+          })}
         </div>
       );
     }
@@ -1493,29 +1913,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
         <div className="space-y-4">
           {section.paragraphs.map((paragraphLines, pIdx) => (
             <div key={pIdx} className="space-y-2">
-              {paragraphLines.map((line, lIdx) => {
-                if (line.includes("e.robbiani@pallacanestrovarese.it")) {
-                  const parts = line.split("e.robbiani@pallacanestrovarese.it");
-                  return (
-                    <p key={lIdx}>
-                      {parts[0]}
-                      <a href="mailto:e.robbiani@pallacanestrovarese.it?subject=Basketball%20Academy%20program%20-%20info%20request" className="text-red-varese underline font-bold hover:text-red-700">e.robbiani@pallacanestrovarese.it</a>
-                      {parts[1]}
-                    </p>
-                  );
-                }
-                if (line.includes(t('clickHere'))) {
-                  const parts = line.split(t('clickHere'));
-                  return (
-                    <p key={lIdx}>
-                      {parts[0]}
-                      <a href={getStoreLink()} target="_blank" rel="noopener noreferrer" className="text-red-varese underline font-bold hover:text-red-700">{t('clickHere')}</a>
-                      {parts[1]}
-                    </p>
-                  );
-                }
-                return <p key={lIdx}>{line}</p>;
-              })}
+              {paragraphLines.map((line, lIdx) => renderLineWithLinks(line, lIdx))}
             </div>
           ))}
         </div>
@@ -1664,6 +2062,132 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                 </div>
               );
             }
+            if (line.includes("HOUSING_FEATURES_PLACEHOLDER")) {
+              const housingFeatures = [
+                {
+                  title: t('housingFeature1Title'),
+                  desc: t('housingFeature1Desc')
+                },
+                {
+                  title: t('housingFeature2Title'),
+                  desc: t('housingFeature2Desc')
+                },
+                {
+                  title: t('housingFeature3Title'),
+                  desc: t('housingFeature3Desc')
+                },
+                {
+                  title: t('housingFeature4Title'),
+                  desc: t('housingFeature4Desc')
+                }
+              ];
+              return (
+                <div key={lIdx} className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                  {housingFeatures.map((item, i) => (
+                    <div key={i} className="bg-white border border-zinc-200 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                      <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-2 text-lg">{item.title}</h5>
+                      <p className="text-zinc-600 text-sm leading-relaxed">{item.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              );
+            }
+            if (line.includes("HOUSING_EFFICIENCY_PLACEHOLDER")) {
+              return (
+                <div key={lIdx} className="bg-white border border-zinc-200 p-5 rounded-2xl shadow-sm mt-4">
+                  <p className="text-zinc-600 text-sm leading-relaxed">{t('housingEfficiency')}</p>
+                </div>
+              );
+            }
+            if (line.includes("WHAT_WE_OFFER_TABLE_PLACEHOLDER")) {
+              return (
+                <div key={lIdx} className="mt-8 mb-8 w-full">
+                  <div className="bg-white rounded-xl shadow-sm border border-zinc-200 overflow-hidden">
+                    <table className="w-full text-sm text-left">
+                      <tbody className="divide-y divide-zinc-100">
+                        <tr>
+                          <td className="px-6 py-4 font-bold text-zinc-900 w-1/3 align-top bg-zinc-50">{t('housingTitle')}:</td>
+                          <td className="px-6 py-4 text-zinc-600">
+                            <ul className="list-disc pl-5 space-y-1">
+                              <li>{t('housingItem1')}</li>
+                              <li>{t('housingItem2')}</li>
+                              <li>{t('housingItem3')}</li>
+                              <li>{t('housingItem4')}</li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="px-6 py-4 font-bold text-zinc-900 w-1/3 align-top bg-zinc-50">{t('foodTitle')}:</td>
+                          <td className="px-6 py-4 text-zinc-600">
+                            <ul className="list-disc pl-5 space-y-1">
+                              <li>{t('foodItem1')}</li>
+                              <li>{t('foodItem2')}</li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="px-6 py-4 font-bold text-zinc-900 w-1/3 align-top bg-zinc-50">{t('trainingFacilityTitle')}:</td>
+                          <td className="px-6 py-4 text-zinc-600">
+                            <ul className="list-disc pl-5 space-y-1">
+                              <li>{t('trainingFacilityItem1')}</li>
+                              <li>{t('trainingFacilityItem2')}</li>
+                              <li>{t('trainingFacilityItem3')}</li>
+                              <li>{t('trainingFacilityItem4')}</li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="px-6 py-4 font-bold text-zinc-900 w-1/3 align-top bg-zinc-50">{t('transportationTitle')}:</td>
+                          <td className="px-6 py-4 text-zinc-600">
+                            <ul className="list-disc pl-5 space-y-1">
+                              <li>{t('transportationItem1')}</li>
+                            </ul>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              );
+            }
+            if (line.includes("WHAT_IS_INCLUDED_TABLE_PLACEHOLDER")) {
+              return (
+                <div key={lIdx} className="mt-8 mb-8 w-full">
+                  <div className="bg-white rounded-xl shadow-sm border border-zinc-200 overflow-hidden">
+                    <table className="w-full text-sm text-left">
+                      <tbody className="divide-y divide-zinc-100">
+                        <tr>
+                          <td className="px-6 py-4 font-bold text-zinc-900 w-1/3 align-top bg-zinc-50">{t('accomodation')}:</td>
+                          <td className="px-6 py-4 text-zinc-600">
+                            <ul className="space-y-1">
+                              <li>{t('housing')}</li>
+                              <li>{t('food')}</li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="px-6 py-4 font-bold text-zinc-900 w-1/3 align-top bg-zinc-50">{t('coaching')}:</td>
+                          <td className="px-6 py-4 text-zinc-600">
+                            <ul className="space-y-1">
+                              <li>{t('serieAPractice')}</li>
+                              <li>{t('coachesMeetings')}</li>
+                              <li>{t('runDrills')}</li>
+                              <li>{t('playersScouting')}</li>
+                              <li>{t('serieAGames')}</li>
+                              <li>{t('youthTeamsAssistant')}</li>
+                              <li>{t('hudlVideoAnalysis')}</li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="px-6 py-4 font-bold text-zinc-900 w-1/3 align-top bg-zinc-50" colSpan={2}>{t('resumeOpportunity')}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              );
+            }
             if (line.includes("TABLES_PLACEHOLDER")) {
               return (
                 <div key={lIdx} className="mt-4 flex flex-col xl:flex-row gap-4 w-full">
@@ -1715,6 +2239,14 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                 </div>
               );
             }
+            if (line.startsWith("[img]") && line.endsWith("[/img]")) {
+              const url = line.replace("[img]", "").replace("[/img]", "");
+              return (
+                <div key={lIdx} className="mt-4 mb-4">
+                  <img src={url} alt="Housing" className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />
+                </div>
+              );
+            }
             if (line.startsWith("SUBTITLE:")) {
               return (
                 <h4 key={lIdx} className="font-oswald text-red-varese font-bold uppercase tracking-wider mt-12 mb-2 text-lg border-b border-zinc-200 pb-2">
@@ -1722,34 +2254,21 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                 </h4>
               );
             }
-            if (line.includes("e.robbiani@pallacanestrovarese.it")) {
-              const parts = line.split("e.robbiani@pallacanestrovarese.it");
-              return (
-                <p key={lIdx}>
-                  {parts[0]}
-                  <a href="mailto:e.robbiani@pallacanestrovarese.it?subject=Basketball%20Academy%20program%20-%20info%20request" className="text-red-varese underline font-bold hover:text-red-700">e.robbiani@pallacanestrovarese.it</a>
-                  {parts[1]}
-                </p>
-              );
-            }
-            if (line.includes(t('clickHere'))) {
-              const parts = line.split(t('clickHere'));
-              return (
-                <p key={lIdx}>
-                  {parts[0]}
-                  <a href={getStoreLink()} target="_blank" rel="noopener noreferrer" className="text-red-varese underline font-bold hover:text-red-700">{t('clickHere')}</a>
-                  {parts[1]}
-                </p>
-              );
+            if (line.includes("e.robbiani@pallacanestrovarese.it") || line.includes("f.bellotto@pallacanestrovarese.it") || line.includes(t('clickHere'))) {
+              return renderLineWithLinks(line, lIdx);
             }
             if (line.startsWith("BOXES:")) {
-              const boxes = line.replace("BOXES:", "").split("|").map(b => b.trim());
+              const boxes = line.replace("BOXES:", "").split("|").map(b => {
+                const parts = b.split(":");
+                return { title: parts[0].trim(), description: parts[1]?.trim() };
+              });
               const gridCols = boxes.length === 3 ? 'grid-cols-1 sm:grid-cols-3' : 'grid-cols-2 sm:grid-cols-4';
               return (
                 <div key={lIdx} className={`grid ${gridCols} gap-3 mt-4`}>
                   {boxes.map((box, bIdx) => (
                     <div key={bIdx} className="bg-zinc-50 border border-zinc-200 p-3 rounded-xl shadow-sm flex flex-col items-center justify-center text-center hover:border-red-varese/50 transition-colors">
-                      <span className="text-zinc-900 font-bold uppercase tracking-wider text-xs">{box}</span>
+                      <span className="text-zinc-900 font-bold uppercase tracking-wider text-xs">{box.title}</span>
+                      {box.description && <p className="text-zinc-500 text-[10px] mt-1 leading-tight">{box.description}</p>}
                     </div>
                   ))}
                 </div>
@@ -1818,7 +2337,17 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
           } else if (isTitleMatch(section.title, 'Sample Daily Routine')) {
             imageUrl = getImage3();
             imagePosition = 'left';
-          } else if (idx === 2 && !isTitleMatch(section.title, 'the training program') && programId !== 'full-time') {
+          } else if (isTitleMatch(section.title, 'what we offer') && programId === 'summer-prog') {
+            imageUrls = [
+              "https://i.imgur.com/vA5u7QX.png",
+              "https://i.imgur.com/VhfguSQ.png",
+              "https://i.imgur.com/5B8EOkI.png",
+              "https://i.imgur.com/JF7bpGP.png",
+              "https://i.imgur.com/atjdOhb.png",
+              "https://i.imgur.com/nkKHSzi.png"
+            ];
+            imagePosition = 'right';
+          } else if (idx === 2 && !isTitleMatch(section.title, 'the training program') && !isTitleMatch(section.title, 'our elite housing') && programId !== 'full-time') {
             imageUrl = getImage3();
             imagePosition = 'right';
           } else if (idx === 3 && programId === 'full-time') {
@@ -1841,21 +2370,35 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                 {(imageUrl || imageUrls) && imagePosition === 'left' && (
                   <div className={`flex-1 ${isTitleMatch(section.title, 'Our special guest and CEO') ? 'lg:flex-[1] max-w-lg mx-auto' : (idx === 1 && (programId === 'academy' || programId === 'summer-prog' || programId === 'player-package') ? 'lg:flex-none lg:w-1/3 max-w-[350px] mx-auto' : 'lg:flex-[1.5]')} w-full order-2 lg:order-1`}>
                     {imageUrl && <img src={imageUrl} alt={section.title || `Section ${idx + 1}`} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />}
-                    {imageUrls && <div className="flex flex-col gap-4">{imageUrls.map((url, i) => <img key={i} src={url} alt={`${section.title || `Section ${idx + 1}`} ${i + 1}`} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />)}</div>}
+                    {imageUrls && (
+                      isTitleMatch(section.title, 'what we offer') ? (
+                        <ImageCarousel images={imageUrls} />
+                      ) : (
+                        <div className="flex flex-col gap-4">{imageUrls.map((url, i) => <img key={i} src={url} alt={`${section.title || `Section ${idx + 1}`} ${i + 1}`} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />)}</div>
+                      )
+                    )}
                   </div>
                 )}
                 
                 <div className={`flex-1 ${(imageUrl || imageUrls) ? (isTitleMatch(section.title, 'Our special guest and CEO') ? 'lg:flex-[1.8]' : ((idx === 1 && (programId === 'academy' || programId === 'summer-prog' || programId === 'player-package')) || ((idx === 2 || idx === 0) && programId === 'player-package') ? 'lg:flex-[2]' : 'lg:flex-[1.5]')) : 'w-full'} space-y-4 ${(imageUrl || imageUrls) && imagePosition === 'left' ? 'order-1 lg:order-2' : ''}`}>
-                  <h4 className={`font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg border-b border-zinc-200 pb-2 ${isTitleMatch(section.title, 'A Comprehensive Two-Way Approach') ? 'text-center' : ''}`}>
-                    {isTitleMatch(section.title, 'the elite player package') ? t('elitePlayerPackage') : section.title}
-                  </h4>
+                  {section.title && (
+                    <h4 className={`font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg border-b border-zinc-200 pb-2 ${isTitleMatch(section.title, 'A Comprehensive Two-Way Approach') ? 'text-center' : ''}`}>
+                      {isTitleMatch(section.title, 'the elite player package') ? t('elitePlayerPackage') : section.title}
+                    </h4>
+                  )}
                   {renderSectionContent(section)}
                 </div>
 
                 {(imageUrl || imageUrls) && imagePosition === 'right' && (
                   <div className={`flex-1 ${((idx === 2 || idx === 0) && programId === 'player-package') ? 'lg:flex-none lg:w-1/3 max-w-[350px] mx-auto' : 'lg:flex-[1.5]'} w-full`}>
                     {imageUrl && <img src={imageUrl} alt={section.title || `Section ${idx + 1}`} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />}
-                    {imageUrls && <div className="flex flex-col gap-4">{imageUrls.map((url, i) => <img key={i} src={url} alt={`${section.title || `Section ${idx + 1}`} ${i + 1}`} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />)}</div>}
+                    {imageUrls && (
+                      isTitleMatch(section.title, 'what we offer') ? (
+                        <ImageCarousel images={imageUrls} />
+                      ) : (
+                        <div className="flex flex-col gap-4">{imageUrls.map((url, i) => <img key={i} src={url} alt={`${section.title || `Section ${idx + 1}`} ${i + 1}`} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />)}</div>
+                      )
+                    )}
                   </div>
                 )}
               </div>
@@ -1964,7 +2507,6 @@ const App: React.FC = () => {
   const [isApplying, setIsApplying] = useState(false);
   const [submissionStatus, setSubmissionStatus] = useState<'idle' | 'submitted'>('idle');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [showSummerCampLangModal, setShowSummerCampLangModal] = useState(false);
   
   const isFacilityView = ['arena', 'campus', 'housing'].includes(view);
   const isSubpage = ['programDetail', 'detailedPrograms', 'arena', 'campus', 'housing', 'palmares'].includes(view);
@@ -2084,7 +2626,7 @@ const App: React.FC = () => {
       `Information Request:\n${formState.message}`
     );
 
-    window.location.href = `mailto:e.robbiani@pallacanestrovarese.it?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:f.bellotto@pallacanestrovarese.it?subject=${subject}&body=${body}`;
     setSubmissionStatus('submitted');
   };
 
@@ -2311,9 +2853,6 @@ const App: React.FC = () => {
                     setSelectedProgram(translatedProg);
                     setPreviousView(view);
                     setView('programDetail');
-                    if (translatedProg.id === 'summer-camp') {
-                      setShowSummerCampLangModal(true);
-                    }
                   }}
                   className="flex-1 bg-white/10 text-white hover:bg-white hover:text-black py-2 md:py-3 rounded font-bold uppercase tracking-widest text-[8px] md:text-xs transition-all"
                 >
@@ -2321,18 +2860,17 @@ const App: React.FC = () => {
                 </button>
                 <a
                   href={
-                    translatedProg.id === 'academy' ? "https://store.pallacanestrovarese.it/products/basketball-academy" :
-                    translatedProg.id === 'full-time' ? "https://store.pallacanestrovarese.it/products/basketball-academy-copia?variant=52624907436298" :
+                    translatedProg.id === 'academy' || translatedProg.id === 'summer-prog' ? "mailto:f.bellotto@pallacanestrovarese.it" :
+                    translatedProg.id === 'full-time' ? "https://store.pallacanestrovarese.it/products/basketball-academy-copia" :
                     translatedProg.id === 'summer-camp' ? "https://store.pallacanestrovarese.it/products/elite-summer-camp?variant=52625081630986" :
                     translatedProg.id === 'internship' ? "https://store.pallacanestrovarese.it/products/coaches-internship-program?variant=52625121313034" :
-                    translatedProg.id === 'summer-prog' ? "https://store.pallacanestrovarese.it/products/summer-elite-program?variant=52625241800970" :
                     "https://store.pallacanestrovarese.it/collections/elite-programs"
                   }
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target={translatedProg.id === 'academy' || translatedProg.id === 'summer-prog' ? "_self" : "_blank"}
+                  rel={translatedProg.id === 'academy' || translatedProg.id === 'summer-prog' ? "" : "noopener noreferrer"}
                   className="flex-1 bg-red-varese text-white hover:bg-red-700 py-2 md:py-3 rounded font-bold uppercase tracking-widest text-[8px] md:text-xs transition-all text-center"
                 >
-                  {t('buyNow')}
+                  {translatedProg.id === 'academy' || translatedProg.id === 'summer-prog' ? t('contactUs') : t('buyNow')}
                 </a>
              </div>
           </div>
@@ -2584,11 +3122,20 @@ const App: React.FC = () => {
                         ))}
                       </div>
                        <div className="mt-8 pt-6 border-t border-white/10">
-                          <button
-                              className="w-full bg-red-varese text-white py-4 font-bold uppercase tracking-wider hover:bg-red-700 transition-all text-sm rounded-sm"
-                          >
-                              {t('buyNow')}
-                          </button>
+                          {translatedProg.id === 'academy' || translatedProg.id === 'summer-prog' ? (
+                            <a
+                              href="mailto:f.bellotto@pallacanestrovarese.it"
+                              className="block w-full bg-red-varese text-white py-4 font-bold uppercase tracking-wider hover:bg-red-700 transition-all text-sm rounded-sm text-center"
+                            >
+                              {t('contactUs')}
+                            </a>
+                          ) : (
+                            <button
+                                className="w-full bg-red-varese text-white py-4 font-bold uppercase tracking-wider hover:bg-red-700 transition-all text-sm rounded-sm"
+                            >
+                                {t('buyNow')}
+                            </button>
+                          )}
                       </div>
                     </div>
                   </div>
@@ -2734,18 +3281,16 @@ const App: React.FC = () => {
                   </div>
                   
                   <div className="mt-auto flex flex-col gap-4 fixed bottom-0 left-0 right-0 p-4 bg-white/90 backdrop-blur-md border-t border-zinc-200 z-50 md:relative md:p-0 md:bg-transparent md:border-t-0 md:z-auto">
-                    {program.id === 'academy' ? (
+                    {program.id === 'academy' || program.id === 'summer-prog' ? (
                       <a
-                        href="https://store.pallacanestrovarese.it/products/basketball-academy"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="mailto:f.bellotto@pallacanestrovarese.it"
                         className="w-full bg-red-varese text-white py-4 md:py-5 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg shadow-xl shadow-red-600/20 text-center flex items-center justify-center group"
                       >
-                        {t('buyNow')} <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
+                        {t('contactUs')} <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
                       </a>
                     ) : program.id === 'full-time' ? (
                       <a
-                        href="https://store.pallacanestrovarese.it/products/basketball-academy-copia?variant=52624907436298"
+                        href="https://store.pallacanestrovarese.it/products/basketball-academy-copia"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full bg-red-varese text-white py-4 md:py-5 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg shadow-xl shadow-red-600/20 text-center flex items-center justify-center group"
@@ -2764,15 +3309,6 @@ const App: React.FC = () => {
                     ) : program.id === 'internship' ? (
                       <a
                         href="https://store.pallacanestrovarese.it/products/coaches-internship-program?variant=52625121313034"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full bg-red-varese text-white py-4 md:py-5 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg shadow-xl shadow-red-600/20 text-center flex items-center justify-center group"
-                      >
-                        {t('buyNow')} <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
-                      </a>
-                    ) : program.id === 'summer-prog' ? (
-                      <a
-                        href="https://store.pallacanestrovarese.it/products/summer-elite-program?variant=52625241800970"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full bg-red-varese text-white py-4 md:py-5 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg shadow-xl shadow-red-600/20 text-center flex items-center justify-center group"
@@ -2822,12 +3358,12 @@ const App: React.FC = () => {
                 
                 <div className="mt-16 flex flex-col sm:flex-row gap-4 justify-center items-center max-w-4xl mx-auto">
                   <a
-                    href={program.id === 'academy' ? "https://store.pallacanestrovarese.it/products/basketball-academy" : program.id === 'full-time' ? "https://store.pallacanestrovarese.it/products/basketball-academy-copia?variant=52624907436298" : program.id === 'summer-camp' ? "https://store.pallacanestrovarese.it/products/elite-summer-camp?variant=52625081630986" : program.id === 'internship' ? "https://store.pallacanestrovarese.it/products/coaches-internship-program?variant=52625121313034" : program.id === 'summer-prog' ? "https://store.pallacanestrovarese.it/products/summer-elite-program?variant=52625241800970" : "#"}
-                    target={program.id === 'academy' || program.id === 'full-time' || program.id === 'summer-camp' || program.id === 'internship' || program.id === 'summer-prog' ? "_blank" : "_self"}
-                    rel={program.id === 'academy' || program.id === 'full-time' || program.id === 'summer-camp' || program.id === 'internship' || program.id === 'summer-prog' ? "noopener noreferrer" : ""}
+                    href={program.id === 'academy' || program.id === 'summer-prog' ? "mailto:f.bellotto@pallacanestrovarese.it" : program.id === 'full-time' ? "https://store.pallacanestrovarese.it/products/basketball-academy-copia" : program.id === 'summer-camp' ? "https://store.pallacanestrovarese.it/products/elite-summer-camp?variant=52625081630986" : program.id === 'internship' ? "https://store.pallacanestrovarese.it/products/coaches-internship-program?variant=52625121313034" : "#"}
+                    target={program.id === 'full-time' || program.id === 'summer-camp' || program.id === 'internship' ? "_blank" : "_self"}
+                    rel={program.id === 'full-time' || program.id === 'summer-camp' || program.id === 'internship' ? "noopener noreferrer" : ""}
                     className="w-full sm:w-auto flex-1 bg-red-varese text-white py-4 md:py-5 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg shadow-xl shadow-red-600/20 text-center flex items-center justify-center group"
                   >
-                    {t('buyNow')} <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
+                    {program.id === 'academy' || program.id === 'summer-prog' ? t('contactUs') : t('buyNow')} <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
                   </a>
                   <button 
                     onClick={() => onRequestInfo(program)} 
@@ -3363,7 +3899,7 @@ const App: React.FC = () => {
                         <div className="mt-4 md:mt-8">
                             <h5 className="font-bold uppercase mb-2 md:mb-4 tracking-[0.2em] text-[10px] md:text-xs text-white">{t('contactUs')}</h5>
                             <div className="text-[10px] md:text-sm text-gray-500">
-                                <p>Email: <a href="mailto:e.robbiani@pallacanestrovarese.it" className="hover:text-red-varese transition-colors">e.robbiani@pallacanestrovarese.it</a></p>
+                                <p>Email: <a href="mailto:f.bellotto@pallacanestrovarese.it" className="hover:text-red-varese transition-colors">f.bellotto@pallacanestrovarese.it</a></p>
                                 <p className="text-[8px] md:text-[10px] uppercase tracking-widest mt-0.5 md:mt-1 text-gray-400">{t('footerCOO')}</p>
                             </div>
                         </div>
@@ -3373,22 +3909,6 @@ const App: React.FC = () => {
                 </div>
             </footer>
         </>
-      )}
-
-      {showSummerCampLangModal && (
-        <div className="fixed inset-0 z-[200] flex items-center justify-center p-4">
-          <div className="absolute inset-0 bg-black/90 backdrop-blur-sm"></div>
-          <div className="relative bg-zinc-900 border border-white/10 rounded-2xl p-8 max-w-md w-full text-center shadow-2xl animate-in fade-in zoom-in-95 duration-300">
-            <h2 className="text-2xl md:text-3xl font-oswald font-bold uppercase text-white mb-2">Choose your language</h2>
-            <h2 className="text-xl md:text-2xl font-oswald font-bold uppercase text-red-varese mb-8">Scegli la lingua</h2>
-            <div className="grid grid-cols-2 gap-4">
-              <button onClick={() => { setLang('en'); setShowSummerCampLangModal(false); }} className="bg-white/5 hover:bg-white hover:text-black text-white py-4 rounded-xl font-bold uppercase tracking-widest transition-all border border-white/10">English</button>
-              <button onClick={() => { setLang('it'); setShowSummerCampLangModal(false); }} className="bg-white/5 hover:bg-white hover:text-black text-white py-4 rounded-xl font-bold uppercase tracking-widest transition-all border border-white/10">Italiano</button>
-              <button onClick={() => { setLang('es'); setShowSummerCampLangModal(false); }} className="bg-white/5 hover:bg-white hover:text-black text-white py-4 rounded-xl font-bold uppercase tracking-widest transition-all border border-white/10">Español</button>
-              <button onClick={() => { setLang('fr'); setShowSummerCampLangModal(false); }} className="bg-white/5 hover:bg-white hover:text-black text-white py-4 rounded-xl font-bold uppercase tracking-widest transition-all border border-white/10">Français</button>
-            </div>
-          </div>
-        </div>
       )}
     </div>
   );

@@ -116,7 +116,7 @@ target audience
 ACADEMY_TABLES_PLACEHOLDER
 
 contact us
-For more information and to apply for the Basketball Academy program please contact us at e.robbiani@pallacanestrovarese.it`
+For more information and to apply for the Basketball Academy program please contact us at f.bellotto@pallacanestrovarese.it`
   },
   {
     id: "full-time",
@@ -149,7 +149,7 @@ when and where
 Our premium facilities—including the Foresteria Elite Housing and the via Pirandello Campus—are strategically located within a 5-minute walk of each other. This integrated layout optimizes daily transitions for the duration of the program, which runs from late August through late June, allowing athletes to focus entirely on their rigorous training schedule.
 
 pricing
-Please contact us or click here for detailed pricing information tailored to your specific needs.`
+Please contact us at f.bellotto@pallacanestrovarese.it for detailed pricing information tailored to your specific needs.`
   },
   {
     id: "summer-camp",
@@ -214,11 +214,24 @@ Strategic Development: Attend coaches' meetings to understand the tactical and s
 
 Youth Development: Contribute to the future of the sport by assisting the coaching staff of our youth teams.
 
+what's included?
+WHAT_IS_INCLUDED_TABLE_PLACEHOLDER
+
+our elite housing
+Designed with a focus on both modern convenience and tranquil living, our newly constructed dormitory offers a premium residential experience. This facility is more than just a place to stay; it is a thoughtfully curated environment where students and professionals can thrive, relax, and build community.
+The residence features 14 well-appointed rooms, offering a variety of layouts including both private single suites and shared double rooms. Each living space has been crafted with contemporary aesthetics and ergonomic furniture to ensure a productive and restful atmosphere.
+Life here extends beyond the bedroom. Residents have access to a suite of premium amenities designed to foster connection and ease:
+HOUSING_FEATURES_PLACEHOLDER
+HOUSING_EFFICIENCY_PLACEHOLDER
+[img]https://i.imgur.com/vA5u7QX.png[/img]
+[img]https://i.imgur.com/VhfguSQ.png[/img]
+[img]https://i.imgur.com/mYkilog.png[/img]
+
 when and where
 The program will be hosted across our premier facilities, specifically the Foresteria Elite Housing and our Campus in via Pirandello. These two flagship locations are strategically situated just a 5-minute walk from one another, ensuring seamless transitions between residency and training. This integrated logistical setup allows athletes to maximize their time and focus entirely on their professional development.
 
 pricing
-Please contact us or click here for detailed pricing information tailored to your specific needs.`
+The program has a price of €1.500 a month. Please contact us for detailed pricing information or any other general information tailored to your specific needs at f.bellotto@pallacanestrovarese.it.`
   },
   {
     id: "summer-prog",
@@ -240,11 +253,18 @@ Our state-of-the-art facilities and specialized training programs have been spec
 
 In addition to our youth-focused initiatives, we also cater extensively to Medium Level Senior teams who are seeking the perfect strategic balance between professional-grade logistics and high-quality athletic preparation. Whether your objective is the long-term development of emerging young prospects or the meticulous refining of senior-level strategies ahead of a new season, our camp provides the comprehensive, tailored support necessary for success. We take pride in offering a versatile platform where every team, regardless of their specific competitive level, can find the professional tools and dedicated environment they need to excel.
 
+what we offer
+WHAT_WE_OFFER_TABLE_PLACEHOLDER
+
+extra services
+BOXES: tourist options: Within a 40-minute journey, your team can discover Milano, Como, Maggiore Lake, Lugano, Switzerland, and any other city in the area. | training at the arena | extra trainings
+[img]https://i.imgur.com/MafMwTk.png[/img]
+
 when and where
 Experience elite 400 sqm accommodations with private gardens, located just five minutes from the arena. The camp requires a minimum stay of 1 week (7 days, 6 nights), tailored to your team’s specific needs and availability. To ensure total relaxation, we manage all logistics: two 9-seat vans provide seamless airport transfers for both arrival and departure. This setup offers the perfect balance of privacy and community for a stress-free, professional training experience.
 
 pricing
-Please contact us or click here for detailed pricing information tailored to your specific needs.`,
+Please contact us at f.bellotto@pallacanestrovarese.it for more detailed information tailored to your specific needs.`,
     successStoryLink: "https://www.instagram.com/reel/C87rC5aI2Xz/"
   },
   {
