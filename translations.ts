@@ -111,14 +111,18 @@ Impegnandosi in un mandato completo di quattro anni all'interno del nostro siste
 
 le nostre offerte
 OFFERS_TABLES_PLACEHOLDER
-Nessun programma include voli, visti, pratiche burocratiche, trasporto da/per l'aeroporto, trasporto locale
+INFO_BOX: Nessun programma include voli, visti, pratiche burocratiche, trasporto da/per l'aeroporto, trasporto locale
 
 il pacchetto giocatore d'élite
 Questo pacchetto garantisce un ambiente personalizzato e ad alta intensità dove ogni minuto in campo è ottimizzato per una crescita di livello d'élite. Il pacchetto giocatore d'élite è disponibile solo per il Programma Premium.
 ELITE_PACKAGE_PLACEHOLDER
 
-Quando e dove
-Le nostre strutture premium, tra cui la Foresteria Elite Housing e il Campus di via Pirandello, sono strategicamente posizionate a 5 minuti a piedi l'una dall'altra. Questo layout integrato ottimizza le transizioni quotidiane per la durata del programma, che va da fine agosto a fine giugno, consentendo agli atleti di concentrarsi interamente sul loro rigoroso programma di allenamento.
+quando
+TIMELINE: Agosto 2026: Arrivo e orientamento | Settembre 2026: Inizio degli allenamenti e della scuola | Gennaio 2027: Valutazione di metà stagione | Giugno 2027: Conclusione del programma e valutazioni finali
+
+dove
+Le nostre strutture premium, tra cui la Foresteria Elite Housing e il Campus di via Pirandello, sono strategicamente posizionate a 5 minuti a piedi l'una dall'altra. Questo layout integrato ottimizza le transizioni quotidiane per la durata del programma, consentendo agli atleti di concentrarsi interamente sul loro rigoroso programma di allenamento.
+MAP: https://www.google.com/maps/dir/Seconda+Strada+Varese+-+Abbigliamento,+scarpe+e+accessori+moda,+Via+Giovanni+Borghi,+12,+21100+Varese+VA/Campus+Varese,+Via+Luigi+Pirandello,+31,+21100+Varese+VA/@45.8363203,8.7962555,16z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x47867fad6f946d8b:0x84ecbc071b6f2b60!2m2!1d8.7981638!2d45.8337092!1m5!1m1!1s0x47867f004a963285:0x68ef706dc0f95da5!2m2!1d8.8028662!2d45.8386915!3e2?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D
 
 prezzi
 Contattaci all'indirizzo f.bellotto@pallacanestrovarese.it per informazioni dettagliate sui prezzi in base alle tue esigenze specifiche.`
@@ -140,14 +144,18 @@ Al comprometerse con un mandato completo de cuatro años dentro de nuestro siste
 
 nuestras ofertas
 OFFERS_TABLES_PLACEHOLDER
-Ningún programa incluye vuelos, visado, trámites, transporte desde/hacia el aeropuerto, transporte local
+INFO_BOX: Ningún programa incluye vuelos, visado, trámites, transporte desde/hacia el aeropuerto, transporte local
 
 el paquete de jugador de élite
 Este paquete garantiza un entorno personalizado y de alta intensidad donde cada minuto en la cancha se optimiza para el crecimiento de nivel élite. El paquete de jugador de élite solo está disponible para el Programa Premium.
 ELITE_PACKAGE_PLACEHOLDER
 
-Cuándo y dónde
-Nuestras instalaciones premium, que incluyen la Foresteria Elite Housing y el Campus de via Pirandello, están ubicadas estratégicamente a 5 minutos a pie una de la otra. Este diseño integrado optimiza las transiciones diarias durante la duración del programa, que se extiende desde finales de agosto hasta finales de junio, lo que permite a los atletas concentrarse por completo en su riguroso programa de entrenamiento.
+cuándo
+TIMELINE: Agosto 2026: Llegada y orientación | Septiembre 2026: Inicio de entrenamientos y escuela | Enero 2027: Evaluación de mitad de temporada | Junio 2027: Conclusión del programa y evaluaciones finales
+
+dónde
+Nuestras instalaciones premium, que incluyen la Foresteria Elite Housing y el Campus de via Pirandello, están ubicadas estratégicamente a 5 minutos a pie una de la otra. Este diseño integrado optimiza las transiciones diarias durante la duración del programa, lo que permite a los atletas concentrarse por completo en su riguroso programa de entrenamiento.
+MAP: https://www.google.com/maps/dir/Seconda+Strada+Varese+-+Abbigliamento,+scarpe+e+accessori+moda,+Via+Giovanni+Borghi,+12,+21100+Varese+VA/Campus+Varese,+Via+Luigi+Pirandello,+31,+21100+Varese+VA/@45.8363203,8.7962555,16z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x47867fad6f946d8b:0x84ecbc071b6f2b60!2m2!1d8.7981638!2d45.8337092!1m5!1m1!1s0x47867f004a963285:0x68ef706dc0f95da5!2m2!1d8.8028662!2d45.8386915!3e2?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D
 
 precios
 Contáctanos en f.bellotto@pallacanestrovarese.it para obtener información detallada sobre los precios adaptada a tus necesidades específicas.`
@@ -169,14 +177,18 @@ En s'engageant pour un mandat complet de quatre ans au sein de notre système in
 
 nos offres
 OFFERS_TABLES_PLACEHOLDER
-Aucun programme n'inclut les vols, les visas, les formalités administratives, le transport depuis/vers l'aéroport, le transport local
+INFO_BOX: Aucun programme n'inclut les vols, les visas, les formalités administratives, le transport depuis/vers l'aéroport, le transport local
 
 le forfait joueur d'élite
 Ce forfait garantit un environnement personnalisé et de haute intensité où chaque minute sur le terrain est optimisée pour une croissance de niveau élite. Le forfait joueur d'élite est uniquement disponible pour le Programme Premium.
 ELITE_PACKAGE_PLACEHOLDER
 
-Quand et où
-Nos installations haut de gamme, notamment la Foresteria Elite Housing et le Campus de via Pirandello, sont stratégiquement situées à 5 minutes à pied l'une de l'autre. Cet aménagement intégré optimise les transitions quotidiennes pendant la durée du programme, qui s'étend de fin août à fin juin, permettant aux athlètes de se concentrer entièrement sur leur programme d'entraînement rigoureux.
+quand
+TIMELINE: Août 2026: Arrivée et orientation | Septembre 2026: Début des entraînements et de l'école | Janvier 2027: Évaluation de mi-saison | Juin 2027: Conclusion du programme et évaluations finales
+
+où
+Nos installations haut de gamme, notamment la Foresteria Elite Housing et le Campus de via Pirandello, sont stratégiquement situées à 5 minutes à pied l'une de l'autre. Cet aménagement intégré optimise les transitions quotidiennes pendant la durée du programme, permettant aux athlètes de se concentrer entièrement sur leur programme d'entraînement rigoureux.
+MAP: https://www.google.com/maps/dir/Seconda+Strada+Varese+-+Abbigliamento,+scarpe+e+accessori+moda,+Via+Giovanni+Borghi,+12,+21100+Varese+VA/Campus+Varese,+Via+Luigi+Pirandello,+31,+21100+Varese+VA/@45.8363203,8.7962555,16z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x47867fad6f946d8b:0x84ecbc071b6f2b60!2m2!1d8.7981638!2d45.8337092!1m5!1m1!1s0x47867f004a963285:0x68ef706dc0f95da5!2m2!1d8.8028662!2d45.8386915!3e2?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D
 
 prix
 Contactez-nous à f.bellotto@pallacanestrovarese.it pour obtenir des informations détaillées sur les prix adaptées à vos besoins spécifiques.`
@@ -426,11 +438,10 @@ Le nostre strutture all'avanguardia e i programmi di allenamento specializzati s
 Oltre alle nostre iniziative incentrate sui giovani, ci rivolgiamo ampiamente anche a squadre Senior di Livello Medio che cercano il perfetto equilibrio strategico tra logistica di livello professionale e preparazione atletica di alta qualità. Che il tuo obiettivo sia lo sviluppo a lungo termine di giovani prospetti emergenti o la meticolosa rifinitura delle strategie di livello senior in vista di una nuova stagione, il nostro campo fornisce il supporto completo e su misura necessario per il successo. Siamo orgogliosi di offrire una piattaforma versatile in cui ogni squadra, indipendentemente dal proprio livello competitivo specifico, può trovare gli strumenti professionali e l'ambiente dedicato di cui ha bisogno per eccellere.
 
 cosa offriamo
-WHAT_WE_OFFER_TABLE_PLACEHOLDER
+OFFER_CARDS: home | camere ben arredate\nampia sala da pranzo\narea relax\nspazi verdi privati || utensils | servizio catering personalizzato\npasti preparati con focus sulla nutrizione sportiva || dumbbell | Campo da basket\nAree di allenamento d'élite e fisioterapia\nSala pesi e recupero || plane | trasporto da/per l'aeroporto\nspogliatoio
 
 servizi extra
 BOXES: opzioni turistiche: In soli 40 minuti di viaggio, la tua squadra può scoprire Milano, Como, il Lago Maggiore, Lugano, la Svizzera e qualsiasi altra città della zona. | allenamento all'arena | allenamenti extra
-[img]https://i.imgur.com/MafMwTk.png[/img]
 
 Quando e dove
 Sperimenta alloggi d'élite di 400 mq con giardini privati, situati a soli cinque minuti dall'arena. Il campo richiede un soggiorno minimo di 1 settimana (7 giorni, 6 notti), su misura per le esigenze specifiche e la disponibilità della tua squadra. Per garantire un relax totale, gestiamo tutta la logistica: due furgoni da 9 posti forniscono trasferimenti aeroportuali senza interruzioni sia per l'arrivo che per la partenza. Questa configurazione offre il perfetto equilibrio tra privacy e comunità per un'esperienza di allenamento professionale e senza stress.
@@ -455,11 +466,10 @@ Nuestras instalaciones de última generación y programas de entrenamiento espec
 Además de nuestras iniciativas centradas en los jóvenes, también atendemos ampliamente a equipos Senior de Nivel Medio que buscan el equilibrio estratégico perfecto entre la logística de nivel profesional y la preparación atlética de alta calidad. Ya sea que tu objetivo sea el desarrollo a largo plazo de jóvenes prospectos emergentes o el refinamiento meticuloso de las estrategias de nivel senior antes de una nueva temporada, nuestro campamento brinda el apoyo integral y personalizado necesario para el éxito. Nos enorgullecemos de ofrecer una plataforma versátil donde cada equipo, independientemente de su nivel competitivo específico, puede encontrar las herramientas profesionales y el entorno dedicado que necesitan para sobresalir.
 
 lo que ofrecemos
-WHAT_WE_OFFER_TABLE_PLACEHOLDER
+OFFER_CARDS: home | habitaciones bien equipadas\namplio comedor\nárea de relajación\nespacios verdes privados || utensils | servicio de catering personalizado\ncomidas elaboradas con enfoque en nutrición deportiva || dumbbell | Cancha de baloncesto\nÁreas de entrenamiento de élite y fisioterapia\nSala de pesas y recuperación || plane | traslado desde/hacia el aeropuerto\nvestuario
 
 servicios extra
 BOXES: opciones turísticas: En solo 40 minutos de viaje, tu equipo puede descubrir Milán, Como, el Lago Maggiore, Lugano, Suiza y cualquier otra ciudad de la zona. | entrenamiento en la arena | entrenamientos extra
-[img]https://i.imgur.com/MafMwTk.png[/img]
 
 Cuándo y dónde
 Experimenta alojamientos de élite de 400 metros cuadrados con jardines privados, ubicados a solo cinco minutos de la arena. El campamento requiere una estadía mínima de 1 semana (7 días, 6 noches), adaptada a las necesidades específicas y la disponibilidad de tu equipo. Para garantizar una relajación total, gestionamos toda la logística: dos furgonetas de 9 plazas proporcionan traslados al aeropuerto sin problemas tanto para la llegada como para la salida. Esta configuración ofrece el equilibrio perfecto entre privacidad y comunidad para una experiencia de entrenamiento profesional y sin estrés.
@@ -484,11 +494,10 @@ Nos installations de pointe et nos programmes d'entraînement spécialisés ont 
 En plus de nos initiatives axées sur les jeunes, nous répondons également largement aux équipes Senior de Niveau Moyen qui recherchent l'équilibre stratégique parfait entre une logistique de niveau professionnel et une préparation athlétique de haute qualité. Que votre objectif soit le développement à long terme de jeunes espoirs émergents ou l'affinement méticuleux des stratégies de niveau senior avant une nouvelle saison, notre camp fournit le soutien complet et sur mesure nécessaire au succès. Nous sommes fiers d'offrir une plate-forme polyvalente où chaque équipe, quel que soit son niveau de compétition spécifique, peut trouver les outils professionnels et l'environnement dédié dont elle a besoin pour exceller.
 
 ce que nous offrons
-WHAT_WE_OFFER_TABLE_PLACEHOLDER
+OFFER_CARDS: home | chambres bien aménagées\ngrande salle à manger\nespace détente\nespaces verts privés || utensils | service de restauration personnalisé\nrepas élaborés avec un accent sur la nutrition sportive || dumbbell | Terrain de basket\nZones d'entraînement d'élite et de physiothérapie\nSalle de musculation et de récupération || plane | prise en charge et retour à l'aéroport\nvestiaire
 
 services supplémentaires
 BOXES: options touristiques: En seulement 40 minutes de trajet, votre équipe peut découvrir Milan, Côme, le lac Majeur, Lugano, la Suisse et toute autre ville de la région. | entraînement à l'arène | entraînements supplémentaires
-[img]https://i.imgur.com/MafMwTk.png[/img]
 
 Quand et où
 Découvrez des hébergements d'élite de 400 m² avec jardins privés, situés à seulement cinq minutes de l'arène. Le camp nécessite un séjour minimum d'une semaine (7 jours, 6 nuits), adapté aux besoins spécifiques et à la disponibilité de votre équipe. Pour assurer une détente totale, nous gérons toute la logistique : deux fourgonnettes de 9 places assurent des transferts aéroport fluides à l'arrivée et au départ. Cette configuration offre l'équilibre parfait entre intimité et communauté pour une expérience d'entraînement professionnelle et sans stress.

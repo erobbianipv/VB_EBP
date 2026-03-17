@@ -139,14 +139,18 @@ By committing to a comprehensive four-year tenure within our integrated system, 
 
 our offers
 OFFERS_TABLES_PLACEHOLDER
-Neither program includes flights, Visa, paper work, transportation from/to the airport, local transportation
+INFO_BOX: Neither program includes flights, Visa, paper work, transportation from/to the airport, local transportation
 
 the elite player package
 This package ensures a personalized, high-intensity environment where every minute on the court is optimized for elite-level growth. The elite player package is only available for the Premium Program
 ELITE_PACKAGE_PLACEHOLDER
 
-when and where
-Our premium facilities—including the Foresteria Elite Housing and the via Pirandello Campus—are strategically located within a 5-minute walk of each other. This integrated layout optimizes daily transitions for the duration of the program, which runs from late August through late June, allowing athletes to focus entirely on their rigorous training schedule.
+when
+TIMELINE: August 2026: Arrival and orientation | September 2026: Start of training and school | January 2027: Mid-season evaluation | June 2027: Program conclusion and final assessments
+
+where
+Our premium facilities—including the Foresteria Elite Housing and the via Pirandello Campus—are strategically located within a 5-minute walk of each other. This integrated layout optimizes daily transitions for the duration of the program, allowing athletes to focus entirely on their rigorous training schedule.
+MAP: https://www.google.com/maps/dir/Seconda+Strada+Varese+-+Abbigliamento,+scarpe+e+accessori+moda,+Via+Giovanni+Borghi,+12,+21100+Varese+VA/Campus+Varese,+Via+Luigi+Pirandello,+31,+21100+Varese+VA/@45.8363203,8.7962555,16z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x47867fad6f946d8b:0x84ecbc071b6f2b60!2m2!1d8.7981638!2d45.8337092!1m5!1m1!1s0x47867f004a963285:0x68ef706dc0f95da5!2m2!1d8.8028662!2d45.8386915!3e2?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D
 
 pricing
 Please contact us at f.bellotto@pallacanestrovarese.it for detailed pricing information tailored to your specific needs.`
@@ -229,6 +233,7 @@ HOUSING_EFFICIENCY_PLACEHOLDER
 
 when and where
 The program will be hosted across our premier facilities, specifically the Foresteria Elite Housing and our Campus in via Pirandello. These two flagship locations are strategically situated just a 5-minute walk from one another, ensuring seamless transitions between residency and training. This integrated logistical setup allows athletes to maximize their time and focus entirely on their professional development.
+MAP: https://www.google.com/maps/dir/Seconda+Strada+Varese+-+Abbigliamento,+scarpe+e+accessori+moda,+Via+Giovanni+Borghi,+12,+21100+Varese+VA/Campus+Varese,+Via+Luigi+Pirandello,+31,+21100+Varese+VA/@45.8363203,8.7962555,16z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x47867fad6f946d8b:0x84ecbc071b6f2b60!2m2!1d8.7981638!2d45.8337092!1m5!1m1!1s0x47867f004a963285:0x68ef706dc0f95da5!2m2!1d8.8028662!2d45.8386915!3e2?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D
 
 pricing
 The program has a price of €1.500 a month. Please contact us for detailed pricing information or any other general information tailored to your specific needs at f.bellotto@pallacanestrovarese.it.`
@@ -254,11 +259,10 @@ Our state-of-the-art facilities and specialized training programs have been spec
 In addition to our youth-focused initiatives, we also cater extensively to Medium Level Senior teams who are seeking the perfect strategic balance between professional-grade logistics and high-quality athletic preparation. Whether your objective is the long-term development of emerging young prospects or the meticulous refining of senior-level strategies ahead of a new season, our camp provides the comprehensive, tailored support necessary for success. We take pride in offering a versatile platform where every team, regardless of their specific competitive level, can find the professional tools and dedicated environment they need to excel.
 
 what we offer
-WHAT_WE_OFFER_TABLE_PLACEHOLDER
+SUMMER_PROG_OFFER_BOXES
 
 extra services
-BOXES: tourist options: Within a 40-minute journey, your team can discover Milano, Como, Maggiore Lake, Lugano, Switzerland, and any other city in the area. | training at the arena | extra trainings
-[img]https://i.imgur.com/MafMwTk.png[/img]
+SUMMER_PROG_EXTRA_SERVICES_BOXES
 
 when and where
 Experience elite 400 sqm accommodations with private gardens, located just five minutes from the arena. The camp requires a minimum stay of 1 week (7 days, 6 nights), tailored to your team’s specific needs and availability. To ensure total relaxation, we manage all logistics: two 9-seat vans provide seamless airport transfers for both arrival and departure. This setup offers the perfect balance of privacy and community for a stress-free, professional training experience.
