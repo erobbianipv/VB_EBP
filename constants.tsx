@@ -116,7 +116,7 @@ target audience
 ACADEMY_TABLES_PLACEHOLDER
 
 contact us
-For more information and to apply for the Basketball Academy program please contact us at f.bellotto@pallacanestrovarese.it`
+For more information and to apply for the Basketball Academy program please contact us at ebp@pallacanestrovarese.it`
   },
   {
     id: "full-time",
@@ -153,7 +153,7 @@ Our premium facilities—including the Foresteria Elite Housing and the via Pira
 MAP: https://www.google.com/maps/dir/Seconda+Strada+Varese+-+Abbigliamento,+scarpe+e+accessori+moda,+Via+Giovanni+Borghi,+12,+21100+Varese+VA/Campus+Varese,+Via+Luigi+Pirandello,+31,+21100+Varese+VA/@45.8363203,8.7962555,16z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x47867fad6f946d8b:0x84ecbc071b6f2b60!2m2!1d8.7981638!2d45.8337092!1m5!1m1!1s0x47867f004a963285:0x68ef706dc0f95da5!2m2!1d8.8028662!2d45.8386915!3e2?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D
 
 pricing
-Please contact us at f.bellotto@pallacanestrovarese.it for detailed pricing information tailored to your specific needs.`
+Please contact us at ebp@pallacanestrovarese.it for detailed pricing information tailored to your specific needs.`
   },
   {
     id: "summer-camp",
@@ -236,7 +236,7 @@ The program will be hosted across our premier facilities, specifically the Fores
 MAP: https://www.google.com/maps/dir/Seconda+Strada+Varese+-+Abbigliamento,+scarpe+e+accessori+moda,+Via+Giovanni+Borghi,+12,+21100+Varese+VA/Campus+Varese,+Via+Luigi+Pirandello,+31,+21100+Varese+VA/@45.8363203,8.7962555,16z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x47867fad6f946d8b:0x84ecbc071b6f2b60!2m2!1d8.7981638!2d45.8337092!1m5!1m1!1s0x47867f004a963285:0x68ef706dc0f95da5!2m2!1d8.8028662!2d45.8386915!3e2?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D
 
 pricing
-The program has a price of €1.500 a month. Please contact us for detailed pricing information or any other general information tailored to your specific needs at f.bellotto@pallacanestrovarese.it.`
+The program has a price of €1.500 a month. Please contact us for detailed pricing information or any other general information tailored to your specific needs at ebp@pallacanestrovarese.it.`
   },
   {
     id: "summer-prog",
@@ -268,7 +268,7 @@ when and where
 Experience elite 400 sqm accommodations with private gardens, located just five minutes from the arena. The camp requires a minimum stay of 1 week (7 days, 6 nights), tailored to your team’s specific needs and availability. To ensure total relaxation, we manage all logistics: two 9-seat vans provide seamless airport transfers for both arrival and departure. This setup offers the perfect balance of privacy and community for a stress-free, professional training experience.
 
 pricing
-Please contact us at f.bellotto@pallacanestrovarese.it for more detailed information tailored to your specific needs.`,
+Please contact us at ebp@pallacanestrovarese.it for more detailed information tailored to your specific needs.`,
     successStoryLink: "https://www.instagram.com/reel/C87rC5aI2Xz/"
   },
   {

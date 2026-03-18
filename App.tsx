@@ -155,7 +155,7 @@ const TRANSLATIONS = {
     faq4Question: "Come posso raggiungere Varese?",
     faq4Answer: "Il Campus si trova in Via Pirandello a Varese, a 10 minuti a piedi dalla Foresteria e a soli 5 minuti dall'Itelyum Arena, casa della Pallacanestro Varese. Raggiungerci è estremamente comodo poiché tutte le nostre strutture sono perfettamente interconnesse e ben servite dai mezzi pubblici. Se arrivi in aereo, Milano Malpensa (MXP) è l'hub più vicino, situato a soli 30 minuti e collegato direttamente a Varese tramite la linea ferroviaria S50. Per chi viaggia in treno da Milano, frequenti servizi diretti partono dalle stazioni di Milano Centrale, Porta Garibaldi e Cadorna, con tempi di percorrenza medi di 50-60 minuti. Che tu arrivi dall'aeroporto o dal centro città, l'ultimo tratto verso il Campus è rapido e semplice.",
     faq5Question: "Come posso richiedere maggiori informazioni?",
-    faq5Answer: "Puoi richiedere informazioni compilando il modulo presente in ogni sezione del sito cliccando su 'Richiedi Info' o contattandoci direttamente via email all'indirizzo f.bellotto@pallacanestrovarese.it.",
+    faq5Answer: "Puoi richiedere informazioni compilando il modulo presente in ogni sezione del sito cliccando su 'Richiedi Info' o contattandoci direttamente via email all'indirizzo ebp@pallacanestrovarese.it.",
     // Summer Camp
     twoDifferentOptions: "Due diverse opzioni",
     residentialCamp: "Camp Residenziale",
@@ -462,7 +462,7 @@ const TRANSLATIONS = {
     faq4Question: "how do i get to varese?",
     faq4Answer: "The Campus is situated on Via Pirandello in Varese, a 10-minute walk from the guesthouse and just 5 minutes from the Itelyum Arena, home of Pallacanestro Varese. Reaching us is highly convenient as all our facilities are seamlessly interconnected and well-served by public transport. If you are arriving by air, Milan Malpensa (MXP) is the closest hub, located only 30 minutes away and connected directly to Varese via the S50 train line. For those traveling by rail from Milan, frequent direct services depart from Milano Centrale, Porta Garibaldi, and Cadorna stations, with travel times averaging 50–60 minutes. Whether you are arriving from the airport or the city center, the final stretch to the Campus is quick and straightforward.",
     faq5Question: "How can I request more information?",
-    faq5Answer: "You can request information by filling out the form in any section of the site by clicking 'Request Info' or by contacting us directly via email at f.bellotto@pallacanestrovarese.it.",
+    faq5Answer: "You can request information by filling out the form in any section of the site by clicking 'Request Info' or by contacting us directly via email at ebp@pallacanestrovarese.it.",
     // Summer Camp
     twoDifferentOptions: "Two different options",
     residentialCamp: "Residential Camp",
@@ -769,7 +769,7 @@ const TRANSLATIONS = {
     faq4Question: "¿Cómo llego a Varese?",
     faq4Answer: "El Campus está situado en Via Pirandello en Varese, a 10 minutos a pie de la casa de huéspedes y a solo 5 minutos del Itelyum Arena, sede de Pallacanestro Varese. Llegar a nosotros es muy conveniente ya que todas nuestras instalaciones están perfectamente interconectadas y bien comunicadas por transporte público. Si llega por aire, Milán Malpensa (MXP) es el centro más cercano, ubicado a solo 30 minutos y conectado directamente con Varese a través de la línea de tren S50. Para quienes viajan por ferrocarril desde Milán, salen servicios directos frecuentes desde las estaciones de Milano Centrale, Porta Garibaldi y Cadorna, con tiempos de viaje de 50 a 60 minutos de media. Ya sea que llegue desde el aeropuerto o desde el centro de la ciudad, el último tramo hasta el Campus es rápido y sencillo.",
     faq5Question: "¿Cómo puedo solicitar más información?",
-    faq5Answer: "Puedes solicitar información completando el formulario en cualquier sección del sitio haciendo clic en 'Solicitar Información' o contactándonos directamente por correo electrónico en f.bellotto@pallacanestrovarese.it.",
+    faq5Answer: "Puedes solicitar información completando el formulario en cualquier sección del sitio haciendo clic en 'Solicitar Información' o contactándonos directamente por correo electrónico en ebp@pallacanestrovarese.it.",
     // Summer Camp
     twoDifferentOptions: "Dos opciones diferentes",
     residentialCamp: "Campamento Residencial",
@@ -1076,7 +1076,7 @@ const TRANSLATIONS = {
     faq4Question: "Comment se rendre à Varèse ?",
     faq4Answer: "Le Campus est situé Via Pirandello à Varèse, à 10 minutes à pied de la maison d'hôtes et à seulement 5 minutes de l'Itelyum Arena, domicile de Pallacanestro Varese. Nous rejoindre est très pratique car toutes nos installations sont parfaitement interconnectées et bien desservies par les transports en commun. Si vous arrivez par avion, Milan Malpensa (MXP) est le hub le plus proche, situé à seulement 30 minutes et relié directement à Varèse via la ligne de train S50. Pour ceux qui voyagent en train depuis Milan, des services directs fréquents partent des gares de Milano Centrale, Porta Garibaldi et Cadorna, avec des temps de trajet de 50 à 60 minutes en moyenne. Que vous arriviez de l'aéroport ou du centre-ville, le dernier tronçon vers le Campus est rapide et simple.",
     faq5Question: "Comment puis-je demander plus d'informations ?",
-    faq5Answer: "Vous pouvez demander des informations en remplissant le formulaire dans n'importe quelle section du site en cliquant sur 'Demander des Infos' ou en nous contactant directement par e-mail à l'adresse f.bellotto@pallacanestrovarese.it.",
+    faq5Answer: "Vous pouvez demander des informations en remplissant le formulaire dans n'importe quelle section du site en cliquant sur 'Demander des Infos' ou en nous contactant directement par e-mail à l'adresse ebp@pallacanestrovarese.it.",
     // Summer Camp
     twoDifferentOptions: "Deux options différentes",
     residentialCamp: "Camp Résidentiel",
@@ -1533,8 +1533,8 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
 
   const renderLineWithLinks = (line: string, lIdx: number) => {
     const clickHereText = t('clickHere');
-    const email1 = "e.robbiani@pallacanestrovarese.it";
-    const email2 = "f.bellotto@pallacanestrovarese.it";
+    const email1 = "ebp@pallacanestrovarese.it";
+    const email2 = "ebp@pallacanestrovarese.it";
     
     const escapeRegExp = (string: string) => string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     const regex = new RegExp(`(${escapeRegExp(clickHereText)}|${escapeRegExp(email1)}|${escapeRegExp(email2)})`, 'g');
@@ -2309,7 +2309,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                 </h4>
               );
             }
-            if (line.includes("e.robbiani@pallacanestrovarese.it") || line.includes("f.bellotto@pallacanestrovarese.it") || line.includes(t('clickHere'))) {
+            if (line.includes("ebp@pallacanestrovarese.it") || line.includes(t('clickHere'))) {
               return renderLineWithLinks(line, lIdx);
             }
             if (line.startsWith("BOXES:")) {
@@ -2747,7 +2747,7 @@ const App: React.FC = () => {
       `Information Request:\n${formState.message}`
     );
 
-    window.location.href = `mailto:f.bellotto@pallacanestrovarese.it?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:ebp@pallacanestrovarese.it?subject=${subject}&body=${body}`;
     setSubmissionStatus('submitted');
   };
 
@@ -2959,11 +2959,11 @@ const App: React.FC = () => {
             </div>
           </div>
           <div className={`flex-grow flex flex-col ${isOther ? 'p-2 sm:p-3 md:p-4' : 'p-3 sm:p-5 md:p-8'}`}>
-            <h3 className={`font-oswald font-bold uppercase mb-1 md:mb-2 group-hover:text-red-varese transition-colors line-clamp-1 ${isOther ? 'text-[10px] sm:text-sm md:text-lg' : 'text-xs sm:text-lg md:text-2xl'}`}>{translatedProg.title}</h3>
-            <p className={`text-red-varese font-bold uppercase tracking-widest mb-2 md:mb-4 flex-grow line-clamp-1 ${isOther ? 'text-[6px] sm:text-[8px] md:text-[9px]' : 'text-[7px] sm:text-[10px]'}`}>{translatedProg.target}</p>
+            <h3 className={`font-oswald font-bold uppercase mb-1 md:mb-2 group-hover:text-red-varese transition-colors line-clamp-1 ${isOther ? 'text-sm md:text-lg' : 'text-base sm:text-lg md:text-2xl'}`}>{translatedProg.title}</h3>
+            <p className={`text-red-varese font-bold uppercase tracking-widest mb-2 md:mb-4 flex-grow line-clamp-1 ${isOther ? 'text-[10px] md:text-xs' : 'text-xs sm:text-sm'}`}>{translatedProg.target}</p>
             <div className={`space-y-1 md:space-y-3 mb-4 md:mb-8 hidden sm:block ${isOther ? 'hidden' : ''}`}>
               {translatedProg.highlights.map((h, i) => (
-                <div key={i} className="flex items-center gap-2 md:gap-3 text-[9px] md:text-[11px] font-semibold text-gray-300 uppercase tracking-wider">
+                <div key={i} className="flex items-center gap-2 md:gap-3 text-xs md:text-sm font-semibold text-gray-300 uppercase tracking-wider">
                   <CheckCircle2 size={12} className="text-red-varese flex-shrink-0" /> {h}
                 </div>
               ))}
@@ -2975,13 +2975,13 @@ const App: React.FC = () => {
                     setPreviousView(view);
                     setView('programDetail');
                   }}
-                  className="flex-1 bg-white/10 text-white hover:bg-white hover:text-black py-2 md:py-3 rounded font-bold uppercase tracking-widest text-[8px] md:text-xs transition-all"
+                  className="flex-1 bg-white/10 text-white hover:bg-white hover:text-black py-2 md:py-3 rounded font-bold uppercase tracking-widest text-[10px] md:text-xs transition-all"
                 >
                   {t('findOutMore')}
                 </button>
                 <a
                   href={
-                    translatedProg.id === 'academy' || translatedProg.id === 'summer-prog' ? "mailto:f.bellotto@pallacanestrovarese.it" :
+                    translatedProg.id === 'academy' || translatedProg.id === 'summer-prog' ? "mailto:ebp@pallacanestrovarese.it" :
                     translatedProg.id === 'full-time' ? "https://store.pallacanestrovarese.it/products/basketball-academy-copia" :
                     translatedProg.id === 'summer-camp' ? "https://store.pallacanestrovarese.it/products/elite-summer-camp?variant=52625081630986" :
                     translatedProg.id === 'internship' ? "https://store.pallacanestrovarese.it/products/coaches-internship-program?variant=52625121313034" :
@@ -2989,7 +2989,7 @@ const App: React.FC = () => {
                   }
                   target={translatedProg.id === 'academy' || translatedProg.id === 'summer-prog' ? "_self" : "_blank"}
                   rel={translatedProg.id === 'academy' || translatedProg.id === 'summer-prog' ? "" : "noopener noreferrer"}
-                  className="flex-1 bg-red-varese text-white hover:bg-red-700 py-2 md:py-3 rounded font-bold uppercase tracking-widest text-[8px] md:text-xs transition-all text-center"
+                  className="flex-1 bg-red-varese text-white hover:bg-red-700 py-2 md:py-3 rounded font-bold uppercase tracking-widest text-[10px] md:text-xs transition-all text-center"
                 >
                   {translatedProg.id === 'academy' || translatedProg.id === 'summer-prog' ? t('contactUs') : t('buyNow')}
                 </a>
@@ -3245,7 +3245,7 @@ const App: React.FC = () => {
                        <div className="mt-8 pt-6 border-t border-white/10">
                           {translatedProg.id === 'academy' || translatedProg.id === 'summer-prog' ? (
                             <a
-                              href="mailto:f.bellotto@pallacanestrovarese.it"
+                              href="mailto:ebp@pallacanestrovarese.it"
                               className="block w-full bg-red-varese text-white py-4 font-bold uppercase tracking-wider hover:bg-red-700 transition-all text-sm rounded-sm text-center"
                             >
                               {t('contactUs')}
@@ -3313,31 +3313,31 @@ const App: React.FC = () => {
                 </div>
               </div>
             )}
-            <div className={`grid ${program.id === 'academy' || program.id === 'player-package' ? 'grid-cols-4' : 'grid-cols-5'} justify-center gap-2 md:gap-8 animate-in slide-in-from-bottom-4 duration-700 delay-300`}>
-              <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-1 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
-                <span className="text-red-varese text-[7px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">{t('target')}</span>
-                <span className="text-black text-[8px] md:text-base font-medium leading-tight block">{program.target}</span>
+            <div className="flex flex-wrap justify-center gap-2 md:gap-8 animate-in slide-in-from-bottom-4 duration-700 delay-300">
+              <div className="flex-1 min-w-[80px] md:min-w-[180px] max-w-[250px] bg-white/90 backdrop-blur-md border border-zinc-200 px-1 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
+                <span className="text-red-varese text-[10px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">{t('target')}</span>
+                <span className="text-black text-xs md:text-base font-medium leading-tight block">{program.target}</span>
               </div>
-              <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-1 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
-                <span className="text-red-varese text-[7px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">{t('timing')}</span>
-                <span className="text-black text-[8px] md:text-base font-medium leading-tight block">{program.timing}</span>
+              <div className="flex-1 min-w-[80px] md:min-w-[180px] max-w-[250px] bg-white/90 backdrop-blur-md border border-zinc-200 px-1 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
+                <span className="text-red-varese text-[10px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">{t('timing')}</span>
+                <span className="text-black text-xs md:text-base font-medium leading-tight block">{program.timing}</span>
               </div>
-              <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-1 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
-                <span className="text-red-varese text-[7px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">{t('where')}</span>
-                <span className="text-black text-[8px] md:text-base font-medium leading-tight block">
+              <div className="flex-1 min-w-[80px] md:min-w-[180px] max-w-[250px] bg-white/90 backdrop-blur-md border border-zinc-200 px-1 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
+                <span className="text-red-varese text-[10px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">{t('where')}</span>
+                <span className="text-black text-xs md:text-base font-medium leading-tight block">
                   {program.id === 'academy' ? t('tbdTogether') : program.id === 'player-package' ? t('campusVarese') : (program.id === 'summer-camp' && lang === 'it') ? 'Foresteria & Campus, Varese' : t('foresteriaCampus')}
                 </span>
               </div>
-              {program.id !== 'player-package' && (
-                <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-1 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
-                  <span className="text-red-varese text-[7px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">{t('subscriptionDeadline')}</span>
-                  <span className="text-black text-[8px] md:text-base font-medium leading-tight block">{program.deadline || '-'}</span>
+              {program.id === 'summer-camp' && (
+                <div className="flex-1 min-w-[80px] md:min-w-[180px] max-w-[250px] bg-white/90 backdrop-blur-md border border-zinc-200 px-1 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
+                  <span className="text-red-varese text-[10px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">{t('subscriptionDeadline')}</span>
+                  <span className="text-black text-xs md:text-base font-medium leading-tight block">{program.deadline || '-'}</span>
                 </div>
               )}
               {program.id !== 'academy' && (
-                <div className="bg-white/90 backdrop-blur-md border border-zinc-200 px-1 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
-                  <span className="text-red-varese text-[7px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">{t('pricing')}</span>
-                  <span className="text-black text-[8px] md:text-base font-medium leading-tight block">
+                <div className="flex-1 min-w-[80px] md:min-w-[180px] max-w-[250px] bg-white/90 backdrop-blur-md border border-zinc-200 px-1 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
+                  <span className="text-red-varese text-[10px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">{t('pricing')}</span>
+                  <span className="text-black text-xs md:text-base font-medium leading-tight block">
                     {program.id === 'summer-camp' ? '€990 or €690' : 
                      program.id === 'player-package' ? '€1.000/10 sessions' :
                      program.id === 'full-time' ? '€15.000/year or €30.000/year' :
@@ -3404,7 +3404,7 @@ const App: React.FC = () => {
                   <div className="mt-auto flex flex-col gap-4 fixed bottom-0 left-0 right-0 p-4 bg-white/90 backdrop-blur-md border-t border-zinc-200 z-50 md:relative md:p-0 md:bg-transparent md:border-t-0 md:z-auto">
                     {program.id === 'academy' || program.id === 'summer-prog' ? (
                       <a
-                        href="mailto:f.bellotto@pallacanestrovarese.it"
+                        href="mailto:ebp@pallacanestrovarese.it"
                         className="w-full bg-red-varese text-white py-4 md:py-5 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg shadow-xl shadow-red-600/20 text-center flex items-center justify-center group"
                       >
                         {t('contactUs')} <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
@@ -3448,16 +3448,16 @@ const App: React.FC = () => {
                     )}
                     
                     <div className="flex gap-2 md:flex-col md:gap-4">
-                      <button 
-                        onClick={() => onRequestInfo(program)} 
-                        className="flex-1 border border-zinc-300 text-black py-3 md:py-4 font-bold uppercase tracking-wider hover:bg-zinc-900 hover:text-white transition-all text-xs rounded-lg"
+                      <a 
+                        href={lang === 'it' ? "https://form.jotform.com/260762009489060" : "https://form.jotform.com/260762756235361"}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 border border-zinc-300 text-black py-3 md:py-4 font-bold uppercase tracking-wider hover:bg-zinc-900 hover:text-white transition-all text-xs rounded-lg text-center flex items-center justify-center"
                       >
                         {t('requestMoreInfo')}
-                      </button>
-
-                      <a href="https://drive.google.com/file/d/1PQ7iSTdj0XC4TCMzENjinLr8Udv38-oW/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="flex-1 border border-zinc-200 text-black py-3 font-bold uppercase tracking-widest hover:text-zinc-900 hover:border-zinc-400 transition-all text-[9px] md:text-xs rounded-lg text-center flex items-center justify-center">
-                        {t('downloadBrochure')}
                       </a>
+
+
                     </div>
                     
                     {program.successStoryLink && (
@@ -3479,27 +3479,22 @@ const App: React.FC = () => {
                 
                 <div className="mt-16 flex flex-col sm:flex-row gap-4 justify-center items-center max-w-4xl mx-auto">
                   <a
-                    href={program.id === 'academy' || program.id === 'summer-prog' ? "mailto:f.bellotto@pallacanestrovarese.it" : program.id === 'full-time' ? "https://store.pallacanestrovarese.it/products/basketball-academy-copia" : program.id === 'summer-camp' ? "https://store.pallacanestrovarese.it/products/elite-summer-camp?variant=52625081630986" : program.id === 'internship' ? "https://store.pallacanestrovarese.it/products/coaches-internship-program?variant=52625121313034" : "#"}
+                    href={program.id === 'academy' || program.id === 'summer-prog' ? "mailto:ebp@pallacanestrovarese.it" : program.id === 'full-time' ? "https://store.pallacanestrovarese.it/products/basketball-academy-copia" : program.id === 'summer-camp' ? "https://store.pallacanestrovarese.it/products/elite-summer-camp?variant=52625081630986" : program.id === 'internship' ? "https://store.pallacanestrovarese.it/products/coaches-internship-program?variant=52625121313034" : "#"}
                     target={program.id === 'full-time' || program.id === 'summer-camp' || program.id === 'internship' ? "_blank" : "_self"}
                     rel={program.id === 'full-time' || program.id === 'summer-camp' || program.id === 'internship' ? "noopener noreferrer" : ""}
                     className="w-full sm:w-auto flex-1 bg-red-varese text-white py-4 md:py-5 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg shadow-xl shadow-red-600/20 text-center flex items-center justify-center group"
                   >
                     {program.id === 'academy' || program.id === 'summer-prog' ? t('contactUs') : t('buyNow')} <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
                   </a>
-                  <button 
-                    onClick={() => onRequestInfo(program)} 
-                    className="w-full sm:w-auto flex-1 border border-zinc-300 text-black py-4 md:py-5 font-bold uppercase tracking-wider hover:bg-zinc-900 hover:text-white transition-all text-sm rounded-lg"
-                  >
-                    {t('requestMoreInfo')}
-                  </button>
                   <a 
-                    href="https://drive.google.com/file/d/1PQ7iSTdj0XC4TCMzENjinLr8Udv38-oW/view?usp=drive_link" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                    href={lang === 'it' ? "https://form.jotform.com/260762009489060" : "https://form.jotform.com/260762756235361"}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-full sm:w-auto flex-1 border border-zinc-300 text-black py-4 md:py-5 font-bold uppercase tracking-wider hover:bg-zinc-900 hover:text-white transition-all text-sm rounded-lg text-center flex items-center justify-center"
                   >
-                    {t('downloadBrochure')}
+                    {t('requestMoreInfo')}
                   </a>
+
                 </div>
               </div>
             </div>
@@ -3932,24 +3927,20 @@ const App: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/40 to-transparent md:bg-gradient-to-r"></div>
             </div>
             <div className="md:w-[60%] p-6 md:p-12 flex flex-col overflow-y-visible">
-                {submissionStatus === 'submitted' ? (
-                  <SubmissionSuccessMessage />
-                ) : (
                 <div className="flex-grow flex flex-col h-full animate-in slide-in-from-right-8 duration-500">
                   <div className="flex items-center gap-2 mb-8 cursor-pointer group w-fit" onClick={() => setIsApplying(false)}><ArrowRight className="rotate-180 text-red-varese group-hover:-translate-x-1 transition-transform" size={16} /><span className="text-[10px] font-bold uppercase tracking-widest text-gray-400 group-hover:text-white">{t('backToDetails')}</span></div>
                   <div className="mb-6"><h3 className="text-white font-oswald text-xl md:text-2xl uppercase mb-2">{t('informationForm')}</h3><p className="text-gray-400 text-xs">{t('informationFormDescription')} <span className="text-red-varese font-bold">{selectedProgram.title}</span>.</p></div>
-                  <form onSubmit={handleJoinSubmit} className="space-y-4 md:space-y-6 flex-grow flex flex-col">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="space-y-1.5"><label className="text-[10px] font-bold uppercase tracking-widest text-red-varese">{t('firstName')}</label><input required type="text" name="firstName" value={formState.firstName} onChange={handleFormChange} placeholder={t('firstNamePlaceholder')} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-varese transition-colors" /></div>
-                      <div className="space-y-1.5"><label className="text-[10px] font-bold uppercase tracking-widest text-red-varese">{t('lastName')}</label><input required type="text" name="lastName" value={formState.lastName} onChange={handleFormChange} placeholder={t('lastNamePlaceholder')} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-varese transition-colors" /></div>
-                    </div>
-                    <div className="space-y-1.5"><label className="text-[10px] font-bold uppercase tracking-widest text-red-varese">{t('organization')}</label><input required type="text" name="organization" value={formState.organization} onChange={handleFormChange} placeholder={t('organizationPlaceholder')} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-varese transition-colors" /></div>
-                    <div className="space-y-1.5"><label className="text-[10px] font-bold uppercase tracking-widest text-red-varese">{t('email')}</label><input required type="email" name="email" value={formState.email} onChange={handleFormChange} placeholder={t('emailPlaceholder')} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-varese transition-colors" /></div>
-                    <div className="space-y-1.5 flex-grow"><label className="text-[10px] font-bold uppercase tracking-widest text-red-varese">{t('messageInfo')}</label><textarea required name="message" value={formState.message} onChange={handleFormChange} rows={4} placeholder={t('messageInfoPlaceholder')} className="w-full h-full min-h-[100px] bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-varese transition-colors resize-none" /></div>
-                    <div className="pt-4 mt-auto"><button type="submit" disabled={!isFormValid()} className={`w-full py-4 font-bold uppercase tracking-[0.2em] rounded-lg transition-all flex items-center justify-center gap-3 ${isFormValid() ? 'bg-red-varese hover:bg-red-700 text-white shadow-xl shadow-red-600/20' : 'bg-white/10 text-gray-500 cursor-not-allowed'}`}>{t('requestInfo')} <Send size={18} /></button></div>
-                  </form>
+                  <div className="flex flex-col gap-4 mt-8">
+                    <a 
+                      href={lang === 'it' ? "https://form.jotform.com/260762009489060" : "https://form.jotform.com/260762756235361"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full py-4 font-bold uppercase tracking-[0.2em] rounded-lg transition-all flex items-center justify-center gap-3 bg-red-varese hover:bg-red-700 text-white shadow-xl shadow-red-600/20"
+                    >
+                      {t('requestInfo')} <Send size={18} />
+                    </a>
+                  </div>
                 </div>
-              )}
             </div>
           </div>
         </div>
@@ -3961,21 +3952,16 @@ const App: React.FC = () => {
           <div className="relative bg-zinc-900 w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl shadow-[0_0_100px_rgba(227,6,19,0.3)] border border-white/10 p-8 md:p-12 animate-in zoom-in-95 duration-300">
             <button onClick={handleCloseModal} className="absolute top-6 right-6 z-50 bg-black/50 hover:bg-red-varese text-white p-2 rounded-full transition-colors"><X size={20} /></button>
             <div className="text-center mb-10"><img src={CLUB_LOGO} alt="Logo" className="h-12 mx-auto mb-4" /><h2 className="font-oswald text-3xl md:text-4xl font-bold uppercase mb-2">{t('joinProgram')}</h2><p className="text-gray-400 text-xs uppercase tracking-widest">{t('joinDescription')}</p></div>
-            {submissionStatus === 'submitted' ? (
-              <SubmissionSuccessMessage />
-            ) : (
-              <form onSubmit={handleJoinSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="space-y-1.5"><label className="text-[10px] font-bold uppercase tracking-widest text-red-varese">{t('firstName')}</label><input required type="text" name="firstName" value={formState.firstName} onChange={handleFormChange} placeholder={t('firstNamePlaceholder')} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-varese transition-colors" /></div>
-                  <div className="space-y-1.5"><label className="text-[10px] font-bold uppercase tracking-widest text-red-varese">{t('lastName')}</label><input required type="text" name="lastName" value={formState.lastName} onChange={handleFormChange} placeholder={t('lastNamePlaceholder')} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-varese transition-colors" /></div>
-                </div>
-                <div className="space-y-1.5"><label className="text-[10px] font-bold uppercase tracking-widest text-red-varese">{t('email')}</label><input required type="email" name="email" value={formState.email} onChange={handleFormChange} placeholder={t('emailPlaceholder')} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-varese transition-colors" /></div>
-                <div className="space-y-1.5"><label className="text-[10px] font-bold uppercase tracking-widest text-red-varese">{t('organization')}</label><input required type="text" name="organization" value={formState.organization} onChange={handleFormChange} placeholder={t('organizationPlaceholder')} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-varese transition-colors" /></div>
-                <div className="space-y-1.5 relative"><label className="text-[10px] font-bold uppercase tracking-widest text-red-varese">{t('topicSelect')}</label><div className="relative"><select required name="program" value={formState.program} onChange={handleFormChange} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white appearance-none focus:outline-none focus:border-red-varese transition-colors cursor-pointer"><option value="" disabled className="bg-zinc-900">{t('selectOption')}</option><option value="General Information" className="bg-zinc-900">{t('generalInformation')}</option>{PROGRAMS.map(p => { const translatedProg = translateProgram(p, lang); return <option key={translatedProg.id} value={translatedProg.title} className="bg-zinc-900">{translatedProg.title}</option>})}</select><ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none" size={18} /></div></div>
-                <div className="space-y-1.5"><label className="text-[10px] font-bold uppercase tracking-widest text-red-varese">{t('messageInfo')}</label><textarea required name="message" value={formState.message} onChange={handleFormChange} rows={4} placeholder={t('messageInfoPlaceholder')} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-varese transition-colors resize-none" /></div>
-                <button type="submit" disabled={!isFormValid()} className={`w-full py-4 font-bold uppercase tracking-[0.2em] rounded-lg transition-all flex items-center justify-center gap-3 ${isFormValid() ? 'bg-red-varese hover:bg-red-700 text-white shadow-xl shadow-red-600/20' : 'bg-white/10 text-gray-500 cursor-not-allowed'}`}>{t('requestMoreInfo')} <Send size={18} /></button>
-              </form>
-            )}
+            <div className="flex flex-col gap-4">
+              <a 
+                href={lang === 'it' ? "https://form.jotform.com/260762009489060" : "https://form.jotform.com/260762756235361"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-4 font-bold uppercase tracking-[0.2em] rounded-lg transition-all flex items-center justify-center gap-3 bg-red-varese hover:bg-red-700 text-white shadow-xl shadow-red-600/20"
+              >
+                {t('requestMoreInfo')} <Send size={18} />
+              </a>
+            </div>
           </div>
         </div>
       )}
@@ -4020,8 +4006,7 @@ const App: React.FC = () => {
                         <div className="mt-4 md:mt-8">
                             <h5 className="font-bold uppercase mb-2 md:mb-4 tracking-[0.2em] text-[10px] md:text-xs text-white">{t('contactUs')}</h5>
                             <div className="text-[10px] md:text-sm text-gray-500">
-                                <p>Email: <a href="mailto:f.bellotto@pallacanestrovarese.it" className="hover:text-red-varese transition-colors">f.bellotto@pallacanestrovarese.it</a></p>
-                                <p className="text-[8px] md:text-[10px] uppercase tracking-widest mt-0.5 md:mt-1 text-gray-400">{t('footerCOO')}</p>
+                                <p><a href="mailto:ebp@pallacanestrovarese.it" className="hover:text-red-varese transition-colors">ebp@pallacanestrovarese.it</a></p>
                             </div>
                         </div>
                     </div>
