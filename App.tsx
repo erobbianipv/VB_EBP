@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import { CLUB_LOGO, ACHIEVEMENTS, STAFF, PROGRAMS, FACILITIES } from './constants';
 import { translateProgram, translateStaff } from './translations';
 import { Program, Facility } from './types';
-import { Trophy, MapPin, Users, Home, GraduationCap, Calendar, ArrowRight, Menu, X, Instagram, Facebook, CheckCircle2, Send, Mail, Linkedin, Star, ChevronDown, ZoomIn, ChevronLeft, ChevronRight, ChevronUp, XCircle, Target, Activity, Brain, BarChart, HeartPulse, Dumbbell, ExternalLink, Utensils, Plane, Landmark, Megaphone, Stethoscope, LineChart, Play } from 'lucide-react';
+import { Trophy, MapPin, Users, Home, GraduationCap, Calendar, ArrowRight, Menu, X, Instagram, Facebook, CheckCircle2, Send, Mail, Linkedin, Star, ChevronDown, ZoomIn, ChevronLeft, ChevronRight, ChevronUp, XCircle, Target, Activity, Brain, BarChart, HeartPulse, Dumbbell, ExternalLink, Utensils, Plane, Landmark, Megaphone, Stethoscope, LineChart, Play, FileText, Phone, Settings, ClipboardList, Rocket, Info } from 'lucide-react';
 
 type Language = 'it' | 'en' | 'es' | 'fr';
 type View = 'home' | 'programs' | 'palmares' | 'arena' | 'campus' | 'housing' | 'detailedPrograms' | 'programDetail';
@@ -174,6 +174,7 @@ const TRANSLATIONS = {
     lunch: "Pranzo",
     applyNowBtn: "Iscriviti ora",
     depositNotice: "Iscrivendoti ora è richiesto un deposito di €290 per tutti i tipi di camp.<br className=\"hidden md:block\" /> I dettagli sul saldo finale seguiranno successivamente.",
+    siblingDiscount: "Siamo lieti di offrire uno sconto del 10% per i fratelli, applicabile alle iscrizioni sia per il Day Camp che per il Residential Camp per le famiglie che iscrivono due figli.",
     howToSubscribe: "Come iscriversi",
     depositDesc: "Per registrarsi al Pallacanestro Varese Elite Summer Camp, è richiesto un deposito anticipato di €290 sia per il Camp Residenziale che per il Day Camp.",
     followSteps: "Segui questi passaggi per completare la tua registrazione:",
@@ -256,6 +257,11 @@ const TRANSLATIONS = {
     collaborationClubs: "Collaborazione con club, federazioni nazionali o accademie locali",
     ourBrand: "Il nostro marchio",
     thePillars: "I Pilastri",
+    timelineContactUs: "Contattaci",
+    timelineDefineLocation: "Definisci la location",
+    timelineDefineType: "Definisci il tipo di accademia",
+    timelineOrgSteps: "Passaggi organizzativi",
+    timelineLaunch: "Lancio dell'accademia",
     fundamentals: "Fondamentali",
     sportsScience: "Scienza dello Sport",
     basketballLeadership: "Leadership nel Basket",
@@ -296,8 +302,8 @@ const TRANSLATIONS = {
     theFlexiblePersonalizedChoice: "La Scelta Flessibile e Personalizzata",
     whatsIncluded: "Cosa è incluso?",
     accomodation: "Alloggio",
-    housing: "Alloggio: Camera singola nel nostro dormitorio",
-    food: "Cibo: Pranzo e Cena",
+    housing: "Camera singola nei nostri alloggi d'élite",
+    food: "Colazione, pranzo e cena",
     coaching: "Allenamento (Coaching)",
     serieAPractice: "Partecipazione agli allenamenti di Serie A",
     coachesMeetings: "Riunioni degli allenatori",
@@ -481,6 +487,7 @@ const TRANSLATIONS = {
     lunch: "Lunch",
     applyNowBtn: "Apply Now",
     depositNotice: "By applying now a €290 advance deposit is required for all camp types.<br className=\"hidden md:block\" /> Details on final balance payments will follow shortly.",
+    siblingDiscount: "We are pleased to offer a 10% sibling discount, applicable to both Day and Residential Camp registrations for families enrolling two children.",
     howToSubscribe: "How to subscribe",
     depositDesc: "To register for the Pallacanestro Varese Elite Summer Camp, an advance deposit of €290 is required for both the Residential Camp and the Day Camp.",
     followSteps: "Please follow these steps to complete your registration:",
@@ -563,6 +570,11 @@ const TRANSLATIONS = {
     collaborationClubs: "Collaboration with clubs, national federations or local academies",
     ourBrand: "Our brand",
     thePillars: "The Pillars",
+    timelineContactUs: "Contact us",
+    timelineDefineLocation: "Define the location",
+    timelineDefineType: "Define the type of academy",
+    timelineOrgSteps: "Organizational steps",
+    timelineLaunch: "Academy launch",
     fundamentals: "Fundamentals",
     sportsScience: "Sports Science",
     basketballLeadership: "Basketball Leadership",
@@ -603,8 +615,8 @@ const TRANSLATIONS = {
     theFlexiblePersonalizedChoice: "The Flexible & Personalized Choice",
     whatsIncluded: "What's included?",
     accomodation: "Accomodation",
-    housing: "Housing: Single room occupancy in our dorm",
-    food: "Food: Lunch & Dinner",
+    housing: "Single room occupancy in our elite housing",
+    food: "Breakfast, lunch & dinner",
     coaching: "Coaching",
     serieAPractice: "Serie A Practice attendance",
     coachesMeetings: "Coaches meetings",
@@ -788,6 +800,7 @@ const TRANSLATIONS = {
     lunch: "Almuerzo",
     applyNowBtn: "Aplica Ahora",
     depositNotice: "Al aplicar ahora, se requiere un depósito anticipado de €290 para todos los tipos de campamento.<br className=\"hidden md:block\" /> Los detalles sobre los pagos del saldo final seguirán en breve.",
+    siblingDiscount: "Nos complace ofrecer un descuento del 10% para hermanos, aplicable a las inscripciones tanto del Day Camp como del Residential Camp para familias que inscriban a dos niños.",
     howToSubscribe: "Cómo suscribirse",
     depositDesc: "Para registrarse en el Pallacanestro Varese Elite Summer Camp, se requiere un depósito anticipado de €290 tanto para el Campamento Residencial como para el Campamento de Día.",
     followSteps: "Sigue estos pasos para completar tu registro:",
@@ -870,6 +883,11 @@ const TRANSLATIONS = {
     collaborationClubs: "Colaboración con clubes, federaciones nacionales o academias locales",
     ourBrand: "Nuestra marca",
     thePillars: "Los Pilares",
+    timelineContactUs: "Contáctanos",
+    timelineDefineLocation: "Definir la ubicación",
+    timelineDefineType: "Definir el tipo de academia",
+    timelineOrgSteps: "Pasos organizativos",
+    timelineLaunch: "Lanzamiento de la academia",
     fundamentals: "Fundamentos",
     sportsScience: "Ciencia del Deporte",
     basketballLeadership: "Liderazgo en el Baloncesto",
@@ -910,8 +928,8 @@ const TRANSLATIONS = {
     theFlexiblePersonalizedChoice: "La Elección Flexible y Personalizada",
     whatsIncluded: "¿Qué está incluido?",
     accomodation: "Alojamiento",
-    housing: "Vivienda: Habitación individual en nuestro dormitorio",
-    food: "Comida: Almuerzo y Cena",
+    housing: "Habitación individual en nuestro alojamiento de élite",
+    food: "Desayuno, almuerzo y cena",
     coaching: "Entrenamiento (Coaching)",
     serieAPractice: "Asistencia a los entrenamientos de la Serie A",
     coachesMeetings: "Reuniones de entrenadores",
@@ -1095,6 +1113,7 @@ const TRANSLATIONS = {
     lunch: "Déjeuner",
     applyNowBtn: "Postuler Maintenant",
     depositNotice: "En postulant maintenant, un acompte de 290 € est requis pour tous les types de camps.<br className=\"hidden md:block\" /> Les détails sur les paiements du solde final suivront sous peu.",
+    siblingDiscount: "Nous sommes heureux d'offrir une remise de 10 % pour les frères et sœurs, applicable aux inscriptions au Day Camp et au Residential Camp pour les familles inscrivant deux enfants.",
     howToSubscribe: "Comment s'inscrire",
     depositDesc: "Pour vous inscrire au Pallacanestro Varese Elite Summer Camp, un acompte de 290 € est requis pour le Camp Résidentiel et le Camp de Jour.",
     followSteps: "Veuillez suivre ces étapes pour compléter votre inscription :",
@@ -1177,6 +1196,11 @@ const TRANSLATIONS = {
     collaborationClubs: "Collaboration avec des clubs, des fédérations nationales ou des académies locales",
     ourBrand: "Notre marque",
     thePillars: "Les Piliers",
+    timelineContactUs: "Contactez-nous",
+    timelineDefineLocation: "Définir l'emplacement",
+    timelineDefineType: "Définir le type d'académie",
+    timelineOrgSteps: "Étapes organisationnelles",
+    timelineLaunch: "Lancement de l'académie",
     fundamentals: "Fondamentaux",
     sportsScience: "Science du Sport",
     basketballLeadership: "Leadership au Basket",
@@ -1217,8 +1241,8 @@ const TRANSLATIONS = {
     theFlexiblePersonalizedChoice: "Le Choix Flexible et Personnalisé",
     whatsIncluded: "Ce qui est inclus ?",
     accomodation: "Hébergement",
-    housing: "Logement : Chambre individuelle dans notre dortoir",
-    food: "Nourriture : Déjeuner et Dîner",
+    housing: "Chambre individuelle dans notre logement d'élite",
+    food: "Petit-déjeuner, déjeuner et dîner",
     coaching: "Entraînement (Coaching)",
     serieAPractice: "Présence aux entraînements de la Serie A",
     coachesMeetings: "Réunions des entraîneurs",
@@ -1451,7 +1475,11 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
     "extra services",
     "servizi extra",
     "servicios extra",
-    "services supplémentaires"
+    "services supplémentaires",
+    "how does the program work?",
+    "come funziona il programma?",
+    "¿cómo funciona el programa?",
+    "comment fonctionne le programme ?"
   ];
 
   const isTitleMatch = (title: string | null, englishTitle: string) => {
@@ -1495,7 +1523,8 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
       'How to subscribe': ['How to subscribe', 'Come iscriversi', 'Cómo suscribirse', 'Comment s\'inscrire'],
       'what we offer': ['what we offer', 'cosa offriamo', 'lo que ofrecemos', 'ce que nous offrons'],
       'extra services': ['extra services', 'servizi extra', 'servicios extra', 'services supplémentaires'],
-      'the program': ['the program', 'il programma', 'el programa', 'le programme']
+      'the program': ['the program', 'il programma', 'el programa', 'le programme'],
+      'how does the program work?': ['how does the program work?', 'come funziona il programma?', '¿cómo funciona el programa?', 'comment fonctionne le programme ?']
     };
     return translations[englishTitle]?.some(t => title.toLowerCase() === t.toLowerCase()) || title.toLowerCase() === englishTitle.toLowerCase();
   };
@@ -2062,6 +2091,40 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                 </div>
               );
             }
+            if (line.includes("ACADEMY_TIMELINE_PLACEHOLDER")) {
+              const timelineSteps = [
+                { title: t('timelineContactUs'), icon: <Phone className="w-4 h-4 md:w-6 md:h-6 text-white" /> },
+                { title: t('timelineDefineLocation'), icon: <MapPin className="w-4 h-4 md:w-6 md:h-6 text-white" /> },
+                { title: t('timelineDefineType'), icon: <Settings className="w-4 h-4 md:w-6 md:h-6 text-white" /> },
+                { title: t('timelineOrgSteps'), icon: <ClipboardList className="w-4 h-4 md:w-6 md:h-6 text-white" /> },
+                { title: t('timelineLaunch'), icon: <Rocket className="w-4 h-4 md:w-6 md:h-6 text-white" /> }
+              ];
+              return (
+                <div key={lIdx} className="mt-8 mb-8 relative">
+                  <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-zinc-200 transform -translate-x-1/2"></div>
+                  <div className="space-y-8 relative">
+                    {timelineSteps.map((step, i) => (
+                      <div key={i} className="flex flex-col md:flex-row items-center md:justify-between w-full relative">
+                        <div className={`hidden md:flex w-5/12 ${i % 2 === 0 ? 'justify-end pr-8' : 'justify-start pl-8 order-last'}`}>
+                          <div className="bg-white p-4 rounded-xl shadow-sm border border-zinc-200 w-full max-w-sm">
+                            <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider text-lg text-center">{step.title}</h5>
+                          </div>
+                        </div>
+                        <div className="w-8 h-8 md:w-12 md:h-12 absolute top-1/2 left-4 md:left-1/2 transform -translate-y-1/2 -translate-x-1/2 rounded-full bg-red-varese border-4 border-white shadow-md flex items-center justify-center z-10">
+                          {step.icon}
+                        </div>
+                        <div className={`flex md:hidden w-full pl-16 pr-4`}>
+                          <div className="bg-white p-4 rounded-xl shadow-sm border border-zinc-200 w-full">
+                            <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider text-lg">{step.title}</h5>
+                          </div>
+                        </div>
+                        <div className={`hidden md:flex w-5/12 ${i % 2 === 0 ? 'order-last' : ''}`}></div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            }
             if (line.includes("ACADEMY_TABLES_PLACEHOLDER")) {
               return (
                 <div key={lIdx} className="mt-4 flex flex-col xl:flex-row gap-4 w-full">
@@ -2207,38 +2270,45 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
             }
             if (line.includes("WHAT_IS_INCLUDED_TABLE_PLACEHOLDER")) {
               return (
-                <div key={lIdx} className="mt-8 mb-8 w-full">
-                  <div className="bg-white rounded-xl shadow-sm border border-zinc-200 overflow-hidden">
-                    <table className="w-full text-sm text-left">
-                      <tbody className="divide-y divide-zinc-100">
-                        <tr>
-                          <td className="px-6 py-4 font-bold text-zinc-900 w-1/3 align-top bg-zinc-50">{t('accomodation')}:</td>
-                          <td className="px-6 py-4 text-zinc-600">
-                            <ul className="space-y-1">
-                              <li>{t('housing')}</li>
-                              <li>{t('food')}</li>
-                            </ul>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td className="px-6 py-4 font-bold text-zinc-900 w-1/3 align-top bg-zinc-50">{t('coaching')}:</td>
-                          <td className="px-6 py-4 text-zinc-600">
-                            <ul className="space-y-1">
-                              <li>{t('serieAPractice')}</li>
-                              <li>{t('coachesMeetings')}</li>
-                              <li>{t('runDrills')}</li>
-                              <li>{t('playersScouting')}</li>
-                              <li>{t('serieAGames')}</li>
-                              <li>{t('youthTeamsAssistant')}</li>
-                              <li>{t('hudlVideoAnalysis')}</li>
-                            </ul>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td className="px-6 py-4 font-bold text-zinc-900 w-1/3 align-top bg-zinc-50" colSpan={2}>{t('resumeOpportunity')}</td>
-                        </tr>
-                      </tbody>
-                    </table>
+                <div key={lIdx} className="mt-8 mb-8 grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+                  <div className="bg-white rounded-xl shadow-sm border border-zinc-200 overflow-hidden flex flex-col">
+                    <div className="bg-zinc-50 p-6 flex flex-col items-center justify-center border-b border-zinc-100">
+                      <Home className="text-red-varese mb-3" size={32} />
+                      <h4 className="font-bold text-zinc-900 uppercase tracking-wider text-center">{t('accomodation')}</h4>
+                    </div>
+                    <div className="p-6 flex-grow">
+                      <ul className="space-y-3 text-zinc-600 text-sm list-disc pl-5">
+                        <li>{t('housing')}</li>
+                        <li>{t('food')}</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-white rounded-xl shadow-sm border border-zinc-200 overflow-hidden flex flex-col">
+                    <div className="bg-zinc-50 p-6 flex flex-col items-center justify-center border-b border-zinc-100">
+                      <Dumbbell className="text-red-varese mb-3" size={32} />
+                      <h4 className="font-bold text-zinc-900 uppercase tracking-wider text-center">{t('coaching')}</h4>
+                    </div>
+                    <div className="p-6 flex-grow">
+                      <ul className="space-y-3 text-zinc-600 text-sm list-disc pl-5">
+                        <li>{t('serieAPractice')}</li>
+                        <li>{t('coachesMeetings')}</li>
+                        <li>{t('runDrills')}</li>
+                        <li>{t('serieAGames')}</li>
+                        <li>{t('youthTeamsAssistant')}</li>
+                        <li>{t('hudlVideoAnalysis')}</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl shadow-sm border border-zinc-200 overflow-hidden flex flex-col">
+                    <div className="bg-zinc-50 p-6 flex flex-col items-center justify-center border-b border-zinc-100">
+                      <FileText className="text-red-varese mb-3" size={32} />
+                      <h4 className="font-bold text-zinc-900 uppercase tracking-wider text-center">{t('resumeOpportunity')}</h4>
+                    </div>
+                    <div className="p-6 flex-grow flex items-center justify-center">
+                      {/* Empty content as requested, just the title and icon */}
+                    </div>
                   </div>
                 </div>
               );
@@ -2377,10 +2447,10 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
             }
             if (line.startsWith("INFO_BOX:")) {
               return (
-                <div key={lIdx} className="mt-8 bg-zinc-50 border-l-4 border-red-varese p-6 rounded-r-xl shadow-sm">
+                <div key={lIdx} className="mt-8 bg-zinc-50 border border-zinc-200 p-6 rounded-xl shadow-sm">
                   <div className="flex items-start gap-4">
                     <div className="bg-red-varese/10 p-2 rounded-lg">
-                      <CheckCircle2 className="w-5 h-5 text-red-varese" />
+                      <Info className="w-5 h-5 text-red-varese" />
                     </div>
                     <p className="text-zinc-700 font-medium italic leading-relaxed">
                       {line.replace("INFO_BOX:", "").trim()}
@@ -2465,7 +2535,10 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
           } else if (isTitleMatch(section.title, 'extra services') && programId === 'summer-prog') {
             imageUrl = "https://i.imgur.com/VXwjt0o.jpeg";
             imagePosition = 'right';
-          } else if (idx === 2 && !isTitleMatch(section.title, 'the training program') && !isTitleMatch(section.title, 'our elite housing') && programId !== 'full-time') {
+          } else if (isTitleMatch(section.title, 'target audience') && programId === 'academy') {
+            imageUrl = getImage3();
+            imagePosition = 'right';
+          } else if (idx === 2 && !isTitleMatch(section.title, 'the training program') && !isTitleMatch(section.title, 'our elite housing') && programId !== 'full-time' && programId !== 'academy') {
             imageUrl = getImage3();
             imagePosition = 'right';
           } else if (idx === 3 && programId === 'full-time') {
@@ -2578,8 +2651,11 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                 </div>
               )}
               {programId === 'summer-camp' && isTitleMatch(section.title, 'Sample Daily Routine') && (
-                <div className="mt-6 text-center">
+                <div className="mt-6 text-center flex flex-col items-center gap-4">
                   <p className="text-red-varese font-bold text-lg md:text-xl uppercase tracking-wide bg-red-varese/10 inline-block px-6 py-3 rounded-xl border border-red-varese/20 shadow-sm" dangerouslySetInnerHTML={{ __html: t('depositNotice') }}>
+                  </p>
+                  <p className="text-zinc-800 font-medium text-sm md:text-base bg-zinc-100 inline-block px-6 py-3 rounded-xl border border-zinc-200 shadow-sm max-w-2xl">
+                    {t('siblingDiscount')}
                   </p>
                 </div>
               )}

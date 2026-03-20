@@ -112,6 +112,9 @@ the program
 Pallacanestro Varese Academy exports our club’s prestigious heritage and technical excellence to elevate youth basketball worldwide. By partnering with local clubs and national federations, we provide exclusive access to our elite know-how, high-level coaching standards, and strategic organizational expertise. This initiative is designed to foster professional growth through a shared vision, leveraging the power of our brand to drive athletic and operational success on a global scale.
 THE_PILLARS_PLACEHOLDER
 
+how does the program work?
+ACADEMY_TIMELINE_PLACEHOLDER
+
 target audience
 ACADEMY_TABLES_PLACEHOLDER
 
@@ -233,7 +236,6 @@ HOUSING_EFFICIENCY_PLACEHOLDER
 
 when and where
 The program will be hosted across our premier facilities, specifically the Foresteria Elite Housing and our Campus in via Pirandello. These two flagship locations are strategically situated just a 5-minute walk from one another, ensuring seamless transitions between residency and training. This integrated logistical setup allows athletes to maximize their time and focus entirely on their professional development.
-MAP: https://www.google.com/maps/dir/Seconda+Strada+Varese+-+Abbigliamento,+scarpe+e+accessori+moda,+Via+Giovanni+Borghi,+12,+21100+Varese+VA/Campus+Varese,+Via+Luigi+Pirandello,+31,+21100+Varese+VA/@45.8363203,8.7962555,16z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x47867fad6f946d8b:0x84ecbc071b6f2b60!2m2!1d8.7981638!2d45.8337092!1m5!1m1!1s0x47867f004a963285:0x68ef706dc0f95da5!2m2!1d8.8028662!2d45.8386915!3e2?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D
 
 pricing
 The program has a price of €1.500 a month. Please contact us for detailed pricing information or any other general information tailored to your specific needs at ebp@pallacanestrovarese.it.`
@@ -283,7 +285,7 @@ Please contact us at ebp@pallacanestrovarese.it for more detailed information ta
     category: 'other',
     details: `The Professional "Pro-Level" Approach
 Experience the intensity of professional basketball with the Elite Player Package, an exclusive program designed for ambitious athletes born between 2007 and 2012. Over the course of 10 bespoke training sessions, you will work directly with Serie A coaching staff, gaining access to the same elite technical drills used at the highest level of the game. This isn't just practice; it’s a professional immersion designed to refine your skills and elevate your tactical understanding under the guidance of Italy's top basketball experts.
-BOXES: fundamentals|strength & conditioning|basketball analysis|individualized sessions
+BOXES: fundamentals|strength & conditioning|individualized sessions
 
 The Data-Driven & Analytical Focus
 In modern basketball, talent is only half the battle—data is the other. Our Elite Player Package bridges this gap by providing players (ages 12-17) with 10 high-performance sessions backed by advanced analytics and data insights. Each participant receives personalized performance feedback, allowing them to visualize their strengths and identify areas for growth through precise metrics. By combining elite coaching with scientific insights, we help you master your game with a level of clarity usually reserved for professional clubs.

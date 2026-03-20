@@ -23,6 +23,9 @@ il programma
 Pallacanestro Varese Academy esporta il prestigioso patrimonio e l'eccellenza tecnica del nostro club per elevare il basket giovanile in tutto il mondo. Collaborando con club locali e federazioni nazionali, forniamo accesso esclusivo al nostro know-how d'élite, a standard di allenamento di alto livello e a un'esperienza organizzativa strategica. Questa iniziativa è progettata per favorire la crescita professionale attraverso una visione condivisa, sfruttando il potere del nostro marchio per guidare il successo atletico e operativo su scala globale.
 THE_PILLARS_PLACEHOLDER
 
+come funziona il programma?
+ACADEMY_TIMELINE_PLACEHOLDER
+
 pubblico di riferimento
 ACADEMY_TABLES_PLACEHOLDER
 
@@ -53,6 +56,9 @@ el programa
 Pallacanestro Varese Academy exporta el prestigioso patrimonio y la excelencia técnica de nuestro club para elevar el baloncesto juvenil en todo el mundo. Al asociarnos con clubes locales y federaciones nacionales, brindamos acceso exclusivo a nuestro know-how de élite, estándares de entrenamiento de alto nivel y experiencia organizativa estratégica. Esta iniciativa está diseñada para fomentar el crecimiento profesional a través de una visión compartida, aprovechando el poder de nuestra marca para impulsar el éxito atlético y operativo a escala global.
 THE_PILLARS_PLACEHOLDER
 
+¿cómo funciona el programa?
+ACADEMY_TIMELINE_PLACEHOLDER
+
 público objetivo
 ACADEMY_TABLES_PLACEHOLDER
 
@@ -82,6 +88,9 @@ Pallacanestro Varese est fier d'exporter son héritage légendaire du basketball
 le programme
 Pallacanestro Varese Academy exporte l'héritage prestigieux et l'excellence technique de notre club pour élever le basketball des jeunes dans le monde entier. En nous associant à des clubs locaux et à des fédérations nationales, nous offrons un accès exclusif à notre savoir-faire d'élite, à des normes d'entraînement de haut niveau et à une expertise organisationnelle stratégique. Cette initiative est conçue pour favoriser la croissance professionnelle grâce à une vision partagée, en tirant parti de la puissance de notre marque pour stimuler le succès athlétique et opérationnel à l'échelle mondiale.
 THE_PILLARS_PLACEHOLDER
+
+comment fonctionne le programme ?
+ACADEMY_TIMELINE_PLACEHOLDER
 
 public cible
 ACADEMY_TABLES_PLACEHOLDER
@@ -515,7 +524,7 @@ Contactez-nous à f.bellotto@pallacanestrovarese.it pour obtenir des information
         highlights: ["Sessioni di allenamento personalizzate", "Staff d'élite", "Approfondimenti e analisi"],
         details: `L'Approccio Professionale "Pro-Level"
 Vivi l'intensità del basket professionistico con l'Elite Player Package, un programma esclusivo progettato per atleti ambiziosi nati tra il 2007 e il 2012. Nel corso di 10 sessioni di allenamento su misura, lavorerai direttamente con lo staff tecnico di Serie A, ottenendo l'accesso agli stessi esercizi tecnici d'élite utilizzati ai massimi livelli del gioco. Questa non è solo pratica; è un'immersione professionale progettata per affinare le tue abilità ed elevare la tua comprensione tattica sotto la guida dei massimi esperti di basket italiani.
-BOXES: fondamentali|forza e condizionamento|analisi del basket|sessioni individualizzate
+BOXES: fondamentali|forza e condizionamento|sessioni individualizzate
 
 Il Focus Analitico e Basato sui Dati
 Nel basket moderno, il talento è solo metà della battaglia: i dati sono l'altra. Il nostro Elite Player Package colma questa lacuna fornendo ai giocatori (età 12-17) 10 sessioni ad alte prestazioni supportate da analisi avanzate e approfondimenti sui dati. Ogni partecipante riceve un feedback personalizzato sulle prestazioni, consentendogli di visualizzare i propri punti di forza e identificare le aree di crescita attraverso metriche precise. Combinando un coaching d'élite con intuizioni scientifiche, ti aiutiamo a padroneggiare il tuo gioco con un livello di chiarezza solitamente riservato ai club professionistici.
@@ -532,7 +541,7 @@ Comprendiamo che il programma di una stella nascente è impegnativo, motivo per 
         highlights: ["Sesiones de entrenamiento personalizadas", "Personal de élite", "Información y análisis"],
         details: `El Enfoque Profesional "Nivel Pro"
 Experimenta la intensidad del baloncesto profesional con el Paquete de Jugador de Élite, un programa exclusivo diseñado para atletas ambiciosos nacidos entre 2007 y 2012. A lo largo de 10 sesiones de entrenamiento a medida, trabajarás directamente con el cuerpo técnico de la Serie A, obteniendo acceso a los mismos ejercicios técnicos de élite utilizados en el nivel más alto del juego. Esto no es solo práctica; es una inmersión profesional diseñada para refinar tus habilidades y elevar tu comprensión táctica bajo la guía de los principales expertos en baloncesto de Italia.
-BOXES: fundamentos|fuerza y acondicionamiento|análisis de baloncesto|sesiones individualizadas
+BOXES: fundamentos|fuerza y acondicionamiento|sesiones individualizadas
 
 El Enfoque Analítico y Basado en Datos
 En el baloncesto moderno, el talento es solo la mitad de la batalla: los datos son la otra. Nuestro Paquete de Jugador de Élite cierra esta brecha al proporcionar a los jugadores (de 12 a 17 años) 10 sesiones de alto rendimiento respaldadas por análisis avanzados e información de datos. Cada participante recibe comentarios de rendimiento personalizados, lo que le permite visualizar sus fortalezas e identificar áreas de crecimiento a través de métricas precisas. Al combinar el entrenamiento de élite con conocimientos científicos, te ayudamos a dominar tu juego con un nivel de claridad generalmente reservado para clubes profesionales.
@@ -549,7 +558,7 @@ Entendemos que el horario de una estrella en ascenso es exigente, por lo que el 
         highlights: ["Séances d'entraînement personnalisées", "Personnel d'élite", "Informations et analyses"],
         details: `L'Approche Professionnelle "Niveau Pro"
 Vivez l'intensité du basket professionnel avec le Forfait Joueur d'Élite, un programme exclusif conçu pour les athlètes ambitieux nés entre 2007 et 2012. Au cours de 10 séances d'entraînement sur mesure, vous travaillerez directement avec le personnel d'entraîneurs de Serie A, en accédant aux mêmes exercices techniques d'élite utilisés au plus haut niveau du jeu. Ce n'est pas seulement de la pratique ; c'est une immersion professionnelle conçue pour affiner vos compétences et élever votre compréhension tactique sous la direction des meilleurs experts du basket italien.
-BOXES: fondamentaux|force et conditionnement|analyse du basket|séances individualisées
+BOXES: fondamentaux|force et conditionnement|séances individualisées
 
 L'Approche Analytique et Basée sur les Données
 Dans le basket moderne, le talent n'est que la moitié de la bataille : les données sont l'autre. Notre Forfait Joueur d'Élite comble cette lacune en offrant aux joueurs (12-17 ans) 10 sessions de haute performance soutenues par des analyses avancées et des informations sur les données. Chaque participant reçoit des retours de performance personnalisés, lui permettant de visualiser ses forces et d'identifier les domaines de croissance grâce à des mesures précises. En combinant un encadrement d'élite avec des connaissances scientifiques, nous vous aidons à maîtriser votre jeu avec un niveau de clarté généralement réservé aux clubs professionnels.
