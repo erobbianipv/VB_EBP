@@ -2601,10 +2601,17 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                 <div className="mt-12">
                   <h4 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-8 text-2xl md:text-3xl text-center border-b border-zinc-200 pb-4">{t('twoDifferentOptions')}</h4>
                   <div className="flex flex-col md:flex-row gap-8 w-full">
-                    <div className="flex-1 bg-white p-6 rounded-xl shadow-sm border border-zinc-200 flex flex-col h-full">
-                    <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-2 text-xl text-center">{t('residentialCamp')}</h5>
-                    <p className="text-center text-zinc-600 font-semibold mb-4 border-b border-zinc-200 pb-3 text-lg">€990</p>
-                    <div className="flex-grow">
+                    <div className="relative flex-1 bg-white p-6 rounded-xl shadow-sm border border-zinc-200 flex flex-col h-full opacity-90">
+                      <div className="absolute top-[35%] left-0 right-0 -ml-3 -mr-3 z-10 flex items-center justify-center pointer-events-none transform -rotate-3">
+                        <div className="bg-red-varese text-white font-oswald font-bold uppercase tracking-[0.2em] w-full text-center py-4 text-3xl md:text-4xl shadow-xl relative">
+                          <div className="absolute top-full left-[0px] w-0 h-0 border-t-[10px] border-r-[12px] border-t-red-950 border-r-transparent"></div>
+                          <div className="absolute top-full right-[0px] w-0 h-0 border-t-[10px] border-l-[12px] border-t-red-950 border-l-transparent"></div>
+                          SOLD OUT
+                        </div>
+                      </div>
+                      <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-2 text-xl text-center">{t('residentialCamp')}</h5>
+                      <p className="text-center text-zinc-600 font-semibold mb-4 border-b border-zinc-200 pb-3 text-lg">€990</p>
+                      <div className="flex-grow">
                       <h6 className="font-bold text-zinc-800 mb-2">{t('included')}</h6>
                       <ul className="list-disc pl-5 space-y-1 text-sm text-zinc-600">
                         <li>{t('privateSingleRoom')}</li>
