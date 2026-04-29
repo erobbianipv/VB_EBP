@@ -278,21 +278,24 @@ Please contact us at ebp@pallacanestrovarese.it for more detailed information ta
     title: "ELITE PLAYER PACKAGE",
     target: "2007 to 2012",
     timing: "Year-Round",
-    description: "Are you ready to train like a Serie A pro? The Elite Player Package is now open to players born from 2007 to 2012 who are serious about their development. This premium bundle includes 10 individual elite sessions, expert coaching from top-tier staff, and comprehensive performance insights to track your journey. With flexible scheduling to fit your season, it’s never been easier to access world-class training. Secure your spot and start transforming your performance with data-backed, professional coaching today.",
+    description: "Are you ready to train like a Serie A pro? The Elite Player Package is now open to players born from 2007 to 2012 who are serious about their development. This premium bundle includes individual elite sessions, expert coaching from top-tier staff, and comprehensive performance insights to track your journey. With flexible scheduling to fit your season, it’s never been easier to access world-class training. Secure your spot and start transforming your performance with data-backed, professional coaching today.",
     highlights: ["Customized trainings sessions", "Elite staff", "Insights & analytics"],
     image: "https://i.imgur.com/kRADld5.jpeg",
     detailImage: "https://i.imgur.com/kRADld5.jpeg",
     category: 'other',
     details: `The Professional "Pro-Level" Approach
 Experience the intensity of professional basketball with the Elite Player Package, an exclusive program designed for ambitious athletes born between 2007 and 2012. Over the course of 10 bespoke training sessions, you will work directly with Serie A coaching staff, gaining access to the same elite technical drills used at the highest level of the game. This isn't just practice; it’s a professional immersion designed to refine your skills and elevate your tactical understanding under the guidance of Italy's top basketball experts.
-BOXES: fundamentals|strength & conditioning|individualized sessions
+BOXES: [Basketball] fundamentals|[BicepsFlexed] strength & conditioning|[Dumbbell] individualized sessions
 
-The Data-Driven & Analytical Focus
+Data-driven approach
 In modern basketball, talent is only half the battle—data is the other. Our Elite Player Package bridges this gap by providing players (ages 12-17) with 10 high-performance sessions backed by advanced analytics and data insights. Each participant receives personalized performance feedback, allowing them to visualize their strengths and identify areas for growth through precise metrics. By combining elite coaching with scientific insights, we help you master your game with a level of clarity usually reserved for professional clubs.
-BOXES: sports science|basketball analysis|performance data & insights
+[img]https://i.imgur.com/pnorCl3.png[/img]
+[img]https://i.imgur.com/D8TR7ou.png[/img]
+BOXES: [LineChart] Sports Science|[Basketball] Basketball Analysis|[PieChart] Performance Data & Insights
 
 The Flexible & Personalized Choice
-We understand that a rising star's schedule is demanding, which is why the Elite Player Package offers total flexibility. This 10-session program features personalized training plans tailored to your specific role and development goals, with dates and times to be determined based on your availability throughout the year. Specifically curated for the 2007-2012 age groups, this package ensures that every minute spent on the pitch is optimized for your individual progression, providing a custom-fit path to excellence.`
+We understand that a rising star's schedule is demanding, which is why the Elite Player Package offers total flexibility. This program features personalized training plans tailored to your specific role and development goals, with dates and times to be determined based on your availability throughout the year. Specifically curated for the 2007-2012 age groups, this package ensures that every minute spent on the pitch is optimized for your individual progression, providing a custom-fit path to excellence.
+BOXES: 5 sessions: €500 | 10 sessions: €1.000`
   },
   {
     id: "travel-team",

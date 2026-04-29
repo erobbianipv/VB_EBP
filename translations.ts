@@ -516,56 +516,65 @@ Contactez-nous à f.bellotto@pallacanestrovarese.it pour obtenir des information
     },
   },
   "player-package": {
-      it: {
-        title: "PACCHETTO GIOCATORE D'ÉLITE",
-        target: "Dal 2007 al 2012",
-        timing: "Tutto l'anno",
-        description: "Sei pronto ad allenarti come un professionista di Serie A? L'Elite Player Package è ora aperto ai giocatori nati dal 2007 al 2012 che fanno sul serio riguardo al loro sviluppo. Questo pacchetto premium include 10 sessioni d'élite individuali, coaching esperto da parte di staff di alto livello e approfondimenti completi sulle prestazioni per monitorare il tuo percorso. Con una programmazione flessibile per adattarsi alla tua stagione, non è mai stato così facile accedere ad allenamenti di livello mondiale. Assicurati il tuo posto e inizia oggi stesso a trasformare le tue prestazioni con un coaching professionale supportato dai dati.",
-        highlights: ["Sessioni di allenamento personalizzate", "Staff d'élite", "Approfondimenti e analisi"],
-        details: `L'Approccio Professionale "Pro-Level"
+    it: {
+      title: "PACCHETTO GIOCATORE D'ÉLITE",
+      target: "Dal 2007 al 2012",
+      timing: "Tutto l'anno",
+      description: "Sei pronto ad allenarti come un professionista di Serie A? L'Elite Player Package è ora aperto ai giocatori nati dal 2007 al 2012 che fanno sul serio riguardo al loro sviluppo. Questo pacchetto premium include sessioni d'élite individuali, coaching esperto da parte di staff di alto livello e approfondimenti completi sulle prestazioni per monitorare il tuo percorso. Con una programmazione flessibile per adattarsi alla tua stagione, non è mai stato così facile accedere ad allenamenti di livello mondiale. Assicurati il tuo posto e inizia oggi stesso a trasformare le tue prestazioni con un coaching professionale supportato dai dati.",
+      highlights: ["Sessioni di allenamento personalizzate", "Staff d'élite", "Approfondimenti e analisi"],
+      details: `L'Approccio Professionale "Pro-Level"
 Vivi l'intensità del basket professionistico con l'Elite Player Package, un programma esclusivo progettato per atleti ambiziosi nati tra il 2007 e il 2012. Nel corso di 10 sessioni di allenamento su misura, lavorerai direttamente con lo staff tecnico di Serie A, ottenendo l'accesso agli stessi esercizi tecnici d'élite utilizzati ai massimi livelli del gioco. Questa non è solo pratica; è un'immersione professionale progettata per affinare le tue abilità ed elevare la tua comprensione tattica sotto la guida dei massimi esperti di basket italiani.
-BOXES: fondamentali|forza e condizionamento|sessioni individualizzate
+BOXES: [Basketball] fondamentali|[BicepsFlexed] forza e condizionamento|[Dumbbell] sessioni individualizzate
 
-Il Focus Analitico e Basato sui Dati
+Approccio basato sui dati
 Nel basket moderno, il talento è solo metà della battaglia: i dati sono l'altra. Il nostro Elite Player Package colma questa lacuna fornendo ai giocatori (età 12-17) 10 sessioni ad alte prestazioni supportate da analisi avanzate e approfondimenti sui dati. Ogni partecipante riceve un feedback personalizzato sulle prestazioni, consentendogli di visualizzare i propri punti di forza e identificare le aree di crescita attraverso metriche precise. Combinando un coaching d'élite con intuizioni scientifiche, ti aiutiamo a padroneggiare il tuo gioco con un livello di chiarezza solitamente riservato ai club professionistici.
-BOXES: scienza dello sport|analisi del basket|dati sulle prestazioni e approfondimenti
+[img]https://i.imgur.com/pnorCl3.png[/img]
+[img]https://i.imgur.com/D8TR7ou.png[/img]
+BOXES: [LineChart] Sports Science|[Basketball] Basketball Analysis|[PieChart] Performance Data & Insights
 
 La Scelta Flessibile e Personalizzata
-Comprendiamo che il programma di una stella nascente è impegnativo, motivo per cui l'Elite Player Package offre totale flessibilità. Questo programma di 10 sessioni presenta piani di allenamento personalizzati adattati al tuo ruolo specifico e ai tuoi obiettivi di sviluppo, con date e orari da determinare in base alla tua disponibilità durante tutto l'anno. Curato specificamente per le fasce d'età 2007-2012, questo pacchetto garantisce che ogni minuto trascorso in campo sia ottimizzato per la tua progressione individuale, fornendo un percorso su misura verso l'eccellenza.`
-      },
-      es: {
-        title: "PAQUETE DE JUGADOR DE ÉLITE",
-        target: "De 2007 a 2012",
-        timing: "Todo el año",
-        description: "¿Estás listo para entrenar como un profesional de la Serie A? El Paquete de Jugador de Élite ahora está abierto a jugadores nacidos entre 2007 y 2012 que se toman en serio su desarrollo. Este paquete premium incluye 10 sesiones de élite individuales, entrenamiento experto de personal de primer nivel e información completa sobre el rendimiento para realizar un seguimiento de tu viaje. Con una programación flexible para adaptarse a tu temporada, nunca ha sido tan fácil acceder a un entrenamiento de clase mundial. Asegura tu lugar y comienza a transformar tu rendimiento con entrenamiento profesional respaldado por datos hoy mismo.",
-        highlights: ["Sesiones de entrenamiento personalizadas", "Personal de élite", "Información y análisis"],
-        details: `El Enfoque Profesional "Nivel Pro"
+Comprendiamo che il programma di una stella nascente è impegnativo, motivo per cui l'Elite Player Package offre totale flessibilità. Questo programma presenta piani di allenamento personalizzati adattati al tuo ruolo specifico e ai tuoi obiettivi di sviluppo, con date e orari da determinare in base alla tua disponibilità durante tutto l'anno. Curato specificamente per le fasce d'età 2007-2012, questo pacchetto garantisce che ogni minuto trascorso in campo sia ottimizzato per la tua progressione individuale, fornendo un percorso su misura verso l'eccellenza.
+BOXES: 5 sessioni: €500 | 10 sessioni: €1.000`
+    },
+    es: {
+      title: "PAQUETE DE JUGADOR DE ÉLITE",
+      target: "De 2007 a 2012",
+      timing: "Todo el año",
+      description: "¿Estás listo para entrenar como un profesional de la Serie A? El Paquete de Jugador de Élite ahora está abierto a jugadores nacidos entre 2007 y 2012 que se toman en serio su desarrollo. Este paquete premium incluye sesiones de élite individuales, entrenamiento experto de personal de primer nivel e información completa sobre el rendimiento para realizar un seguimiento de tu viaje. Con una programación flexible para adaptarse a tu temporada, nunca ha sido tan fácil acceder a un entrenamiento de clase mundial. Asegura tu lugar y comienza a transformar tu rendimiento con entrenamiento profesional respaldado por datos hoy mismo.",
+      highlights: ["Sesiones de entrenamiento personalizadas", "Personal de élite", "Información y análisis"],
+      details: `El Enfoque Profesional "Nivel Pro"
 Experimenta la intensidad del baloncesto profesional con el Paquete de Jugador de Élite, un programa exclusivo diseñado para atletas ambiciosos nacidos entre 2007 y 2012. A lo largo de 10 sesiones de entrenamiento a medida, trabajarás directamente con el cuerpo técnico de la Serie A, obteniendo acceso a los mismos ejercicios técnicos de élite utilizados en el nivel más alto del juego. Esto no es solo práctica; es una inmersión profesional diseñada para refinar tus habilidades y elevar tu comprensión táctica bajo la guía de los principales expertos en baloncesto de Italia.
-BOXES: fundamentos|fuerza y acondicionamiento|sesiones individualizadas
+BOXES: [Basketball] fundamentos|[BicepsFlexed] fuerza y acondicionamiento|[Dumbbell] sesiones individualizadas
 
-El Enfoque Analítico y Basado en Datos
-En el baloncesto moderno, el talento es solo la mitad de la batalla: los datos son la otra. Nuestro Paquete de Jugador de Élite cierra esta brecha al proporcionar a los jugadores (de 12 a 17 años) 10 sesiones de alto rendimiento respaldadas por análisis avanzados e información de datos. Cada participante recibe comentarios de rendimiento personalizados, lo que le permite visualizar sus fortalezas e identificar áreas de crecimiento a través de métricas precisas. Al combinar el entrenamiento de élite con conocimientos científicos, te ayudamos a dominar tu juego con un nivel de claridad generalmente reservado para clubes profesionales.
-BOXES: ciencia del deporte|análisis de baloncesto|datos de rendimiento e información
+Enfoque basado en datos
+En el baloncesto moderno, el talento es solo la mitad de la batalla: los datos son la otra. Nuestro Paquete de Jugador de Élite cierra esta brecha al proporcionar a los jugadores (de 12 a 17 años) 10 sesiones de alto rendimiento respaldadas por análisis avanzados e información de datos. Cada participante recibe comentarios de rendimiento personalizados, lo que le permite visualizar sus fuerzas e identificar áreas de crecimiento a través de métricas precisas. Al combinar el entrenamiento de élite con conocimientos científicos, te ayudamos a dominar tu juego con un nivel de claridad generalmente reservado para clubes profesionales.
+[img]https://i.imgur.com/pnorCl3.png[/img]
+[img]https://i.imgur.com/D8TR7ou.png[/img]
+BOXES: [LineChart] Sports Science|[Basketball] Basketball Analysis|[PieChart] Performance Data & Insights
 
 La Elección Flexible y Personalizada
-Entendemos que el horario de una estrella en ascenso es exigente, por lo que el Paquete de Jugador de Élite ofrece total flexibilidad. Este programa de 10 sesiones presenta planes de entrenamiento personalizados adaptados a tu rol específico y objetivos de desarrollo, con fechas y horarios que se determinarán en función de tu disponibilidad durante todo el año. Curado específicamente para los grupos de edad de 2007-2012, este paquete garantiza que cada minuto que pases en la cancha esté optimizado para tu progresión individual, proporcionando un camino a medida hacia la excelencia.`
-      },
-      fr: {
-        title: "FORFAIT JOUEUR D'ÉLITE",
-        target: "De 2007 à 2012",
-        timing: "Toute l'année",
-        description: "Êtes-vous prêt à vous entraîner comme un pro de Serie A ? Le Forfait Joueur d'Élite est désormais ouvert aux joueurs nés entre 2007 et 2012 qui prennent leur développement au sérieux. Ce forfait premium comprend 10 sessions d'élite individuelles, un encadrement expert par un personnel de haut niveau et des informations complètes sur les performances pour suivre votre parcours. Avec une planification flexible pour s'adapter à votre saison, il n'a jamais été aussi facile d'accéder à une formation de classe mondiale. Réservez votre place et commencez dès aujourd'hui à transformer vos performances grâce à un encadrement professionnel basé sur des données.",
-        highlights: ["Séances d'entraînement personnalisées", "Personnel d'élite", "Informations et analyses"],
-        details: `L'Approche Professionnelle "Niveau Pro"
-Vivez l'intensité du basket professionnel avec le Forfait Joueur d'Élite, un programme exclusif conçu pour les athlètes ambitieux nés entre 2007 et 2012. Au cours de 10 séances d'entraînement sur mesure, vous travaillerez directement avec le personnel d'entraîneurs de Serie A, en accédant aux mêmes exercices techniques d'élite utilisés au plus haut niveau du jeu. Ce n'est pas seulement de la pratique ; c'est une immersion professionnelle conçue pour affiner vos compétences et élever votre compréhension tactique sous la direction des meilleurs experts du basket italien.
-BOXES: fondamentaux|force et conditionnement|séances individualisées
+Entendemos que el horario de una estrella en ascenso es exigente, por lo que el Paquete de Jugador de Élite ofrece total flexibilidad. Este programa presenta planes de entrenamiento personalizados adaptados a tu rol específico y objetivos de desarrollo, con fechas y horarios a determinar en función de tu disponibilidad durante todo el año. Especialmente diseñado para los grupos de edad 2007-2012, este paquete garantiza que cada minuto pasado en la cancha se optimice para tu progresión individual, ofreciendo un camino a medida hacia la excelencia.
+BOXES: 5 sesiones: €500 | 10 sesiones: €1.000`
+    },
+    fr: {
+      title: "FORFAIT JOUEUR D'ÉLITE",
+      target: "De 2007 à 2012",
+      timing: "Toute l'année",
+      description: "Êtes-vous prêt à vous entraîner comme un professionnel de la Serie A ? Le Forfait Joueur d'Élite est désormais ouvert aux joueurs nés entre 2007 et 2012 qui sont sérieux quant à leur développement. Ce forfait premium comprend des séances d'élite individuelles, un encadrement expert par un personnel de haut niveau et des informations complètes sur les performances pour suivre votre parcours. Avec une planification flexible pour s'adapter à votre saison, il n'a jamais été aussi facile d'accéder à un entraînement de classe mondiale. Sécurisez votre place et commencez dès aujourd'hui à transformer vos performances grâce à un encadrement professionnel s'appuyant sur les données.",
+      highlights: ["Séances d'entraînement personnalisées", "Personnel d'élite", "Informations et analyses"],
+      details: `L'Approche Professionnelle "Niveau Pro"
+Vive l'intensité du basket professionnel avec le Forfait Joueur d'Élite, un programme exclusif conçu pour les athlètes ambitieux nés entre 2007 et 2012. Au cours de 10 séances d'entraînement sur mesure, vous travaillerez directement avec le personnel d'entraîneurs de Serie A, en accédant aux mêmes exercices techniques d'élite utilisés au plus haut niveau du jeu. Ce n'est pas seulement de la pratique ; c'est une immersion professionnelle conçue pour affiner vos compétences et élever votre compréhension tactique sous la direction des meilleurs experts du basket italien.
+BOXES: [Basketball] fondamentaux|[BicepsFlexed] force et conditionnement|[Dumbbell] séances individualisées
 
 L'Approche Analytique et Basée sur les Données
-Dans le basket moderne, le talent n'est que la moitié de la bataille : les données sont l'autre. Notre Forfait Joueur d'Élite comble cette lacune en offrant aux joueurs (12-17 ans) 10 sessions de haute performance soutenues par des analyses avancées et des informations sur les données. Chaque participant reçoit des retours de performance personnalisés, lui permettant de visualiser ses forces et d'identifier les domaines de croissance grâce à des mesures précises. En combinant un encadrement d'élite avec des connaissances scientifiques, nous vous aidons à maîtriser votre jeu avec un niveau de clarté généralement réservé aux clubs professionnels.
-BOXES: science du sport|analyse du basket|données de performance et informations
+Dans le basket moderne, le talent n'est que la moitié de la bataille : les données sont l'autre. Notre Forfait Joueur d'Élite comble cette lacune en offrant aux joueurs (12-17 ans) 10 sessions de haute performance soutenues par des analyses avancées et des informations sur les données. Chaque participant reçoit des retours de performance personnalisés, lui permettant de visualiser ses forces et d'identifier les domaines de croissance grâce à des mesures précises. En combinant un encadrement d'élite avec des connaissances scientifiques, nous vous aidons à maîtriser votre jeu avec un niveau de clarté généralement réservé aux clubs professionels.
+[img]https://i.imgur.com/pnorCl3.png[/img]
+[img]https://i.imgur.com/D8TR7ou.png[/img]
+BOXES: [LineChart] Sports Science|[Basketball] Basketball Analysis|[PieChart] Performance Data & Insights
 
 Le Choix Flexible et Personnalisé
-Nous comprenons que l'emploi du temps d'une étoile montante est exigeant, c'est pourquoi le Forfait Joueur d'Élite offre une flexibilité totale. Ce programme de 10 sessions propose des plans d'entraînement personnalisés adaptés à votre rôle spécifique et à vos objectifs de développement, avec des dates et des heures à déterminer en fonction de votre disponibilité tout au long de l'année. Spécialement conçu pour les groupes d'âge 2007-2012, ce forfait garantit que chaque minute passée sur le terrain est optimisée pour votre progression individuelle, offrant un parcours sur mesure vers l'excellence.`
+Nous comprenons que l'emploi du temps d'une étoile montante est exigeant, c'est pourquoi le Forfait Joueur d'Élite offre une flexibilité totale. Ce programme propose des plans d'entraînement personnalisés adaptés à votre rôle spécifique et à vos objectifs de développement, avec des dates et des heures à déterminer en fonction de votre disponibilité tout au long de l'année. Spécialement conçu pour les groupes d'âge 2007-2012, ce forfait garantit que chaque minute passée sur le terrain est optimisée pour votre progression individuelle, offrant un parcours sur mesure vers l'excellence.
+BOXES: 5 sessions : €500 | 10 sessions : €1.000`
     }
   },
   "travel-team": {

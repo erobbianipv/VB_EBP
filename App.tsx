@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import { CLUB_LOGO, ACHIEVEMENTS, STAFF, PROGRAMS, FACILITIES } from './constants';
 import { translateProgram, translateStaff } from './translations';
 import { Program, Facility } from './types';
-import { Trophy, MapPin, Users, Home, GraduationCap, Calendar, ArrowRight, Menu, X, Instagram, Facebook, CheckCircle2, Send, Mail, Linkedin, Star, ChevronDown, ZoomIn, ChevronLeft, ChevronRight, ChevronUp, XCircle, Target, Activity, Brain, BarChart, HeartPulse, Dumbbell, ExternalLink, Utensils, Plane, Landmark, Megaphone, Stethoscope, LineChart, Play, FileText, Phone, Settings, ClipboardList, Rocket, Info, Eye, Shirt, BicepsFlexed } from 'lucide-react';
+import { Trophy, MapPin, Users, Home, GraduationCap, Calendar, ArrowRight, Menu, X, Instagram, Facebook, CheckCircle2, Send, Mail, Linkedin, Star, ChevronDown, ZoomIn, ChevronLeft, ChevronRight, ChevronUp, XCircle, Target, Activity, Brain, BarChart, HeartPulse, Dumbbell, ExternalLink, Utensils, Plane, Landmark, Megaphone, Stethoscope, LineChart, PieChart, Play, FileText, Phone, Settings, ClipboardList, Rocket, Info, Eye, Shirt, BicepsFlexed } from 'lucide-react';
 
 type Language = 'it' | 'en' | 'es' | 'fr';
 type View = 'home' | 'programs' | 'palmares' | 'arena' | 'campus' | 'housing' | 'detailedPrograms' | 'programDetail';
@@ -1472,6 +1472,9 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
     "La Scelta Flessibile e Personalizzata",
     "La Elección Flexible y Personalizada",
     "Le Choix Flexible et Personnalisé",
+    "Data-driven approach",
+    "Approccio basato sui dati",
+    "Enfoque basado en datos",
     "target audience",
     "our vision",
     "the program",
@@ -1730,6 +1733,13 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
         isTitleMatch(section.title || '', 'Unique events & meetings') ||
         isTitleMatch(section.title || '', 'How to subscribe') ||
         isTitleMatch(section.title || '', 'il nostro ospite speciale') ||
+        isTitleMatch(section.title || '', 'The Data-Driven & Analytical Focus') ||
+        isTitleMatch(section.title || '', 'Il Focus Analitico e Basato sui Dati') ||
+        isTitleMatch(section.title || '', 'El Enfoque Analítico y Basado en Datos') ||
+        isTitleMatch(section.title || '', "L'Approche Analytique et Basée sur les Données") ||
+        isTitleMatch(section.title || '', "Data-driven approach") ||
+        isTitleMatch(section.title || '', "Approccio basato sui dati") ||
+        isTitleMatch(section.title || '', "Enfoque basado en datos") ||
         isTitleMatch(section.title || '', 'packages') ||
         isTitleMatch(section.title || '', 'our elite housing')) {
       
@@ -1768,7 +1778,67 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                     </div>
                   );
                 }
+
+                if (line.startsWith("BOXES:")) {
+                  const boxes = line.replace("BOXES:", "").split("|").map(b => {
+                    const parts = b.split(":");
+                    let title = parts[0].trim();
+                    let icon = null;
+                    const match = title.match(/^\[([A-Za-z_+]+)\]\s*(.*)$/);
+                    if (match) {
+                      icon = match[1];
+                      title = match[2];
+                    }
+                    return { title, description: parts[1]?.trim(), icon };
+                  });
+                  const gridCols = boxes.length === 6 ? 'grid-cols-2 lg:grid-cols-3' : 
+                                   (boxes.length === 3 ? 'grid-cols-1 md:grid-cols-3' : 
+                                   (boxes.length === 2 ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-2 lg:grid-cols-4'));
+
+                  return (
+                    <div key={lIdx} className={`grid ${gridCols} gap-6 mt-8`}>
+                      {boxes.map((box, bIdx) => {
+                        const isProminent = boxes.length <= 3;
+                        const titleSize = isProminent ? 'text-base md:text-lg' : 'text-lg';
+                        const descSize = isProminent ? 'text-lg md:text-xl' : 'text-xs';
+                        const iconSize = isProminent ? 40 : 28;
+                        const iconContainerSize = isProminent ? 'w-20 h-20' : 'w-14 h-14';
+
+                        return (
+                          <div key={bIdx} className={`bg-white border border-zinc-200 ${isProminent ? 'p-10' : 'p-8'} rounded-2xl shadow-sm flex flex-col items-center justify-center text-center hover:border-red-varese/30 transition-all hover:shadow-md ${isProminent ? 'min-h-[220px]' : 'min-h-[160px]'}`}>
+                            {box.icon && (
+                              <div className={`bg-red-varese/10 ${iconContainerSize} rounded-xl flex items-center justify-center mb-6 gap-1 flex-wrap`}>
+                                {box.icon.includes('Plane') && <Plane className="text-red-varese" size={isProminent ? 32 : 20} />}
+                                {box.icon.includes('Basketball') && (
+                                  <svg className="text-red-varese" width={isProminent ? 40 : 20} height={isProminent ? 40 : 20} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M5.4 5.4l13.2 13.2" />
+                                    <path d="M18.6 5.4L5.4 18.6" />
+                                    <path d="M12 2a15.3 15.3 0 0 1 0 20" />
+                                    <path d="M2 12a15.3 15.3 0 0 0 20 0" />
+                                  </svg>
+                                )}
+                                {box.icon === 'Eye' && <Eye className="text-red-varese" size={iconSize} />}
+                                {box.icon === 'Dumbbell' && <Dumbbell className="text-red-varese" size={iconSize} />}
+                                {box.icon === 'ZoomIn' && <ZoomIn className="text-red-varese" size={iconSize} />}
+                                {box.icon === 'Home' && <Home className="text-red-varese" size={iconSize} />}
+                                {box.icon === 'Shirt' && <Shirt className="text-red-varese" size={iconSize} />}
+                                {box.icon === 'BicepsFlexed' && <BicepsFlexed className="text-red-varese" size={iconSize} />}
+                                {box.icon === 'LineChart' && <LineChart className="text-red-varese" size={iconSize} />}
+                                {box.icon === 'PieChart' && <PieChart className="text-red-varese" size={iconSize} />}
+                                {box.icon === 'Target' && <Target className="text-red-varese" size={iconSize} />}
+                               </div>
+                            )}
+                            <h5 className={`font-oswald text-red-varese font-black uppercase tracking-wider mb-2 ${titleSize}`}>{box.title}</h5>
+                            {box.description && <p className={`text-zinc-600 font-medium ${descSize} leading-relaxed max-w-[280px] mx-auto`}>{box.description}</p>}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  );
+                }
                 if (line.includes("HOUSING_FEATURES_PLACEHOLDER")) {
+
                   const housingFeatures = [
                     {
                       title: t('housingFeature1Title'),
@@ -2506,97 +2576,51 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                 }
                 return { title, description: parts[1]?.trim(), icon };
               });
-              if (boxes.length === 5) {
-                return (
-                  <div key={lIdx} className="flex flex-col gap-6 mt-12 mb-12">
-                    {/* Row 1: 2 large boxes */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-3xl mx-auto">
-                      {boxes.slice(0, 2).map((box, bIdx) => (
-                        <div key={bIdx} className="bg-white border border-zinc-200 p-10 rounded-2xl shadow-md flex flex-col items-center justify-center text-center hover:border-red-varese/40 transition-all hover:shadow-lg min-h-[220px] group">
-                          {box.icon && (
-                            <div className="bg-red-varese/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                              {box.icon.includes('Plane') && <Plane className="text-red-varese" size={28} />}
-                              {box.icon.includes('Basketball') && (
-                                <svg className="text-red-varese" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                  <circle cx="12" cy="12" r="10" />
-                                  <path d="M5.4 5.4l13.2 13.2" />
-                                  <path d="M18.6 5.4L5.4 18.6" />
-                                  <path d="M12 2a15.3 15.3 0 0 1 0 20" />
-                                  <path d="M2 12a15.3 15.3 0 0 0 20 0" />
-                                </svg>
-                              )}
-                              {box.icon === 'Eye' && <Eye className="text-red-varese" size={32} />}
-                              {box.icon === 'Dumbbell' && <Dumbbell className="text-red-varese" size={32} />}
-                              {box.icon === 'ZoomIn' && <ZoomIn className="text-red-varese" size={32} />}
-                            </div>
-                          )}
-                          <h5 className="font-oswald text-red-varese font-black uppercase tracking-widest mb-3 text-xl">{box.title}</h5>
-                          {box.description && <p className="text-zinc-600 text-sm leading-relaxed max-w-[250px] mx-auto">{box.description}</p>}
-                        </div>
-                      ))}
-                    </div>
-                    {/* Row 2: 3 large boxes */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl mx-auto">
-                      {boxes.slice(2, 5).map((box, bIdx) => (
-                        <div key={bIdx + 2} className="bg-white border border-zinc-200 p-10 rounded-2xl shadow-md flex flex-col items-center justify-center text-center hover:border-red-varese/40 transition-all hover:shadow-lg min-h-[220px] group">
-                          {box.icon && (
-                            <div className="bg-red-varese/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                              {box.icon.includes('Plane') && <Plane className="text-red-varese" size={28} />}
-                              {box.icon.includes('Basketball') && (
-                                <svg className="text-red-varese" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                  <circle cx="12" cy="12" r="10" />
-                                  <path d="M5.4 5.4l13.2 13.2" />
-                                  <path d="M18.6 5.4L5.4 18.6" />
-                                  <path d="M12 2a15.3 15.3 0 0 1 0 20" />
-                                  <path d="M2 12a15.3 15.3 0 0 0 20 0" />
-                                </svg>
-                              )}
-                              {box.icon === 'Eye' && <Eye className="text-red-varese" size={32} />}
-                              {box.icon === 'Dumbbell' && <Dumbbell className="text-red-varese" size={32} />}
-                              {box.icon === 'ZoomIn' && <ZoomIn className="text-red-varese" size={32} />}
-                              {box.icon === 'Home' && <Home className="text-red-varese" size={32} />}
-                              {box.icon === 'Shirt' && <Shirt className="text-red-varese" size={32} />}
-                              {box.icon === 'BicepsFlexed' && <BicepsFlexed className="text-red-varese" size={32} />}
-                            </div>
-                          )}
-                          <h5 className="font-oswald text-red-varese font-black uppercase tracking-widest mb-3 text-xl">{box.title}</h5>
-                          {box.description && <p className="text-zinc-600 text-sm leading-relaxed max-w-[250px] mx-auto">{box.description}</p>}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                );
-              }
 
-              const gridCols = boxes.length === 6 ? 'grid-cols-2 lg:grid-cols-3' : (boxes.length === 3 ? 'grid-cols-1 md:grid-cols-3' : 'grid-cols-2 lg:grid-cols-4');
+              // Robust rendering for any number of boxes
+              const gridCols = boxes.length === 6 ? 'grid-cols-2 lg:grid-cols-3' : 
+                               (boxes.length === 3 ? 'grid-cols-1 md:grid-cols-3' : 
+                               (boxes.length === 2 ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-2 lg:grid-cols-4'));
+
               return (
                 <div key={lIdx} className={`grid ${gridCols} gap-6 mt-8`}>
-                  {boxes.map((box, bIdx) => (
-                    <div key={bIdx} className="bg-white border border-zinc-200 p-8 rounded-2xl shadow-sm flex flex-col items-center justify-center text-center hover:border-red-varese/30 transition-all hover:shadow-md min-h-[160px]">
-                      {box.icon && (
-                        <div className="bg-red-varese/10 w-14 h-14 rounded-xl flex items-center justify-center mb-4 gap-1 flex-wrap">
-                          {box.icon.includes('Plane') && <Plane className="text-red-varese" size={20} />}
-                          {box.icon.includes('Basketball') && (
-                            <svg className="text-red-varese" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                              <circle cx="12" cy="12" r="10" />
-                              <path d="M5.4 5.4l13.2 13.2" />
-                              <path d="M18.6 5.4L5.4 18.6" />
-                              <path d="M12 2a15.3 15.3 0 0 1 0 20" />
-                              <path d="M2 12a15.3 15.3 0 0 0 20 0" />
-                            </svg>
-                          )}
-                          {box.icon === 'Eye' && <Eye className="text-red-varese" size={28} />}
-                          {box.icon === 'Dumbbell' && <Dumbbell className="text-red-varese" size={28} />}
-                          {box.icon === 'ZoomIn' && <ZoomIn className="text-red-varese" size={28} />}
-                          {box.icon === 'Home' && <Home className="text-red-varese" size={28} />}
-                          {box.icon === 'Shirt' && <Shirt className="text-red-varese" size={28} />}
-                          {box.icon === 'BicepsFlexed' && <BicepsFlexed className="text-red-varese" size={28} />}
-                        </div>
-                      )}
-                      <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-2 text-lg">{box.title}</h5>
-                      {box.description && <p className="text-zinc-600 text-xs mt-1 leading-relaxed max-w-[200px] mx-auto">{box.description}</p>}
-                    </div>
-                  ))}
+                  {boxes.map((box, bIdx) => {
+                    const isProminent = boxes.length <= 3;
+                    const titleSize = isProminent ? 'text-xl md:text-2xl' : 'text-lg';
+                    const descSize = isProminent ? 'text-lg md:text-xl' : 'text-xs';
+                    const iconSize = isProminent ? 40 : 28;
+                    const iconContainerSize = isProminent ? 'w-20 h-20' : 'w-14 h-14';
+
+                    return (
+                      <div key={bIdx} className={`bg-white border border-zinc-200 ${isProminent ? 'p-10' : 'p-8'} rounded-2xl shadow-sm flex flex-col items-center justify-center text-center hover:border-red-varese/30 transition-all hover:shadow-md ${isProminent ? 'min-h-[220px]' : 'min-h-[160px]'}`}>
+                        {box.icon && (
+                          <div className={`bg-red-varese/10 ${iconContainerSize} rounded-xl flex items-center justify-center mb-6 gap-1 flex-wrap`}>
+                                                        {box.icon.includes('Plane') && <Plane className="text-red-varese" size={isProminent ? 32 : 20} />}
+                            {box.icon.includes('Basketball') && (
+                              <svg className="text-red-varese" width={isProminent ? 40 : 20} height={isProminent ? 40 : 20} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M5.4 5.4l13.2 13.2" />
+                                <path d="M18.6 5.4L5.4 18.6" />
+                                <path d="M12 2a15.3 15.3 0 0 1 0 20" />
+                                <path d="M2 12a15.3 15.3 0 0 0 20 0" />
+                              </svg>
+                            )}
+                            {box.icon === 'Eye' && <Eye className="text-red-varese" size={iconSize} />}
+                            {box.icon === 'Dumbbell' && <Dumbbell className="text-red-varese" size={iconSize} />}
+                            {box.icon === 'ZoomIn' && <ZoomIn className="text-red-varese" size={iconSize} />}
+                            {box.icon === 'Home' && <Home className="text-red-varese" size={iconSize} />}
+                            {box.icon === 'Shirt' && <Shirt className="text-red-varese" size={iconSize} />}
+                            {box.icon === 'BicepsFlexed' && <BicepsFlexed className="text-red-varese" size={iconSize} />}
+                            {box.icon === 'LineChart' && <LineChart className="text-red-varese" size={iconSize} />}
+                            {box.icon === 'PieChart' && <PieChart className="text-red-varese" size={iconSize} />}
+                            {box.icon === 'Target' && <Target className="text-red-varese" size={iconSize} />}
+                           </div>
+                        )}
+                        <h5 className={`font-oswald text-red-varese font-black uppercase tracking-wider mb-2 ${titleSize}`}>{box.title}</h5>
+                        {box.description && <p className={`text-zinc-600 font-medium ${descSize} leading-relaxed max-w-[280px] mx-auto`}>{box.description}</p>}
+                      </div>
+                    );
+                  })}
                 </div>
               );
             }
@@ -3632,7 +3656,7 @@ const App: React.FC = () => {
                   <span className="text-red-varese text-[10px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">{t('pricing')}</span>
                   <span className="text-black text-xs md:text-base font-medium leading-tight block">
                     {program.id === 'summer-camp' ? '€990 or €690' : 
-                     program.id === 'player-package' ? '€1.000/10 sessions' :
+                     program.id === 'player-package' ? '€1.000 or €500' :
                      program.id === 'full-time' ? '€15.000/year or €30.000/year' :
                      program.id === 'internship' ? '€1.500/month' :
                      program.id === 'summer-prog' ? t('tbdTogether') :
