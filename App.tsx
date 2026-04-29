@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import { CLUB_LOGO, ACHIEVEMENTS, STAFF, PROGRAMS, FACILITIES } from './constants';
 import { translateProgram, translateStaff } from './translations';
 import { Program, Facility } from './types';
-import { Trophy, MapPin, Users, Home, GraduationCap, Calendar, ArrowRight, Menu, X, Instagram, Facebook, CheckCircle2, Send, Mail, Linkedin, Star, ChevronDown, ZoomIn, ChevronLeft, ChevronRight, ChevronUp, XCircle, Target, Activity, Brain, BarChart, HeartPulse, Dumbbell, ExternalLink, Utensils, Plane, Landmark, Megaphone, Stethoscope, LineChart, Play, FileText, Phone, Settings, ClipboardList, Rocket, Info } from 'lucide-react';
+import { Trophy, MapPin, Users, Home, GraduationCap, Calendar, ArrowRight, Menu, X, Instagram, Facebook, CheckCircle2, Send, Mail, Linkedin, Star, ChevronDown, ZoomIn, ChevronLeft, ChevronRight, ChevronUp, XCircle, Target, Activity, Brain, BarChart, HeartPulse, Dumbbell, ExternalLink, Utensils, Plane, Landmark, Megaphone, Stethoscope, LineChart, Play, FileText, Phone, Settings, ClipboardList, Rocket, Info, Eye, Shirt, BicepsFlexed } from 'lucide-react';
 
 type Language = 'it' | 'en' | 'es' | 'fr';
 type View = 'home' | 'programs' | 'palmares' | 'arena' | 'campus' | 'housing' | 'detailedPrograms' | 'programDetail';
@@ -207,6 +207,7 @@ const TRANSLATIONS = {
     tbdTogether: "Da definire insieme",
     campusVarese: "Campus, Varese",
     foresteriaCampus: "Foresteria & Campus",
+    aroundTheWorld: "Around the World",
     // Program Tables
     standardProgram: "Programma Standard",
     premiumProgram: "Programma Premium",
@@ -520,6 +521,7 @@ const TRANSLATIONS = {
     tbdTogether: "TBD together",
     campusVarese: "Campus, Varese",
     foresteriaCampus: "Foresteria & Campus",
+    aroundTheWorld: "Around the World",
     // Program Tables
     standardProgram: "Standard Program",
     premiumProgram: "Premium Program",
@@ -833,6 +835,7 @@ const TRANSLATIONS = {
     tbdTogether: "A definir juntos",
     campusVarese: "Campus, Varese",
     foresteriaCampus: "Residencia y Campus",
+    aroundTheWorld: "Alrededor del mundo",
     // Program Tables
     standardProgram: "Programa Estándar",
     premiumProgram: "Programa Premium",
@@ -1146,6 +1149,7 @@ const TRANSLATIONS = {
     tbdTogether: "À définir ensemble",
     campusVarese: "Campus, Varèse",
     foresteriaCampus: "Rèsidence & Campus",
+    aroundTheWorld: "Autour du Monde",
     // Program Tables
     standardProgram: "Programme Standard",
     premiumProgram: "Programme Premium",
@@ -1388,6 +1392,23 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
     "The Ultimate Resume Builder",
     "pro-level program",
     "Strategic Location & Italian Culture",
+    "The initiative",
+    "L'iniziativa",
+    "La iniciativa",
+    "L'initiative",
+    "our world tour",
+    "il nostro tour mondiale",
+    "nuestra gira mundial",
+    "notre tournée mondiale",
+    "the schedule",
+    "il calendario",
+    "el calendario",
+    "le calendrier",
+    "Guest player program",
+    "Programma Guest Player",
+    "Programa Guest Player",
+    "Programme Guest Player",
+    "Travel Team",
     "pricing",
     "the training staff",
     "the training program",
@@ -1479,12 +1500,17 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
     "how does the program work?",
     "come funziona il programma?",
     "¿cómo funciona el programa?",
-    "comment fonctionne le programme ?"
+    "comment fonctionne le programme ?",
+    "packages",
+    "pacchetti",
+    "paquetes",
+    "forfaits"
   ];
 
   const isTitleMatch = (title: string | null, englishTitle: string) => {
     if (!title) return false;
     const translations: Record<string, string[]> = {
+      'packages': ['packages', 'pacchetti', 'paquetes', 'forfaits'],
       'Sample Daily Routine': ['Sample Daily Routine', 'Esempio di Routine Quotidiana', 'Esempio di Routine Giornaliera', 'Ejemplo de Rutina Diaria', 'Exemple de Routine Quotidienne'],
       'the training program': ['the training program', 'the program', 'il programma di allenamento', 'il programma', 'el programma di allenamento', 'el programa de entrenamiento', 'le programme d\'entraînement', 'le programme'],
       'the training staff': ['the training staff', 'lo staff tecnico', 'LO STAFF TECNICO', 'el personal de entrenamiento', 'le personnel d\'entraînement'],
@@ -1522,6 +1548,9 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
       'our vision': ['our vision', 'la nostra visione', 'nuestra visión', 'notre vision'],
       'How to subscribe': ['How to subscribe', 'Come iscriversi', 'Cómo suscribirse', 'Comment s\'inscrire'],
       'what we offer': ['what we offer', 'cosa offriamo', 'lo que ofrecemos', 'ce que nous offrons'],
+      'our world tour': ['our world tour', 'il nostro tour mondiale', 'nuestra gira mundial', 'notre tournée mondiale'],
+      'the schedule': ['the schedule', 'il calendario', 'el calendario', 'le calendrier'],
+      'Guest player program': ['Guest player program', 'Programma Guest Player', 'Programa Guest Player', 'Programme Guest Player'],
       'extra services': ['extra services', 'servizi extra', 'servicios extra', 'services supplémentaires'],
       'the program': ['the program', 'il programma', 'el programa', 'le programme'],
       'how does the program work?': ['how does the program work?', 'come funziona il programma?', '¿cómo funciona el programa?', 'comment fonctionne le programme ?']
@@ -1701,6 +1730,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
         isTitleMatch(section.title || '', 'Unique events & meetings') ||
         isTitleMatch(section.title || '', 'How to subscribe') ||
         isTitleMatch(section.title || '', 'il nostro ospite speciale') ||
+        isTitleMatch(section.title || '', 'packages') ||
         isTitleMatch(section.title || '', 'our elite housing')) {
       
       const allTextLines: string[] = [];
@@ -1720,11 +1750,24 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
       if (allImageLines.length > 0) {
         const isSpecialGuest = isTitleMatch(section.title || '', 'il nostro ospite speciale') || isTitleMatch(section.title || '', 'Our special guest and CEO');
         const isEliteHousing = isTitleMatch(section.title || '', 'our elite housing');
+        const isPackages = isTitleMatch(section.title || '', 'packages');
+        
+        const isWorldTour = isTitleMatch(section.title || '', 'our world tour') || isTitleMatch(section.title || '', 'il nostro tour mondiale');
         
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
             <div className={`space-y-4 ${isSpecialGuest ? 'md:order-2' : ''}`}>
               {allTextLines.map((line, lIdx) => {
+                const inclusionHeaders = ["THE PROGRAM IS INCLUSIVE OF:", "IL PROGRAMMA INCLUDE:", "EL PROGRAMA INCLUYE:", "LE PROGRAMME COMPREND:"];
+                if (inclusionHeaders.includes(line.trim())) {
+                  return (
+                    <div key={lIdx} className="w-full flex justify-center my-8">
+                      <div className="bg-red-varese text-white px-10 py-4 rounded-xl font-oswald font-black uppercase tracking-[0.2em] text-center shadow-xl shadow-red-600/30 text-lg">
+                        {line}
+                      </div>
+                    </div>
+                  );
+                }
                 if (line.includes("HOUSING_FEATURES_PLACEHOLDER")) {
                   const housingFeatures = [
                     {
@@ -1808,6 +1851,30 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                     </div>
                   );
                 }
+                if (line.includes("GUEST_PLAYER_PACKAGES")) {
+                  const packages = [
+                    { tournaments: "1 Tournament", price: "€5.000" },
+                    { tournaments: "2 Tournaments", price: "€8.000" },
+                    { tournaments: "3 Tournaments", price: "€10.000" }
+                  ];
+                  return (
+                    <div key={lIdx} className="grid grid-cols-1 gap-4 mt-6 mb-8">
+                      {packages.map((pkg, i) => (
+                        <div key={i} className="bg-white border border-zinc-200 p-5 rounded-2xl shadow-sm hover:border-red-varese/30 transition-all flex items-center justify-between group">
+                          <div className="flex items-center gap-4">
+                            <div className="bg-red-varese/10 w-10 h-10 rounded-full flex items-center justify-center">
+                              <Trophy className="text-red-varese" size={20} />
+                            </div>
+                            <span className="font-oswald text-zinc-900 font-bold uppercase tracking-wider text-lg">{pkg.tournaments}</span>
+                          </div>
+                          <div className="bg-red-varese text-white px-4 py-1.5 rounded-lg font-black text-xl shadow-lg shadow-red-600/20">
+                            {pkg.price}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  );
+                }
                 return <p key={lIdx} className="text-zinc-600 leading-relaxed">{line}</p>;
               })}
             </div>
@@ -1817,7 +1884,13 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
               ) : (
                 allImageLines.map((line, lIdx) => {
                   const src = line.slice(5, -6);
-                  return <img key={lIdx} src={src} alt="Section Image" className={`${isSpecialGuest ? 'w-2/3' : 'w-full'} rounded-2xl shadow-lg`} referrerPolicy="no-referrer" />;
+                  let imgClass = "w-full";
+                  if (isSpecialGuest || isPackages) {
+                    imgClass = "w-2/3 mx-auto";
+                  } else if (isWorldTour) {
+                    imgClass = "w-1/2 mx-auto";
+                  }
+                  return <img key={lIdx} src={src} alt="Section Image" className={`${imgClass} rounded-2xl shadow-lg`} referrerPolicy="no-referrer" />;
                 })
               )}
             </div>
@@ -2265,6 +2338,28 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                 </div>
               );
             }
+            if (line.includes("GUEST_PLAYER_PACKAGES")) {
+              const packages = [
+                { tournaments: "1 Tournament", price: "€5.000" },
+                { tournaments: "2 Tournaments", price: "€8.000" },
+                { tournaments: "3 Tournaments", price: "€10.000" }
+              ];
+              return (
+                <div key={lIdx} className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 mb-8">
+                  {packages.map((pkg, i) => (
+                    <div key={i} className="bg-white border border-zinc-200 p-6 rounded-2xl shadow-sm hover:border-red-varese/30 transition-all flex flex-col items-center gap-4 text-center group">
+                      <div className="bg-red-varese/10 w-14 h-14 rounded-full flex items-center justify-center">
+                        <Trophy className="text-red-varese" size={28} />
+                      </div>
+                      <div className="space-y-1">
+                        <h5 className="font-oswald text-zinc-900 font-bold uppercase tracking-wider text-xl">{pkg.tournaments}</h5>
+                        <div className="text-red-varese font-black text-2xl">{pkg.price}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              );
+            }
             if (line.includes("WHAT_WE_OFFER_TABLE_PLACEHOLDER")) {
               return null;
             }
@@ -2382,18 +2477,124 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
             if (line.includes("ebp@pallacanestrovarese.it") || line.includes(t('clickHere'))) {
               return renderLineWithLinks(line, lIdx);
             }
+            if (line.startsWith("TIMELINE:")) {
+              const events = line.replace("TIMELINE:", "").split("||").map(e => {
+                const parts = e.split("|");
+                return { location: parts[0]?.trim(), date: parts[1]?.trim() };
+              });
+              return (
+                <div key={lIdx} className="mt-8 mb-8 relative border-l-2 border-red-varese/30 ml-4 md:ml-6 pl-6 md:pl-8 space-y-8 py-4">
+                  {events.map((event, eIdx) => (
+                    <div key={eIdx} className="relative">
+                      <div className="absolute -left-[35px] md:-left-[43px] top-1 bg-zinc-900 border-2 border-red-varese w-4 h-4 rounded-full z-10 shadow-[0_0_10px_rgba(227,6,19,0.5)]"></div>
+                      <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider text-xl leading-none mb-1">{event.location}</h5>
+                      <p className="text-zinc-500 font-medium text-xs tracking-wide">{event.date}</p>
+                    </div>
+                  ))}
+                </div>
+              );
+            }
             if (line.startsWith("BOXES:")) {
               const boxes = line.replace("BOXES:", "").split("|").map(b => {
                 const parts = b.split(":");
-                return { title: parts[0].trim(), description: parts[1]?.trim() };
+                let title = parts[0].trim();
+                let icon = null;
+                const match = title.match(/^\[([A-Za-z_+]+)\]\s*(.*)$/);
+                if (match) {
+                  icon = match[1];
+                  title = match[2];
+                }
+                return { title, description: parts[1]?.trim(), icon };
               });
-              const gridCols = boxes.length === 3 ? 'grid-cols-1 md:grid-cols-3' : 'grid-cols-2 lg:grid-cols-4';
+              if (boxes.length === 5) {
+                return (
+                  <div key={lIdx} className="flex flex-col gap-6 mt-12 mb-12">
+                    {/* Row 1: 2 large boxes */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-3xl mx-auto">
+                      {boxes.slice(0, 2).map((box, bIdx) => (
+                        <div key={bIdx} className="bg-white border border-zinc-200 p-10 rounded-2xl shadow-md flex flex-col items-center justify-center text-center hover:border-red-varese/40 transition-all hover:shadow-lg min-h-[220px] group">
+                          {box.icon && (
+                            <div className="bg-red-varese/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                              {box.icon.includes('Plane') && <Plane className="text-red-varese" size={28} />}
+                              {box.icon.includes('Basketball') && (
+                                <svg className="text-red-varese" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                  <circle cx="12" cy="12" r="10" />
+                                  <path d="M5.4 5.4l13.2 13.2" />
+                                  <path d="M18.6 5.4L5.4 18.6" />
+                                  <path d="M12 2a15.3 15.3 0 0 1 0 20" />
+                                  <path d="M2 12a15.3 15.3 0 0 0 20 0" />
+                                </svg>
+                              )}
+                              {box.icon === 'Eye' && <Eye className="text-red-varese" size={32} />}
+                              {box.icon === 'Dumbbell' && <Dumbbell className="text-red-varese" size={32} />}
+                              {box.icon === 'ZoomIn' && <ZoomIn className="text-red-varese" size={32} />}
+                            </div>
+                          )}
+                          <h5 className="font-oswald text-red-varese font-black uppercase tracking-widest mb-3 text-xl">{box.title}</h5>
+                          {box.description && <p className="text-zinc-600 text-sm leading-relaxed max-w-[250px] mx-auto">{box.description}</p>}
+                        </div>
+                      ))}
+                    </div>
+                    {/* Row 2: 3 large boxes */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl mx-auto">
+                      {boxes.slice(2, 5).map((box, bIdx) => (
+                        <div key={bIdx + 2} className="bg-white border border-zinc-200 p-10 rounded-2xl shadow-md flex flex-col items-center justify-center text-center hover:border-red-varese/40 transition-all hover:shadow-lg min-h-[220px] group">
+                          {box.icon && (
+                            <div className="bg-red-varese/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                              {box.icon.includes('Plane') && <Plane className="text-red-varese" size={28} />}
+                              {box.icon.includes('Basketball') && (
+                                <svg className="text-red-varese" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                  <circle cx="12" cy="12" r="10" />
+                                  <path d="M5.4 5.4l13.2 13.2" />
+                                  <path d="M18.6 5.4L5.4 18.6" />
+                                  <path d="M12 2a15.3 15.3 0 0 1 0 20" />
+                                  <path d="M2 12a15.3 15.3 0 0 0 20 0" />
+                                </svg>
+                              )}
+                              {box.icon === 'Eye' && <Eye className="text-red-varese" size={32} />}
+                              {box.icon === 'Dumbbell' && <Dumbbell className="text-red-varese" size={32} />}
+                              {box.icon === 'ZoomIn' && <ZoomIn className="text-red-varese" size={32} />}
+                              {box.icon === 'Home' && <Home className="text-red-varese" size={32} />}
+                              {box.icon === 'Shirt' && <Shirt className="text-red-varese" size={32} />}
+                              {box.icon === 'BicepsFlexed' && <BicepsFlexed className="text-red-varese" size={32} />}
+                            </div>
+                          )}
+                          <h5 className="font-oswald text-red-varese font-black uppercase tracking-widest mb-3 text-xl">{box.title}</h5>
+                          {box.description && <p className="text-zinc-600 text-sm leading-relaxed max-w-[250px] mx-auto">{box.description}</p>}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              }
+
+              const gridCols = boxes.length === 6 ? 'grid-cols-2 lg:grid-cols-3' : (boxes.length === 3 ? 'grid-cols-1 md:grid-cols-3' : 'grid-cols-2 lg:grid-cols-4');
               return (
                 <div key={lIdx} className={`grid ${gridCols} gap-6 mt-8`}>
                   {boxes.map((box, bIdx) => (
-                    <div key={bIdx} className="bg-white border border-zinc-200 p-8 rounded-2xl shadow-sm flex flex-col items-center justify-center text-center hover:border-red-varese/50 transition-all hover:shadow-xl group min-h-[160px]">
-                      <span className="text-zinc-900 font-bold uppercase tracking-widest text-sm group-hover:text-red-varese transition-colors mb-3">{box.title}</span>
-                      {box.description && <p className="text-zinc-500 text-xs mt-1 leading-relaxed max-w-[200px] mx-auto">{box.description}</p>}
+                    <div key={bIdx} className="bg-white border border-zinc-200 p-8 rounded-2xl shadow-sm flex flex-col items-center justify-center text-center hover:border-red-varese/30 transition-all hover:shadow-md min-h-[160px]">
+                      {box.icon && (
+                        <div className="bg-red-varese/10 w-14 h-14 rounded-xl flex items-center justify-center mb-4 gap-1 flex-wrap">
+                          {box.icon.includes('Plane') && <Plane className="text-red-varese" size={20} />}
+                          {box.icon.includes('Basketball') && (
+                            <svg className="text-red-varese" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <circle cx="12" cy="12" r="10" />
+                              <path d="M5.4 5.4l13.2 13.2" />
+                              <path d="M18.6 5.4L5.4 18.6" />
+                              <path d="M12 2a15.3 15.3 0 0 1 0 20" />
+                              <path d="M2 12a15.3 15.3 0 0 0 20 0" />
+                            </svg>
+                          )}
+                          {box.icon === 'Eye' && <Eye className="text-red-varese" size={28} />}
+                          {box.icon === 'Dumbbell' && <Dumbbell className="text-red-varese" size={28} />}
+                          {box.icon === 'ZoomIn' && <ZoomIn className="text-red-varese" size={28} />}
+                          {box.icon === 'Home' && <Home className="text-red-varese" size={28} />}
+                          {box.icon === 'Shirt' && <Shirt className="text-red-varese" size={28} />}
+                          {box.icon === 'BicepsFlexed' && <BicepsFlexed className="text-red-varese" size={28} />}
+                        </div>
+                      )}
+                      <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-2 text-lg">{box.title}</h5>
+                      {box.description && <p className="text-zinc-600 text-xs mt-1 leading-relaxed max-w-[200px] mx-auto">{box.description}</p>}
                     </div>
                   ))}
                 </div>
@@ -2484,6 +2685,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
     if (programId === 'internship') return "https://i.imgur.com/OzLgJN6.jpeg";
     if (programId === 'summer-prog') return "https://i.imgur.com/fFsfxKt.jpeg";
     if (programId === 'player-package') return "https://i.imgur.com/NahA03T.jpeg";
+    if (programId === 'travel-team') return "https://i.imgur.com/Cww97Hr.png";
     return `https://picsum.photos/seed/${programId}-1/800/600`;
   };
   const getImage2 = () => {
@@ -2493,6 +2695,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
     if (programId === 'internship') return "https://i.imgur.com/ZbuFjIf.jpeg";
     if (programId === 'summer-prog') return "https://i.imgur.com/1y909x4.jpeg";
     if (programId === 'player-package') return "https://i.imgur.com/Vc8C4E6.jpeg";
+    if (programId === 'travel-team') return "https://i.imgur.com/RaCsDZk.png";
     return `https://picsum.photos/seed/${programId}-2/800/600`;
   };
   const getImage3 = () => {
@@ -2502,6 +2705,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
     if (programId === 'internship') return "https://i.imgur.com/aJPDUxI.png";
     if (programId === 'summer-prog') return "https://i.imgur.com/Wm6SxMP.png";
     if (programId === 'player-package') return "https://i.imgur.com/xnFvd8X.jpeg";
+    if (programId === 'travel-team') return "https://i.imgur.com/0yycsqq.png";
     return `https://picsum.photos/seed/${programId}-3/800/600`;
   };
 
@@ -2518,6 +2722,12 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
             imagePosition = 'right';
           } else if (idx === 1) {
             imageUrl = getImage2();
+            imagePosition = 'left';
+          } else if (isTitleMatch(section.title, 'the schedule')) {
+            imageUrl = getImage3();
+            imagePosition = 'right';
+          } else if (isTitleMatch(section.title, 'Guest player program')) {
+            imageUrl = "https://i.imgur.com/2vCErVF.png";
             imagePosition = 'left';
           } else if (isTitleMatch(section.title, 'Sample Daily Routine')) {
             imageUrl = getImage3();
@@ -2562,7 +2772,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
             <div key={idx} className="flex flex-col">
               <div className={`flex flex-col lg:flex-row gap-8 lg:gap-12 items-center ${idx > 0 ? 'mt-8' : ''}`}>
                 {(imageUrl || imageUrls) && imagePosition === 'left' && (
-                  <div className={`flex-1 ${isTitleMatch(section.title, 'Our special guest and CEO') ? 'lg:flex-[1] max-w-lg mx-auto' : (idx === 1 && (programId === 'academy' || programId === 'summer-prog' || programId === 'player-package') ? 'lg:flex-none lg:w-1/3 max-w-[350px] mx-auto' : (idx === 4 && programId === 'full-time' ? 'lg:flex-none lg:w-1/3 max-w-[400px] mx-auto' : 'lg:flex-[1.5]'))} w-full order-2 lg:order-1`}>
+                  <div className={`flex-1 ${isTitleMatch(section.title, 'Our special guest and CEO') ? 'lg:flex-[1] max-w-lg mx-auto' : ((idx === 1 || idx === 0) && (programId === 'academy' || programId === 'summer-prog' || programId === 'player-package') ? 'lg:flex-none lg:w-1/3 max-w-[350px] mx-auto' : (idx === 4 && programId === 'full-time' ? 'lg:flex-none lg:w-1/3 max-w-[400px] mx-auto' : 'lg:flex-[1.5]'))} w-full order-2 lg:order-1`}>
                     {imageUrl && <img src={imageUrl} alt={section.title || `Section ${idx + 1}`} className="w-full h-auto rounded-xl shadow-lg object-cover" referrerPolicy="no-referrer" />}
                     {imageUrls && (
                       isTitleMatch(section.title, 'what we offer') ? (
@@ -2574,7 +2784,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                   </div>
                 )}
                 
-                <div className={`flex-1 ${(imageUrl || imageUrls) ? (isTitleMatch(section.title, 'Our special guest and CEO') ? 'lg:flex-[1.8]' : ((idx === 1 && (programId === 'academy' || programId === 'summer-prog' || programId === 'player-package')) || ((idx === 2 || idx === 0) && programId === 'player-package') ? 'lg:flex-[2]' : 'lg:flex-[1.5]')) : 'w-full'} space-y-4 ${(imageUrl || imageUrls) && imagePosition === 'left' ? 'order-1 lg:order-2' : ''}`}>
+                <div className={`flex-1 ${(imageUrl || imageUrls) ? (isTitleMatch(section.title, 'Our special guest and CEO') ? 'lg:flex-[1.8]' : (((idx === 1 || idx === 0) && (programId === 'academy' || programId === 'summer-prog' || programId === 'player-package')) || ((idx === 2 || idx === 0) && programId === 'player-package') ? 'lg:flex-[2]' : 'lg:flex-[1.5]')) : 'w-full'} space-y-4 ${(imageUrl || imageUrls) && imagePosition === 'left' ? 'order-1 lg:order-2' : ''}`}>
                   {section.title && (
                     <h4 className={`font-oswald text-red-varese font-bold uppercase tracking-wider mb-4 text-lg border-b border-zinc-200 pb-2 ${isTitleMatch(section.title, 'A Comprehensive Two-Way Approach') ? 'text-center' : ''}`}>
                       {isTitleMatch(section.title, 'the elite player package') ? t('elitePlayerPackage') : section.title}
@@ -3074,7 +3284,7 @@ const App: React.FC = () => {
                   rel={translatedProg.id === 'academy' || translatedProg.id === 'summer-prog' ? "" : "noopener noreferrer"}
                   className="flex-1 bg-red-varese text-white hover:bg-red-700 py-2 md:py-3 rounded font-bold uppercase tracking-widest text-[10px] md:text-xs transition-all text-center"
                 >
-                  {translatedProg.id === 'academy' || translatedProg.id === 'summer-prog' ? t('contactUs') : t('buyNow')}
+                  {t('contactUs')}
                 </a>
              </div>
           </div>
@@ -3337,7 +3547,7 @@ const App: React.FC = () => {
                             <button
                                 className="w-full bg-red-varese text-white py-4 font-bold uppercase tracking-wider hover:bg-red-700 transition-all text-sm rounded-sm"
                             >
-                                {t('buyNow')}
+                                {t('contactUs')}
                             </button>
                           )}
                       </div>
@@ -3408,7 +3618,7 @@ const App: React.FC = () => {
               <div className="flex-1 min-w-[80px] md:min-w-[180px] max-w-[250px] bg-white/90 backdrop-blur-md border border-zinc-200 px-1 py-3 md:px-8 md:py-6 rounded-xl shadow-xl shadow-zinc-200/50 text-center">
                 <span className="text-red-varese text-[10px] md:text-sm font-bold uppercase tracking-wider block mb-1 md:mb-2">{t('where')}</span>
                 <span className="text-black text-xs md:text-base font-medium leading-tight block">
-                  {program.id === 'academy' ? t('tbdTogether') : program.id === 'player-package' ? t('campusVarese') : (program.id === 'summer-camp' && lang === 'it') ? 'Foresteria & Campus, Varese' : t('foresteriaCampus')}
+                  {program.id === 'travel-team' ? t('aroundTheWorld') : program.id === 'academy' ? t('tbdTogether') : program.id === 'player-package' ? t('campusVarese') : (program.id === 'summer-camp' && lang === 'it') ? 'Foresteria & Campus, Varese' : t('foresteriaCampus')}
                 </span>
               </div>
               {program.id === 'summer-camp' && (
@@ -3485,50 +3695,14 @@ const App: React.FC = () => {
                   </div>
                   
                   <div className="mt-auto flex flex-col gap-4 fixed bottom-0 left-0 right-0 p-4 bg-white/90 backdrop-blur-md border-t border-zinc-200 z-50 md:relative md:p-0 md:bg-transparent md:border-t-0 md:z-auto">
-                    {program.id === 'academy' || program.id === 'summer-prog' ? (
-                      <a
-                        href="mailto:ebp@pallacanestrovarese.it"
-                        className="w-full bg-red-varese text-white py-4 md:py-5 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg shadow-xl shadow-red-600/20 text-center flex items-center justify-center group"
-                      >
-                        {t('contactUs')} <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
-                      </a>
-                    ) : program.id === 'full-time' ? (
-                      <a
-                        href="https://store.pallacanestrovarese.it/products/basketball-academy-copia"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full bg-red-varese text-white py-4 md:py-5 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg shadow-xl shadow-red-600/20 text-center flex items-center justify-center group"
-                      >
-                        {t('buyNow')} <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
-                      </a>
-                    ) : program.id === 'summer-camp' ? (
-                      <a
-                        href="https://store.pallacanestrovarese.it/products/elite-summer-camp?variant=52625081630986"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full bg-red-varese text-white py-4 md:py-5 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg shadow-xl shadow-red-600/20 text-center flex items-center justify-center group"
-                      >
-                        {t('buyNow')} <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
-                      </a>
-                    ) : program.id === 'internship' ? (
-                      <a
-                        href="https://store.pallacanestrovarese.it/products/coaches-internship-program?variant=52625121313034"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full bg-red-varese text-white py-4 md:py-5 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg shadow-xl shadow-red-600/20 text-center flex items-center justify-center group"
-                      >
-                        {t('buyNow')} <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
-                      </a>
-                    ) : (
-                      <a
-                        href="#"
-                        target="_self"
-                        rel=""
-                        className="w-full bg-red-varese text-white py-4 md:py-5 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg shadow-xl shadow-red-600/20 text-center flex items-center justify-center group"
-                      >
-                        {t('buyNow')} <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
-                      </a>
-                    )}
+                    <a 
+                      href={lang === 'it' ? "https://form.jotform.com/260762009489060" : "https://form.jotform.com/260762756235361"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full bg-red-varese text-white py-4 md:py-5 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg shadow-xl shadow-red-600/20 text-center flex items-center justify-center group"
+                    >
+                      {t('contactUs')} <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
+                    </a>
                     
                     <div className="flex gap-2 md:flex-col md:gap-4">
                       <a 
@@ -3539,8 +3713,6 @@ const App: React.FC = () => {
                       >
                         {t('requestMoreInfo')}
                       </a>
-
-
                     </div>
                     
                     {program.successStoryLink && (
@@ -3562,12 +3734,12 @@ const App: React.FC = () => {
                 
                 <div className="mt-16 flex flex-col sm:flex-row gap-4 justify-center items-center max-w-4xl mx-auto">
                   <a
-                    href={program.id === 'academy' || program.id === 'summer-prog' ? "mailto:ebp@pallacanestrovarese.it" : program.id === 'full-time' ? "https://store.pallacanestrovarese.it/products/basketball-academy-copia" : program.id === 'summer-camp' ? "https://store.pallacanestrovarese.it/products/elite-summer-camp?variant=52625081630986" : program.id === 'internship' ? "https://store.pallacanestrovarese.it/products/coaches-internship-program?variant=52625121313034" : "#"}
-                    target={program.id === 'full-time' || program.id === 'summer-camp' || program.id === 'internship' ? "_blank" : "_self"}
-                    rel={program.id === 'full-time' || program.id === 'summer-camp' || program.id === 'internship' ? "noopener noreferrer" : ""}
+                    href={lang === 'it' ? "https://form.jotform.com/260762009489060" : "https://form.jotform.com/260762756235361"}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-full sm:w-auto flex-1 bg-red-varese text-white py-4 md:py-5 font-bold uppercase tracking-widest hover:bg-red-700 transition-all text-sm rounded-lg shadow-xl shadow-red-600/20 text-center flex items-center justify-center group"
                   >
-                    {program.id === 'academy' || program.id === 'summer-prog' ? t('contactUs') : t('buyNow')} <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
+                    {t('contactUs')} <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
                   </a>
                   <a 
                     href={lang === 'it' ? "https://form.jotform.com/260762009489060" : "https://form.jotform.com/260762756235361"}
@@ -3589,7 +3761,14 @@ const App: React.FC = () => {
               <h2 className="font-oswald text-5xl md:text-8xl font-bold uppercase mb-8 leading-[0.9]" dangerouslySetInnerHTML={{ __html: t('ctaTitle').replace('Basketball Future', '<br/>Basketball Future') }}></h2>
               <p className="text-xl md:text-2xl font-light mb-12 max-w-2xl mx-auto text-white/90 uppercase tracking-widest">{t('ctaSubtitle')}</p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                  <a href="https://store.pallacanestrovarese.it/collections/elite-programs" target="_blank" rel="noopener noreferrer" className="bg-white text-red-varese px-16 py-6 font-bold uppercase tracking-[0.3em] hover:bg-black hover:text-white transition-all rounded-sm text-lg shadow-2xl">{t('buyNow')}</a>
+                  <a 
+                    href={lang === 'it' ? "https://form.jotform.com/260762009489060" : "https://form.jotform.com/260762756235361"} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="bg-white text-red-varese px-16 py-6 font-bold uppercase tracking-[0.3em] hover:bg-black hover:text-white transition-all rounded-sm text-lg shadow-2xl"
+                  >
+                    {t('contactUs')}
+                  </a>
                   <button onClick={() => setIsJoinModalOpen(true)} className="border border-white text-white px-16 py-6 font-bold uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all rounded-sm text-lg">{t('applyNow')}</button>
               </div>
               </div>
@@ -3633,8 +3812,13 @@ const App: React.FC = () => {
 
         {isMenuOpen && (
             <div className="md:hidden fixed inset-0 z-40 bg-black/95 pt-24 px-8 flex flex-col items-center space-y-6 animate-in fade-in duration-300">
-                <a href="https://store.pallacanestrovarese.it/collections/elite-programs" target="_blank" rel="noopener noreferrer" className="w-full bg-red-varese hover:bg-red-700 text-white px-10 py-4 font-bold uppercase tracking-widest transition-all rounded-md">
-                {t('buyNow')}
+                <a 
+                  href={lang === 'it' ? "https://form.jotform.com/260762009489060" : "https://form.jotform.com/260762756235361"} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="w-full bg-red-varese hover:bg-red-700 text-white px-10 py-4 font-bold uppercase tracking-widest transition-all rounded-md text-center"
+                >
+                  {t('contactUs')}
                 </a>
                 <button onClick={() => { setIsJoinModalOpen(true); setIsMenuOpen(false); }} className="w-full border border-white hover:bg-white hover:text-black text-white px-10 py-4 font-bold uppercase tracking-widest transition-all rounded-md">
                 {t('joinEBP')}
@@ -3687,12 +3871,12 @@ const App: React.FC = () => {
               
               <div className="mt-24 text-center">
                 <a 
-                  href="https://store.pallacanestrovarese.it/collections/elite-programs" 
+                  href={lang === 'it' ? "https://form.jotform.com/260762009489060" : "https://form.jotform.com/260762756235361"} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-red-varese text-white px-16 py-8 rounded-sm font-bold uppercase tracking-[0.3em] text-2xl hover:bg-white hover:text-black transition-all shadow-[0_0_40px_rgba(229,50,56,0.4)] hover:scale-105"
                 >
-                  {t('buyNow')}
+                  {t('contactUs')}
                 </a>
               </div>
             </div>
@@ -4057,7 +4241,14 @@ const App: React.FC = () => {
                 <h2 className="font-oswald text-5xl md:text-8xl font-bold uppercase mb-8 leading-[0.9]" dangerouslySetInnerHTML={{ __html: t('ctaTitle').replace('Basketball Future', '<br/>Basketball Future') }}></h2>
                 <p className="text-xl md:text-2xl font-light mb-12 max-w-2xl mx-auto text-white/90 uppercase tracking-widest">{t('ctaSubtitle')}</p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                    <a href="https://store.pallacanestrovarese.it/collections/elite-programs" target="_blank" rel="noopener noreferrer" className="bg-white text-red-varese px-16 py-6 font-bold uppercase tracking-[0.3em] hover:bg-black hover:text-white transition-all rounded-sm text-lg shadow-2xl">{t('buyNow')}</a>
+                    <a 
+                      href={lang === 'it' ? "https://form.jotform.com/260762009489060" : "https://form.jotform.com/260762756235361"} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="bg-white text-red-varese px-16 py-6 font-bold uppercase tracking-[0.3em] hover:bg-black hover:text-white transition-all rounded-sm text-lg shadow-2xl"
+                    >
+                      {t('contactUs')}
+                    </a>
                     <button onClick={() => setIsJoinModalOpen(true)} className="border border-white text-white px-16 py-6 font-bold uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all rounded-sm text-lg">{t('applyNow')}</button>
                 </div>
                 </div>

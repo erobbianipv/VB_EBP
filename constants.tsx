@@ -293,5 +293,36 @@ BOXES: sports science|basketball analysis|performance data & insights
 
 The Flexible & Personalized Choice
 We understand that a rising star's schedule is demanding, which is why the Elite Player Package offers total flexibility. This 10-session program features personalized training plans tailored to your specific role and development goals, with dates and times to be determined based on your availability throughout the year. Specifically curated for the 2007-2012 age groups, this package ensures that every minute spent on the pitch is optimized for your individual progression, providing a custom-fit path to excellence.`
+  },
+  {
+    id: "travel-team",
+    title: "TRAVEL TEAM",
+    target: "Elite Players",
+    timing: "Year-Round",
+    description: "Join our global travel team and compete in international tournaments, gain unprecedented scouting opportunities, and live the pro experience. This program is dedicated to showcasing top-tier talent on the world stage.",
+    highlights: ["International tournaments", "Scouting opportunity", "Pro experience"],
+    image: "https://i.imgur.com/Vpl32bU.jpeg",
+    detailImage: "https://i.imgur.com/Vpl32bU.jpeg",
+    category: 'top',
+    details: `The initiative
+This project serves as a high-performance accelerator for elite youth athletes. We bridge the gap between amateur talent and professional careers by competing in prestigious international showcases, ensuring our athletes are tested against the highest global standards.
+BOXES: [Eye] visibility | [Dumbbell] pro experience | [Basketball] practices and games
+
+our world tour
+BOXES: [Plane_Basketball] China | [Plane_Basketball] Canada | [Plane_Basketball] USA | [Plane_Basketball] Spain | [ZoomIn] TBD
+
+the schedule
+TIMELINE: Shanghai, China | August 8-16, 2026 || Orangeville, Canada | September 14-20, 2026 || Brooklyn, USA | September 21-26, 2026 || IMG Academy, USA | January 21-26, 2027 || Malaga, Spain | February 2027 || TBD | March/April 2027
+
+Guest player program
+Be part of the travel team and live a unique experience for one or more stages. Join the Guest Player Program.
+
+THE PROGRAM IS INCLUSIVE OF:
+BOXES: [Plane] flight | [Home] full board | [Shirt] official gear | [Dumbbell] practices & games | [Eye] visibility | [BicepsFlexed] pro experience
+
+packages
+The Guest Player Program offers three different packages:
+GUEST_PLAYER_PACKAGES
+[img]https://i.imgur.com/owlvKPk.png[/img]`
   }
 ];

@@ -567,6 +567,89 @@ BOXES: science du sport|analyse du basket|données de performance et information
 Le Choix Flexible et Personnalisé
 Nous comprenons que l'emploi du temps d'une étoile montante est exigeant, c'est pourquoi le Forfait Joueur d'Élite offre une flexibilité totale. Ce programme de 10 sessions propose des plans d'entraînement personnalisés adaptés à votre rôle spécifique et à vos objectifs de développement, avec des dates et des heures à déterminer en fonction de votre disponibilité tout au long de l'année. Spécialement conçu pour les groupes d'âge 2007-2012, ce forfait garantit que chaque minute passée sur le terrain est optimisée pour votre progression individuelle, offrant un parcours sur mesure vers l'excellence.`
     }
+  },
+  "travel-team": {
+    it: {
+      title: "TRAVEL TEAM",
+      target: "Giocatori d'Élite",
+      timing: "Tutto l'anno",
+      description: "Unisciti al nostro travel team globale e competi in tornei internazionali, ottieni opportunità di scouting senza precedenti e vivi l'esperienza da professionista. Questo programma è dedicato a mettere in mostra i talenti di alto livello sul palcoscenico mondiale.",
+      highlights: ["Tornei internazionali", "Opportunità di scouting", "Esperienza da professionista"],
+      details: `L'iniziativa
+Questo progetto funge da acceleratore ad alte prestazioni per giovani atleti d'élite. Colmiamo il divario tra il talento amatoriale e le carriere professionali gareggiando in prestigiose vetrine internazionali, garantendo che i nostri atleti siano messi alla prova contro i più alti standard globali.
+BOXES: [Eye] visibilità | [Dumbbell] esperienza da professionista | [Basketball] allenamenti e partite
+
+il nostro tour mondiale
+BOXES: [Plane_Basketball] Cina | [Plane_Basketball] Canada | [Plane_Basketball] USA | [Plane_Basketball] Spagna | [ZoomIn] da definire
+
+il calendario
+TIMELINE: Shanghai, Cina | 8-16 Agosto 2026 || Orangeville, Canada | 14-20 Settembre 2026 || Brooklyn, USA | 21-26 Settembre 2026 || IMG Academy, USA | 21-26 Gennaio 2027 || Malaga, Spagna | Febbraio 2027 || Da definire | Marzo/Aprile 2027
+
+Programma Guest Player
+Fai parte del travel team e vivi un'esperienza unica per una o più tappe. Iscriviti al Programma Guest Player.
+
+IL PROGRAMMA INCLUDE:
+BOXES: [Plane] volo | [Home] pensione completa | [Shirt] abbigliamento ufficiale | [Dumbbell] allenamenti e partite | [Eye] visibilità | [BicepsFlexed] esperienza da professionista
+
+pacchetti
+Il Guest Player Program offre tre diversi pacchetti:
+GUEST_PLAYER_PACKAGES
+[img]https://i.imgur.com/owlvKPk.png[/img]`
+    },
+    es: {
+      title: "TRAVEL TEAM",
+      target: "Jugadores de Élite",
+      timing: "Todo el año",
+      description: "Únete a nuestro equipo de viaje global y compite en torneos internacionales, obtén oportunidades de scouting sin precedentes y vive la experiencia profesional. Este programa está dedicado a mostrar el talento de primer nivel en el escenario mundial.",
+      highlights: ["Torneos internacionales", "Oportunidad de scouting", "Experiencia profesional"],
+      details: `La iniciativa
+Este proyecto sirve como un acelerador de alto rendimiento para jóvenes atletas de élite. Cerramos la brecha entre el talento amateur y las carreras profesionales compitiendo en prestigiosos escaparates internacionales, asegurando que nuestros atletas sean probados contra los más altos estándares globales.
+BOXES: [Eye] visibilidad | [Dumbbell] experiencia profesional | [Basketball] entrenamientos y partidos
+
+nuestra gira mundial
+BOXES: [Plane_Basketball] China | [Plane_Basketball] Canadá | [Plane_Basketball] EE. UU. | [Plane_Basketball] España | [ZoomIn] Por determinar
+
+el calendario
+TIMELINE: Shanghái, China | 8-16 de agosto de 2026 || Orangeville, Canadá | 14-20 de septiembre de 2026 || Brooklyn, EE. UU. | 21-26 de septiembre de 2026 || IMG Academy, EE. UU. | 21-26 de enero de 2027 || Málaga, España | Febrero de 2027 || Por determinar | Marzo/Abril de 2027
+
+Programa Guest Player
+Forma parte del travel team y vive una experiencia única en una o varias etapas. Únete al Programa Guest Player.
+
+EL PROGRAMA INCLUYE:
+BOXES: [Plane] vuelo | [Home] pensión completa | [Shirt] ropa oficial | [Dumbbell] entrenamientos y partidos | [Eye] visibilidad | [BicepsFlexed] experiencia profesional
+
+paquetes
+El Guest Player Program ofrece tres paquetes diferentes:
+GUEST_PLAYER_PACKAGES
+[img]https://i.imgur.com/owlvKPk.png[/img]`
+    },
+    fr: {
+      title: "TRAVEL TEAM",
+      target: "Joueurs d'Élite",
+      timing: "Toute l'année",
+      description: "Rejoignez notre équipe de voyage mondiale et participez à des tournois internationaux, obtenez des opportunités de recrutement sans précédent et vivez l'expérience professionnelle. Ce programme est dédié à la mise en valeur des talents de haut niveau sur la scène mondiale.",
+      highlights: ["Tournois internationaux", "Opportunité de recrutement", "Expérience professionnelle"],
+      details: `L'initiative
+Ce projet sert d'accélérateur de haute performance pour les jeunes athlètes d'élite. Nous comblons le fossé entre les talents amateurs et les carrières professionnelles en participant à de prestigieuses vitrines internationales, garantissant que nos athlètes sont testés selon les normes mondiales les plus strictes.
+BOXES: [Eye] visibilité | [Dumbbell] expérience professionnelle | [Basketball] entraînements et matchs
+
+notre tournée mondiale
+BOXES: [Plane_Basketball] Chine | [Plane_Basketball] Canada | [Plane_Basketball] États-Unis | [Plane_Basketball] Espagne | [ZoomIn] À définir
+
+le calendrier
+TIMELINE: Shanghai, Chine | 8-16 août 2026 || Orangeville, Canada | 14-20 septembre 2026 || Brooklyn, États-Unis | 21-26 septembre 2026 || IMG Academy, États-Unis | 21-26 janvier 2027 || Malaga, Espagne | Février 2027 || À définir | Mars/Avril 2027
+
+Programme Guest Player
+Faites partie de l'équipe de voyage et vivez une expérience unique pour une ou plusieurs étapes. Rejoignez le Programme Guest Player.
+
+LE PROGRAMME COMPREND:
+BOXES: [Plane] vol | [Home] pension complète | [Shirt] équipement officiel | [Dumbbell] entraînements et matchs | [Eye] visibilité | [BicepsFlexed] expérience professionnelle
+
+forfaits
+Le Guest Player Program propose trois forfaits différents :
+GUEST_PLAYER_PACKAGES
+[img]https://i.imgur.com/owlvKPk.png[/img]`
+    }
   }
 };
 
