@@ -126,8 +126,8 @@ il pacchetto giocatore d'élite
 Questo pacchetto garantisce un ambiente personalizzato e ad alta intensità dove ogni minuto in campo è ottimizzato per una crescita di livello d'élite. Il pacchetto giocatore d'élite è disponibile solo per il Programma Premium.
 ELITE_PACKAGE_PLACEHOLDER
 
-quando
-TIMELINE: Agosto 2026: Arrivo e orientamento | Settembre 2026: Inizio degli allenamenti e della scuola | Gennaio 2027: Valutazione di metà stagione | Giugno 2027: Conclusione del programma e valutazioni finali
+programma
+TIMELINE: Agosto 2026: Arrivo e orientamento | Settembre 2026: Inizio della scuola e delle attività di basket | Settembre 2026-Giugno 2027: Scuola, allenamenti, partite e tornei | Gennaio 2027: Valutazione di metà stagione | Giugno 2027: Fine del programma
 
 dove
 Le nostre strutture premium, tra cui la Foresteria Elite Housing e il Campus di via Pirandello, sono strategicamente posizionate a 5 minuti a piedi l'una dall'altra. Questo layout integrato ottimizza le transizioni quotidiane per la durata del programma, consentendo agli atleti di concentrarsi interamente sul loro rigoroso programma di allenamento.
@@ -159,8 +159,8 @@ el paquete de jugador de élite
 Este paquete garantiza un entorno personalizado y de alta intensidad donde cada minuto en la cancha se optimiza para el crecimiento de nivel élite. El paquete de jugador de élite solo está disponible para el Programa Premium.
 ELITE_PACKAGE_PLACEHOLDER
 
-cuándo
-TIMELINE: Agosto 2026: Llegada y orientación | Septiembre 2026: Inicio de entrenamientos y escuela | Enero 2027: Evaluación de mitad de temporada | Junio 2027: Conclusión del programa y evaluaciones finales
+horario
+TIMELINE: Agosto 2026: Llegada y orientación | Septiembre 2026: Inicio de la escuela y actividades de baloncesto | Septiembre 2026-Junio 2027: Escuela, entrenamientos, partidos y torneos | Enero 2027: Evaluación de mitad de temporada | Junio 2027: Fin del programa
 
 dónde
 Nuestras instalaciones premium, que incluyen la Foresteria Elite Housing y el Campus de via Pirandello, están ubicadas estratégicamente a 5 minutos a pie una de la otra. Este diseño integrado optimiza las transiciones diarias durante la duración del programa, lo que permite a los atletas concentrarse por completo en su riguroso programa de entrenamiento.
@@ -192,8 +192,8 @@ le forfait joueur d'élite
 Ce forfait garantit un environnement personnalisé et de haute intensité où chaque minute sur le terrain est optimisée pour une croissance de niveau élite. Le forfait joueur d'élite est uniquement disponible pour le Programme Premium.
 ELITE_PACKAGE_PLACEHOLDER
 
-quand
-TIMELINE: Août 2026: Arrivée et orientation | Septembre 2026: Début des entraînements et de l'école | Janvier 2027: Évaluation de mi-saison | Juin 2027: Conclusion du programme et évaluations finales
+programme
+TIMELINE: Août 2026: Arrivée et orientation | Septembre 2026: Début de l'école et des activités de basket | Septembre 2026-Juin 2027: École, entraînements, matchs et tournois | Janvier 2027: Évaluation de mi-saison | Juin 2027: Fin du programme
 
 où
 Nos installations haut de gamme, notamment la Foresteria Elite Housing et le Campus de via Pirandello, sont stratégiquement situées à 5 minutes à pied l'une de l'autre. Cet aménagement intégré optimise les transitions quotidiennes pendant la durée du programme, permettant aux athlètes de se concentrer entièrement sur leur programme d'entraînement rigoureux.

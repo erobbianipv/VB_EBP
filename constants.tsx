@@ -148,8 +148,8 @@ the elite player package
 This package ensures a personalized, high-intensity environment where every minute on the court is optimized for elite-level growth. The elite player package is only available for the Premium Program
 ELITE_PACKAGE_PLACEHOLDER
 
-when
-TIMELINE: August 2026: Arrival and orientation | September 2026: Start of training and school | January 2027: Mid-season evaluation | June 2027: Program conclusion and final assessments
+schedule
+TIMELINE: August 2026: Arrival and orientation | September 2026: Start of school and basketball activities | September 2026-June 2027: School, trainings, games & tournaments | January 2027: Mid-season evaluation | June 2027: End of program
 
 where
 Our premium facilities—including the Foresteria Elite Housing and the via Pirandello Campus—are strategically located within a 5-minute walk of each other. This integrated layout optimizes daily transitions for the duration of the program, allowing athletes to focus entirely on their rigorous training schedule.

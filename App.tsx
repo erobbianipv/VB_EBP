@@ -1364,7 +1364,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
     "target audience",
     "When and where",
     "when and where",
-    "when",
+    "schedule",
     "where",
     "The Elite Full-Time Training Program",
     "Target Audience & Future Opportunities",
@@ -1527,7 +1527,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
       "our elite housing": ["our elite housing", "la nostra elite housing", "nuestro alojamiento de élite", "notre logement d'élite"],
       'contact us': ['contact us', 'contattaci', 'contáctanos', 'contactez-nous'],
       'when and where': ['when and where', 'Quando e dove', 'Cuándo y dónde', 'Quand et où', 'quando e dove', 'cuándo y dónde', 'quand et où'],
-      'when': ['when', 'quando', 'cuándo', 'quand'],
+      'schedule': ['schedule', 'programma', 'horario', 'programme'],
       'where': ['where', 'dove', 'dónde', 'où'],
       'pricing': ['pricing', 'prezzi', 'precios', 'prix'],
       'the pillars': ['the pillars', 'i pilastri', 'los pilares', 'les piliers'],
@@ -1791,51 +1791,68 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                     }
                     return { title, description: parts[1]?.trim(), icon };
                   });
-                  const gridCols = boxes.length === 6 ? 'grid-cols-2 lg:grid-cols-3' : 
-                                   (boxes.length === 3 ? 'grid-cols-1 md:grid-cols-3' : 
-                                   (boxes.length === 2 ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-2 lg:grid-cols-4'));
+              const renderBox = (box: any, bIdx: number, isProminent: boolean) => {
+                const titleSize = isProminent ? 'text-base md:text-lg' : 'text-lg';
+                const descSize = isProminent ? 'text-lg md:text-xl' : 'text-xs';
+                const iconSize = isProminent ? 40 : 28;
+                const iconContainerSize = isProminent ? 'w-20 h-20' : 'w-14 h-14';
 
-                  return (
-                    <div key={lIdx} className={`grid ${gridCols} gap-6 mt-8`}>
-                      {boxes.map((box, bIdx) => {
-                        const isProminent = boxes.length <= 3;
-                        const titleSize = isProminent ? 'text-base md:text-lg' : 'text-lg';
-                        const descSize = isProminent ? 'text-lg md:text-xl' : 'text-xs';
-                        const iconSize = isProminent ? 40 : 28;
-                        const iconContainerSize = isProminent ? 'w-20 h-20' : 'w-14 h-14';
+                return (
+                  <div key={bIdx} className={`bg-white border border-zinc-200 ${isProminent ? 'p-10' : 'p-8'} rounded-2xl shadow-sm flex flex-col items-center justify-center text-center hover:border-red-varese/30 transition-all hover:shadow-md ${isProminent ? 'min-h-[220px]' : 'min-h-[160px]'}`}>
+                    {box.icon && (
+                      <div className={`bg-red-varese/10 ${iconContainerSize} rounded-xl flex items-center justify-center mb-6 gap-1 flex-wrap`}>
+                        {box.icon.includes('Plane') && <Plane className="text-red-varese" size={isProminent ? 32 : 20} />}
+                        {box.icon.includes('Basketball') && (
+                          <svg className="text-red-varese" width={isProminent ? 40 : 20} height={isProminent ? 40 : 20} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M5.4 5.4l13.2 13.2" />
+                            <path d="M18.6 5.4L5.4 18.6" />
+                            <path d="M12 2a15.3 15.3 0 0 1 0 20" />
+                            <path d="M2 12a15.3 15.3 0 0 0 20 0" />
+                          </svg>
+                        )}
+                        {box.icon === 'Eye' && <Eye className="text-red-varese" size={iconSize} />}
+                        {box.icon === 'Dumbbell' && <Dumbbell className="text-red-varese" size={iconSize} />}
+                        {box.icon === 'ZoomIn' && <ZoomIn className="text-red-varese" size={iconSize} />}
+                        {box.icon === 'Home' && <Home className="text-red-varese" size={iconSize} />}
+                        {box.icon === 'Shirt' && <Shirt className="text-red-varese" size={iconSize} />}
+                        {box.icon === 'BicepsFlexed' && <BicepsFlexed className="text-red-varese" size={iconSize} />}
+                        {box.icon === 'LineChart' && <LineChart className="text-red-varese" size={iconSize} />}
+                        {box.icon === 'PieChart' && <PieChart className="text-red-varese" size={iconSize} />}
+                        {box.icon === 'Target' && <Target className="text-red-varese" size={iconSize} />}
+                       </div>
+                    )}
+                    <h5 className={`font-oswald text-red-varese font-black uppercase tracking-wider mb-2 ${titleSize}`}>{box.title}</h5>
+                    {box.description && <p className={`text-zinc-600 font-medium ${descSize} leading-relaxed max-w-[280px] mx-auto`}>{box.description}</p>}
+                  </div>
+                );
+              };
 
-                        return (
-                          <div key={bIdx} className={`bg-white border border-zinc-200 ${isProminent ? 'p-10' : 'p-8'} rounded-2xl shadow-sm flex flex-col items-center justify-center text-center hover:border-red-varese/30 transition-all hover:shadow-md ${isProminent ? 'min-h-[220px]' : 'min-h-[160px]'}`}>
-                            {box.icon && (
-                              <div className={`bg-red-varese/10 ${iconContainerSize} rounded-xl flex items-center justify-center mb-6 gap-1 flex-wrap`}>
-                                {box.icon.includes('Plane') && <Plane className="text-red-varese" size={isProminent ? 32 : 20} />}
-                                {box.icon.includes('Basketball') && (
-                                  <svg className="text-red-varese" width={isProminent ? 40 : 20} height={isProminent ? 40 : 20} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <circle cx="12" cy="12" r="10" />
-                                    <path d="M5.4 5.4l13.2 13.2" />
-                                    <path d="M18.6 5.4L5.4 18.6" />
-                                    <path d="M12 2a15.3 15.3 0 0 1 0 20" />
-                                    <path d="M2 12a15.3 15.3 0 0 0 20 0" />
-                                  </svg>
-                                )}
-                                {box.icon === 'Eye' && <Eye className="text-red-varese" size={iconSize} />}
-                                {box.icon === 'Dumbbell' && <Dumbbell className="text-red-varese" size={iconSize} />}
-                                {box.icon === 'ZoomIn' && <ZoomIn className="text-red-varese" size={iconSize} />}
-                                {box.icon === 'Home' && <Home className="text-red-varese" size={iconSize} />}
-                                {box.icon === 'Shirt' && <Shirt className="text-red-varese" size={iconSize} />}
-                                {box.icon === 'BicepsFlexed' && <BicepsFlexed className="text-red-varese" size={iconSize} />}
-                                {box.icon === 'LineChart' && <LineChart className="text-red-varese" size={iconSize} />}
-                                {box.icon === 'PieChart' && <PieChart className="text-red-varese" size={iconSize} />}
-                                {box.icon === 'Target' && <Target className="text-red-varese" size={iconSize} />}
-                               </div>
-                            )}
-                            <h5 className={`font-oswald text-red-varese font-black uppercase tracking-wider mb-2 ${titleSize}`}>{box.title}</h5>
-                            {box.description && <p className={`text-zinc-600 font-medium ${descSize} leading-relaxed max-w-[280px] mx-auto`}>{box.description}</p>}
-                          </div>
-                        );
-                      })}
+              if (boxes.length === 5) {
+                return (
+                  <div key={lIdx} className="mt-8 flex flex-col gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto w-full">
+                      {boxes.slice(0, 2).map((box, bIdx) => renderBox(box, bIdx, false))}
                     </div>
-                  );
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto w-full">
+                      {boxes.slice(2, 5).map((box, bIdx) => renderBox(box, bIdx + 2, false))}
+                    </div>
+                  </div>
+                );
+              }
+
+              const gridCols = boxes.length === 6 ? 'grid-cols-2 lg:grid-cols-3' : 
+                               (boxes.length === 3 ? 'grid-cols-1 md:grid-cols-3' : 
+                               (boxes.length === 2 ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-2 lg:grid-cols-4'));
+
+              return (
+                <div key={lIdx} className={`grid ${gridCols} gap-6 mt-8`}>
+                  {boxes.map((box, bIdx) => {
+                    const isProminent = boxes.length <= 3;
+                    return renderBox(box, bIdx, isProminent);
+                  })}
+                </div>
+              );
                 }
                 if (line.includes("HOUSING_FEATURES_PLACEHOLDER")) {
 
@@ -2152,7 +2169,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                   <div className="flex-1 bg-white p-6 rounded-2xl shadow-lg border border-zinc-200 hover:border-red-varese/30 transition-all">
                     <div className="text-center mb-6">
                       <h5 className="font-oswald text-zinc-900 font-bold uppercase tracking-wider text-xl">{t('standardProgram')}</h5>
-                      <div className="text-red-varese font-black text-2xl mt-1">€15.000/year</div>
+                      <div className="text-red-varese font-black text-2xl mt-1">€20.000/year</div>
                     </div>
                     <div className="space-y-3">
                       {[
@@ -2548,17 +2565,37 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
               return renderLineWithLinks(line, lIdx);
             }
             if (line.startsWith("TIMELINE:")) {
-              const events = line.replace("TIMELINE:", "").split("||").map(e => {
-                const parts = e.split("|");
-                return { location: parts[0]?.trim(), date: parts[1]?.trim() };
+              if (line.includes("||")) {
+                const events = line.replace("TIMELINE:", "").split("||").map(e => {
+                  const parts = e.split("|");
+                  return { location: parts[0]?.trim(), date: parts[1]?.trim() };
+                });
+                return (
+                  <div key={lIdx} className="mt-8 mb-8 relative border-l-2 border-red-varese/30 ml-4 md:ml-6 pl-6 md:pl-8 space-y-8 py-4">
+                    {events.map((event, eIdx) => (
+                      <div key={eIdx} className="relative">
+                        <div className="absolute -left-[35px] md:-left-[43px] top-1 bg-zinc-900 border-2 border-red-varese w-4 h-4 rounded-full z-10 shadow-[0_0_10px_rgba(227,6,19,0.5)]"></div>
+                        <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider text-xl leading-none mb-1">{event.location}</h5>
+                        <p className="text-zinc-500 font-medium text-xs tracking-wide">{event.date}</p>
+                      </div>
+                    ))}
+                  </div>
+                );
+              }
+              
+              const items = line.replace("TIMELINE:", "").split("|").map(item => {
+                const [date, ...descParts] = item.split(":");
+                return { date: date.trim(), description: descParts.join(":").trim() };
               });
               return (
-                <div key={lIdx} className="mt-8 mb-8 relative border-l-2 border-red-varese/30 ml-4 md:ml-6 pl-6 md:pl-8 space-y-8 py-4">
-                  {events.map((event, eIdx) => (
-                    <div key={eIdx} className="relative">
-                      <div className="absolute -left-[35px] md:-left-[43px] top-1 bg-zinc-900 border-2 border-red-varese w-4 h-4 rounded-full z-10 shadow-[0_0_10px_rgba(227,6,19,0.5)]"></div>
-                      <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider text-xl leading-none mb-1">{event.location}</h5>
-                      <p className="text-zinc-500 font-medium text-xs tracking-wide">{event.date}</p>
+                <div key={lIdx} className="mt-8 space-y-6 relative before:absolute before:left-[7px] before:top-2 before:bottom-2 before:w-0.5 before:bg-zinc-100">
+                  {items.map((item, iIdx) => (
+                    <div key={iIdx} className="relative pl-8 group">
+                      <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full border-2 border-red-varese bg-white group-hover:bg-red-varese transition-colors z-10" />
+                      <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4">
+                        <span className="font-oswald font-bold text-red-varese uppercase tracking-wider text-sm whitespace-nowrap">{item.date}</span>
+                        <p className="text-zinc-600 text-sm">{item.description}</p>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -2577,6 +2614,56 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                 return { title, description: parts[1]?.trim(), icon };
               });
 
+              const renderBox = (box: any, bIdx: number, isProminent: boolean) => {
+                const titleSize = isProminent ? 'text-xl md:text-2xl' : 'text-lg';
+                const descSize = isProminent ? 'text-lg md:text-xl' : 'text-xs';
+                const iconSize = isProminent ? 40 : 28;
+                const iconContainerSize = isProminent ? 'w-20 h-20' : 'w-14 h-14';
+
+                return (
+                  <div key={bIdx} className={`bg-white border border-zinc-200 ${isProminent ? 'p-10' : 'p-8'} rounded-2xl shadow-sm flex flex-col items-center justify-center text-center hover:border-red-varese/30 transition-all hover:shadow-md ${isProminent ? 'min-h-[220px]' : 'min-h-[160px]'}`}>
+                    {box.icon && (
+                      <div className={`bg-red-varese/10 ${iconContainerSize} rounded-xl flex items-center justify-center mb-6 gap-1 flex-wrap`}>
+                        {box.icon.includes('Plane') && <Plane className="text-red-varese" size={isProminent ? 32 : 20} />}
+                        {box.icon.includes('Basketball') && (
+                          <svg className="text-red-varese" width={isProminent ? 40 : 20} height={isProminent ? 40 : 20} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M5.4 5.4l13.2 13.2" />
+                            <path d="M18.6 5.4L5.4 18.6" />
+                            <path d="M12 2a15.3 15.3 0 0 1 0 20" />
+                            <path d="M2 12a15.3 15.3 0 0 0 20 0" />
+                          </svg>
+                        )}
+                        {box.icon === 'Eye' && <Eye className="text-red-varese" size={iconSize} />}
+                        {box.icon === 'Dumbbell' && <Dumbbell className="text-red-varese" size={iconSize} />}
+                        {box.icon === 'ZoomIn' && <ZoomIn className="text-red-varese" size={iconSize} />}
+                        {box.icon === 'Home' && <Home className="text-red-varese" size={iconSize} />}
+                        {box.icon === 'Shirt' && <Shirt className="text-red-varese" size={iconSize} />}
+                        {box.icon === 'BicepsFlexed' && <BicepsFlexed className="text-red-varese" size={iconSize} />}
+                        {box.icon === 'LineChart' && <LineChart className="text-red-varese" size={iconSize} />}
+                        {box.icon === 'PieChart' && <PieChart className="text-red-varese" size={iconSize} />}
+                        {box.icon === 'Target' && <Target className="text-red-varese" size={iconSize} />}
+                       </div>
+                    )}
+                    <h5 className={`font-oswald text-red-varese font-black uppercase tracking-wider mb-2 ${titleSize}`}>{box.title}</h5>
+                    {box.description && <p className={`text-zinc-600 font-medium ${descSize} leading-relaxed max-w-[280px] mx-auto`}>{box.description}</p>}
+                  </div>
+                );
+              };
+
+              if (boxes.length === 5) {
+                return (
+                  <div key={lIdx} className="mt-8 flex flex-col gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto w-full">
+                      {boxes.slice(0, 2).map((box, bIdx) => renderBox(box, bIdx, false))}
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto w-full">
+                      {boxes.slice(2, 5).map((box, bIdx) => renderBox(box, bIdx + 2, false))}
+                    </div>
+                  </div>
+                );
+              }
+
               // Robust rendering for any number of boxes
               const gridCols = boxes.length === 6 ? 'grid-cols-2 lg:grid-cols-3' : 
                                (boxes.length === 3 ? 'grid-cols-1 md:grid-cols-3' : 
@@ -2586,60 +2673,8 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                 <div key={lIdx} className={`grid ${gridCols} gap-6 mt-8`}>
                   {boxes.map((box, bIdx) => {
                     const isProminent = boxes.length <= 3;
-                    const titleSize = isProminent ? 'text-xl md:text-2xl' : 'text-lg';
-                    const descSize = isProminent ? 'text-lg md:text-xl' : 'text-xs';
-                    const iconSize = isProminent ? 40 : 28;
-                    const iconContainerSize = isProminent ? 'w-20 h-20' : 'w-14 h-14';
-
-                    return (
-                      <div key={bIdx} className={`bg-white border border-zinc-200 ${isProminent ? 'p-10' : 'p-8'} rounded-2xl shadow-sm flex flex-col items-center justify-center text-center hover:border-red-varese/30 transition-all hover:shadow-md ${isProminent ? 'min-h-[220px]' : 'min-h-[160px]'}`}>
-                        {box.icon && (
-                          <div className={`bg-red-varese/10 ${iconContainerSize} rounded-xl flex items-center justify-center mb-6 gap-1 flex-wrap`}>
-                                                        {box.icon.includes('Plane') && <Plane className="text-red-varese" size={isProminent ? 32 : 20} />}
-                            {box.icon.includes('Basketball') && (
-                              <svg className="text-red-varese" width={isProminent ? 40 : 20} height={isProminent ? 40 : 20} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <circle cx="12" cy="12" r="10" />
-                                <path d="M5.4 5.4l13.2 13.2" />
-                                <path d="M18.6 5.4L5.4 18.6" />
-                                <path d="M12 2a15.3 15.3 0 0 1 0 20" />
-                                <path d="M2 12a15.3 15.3 0 0 0 20 0" />
-                              </svg>
-                            )}
-                            {box.icon === 'Eye' && <Eye className="text-red-varese" size={iconSize} />}
-                            {box.icon === 'Dumbbell' && <Dumbbell className="text-red-varese" size={iconSize} />}
-                            {box.icon === 'ZoomIn' && <ZoomIn className="text-red-varese" size={iconSize} />}
-                            {box.icon === 'Home' && <Home className="text-red-varese" size={iconSize} />}
-                            {box.icon === 'Shirt' && <Shirt className="text-red-varese" size={iconSize} />}
-                            {box.icon === 'BicepsFlexed' && <BicepsFlexed className="text-red-varese" size={iconSize} />}
-                            {box.icon === 'LineChart' && <LineChart className="text-red-varese" size={iconSize} />}
-                            {box.icon === 'PieChart' && <PieChart className="text-red-varese" size={iconSize} />}
-                            {box.icon === 'Target' && <Target className="text-red-varese" size={iconSize} />}
-                           </div>
-                        )}
-                        <h5 className={`font-oswald text-red-varese font-black uppercase tracking-wider mb-2 ${titleSize}`}>{box.title}</h5>
-                        {box.description && <p className={`text-zinc-600 font-medium ${descSize} leading-relaxed max-w-[280px] mx-auto`}>{box.description}</p>}
-                      </div>
-                    );
+                    return renderBox(box, bIdx, isProminent);
                   })}
-                </div>
-              );
-            }
-            if (line.startsWith("TIMELINE:")) {
-              const items = line.replace("TIMELINE:", "").split("|").map(item => {
-                const [date, ...descParts] = item.split(":");
-                return { date: date.trim(), description: descParts.join(":").trim() };
-              });
-              return (
-                <div key={lIdx} className="mt-8 space-y-6 relative before:absolute before:left-[7px] before:top-2 before:bottom-2 before:w-0.5 before:bg-zinc-100">
-                  {items.map((item, iIdx) => (
-                    <div key={iIdx} className="relative pl-8 group">
-                      <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full border-2 border-red-varese bg-white group-hover:bg-red-varese transition-colors z-10" />
-                      <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4">
-                        <span className="font-oswald font-bold text-red-varese uppercase tracking-wider text-sm whitespace-nowrap">{item.date}</span>
-                        <p className="text-zinc-600 text-sm">{item.description}</p>
-                      </div>
-                    </div>
-                  ))}
                 </div>
               );
             }
@@ -3657,7 +3692,7 @@ const App: React.FC = () => {
                   <span className="text-black text-xs md:text-base font-medium leading-tight block">
                     {program.id === 'summer-camp' ? '€990 or €690' : 
                      program.id === 'player-package' ? '€1.000 or €500' :
-                     program.id === 'full-time' ? '€15.000/year or €30.000/year' :
+                     program.id === 'full-time' ? '€20.000/year or €30.000/year' :
                      program.id === 'internship' ? '€1.500/month' :
                      program.id === 'summer-prog' ? t('tbdTogether') :
                      t('contactUs')}
