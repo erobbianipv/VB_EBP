@@ -4,20 +4,20 @@ const programTranslations: Record<string, Record<string, Partial<Program>>> = {
   "academy": {
     it: {
       title: "ACCADEMIA DI BASKET",
-      target: "Dedicato ai ragazzi tra i 5 e i 19 anni",
+      target: "Club, accademie, federazioni",
       timing: "Tutto l'anno",
       description: "Un impegno per favorire la crescita attraverso un approccio a due vie: Grassroots e Sviluppo di Giocatori d'Elite.",
       overview: "La Pallacanestro Varese è orgogliosa di annunciare la fondazione della sua Basketball Academy, un progetto nato da un profondo impegno per favorire la crescita del basket sia a livello locale che nazionale. Questo non è solo un programma sportivo; è uno sforzo collaborativo per costruire un'eredità di eccellenza, lavoro di squadra e passione per il gioco.",
-      highlights: ["Allenatori Esperti", "Strutture di alta qualità", "Coinvolgimento della comunità"],
-      details: `Un Approccio Completo a Due Vie
+      highlights: ["Allenatori Esperti", "Know-how professionale", "Coinvolgimento della comunità"],
+      details: `la nostra visione
+La Pallacanestro Varese Basketball Academy è un progetto ambizioso e lungimirante progettato per portare uno dei marchi di pallacanestro più iconici d'Italia sul palcoscenico mondiale. Costruita su decenni di eccellenza, passione e una radicata cultura del gioco, l'Academy esporta il nostro know-how e la nostra identità unici per creare hub di pallacanestro di livello mondiale sia in Italia che oltre i suoi confini. La nostra missione è semplice ma potente: piantare la bandiera di Varese ovunque la pallacanestro abbia il potenziale per crescere, ispirare e unire. Attraverso programmi strutturati, metodologie di allenamento d'élite e una visione condivisa dello sport come veicolo per lo sviluppo personale, costruiamo più che giocatori — costruiamo campioni nella vita. Che sia in una città vicina o in un continente diverso, ogni Basketball Academy targata Pallacanestro Varese porta con sé lo stesso DNA: eccellenza, valori e una passione indissolubile per il gioco.
+
+Un Approccio Completo a Due Vie
 La nostra Accademia si basa su due pilastri fondamentali progettati per servire ogni aspetto dello sport:
 
 Eccellenza di Base: Crediamo nel basket come potente strumento per la comunità. Il nostro programma promuove uno spirito attivo e positivo, aiutando i giovani atleti a sviluppare abilità sociali e uno stile di vita sano.
 
 Sviluppo di Giocatori d'Elite: Per coloro che sognano i campionati maggiori, forniamo il percorso definitivo. Offrendo allenatori esperti, programmi di allenamento professionali e accesso a strutture di alta qualità, coltiviamo le stelle del basket di domani.
-
-la nostra visione
-La Pallacanestro Varese è orgogliosa di esportare la sua leggendaria eredità cestistica attraverso il nostro Global Academy Expansion Program. Colmiamo il divario tra la storica tradizione europea e il talento internazionale stabilendo accademie satellite ufficiali in collaborazione diretta con Federazioni Nazionali, club d'élite e organizzazioni sportive in tutto il mondo. Questo non è un franchising; è un allineamento tecnico strategico progettato per trapiantare la nostra collaudata metodologia di Serie A nel tuo ecosistema cestistico locale.
 
 il programma
 Pallacanestro Varese Academy esporta il prestigioso patrimonio e l'eccellenza tecnica del nostro club per elevare il basket giovanile in tutto il mondo. Collaborando con club locali e federazioni nazionali, forniamo accesso esclusivo al nostro know-how d'élite, a standard di allenamento di alto livello e a un'esperienza organizzativa strategica. Questa iniziativa è progettata per favorire la crescita professionale attraverso una visione condivisa, sfruttando il potere del nostro marchio per guidare il successo atletico e operativo su scala globale.
@@ -37,20 +37,20 @@ Contattaci all'indirizzo f.bellotto@pallacanestrovarese.it o clicca qui per info
     },
     es: {
       title: "ACADEMIA DE BALONCESTO",
-      target: "Dedicado a niños entre 5 y 19 años",
+      target: "Clubes, academias, federaciones",
       timing: "Todo el año",
       description: "Un compromiso para fomentar el crecimiento a través de un enfoque de dos vías: Base y Desarrollo de Jugadores de Élite.",
       overview: "Pallacanestro Varese se enorgullece de anunciar el establecimiento de su Academia de Baloncesto, un proyecto nacido de un profundo compromiso para fomentar el crecimiento del baloncesto tanto a nivel local como nacional. Esto no es solo un programa deportivo; es un esfuerzo colaborativo para construir un legado de excelencia, trabajo en equipo y pasión por el juego.",
-      highlights: ["Entrenadores Expertos", "Instalaciones de alta calidad", "Participación comunitaria"],
-      details: `Un Enfoque Completo de Dos Vías
+      highlights: ["Entrenadores Expertos", "Know-how profesional", "Participación comunitaria"],
+      details: `nuestra visión
+La Pallacanestro Varese Basketball Academy es un proyecto ambicioso y con visión de futuro diseñado para llevar a una de las marcas de baloncesto más icónicas de Italia al escenario mundial. Construida sobre décadas de excelencia, pasión y una cultura del juego profundamente arraigada, la Academia exporta nuestro know-how e identidad únicos para crear centros de baloncesto de clase mundial tanto en Italia como más allá de sus fronteras. Nuestra misión es simple pero poderosa: plantar la bandera de Varese donde el baloncesto tenga el potencial de crecer, inspirar y unir. A través de programas estructurados, metodologías de entrenamiento de élite y una visión compartida del deporte como vehículo para el desarrollo personal, construimos más que jugadores: construimos campeones en la vida. Ya sea en una ciudad vecina o en un continente diferente, cada Basketball Academy impulsada por Pallacanestro Varese lleva el mismo ADN: excelencia, valores y una pasión inquebrantable por el juego.
+
+Un Enfoque Completo de Dos Vías
 Nuestra Academia se basa en dos pilares fundamentales diseñados para servir a todos los aspectos del deporte:
 
 Excelencia de Base: Creemos en el baloncesto como una herramienta poderosa para la comunidad. Nuestro programa promueve un espíritu activo y positivo, ayudando a los jóvenes atletas a desarrollar habilidades sociales y un estilo de vida saludable.
 
 Desarrollo de Jugadores de Élite: Para aquellos que sueñan con las grandes ligas, proporcionamos el camino definitivo. Al ofrecer entrenadores expertos, programas de entrenamiento profesional y acceso a instalaciones de alta calidad, cultivamos a las estrellas del baloncesto del mañana.
-
-nuestra visión
-Pallacanestro Varese se enorgullece de exportar su legendario legado de baloncesto a través de nuestro Global Academy Expansion Program. Cerramos la brecha entre la histórica tradición europea y el talento internacional mediante el establecimiento de academias satélite oficiales en colaboración directa con Federaciones Nacionales, clubes de élite y organizaciones deportivas de todo el mundo. Esto no es una franquicia; es una alineación técnica estratégica diseñada para trasplantar nuestra probada metodología de la Serie A a su ecosistema de baloncesto local.
 
 el programa
 Pallacanestro Varese Academy exporta el prestigioso patrimonio y la excelencia técnica de nuestro club para elevar el baloncesto juvenil en todo el mundo. Al asociarnos con clubes locales y federaciones nacionales, brindamos acceso exclusivo a nuestro know-how de élite, estándares de entrenamiento de alto nivel y experiencia organizativa estratégica. Esta iniciativa está diseñada para fomentar el crecimiento profesional a través de una visión compartida, aprovechando el poder de nuestra marca para impulsar el éxito atlético y operativo a escala global.
@@ -70,20 +70,20 @@ Contáctanos en f.bellotto@pallacanestrovarese.it o haz clic aquí para obtener 
     },
     fr: {
       title: "ACADÉMIE DE BASKETBALL",
-      target: "Dédié aux enfants de 5 à 19 ans",
+      target: "Clubs, académies, fédérations",
       timing: "Toute l'année",
       description: "Un engagement à favoriser la croissance grâce à une approche à deux voies : Base et Développement de Joueurs d'Élite.",
       overview: "Pallacanestro Varese est fier d'annoncer la création de son Académie de Basketball, un projet né d'un profond engagement à favoriser la croissance du basketball aux niveaux local et national. Ce n'est pas seulement un programme sportif ; c'est un effort de collaboration pour bâtir un héritage d'excellence, de travail d'équipe et de passion pour le jeu.",
-      highlights: ["Entraîneurs Experts", "Installations de haute qualité", "Engagement communautaire"],
-      details: `Une Approche Complète à Deux Voies
+      highlights: ["Entraîneurs Experts", "Savoir-faire professionnel", "Engagement communautaire"],
+      details: `notre vision
+La Pallacanestro Varese Basketball Academy est un projet ambitieux et tourné vers l'avenir, conçu pour faire connaître l'une des marques de basket-ball les plus emblématiques d'Italie sur la scène mondiale. Bâtie sur des décennies d'excellence, de passion et une culture du jeu profondément ancrée, l'Académie exporte notre savoir-faire et notre identité uniques pour créer des centres de basket-ball de classe mondiale en Italie et au-delà de ses frontières. Notre mission est simple mais puissante : planter le drapeau de Varese partout où le basket-ball a le potentiel de croître, d'inspirer et d'unir. Grâce à des programmes structurés, des méthodologies d'entraînement d'élite et une vision partagée du sport en tant que véhicule de développement personnel, nous formons plus que des joueurs — nous formons des champions dans la vie. Que ce soit dans une ville voisine ou sur un autre continent, chaque Basketball Academy soutenue par Pallacanestro Varese porte le même ADN : excellence, valeurs et une passion inébranlable pour le jeu.
+
+Une Approche Complète à Deux Voies
 Notre Académie repose sur deux piliers fondamentaux conçus pour servir tous les aspects du sport :
 
 Excellence de Base : Nous croyons au basketball comme un outil puissant pour la communauté. Notre programme promeut un esprit actif et positif, aidant les jeunes athlètes à développer des compétences sociales et un mode de vie sain.
 
 Développement de Joueurs d'Élite : Pour ceux qui rêvent des grandes ligues, nous offrons la voie ultime. En proposant des entraîneurs experts, des programmes d'entraînement professionnels et un accès à des installations de haute qualité, nous cultivons les stars du basketball de demain.
-
-notre vision
-Pallacanestro Varese est fier d'exporter son héritage légendaire du basketball à travers notre Global Academy Expansion Program. Nous comblons le fossé entre la tradition européenne historique et les talents internationaux en créant des académies satellites officielles en collaboration directe avec les fédérations nationales, les clubs d'élite et les organisations sportives du monde entier. Il ne s'agit pas d'une franchise ; c'est un alignement technique stratégique conçu pour transplanter notre méthodologie éprouvée de Serie A dans votre écosystème de basketball local.
 
 le programme
 Pallacanestro Varese Academy exporte l'héritage prestigieux et l'excellence technique de notre club pour élever le basketball des jeunes dans le monde entier. En nous associant à des clubs locaux et à des fédérations nationales, nous offrons un accès exclusif à notre savoir-faire d'élite, à des normes d'entraînement de haut niveau et à une expertise organisationnelle stratégique. Cette initiative est conçue pour favoriser la croissance professionnelle grâce à une vision partagée, en tirant parti de la puissance de notre marque pour stimuler le succès athlétique et opérationnel à l'échelle mondiale.

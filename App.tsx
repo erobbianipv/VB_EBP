@@ -1763,10 +1763,11 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
         const isPackages = isTitleMatch(section.title || '', 'packages');
         
         const isWorldTour = isTitleMatch(section.title || '', 'our world tour') || isTitleMatch(section.title || '', 'il nostro tour mondiale');
+        const isOurVision = isTitleMatch(section.title || '', 'our vision');
         
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-            <div className={`space-y-4 ${isSpecialGuest ? 'md:order-2' : ''}`}>
+            <div className={`space-y-4 ${(isSpecialGuest || isOurVision) ? 'md:order-2' : ''}`}>
               {allTextLines.map((line, lIdx) => {
                 const inclusionHeaders = ["THE PROGRAM IS INCLUSIVE OF:", "IL PROGRAMMA INCLUDE:", "EL PROGRAMA INCLUYE:", "LE PROGRAMME COMPREND:"];
                 if (inclusionHeaders.includes(line.trim())) {
@@ -1965,7 +1966,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                 return <p key={lIdx} className="text-zinc-600 leading-relaxed">{line}</p>;
               })}
             </div>
-            <div className={`space-y-4 ${isSpecialGuest ? 'md:order-1' : ''}`}>
+            <div className={`space-y-4 ${(isSpecialGuest || isOurVision) ? 'md:order-1' : ''}`}>
               {isEliteHousing ? (
                 <ImageCarousel images={allImageLines.map(line => line.slice(5, -6))} />
               ) : (
@@ -1974,7 +1975,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                   let imgClass = "w-full";
                   if (isSpecialGuest || isPackages) {
                     imgClass = "w-2/3 mx-auto";
-                  } else if (isWorldTour) {
+                  } else if (isWorldTour || isOurVision) {
                     imgClass = "w-1/2 mx-auto";
                   }
                   return <img key={lIdx} src={src} alt="Section Image" className={`${imgClass} rounded-2xl shadow-lg`} referrerPolicy="no-referrer" />;
