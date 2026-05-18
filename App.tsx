@@ -1517,8 +1517,6 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
       'Sample Daily Routine': ['Sample Daily Routine', 'Esempio di Routine Quotidiana', 'Esempio di Routine Giornaliera', 'Ejemplo de Rutina Diaria', 'Exemple de Routine Quotidienne'],
       'the training program': ['the training program', 'the program', 'il programma di allenamento', 'il programma', 'el programma di allenamento', 'el programa de entrenamiento', 'le programme d\'entraînement', 'le programme'],
       'the training staff': ['the training staff', 'lo staff tecnico', 'LO STAFF TECNICO', 'el personal de entrenamiento', 'le personnel d\'entraînement'],
-      'il nostro ospite speciale': ['il nostro ospite speciale', 'Our special guest and CEO'],
-      'Our special guest and CEO': ['Our special guest and CEO', 'Il nostro ospite speciale e CEO', 'Nuestro invitado speciale e CEO', 'Nuestro invitado especial y CEO', 'Notre invité spécial et PDG'],
       'Unique events & meetings': ['Unique events & meetings', 'Eventi unici e incontri', 'EVENTI UNICI E INCONTRI', 'Eventos únicos y reuniones', 'Événements uniques et réunions'],
       'A Comprehensive Two-Way Approach': ['A Comprehensive Two-Way Approach', 'Un Approccio Completo a Due Vie', 'Un Enfoque Completo de Dos Vías', 'Une Approche Complète à Deux Voies'],
       'Elite Professional Integration': ['Elite Professional Integration', 'Integrazione Professionale d\'Elite', 'Integración Professionale di Élite', 'Integración Profesional de Élite', 'Intégration Professionnelle d\'Élite'],
@@ -1758,7 +1756,6 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
       });
 
       if (allImageLines.length > 0) {
-        const isSpecialGuest = isTitleMatch(section.title || '', 'il nostro ospite speciale') || isTitleMatch(section.title || '', 'Our special guest and CEO');
         const isEliteHousing = isTitleMatch(section.title || '', 'our elite housing');
         const isPackages = isTitleMatch(section.title || '', 'packages');
         
@@ -1767,7 +1764,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
         
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-            <div className={`space-y-4 ${(isSpecialGuest || isOurVision) ? 'md:order-2' : ''}`}>
+            <div className={`space-y-4 ${isOurVision ? 'md:order-2' : ''}`}>
               {allTextLines.map((line, lIdx) => {
                 const inclusionHeaders = ["THE PROGRAM IS INCLUSIVE OF:", "IL PROGRAMMA INCLUDE:", "EL PROGRAMA INCLUYE:", "LE PROGRAMME COMPREND:"];
                 if (inclusionHeaders.includes(line.trim())) {
@@ -1966,14 +1963,14 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                 return <p key={lIdx} className="text-zinc-600 leading-relaxed">{line}</p>;
               })}
             </div>
-            <div className={`space-y-4 ${(isSpecialGuest || isOurVision) ? 'md:order-1' : ''}`}>
+            <div className={`space-y-4 ${isOurVision ? 'md:order-1' : ''}`}>
               {isEliteHousing ? (
                 <ImageCarousel images={allImageLines.map(line => line.slice(5, -6))} />
               ) : (
                 allImageLines.map((line, lIdx) => {
                   const src = line.slice(5, -6);
                   let imgClass = "w-full";
-                  if (isSpecialGuest || isPackages) {
+                  if (isPackages) {
                     imgClass = "w-2/3 mx-auto";
                   } else if (isWorldTour || isOurVision) {
                     imgClass = "w-1/2 mx-auto";
@@ -2871,14 +2868,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                 <div className="mt-12">
                   <h4 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-8 text-2xl md:text-3xl text-center border-b border-zinc-200 pb-4">{t('twoDifferentOptions')}</h4>
                   <div className="flex flex-col md:flex-row gap-8 w-full">
-                    <div className="relative flex-1 bg-white p-6 rounded-xl shadow-sm border border-zinc-200 flex flex-col h-full opacity-90">
-                      <div className="absolute top-[35%] left-0 right-0 -ml-3 -mr-3 z-10 flex items-center justify-center pointer-events-none transform -rotate-3">
-                        <div className="bg-red-varese text-white font-oswald font-bold uppercase tracking-[0.2em] w-full text-center py-4 text-3xl md:text-4xl shadow-xl relative">
-                          <div className="absolute top-full left-[0px] w-0 h-0 border-t-[10px] border-r-[12px] border-t-red-950 border-r-transparent"></div>
-                          <div className="absolute top-full right-[0px] w-0 h-0 border-t-[10px] border-l-[12px] border-t-red-950 border-l-transparent"></div>
-                          SOLD OUT
-                        </div>
-                      </div>
+                    <div className="relative flex-1 bg-white p-6 rounded-xl shadow-sm border border-zinc-200 flex flex-col h-full">
                       <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider mb-2 text-xl text-center">{t('residentialCamp')}</h5>
                       <p className="text-center text-zinc-600 font-semibold mb-4 border-b border-zinc-200 pb-3 text-lg">€990</p>
                       <div className="flex-grow">
