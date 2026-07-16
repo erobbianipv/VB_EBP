@@ -2167,7 +2167,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                   <div className="flex-1 bg-white p-6 rounded-2xl shadow-lg border border-zinc-200 hover:border-red-varese/30 transition-all">
                     <div className="text-center mb-6">
                       <h5 className="font-oswald text-zinc-900 font-bold uppercase tracking-wider text-xl">{t('standardProgram')}</h5>
-                      <div className="text-red-varese font-black text-2xl mt-1">€20.000/year</div>
+                      <div className="text-red-varese font-black text-2xl mt-1">€18.000/year</div>
                     </div>
                     <div className="space-y-3">
                       {[
@@ -3683,7 +3683,7 @@ const App: React.FC = () => {
                   <span className="text-black text-xs md:text-base font-medium leading-tight block">
                     {program.id === 'summer-camp' ? '€990 or €690' : 
                      program.id === 'player-package' ? '€1.000 or €500' :
-                     program.id === 'full-time' ? '€20.000/year or €30.000/year' :
+                     program.id === 'full-time' ? '€18.000/year or €30.000/year' :
                      program.id === 'internship' ? '€1.500/month' :
                      program.id === 'summer-prog' ? t('tbdTogether') :
                      t('contactUs')}
