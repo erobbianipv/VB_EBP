@@ -161,16 +161,19 @@ Please contact us at ebp@pallacanestrovarese.it for detailed pricing information
   {
     id: "summer-camp",
     title: "ELITE SUMMER CAMP",
-    target: "2007 to 2012",
-    timing: "from June 29th to July 3rd",
-    deadline: "June 14, 2026",
+    target: "2009 to 2013",
+    timing: "Summer 2027, TBD",
+    deadline: "TBD",
     description: "We invite you to join Pallacanestro Varese for a transformative, all-inclusive one-week experience specifically engineered for aspiring basketball players who possess the drive to push their physical and mental limits. This is not merely a training camp; it is a deep dive into a professional culture, offering participants a rare and authentic taste of the relentless dedication and discipline required to achieve success at the highest tiers of elite basketball.",
     highlights: ["Serie A techniques", "Elite Competition", "Performance Analytics"],
     image: "https://i.imgur.com/ngjbsbC.jpeg",
     detailImage: "https://i.imgur.com/VWTefpE.jpeg",
-    category: 'top',
-    details: `target audience
-This premier summer experience has been exclusively designed and curated for a select group of ambitious young athletes, specifically those born between 2007 and 2012, who demonstrate an unwavering commitment to achieving elite-level performance. We understand that the off-season is a critical window for growth, and this program serves as the definitive platform for players who are serious about their athletic trajectory and long-term development.
+    category: 'other',
+    details: `they say about us
+PLACEHOLDER_REVIEWS
+
+target audience
+This premier summer experience has been exclusively designed and curated for a select group of ambitious young athletes, specifically those born between 2009 and 2013, who demonstrate an unwavering commitment to achieving elite-level performance. We understand that the off-season is a critical window for growth, and this program serves as the definitive platform for players who are serious about their athletic trajectory and long-term development.
 To facilitate this growth, the program offers a sophisticated and high-intensity training environment that is meticulously tailored to meet the needs of high-potential players. Our primary objective is to provide these athletes with the advanced technical tools and tactical insights necessary to refine their individual skill sets. By immersing participants in a professional-grade atmosphere, we empower them to elevate their game to a standard that meets the rigorous demands of the modern professional circuit.
 
 when and where
@@ -199,7 +202,7 @@ TABLES_PLACEHOLDER`
     highlights: ["Methodology Study", "Practice Observation", "Staff Integration"],
     image: "https://i.imgur.com/RQQuoWs.jpeg",
     detailImage: "https://i.imgur.com/eRNwmeQ.jpeg",
-    category: 'other',
+    category: 'top',
     details: `target audience
 We invite you to step into the prestigious world of elite European basketball with an unparalleled opportunity to integrate directly with the professional coaching staff at Pallacanestro Varese. This immersive program has been specifically designed for ambitious international coaches who are not merely looking for a seminar, but are eager to gain firsthand, high-level experience within a high-stakes, professional environment. By working alongside our technical team, participants will witness the daily operations, tactical planning, and player management strategies that define top-tier European competition.
 

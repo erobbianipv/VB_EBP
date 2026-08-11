@@ -206,12 +206,15 @@ Contactez-nous à f.bellotto@pallacanestrovarese.it pour obtenir des information
   "summer-camp": {
     it: {
       title: "ELITE SUMMER CAMP",
-      target: "Nati tra il 2007 e il 2011",
-      timing: "dal 29 giugno al 3 luglio",
+      target: "Nati tra il 2009 e il 2013",
+      timing: "Estate 2027, TBD",
       description: "Ti invitiamo a unirti alla Pallacanestro Varese per un'esperienza coinvolgente e all-inclusive di una settimana specificamente progettata per aspiranti giocatori di basket pronti a tutto per superare i propri limiti fisici e mentali. Questo non è un semplice campo estivo di allenamento; è un'immersione totale e profonda nella cultura cestistica di Pallacanestro Varese. Il camp offre ai partecipanti un assaggio autentico dell'incessante dedizione e disciplina necessarie per raggiungere il successo ai massimi livelli del basket d'élite.",
       highlights: ["Tecniche di Serie A", "Competizione d'Elite", "Analisi delle Prestazioni"],
-        details: `Pubblico di riferimento
-Questa esclusiva esperienza estiva è stata progettata su misura per un gruppo selezionato di giovani atleti ambiziosi (nati tra il 2007 e il 2011) che dimostrano una dedizione assoluta nel perseguire performance di alto livello. Sappiamo che l’off season rappresenta il momento decisivo per l’evoluzione di un giocatore: questo programma nasce con l’obiettivo di aiutare chi intende investire seriamente sulla propria crescita e sul proprio futuro sportivo.
+        details: `Dicono di noi
+PLACEHOLDER_REVIEWS
+
+Pubblico di riferimento
+Questa esclusiva esperienza estiva è stata progettata su misura per un gruppo selezionato di giovani atleti ambiziosi (nati tra il 2009 e il 2013) che dimostrano una dedizione assoluta nel perseguire performance di alto livello. Sappiamo che l’off season rappresenta il momento decisivo per l’evoluzione di un giocatore: questo programma nasce con l’obiettivo di aiutare chi intende investire seriamente sulla propria crescita e sul proprio futuro sportivo.
 Per favorire questo salto di qualità, offriamo un contesto di allenamento avanzato e ad alta intensità, strutturato meticolosamente per rispondere alle esigenze dei talenti più promettenti. Il nostro obiettivo è fornire agli atleti competenze tecniche d’avanguardia e visione tattica, affinando il talento individuale attraverso un’immersione totale in un’atmosfera professionale. Prepariamo i giocatori a elevare il proprio standard di gioco, allineandolo alle rigorose richieste del basket moderno.
 
 Quando e dove
@@ -233,12 +236,15 @@ TABLES_PLACEHOLDER`
     },
     es: {
       title: "CAMPAMENTO DE VERANO DE ÉLITE",
-      target: "Nacidos entre 2007 y 2011",
-      timing: "Una semana (6 días, 5 noches)",
+      target: "Nacidos entre 2009 y 2013",
+      timing: "Verano 2027, TBD",
       description: "Te invitamos a unirte a Pallacanestro Varese para una experiencia transformadora e integral de una semana diseñada específicamente para aspirantes a jugadores de baloncesto que tienen el impulso de superar sus límites físicos y mentales. Este no es simplemente un campo de entrenamiento; es una inmersión profunda en una cultura profesional, ofreciendo a los participantes una muestra rara y auténtica de la dedicación y disciplina implacables requeridas para lograr el éxito en los niveles más altos del baloncesto de élite.",
       highlights: ["Técnicas de Serie A", "Competición de Élite", "Análisis de Rendimiento"],
-      details: `Público objetivo
-Esta experiencia de verano de primer nivel ha sido diseñada y seleccionada exclusivamente para un grupo selecto de jóvenes atletas ambiciosos, específicamente aquellos nacidos entre 2007 y 2011, que demuestran un compromiso inquebrantable para lograr un rendimiento de nivel de élite. Entendemos que la temporada baja es una ventana crítica para el crecimiento, y este programa sirve como la plataforma definitiva para los jugadores que se toman en serio su trayectoria atlética y su desarrollo a largo plazo.
+      details: `Dicen de nosotros
+PLACEHOLDER_REVIEWS
+
+Público objetivo
+Esta experiencia de verano de primer nivel ha sido diseñada y seleccionada exclusivamente para un grupo selecto de jóvenes atletas ambiciosos, específicamente aquellos nacidos entre 2009 y 2013, que demuestran un compromiso inquebrantable para lograr un rendimiento de nivel de élite. Entendemos que la temporada baja es una ventana crítica para el crecimiento, y este programa sirve como la plataforma definitiva para los jugadores que se toman en serio su trayectoria atlética y su desarrollo a largo plazo.
 Para facilitar este crecimiento, el programa ofrece un entorno de entrenamiento sofisticado y de alta intensidad que se adapta meticulosamente para satisfacer las necesidades de los jugadores de alto potencial. Nuestro objetivo principal es proporcionar a estos atletas las herramientas técnicas avanzadas y los conocimientos tácticos necesarios para perfeccionar sus conjuntos de habilidades individuales. Al sumergir a los participantes en una atmósfera de nivel profesional, los empoderamos para elevar su juego a un estándar que cumpla con las rigurosas demandas del circuito profesional moderno.
 
 Cuándo y dónde
@@ -260,12 +266,15 @@ TABLES_PLACEHOLDER`
     },
     fr: {
       title: "CAMP D'ÉTÉ D'ÉLITE",
-      target: "Nés entre 2007 et 2011",
-      timing: "Une semaine (6 jours, 5 nuits)",
+      target: "Nés entre 2009 et 2013",
+      timing: "Été 2027, TBD",
       description: "Nous vous invitons à rejoindre Pallacanestro Varese pour une expérience transformatrice et tout compris d'une semaine spécialement conçue pour les aspirants joueurs de basketball qui ont la volonté de repousser leurs limites physiques et mentales. Ce n'est pas simplement un camp d'entraînement ; c'est une plongée profonde dans une culture professionnelle, offrant aux participants un aperçu rare et authentique du dévouement et de la discipline implacables requis pour réussir aux plus hauts niveaux du basketball d'élite.",
       highlights: ["Techniques de Serie A", "Compétition d'Élite", "Analyse des Performances"],
-      details: `Public cible
-Cette expérience estivale de premier plan a été exclusivement conçue et organisée pour un groupe restreint de jeunes athlètes ambitieux, en particulier ceux nés entre 2007 et 2011, qui font preuve d'un engagement inébranlable à atteindre des performances de niveau élite. Nous comprenons que la saison morte est une fenêtre critique pour la croissance, et ce programme sert de plate-forme définitive pour les joueurs qui prennent au sérieux leur trajectoire athlétique et leur développement à long terme.
+      details: `Ils disent de nous
+PLACEHOLDER_REVIEWS
+
+Public cible
+Cette expérience estivale de premier plan a été exclusivement conçue et organisée pour un groupe restreint de jeunes athlètes ambitieux, en particulier ceux nés entre 2009 et 2013, qui font preuve d'un engagement inébranlable à atteindre des performances de niveau élite. Nous comprenons que la saison morte est une fenêtre critique pour la croissance, et ce programme sert de plate-forme définitive pour les joueurs qui prennent au sérieux leur trajectoire athlétique et leur développement à long terme.
 Pour faciliter cette croissance, le programme offre un environnement d'entraînement sophistiqué et de haute intensité qui est méticuleusement adapté pour répondre aux besoins des joueurs à fort potentiel. Notre objectif principal est de fournir à ces athlètes les outils techniques avancés et les connaissances tactiques nécessaires pour affiner leurs compétences individuelles. En plongeant les participants dans une atmosphère de niveau professionnel, nous leur donnons les moyens d'élever leur jeu à un niveau qui répond aux exigences rigoureuses du circuit professionnel moderne.
 
 Quand et où
