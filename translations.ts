@@ -572,7 +572,7 @@ BOXES: 5 sessions : €500 | 10 sessions : €1.000`
     it: {
       title: "TRAVEL TEAM",
       target: "Giocatori d'Élite",
-      timing: "Tutto l'anno",
+      timing: "Durata flessibile",
       description: "Unisciti al nostro travel team globale e competi in tornei internazionali, ottieni opportunità di scouting senza precedenti e vivi l'esperienza da professionista. Questo programma è dedicato a mettere in mostra i talenti di alto livello sul palcoscenico mondiale.",
       highlights: ["Tornei internazionali", "Opportunità di scouting", "Esperienza da professionista"],
       details: `L'iniziativa
@@ -599,7 +599,7 @@ GUEST_PLAYER_PACKAGES
     es: {
       title: "TRAVEL TEAM",
       target: "Jugadores de Élite",
-      timing: "Todo el año",
+      timing: "Duración flexible",
       description: "Únete a nuestro equipo de viaje global y compite en torneos internacionales, obtén oportunidades de scouting sin precedentes y vive la experiencia profesional. Este programa está dedicado a mostrar el talento de primer nivel en el escenario mundial.",
       highlights: ["Torneos internacionales", "Oportunidad de scouting", "Experiencia profesional"],
       details: `La iniciativa
@@ -626,7 +626,7 @@ GUEST_PLAYER_PACKAGES
     fr: {
       title: "TRAVEL TEAM",
       target: "Joueurs d'Élite",
-      timing: "Toute l'année",
+      timing: "Durée flexible",
       description: "Rejoignez notre équipe de voyage mondiale et participez à des tournois internationaux, obtenez des opportunités de recrutement sans précédent et vivez l'expérience professionnelle. Ce programme est dédié à la mise en valeur des talents de haut niveau sur la scène mondiale.",
       highlights: ["Tournois internationaux", "Opportunité de recrutement", "Expérience professionnelle"],
       details: `L'initiative
@@ -650,6 +650,41 @@ Le Guest Player Program propose trois forfaits différents :
 GUEST_PLAYER_PACKAGES
 [img]https://i.imgur.com/owlvKPk.png[/img]`
     }
+  },
+  "winter-elite-camp": {
+    it: {
+      title: "WINTER ELITE CAMP",
+      target: "2009 al 2013",
+      timing: "Dicembre 2027, da definire",
+      description: "Partecipa al nostro Winter Elite Camp per vivere un allenamento di altissimo livello durante la pausa invernale. Affina le tue abilità con allenatori professionisti e preparati per la seconda metà della stagione.",
+      highlights: ["Tecniche di Serie A", "Competizione d'élite", "Analisi delle prestazioni"],
+      details: `Informazioni sul Camp
+Un camp di allenamento invernale intensivo progettato per giocatori ambiziosi che cercano di massimizzare il loro potenziale durante la pausa invernale.
+
+Maggiori dettagli saranno disponibili presto.`
+    },
+    es: {
+      title: "WINTER ELITE CAMP",
+      target: "2009 al 2013",
+      timing: "Diciembre 2027, por determinar",
+      description: "Únete a nuestro Winter Elite Camp para experimentar un entrenamiento de primer nivel durante las vacaciones de invierno. Perfecciona tus habilidades con entrenadores profesionales y prepárate para la segunda mitad de la temporada.",
+      highlights: ["Técnicas de la Serie A", "Competición de élite", "Análisis de rendimiento"],
+      details: `Sobre el campamento
+Un campamento de entrenamiento de invierno intensivo diseñado para jugadores ambiciosos que buscan maximizar su potencial durante las vacaciones de invierno.
+
+Pronto habrá más detalles disponibles.`
+    },
+    fr: {
+      title: "WINTER ELITE CAMP",
+      target: "2009 à 2013",
+      timing: "Décembre 2027, à définir",
+      description: "Rejoignez notre Winter Elite Camp pour découvrir un entraînement de haut niveau pendant les vacances d'hiver. Aiguisez vos compétences avec des entraîneurs professionnels et préparez-vous pour la seconde moitié de la saison.",
+      highlights: ["Techniques de Serie A", "Compétition d'élite", "Analyse des performances"],
+      details: `À propos du camp
+Un camp d'entraînement d'hiver intensif conçu pour les joueurs ambitieux cherchant à maximiser leur potentiel pendant les vacances d'hiver.
+
+Plus de détails seront disponibles bientôt.`
+    }
   }
 };
 
@@ -670,7 +705,6 @@ const staffTranslations: Record<string, Record<string, Partial<StaffMember>>> = 
     fr: { role: "GM OPÉRATIONS BASKETBALL", bio: ["2 ans Bureau de la Ligue NBA", "6 ans Philadelphia 76ers"] }
   }
 };
-
 export const translateProgram = (program: Program, lang: Language): Program => {
   if (lang === 'en') return program;
   const translations = programTranslations[program.id]?.[lang];

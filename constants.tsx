@@ -299,7 +299,7 @@ BOXES: 5 sessions: €500 | 10 sessions: €1.000`
     id: "travel-team",
     title: "TRAVEL TEAM",
     target: "Elite Players",
-    timing: "Year-Round",
+    timing: "Flexible duration",
     description: "Join our global travel team and compete in international tournaments, gain unprecedented scouting opportunities, and live the pro experience. This program is dedicated to showcasing top-tier talent on the world stage.",
     highlights: ["International tournaments", "Scouting opportunity", "Pro experience"],
     image: "https://i.imgur.com/Vpl32bU.jpeg",
@@ -325,5 +325,21 @@ packages
 The Guest Player Program offers three different packages:
 GUEST_PLAYER_PACKAGES
 [img]https://i.imgur.com/owlvKPk.png[/img]`
+  },
+  {
+    id: "winter-elite-camp",
+    title: "WINTER ELITE CAMP",
+    target: "2009 to 2013",
+    timing: "December 2027, TBD",
+    description: "Join our Winter Elite Camp to experience top-tier training during the winter break. Sharpen your skills with professional coaches and prepare for the second half of the season.",
+    highlights: ["Serie A techniques", "Elite competition", "Performance analytics"],
+    image: "https://i.imgur.com/aqpljEk.jpeg",
+    detailImage: "https://i.imgur.com/aqpljEk.jpeg",
+    imagePosition: "object-top",
+    category: 'top',
+    details: `About the Camp
+An intensive winter training camp designed for ambitious players looking to maximize their potential during the winter break.
+
+More details will be available soon.`
   }
 ];
