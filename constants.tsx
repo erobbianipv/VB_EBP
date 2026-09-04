@@ -236,7 +236,7 @@ when and where
 The program will be hosted across our premier facilities, specifically the Foresteria Elite Housing and our Campus in via Pirandello. These two flagship locations are strategically situated just a 5-minute walk from one another, ensuring seamless transitions between residency and training. This integrated logistical setup allows athletes to maximize their time and focus entirely on their professional development.
 
 pricing
-The program has a price of €1.500 a month. Please contact us for detailed pricing information or any other general information tailored to your specific needs at ebp@pallacanestrovarese.it.`
+The program has a price of €2.000 a month. Please contact us for detailed pricing information or any other general information tailored to your specific needs at ebp@pallacanestrovarese.it.`
   },
   {
     id: "summer-prog",

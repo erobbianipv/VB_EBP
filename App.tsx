@@ -2830,7 +2830,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
     if (programId === 'academy') return "https://i.imgur.com/QgRPCiU.jpeg";
     if (programId === 'full-time') return "https://i.imgur.com/8MA9g3s.png";
     if (programId === 'summer-camp') return "https://i.imgur.com/f3NtI5T.png";
-    if (programId === 'internship') return "https://i.imgur.com/aJPDUxI.png";
+    if (programId === 'internship') return "https://i.imgur.com/70Tjrqq.jpeg";
     if (programId === 'summer-prog') return "https://i.imgur.com/Wm6SxMP.png";
     if (programId === 'player-package') return "https://i.imgur.com/xnFvd8X.jpeg";
     if (programId === 'travel-team') return "https://i.imgur.com/0yycsqq.png";
@@ -3758,7 +3758,7 @@ const App: React.FC = () => {
                     {program.id === 'summer-camp' ? 'TBD' : 
                      program.id === 'player-package' ? '€1.000 or €500' :
                      program.id === 'full-time' ? '€18.000/year or €30.000/year' :
-                     program.id === 'internship' ? '€1.500/month' :
+                     program.id === 'internship' ? '€2.000/month' :
                      program.id === 'summer-prog' ? t('tbdTogether') :
                      t('contactUs')}
                   </span>
