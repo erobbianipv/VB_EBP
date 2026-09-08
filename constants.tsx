@@ -296,6 +296,57 @@ We understand that a rising star's schedule is demanding, which is why the Elite
 BOXES: 5 sessions: €500 | 10 sessions: €1.000`
   },
   {
+    id: "elite-development-program",
+    title: "ELITE DEVELOPMENT PROGRAM",
+    target: "U18 Elite Players",
+    timing: "Flexible",
+    description: "An elite development path focused on customized training sessions, pro experience, and international experience opportunities.",
+    highlights: ["customized training sessions", "pro experience", "international experience opportunities"],
+    image: "https://i.imgur.com/4w0fHyL.png",
+    detailImage: "https://i.imgur.com/4w0fHyL.png",
+    category: 'top',
+        overview: `Live basketball like a pro with a flexible-duration immersive experience at Pallacanestro Varese.
+Train in top-level facilities alongside elite coaches and staff, experience our professional methodology first-hand, and develop your game within the environment of a club with a unique basketball heritage.
+The experience can also include the opportunity to join our Travel Team, representing Pallacanestro Varese in international tournaments around the world.`,
+    details: `target audience
+This program is designed for elite U18 athletes who aspire to a professional basketball career and for young players who have already shown standout potential and are ready to take the next step, athletes who are hungry to be immersed in a serious, professional environment where they can grow both on and off the court. Our ideal participant is not just talented, but driven: someone who understands that reaching the professional level requires more than raw skill. They are motivated to develop the discipline, mindset, and habits of a true professional, and they're seeking a structured, high-performance setting that matches their ambition.
+
+the elite development program
+ELITE_DEVELOPMENT_PROGRAM_BOXES_PLACEHOLDER
+
+our facilities
+ELITE_DEVELOPMENT_FACILITIES_PLACEHOLDER
+
+packages
+ELITE_DEVELOPMENT_PACKAGE_PROPOSAL_PLACEHOLDER
+
+travel team schedule
+[img]https://i.imgur.com/Ah9fEHj.png[/img]
+TIMELINE:Toronto, Canada | 14-20 September 2026 || IMG Academy, Florida | November 2026 || Miami, Florida | December 2026 || Malaga, Spain | January 2027 || Varese, Italy | January 2027 || Phoenix, Arizona | February 2027 || Toronto, Canada | March 2027
+
+travel team add-ons offers
+TRAVEL_TEAM_PACKAGES_PLACEHOLDER
+
+tailored solutions
+This program should be understood as a flexible framework rather than a rigid, one-size-fits-all solution. While the structure outlined here provides a solid and proven foundation, it is fully customizable and can be adapted to meet the specific needs of each club or individual athlete. Every team and every athlete brings a unique set of circumstances, different competitive levels, training histories, physical capacities, schedules, and long-term goals. A truly effective program must take all of these variables into account. For this reason, personalized solutions can be developed in close collaboration with coaching staff, medical or physiotherapy teams, and the athletes themselves. This may involve adjusting training volume and intensity, modifying periodization to align with a specific competitive calendar, incorporating additional recovery protocols, or tailoring exercises to address individual weaknesses or previous injuries. Similarly, for clubs managing multiple squads or age groups, the program can be scaled up or down in complexity, ensuring it remains age-appropriate and developmentally sound.`
+  },
+  {
+    id: "winter-elite-camp",
+    title: "WINTER ELITE CAMP",
+    target: "2009 to 2013",
+    timing: "December 2027, TBD",
+    description: "Join our Winter Elite Camp to experience top-tier training during the winter break. Sharpen your skills with professional coaches and prepare for the second half of the season.",
+    highlights: ["Serie A techniques", "Elite competition", "Performance analytics"],
+    image: "https://i.imgur.com/aqpljEk.jpeg",
+    detailImage: "https://i.imgur.com/aqpljEk.jpeg",
+    imagePosition: "object-top",
+    category: 'top',
+    details: `About the Camp
+An intensive winter training camp designed for ambitious players looking to maximize their potential during the winter break.
+
+More details will be available soon.`
+  },
+  {
     id: "travel-team",
     title: "TRAVEL TEAM",
     target: "Elite Players",
@@ -304,7 +355,7 @@ BOXES: 5 sessions: €500 | 10 sessions: €1.000`
     highlights: ["International tournaments", "Scouting opportunity", "Pro experience"],
     image: "https://i.imgur.com/Vpl32bU.jpeg",
     detailImage: "https://i.imgur.com/Vpl32bU.jpeg",
-    category: 'top',
+    category: 'other',
     details: `The initiative
 This project serves as a high-performance accelerator for elite youth athletes. We bridge the gap between amateur talent and professional careers by competing in prestigious international showcases, ensuring our athletes are tested against the highest global standards.
 BOXES: [Eye] visibility | [Dumbbell] pro experience | [Basketball] practices and games
@@ -326,20 +377,4 @@ The Guest Player Program offers three different packages:
 GUEST_PLAYER_PACKAGES
 [img]https://i.imgur.com/owlvKPk.png[/img]`
   },
-  {
-    id: "winter-elite-camp",
-    title: "WINTER ELITE CAMP",
-    target: "2009 to 2013",
-    timing: "December 2027, TBD",
-    description: "Join our Winter Elite Camp to experience top-tier training during the winter break. Sharpen your skills with professional coaches and prepare for the second half of the season.",
-    highlights: ["Serie A techniques", "Elite competition", "Performance analytics"],
-    image: "https://i.imgur.com/aqpljEk.jpeg",
-    detailImage: "https://i.imgur.com/aqpljEk.jpeg",
-    imagePosition: "object-top",
-    category: 'top',
-    details: `About the Camp
-An intensive winter training camp designed for ambitious players looking to maximize their potential during the winter break.
-
-More details will be available soon.`
-  }
 ];

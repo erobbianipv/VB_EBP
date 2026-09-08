@@ -1519,13 +1519,38 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
     "packages",
     "pacchetti",
     "paquetes",
-    "forfaits"
+    "forfaits",
+    "the elite development program",
+    "The elite development program",
+    "The Elite Development Program",
+    "THE ELITE DEVELOPMENT PROGRAM",
+    "l'elite development program",
+    "L'Elite Development Program",
+    "our facilities",
+    "Our facilities",
+    "Our Facilities",
+    "OUR FACILITIES",
+    "travel team schedule",
+    "Travel Team Schedule",
+    "programma travel team",
+    "programa travel team",
+    "programme travel team",
+    "travel team add-ons offers",
+    "Travel Team Add-ons Offers",
+    "Travel team add-ons offers",
+    "tailored solutions",
+    "Tailored Solutions",
+    "Tailored solutions"
   ];
 
   const isTitleMatch = (title: string | null, englishTitle: string) => {
     if (!title) return false;
     const translations: Record<string, string[]> = {
+      'our facilities': ['our facilities', 'Our facilities', 'Our Facilities', 'OUR FACILITIES', 'le nostre strutture', 'Le nostre strutture', 'nuestras instalaciones', 'nos installations'],
       'packages': ['packages', 'pacchetti', 'paquetes', 'forfaits'],
+      'travel team add-ons offers': ['travel team add-ons offers', 'offerte travel team add-ons', 'ofertas travel team add-ons', 'offres travel team add-ons'],
+      'tailored solutions': ['tailored solutions', 'soluzioni su misura', 'soluciones a medida', 'solutions sur mesure'],
+      'travel team schedule': ['travel team schedule', 'programma travel team', 'programa travel team', 'programme travel team'],
       'Sample Daily Routine': ['Sample Daily Routine', 'Esempio di Routine Quotidiana', 'Esempio di Routine Giornaliera', 'Ejemplo de Rutina Diaria', 'Exemple de Routine Quotidienne'],
       'the training program': ['the training program', 'the program', 'il programma di allenamento', 'il programma', 'el programma di allenamento', 'el programa de entrenamiento', 'le programme d\'entraînement', 'le programme'],
       'the training staff': ['the training staff', 'lo staff tecnico', 'LO STAFF TECNICO', 'el personal de entrenamiento', 'le personnel d\'entraînement'],
@@ -1566,6 +1591,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
       'Guest player program': ['Guest player program', 'Programma Guest Player', 'Programa Guest Player', 'Programme Guest Player'],
       'extra services': ['extra services', 'servizi extra', 'servicios extra', 'services supplémentaires'],
       'the program': ['the program', 'il programma', 'el programa', 'le programme'],
+      'the elite development program': ['the elite development program', 'l\'elite development program', 'el programa de desarrollo de élite', 'le programme de développement d\'élite'],
       'how does the program work?': ['how does the program work?', 'come funziona il programma?', '¿cómo funciona el programa?', 'comment fonctionne le programme ?']
     };
     return translations[englishTitle]?.some(t => title.toLowerCase() === t.toLowerCase()) || title.toLowerCase() === englishTitle.toLowerCase();
@@ -1580,7 +1606,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
     const lines = block.split('\n');
     const firstLine = lines[0].trim();
     
-    if (titles.includes(firstLine)) {
+    if (titles.some(t => t.toLowerCase() === firstLine.toLowerCase())) {
       if (currentSection.title !== null || currentSection.paragraphs.length > 0) {
         sections.push(currentSection);
       }
@@ -1806,7 +1832,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
         isTitleMatch(section.title || '', "Data-driven approach") ||
         isTitleMatch(section.title || '', "Approccio basato sui dati") ||
         isTitleMatch(section.title || '', "Enfoque basado en datos") ||
-        isTitleMatch(section.title || '', 'packages') ||
+        (isTitleMatch(section.title || '', 'packages') && programId !== 'elite-development-program') ||
         isTitleMatch(section.title || '', 'our elite housing')) {
       
       const allTextLines: string[] = [];
@@ -2140,8 +2166,168 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
             if (line.includes("WHAT_WE_OFFER_TABLE_PLACEHOLDER")) {
               return null;
             }
+            if (line.includes("ELITE_DEVELOPMENT_PACKAGE_PROPOSAL_PLACEHOLDER")) {
+              const proposalItems = [
+                "Full board & accomodation",
+                "Elite development training program",
+                "Physio + Strenght & Conditioning Coaches",
+                "Analytics and Performance Data Analysis",
+                "Official Varese Basketball apparel"
+              ];
+              return (
+                <div key={lIdx} className="mt-6 mb-8 w-full flex flex-col lg:flex-row gap-8 items-center">
+                  <div className="flex-1 w-full max-w-xl mx-auto">
+                    <div className="bg-white border border-zinc-200 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-all flex flex-col group h-full">
+                      <div className="mb-6 pb-6 border-b border-zinc-100">
+                        <h5 className="font-oswald text-black font-bold uppercase tracking-wider text-2xl sm:text-3xl leading-tight group-hover:text-red-varese transition-colors">
+                          Our proposal
+                        </h5>
+                        <div className="mt-2 flex items-baseline gap-1">
+                          <span className="font-oswald text-3xl sm:text-4xl font-black text-red-varese tracking-tight">
+                            €5.000
+                          </span>
+                          <span className="text-zinc-600 font-semibold text-base sm:text-lg">/month</span>
+                        </div>
+                      </div>
+                      <div>
+                        <ul className="space-y-3.5">
+                          {proposalItems.map((item, pIdx) => (
+                            <li key={pIdx} className="flex items-center gap-3 text-sm sm:text-base text-zinc-700 font-medium">
+                              <div className="w-2 h-2 rounded-full bg-red-varese flex-shrink-0" />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex-1 w-full h-full flex">
+                    <img 
+                      src="https://i.imgur.com/pgDZEYS.png" 
+                      alt="Packages Proposal" 
+                      className="w-full h-auto min-h-[300px] rounded-2xl shadow-lg object-cover" 
+                      referrerPolicy="no-referrer" 
+                    />
+                  </div>
+                </div>
+              );
+            }
             return <p key={lIdx} className="text-zinc-600 leading-relaxed">{line}</p>;
           })}
+        </div>
+      );
+    }
+
+    if (isTitleMatch(section.title || '', 'travel team schedule') && programId === 'elite-development-program') {
+      const allTextLines: string[] = [];
+      const allImageLines: string[] = [];
+      
+      section.paragraphs.forEach(paragraphLines => {
+        paragraphLines.forEach(line => {
+          const trimmedLine = line.trim();
+          if (trimmedLine.startsWith('[img]') && trimmedLine.endsWith('[/img]')) {
+            allImageLines.push(trimmedLine);
+          } else if (trimmedLine.length > 0) {
+            allTextLines.push(trimmedLine);
+          }
+        });
+      });
+
+      const imageUrl = allImageLines.length > 0 ? allImageLines[0].replace("[img]", "").replace("[/img]", "") : "https://i.imgur.com/Ah9fEHj.png";
+
+      return (
+        <div className="flex flex-col lg:flex-row gap-8 items-center mt-6 mb-8 w-full">
+          <div className="flex-1 w-full h-full flex">
+            <img 
+              src={imageUrl} 
+              alt="Travel Team Opportunities" 
+              className="w-full h-auto min-h-[300px] rounded-2xl shadow-lg object-cover" 
+              referrerPolicy="no-referrer" 
+            />
+          </div>
+          <div className="flex-1 w-full max-w-xl mx-auto">
+            {allTextLines.map((line, lIdx) => {
+              if (line.startsWith("TIMELINE:")) {
+                const events = line.replace("TIMELINE:", "").split("||").map(e => {
+                  const parts = e.split("|");
+                  return { location: parts[0]?.trim(), date: parts[1]?.trim() };
+                });
+                return (
+                  <div key={lIdx} className="relative border-l-2 border-red-varese/30 ml-4 md:ml-6 pl-6 md:pl-8 space-y-8 py-4">
+                    {events.map((event, eIdx) => (
+                      <div key={eIdx} className="relative">
+                        <div className="absolute -left-[35px] md:-left-[43px] top-1 bg-zinc-900 border-2 border-red-varese w-4 h-4 rounded-full z-10 shadow-[0_0_10px_rgba(227,6,19,0.5)]"></div>
+                        <h5 className="font-oswald text-red-varese font-bold uppercase tracking-wider text-xl leading-none mb-1">{event.location}</h5>
+                        <p className="text-zinc-500 font-medium text-xs tracking-wide">{event.date}</p>
+                      </div>
+                    ))}
+                  </div>
+                );
+              }
+              return <p key={lIdx} className="text-zinc-600 leading-relaxed">{line}</p>;
+            })}
+          </div>
+        </div>
+      );
+    }
+
+    if (isTitleMatch(section.title || '', 'travel team add-ons offers') && programId === 'elite-development-program') {
+      const items = [
+        "Flights",
+        "Accomodation",
+        "Full board",
+        "Varese Basketball official gear",
+        "Practices & games",
+        "Visibility",
+        "Pro experience"
+      ];
+      return (
+        <div className="mt-8 mb-8 w-full max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white border border-zinc-200 rounded-3xl p-8 sm:p-10 shadow-sm hover:shadow-md transition-all flex flex-col">
+              <div className="flex-1 flex flex-col items-center justify-center text-center mb-8 pb-8 border-b border-zinc-100">
+                <h5 className="font-oswald text-black font-bold uppercase tracking-wider text-2xl sm:text-3xl mb-6">
+                  European Tournaments
+                </h5>
+                <div className="bg-red-50 border border-red-100 px-8 py-4 rounded-2xl">
+                  <span className="font-oswald text-4xl font-black text-red-varese tracking-tight">€1.500</span>
+                  <span className="text-zinc-600 font-semibold text-base block mt-1">/tournament</span>
+                </div>
+              </div>
+              <div>
+                <ul className="space-y-4">
+                  {items.map((item, idx) => (
+                    <li key={idx} className="flex items-center gap-3 text-zinc-700 font-medium">
+                      <div className="w-2 h-2 rounded-full bg-red-varese flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            
+            <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 sm:p-10 shadow-sm hover:shadow-md transition-all flex flex-col">
+              <div className="flex-1 flex flex-col items-center justify-center text-center mb-8 pb-8 border-b border-zinc-800">
+                <h5 className="font-oswald text-white font-bold uppercase tracking-wider text-2xl sm:text-3xl mb-6">
+                  Overseas Tournaments
+                </h5>
+                <div className="bg-red-varese/10 border border-red-varese/20 px-8 py-4 rounded-2xl">
+                  <span className="font-oswald text-4xl font-black text-red-varese tracking-tight">€3.000</span>
+                  <span className="text-zinc-400 font-semibold text-base block mt-1">/tournament</span>
+                </div>
+              </div>
+              <div>
+                <ul className="space-y-4">
+                  {items.map((item, idx) => (
+                    <li key={idx} className="flex items-center gap-3 text-zinc-300 font-medium">
+                      <div className="w-2 h-2 rounded-full bg-red-varese flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       );
     }
@@ -2294,6 +2480,126 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
                         </div>
                       </div>
                     </div>
+                  </div>
+                </div>
+              );
+            }
+            if (line.includes("ELITE_DEVELOPMENT_PROGRAM_BOXES_PLACEHOLDER")) {
+              const programBoxes = [
+                { title: 'Elite Player Development', icon: <Target className="w-8 h-8 text-red-varese mb-4" /> },
+                { title: 'Full Board & Accomodation', icon: <Home className="w-8 h-8 text-red-varese mb-4" /> },
+                { title: 'Elite Coaching Staff & Facilities', icon: <Users className="w-8 h-8 text-red-varese mb-4" /> },
+                { title: 'International Tournaments Opportunities', icon: <Trophy className="w-8 h-8 text-red-varese mb-4" /> }
+              ];
+              return (
+                <div key={lIdx} className="mt-8 mb-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {programBoxes.map((item, i) => (
+                      <div key={i} className="bg-white border border-zinc-200 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col items-center justify-center text-center min-h-[160px] group">
+                        <div className="group-hover:scale-110 transition-transform duration-300">
+                          {item.icon}
+                        </div>
+                        <h5 className="font-oswald text-black font-bold uppercase tracking-wider text-base lg:text-lg leading-tight group-hover:text-red-varese transition-colors">{item.title}</h5>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            }
+            if (line.includes("ELITE_DEVELOPMENT_FACILITIES_PLACEHOLDER")) {
+              const facilities = [
+                {
+                  title: 'Elite Housing',
+                  icon: <Home className="w-7 h-7 text-red-varese" />,
+                  items: [
+                    'Single/double rooms',
+                    'Spacious dining room',
+                    'Private chef',
+                    'Green spaces',
+                    '5-Minute walk from training center'
+                  ]
+                },
+                {
+                  title: 'Campus Training Center',
+                  icon: <Dumbbell className="w-7 h-7 text-red-varese" />,
+                  items: [
+                    '2 Indoor courts',
+                    '3 Outdoor courts',
+                    'Weight room',
+                    'Recovery room',
+                    'Playsight and kinexon technology'
+                  ]
+                }
+              ];
+              return (
+                <div key={lIdx} className="mt-6 mb-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {facilities.map((fac, i) => (
+                      <div key={i} className="bg-white border border-zinc-200 rounded-2xl p-6 lg:p-7 shadow-sm hover:shadow-md transition-all flex flex-col group">
+                        <div className="flex items-center gap-4 mb-5 pb-4 border-b border-zinc-100">
+                          <div className="w-12 h-12 rounded-xl bg-zinc-50 border border-zinc-200 flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:border-red-varese/30 transition-all duration-300">
+                            {fac.icon}
+                          </div>
+                          <h5 className="font-oswald text-black font-bold uppercase tracking-wider text-lg lg:text-xl leading-tight group-hover:text-red-varese transition-colors">
+                            {fac.title}
+                          </h5>
+                        </div>
+                        <ul className="space-y-2.5">
+                          {fac.items.map((item, itemIdx) => (
+                            <li key={itemIdx} className="flex items-center gap-3 text-sm text-zinc-700 font-medium">
+                              <div className="w-1.5 h-1.5 rounded-full bg-red-varese flex-shrink-0"></div>
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            }
+            if (line.includes("ELITE_DEVELOPMENT_PACKAGE_PROPOSAL_PLACEHOLDER")) {
+              const proposalItems = [
+                "Full board & accomodation",
+                "Elite development training program",
+                "Physio + Strenght & Conditioning Coaches",
+                "Analytics and Performance Data Analysis",
+                "Official Varese Basketball apparel"
+              ];
+              return (
+                <div key={lIdx} className="mt-6 mb-8 w-full flex flex-col lg:flex-row gap-8 items-center">
+                  <div className="flex-1 w-full max-w-xl mx-auto">
+                    <div className="bg-white border border-zinc-200 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-all flex flex-col group h-full">
+                      <div className="mb-6 pb-6 border-b border-zinc-100">
+                        <h5 className="font-oswald text-black font-bold uppercase tracking-wider text-2xl sm:text-3xl leading-tight group-hover:text-red-varese transition-colors">
+                          Our proposal
+                        </h5>
+                        <div className="mt-2 flex items-baseline gap-1">
+                          <span className="font-oswald text-3xl sm:text-4xl font-black text-red-varese tracking-tight">
+                            €5.000
+                          </span>
+                          <span className="text-zinc-600 font-semibold text-base sm:text-lg">/month</span>
+                        </div>
+                      </div>
+                      <div>
+                        <ul className="space-y-3.5">
+                          {proposalItems.map((item, pIdx) => (
+                            <li key={pIdx} className="flex items-center gap-3 text-sm sm:text-base text-zinc-700 font-medium">
+                              <div className="w-2 h-2 rounded-full bg-red-varese flex-shrink-0" />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex-1 w-full h-full flex">
+                    <img 
+                      src="https://i.imgur.com/pgDZEYS.png" 
+                      alt="Packages Proposal" 
+                      className="w-full h-auto min-h-[300px] rounded-2xl shadow-lg object-cover" 
+                      referrerPolicy="no-referrer" 
+                    />
                   </div>
                 </div>
               );
@@ -2814,6 +3120,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
     if (programId === 'summer-prog') return "https://i.imgur.com/fFsfxKt.jpeg";
     if (programId === 'player-package') return "https://i.imgur.com/NahA03T.jpeg";
     if (programId === 'travel-team') return "https://i.imgur.com/Cww97Hr.png";
+    if (programId === 'elite-development-program') return "https://i.imgur.com/EXvDGxh.png";
     return `https://picsum.photos/seed/${programId}-1/800/600`;
   };
   const getImage2 = () => {
@@ -2824,6 +3131,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
     if (programId === 'summer-prog') return "https://i.imgur.com/1y909x4.jpeg";
     if (programId === 'player-package') return "https://i.imgur.com/Vc8C4E6.jpeg";
     if (programId === 'travel-team') return "https://i.imgur.com/RaCsDZk.png";
+    if (programId === 'elite-development-program') return "https://i.imgur.com/BmacB9n.png";
     return `https://picsum.photos/seed/${programId}-2/800/600`;
   };
   const getImage3 = () => {
@@ -2834,6 +3142,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
     if (programId === 'summer-prog') return "https://i.imgur.com/Wm6SxMP.png";
     if (programId === 'player-package') return "https://i.imgur.com/xnFvd8X.jpeg";
     if (programId === 'travel-team') return "https://i.imgur.com/0yycsqq.png";
+    if (programId === 'elite-development-program') return "https://i.imgur.com/EXvDGxh.png";
     return `https://picsum.photos/seed/${programId}-3/800/600`;
   };
 
@@ -2863,6 +3172,16 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
           }
 
           if (isTheySay) {
+            imageUrl = null;
+          } else if (isTitleMatch(section.title, 'the elite development program') && programId === 'elite-development-program') {
+            imageUrl = "https://i.imgur.com/BmacB9n.png";
+            imagePosition = 'right';
+          } else if (isTitleMatch(section.title, 'target audience') && programId === 'elite-development-program') {
+            imageUrl = "https://i.imgur.com/EXvDGxh.png";
+            imagePosition = 'right';
+          } else if (isTitleMatch(section.title, 'our facilities') && programId === 'elite-development-program') {
+            imageUrl = null;
+          } else if (isTitleMatch(section.title, 'packages') && programId === 'elite-development-program') {
             imageUrl = null;
           } else if (effectiveIdx === 0) {
             imageUrl = getImage1();
@@ -2895,7 +3214,7 @@ const FormattedText = ({ text, className = "text-gray-400", programId, lang = 'e
           } else if (isTitleMatch(section.title, 'target audience') && programId === 'academy') {
             imageUrl = getImage3();
             imagePosition = 'right';
-          } else if (effectiveIdx === 2 && !isTitleMatch(section.title, 'the training program') && !isTitleMatch(section.title, 'our elite housing') && programId !== 'full-time' && programId !== 'academy') {
+          } else if (effectiveIdx === 2 && !isTitleMatch(section.title, 'the training program') && !isTitleMatch(section.title, 'our elite housing') && programId !== 'full-time' && programId !== 'academy' && programId !== 'elite-development-program') {
             imageUrl = getImage3();
             imagePosition = 'right';
           } else if (effectiveIdx === 3 && programId === 'full-time') {

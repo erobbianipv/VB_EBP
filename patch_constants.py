@@ -1,30 +1,28 @@
 with open("constants.tsx", "r") as f:
     content = f.read()
 
-old_winter = """  {
-    id: "winter-elite-camp",
-    title: "WINTER ELITE CAMP",
-    target: "2009 to 2013",
-    timing: "December 2027, TBD",
-    description: "Join our Winter Elite Camp to experience top-tier training during the winter break. Sharpen your skills with professional coaches and prepare for the second half of the season.",
-    highlights: ["Serie A techniques", "Elite competition", "Performance analytics"],
-    image: "https://i.imgur.com/aqpljEk.jpeg",
-    detailImage: "https://i.imgur.com/aqpljEk.jpeg",
-    category: 'top',"""
+new_program = """  {
+    id: "elite-development-program",
+    title: "ELITE DEVELOPMENT PROGRAM",
+    target: "U18 Elite Players",
+    timing: "Flexible",
+    description: "An elite development path focused on customized training sessions, pro experience, and international experience opportunities.",
+    highlights: ["customized training sessions", "pro experience", "international experience opportunities"],
+    image: "https://i.imgur.com/kRADld5.jpeg",
+    detailImage: "https://i.imgur.com/kRADld5.jpeg",
+    category: 'other',
+    details: `The Elite Development Program is tailored for U18 Elite Players.`
+  }"""
 
-new_winter = """  {
-    id: "winter-elite-camp",
-    title: "WINTER ELITE CAMP",
-    target: "2009 to 2013",
-    timing: "December 2027, TBD",
-    description: "Join our Winter Elite Camp to experience top-tier training during the winter break. Sharpen your skills with professional coaches and prepare for the second half of the season.",
-    highlights: ["Serie A techniques", "Elite competition", "Performance analytics"],
-    image: "https://i.imgur.com/aqpljEk.jpeg",
-    detailImage: "https://i.imgur.com/aqpljEk.jpeg",
-    imagePosition: "object-top",
-    category: 'top',"""
-
-content = content.replace(old_winter, new_winter)
-
-with open("constants.tsx", "w") as f:
-    f.write(content)
+# Insert before the end of the array, or just append it.
+# Let's find the winter-elite-camp which is the last one.
+import re
+match = re.search(r"winter-elite-camp.*?\}", content, re.DOTALL)
+if match:
+    insert_pos = match.end()
+    new_content = content[:insert_pos] + ",\\n" + new_program + content[insert_pos:]
+    with open("constants.tsx", "w") as f:
+        f.write(new_content)
+    print("Success")
+else:
+    print("Not found")
